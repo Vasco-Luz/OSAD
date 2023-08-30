@@ -1,0 +1,30 @@
+* SPICE3 file created from ce_resistor_stage.ext - technology: sky130A
+
+.subckt ce_resistor_stage_post VDD VSS VIN VOUT
+X0 VDD VDD VDD sky130_fd_pr__res_high_po_0p35 l=1
+X1 VDD VDD VDD sky130_fd_pr__res_high_po_0p35 l=1
+X2 m1_150_958# VIN VDD sky130_fd_pr__res_high_po_0p35 l=1
+X3 VDD VDD VDD sky130_fd_pr__res_high_po_0p35 l=1
+X4 m1_202_3564# m1_368_2824# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X5 VDD m1_n130_2880# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X6 m1_2028_3564# m1_1862_2880# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X7 m1_2194_3564# VOUT VDD sky130_fd_pr__res_high_po_0p35 l=1
+X8 m1_700_3564# m1_534_2880# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X9 m1_2028_3564# VOUT VDD sky130_fd_pr__res_high_po_0p35 l=1
+X10 m1_1530_3564# m1_1696_2824# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X11 m1_202_3564# m1_n296_2824# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X12 VDD m1_n296_2824# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X13 m1_866_3564# m1_1032_2824# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X14 m1_700_3564# m1_1198_2880# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X15 m1_2194_3564# m1_1696_2824# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X16 m1_1364_3564# m1_1198_2880# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X17 m1_36_3564# m1_534_2880# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X18 VDD VDD VDD sky130_fd_pr__res_high_po_0p35 l=1
+X19 m1_866_3564# m1_368_2824# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X20 m1_36_3564# m1_n130_2880# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X21 m1_1364_3564# m1_1862_2880# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X22 m1_1530_3564# m1_1032_2824# VDD sky130_fd_pr__res_high_po_0p35 l=1
+X23 VOUT m1_150_958# VSS VSUBS sky130_fd_pr__npn_05v5_W1p00L2p00
+C0 VDD VSUBS 25.6f
+C1 VOUT VSUBS 12.7f
+.ends
