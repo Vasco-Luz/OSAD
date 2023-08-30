@@ -1,0 +1,35 @@
+* NGSPICE file created from cs_diode_nmos_stage.ext - technology: sky130A
+
+.subckt cs_diode_nmos_stage VDD VSS VIN VOUT
+X0 VOUT VDD VDD VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=2
+X1 VOUT VDD VDD VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=2
+X2 VSS VSS VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.58 as=0.29 ps=2.29 w=2 l=2
+X3 VDD VDD VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.29 as=0.29 ps=2.29 w=2 l=2
+X4 VDD VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.29 as=0.58 ps=4.58 w=2 l=2
+X5 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X6 m1_14_n358# VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=1.45 ps=10.6 w=5 l=0.5
+X7 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X8 VSS VSS VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.6 as=0.725 ps=5.29 w=5 l=0.5
+X9 VSS VIN VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X10 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X11 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X12 VSS VIN VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X13 VSS VIN VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X14 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X15 VSS VIN VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X16 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X17 VSS VIN VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X18 VSS VIN VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X19 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X20 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X21 VSS VIN VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X22 VSS VIN m1_14_n358# VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X23 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+X24 VSS VIN VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.725 pd=5.29 as=0.725 ps=5.29 w=5 l=0.5
+C0 VOUT VSS 9.5f
+C1 VIN VSS 2.22f
+C2 VOUT VIN 3.15f
+C3 VSS 0 3.95f
+C4 VIN 0 4.05f
+C5 VDD 0 2.54f
+.ends
