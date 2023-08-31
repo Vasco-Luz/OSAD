@@ -57,6 +57,7 @@ while (user_input != 7):
             print("select:ll")
             print("select:hl")
             print("select:lh")
+            print("select:all corners i am still working on it")
             corner_selected = input("Enter the desired Resistor capacitor corner:")
             match corner_selected:
                 case "tt":
@@ -74,6 +75,28 @@ while (user_input != 7):
                 case "hl":
                     a = "res_high__cap_low"
                     sim_comands.write_RC_corner(spice_Path,a)
+                    
+            print("select:1 for mismatch only")
+            print("select:2 for nothing")
+            print("select:3 for global variation only")
+            print("select:4 for global variation and mismatch")
+            corner_selected = int(input("select the mismatch:"))
+            match corner_selected:
+                case 1:
+                    sim_comands.change_mismatch(spice_Path,"1")
+                    sim_comands.change_global(spice_Path,"0")
+                case 2:
+                    sim_comands.change_mismatch(spice_Path,"0")
+                    sim_comands.change_global(spice_Path,"0")
+                case 3:
+                    a=0
+                    sim_comands.change_mismatch(spice_Path,"0")
+                    sim_comands.change_global(spice_Path,"1")
+                case 4:
+                    a=0
+                    sim_comands.change_mismatch(spice_Path,"1")
+                    sim_comands.change_global(spice_Path,"1")
+
                 
 
             

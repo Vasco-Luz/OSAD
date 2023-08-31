@@ -94,6 +94,36 @@ class sim_comands:
             
 
 
+    def change_mismatch(spice_path,action):
+        target_text ="mc_mm_switch="
+        new_content = []
+        with open(spice_path, "r") as file:
+            for line in file:
+                if target_text in line:
+                    parts = line.split(target_text)
+                    modified_line = parts[0] + target_text + action + "\n"
+                    new_content.append(modified_line)
+                else:
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+
+
+    
+    def change_global(spice_path,action):
+        target_text ="mc_pr_switch="
+        new_content = []
+        with open(spice_path, "r") as file:
+            for line in file:
+                if target_text in line:
+                    parts = line.split(target_text)
+                    modified_line = parts[0] + target_text + (action) + "\n"
+                    new_content.append(modified_line)
+                else:
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+                
 
 
 
