@@ -40,7 +40,7 @@ class sim_comands:
 
 
 
-    def write_MOS_corner(spice_path,corner):
+    def write_MOS_corner(spice_path,corner): #writes the MOS corner in the file in the spice path
         target_text = "sky130A/libs.tech/ngspice/corners/"
         corner = corner + ".spice"
         new_content = []
@@ -64,7 +64,7 @@ class sim_comands:
             file.writelines(new_content)
 
 
-    def write_RC_corner(spice_path,corner):
+    def write_RC_corner(spice_path,corner): #writes the RC corner in the file in the spice path
         target_text ="/home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/"
         corner1 = corner + ".spice"
         corner2 = corner + "__lin.spice"
@@ -94,7 +94,7 @@ class sim_comands:
             
 
 
-    def change_mismatch(spice_path,action):
+    def change_mismatch(spice_path,action): #changes mismatch parameter
         target_text ="mc_mm_switch="
         new_content = []
         with open(spice_path, "r") as file:
@@ -110,7 +110,7 @@ class sim_comands:
 
 
     
-    def change_global(spice_path,action):
+    def change_global(spice_path,action): #changes global variation parameter
         target_text ="mc_pr_switch="
         new_content = []
         with open(spice_path, "r") as file:
@@ -125,6 +125,31 @@ class sim_comands:
             file.writelines(new_content)
                 
 
+
+    def check_variable(spice_path,variable):
+        target_text = variable + "="
+        with open(spice_path, "r") as file:
+            for line in file:
+                if target_text in line:
+                    print("variable exists")
+                    return True
+        print("vaiable doenst exist")
+        return False
+    
+
+
+    def change_TMP(spice_path,temp):
+        target_text = ".TEMP"
+        new_content = []
+        with open(spice_path, "r") as file:
+            for line in file:
+                if target_text in line:
+                    modified_line =target_text + " " + temp + "\n"
+                    new_content.append(modified_line)
+                else:
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
 
 
 

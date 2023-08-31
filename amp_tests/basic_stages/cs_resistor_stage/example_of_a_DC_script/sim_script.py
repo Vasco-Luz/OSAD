@@ -35,7 +35,7 @@ while (user_input != 7):
             print("select:ff")
             print("select:wafer does not work")
             print("select:leak")
-            print("select:full corner i am working on it")
+            print("select:full_corner i am working on it")
             corner_selected = input("Enter the desired MOS corner:")
             match corner_selected:
                 case "tt":
@@ -52,12 +52,16 @@ while (user_input != 7):
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
                 case "leak":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
+                case "full_corner":
+                    Runs = False
+                    Var_simu = False
+                    full_mos_corner= True
             print("select:tt")
             print("select:hh")
             print("select:ll")
             print("select:hl")
             print("select:lh")
-            print("select:all corners i am still working on it")
+            print("select:full_corner i am still working on it")
             corner_selected = input("Enter the desired Resistor capacitor corner:")
             match corner_selected:
                 case "tt":
@@ -75,7 +79,10 @@ while (user_input != 7):
                 case "hl":
                     a = "res_high__cap_low"
                     sim_comands.write_RC_corner(spice_Path,a)
-                    
+                case "full_corner":
+                    Runs = False
+                    Var_simu = False
+                    full_RC_corner= True
             print("select:1 for mismatch only")
             print("select:2 for nothing")
             print("select:3 for global variation only")
@@ -96,6 +103,43 @@ while (user_input != 7):
                     a=0
                     sim_comands.change_mismatch(spice_Path,"1")
                     sim_comands.change_global(spice_Path,"1")
+        case 2:# self explanatory
+            print("for simplification use the variable names as w,l or Vsomething, this wont create no unecessary errors")
+            variable = input("what variable to sweep:")
+            var_existance = sim_comands.check_variable(spice_Path,variable)
+            if var_existance == False:
+                break
+            starting_value = int(input("starting value:"))
+            variation = int(input("variation:"))
+            finishing_value = int(input("finishing value:"))
+            Runs= False
+            Var_simu = True
+            full_mos_corner= False
+            full_RC_corner= False
+
+        case 3:#self explaatory
+            corridas = int(input("number of runs:"))
+            Runs= True
+            Var_simu = False
+            full_mos_corner= False
+            full_RC_corner= False
+
+        case 4: # only made for temperature but VDD is the same and just define it in the spice script
+            print("select:1 for a fixed Temp value")
+            print("select:2 for a gaussean Temp variation")
+            print("select:3 for nothing")
+            corner = int(input("select option:"))
+            match corner:
+                case 1:
+                    Temperature = input("Temperature value:")
+                    sim_comands.change_TMP(spice_Path,Temperature)
+                    Temp_gauss = False
+                case 2:
+                    Temperature_Min = int(input("Minimum Temperature:"))
+                    Temperature_Max = int(input("Maximum Temperature:"))
+                    Gaussian_variable = int(input("gaussean variation:"))
+                    Temp_gauss = True
+
 
                 
 
