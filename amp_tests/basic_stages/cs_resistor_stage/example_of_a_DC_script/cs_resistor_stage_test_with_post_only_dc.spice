@@ -1,0 +1,91 @@
+** sch_path:
+*+ /home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/example_of_a_DC_script/cs_resistor_stage_test_with_post_only_dc.sch
+**.subckt cs_resistor_stage_test_with_post_only_dc
+Vmeas VDD net1 0
+.save i(vmeas)
+V1 VDD GND 5
+.save i(v1)
+V2 VIN GND 1.265
+.save i(v2)
+R2 VOUT GND 10G m=1
+x2 VDD GND VIN VOUT_tran cs_resistor_stage_post
+R1 VOUT_tran GND 10G m=1
+x8 net1 GND VIN VOUT cs_resistor_stage
+**** begin user architecture code
+
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+*LIBs*********************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+.include ~/Documents/cs_resistor_stage_post_layout.spice
+*.lib /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+* chose the corners in the corner file
+* tt_mm for mismatch
+* ss ff sf fs standart corners
+* ll hh lh hl capacitor and resistors corners
+* mc for total process variation including corners
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+*Corners/montecarlo options***********************************
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+.TEMP 27
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+*SIMULATION and Plots*****************************************
+**************************************************************
+**************************************************************
+**************************************************************
+**************************************************************
+.control
+save all
+dc V2 0 5 0.01
+*dc simulation
+plot v(VOUT) v(VIN) deriv(v(VOUT)) v(VOUt_tran) deriv(v(VOUT_tran))
+.endc
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/corners/ff.spice
+.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:
+*+  /home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/cs_resistor_stage.sym # of pins=4
+** sym_path:
+*+ /home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/cs_resistor_stage.sym
+** sch_path:
+*+ /home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/cs_resistor_stage.sch
+.subckt cs_resistor_stage VDD VSS VIN VOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VIN
+*.iopin VOUT
+XM1 VOUT VIN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=60 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XR6 VOUT VDD VDD sky130_fd_pr__res_high_po_0p35 L=1*8 mult=2 m=2
+.ends
+
+.GLOBAL GND
+.end

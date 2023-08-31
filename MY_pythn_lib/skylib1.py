@@ -14,20 +14,86 @@ class sim_comands:
     def get_file_path(): #gets the file path and checks if the file exists in the current directory
         if len(sys.argv)>1:
             file_name = sys.argv[1]
+        extension = ".sch"
+        if not file_name.endswith(extension):#checks if file name is given with .sch extension
+            file_name += extension #adds the .sch extention
         directory = os.getcwd() #gets current directory
         full_path = os.path.join(directory, file_name)
         if os.path.exists(full_path):
-            print(file_name)
+            print(full_path)
             return full_path
         else:
             print("non existant file")
             sys.exit(1)
 
-    def export_netlist(file_path):
+
+
+    def export_netlist(file_path): #exports the spice netlist and returns the location of the file
         directory_path = os.path.dirname(file_path)
         file_name = os.path.basename(file_path)
         file_name_without_extension = os.path.splitext(os.path.basename(file_path))[0]
-        print(file_name_without_extension)
+        spice_file_name = file_name_without_extension + ".spice"
+        full_path_spice_file = os.path.join(directory_path,spice_file_name)
+        xschem_command = f'xschem -n {file_path} -o {directory_path} --no_x --quit' #comando para escrever o spice no x nao abre o xschem, --quit sai do xschem
+        subprocess.run(xschem_command, shell=True)#realização do comando
+        return full_path_spice_file
+
+
+
+    def write_MOS_corner(spice_path,corner):
+        target_text = "sky130A/libs.tech/ngspice/corners/"
+        corner = corner + ".spice"
+        new_content = []
+        a = 0
+
+        with open(spice_path, "r") as file:
+            for line in file:
+                if target_text in line:
+                    if a ==0:
+                        parts = line.split(target_text)
+                        modified_line = parts[0] + target_text + corner + "\n"
+                # Replace the text after the target_text with corner
+                        new_content.append(modified_line)
+                        a = a+1
+                    else:
+                        new_content.append(line)
+                else:
+                    new_content.append(line)
+
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+
+
+    def write_RC_corner(spice_path,corner):
+        target_text ="/home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/"
+        corner1 = corner + ".spice"
+        corner2 = corner + "__lin.spice"
+        new_content = []
+        a=0
+        print(corner1)
+        print(corner2)
+        with open(spice_path, "r") as file:
+            for line in file:
+                if target_text in line:
+                    parts = line.split(target_text)
+                    if a==0:
+                        modified_line1 = parts[0] + target_text + corner1 + "\n"
+                        new_content.append(modified_line1)
+                        a= a+1
+                    if a==1:
+                        modified_line2 = parts[0] + target_text + corner2 + "\n"
+                        # Replace the text after the target_text with corner
+                        new_content.append(modified_line2)
+                        a = a+1
+                    
+                else:
+                    new_content.append(line)
+
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+            
+
+
 
 
 
