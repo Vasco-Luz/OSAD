@@ -71,8 +71,6 @@ class sim_comands:
         corner2 = corner + "__lin.spice"
         new_content = []
         a=0
-        print(corner1)
-        print(corner2)
         with open(spice_path, "r") as file:
             for line in file:
                 if target_text in line:
@@ -186,14 +184,10 @@ class sim_comands:
         subprocess.run(ngspice_command, shell=True)#simulação
 
 
-
-
     def write_single_cvs_file(txt_path,variables,num):
-
         with open(txt_path, 'r') as txt_file:
             lines = txt_file.readlines()
         data = []
-        data_real = []
         for line in lines:
             # Split each line into columns using whitespace as the delimiter
             columns = line.strip().split()
@@ -205,9 +199,6 @@ class sim_comands:
         columns_to_drop = data.columns[2::2]
         # Drop the specified columns
         data.drop(columns=columns_to_drop, inplace=True)
-    
-
-        
         headers = ["control"]
         for a in range(0,num,1):
             headers.append(variables[a])
@@ -221,6 +212,30 @@ class sim_comands:
         print(data)
         data.to_csv(cvs_full_path, index=False)
         return cvs_full_path
+
+    def write_RUNS_cvs_file(txt_path,variables,num,i,data_frame):
+        with open(txt_path, 'r') as txt_file:
+            lines = txt_file.readlines()
+        data = []
+        headers = []
+        for line in lines:
+            # Split each line into columns using whitespace as the delimiter
+            columns = line.strip().split()
+            # Append the columns as a list to the data list
+            data.append(columns)
+        data = pd.DataFrame(data)
+        columns_to_drop = data.columns[2::2]
+        data.drop(columns=columns_to_drop, inplace=True)
+        if(i ==1):
+            headers = ["control"]
+        if (i >1):
+            data = data.drop(data.columns[0], axis=1)
+        for a in range(0,num,1):
+            headers.append(variables[a])
+
+        data.columns = headers
+        data_frame = pd.concat([data_frame, data], axis=1)
+        return data_frame
 
 
 

@@ -7,10 +7,6 @@ from skylib1 import sim_comands
 
 
 
-
-
-
-
 #start write the file name in the terminal
 file_Path = sim_comands.get_file_path() #gets the file path
 user_input = 0
@@ -19,8 +15,7 @@ Runs = False
 Var_simu = False
 full_mos_corner= False
 full_RC_corner= False
-
-print(spice_Path)
+os.system('clear')
 while (user_input != 7):
     print("select:1-to change process corner")
     print("select:2-to choose a variable sweep")
@@ -173,7 +168,21 @@ while (user_input != 7):
                 cvs_full_path =sim_comands.write_single_cvs_file(txt_full_path,saved_variables,save_variables_num)
                 sim_comands.plot_2d_simple(cvs_full_path)
 
-                
+            if (Runs == True) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
+                save_file = save_file_name +".txt"
+                directory = os.getcwd()
+                txt_full_path = os.path.join(directory,save_file)
+                data_frame = pd.DataFrame()
+                cvs_full_path = save_file + ".csv"
+                for i in range(1,corridas+1,1):
+                    sim_comands.ngspice_sim(spice_Path)
+                    data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame)
+                    
+                print(data_frame)
+                if os.path.exists(cvs_full_path):
+                    os.remove(cvs_full_path)
+                data_frame.to_csv(cvs_full_path, index=False)
+                sim_comands.plot_2d_simple(cvs_full_path)            
     os.system('clear')
 
             
