@@ -15,6 +15,11 @@ from skylib1 import sim_comands
 file_Path = sim_comands.get_file_path() #gets the file path
 user_input = 0
 spice_Path =sim_comands.export_netlist(file_Path) #exports the spice netlist from the schematic file and return the location o the file
+Runs = False
+Var_simu = False
+full_mos_corner= False
+full_RC_corner= False
+
 print(spice_Path)
 while (user_input != 7):
     print("select:1-to change process corner")
@@ -119,7 +124,7 @@ while (user_input != 7):
 
         case 3:#self explaatory
             corridas = int(input("number of runs:"))
-            Runs= True
+            Runs = True
             Var_simu = False
             full_mos_corner= False
             full_RC_corner= False
@@ -149,6 +154,16 @@ while (user_input != 7):
                 variable = input("Enter the variable names: ")
                 saved_variables.append(variable)
             sim_comands.add_save(spice_Path,save_file_name,saved_variables,save_variables_num)
+
+
+        case 6:
+            if (Runs == False) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
+                sim_comands.ngspice_sim(spice_Path)
+                save_file_name = save_file_name +".txt"
+                directory = os.getcwd()
+                txt_full_path = os.path.join(directory,save_file_name)
+                sim_comands.write_single_cvs_file(txt_full_path,saved_variables,save_variables_num)
+
             
 
 

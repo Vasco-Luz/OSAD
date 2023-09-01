@@ -1,5 +1,6 @@
 import subprocess
 import os
+import csv
 import pandas as pd
 import numpy as np
 import re
@@ -126,7 +127,7 @@ class sim_comands:
                 
 
 
-    def check_variable(spice_path,variable):
+    def check_variable(spice_path,variable): # checks the existance of the variable
         target_text = variable + "="
         with open(spice_path, "r") as file:
             for line in file:
@@ -138,7 +139,7 @@ class sim_comands:
     
 
 
-    def change_TMP(spice_path,temp):
+    def change_TMP(spice_path,temp):# changes the Temperature in the spice file
         target_text = ".TEMP"
         new_content = []
         with open(spice_path, "r") as file:
@@ -152,10 +153,10 @@ class sim_comands:
             file.writelines(new_content)
 
 
-    def add_save(spice_path,file_name,variables,num):
+    def add_save(spice_path,file_name,variables,num): #creates a save data
         directory = os.getcwd() #gets current directory
         target_text = ".endc"
-        file_name = file_name + ".csv"
+        file_name = file_name + ".txt"
         full_file_path = os.path.join(directory,file_name)
         new_content = []
 
@@ -176,6 +177,34 @@ class sim_comands:
             file.writelines(new_content)
 
         
+
+    def ngspice_sim(spice_path):#basic ngspice simulation
+        ngspice_command = f'ngspice -b {spice_path}' #comando da simulação batch com o ngspice
+        subprocess.run(ngspice_command, shell=True)#simulação
+
+
+    def write_single_cvs_file(txt_path,variables,num):
+
+        with open(txt_path, 'r') as txt_file:
+            lines = txt_file.readlines()
+        
+        data = []
+
+        for line in lines:
+            # Split each line into columns using whitespace as the delimiter
+            columns = line.strip().split()
+            # Append the columns as a list to the data list
+            data.append(columns)
+        headers = ["control"]
+        for a in range(0,num,1):
+            headers.append(variables[a])
+        txt_name = os.path.basename(txt_path)
+        cvs_name = (os.path.splitext(txt_path)[0]) + ".csv"
+        cvs_full_path = os.path.join(os.getcwd(),cvs_name)
+        with open(cvs_full_path,'w', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            csv_writer.writerow(headers)
+            csv_writer.writerows(data)
 
 
 
@@ -236,9 +265,7 @@ class sim_comands:
         subprocess.run(xschem_command, shell=True)#realização do comando
 
 
-    def ngspice_sim(spice_path):
-        ngspice_command = f'ngspice -b {spice_path}' #comando da simulação batch com o ngspice
-        subprocess.run(ngspice_command, shell=True)#simulação
+    
 
 
     def finding(spice_path,pattern): #feito essencialmente para encontrar onde o wrdata esta
