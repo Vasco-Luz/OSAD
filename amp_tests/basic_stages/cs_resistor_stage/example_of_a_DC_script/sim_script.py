@@ -173,7 +173,7 @@ while (user_input != 7):
                 directory = os.getcwd()
                 txt_full_path = os.path.join(directory,save_file)
                 data_frame = pd.DataFrame()
-                cvs_full_path = save_file + ".csv"
+                cvs_full_path = save_file_name + ".csv"
                 for i in range(1,corridas+1,1):
                     sim_comands.ngspice_sim(spice_Path)
                     data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame)
