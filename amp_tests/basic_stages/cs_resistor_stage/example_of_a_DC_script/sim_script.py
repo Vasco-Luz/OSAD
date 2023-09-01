@@ -159,10 +159,11 @@ while (user_input != 7):
         case 6:
             if (Runs == False) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
                 sim_comands.ngspice_sim(spice_Path)
-                save_file_name = save_file_name +".txt"
+                save_file = save_file_name +".txt"
                 directory = os.getcwd()
-                txt_full_path = os.path.join(directory,save_file_name)
-                sim_comands.write_single_cvs_file(txt_full_path,saved_variables,save_variables_num)
+                txt_full_path = os.path.join(directory,save_file)
+                cvs_full_path =sim_comands.write_single_cvs_file(txt_full_path,saved_variables,save_variables_num)
+                sim_comands.plot_2d_simple(cvs_full_path)
 
             
 
