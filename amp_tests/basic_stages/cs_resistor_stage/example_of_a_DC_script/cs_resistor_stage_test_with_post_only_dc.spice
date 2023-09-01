@@ -57,6 +57,8 @@ save all
 dc V2 0 5 0.01
 *dc simulation
 plot v(VOUT) v(VIN) deriv(v(VOUT)) v(VOUt_tran) deriv(v(VOUT_tran))
+
+wrdata /home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/example_of_a_DC_script/teste.csv v(VOUT)
 .endc
 
 

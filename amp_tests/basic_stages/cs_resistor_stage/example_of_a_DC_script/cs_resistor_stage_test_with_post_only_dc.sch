@@ -88,6 +88,7 @@ save all
 dc V2 0 5 0.01 
 *dc simulation
 plot v(VOUT) v(VIN) deriv(v(VOUT)) v(VOUt_tran) deriv(v(VOUT_tran))
+
 .endc
 "}
 C {devices/ammeter.sym} 430 -320 0 0 {name=Vmeas}

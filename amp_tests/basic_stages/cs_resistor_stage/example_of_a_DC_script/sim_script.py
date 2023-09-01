@@ -124,7 +124,7 @@ while (user_input != 7):
             full_mos_corner= False
             full_RC_corner= False
 
-        case 4: # only made for temperature but VDD is the same and just define it in the spice script
+        case 4: # VDD will be added eventually, just not now
             print("select:1 for a fixed Temp value")
             print("select:2 for a gaussean Temp variation")
             print("select:3 for nothing")
@@ -139,6 +139,17 @@ while (user_input != 7):
                     Temperature_Max = int(input("Maximum Temperature:"))
                     Gaussian_variable = int(input("gaussean variation:"))
                     Temp_gauss = True
+        
+        case 5:
+            save_file_name =input("select the file name: ")
+            save_variables_num = int(input("How many voltage/currents you want to save: "))
+            saved_variables = []
+            print("add the variables the same way when you want to plot them")
+            for _ in range(save_variables_num):
+                variable = input("Enter the variable names: ")
+                saved_variables.append(variable)
+            sim_comands.add_save(spice_Path,save_file_name,saved_variables,save_variables_num)
+            
 
 
                 

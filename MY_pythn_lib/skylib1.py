@@ -152,6 +152,32 @@ class sim_comands:
             file.writelines(new_content)
 
 
+    def add_save(spice_path,file_name,variables,num):
+        directory = os.getcwd() #gets current directory
+        target_text = ".endc"
+        file_name = file_name + ".csv"
+        full_file_path = os.path.join(directory,file_name)
+        new_content = []
+
+        with open(spice_path, "r") as file:
+            for line in file:
+                if target_text in line:
+                    modified_line ="wrdata" +" "+ full_file_path
+                    for a in range(0,num,1):
+                        modified_line = modified_line + " " + variables[a]
+
+                    modified_line = modified_line +"\n"
+                    modified_line2 = target_text + "\n"
+                    new_content.append(modified_line)
+                    new_content.append(modified_line2)
+                else:
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+
+        
+
+
 
 
 
