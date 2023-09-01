@@ -176,6 +176,9 @@ class sim_comands:
         with open(spice_path, "w") as file:
             file.writelines(new_content)
 
+        if os.path.exists(full_file_path):
+            os.remove(full_file_path)
+
         
 
     def ngspice_sim(spice_path):#basic ngspice simulation
@@ -183,29 +186,44 @@ class sim_comands:
         subprocess.run(ngspice_command, shell=True)#simulação
 
 
+
+
     def write_single_cvs_file(txt_path,variables,num):
 
         with open(txt_path, 'r') as txt_file:
             lines = txt_file.readlines()
         data = []
+        data_real = []
         for line in lines:
             # Split each line into columns using whitespace as the delimiter
             columns = line.strip().split()
             # Append the columns as a list to the data list
             data.append(columns)
+
+        data = pd.DataFrame(data)
+
+        columns_to_drop = data.columns[2::2]
+        # Drop the specified columns
+        data.drop(columns=columns_to_drop, inplace=True)
+    
+
+        
         headers = ["control"]
         for a in range(0,num,1):
             headers.append(variables[a])
+        data.columns = headers
+
         txt_name = os.path.basename(txt_path)
         cvs_name = (os.path.splitext(txt_path)[0]) + ".csv"
         cvs_full_path = os.path.join(os.getcwd(),cvs_name)
         if os.path.exists(cvs_full_path):
             os.remove(cvs_full_path)
-        with open(cvs_full_path,'w', newline='') as csv_file:
-            csv_writer = csv.writer(csv_file)
-            csv_writer.writerow(headers)
-            csv_writer.writerows(data)
+        print(data)
+        data.to_csv(cvs_full_path, index=False)
         return cvs_full_path
+
+
+
 
 
     def plot_2d_simple(csv_file_path):
@@ -213,19 +231,18 @@ class sim_comands:
         column_names = dataframe.columns.tolist()
         data_matrix = dataframe.values.tolist()
         data_matrix = np.array(data_matrix)
-        print(data_matrix)
-
         x_column = data_matrix[:, 0]  # First column as x
+        plt.figure(figsize=(8, 6))
         for i in range(1, len(column_names)):
             y_column = data_matrix[:, i]  # Subsequent columns as y
-            plt.figure(figsize=(8, 6))  # Adjust the figure size as needed
             plt.plot(x_column, y_column, label=column_names[i])
-            plt.xlabel(column_names[0])  # x-axis label is the first column name
-            plt.ylabel(column_names[i])  # y-axis label is the current column name
-            plt.title(f"Plot of {column_names[i]} vs. {column_names[0]}")
-            plt.legend()
-            plt.grid(True)
-            plt.show()
+        plt.xlabel(column_names[0])  # x-axis label is the first column name
+        plt.ylabel("Y-Values")  # y-axis label for all y-variables
+        plt.title(f"Plot of Y-Values vs. {column_names[0]}")
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+
 
 
 

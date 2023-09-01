@@ -30,6 +30,7 @@ while (user_input != 7):
     print("select:6-to simulate")
     print("select:7-to quit")
     user_input = int(input("Enter the desired action: "))#get the param input
+    os.system('clear')
 
     match user_input:
         case 1:
@@ -42,6 +43,7 @@ while (user_input != 7):
             print("select:leak")
             print("select:full_corner i am working on it")
             corner_selected = input("Enter the desired MOS corner:")
+            os.system('clear')
             match corner_selected:
                 case "tt":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
@@ -68,6 +70,7 @@ while (user_input != 7):
             print("select:lh")
             print("select:full_corner i am still working on it")
             corner_selected = input("Enter the desired Resistor capacitor corner:")
+            os.system('clear')
             match corner_selected:
                 case "tt":
                     a = "res_typical__cap_typical"
@@ -93,6 +96,7 @@ while (user_input != 7):
             print("select:3 for global variation only")
             print("select:4 for global variation and mismatch")
             corner_selected = int(input("select the mismatch:"))
+            os.system('clear')
             match corner_selected:
                 case 1:
                     sim_comands.change_mismatch(spice_Path,"1")
@@ -117,6 +121,7 @@ while (user_input != 7):
             starting_value = int(input("starting value:"))
             variation = int(input("variation:"))
             finishing_value = int(input("finishing value:"))
+            os.system('clear')
             Runs= False
             Var_simu = True
             full_mos_corner= False
@@ -124,6 +129,7 @@ while (user_input != 7):
 
         case 3:#self explaatory
             corridas = int(input("number of runs:"))
+            os.system('clear')
             Runs = True
             Var_simu = False
             full_mos_corner= False
@@ -134,6 +140,7 @@ while (user_input != 7):
             print("select:2 for a gaussean Temp variation")
             print("select:3 for nothing")
             corner = int(input("select option:"))
+            os.system('clear')
             match corner:
                 case 1:
                     Temperature = input("Temperature value:")
@@ -154,6 +161,7 @@ while (user_input != 7):
                 variable = input("Enter the variable names: ")
                 saved_variables.append(variable)
             sim_comands.add_save(spice_Path,save_file_name,saved_variables,save_variables_num)
+            os.system('clear')
 
 
         case 6:
@@ -164,6 +172,9 @@ while (user_input != 7):
                 txt_full_path = os.path.join(directory,save_file)
                 cvs_full_path =sim_comands.write_single_cvs_file(txt_full_path,saved_variables,save_variables_num)
                 sim_comands.plot_2d_simple(cvs_full_path)
+
+                
+    os.system('clear')
 
             
 
