@@ -16,5 +16,9 @@ If other process nodes want to be used just do this with the other files. <br>
 i advise the use of chatgpt to ease installation because of the dependencies\
 open the file with "xschem [filename]" and simulate\
 
-A simulation script is in the works. the simulation script uses a custom lib.
+A simulation script is in the works. the simulation script uses a custom lib.\
+
+
+My linkedin https://www.linkedin.com/in/vasco-luz-74b693167/
+
 
