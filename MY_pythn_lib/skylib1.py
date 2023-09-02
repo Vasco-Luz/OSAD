@@ -28,7 +28,6 @@ class sim_comands:
             sys.exit(1)
 
 
-
     def export_netlist(file_path): #exports the spice netlist and returns the location of the file
         directory_path = os.path.dirname(file_path)
         file_name = os.path.basename(file_path)
@@ -38,8 +37,6 @@ class sim_comands:
         xschem_command = f'xschem -n {file_path} -o {directory_path} --no_x --quit' #comando para escrever o spice no x nao abre o xschem, --quit sai do xschem
         subprocess.run(xschem_command, shell=True)#realização do comando
         return full_path_spice_file
-
-
 
     def write_MOS_corner(spice_path,corner): #writes the MOS corner in the file in the spice path
         target_text = "sky130A/libs.tech/ngspice/corners/"
@@ -257,6 +254,21 @@ class sim_comands:
         plt.legend()
         plt.grid(True)
         plt.show()
+
+    def change_var(spice_path,var_name,value):
+        new_content = []
+        with open(spice_path, "r") as file:
+            for line in file:
+                if var_name in line:
+                    parts = line.split(var_name)
+                    modified_line = parts[0] + var_name +" " + str(value) + "\n"
+                    new_content.append(modified_line)
+                else:
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+
+        
 
 
 

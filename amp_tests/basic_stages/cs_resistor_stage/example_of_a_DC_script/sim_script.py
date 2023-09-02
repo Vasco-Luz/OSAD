@@ -26,7 +26,6 @@ while (user_input != 7):
     print("select:7-to quit")
     user_input = int(input("Enter the desired action: "))#get the param input
     os.system('clear')
-
     match user_input:
         case 1:
             print("select:tt")
@@ -109,10 +108,12 @@ while (user_input != 7):
                     sim_comands.change_global(spice_Path,"1")
         case 2:# self explanatory
             print("for simplification use the variable names as w,l or Vsomething, this wont create no unecessary errors")
-            variable = input("what variable to sweep:")
-            var_existance = sim_comands.check_variable(spice_Path,variable)
-            if var_existance == False:
-                break
+            variablee = input("what variable to sweep:")
+            if(variablee != "TEMP"):
+                var_existance = sim_comands.check_variable(spice_Path,variablee)
+                if var_existance == False:
+                    break      
+                variablee = variablee +"="  
             starting_value = int(input("starting value:"))
             variation = int(input("variation:"))
             finishing_value = int(input("finishing value:"))
@@ -121,7 +122,6 @@ while (user_input != 7):
             Var_simu = True
             full_mos_corner= False
             full_RC_corner= False
-
         case 3:#self explaatory
             corridas = int(input("number of runs:"))
             os.system('clear')
@@ -129,7 +129,6 @@ while (user_input != 7):
             Var_simu = False
             full_mos_corner= False
             full_RC_corner= False
-
         case 4: # VDD will be added eventually, just not now
             print("select:1 for a fixed Temp value")
             print("select:2 for a gaussean Temp variation")
@@ -146,7 +145,6 @@ while (user_input != 7):
                     Temperature_Max = int(input("Maximum Temperature:"))
                     Gaussian_variable = int(input("gaussean variation:"))
                     Temp_gauss = True
-        
         case 5:
             save_file_name =input("select the file name: ")
             save_variables_num = int(input("How many voltage/currents you want to save: "))
@@ -157,8 +155,6 @@ while (user_input != 7):
                 saved_variables.append(variable)
             sim_comands.add_save(spice_Path,save_file_name,saved_variables,save_variables_num)
             os.system('clear')
-
-
         case 6:
             if (Runs == False) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
                 sim_comands.ngspice_sim(spice_Path)
@@ -176,13 +172,36 @@ while (user_input != 7):
                 cvs_full_path = save_file_name + ".csv"
                 for i in range(1,corridas+1,1):
                     sim_comands.ngspice_sim(spice_Path)
-                    data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame)
-                    
-                print(data_frame)
+                    data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame)     
                 if os.path.exists(cvs_full_path):
                     os.remove(cvs_full_path)
                 data_frame.to_csv(cvs_full_path, index=False)
                 sim_comands.plot_2d_simple(cvs_full_path)            
+
+
+            if (Runs == False) and (Var_simu == True) and (full_mos_corner == False) and (full_RC_corner == False):
+                times = int((finishing_value-starting_value)/variation)
+                var_val = starting_value
+                save_file = save_file_name +".txt"
+                directory = os.getcwd()
+                txt_full_path = os.path.join(directory,save_file)
+                data_frame = pd.DataFrame()
+                cvs_full_path = save_file_name + ".csv"
+                z = []
+                z.append(var_val)
+
+                for i in range(1,times+1,1):
+                    sim_comands.change_var(spice_Path,variablee,var_val)
+                    var_val = var_val + variation
+                    z.append(var_val)
+                    sim_comands.ngspice_sim(spice_Path)
+                    data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame) 
+                if os.path.exists(cvs_full_path):
+                    os.remove(cvs_full_path)
+                data_frame.to_csv(cvs_full_path, index=False)
+                sim_comands.plot_2d_simple(cvs_full_path)     
+            
+
     os.system('clear')
 
             
