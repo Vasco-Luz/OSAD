@@ -300,20 +300,6 @@ class sim_comands:
 
 
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     def variation_paramn_simu(spice_path,data_path): #simulation with variation all in the same function
         param_name = input("Enter the paramameter desired to change: ")#get the param input
