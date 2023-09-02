@@ -255,6 +255,8 @@ class sim_comands:
         plt.grid(True)
         plt.show()
 
+
+
     def change_var(spice_path,var_name,value):
         new_content = []
         with open(spice_path, "r") as file:
@@ -267,6 +269,36 @@ class sim_comands:
                     new_content.append(line)
         with open(spice_path, "w") as file:
             file.writelines(new_content)
+
+    
+    def plot_3d_upgraded(csv_file_path, z_var, z_name):
+        dataframe = pd.read_csv(csv_file_path)
+        column_names = dataframe.columns.tolist()
+        data_matrix = dataframe.values
+    
+        num_columns = data_matrix.shape[1] - 1
+        num_of_plots = int(num_columns / len(z_var))
+        #z_var = np.array(z_var)
+
+        x_column = data_matrix[:, 0]
+        num_columns_to_add = int(num_columns/num_of_plots)
+        x_column = np.tile(x_column, (num_columns_to_add, 1)).T
+        #x_column = x_column.T
+
+        for i in range(1, num_of_plots + 1,1):
+            y_column = data_matrix[:, i::num_of_plots]
+            #y_column = y_column.T  # Com
+            fig = plt.figure()
+            ax = fig.add_subplot(111, projection='3d')
+            ax.plot_surface(x_column, z_var, y_column)
+            ax.grid(True)
+            ax.set_xlabel(column_names[0], fontsize=12, fontweight='bold')
+            ax.set_ylabel(z_name, fontsize=12, fontweight='bold')  # Change to a suitable label
+            ax.set_zlabel(column_names[i], fontsize=12, fontweight='bold')
+            ax.set_title(f'Data Plot {i}')
+            plt.show()
+
+
 
         
 
@@ -463,6 +495,9 @@ class graf:
         Vgs = Vgs.values.T  # Co
         Id = data.iloc[:, 1::2]  # Select pair columns starting from index 0
         Id = Id.values.T  # Co
+
+
+
         gm = np.zeros_like(Id)
         z = np.zeros_like(Id)
         Id_m = Id / 1e-3#transforms the data to mA standart measurment data

@@ -42,7 +42,7 @@ x8 net1 GND VIN VOUT cs_resistor_stage
 **************************************************************
 **************************************************************
 **************************************************************
-.TEMP 120
+.TEMP 130
 **************************************************************
 **************************************************************
 **************************************************************
@@ -58,8 +58,7 @@ dc V2 0 5 0.01
 *dc simulation
 plot v(VOUT) v(VIN) deriv(v(VOUT)) v(VOUt_tran) deriv(v(VOUT_tran))
 
-wrdata /home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/example_of_a_DC_script/test.txt v(VOUT)
-wrdata /home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/example_of_a_DC_script/test.txt deriv(v(VOUT))
+wrdata /home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/example_of_a_DC_script/test.txt v(VOUT) v(VOUT_tran) deriv(v(VOUT)) deriv(v(VOUT_tran))
 .endc
 
 

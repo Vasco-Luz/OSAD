@@ -180,7 +180,7 @@ while (user_input != 7):
 
 
             if (Runs == False) and (Var_simu == True) and (full_mos_corner == False) and (full_RC_corner == False):
-                times = int((finishing_value-starting_value)/variation)
+                times = int((finishing_value-starting_value)/variation) + 1
                 var_val = starting_value
                 save_file = save_file_name +".txt"
                 directory = os.getcwd()
@@ -198,8 +198,10 @@ while (user_input != 7):
                     data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame) 
                 if os.path.exists(cvs_full_path):
                     os.remove(cvs_full_path)
+                z= z[:-1]  # Remove the last element
                 data_frame.to_csv(cvs_full_path, index=False)
                 sim_comands.plot_2d_simple(cvs_full_path)     
+                sim_comands.plot_3d_upgraded(cvs_full_path,z,variablee)
             
 
     os.system('clear')
