@@ -15,10 +15,12 @@ N -90 -150 -60 -150 {
 lab=VOUT}
 N 360 -350 360 -310 {
 lab=VDD}
+N 180 -170 230 -170 {
+lab=VIN}
 N 360 -230 360 -200 {
 lab=#net1}
 N 290 -170 320 -170 {
-lab=#net2}
+lab=VIN}
 N 360 -310 360 -300 {
 lab=VDD}
 N 360 -240 360 -230 {
@@ -26,7 +28,7 @@ lab=#net1}
 N 380 -270 390 -270 {
 lab=VDD}
 N 360 -140 360 -100 {
-lab=#net3}
+lab=#net2}
 N 360 -40 360 -30 {
 lab=VSS}
 N 360 -30 360 -20 {
@@ -34,16 +36,14 @@ lab=VSS}
 N 380 -70 390 -70 {
 lab=VDD}
 N 360 -170 380 -170 {
-lab=#net3}
-N 380 -170 380 -130 {
-lab=#net3}
-N 360 -130 380 -130 {
-lab=#net3}
-N 270 -170 290 -170 {
 lab=#net2}
-N 180 -170 210 -170 {
+N 380 -170 380 -130 {
+lab=#net2}
+N 360 -130 380 -130 {
+lab=#net2}
+N 230 -170 290 -170 {
 lab=VIN}
-C {devices/lab_pin.sym} 360 -210 2 0 {name=p5 sig_type=std_logic lab=VOUT}
+C {devices/lab_pin.sym} 360 -110 2 0 {name=p5 sig_type=std_logic lab=VOUT}
 C {devices/iopin.sym} -90 -240 0 1 {name=p1 lab=VDD}
 C {devices/lab_pin.sym} -60 -240 0 1 {name=p3 sig_type=std_logic lab=VDD}
 C {devices/iopin.sym} -90 -210 0 1 {name=p6 lab=VSS}
@@ -65,15 +65,9 @@ spiceprefix=X
  mult=1}
 C {devices/lab_pin.sym} 390 -270 2 0 {name=p4 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/res_high_po_0p35.sym} 360 -70 2 0 {name=R8
-L=0.35
+L=1*2
 model=res_high_po_0p35
 spiceprefix=X
- mult=3}
+ mult=2}
 C {devices/lab_pin.sym} 390 -70 2 0 {name=p18 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 360 -20 0 1 {name=p13 sig_type=std_logic lab=VSS}
-C {sky130_fd_pr/res_high_po_0p35.sym} 240 -170 1 0 {name=R2
-L=0.35
-model=res_high_po_0p35
-spiceprefix=X
- mult=3}
-C {devices/lab_pin.sym} 240 -190 1 0 {name=p10 sig_type=std_logic lab=VDD}
