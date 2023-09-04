@@ -243,6 +243,34 @@ while (user_input != 7):
                 data_frame.to_csv(cvs_full_path, index=False)
                 sim_comands.plot_2d_simple(cvs_full_path)
 
+            if (Runs == False) and (Var_simu == False) and (full_mos_corner == True) and (full_RC_corner == True):
+                full_corner_m = ["tt","ss","sf","fs","ff"]
+                full_corner_RC = ["res_typical__cap_typical","res_high__cap_high","res_low__cap_low","res_low__cap_high","res_high__cap_low"]
+                save_file = save_file_name +".txt"
+                directory = os.getcwd()
+                txt_full_path = os.path.join(directory,save_file)
+                data_frame = pd.DataFrame()
+                cvs_full_path = save_file_name + ".csv"
+                iii = 1
+
+                for i in range(1,len(full_corner_m)+1,1):
+                    sim_comands.write_MOS_corner(spice_Path,full_corner_m[i-1]) # writes the corner
+                    for ii in range(1,len(full_corner_RC)+1,1):
+                        sim_comands.write_RC_corner(spice_Path,full_corner_RC[ii-1]) # writes the corner
+                        sim_comands.ngspice_sim(spice_Path)
+                        data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,iii,data_frame) 
+                        iii += 1
+
+                if os.path.exists(cvs_full_path):
+                    os.remove(cvs_full_path)
+
+                data_frame.to_csv(cvs_full_path, index=False)
+                sim_comands.plot_2d_simple(cvs_full_path)
+
+
+                    
+
+
 
 
     os.system('clear')
