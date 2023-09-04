@@ -41,18 +41,25 @@ while (user_input != 7):
             match corner_selected:
                 case "tt":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
+                    full_mos_corner == False
                 case "ss":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
+                    full_mos_corner == False
                 case "sf":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
+                    full_mos_corner == False
                 case "fs":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
+                    full_mos_corner == False
                 case "ff":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
+                    full_mos_corner == False
                 case "wafer":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
+                    full_mos_corner == False
                 case "leak":
                     sim_comands.write_MOS_corner(spice_Path,corner_selected)
+                    full_mos_corner == False
                 case "full_corner":
                     Runs = False
                     Var_simu = False
@@ -69,18 +76,23 @@ while (user_input != 7):
                 case "tt":
                     a = "res_typical__cap_typical"
                     sim_comands.write_RC_corner(spice_Path,a)
+                    full_RC_corner == False
                 case "hh":
                     a = "res_high__cap_high"
                     sim_comands.write_RC_corner(spice_Path,a)
+                    full_RC_corner == False
                 case "ll":
                     a = "res_low__cap_low"
                     sim_comands.write_RC_corner(spice_Path,a)
+                    full_RC_corner == False
                 case "lh":
                     a = "res_low__cap_high"
                     sim_comands.write_RC_corner(spice_Path,a)
+                    full_RC_corner == False
                 case "hl":
                     a = "res_high__cap_low"
                     sim_comands.write_RC_corner(spice_Path,a)
+                    full_RC_corner == False
                 case "full_corner":
                     Runs = False
                     Var_simu = False
@@ -163,7 +175,6 @@ while (user_input != 7):
                 txt_full_path = os.path.join(directory,save_file)
                 cvs_full_path =sim_comands.write_single_cvs_file(txt_full_path,saved_variables,save_variables_num)
                 sim_comands.plot_2d_simple(cvs_full_path)
-
             if (Runs == True) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
                 save_file = save_file_name +".txt"
                 directory = os.getcwd()
@@ -177,8 +188,6 @@ while (user_input != 7):
                     os.remove(cvs_full_path)
                 data_frame.to_csv(cvs_full_path, index=False)
                 sim_comands.plot_2d_simple(cvs_full_path)
-
-
             if (Runs == False) and (Var_simu == True) and (full_mos_corner == False) and (full_RC_corner == False):
                 times = int((finishing_value-starting_value)/variation) + 1
                 var_val = starting_value
@@ -202,16 +211,31 @@ while (user_input != 7):
                 data_frame.to_csv(cvs_full_path, index=False)
                 sim_comands.plot_2d_simple(cvs_full_path)     
                 sim_comands.plot_3d_upgraded(cvs_full_path,z,variablee)
-            
             if (Runs == False) and (Var_simu == False) and (full_mos_corner == True) and (full_RC_corner == False):
-                full_corner = ["tt","ss","sf","fs","ff"]
+                full_corner_m = ["tt","ss","sf","fs","ff"]
                 save_file = save_file_name +".txt"
                 directory = os.getcwd()
                 txt_full_path = os.path.join(directory,save_file)
                 data_frame = pd.DataFrame()
                 cvs_full_path = save_file_name + ".csv"
-                for i in range(1,len(full_corner)+1,1):
-                    sim_comands.write_MOS_corner(spice_Path,full_corner[i-1]) # writes the corner
+                for i in range(1,len(full_corner_m)+1,1):
+                    sim_comands.write_MOS_corner(spice_Path,full_corner_m[i-1]) # writes the corner
+                    sim_comands.ngspice_sim(spice_Path)
+                    data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame) 
+                if os.path.exists(cvs_full_path):
+                    os.remove(cvs_full_path)
+                data_frame.to_csv(cvs_full_path, index=False)
+                sim_comands.plot_2d_simple(cvs_full_path)
+            
+            if (Runs == False) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == True):
+                full_corner_RC = ["res_typical__cap_typical","res_high__cap_high","res_low__cap_low","res_low__cap_high","res_high__cap_low"]
+                save_file = save_file_name +".txt"
+                directory = os.getcwd()
+                txt_full_path = os.path.join(directory,save_file)
+                data_frame = pd.DataFrame()
+                cvs_full_path = save_file_name + ".csv"
+                for i in range(1,len(full_corner_RC)+1,1):
+                    sim_comands.write_RC_corner(spice_Path,full_corner_RC[i-1]) # writes the corner
                     sim_comands.ngspice_sim(spice_Path)
                     data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame) 
                 if os.path.exists(cvs_full_path):

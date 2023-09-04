@@ -229,7 +229,7 @@ class sim_comands:
         for a in range(0,num,1):
             headers.append(variables[a])
         print(headers)
-        #data.columns = headers
+        data.columns = headers
         data_frame = pd.concat([data_frame, data], axis=1)
         return data_frame
 
