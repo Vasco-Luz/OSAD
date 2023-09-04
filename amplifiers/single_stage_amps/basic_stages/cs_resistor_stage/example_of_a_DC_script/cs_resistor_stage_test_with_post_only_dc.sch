@@ -111,7 +111,6 @@ device=resistor
 m=1}
 C {devices/gnd.sym} 650 -150 0 0 {name=l6 lab=GND}
 C {sky130_fd_pr/corner.sym} -160 -160 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {/home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/cs_resistor_stage_post.sym} 510 -40 0 0 {name=x2}
 C {devices/lab_pin.sym} 370 -40 0 0 {name=p11 sig_type=std_logic lab=VIN
 }
 C {devices/lab_pin.sym} 430 -90 1 0 {name=p12 sig_type=std_logic lab=VDD}
@@ -123,5 +122,6 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/gnd.sym} 540 40 0 0 {name=l10 lab=GND}
-C {/home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/cs_resistor_stage.sym} 510 -230 0 0 {name=x8}
 C {devices/gnd.sym} 430 -180 0 0 {name=l1 lab=GND}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/cs_resistor_stage.sym} 510 -230 0 0 {name=x1}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/cs_resistor_stage_post.sym} 510 -40 0 0 {name=x2}

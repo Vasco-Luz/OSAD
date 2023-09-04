@@ -26,8 +26,7 @@ class sim_comands:
         else:
             print("non existant file")
             sys.exit(1)
-
-
+            
     def export_netlist(file_path): #exports the spice netlist and returns the location of the file
         directory_path = os.path.dirname(file_path)
         file_name = os.path.basename(file_path)
@@ -229,8 +228,8 @@ class sim_comands:
             data = data.drop(data.columns[0], axis=1)
         for a in range(0,num,1):
             headers.append(variables[a])
-
-        data.columns = headers
+        print(headers)
+        #data.columns = headers
         data_frame = pd.concat([data_frame, data], axis=1)
         return data_frame
 

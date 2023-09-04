@@ -176,7 +176,7 @@ while (user_input != 7):
                 if os.path.exists(cvs_full_path):
                     os.remove(cvs_full_path)
                 data_frame.to_csv(cvs_full_path, index=False)
-                sim_comands.plot_2d_simple(cvs_full_path)            
+                sim_comands.plot_2d_simple(cvs_full_path)
 
 
             if (Runs == False) and (Var_simu == True) and (full_mos_corner == False) and (full_RC_corner == False):
@@ -203,6 +203,23 @@ while (user_input != 7):
                 sim_comands.plot_2d_simple(cvs_full_path)     
                 sim_comands.plot_3d_upgraded(cvs_full_path,z,variablee)
             
+            if (Runs == False) and (Var_simu == False) and (full_mos_corner == True) and (full_RC_corner == False):
+                full_corner = ["tt","ss","sf","fs","ff"]
+                save_file = save_file_name +".txt"
+                directory = os.getcwd()
+                txt_full_path = os.path.join(directory,save_file)
+                data_frame = pd.DataFrame()
+                cvs_full_path = save_file_name + ".csv"
+                for i in range(1,len(full_corner)+1,1):
+                    sim_comands.write_MOS_corner(spice_Path,full_corner[i-1]) # writes the corner
+                    sim_comands.ngspice_sim(spice_Path)
+                    data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame) 
+                if os.path.exists(cvs_full_path):
+                    os.remove(cvs_full_path)
+                data_frame.to_csv(cvs_full_path, index=False)
+                sim_comands.plot_2d_simple(cvs_full_path)
+
+
 
     os.system('clear')
 
