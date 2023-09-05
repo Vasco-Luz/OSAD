@@ -105,16 +105,12 @@ N 430 -50 430 -40 {
 lab=GND}
 N 450 -90 460 -90 {
 lab=VDD}
-N 430 -190 450 -190 {
-lab=VOUT}
-N 450 -190 450 -150 {
-lab=VOUT}
-N 430 -150 450 -150 {
-lab=VOUT}
 N 430 -320 430 -260 {
 lab=#net1}
 N 300 -190 360 -190 {
 lab=VIN}
+N 430 -190 480 -190 {
+lab=GND}
 C {devices/code.sym} 10 -160 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	
@@ -232,10 +228,6 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 470 140 1 0 {name=p7 sig_type=std_logic lab=VDD}
 C {devices/gnd.sym} 470 240 0 0 {name=l7 lab=GND}
-C {sky130_fd_pr/npn_05v5.sym} 410 -190 0 0 {name=Q2
-model=npn_05v5_w1p00l2p00
-spiceprefix=X
-}
 C {devices/code.sym} -340 -160 0 0 {name="NPN tt params"
 only_toplevel=true
 format="tcleval( @value )"
@@ -278,6 +270,14 @@ model=res_high_po_0p35
 spiceprefix=X
 mult=1}
 C {devices/lab_pin.sym} 460 -90 2 0 {name=p18 sig_type=std_logic lab=VDD}
-C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cc_stage/cc_stage.sym} 550 190 0 0 {name=x1}
-C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cc_stage/cc_stage.sym} 560 500 0 0 {name=x2}
-C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cc_stage/cc_stage.sym} 560 740 0 0 {name=x3}
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 410 -190 0 0 {name=M5
+L=0.9
+W=60
+nf=1 mult=10
+model=nfet_g5v0d10v5
+spiceprefix=X
+}
+C {devices/gnd.sym} 480 -190 0 0 {name=l2 lab=GND}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cd_resistive_stage/cd_resistive_stage.sym} 550 190 0 0 {name=x1}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cd_resistive_stage/cd_resistive_stage.sym} 560 500 0 0 {name=x2}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cd_resistive_stage/cd_resistive_stage.sym} 560 740 0 0 {name=x3}
