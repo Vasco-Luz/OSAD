@@ -18,11 +18,11 @@ lab=VDD}
 N 650 -280 650 -240 {
 lab=VDD}
 N 490 90 540 90 {
-lab=VIN}
+lab=VB}
 N 590 90 610 90 {
-lab=VIN}
+lab=VB}
 N 540 90 590 90 {
-lab=VIN}
+lab=VB}
 N 650 120 650 150 {
 lab=VSS}
 N 650 90 720 90 {
@@ -54,7 +54,7 @@ lab=VB}
 N 370 -100 370 -80 {
 lab=GND}
 N 500 -100 520 -100 {
-lab=VB}
+lab=VIN}
 N 650 0 740 0 {
 lab=VOUT}
 N 650 -240 650 -180 {
@@ -68,11 +68,11 @@ C {devices/lab_pin.sym} 170 -180 0 1 {name=p9 sig_type=std_logic lab=VIN}
 C {devices/iopin.sym} 140 -150 0 1 {name=p11 lab=VOUT}
 C {devices/lab_pin.sym} 170 -150 2 0 {name=p12 sig_type=std_logic lab=VOUT}
 C {devices/lab_pin.sym} 650 -270 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 490 90 0 0 {name=p4 sig_type=std_logic lab=VIN
+C {devices/lab_pin.sym} 500 -100 0 0 {name=p4 sig_type=std_logic lab=VIN
 }
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 630 90 0 0 {name=M1
-L=0.7
-W=60
+L=0.5
+W=70
 nf=10
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -91,17 +91,17 @@ spiceprefix=X
  mult=1}
 C {devices/lab_pin.sym} 630 -100 3 0 {name=p17 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 540 -100 0 0 {name=M9
-L=1.5
-W=20
+L=0.7
+W=60
 nf=1 mult=1
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/vsource.sym} 370 -150 0 0 {name=V6 value=3.8}
+C {devices/vsource.sym} 370 -150 0 0 {name=V6 value=1}
 C {devices/gnd.sym} 370 -80 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 370 -220 0 0 {name=p10 sig_type=std_logic lab=VB
 }
-C {devices/lab_pin.sym} 500 -100 0 0 {name=p18 sig_type=std_logic lab=VB
+C {devices/lab_pin.sym} 490 90 0 0 {name=p18 sig_type=std_logic lab=VB
 }
 C {devices/lab_pin.sym} 740 0 2 0 {name=p5 sig_type=std_logic lab=VOUT}
 C {devices/lab_pin.sym} 720 90 0 1 {name=p13 sig_type=std_logic lab=VSS}

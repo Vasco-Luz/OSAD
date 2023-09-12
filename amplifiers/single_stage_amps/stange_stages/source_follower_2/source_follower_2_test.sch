@@ -18,7 +18,7 @@ lab=GND}
 N 180 -450 180 -410 {
 lab=VIN}
 N 400 -260 450 -260 {
-lab=VIN}
+lab=VB}
 N 180 -330 180 -310 {
 lab=GND}
 N 250 270 250 300 {
@@ -50,9 +50,9 @@ lab=VDD}
 N 470 220 470 240 {
 lab=GND}
 N 500 -260 520 -260 {
-lab=VIN}
+lab=VB}
 N 450 -260 500 -260 {
-lab=VIN}
+lab=VB}
 N 560 -230 560 -200 {
 lab=GND}
 N 560 -260 630 -260 {
@@ -122,7 +122,7 @@ lab=VB}
 N 280 -450 280 -430 {
 lab=GND}
 N 410 -450 430 -450 {
-lab=VB}
+lab=VIN}
 N 560 -350 650 -350 {
 lab=VOUT}
 C {devices/code.sym} 10 -160 0 0 {name=spice only_toplevel=false
@@ -176,7 +176,7 @@ plot i(Vmeas)
 *ploting the current for curiosity
 tran 0.1ns 20u 
 *transient simulation
-plot (v(VOUTT)) v(VINT))
+plot (v(VOUTT)) (v(VINT))
 *simple plot to exemplify the gain
 fft v(VOUTT) v(VINT) 
 *fast fourier transfor
@@ -195,7 +195,7 @@ C {devices/lab_pin.sym} 100 -440 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/gnd.sym} 560 -110 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} 100 -380 0 0 {name=V1 value=5
 }
-C {devices/vsource.sym} 180 -380 0 0 {name=V2 value=1.005}
+C {devices/vsource.sym} 180 -380 0 0 {name=V2 value=3.480}
 C {devices/gnd.sym} 100 -330 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 560 -620 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {devices/gnd.sym} 250 300 0 0 {name=l4 lab=GND}
@@ -203,7 +203,7 @@ C {devices/lab_pin.sym} 180 -440 0 0 {name=p3 sig_type=std_logic lab=VIN
 }
 C {devices/lab_pin.sym} 770 -350 2 0 {name=p5 sig_type=std_logic lab=VOUT}
 C {devices/vsource.sym} 250 240 0 0 {name=V3 value="ac 1.0 sin (0 100u 100k)"}
-C {devices/lab_pin.sym} 400 -260 0 0 {name=p4 sig_type=std_logic lab=VIN
+C {devices/lab_pin.sym} 410 -450 0 0 {name=p4 sig_type=std_logic lab=VIN
 }
 C {devices/gnd.sym} 180 -310 0 0 {name=l5 lab=GND}
 C {devices/res.sym} 730 -320 0 0 {name=R2
@@ -234,8 +234,8 @@ C {devices/lab_pin.sym} 690 190 2 0 {name=p8 sig_type=std_logic lab=VOUTT}
 C {devices/lab_pin.sym} 260 190 1 0 {name=p9 sig_type=std_logic lab=VINT
 }
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 540 -260 0 0 {name=M1
-L=0.7
-W=60
+L=0.5
+W=70
 nf=10
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -275,18 +275,18 @@ spiceprefix=X
  mult=1}
 C {devices/lab_pin.sym} 540 -450 3 0 {name=p17 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 450 -450 0 0 {name=M9
-L=1.5
-W=20
+L=0.7
+W=60
 nf=1 mult=1
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/vsource.sym} 280 -500 0 0 {name=V6 value=3.8}
+C {devices/vsource.sym} 280 -500 0 0 {name=V6 value=1}
 C {devices/gnd.sym} 280 -430 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 280 -570 0 0 {name=p10 sig_type=std_logic lab=VB
 }
-C {devices/lab_pin.sym} 410 -450 0 0 {name=p18 sig_type=std_logic lab=VB
+C {devices/lab_pin.sym} 400 -260 0 0 {name=p18 sig_type=std_logic lab=VB
 }
-C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/stange_stages/cs_2/cs_2_stage.sym} 550 190 0 0 {name=x1}
-C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/stange_stages/cs_2/cs_2_stage.sym} 600 470 0 0 {name=x2}
-C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/stange_stages/cs_2/cs_2_stage.sym} 600 730 0 0 {name=x3}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/stange_stages/source_follower_2/source_follower_2_stage.sym} 550 190 0 0 {name=x1}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/stange_stages/source_follower_2/source_follower_2_stage.sym} 600 470 0 0 {name=x2}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/stange_stages/source_follower_2/source_follower_2_stage.sym} 600 730 0 0 {name=x3}
