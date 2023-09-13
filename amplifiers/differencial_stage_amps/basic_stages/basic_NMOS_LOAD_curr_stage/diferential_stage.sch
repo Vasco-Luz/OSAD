@@ -17,6 +17,16 @@ N 70 0 180 -0 {
 lab=GND}
 N 180 0 290 0 {
 lab=GND}
+N 70 30 70 90 {
+lab=#net1}
+N 70 90 180 90 {
+lab=#net1}
+N 180 90 290 90 {
+lab=#net1}
+N 290 30 290 90 {
+lab=#net1}
+N 180 90 180 130 {
+lab=#net1}
 N 180 280 180 290 {
 lab=GND}
 N -850 130 -850 150 {
@@ -39,14 +49,8 @@ N -30 0 30 0 {
 lab=VIN}
 N 330 0 360 0 {
 lab=VB}
-N -280 240 -280 260 {
-lab=GND}
-N -280 140 -280 180 {
-lab=VB2}
-N -280 260 -280 280 {
-lab=GND}
 N 130 250 140 250 {
-lab=VB2}
+lab=#net2}
 N 180 250 190 250 {
 lab=GND}
 N 190 250 190 280 {
@@ -54,19 +58,19 @@ lab=GND}
 N 180 280 190 280 {
 lab=GND}
 N 180 190 180 220 {
-lab=#net1}
+lab=#net3}
 N 20 490 20 510 {
 lab=VDD}
 N 20 590 20 620 {
 lab=GND}
 N 290 610 290 630 {
-lab=#net2}
+lab=#net4}
 N -50 570 -20 570 {
 lab=VB}
 N -60 470 -60 530 {
-lab=#net3}
+lab=#net5}
 N -60 530 -20 530 {
-lab=#net3}
+lab=#net5}
 N -60 380 -60 410 {
 lab=VIN}
 N -240 610 -240 640 {
@@ -80,29 +84,29 @@ lab=VOUT+_tran}
 N 210 550 290 550 {
 lab=VOUT+_tran}
 N 90 550 150 550 {
-lab=#net4}
+lab=#net6}
 N -160 530 -150 530 {
 lab=VIN_tran}
 N -90 530 -60 530 {
-lab=#net3}
+lab=#net5}
 N 20 820 20 840 {
 lab=GND}
 N 20 710 20 740 {
 lab=VDD}
 N -60 700 -60 760 {
-lab=#net5}
+lab=#net7}
 N -60 760 -20 760 {
-lab=#net5}
+lab=#net7}
 N -60 610 -60 640 {
 lab=VIN}
 N -90 760 -60 760 {
-lab=#net5}
+lab=#net7}
 N -230 840 -230 870 {
 lab=GND}
 N -230 760 -230 780 {
-lab=#net6}
+lab=#net8}
 N -230 760 -150 760 {
-lab=#net6}
+lab=#net8}
 N -30 800 -20 800 {
 lab=VB}
 N 290 840 290 860 {
@@ -118,7 +122,7 @@ lab=GND}
 N -70 1020 -20 1020 {
 lab=VIN}
 N 20 980 20 1000 {
-lab=#net7}
+lab=#net9}
 N 20 890 20 920 {
 lab=VDD}
 N 20 1080 20 1110 {
@@ -138,7 +142,7 @@ lab=VIN}
 N 20 1260 20 1280 {
 lab=VDD}
 N 20 1360 20 1390 {
-lab=#net8}
+lab=#net10}
 N -30 1340 -20 1340 {
 lab=VB}
 N -70 1340 -30 1340 {
@@ -154,15 +158,15 @@ lab=GND}
 N 290 1400 290 1410 {
 lab=GND}
 N -70 1580 -20 1580 {
-lab=#net9}
+lab=#net11}
 N 20 1540 20 1560 {
 lab=VDD}
 N 20 1640 20 1670 {
 lab=GND}
 N -30 1620 -20 1620 {
-lab=#net9}
+lab=#net11}
 N -70 1620 -30 1620 {
-lab=#net9}
+lab=#net11}
 N 20 1520 20 1540 {
 lab=VDD}
 N 20 1670 20 1690 {
@@ -172,58 +176,74 @@ lab=VOUT+_CA}
 N -140 1440 -140 1460 {
 lab=VB}
 N -140 1520 -140 1580 {
-lab=#net9}
+lab=#net11}
 N -140 1580 -70 1580 {
-lab=#net9}
+lab=#net11}
 N -140 1620 -70 1620 {
-lab=#net9}
+lab=#net11}
 N -140 1580 -140 1620 {
-lab=#net9}
+lab=#net11}
 N -200 1600 -140 1600 {
-lab=#net9}
+lab=#net11}
 N -290 1660 -290 1690 {
 lab=GND}
 N -290 1600 -260 1600 {
-lab=#net10}
-N 70 110 180 110 {
-lab=#net11}
-N 180 110 180 130 {
-lab=#net11}
-N 180 110 290 110 {
-lab=#net11}
-N 290 30 290 50 {
 lab=#net12}
-N 70 30 70 50 {
-lab=#net13}
+N 20 250 130 250 {
+lab=#net2}
+N -20 280 -20 300 {
+lab=GND}
+N -30 250 -20 250 {
+lab=GND}
+N -30 250 -30 280 {
+lab=GND}
+N -30 280 -20 280 {
+lab=GND}
+N -20 190 -20 220 {
+lab=#net2}
+N -20 190 -20 210 {
+lab=#net2}
+N -20 210 30 210 {
+lab=#net2}
+N 30 210 30 250 {
+lab=#net2}
+N -20 170 -20 180 {
+lab=#net2}
+N -20 180 -20 190 {
+lab=#net2}
+N -20 100 -20 110 {
+lab=VDD}
+N 70 -110 290 -110 {
+lab=VDD}
+N 180 -140 180 -110 {
+lab=VDD}
+N 0 -110 30 -110 {
+lab=VB2}
+N 330 -110 360 -110 {
+lab=VB2}
+N -400 130 -400 150 {
+lab=GND}
+N -400 30 -400 70 {
+lab=VB2}
+N -400 150 -400 170 {
+lab=GND}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 50 0 0 0 {name=M5
-L=1
-W=40
+L=0.7
+W=35
 nf=1 mult=1
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 310 0 0 1 {name=M1
-L=1
-W=40
+L=0.7
+W=35
 nf=1 mult=1
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/res_high_po_0p35.sym} 70 -110 0 0 {name=R6
-L=1*25
-model=res_high_po_0p35
-spiceprefix=X
- mult=1}
-C {devices/lab_pin.sym} 170 -140 3 1 {name=p1 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 50 -110 2 1 {name=p2 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 310 -110 0 1 {name=p3 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 180 -140 3 1 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/gnd.sym} 180 0 0 0 {name=l1 lab=GND}
 C {devices/gnd.sym} 180 290 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/res_high_po_0p35.sym} 290 -110 0 1 {name=R1
-L=1*25
-model=res_high_po_0p35
-spiceprefix=X
- mult=1}
 C {devices/lab_pin.sym} 70 -50 2 1 {name=p4 sig_type=std_logic lab=VOUT+}
 C {devices/lab_pin.sym} 290 -50 0 1 {name=p5 sig_type=std_logic lab=VOUT-}
 C {devices/code.sym} -540 -340 0 0 {name=spice only_toplevel=false
@@ -275,7 +295,7 @@ plot v(VOUT-) v(VIN) deriv(v(VOUT-)) v(VOUT+) deriv(v(VOUT+))
 *ploting VIN VOUT and the voltage gain
 plot i(Vmeas) 
 *ploting the current for curiosity
-tran 0.2ns 20u 
+tran 0.5ns 20u 
 *transient simulation
 plot (v(VOUT+_tran)) v(VIN_tran)
 *simple plot to exemplify the gain
@@ -297,12 +317,12 @@ C {sky130_fd_pr/corner.sym} -710 -340 0 0 {name=CORNER only_toplevel=true corner
 C {devices/lab_pin.sym} -850 40 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -850 100 0 0 {name=V1 value=5
 }
-C {devices/vsource.sym} -770 100 0 0 {name=V2 value=1.5}
+C {devices/vsource.sym} -770 100 0 0 {name=V2 value=0.815}
 C {devices/gnd.sym} -850 150 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} -770 40 0 0 {name=p7 sig_type=std_logic lab=VIN
 }
 C {devices/gnd.sym} -770 170 0 0 {name=l5 lab=GND}
-C {devices/vsource.sym} -630 110 0 0 {name=V6 value=1.5}
+C {devices/vsource.sym} -630 110 0 0 {name=V6 value=2.5}
 C {devices/gnd.sym} -630 180 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -630 40 0 0 {name=p10 sig_type=std_logic lab=VB
 }
@@ -312,16 +332,10 @@ C {devices/lab_pin.sym} 360 0 2 0 {name=p9 sig_type=std_logic lab=VB
 }
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 160 250 0 0 {name=M2
 L=0.5
-W=75
+W=100
 nf=1 mult=1
 model=nfet_g5v0d10v5
 spiceprefix=X
-}
-C {devices/vsource.sym} -280 210 0 0 {name=V3 value=1}
-C {devices/gnd.sym} -280 280 0 0 {name=l4 lab=GND}
-C {devices/lab_pin.sym} -280 140 0 0 {name=p11 sig_type=std_logic lab=VB2
-}
-C {devices/lab_pin.sym} 130 250 0 0 {name=p12 sig_type=std_logic lab=VB2
 }
 C {devices/ammeter.sym} 180 160 0 0 {name=Vmeas}
 C {devices/lab_pin.sym} 20 490 0 0 {name=p13 sig_type=std_logic lab=VDD}
@@ -425,20 +439,40 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} -290 1690 0 0 {name=l18 lab=GND}
 C {devices/vsource.sym} -290 1630 0 0 {name=V10 value="ac 1.0 sin (0 100u 100k)"}
-C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/degenerated_stage/differential_stage.sym} 0 550 0 0 {name=x1}
-C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/degenerated_stage/differential_stage.sym} 0 780 0 0 {name=x2}
-C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/degenerated_stage/differential_stage.sym} 0 1040 0 0 {name=x3}
-C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/degenerated_stage/differential_stage.sym} 0 1320 0 0 {name=x4}
-C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/degenerated_stage/differential_stage.sym} 0 1600 0 0 {name=x5}
-C {sky130_fd_pr/res_high_po_0p35.sym} 70 80 0 0 {name=R10
-L=1*1
-model=res_high_po_0p35
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 0 250 0 1 {name=M3
+L=0.5
+W=100
+nf=1 mult=1
+model=nfet_g5v0d10v5
 spiceprefix=X
- mult=1}
-C {sky130_fd_pr/res_high_po_0p35.sym} 290 80 0 1 {name=R11
-L=1*1
-model=res_high_po_0p35
+}
+C {devices/gnd.sym} -20 300 0 0 {name=l19 lab=GND}
+C {devices/isource.sym} -20 140 0 0 {name=I0 value=300u}
+C {devices/lab_pin.sym} -20 100 3 1 {name=p12 sig_type=std_logic lab=VDD}
+C {devices/vsource.sym} -400 100 0 0 {name=V3 value=3.5}
+C {devices/gnd.sym} -400 170 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} -400 30 0 0 {name=p2 sig_type=std_logic lab=VB2
+}
+C {devices/lab_pin.sym} 0 -110 0 0 {name=p3 sig_type=std_logic lab=VB2
+}
+C {devices/lab_pin.sym} 360 -110 2 0 {name=p11 sig_type=std_logic lab=VB2
+}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 50 -110 0 0 {name=M9
+L=0.7
+W=35
+nf=1 mult=1
+model=pfet_g5v0d10v5
 spiceprefix=X
- mult=1}
-C {devices/lab_pin.sym} 50 80 2 1 {name=p30 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 310 80 2 0 {name=p32 sig_type=std_logic lab=VDD}
+}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 310 -110 0 1 {name=M4
+L=0.7
+W=35
+nf=1 mult=1
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/basic_NMOS_LOAD_curr_stage/differential_stage.sym} 0 550 0 0 {name=x1}
+C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/basic_NMOS_LOAD_curr_stage/differential_stage.sym} 0 780 0 0 {name=x2}
+C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/basic_NMOS_LOAD_curr_stage/differential_stage.sym} 0 1040 0 0 {name=x3}
+C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/basic_NMOS_LOAD_curr_stage/differential_stage.sym} 0 1320 0 0 {name=x4}
+C {/home/vasco/Desktop/sky130A/amplifiers/differencial_stage_amps/basic_stages/basic_NMOS_LOAD_curr_stage/differential_stage.sym} 0 1600 0 0 {name=x5}
