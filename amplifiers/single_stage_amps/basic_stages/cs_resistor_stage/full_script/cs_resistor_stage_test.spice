@@ -1,16 +1,24 @@
 ** sch_path:
-*+ /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/example_of_a_DC_script/cs_resistor_stage_test_with_post_only_dc.sch
-**.subckt cs_resistor_stage_test_with_post_only_dc
+*+ /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/cs_resistor_stage_test.sch
+**.subckt cs_resistor_stage_test
 Vmeas VDD net1 0
 .save i(vmeas)
 V1 VDD GND 5
 .save i(v1)
 V2 VIN GND 1.265
 .save i(v2)
+V3 VINT GND ac 1.0 sin (0 100u 100k)
+.save i(v3)
 R2 VOUT GND 10G m=1
-R1 VOUT_tran GND 10G m=1
-x1 net1 GND VIN VOUT cs_resistor_stage
-x2 VDD GND VIN VOUT_tran cs_resistor_stage_post
+C1 VINT net2 1 m=1
+R3 VIN net2 10M m=1
+R5 VOUTT GND 10G m=1
+XM1 VOUT VIN GND GND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=60 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+C2 net3 VOUTT 100u m=1
+XR6 VOUT net1 VDD sky130_fd_pr__res_high_po_0p35 L=1*8 mult=2 m=2
+x1 VDD GND net2 net3 cs_resistor_stage
 **** begin user architecture code
 
 **************************************************************
@@ -24,7 +32,6 @@ x2 VDD GND VIN VOUT_tran cs_resistor_stage_post
 **************************************************************
 **************************************************************
 **************************************************************
-.include ~/Documents/cs_resistor_stage_post_layout.spice
 *.lib /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 * chose the corners in the corner file
 * tt_mm for mismatch
@@ -54,10 +61,24 @@ x2 VDD GND VIN VOUT_tran cs_resistor_stage_post
 **************************************************************
 .control
 save all
-dc V2 0 5 0.01
+dc V2 0 3.3 0.01
 *dc simulation
-plot v(VOUT) v(VIN) deriv(v(VOUT)) v(VOUt_tran) deriv(v(VOUT_tran))
-
+plot v(VOUT) v(VIN) deriv(v(VOUT))
+*ploting VIN VOUT and the voltage gain
+plot i(Vmeas)
+*ploting the current for curiosity
+tran 0.1ns 20u
+*transient simulation
+plot (v(VINT)) (v(VOUTT))
+*simple plot to exemplify the gain
+fft v(VOUTT) v(VINT)
+*fast fourier transfor
+plot mag(v(VOUTT)) mag(v(VINT))
+* analyse the frequency spectrum of the transient waves, to detect distortion
+ac dec 20 1 50G
+*simple ac simulation
+plot v(VOUTT) v(VOUTT)
+*gain in function of the input frequency
 .endc
 
 

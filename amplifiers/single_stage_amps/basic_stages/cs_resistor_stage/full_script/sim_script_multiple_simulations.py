@@ -167,7 +167,11 @@ while (user_input != 7):
                     Temperature_Max = int(input("Maximum Temperature:"))
                     Gaussian_variable = int(input("gaussean variation:"))
                     Temp_gauss = True
+
+
         case 5:
+
+            sim_comands.dectect_simulations(spice_Path)
             save_file_name =input("select the file name: ")
             save_variables_num = int(input("How many voltage/currents you want to save: "))
             saved_variables = []
@@ -177,6 +181,16 @@ while (user_input != 7):
                 saved_variables.append(variable)
             sim_comands.add_save(spice_Path,save_file_name,saved_variables,save_variables_num)
             os.system('clear')
+
+
+
+
+
+
+
+
+
+
         case 6:
             if (Runs == False) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
                 sim_comands.ngspice_sim(spice_Path)
@@ -218,6 +232,7 @@ while (user_input != 7):
                 z = []
                 z.append(var_val)
                 sim_comands.write_var_file(save_file_name,variablee,starting_value,finishing_value,variation)
+
 
 
                 for i in range(1,times+1,1):

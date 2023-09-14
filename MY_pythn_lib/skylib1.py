@@ -62,7 +62,7 @@ class sim_comands:
 
 
     def write_RC_corner(spice_path,corner): #writes the RC corner in the file in the spice path
-        target_text ="/home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/"
+        target_text ="sky130A/libs.tech/ngspice/r+c/"
         corner1 = corner + ".spice"
         corner2 = corner + "__lin.spice"
         new_content = []
@@ -209,6 +209,9 @@ class sim_comands:
         data.to_csv(cvs_full_path, index=False)
         return cvs_full_path
 
+
+
+
     def write_RUNS_cvs_file(txt_path,variables,num,i,data_frame):
         with open(txt_path, 'r') as txt_file:
             lines = txt_file.readlines()
@@ -232,6 +235,76 @@ class sim_comands:
         data.columns = headers
         data_frame = pd.concat([data_frame, data], axis=1)
         return data_frame
+    
+
+
+    def write_var_file(txt_path,variable_name,start,finish,variation):
+        new_name = txt_path + "_" + variable_name
+        directory = os.getcwd()
+        txt_full_path = os.path.join(directory,new_name)
+        times = int((finish-start)/variation)
+        with open(txt_full_path,"w") as output_file:
+            output_file.write(str(variable_name) + "\n")
+            for a in range(0,times+1,1):
+                val = start + variation * a
+                output_file.write(str(val) + "\n")
+
+
+
+    def dectect_simulations(spice_path):
+        dc_simu = []
+        dc = False
+        tran_simu=[]
+        tran = False
+        ac_simu = []
+        ac = False
+
+
+        in_block = False
+        dc_dict = []
+
+        with open(spice_path, "r") as file:
+            for line in file:
+                # Check if we're inside the .control block
+                if line.strip() == ".control":
+                    in_block = True
+                    continue
+                    # Check if we're inside the .endc block
+                if line.strip() == ".endc":
+                    in_block = False
+                    break  # Exit the loop since we've found the end of the .control block
+                # If we're inside the .control block, check for DC simulation lines
+                if in_block:
+                    if line.strip().startswith("dc"):
+                        dc_simu.append(line.strip())
+                        dc = True
+                    if line.strip().startswith("tran"):
+                        tran_simu.append(line.strip())
+                        tran = True
+                    if line.strip().startswith("ac"):
+                        ac_simu.append(line.strip())
+                        ac = True
+
+        if (dc ==True):
+            print(dc_simu)
+        if (tran==True):
+            print(tran_simu)
+        if (ac==True):
+            print(ac_simu)
+
+
+        
+
+        
+        
+
+
+
+
+
+
+
+
 
 
 
