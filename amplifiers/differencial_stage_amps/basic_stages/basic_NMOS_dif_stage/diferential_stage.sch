@@ -104,13 +104,13 @@ lab=VDD}
 N 30 650 30 680 {
 lab=GND}
 N 300 670 300 690 {
-lab=#net6}
+lab=GND}
 N -40 630 -10 630 {
 lab=VB}
 N -50 530 -50 590 {
-lab=#net7}
+lab=#net6}
 N -50 590 -10 590 {
-lab=#net7}
+lab=#net6}
 N -50 440 -50 470 {
 lab=VIN}
 N -230 670 -230 700 {
@@ -124,29 +124,29 @@ lab=VOUT+_tran}
 N 220 610 300 610 {
 lab=VOUT+_tran}
 N 100 610 160 610 {
-lab=#net8}
+lab=#net7}
 N -150 590 -140 590 {
 lab=VIN_tran}
 N -80 590 -50 590 {
-lab=#net7}
+lab=#net6}
 N 30 880 30 900 {
 lab=GND}
 N 30 770 30 800 {
 lab=VDD}
 N -50 760 -50 820 {
-lab=#net9}
+lab=#net8}
 N -50 820 -10 820 {
-lab=#net9}
+lab=#net8}
 N -50 670 -50 700 {
 lab=VIN}
 N -80 820 -50 820 {
-lab=#net9}
+lab=#net8}
 N -220 900 -220 930 {
 lab=GND}
 N -220 820 -220 840 {
-lab=#net10}
+lab=#net9}
 N -220 820 -140 820 {
-lab=#net10}
+lab=#net9}
 N -20 860 -10 860 {
 lab=VB}
 N 300 900 300 920 {
@@ -162,7 +162,7 @@ lab=GND}
 N -60 1080 -10 1080 {
 lab=VIN}
 N 30 1040 30 1060 {
-lab=#net11}
+lab=#net10}
 N 30 950 30 980 {
 lab=VDD}
 N 30 1140 30 1170 {
@@ -182,7 +182,7 @@ lab=VIN}
 N 30 1320 30 1340 {
 lab=VDD}
 N 30 1420 30 1450 {
-lab=#net12}
+lab=#net11}
 N -20 1400 -10 1400 {
 lab=VB}
 N -60 1400 -20 1400 {
@@ -198,15 +198,15 @@ lab=GND}
 N 300 1460 300 1470 {
 lab=GND}
 N -60 1640 -10 1640 {
-lab=#net13}
+lab=#net12}
 N 30 1600 30 1620 {
 lab=VDD}
 N 30 1700 30 1730 {
 lab=GND}
 N -20 1680 -10 1680 {
-lab=#net13}
+lab=#net12}
 N -60 1680 -20 1680 {
-lab=#net13}
+lab=#net12}
 N 30 1580 30 1600 {
 lab=VDD}
 N 30 1730 30 1750 {
@@ -216,19 +216,21 @@ lab=VOUT+_CA}
 N -130 1500 -130 1520 {
 lab=VB}
 N -130 1580 -130 1640 {
-lab=#net13}
+lab=#net12}
 N -130 1640 -60 1640 {
-lab=#net13}
+lab=#net12}
 N -130 1680 -60 1680 {
-lab=#net13}
+lab=#net12}
 N -130 1640 -130 1680 {
-lab=#net13}
+lab=#net12}
 N -190 1660 -130 1660 {
-lab=#net13}
+lab=#net12}
 N -280 1720 -280 1750 {
 lab=GND}
 N -280 1660 -250 1660 {
-lab=#net14}
+lab=#net13}
+N 300 690 300 700 {
+lab=GND}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 50 0 0 0 {name=M5
 L=0.7
 W=35
