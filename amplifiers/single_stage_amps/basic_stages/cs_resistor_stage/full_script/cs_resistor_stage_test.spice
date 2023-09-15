@@ -61,13 +61,15 @@ x1 VDD GND net2 net3 cs_resistor_stage
 **************************************************************
 .control
 save all
-dc V2 0 3.3 0.01
+dc V2 0 5 0.01
+wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_dc.txt v(VOUT) deriv(v(VOUT))
 *dc simulation
 plot v(VOUT) v(VIN) deriv(v(VOUT))
 *ploting VIN VOUT and the voltage gain
 plot i(Vmeas)
 *ploting the current for curiosity
 tran 0.1ns 20u
+wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_tran.txt v(VOUTT)
 *transient simulation
 plot (v(VINT)) (v(VOUTT))
 *simple plot to exemplify the gain
@@ -76,6 +78,7 @@ fft v(VOUTT) v(VINT)
 plot mag(v(VOUTT)) mag(v(VINT))
 * analyse the frequency spectrum of the transient waves, to detect distortion
 ac dec 20 1 50G
+wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_ac.txt v(VOUTT)
 *simple ac simulation
 plot v(VOUTT) v(VOUTT)
 *gain in function of the input frequency

@@ -170,16 +170,38 @@ while (user_input != 7):
 
 
         case 5:
-
-            sim_comands.dectect_simulations(spice_Path)
+            dc_sim = False
+            tran_simu = False
+            ac_simu = False
+            dc,tran,ac=sim_comands.dectect_simulations(spice_Path)
             save_file_name =input("select the file name: ")
-            save_variables_num = int(input("How many voltage/currents you want to save: "))
-            saved_variables = []
-            print("add the variables the same way when you want to plot them")
-            for _ in range(save_variables_num):
-                variable = input("Enter the variable names: ")
-                saved_variables.append(variable)
-            sim_comands.add_save(spice_Path,save_file_name,saved_variables,save_variables_num)
+            if (dc is not None):
+                save_variables_num_dc =  int(input("How many voltage/currents you want to save in the dc simulation: "))
+                saved_variables_dc = []
+                print("add the variables the same way when you want to plot them")
+                for _ in range(save_variables_num_dc):
+                    variable_dc = input("Enter the variable names: ")
+                    saved_variables_dc.append(variable_dc)
+                sim_comands.add_save_specific(spice_Path,save_file_name+"_dc",saved_variables_dc,save_variables_num_dc,dc)
+                dc_sim = True
+            if (tran is not None):
+                save_variables_num_tran =  int(input("How many voltage/currents you want to save in the tran simulation: "))
+                saved_variables_tran = []
+                print("add the variables the same way when you want to plot them")
+                for _ in range(save_variables_num_tran):
+                    variable_tran = input("Enter the variable names: ")
+                    saved_variables_tran.append(variable_tran)
+                sim_comands.add_save_specific(spice_Path,save_file_name+"_tran",saved_variables_tran,save_variables_num_tran,tran)
+                tran_sim = True
+            if (ac is not None):
+                save_variables_num_ac =  int(input("How many voltage/currents you want to save in the ac simulation: "))
+                saved_variables_ac = []
+                print("add the variables the same way when you want to plot them")
+                for _ in range(save_variables_num_ac):
+                    variable_ac = input("Enter the variable names: ")
+                    saved_variables_ac.append(variable_ac)
+                sim_comands.add_save_specific(spice_Path,save_file_name+"_ac",saved_variables_ac,save_variables_num_ac,ac)
+                ac_sim = True
             os.system('clear')
 
 
@@ -194,11 +216,26 @@ while (user_input != 7):
         case 6:
             if (Runs == False) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
                 sim_comands.ngspice_sim(spice_Path)
-                save_file = save_file_name +".txt"
                 directory = os.getcwd()
-                txt_full_path = os.path.join(directory,save_file)
-                cvs_full_path =sim_comands.write_single_cvs_file(txt_full_path,saved_variables,save_variables_num)
-                sim_comands.plot_2d_simple(cvs_full_path)
+
+                if (dc_sim ==True):
+                    save_file = save_file_name +"_dc.txt"
+                    txt_full_path_dc = os.path.join(directory,save_file)
+                    cvs_full_path_dc =sim_comands.write_single_cvs_file(txt_full_path_dc,saved_variables_dc,save_variables_num_dc)
+                    sim_comands.plot_2d_simple(cvs_full_path_dc)
+
+                if (tran_sim ==True):
+                    save_file = save_file_name +"_tran.txt"
+                    txt_full_path_tran = os.path.join(directory,save_file)
+                    cvs_full_path_tran =sim_comands.write_single_cvs_file(txt_full_path_tran,saved_variables_tran,save_variables_num_tran)
+                    sim_comands.plot_2d_simple(cvs_full_path_tran)
+
+                if (ac_sim ==True):
+                    save_file = save_file_name +"_ac.txt"
+                    txt_full_path_ac = os.path.join(directory,save_file)
+                    cvs_full_path_ac =sim_comands.write_single_cvs_file(txt_full_path_ac,saved_variables_ac,save_variables_num_ac)
+                    sim_comands.plot_2d_simple(cvs_full_path_ac)
+
 
 
 

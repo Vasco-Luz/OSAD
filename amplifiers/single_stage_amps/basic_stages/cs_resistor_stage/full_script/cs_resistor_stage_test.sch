@@ -106,7 +106,7 @@ value="
 **************************************************************
 .control
 save all
-dc V2 0 3.3 0.01 
+dc V2 0 5 0.01 
 *dc simulation
 plot v(VOUT) v(VIN) deriv(v(VOUT))
 *ploting VIN VOUT and the voltage gain

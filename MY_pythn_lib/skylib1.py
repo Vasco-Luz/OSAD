@@ -251,18 +251,47 @@ class sim_comands:
 
 
 
+    def add_save_specific(spice_path,file_name,variables,num,sim): #creates a save data
+        directory = os.getcwd() #gets current directory
+        target_text = ' '.join(sim)
+        file_name = file_name + ".txt"
+        full_file_path = os.path.join(directory,file_name)
+        new_content = []
+
+        with open(spice_path, "r") as file:
+            for line in file:
+                if target_text in line:
+                    print("a")
+                    modified_line ="wrdata" +" "+ full_file_path
+                    for a in range(0,num,1):
+                        modified_line = modified_line + " " + variables[a]
+                        
+
+                    modified_line = modified_line +"\n"
+                    modified_line2 = target_text + "\n"
+                    new_content.append(modified_line2)
+                    new_content.append(modified_line)
+                else:
+                    new_content.append(line)
+
+
+
+
+
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+
+        if os.path.exists(full_file_path):
+            os.remove(full_file_path)
+
+
+
     def dectect_simulations(spice_path):
         dc_simu = []
-        dc = False
         tran_simu=[]
-        tran = False
         ac_simu = []
-        ac = False
-
-
+        noise_simu = []
         in_block = False
-        dc_dict = []
-
         with open(spice_path, "r") as file:
             for line in file:
                 # Check if we're inside the .control block
@@ -277,20 +306,15 @@ class sim_comands:
                 if in_block:
                     if line.strip().startswith("dc"):
                         dc_simu.append(line.strip())
-                        dc = True
                     if line.strip().startswith("tran"):
                         tran_simu.append(line.strip())
-                        tran = True
                     if line.strip().startswith("ac"):
                         ac_simu.append(line.strip())
-                        ac = True
+                    if line.strip().startswith("noise"):
+                        noise_simu.append(line.strip())
 
-        if (dc ==True):
-            print(dc_simu)
-        if (tran==True):
-            print(tran_simu)
-        if (ac==True):
-            print(ac_simu)
+        return dc_simu,tran_simu,ac_simu
+
 
 
         
