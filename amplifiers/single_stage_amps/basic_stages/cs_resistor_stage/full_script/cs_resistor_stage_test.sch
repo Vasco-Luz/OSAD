@@ -106,7 +106,7 @@ value="
 **************************************************************
 .control
 save all
-dc V2 0 5 0.01 
+dc V2 0 5 0.001 
 *dc simulation
 plot v(VOUT) v(VIN) deriv(v(VOUT))
 *ploting VIN VOUT and the voltage gain
@@ -122,7 +122,7 @@ plot mag(v(VOUTT)) mag(v(VINT))
 * analyse the frequency spectrum of the transient waves, to detect distortion
 ac dec 20 1 50G 
 *simple ac simulation
-plot v(VOUTT) v(VOUTT)
+plot db(v(VOUTT))
 *gain in function of the input frequency
 .endc
 "}

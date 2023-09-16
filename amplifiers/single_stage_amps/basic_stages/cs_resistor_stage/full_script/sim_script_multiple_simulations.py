@@ -221,54 +221,114 @@ while (user_input != 7):
                 if (dc_sim ==True):
                     save_file = save_file_name +"_dc.txt"
                     txt_full_path_dc = os.path.join(directory,save_file)
-                    cvs_full_path_dc =sim_comands.write_single_cvs_file(txt_full_path_dc,saved_variables_dc,save_variables_num_dc)
+                    v = sim_comands.get_dc_control_variable(spice_Path)
+                    cvs_full_path_dc =sim_comands.write_single_cvs_file(txt_full_path_dc,saved_variables_dc,save_variables_num_dc,v)
                     sim_comands.plot_2d_simple(cvs_full_path_dc)
 
                 if (tran_sim ==True):
                     save_file = save_file_name +"_tran.txt"
                     txt_full_path_tran = os.path.join(directory,save_file)
-                    cvs_full_path_tran =sim_comands.write_single_cvs_file(txt_full_path_tran,saved_variables_tran,save_variables_num_tran)
+                    cvs_full_path_tran =sim_comands.write_single_cvs_file(txt_full_path_tran,saved_variables_tran,save_variables_num_tran,"time")
                     sim_comands.plot_2d_simple(cvs_full_path_tran)
 
                 if (ac_sim ==True):
                     save_file = save_file_name +"_ac.txt"
                     txt_full_path_ac = os.path.join(directory,save_file)
-                    cvs_full_path_ac =sim_comands.write_single_cvs_file(txt_full_path_ac,saved_variables_ac,save_variables_num_ac)
+                    cvs_full_path_ac =sim_comands.write_single_cvs_file(txt_full_path_ac,saved_variables_ac,save_variables_num_ac,"frequency")
+                    sim_comands.plot_2d_simple(cvs_full_path_ac)
+
+
+            if (Runs == True) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
+                directory = os.getcwd()
+
+                save_file_dc = save_file_name +"_dc.txt"
+                data_frame_dc = pd.DataFrame()
+                txt_full_path_dc = os.path.join(directory,save_file_dc)
+
+                save_file_tran = save_file_name +"_tran.txt"
+                data_frame_tran = pd.DataFrame()
+                txt_full_path_tran = os.path.join(directory,save_file_tran)
+
+                save_file_ac = save_file_name +"_ac.txt"
+                data_frame_ac = pd.DataFrame()
+                txt_full_path_ac = os.path.join(directory,save_file_ac)
+
+
+                cvs_full_path_dc = save_file_name  + "_dc.csv"
+                cvs_full_path_tran = save_file_name  + "_tran.csv"
+                cvs_full_path_ac = save_file_name  + "_ac.csv"
+
+                if (dc_sim ==True):
+                        v = sim_comands.get_dc_control_variable(spice_Path)
+
+
+                for i in range(1,corridas+1,1):
+                    sim_comands.ngspice_sim(spice_Path)
+                    if (dc_sim ==True):
+                        data_frame_dc = sim_comands.write_RUNS_cvs_file(txt_full_path_dc,saved_variables_dc,save_variables_num_dc,i,data_frame_dc,v)
+                    if (tran_sim ==True):
+                        data_frame_tran = sim_comands.write_RUNS_cvs_file(txt_full_path_tran,saved_variables_tran,save_variables_num_tran,i,data_frame_tran,"time")
+                    if (ac_sim ==True):
+                        data_frame_ac = sim_comands.write_RUNS_cvs_file(txt_full_path_ac,saved_variables_ac,save_variables_num_ac,i,data_frame_ac,"frequency")
+                        
+                    
+                if os.path.exists(cvs_full_path_dc):
+                    os.remove(cvs_full_path_dc)
+                if os.path.exists(cvs_full_path_tran):
+                    os.remove(cvs_full_path_tran)
+                if os.path.exists(cvs_full_path_ac):
+                    os.remove(cvs_full_path_ac)
+
+
+                if (dc_sim ==True):
+                    data_frame_dc.to_csv(cvs_full_path_dc, index=False)
+                    sim_comands.plot_2d_simple(cvs_full_path_dc)
+
+                if (tran_sim ==True):
+                    data_frame_tran.to_csv(cvs_full_path_tran, index=False)
+                    sim_comands.plot_2d_simple(cvs_full_path_tran)
+
+                if (ac_sim ==True):
+                    data_frame_ac.to_csv(cvs_full_path_ac, index=False)
                     sim_comands.plot_2d_simple(cvs_full_path_ac)
 
 
 
 
 
-
-            if (Runs == True) and (Var_simu == False) and (full_mos_corner == False) and (full_RC_corner == False): #single simulation
-                save_file = save_file_name +".txt"
-                directory = os.getcwd()
-                txt_full_path = os.path.join(directory,save_file)
-                data_frame = pd.DataFrame()
-                cvs_full_path = save_file_name + ".csv"
-                for i in range(1,corridas+1,1):
-                    sim_comands.ngspice_sim(spice_Path)
-                    data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame)     
-                if os.path.exists(cvs_full_path):
-                    os.remove(cvs_full_path)
-                data_frame.to_csv(cvs_full_path, index=False)
-                sim_comands.plot_2d_simple(cvs_full_path)
-
-
-
-
             if (Runs == False) and (Var_simu == True) and (full_mos_corner == False) and (full_RC_corner == False):
+                directory = os.getcwd()
+
+                save_file_dc = save_file_name +"_dc.txt"
+                data_frame_dc = pd.DataFrame()
+                txt_full_path_dc = os.path.join(directory,save_file_dc)
+
+                save_file_tran = save_file_name +"_tran.txt"
+                data_frame_tran = pd.DataFrame()
+                txt_full_path_tran = os.path.join(directory,save_file_tran)
+
+                save_file_ac = save_file_name +"_ac.txt"
+                data_frame_ac = pd.DataFrame()
+                txt_full_path_ac = os.path.join(directory,save_file_ac)
+
+
+                cvs_full_path_dc = save_file_name  + "_dc.csv"
+                cvs_full_path_tran = save_file_name  + "_tran.csv"
+                cvs_full_path_ac = save_file_name  + "_ac.csv"
+
+                if (dc_sim ==True):
+                        v = sim_comands.get_dc_control_variable(spice_Path)
+
+
                 times = int((finishing_value-starting_value)/variation) + 1
                 var_val = starting_value
-                save_file = save_file_name +".txt"
-                directory = os.getcwd()
-                txt_full_path = os.path.join(directory,save_file)
-                data_frame = pd.DataFrame()
-                cvs_full_path = save_file_name + ".csv"
+
+
+
+
                 z = []
                 z.append(var_val)
-                sim_comands.write_var_file(save_file_name,variablee,starting_value,finishing_value,variation)
+                sim_comands.write_var_file(save_file_name + ".txt",variablee,starting_value,finishing_value,variation)
 
 
 
@@ -276,15 +336,45 @@ while (user_input != 7):
                     sim_comands.change_var(spice_Path,variablee,var_val)
                     var_val = var_val + variation
                     z.append(var_val)
-                    sim_comands.ngspice_sim(spice_Path)
-                    data_frame = sim_comands.write_RUNS_cvs_file(txt_full_path,saved_variables,save_variables_num,i,data_frame) 
-                if os.path.exists(cvs_full_path):
-                    os.remove(cvs_full_path)
-                z= z[:-1]  # Remove the last element
-                data_frame.to_csv(cvs_full_path, index=False)
-                sim_comands.plot_2d_simple(cvs_full_path)     
-                sim_comands.plot_3d_upgraded(cvs_full_path,z,variablee)
 
+                    sim_comands.ngspice_sim(spice_Path)
+                    if (dc_sim ==True):
+                        data_frame_dc = sim_comands.write_RUNS_cvs_file(txt_full_path_dc,saved_variables_dc,save_variables_num_dc,i,data_frame_dc,v)
+                    if (tran_sim ==True):
+                        data_frame_tran = sim_comands.write_RUNS_cvs_file(txt_full_path_tran,saved_variables_tran,save_variables_num_tran,i,data_frame_tran,"time")
+                    if (ac_sim ==True):
+                        data_frame_ac = sim_comands.write_RUNS_cvs_file(txt_full_path_ac,saved_variables_ac,save_variables_num_ac,i,data_frame_ac,"frequency")
+
+
+
+
+                if os.path.exists(cvs_full_path_dc):
+                    os.remove(cvs_full_path_dc)
+                if os.path.exists(cvs_full_path_tran):
+                    os.remove(cvs_full_path_tran)
+                if os.path.exists(cvs_full_path_ac):
+                    os.remove(cvs_full_path_ac)
+
+
+                z= z[:-1]  # Remove the last element
+
+                if (dc_sim ==True):
+                    data_frame_dc.to_csv(cvs_full_path_dc, index=False)
+                    sim_comands.plot_2d_simple(cvs_full_path_dc)
+                    sim_comands.plot_3d_upgraded(cvs_full_path_dc,z,variablee)
+
+                if (tran_sim ==True):
+                    data_frame_tran.to_csv(cvs_full_path_tran, index=False)
+                    sim_comands.plot_2d_simple(cvs_full_path_tran)
+                    sim_comands.plot_3d_upgraded(cvs_full_path_tran,z,variablee)
+
+                if (ac_sim ==True):
+                    data_frame_ac.to_csv(cvs_full_path_ac, index=False)
+                    sim_comands.plot_2d_simple(cvs_full_path_ac)
+                    sim_comands.plot_3d_upgraded(cvs_full_path_ac,z,variablee)
+
+    
+                
 
 
 

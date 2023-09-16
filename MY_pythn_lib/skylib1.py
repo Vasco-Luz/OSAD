@@ -133,6 +133,27 @@ class sim_comands:
     
 
 
+
+
+    def get_dc_control_variable(spice_path):
+        in_block = False
+        with open(spice_path, "r") as file:
+            for line in file:
+                # Check if we're inside the .control block
+                if line.strip() == ".control":
+                    in_block = True
+                    continue
+                    # Check if we're inside the .endc block
+                if line.strip() == ".endc":
+                    in_block = False
+                    break  # Exit the loop since we've found the end of the .control block
+                # If we're inside the .control block, check for DC simulation lines
+                if in_block:
+                    if line.strip().startswith("dc"):
+                        v = line.strip().split()[1]
+        return(v)
+
+
     def change_TMP(spice_path,temp):# changes the Temperature in the spice file
         target_text = ".TEMP"
         new_content = []
@@ -180,10 +201,11 @@ class sim_comands:
         subprocess.run(ngspice_command, shell=True)#simulação
 
 
-    def write_single_cvs_file(txt_path,variables,num):
+    def write_single_cvs_file(txt_path,variables,num,name):
         with open(txt_path, 'r') as txt_file:
             lines = txt_file.readlines()
         data = []
+
         for line in lines:
             # Split each line into columns using whitespace as the delimiter
             columns = line.strip().split()
@@ -195,7 +217,7 @@ class sim_comands:
         columns_to_drop = data.columns[2::2]
         # Drop the specified columns
         data.drop(columns=columns_to_drop, inplace=True)
-        headers = ["control"]
+        headers = [name]
         for a in range(0,num,1):
             headers.append(variables[a])
         data.columns = headers
@@ -212,7 +234,7 @@ class sim_comands:
 
 
 
-    def write_RUNS_cvs_file(txt_path,variables,num,i,data_frame):
+    def write_RUNS_cvs_file(txt_path,variables,num,i,data_frame,name):
         with open(txt_path, 'r') as txt_file:
             lines = txt_file.readlines()
         data = []
@@ -226,7 +248,7 @@ class sim_comands:
         columns_to_drop = data.columns[2::2]
         data.drop(columns=columns_to_drop, inplace=True)
         if(i ==1):
-            headers = ["control"]
+            headers = [name]
         if (i >1):
             data = data.drop(data.columns[0], axis=1)
         for a in range(0,num,1):
@@ -344,6 +366,8 @@ class sim_comands:
         for i in range(1, len(column_names)):
             y_column = data_matrix[:, i]  # Subsequent columns as y
             plt.plot(x_column, y_column, label=column_names[i])
+        if (column_names[0] == "frequency"):
+            plt.xscale('log')  # Set x-axis to logarithmic scale
         plt.xlabel(column_names[0])  # x-axis label is the first column name
         plt.ylabel("Y-Values")  # y-axis label for all y-variables
         plt.title(f"Plot of Y-Values vs. {column_names[0]}")
@@ -386,6 +410,15 @@ class sim_comands:
             #y_column = y_column.T  # Com
             fig = plt.figure()
             ax = fig.add_subplot(111, projection='3d')
+            if (column_names[0] == "frequency"):
+                x_column = np.log10(x_column)
+                num_ticks_per_decade = 20  # Adjust this to your preference
+                min_x = np.floor(x_column.min())
+                max_x = np.ceil(x_column.max())
+                num_decades = int((max_x - min_x) + 1)
+                total_ticks = num_ticks_per_decade * num_decades
+                tick_positions = np.logspace(min_x, max_x, total_ticks)
+                tick_labels = [f'{val:.2e}' for val in tick_positions]
             ax.plot_surface(x_column, z_var, y_column)
             ax.grid(True)
             ax.set_xlabel(column_names[0], fontsize=12, fontweight='bold')

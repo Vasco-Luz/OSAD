@@ -49,7 +49,7 @@ x1 VDD GND net2 net3 cs_resistor_stage
 **************************************************************
 **************************************************************
 **************************************************************
-.TEMP 27
+.TEMP 125.0
 **************************************************************
 **************************************************************
 **************************************************************
@@ -61,7 +61,7 @@ x1 VDD GND net2 net3 cs_resistor_stage
 **************************************************************
 .control
 save all
-dc V2 0 5 0.01
+dc V2 0 5 0.001
 wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_dc.txt v(VOUT) deriv(v(VOUT))
 *dc simulation
 plot v(VOUT) v(VIN) deriv(v(VOUT))
@@ -78,9 +78,9 @@ fft v(VOUTT) v(VINT)
 plot mag(v(VOUTT)) mag(v(VINT))
 * analyse the frequency spectrum of the transient waves, to detect distortion
 ac dec 20 1 50G
-wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_ac.txt v(VOUTT)
+wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_ac.txt db(v(VOUTT))
 *simple ac simulation
-plot v(VOUTT) v(VOUTT)
+plot db(v(VOUTT))
 *gain in function of the input frequency
 .endc
 
