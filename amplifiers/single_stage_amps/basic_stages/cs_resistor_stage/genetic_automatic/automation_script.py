@@ -4,9 +4,9 @@ import os
 import pandas as pd
 import numpy as np
 from skylib1 import sim_comands
-
-
-
+import random
+from deap import base, creator, tools, algorithms
+from automation_lib import automatic
 
 
 
@@ -20,5 +20,24 @@ resistance_var=[]
 capacitance_var=[]
 witdth_var=[]
 length_var=[]
-witdth_var,length_var,resistance_var,capacitance_var = sim_comands.variable_detector(spice_Path)
+test_size = 10 #initial population
+
+
+
+variables = sim_comands.variable_detector(spice_Path)
+population= pd.DataFrame()
+population = automatic.Population_generation(variables,test_size)
+
+
+
+
+
+
+
+
+
+
+
+
+print(population)
 

@@ -92,7 +92,7 @@ value="
 .param R1 = 5
 .param L1 = 0.5
 .param VDD = 5
-.param W1 = 10
+.param W1 = 50
 .param vin =  2
 
 

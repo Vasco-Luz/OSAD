@@ -481,7 +481,8 @@ class sim_comands:
                 resistance_var.append(variables[i])
             if (variables[i].startswith("C")):
                 capacitance_var.append(variables[i])
-        return(width_var,lenght_var,resistance_var,capacitance_var)
+        #return(width_var,lenght_var,resistance_var,capacitance_var)
+        return variables
 
                      
 
