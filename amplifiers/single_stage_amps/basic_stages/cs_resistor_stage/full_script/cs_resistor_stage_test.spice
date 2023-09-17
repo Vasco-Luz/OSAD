@@ -49,7 +49,7 @@ x1 VDD GND net2 net3 cs_resistor_stage
 **************************************************************
 **************************************************************
 **************************************************************
-.TEMP 125.0
+.TEMP 27
 **************************************************************
 **************************************************************
 **************************************************************
@@ -62,7 +62,7 @@ x1 VDD GND net2 net3 cs_resistor_stage
 .control
 save all
 dc V2 0 5 0.001
-wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_dc.txt v(VOUT) deriv(v(VOUT))
+wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_dc.txt v(VOUT) deriv(VOUT)
 *dc simulation
 plot v(VOUT) v(VIN) deriv(v(VOUT))
 *ploting VIN VOUT and the voltage gain
@@ -87,9 +87,9 @@ plot db(v(VOUTT))
 
 .param mc_mm_switch=0
 .param mc_pr_switch=0
-.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
-.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
-.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/corners/ff.spice
+.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/res_high__cap_low.spice
+.include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/res_high__cap_low__lin.spice
 .include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
 
 **** end user architecture code

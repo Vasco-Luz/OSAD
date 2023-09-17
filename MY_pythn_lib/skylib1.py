@@ -430,36 +430,6 @@ class sim_comands:
 
 
     
-    def variation_paramn_simu(spice_path,data_path): #simulation with variation all in the same function
-        param_name = input("Enter the paramameter desired to change: ")#get the param input
-        starting_val = float(input("Enter the starting value: "))#starting value
-        variation_val = float(input("Enter the variation value: "))#variation value
-        number_of_times = int(input("number of times: "))#number of times
-        current_val = starting_val#makes the written value the starting value
-        ngspice_command = f'ngspice -b {spice_path}' #spice command   
-        combined_data = pd.DataFrame()
-
-        for a in range(0,number_of_times+1,1): # simple for
-            with open(spice_path, 'r') as file: #opens the file
-                lines = file.readlines()
-            for i, line in enumerate(lines): #search the lines in the file
-                if line.startswith('.param ' + param_name): # finds where is the line with param name
-                    param_parts = line.split('=')
-                    updated_line = f'.param {param_name} = {current_val}\n'
-                    lines[i] = updated_line#substitutes the line
-                    break
-            with open(spice_path, 'w') as file: #writes the new file
-                file.writelines(lines)
-            current_val = current_val + variation_val #current value modification
-            current_val = round(current_val,5)  #to compensate float precision in certain cases so we dont have 1.0000003 cause of float
-            subprocess.run(ngspice_command, shell=True)#simulation
-            data = pd.read_csv(data_path, delim_whitespace=True,header=None) #reads the data in the data path
-            combined_data = pd.concat([combined_data, data], axis=1)
-        combined_data = pd.DataFrame(combined_data.values)
-
-        #column_count = combined_data.shape[1]
-        #combined_data[column_count] = [param_name,starting_val,variation_val,number_of_times] #adds an information column
-        return combined_data,param_name,starting_val,variation_val
 
     def get_spice_sch(file_name,file_enviorement):
         a = file_name + ".sch" #get sch name
@@ -479,50 +449,45 @@ class sim_comands:
         subprocess.run(xschem_command, shell=True)#realização do comando
 
 
+    def variable_detector(spice_path):
+        variables =[]
+        resistance_var = []
+        width_var = []
+        lenght_var =[]
+        capacitance_var =[]
+        in_block = False
+        with open(spice_path, "r") as file:
+            for line in file:
+                # Check if we're inside the .control block
+                if line.strip() == ".control":
+                    in_block = True
+                    continue
+                    # Check if we're inside the .endc block
+                if line.strip() == ".endc":
+                    in_block = False
+                    break  # Exit the loop since we've found the end of the .control block
+                # If we're inside the .control block, check for DC simulation lines
+                if in_block:
+                    if line.strip().startswith(".param"):
+                        variables.append(line.strip().split()[1])
+        for i in range(0,len(variables)-1,1):#remove VDD from sweaping variables
+            if (variables[i]=="VDD"):
+                variables.pop(i)
+            if (variables[i].startswith("W")):
+                width_var.append(variables[i])
+            if (variables[i].startswith("L")):
+                lenght_var.append(variables[i])
+            if (variables[i].startswith("R")):
+                resistance_var.append(variables[i])
+            if (variables[i].startswith("C")):
+                capacitance_var.append(variables[i])
+        return(width_var,lenght_var,resistance_var,capacitance_var)
+
+                     
+
+
     
 
-
-    def finding(spice_path,pattern): #feito essencialmente para encontrar onde o wrdata esta
-        with open(spice_path, 'r') as file: #abrir o ficheiro de forma segura o "r" significa que le
-            text = file.read() #igual o ficheiro aonde se quer
-        match = re.findall(pattern, text)
-        if match:
-            for match in match:
-                 file_path = match  # Extract the file path from the match
-                 print("File Path:", file_path)
-                 return(file_path)
-            else:
-                 print("File paths not found in the SPICE netlist.")
-                 return 0
-            
-
-    def corner(spice_path):
-        print("type of corners?")
-        print("a-full process corners")
-        print("b-full process corners with temp")
-        print("c-full process corners with temp and with VDD")
-        print("d-Only Temp")
-        print("e-Only VDD")
-        print("f-VDD with TEMP")
-        corner = input("Enter the desired corner: ")#get the param input
-        corners = ["tt","ff","fs","ss","sf"] # process corners
-        Temp_corners = [-10,27,80]#temperature corners
-
-        match corner:
-            case "a":
-                for a in range(0, len(corners)):
-                    with open(spice_path, "r") as file:
-                        content= file.read()
-                
-                updated_content = content.replace(".lib $::SKYWATER_MODELS/sky130.lib.spice tt", f".lib $::SKYWATER_MODELS/sky130.lib.spice {corners[a]}")
-                with open(spice_path, "w") as file:
-                    file.write(updated_content)
-
-
-
-            case _:
-                print("invalid corner")
-                sys.exit(1)
 
         
     

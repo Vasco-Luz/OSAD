@@ -214,6 +214,6 @@ L=1*8
 model=res_high_po_0p35
 spiceprefix=X
  mult=2}
-C {/home/vasco/Desktop/sky130A/amp_tests/basic_stages/cs_resistor_stage/cs_resistor_stage.sym} 550 190 0 0 {name=x1}
 C {devices/lab_pin.sym} 470 140 1 0 {name=p7 sig_type=std_logic lab=VDD}
 C {devices/gnd.sym} 470 240 0 0 {name=l7 lab=GND}
+C {/home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/cs_resistor_stage.sym} 550 190 0 0 {name=x1}
