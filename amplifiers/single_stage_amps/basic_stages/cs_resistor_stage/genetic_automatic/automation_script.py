@@ -20,7 +20,7 @@ resistance_var=[]
 capacitance_var=[]
 witdth_var=[]
 length_var=[]
-test_size = 10 #initial population
+test_size = 1 #initial population
 
 
 
@@ -29,15 +29,5 @@ population= pd.DataFrame()
 population = automatic.Population_generation(variables,test_size)
 
 
-
-
-
-
-
-
-
-
-
-
-print(population)
-
+for i in range(0,population.shape[0],1):
+    automatic.fitness_function(spice_Path,population.columns.tolist(),population.iloc[i].values)

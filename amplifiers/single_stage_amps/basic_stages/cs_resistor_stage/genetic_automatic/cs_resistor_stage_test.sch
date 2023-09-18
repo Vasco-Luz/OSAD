@@ -98,8 +98,7 @@ value="
 
 
 save all
-dc V2 0 5 0.01
-plot v(VOUT) deriv(v(VOUT))
+
 
 
 

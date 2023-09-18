@@ -57,17 +57,15 @@ XM5 VOUT VIN GND GND sky130_fd_pr__nfet_g5v0d10v5 L=L1 W=W1 nf=1 ad='int((nf+1)/
 
 
 .control
-.param R1 = 5
-.param L1 = 0.5
+.param R1 = 7.69
+.param L1 = 43.0
 .param VDD = 5
-.param W1 = 50
-.param vin =  2
+.param W1 = 91
+.param vin = 3.31
 
 
 
 save all
-dc V2 0 5 0.01
-plot v(VOUT) deriv(v(VOUT))
 
 
 

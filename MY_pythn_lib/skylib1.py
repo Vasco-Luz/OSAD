@@ -280,10 +280,10 @@ class sim_comands:
         full_file_path = os.path.join(directory,file_name)
         new_content = []
 
+
         with open(spice_path, "r") as file:
             for line in file:
                 if target_text in line:
-                    print("a")
                     modified_line ="wrdata" +" "+ full_file_path
                     for a in range(0,num,1):
                         modified_line = modified_line + " " + variables[a]
@@ -295,16 +295,64 @@ class sim_comands:
                     new_content.append(modified_line)
                 else:
                     new_content.append(line)
-
-
-
-
-
         with open(spice_path, "w") as file:
             file.writelines(new_content)
 
         if os.path.exists(full_file_path):
             os.remove(full_file_path)
+        
+
+
+
+    def add_save_automn(spice_path,file_name,variable,sim): #creates a save data
+        directory = os.getcwd() #gets current directory
+        file_name = file_name + ".txt"
+        full_file_path = os.path.join(directory,file_name)
+        new_content = []
+        new_line = "wrdata " + full_file_path +" "+ variable
+        in_block = False
+        with open(spice_path, "r") as file:
+            for line in file:
+                # Check if we're inside the .control block
+                if line.strip() == ".control":
+                    in_block = True
+                # Check if we're inside the .endc block
+                if line.strip() == ".endc":
+                    in_block = False
+                # If we're inside the .control block and find the dc line
+                if in_block and line.strip().startswith(sim):
+                # Append the original dc line
+                    new_content.append(line)
+                # Write your additional content after the dc line
+                    new_content.append(new_line)
+                else:
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+        return full_file_path
+
+
+
+    def remove_sim_save(spice_path,sim):
+        new_content = []
+        in_block = False
+        with open(spice_path, "r") as file:
+            for line in file:
+                # Check if we're inside the .control block
+                if line.strip() == ".control":
+                    in_block = True
+                # Check if we're inside the .endc block
+                if line.strip() == ".endc":
+                    in_block = False
+                # Skip the dc and wrdata lines
+                if in_block and (line.strip().startswith(sim) or line.strip().startswith("wrdata")):
+                    continue
+                new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+
+
+
 
 
 
@@ -339,22 +387,7 @@ class sim_comands:
 
 
 
-        
-
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
     def plot_2d_simple(csv_file_path):
         dataframe = pd.read_csv(csv_file_path)
@@ -483,6 +516,26 @@ class sim_comands:
                 capacitance_var.append(variables[i])
         #return(width_var,lenght_var,resistance_var,capacitance_var)
         return variables
+    
+    def add_dc_simulation(spice_path,location,variation,initial,final,sweep_variable):
+        directory = os.getcwd() #gets current directory
+        new_content = []
+        modified_line =""
+
+        with open(spice_path, "r") as file:
+            for line in file:
+                if location in line:
+                    modified_line ="dc " + str(sweep_variable) +" "+ str(initial) +" " + str(final) + " " + str(variation) 
+                    modified_line = modified_line +"\n"
+                    modified_line2 = location +"\n"
+                    new_content.append(modified_line2)
+                    new_content.append(modified_line)
+                else:
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+        return modified_line
+
 
                      
 
@@ -492,276 +545,4 @@ class sim_comands:
 
         
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-class graf:
-    def vgs_vs_Id_gm(data_path): #plots ID and gm in function of VGS, without any corners/modification/ will be add later
-        data = pd.read_csv(data_path, delim_whitespace=True,header=None) #divides the data
-        vgs = data[0].to_numpy()# transforms vgs dataframe column into an array
-        id = data[1].to_numpy()# transforms id dataframe column into an array
-        id_mA = id / 1e-3#transforms the data to mA standart measurment data
-        plt.figure(1)  # Set the figure size
-        plt.plot(vgs, id_mA , color='red', linewidth=2, marker='o', markersize=1, label='ID')
-        plt.xlabel("Vgs(V)")
-        plt.ylabel("Id(mA)")
-        plt.title("Id vs Vgs")
-        plt.grid(True)  # Add gridlines
-        plt.legend("Id current")  # Add legend
-        gm = np.gradient(id, vgs)# transcondutance calculation
-        plt.figure(2)  # Set the figure size
-        plt.plot(vgs, gm , color='red', linewidth=2, marker='o', markersize=1, label='ID')
-        plt.xlabel("Vgs(V)")
-        plt.ylabel("gm(A/V)")
-        plt.title("gm")
-        plt.grid(True)  # Add gridlines
-        plt.legend()  # Add legend
-        plt.show()
-
-    def vgs_vs_id_gm_variation(data,param_name):
-        #data = data.drop(data.columns[-1], axis=1)#drop the last column, the information column
-
-        Vgs = data.iloc[:, 0::2]  # Select odd columns starting from index 1
-        Vgs = Vgs.values.T  # Co
-        Id = data.iloc[:, 1::2]  # Select pair columns starting from index 0
-        Id = Id.values.T  # Co
-        gm = np.zeros_like(Id)
-        Id_m = Id / 1e-3#transforms the data to mA standart measurment data
-
-        plt.figure(1)  # Set the figure size
-        for i in range(0,Vgs.shape[0],1):
-            plt.plot(Vgs[i], Id_m[i], label=f"{param_name} {i+1}")
-            gm[i] = np.gradient(Id[i], Vgs[i])  # Handle divide by zero and invalid value warnings
-
-        plt.title("Id vs Vgs")
-        plt.xlabel("Vgs")
-        plt.ylabel("Id(ma)")
-        plt.legend()
-        plt.grid(True)  # Add gridlines
-        plt.figure(2)  # Set the figure size
-        for i in range(0,Vgs.shape[0],1):
-            plt.plot(Vgs[i], gm[i], label=f"{param_name} {i+1}")
-        plt.title("gm vs Vgs")
-        plt.xlabel("Vgs")
-        plt.ylabel("gm")
-        plt.legend()
-        plt.grid(True)  # Add gridlines
-        plt.show()
-
-
-
-    def vgs_vs_id_gm_variation_3d_from_file(data_path):
-        pattern = r'.*test_(\w+)_([\d.]+)_([\d.]+)\.csv'#standart patter type of the file
-        match = re.match(pattern, data_path)
-        if match:
-            param_name = match.group(1)  # Extract the parameter name
-            starting_value = float(match.group(2))  # Extract the starting value
-            variation = float(match.group(3))  # Extract the variation
-        else:
-             print("Invalid file name pattern.")
-             sys.exit(1)
-        data = pd.read_csv(data_path)
-    
-        Vgs = data.iloc[:, 0::2]  # Select odd columns starting from index 1
-        Vgs = Vgs.values.T  # Co
-        Id = data.iloc[:, 1::2]  # Select pair columns starting from index 0
-        Id = Id.values.T  # Co
-
-
-
-        gm = np.zeros_like(Id)
-        z = np.zeros_like(Id)
-        Id_m = Id / 1e-3#transforms the data to mA standart measurment data
-
-
-        for a in range (0,len(Id),1): #prencher os valores z
-            z[a] = starting_value + a*variation
-            gm[a] = np.gradient(Id[a], Vgs[a])#gets the transcondutance
-                                                
-        fig = plt.figure()#basicly gets plots the 3D graph
-        ax = fig.add_subplot(111, projection='3d')
-        ax.plot_surface(Vgs, z, Id_m)
-        ax.grid(True)
-        ax.set_xlabel("Vgs",fontsize=12, fontweight='bold')
-        ax.set_ylabel(param_name,fontsize=12, fontweight='bold')
-        ax.set_zlabel('id(mA)',fontsize=12, fontweight='bold')
-        ax.set_title('data plot')
-        plt.show()
-
-
-        fig = plt.figure() #plots the 3d graph of the transcondutance
-        ax = fig.add_subplot(111, projection='3d')
-        ax.plot_surface(Vgs, z, gm)
-        ax.grid(True)
-        ax.set_xlabel("Vgs",fontsize=12, fontweight='bold')
-        ax.set_ylabel(param_name,fontsize=12, fontweight='bold')
-        ax.set_zlabel('transcondutancia',fontsize=12, fontweight='bold')
-        ax.set_title('data plot')
-        plt.show()
-
-
-
-
-    def vgs_vs_id_gm_variation_4d_from_file(data_path1,data_path2,data_path3):
-        pattern = r'.*T(-?\d+)_L([\d.]+)_test_(\w+)_([\d.]+)_([\d.]+)\.csv'#standart patter type of the file #extracts a temperatura, L size e o resto
-
-         # em geral todos os parmetros deverao ser iguais mas deixei isto para mostrar pode ser automtizado com um for secalhar no futuro
-        match1 = re.match(pattern, data_path1)
-        if match1:
-            Temperature1 = float(match1.group(1))  # Extract the parameter name
-            L_size1 = float(match1.group(2))  # Extract the starting value
-            param_name1 = (match1.group(3))  # Extract the variation
-            starting_value1 =float(match1.group(4))
-            variation1 =float(match1.group(5))
-        else:
-             print("Invalid file name pattern.")
-             sys.exit(1)
-
-        match2 = re.match(pattern, data_path2)
-        if match2:
-            Temperature2 = float(match2.group(1))  # Extract the parameter name
-            L_size2 = float(match2.group(2))  # Extract the starting value
-            param_name2 = (match2.group(3))  # Extract the variation
-            starting_value2 =float(match2.group(4))
-            variation2 =float(match2.group(5))
-        else:
-             print("Invalid file name pattern.")
-             sys.exit(1)
-        
-        match3 = re.match(pattern, data_path3)
-        if match3:
-            Temperature3 = float(match3.group(1))  # Extract the parameter name
-            L_size3 = float(match3.group(2))  # Extract the starting value
-            param_name3= (match3.group(3))  # Extract the variation
-            starting_value3 =float(match3.group(4))
-            variation3 =float(match3.group(5))
-        else:
-             print("Invalid file name pattern.")
-             sys.exit(1)
-
-        T = [Temperature1,Temperature2,Temperature3] # juntar as 3 temperaturas
-    
-
-
-
-
-        data1 = pd.read_csv(data_path1)
-        data2 = pd.read_csv(data_path2)
-        data3 = pd.read_csv(data_path3)
-
-
-        #tratamento dos dados no datapath1
-        Vgs1 = data1.iloc[:, 0::2]  # Select odd columns starting from index 1
-        Vgs1 = Vgs1.values.T  # Co
-        Id1 = data1.iloc[:, 1::2]  # Select pair columns starting from index 0
-        Id1 = Id1.values.T  # Co
-        gm1 = np.zeros_like(Id1)
-        z1 = np.zeros_like(Id1)
-        Id_m1 = Id1 / 1e-3#transforms the data to mA standart measurment data
-        for a in range (0,len(Id1),1): #prencher os valores z
-            z1[a] = starting_value1 + a*variation1
-            gm1[a] = np.gradient(Id1[a], Vgs1[a])#gets the transcondutance
-
-        #tratamento dos dados no datapath2
-        Vgs2 = data2.iloc[:, 0::2]  # Select odd columns starting from index 1
-        Vgs2 = Vgs2.values.T  # Co
-        Id2 = data2.iloc[:, 1::2]  # Select pair columns starting from index 0
-        Id2 = Id2.values.T  # Co
-        gm2 = np.zeros_like(Id2)
-        z2 = np.zeros_like(Id2)
-        Id_m2 = Id2 / 1e-3#transforms the data to mA standart measurment data
-        for a in range (0,len(Id2),1): #prencher os valores z
-            z2[a] = starting_value2 + a*variation2
-            gm2[a] = np.gradient(Id2[a], Vgs2[a])#gets the transcondutance
-
-
-        #tratamento dos dados no datapath2
-        Vgs3 = data3.iloc[:, 0::2]  # Select odd columns starting from index 1
-        Vgs3 = Vgs3.values.T  # Co
-        Id3 = data3.iloc[:, 1::2]  # Select pair columns starting from index 0
-        Id3 = Id3.values.T  # Co
-        gm3 = np.zeros_like(Id3)
-        z3 = np.zeros_like(Id3)
-        Id_m3 = Id3 / 1e-3#transforms the data to mA standart measurment data
-        for a in range (0,len(Id3),1): #prencher os valores z
-            z3[a] = starting_value3 + a*variation3
-            gm3[a] = np.gradient(Id3[a], Vgs3[a])#gets the transcondutance
-
-
-        fig = plt.figure()#basicly gets plots the 3D graph
-        ax = fig.add_subplot(111, projection='3d')
-        surf1 = ax.plot_surface(Vgs1, z1, Id_m1)
-        surf2 = ax.plot_surface(Vgs2, z2, Id_m2)
-        surf3 = ax.plot_surface(Vgs3, z3, Id_m3)
-        ax.grid(True)
-        ax.set_xlabel("Vgs",fontsize=12, fontweight='bold')
-        ax.set_ylabel(param_name1,fontsize=12, fontweight='bold')
-        ax.set_zlabel('id(mA)',fontsize=12, fontweight='bold')
-        ax.set_title('ID VS VGS')
-
-        surf1_proxy = mpatches.Patch(color=np.array(surf1._facecolors[0]))
-        surf2_proxy = mpatches.Patch(color=np.array(surf2._facecolors[0]))
-        surf3_proxy = mpatches.Patch(color=np.array(surf3._facecolors[0]))
-
-
-
-        legend_labels = [f"T={T[0]}", f"T={T[1]}", f"T={T[2]}"]
-        ax.legend([surf1_proxy, surf2_proxy, surf3_proxy], legend_labels, loc='best')
-        plt.show()
-
-
-
-
-        fig = plt.figure()#basicly gets plots the 3D graph
-        ax = fig.add_subplot(111, projection='3d')
-        surf1 = ax.plot_surface(Vgs1, z1, gm1)
-        surf2 = ax.plot_surface(Vgs2, z2, gm2)
-        surf3 = ax.plot_surface(Vgs3, z3, gm3)
-        ax.grid(True)
-        ax.set_xlabel("Vgs",fontsize=12, fontweight='bold')
-        ax.set_ylabel(param_name1,fontsize=12, fontweight='bold')
-        ax.set_zlabel('id(mA)',fontsize=12, fontweight='bold')
-        ax.set_title('transcondutancia')
-
-        surf1_proxy = mpatches.Patch(color=np.array(surf1._facecolors[0]))
-        surf2_proxy = mpatches.Patch(color=np.array(surf2._facecolors[0]))
-        surf3_proxy = mpatches.Patch(color=np.array(surf3._facecolors[0]))
-
-
-
-        legend_labels = [f"T={T[0]}", f"T={T[1]}", f"T={T[2]}"]
-        ax.legend([surf1_proxy, surf2_proxy, surf3_proxy], legend_labels, loc='best')
-        plt.show()
-
-
-
-
-                                                
-
-
-
-
-        
-
-
-
-        return 0
-
-
-
-
-
-
-
-
 
