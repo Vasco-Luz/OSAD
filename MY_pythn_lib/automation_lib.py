@@ -43,7 +43,6 @@ class automatic:
         sim_comands.remove_sim_save(spice_path,"dc")
         individual_csv = pd.DataFrame
         csv_full_path = sim_comands.write_single_cvs_file(txt_path,"VOUT",1,"dc")
-        sim_comands.plot_2d_simple(csv_full_path)
         individual_csv = pd.read_csv(csv_full_path)
         individual_csv = individual_csv.values
         min_ind = np.argmin(individual_csv[:, 1])
@@ -55,7 +54,60 @@ class automatic:
         sim_comands.ngspice_sim(spice_path)
         sim_comands.remove_sim_save(spice_path,"ac")
         csv_full_path = sim_comands.write_single_cvs_file(txt_path,"VOUT",1,"frequency")
-        sim_comands.plot_2d_simple(csv_full_path)
+
+        individual_csv = pd.read_csv(csv_full_path)
+        individual_csv = individual_csv.values
+        min_value = np.min(individual_csv[:, 1])
+    
+        return min_value
+    
+
+    def roulette_wheel_selection(population,fitness_values): #basic roulete wheel that trie to pair parents with the biggest value
+        population_values = population.values
+        total_fitness = np.sum(fitness_values)
+        probabilities = fitness_values / total_fitness
+
+
+        parent_indices = np.random.choice(len(population), size=len(fitness_values), p=probabilities, replace=False)
+
+        selected_parents = [population_values[i] for i in parent_indices]
+        return selected_parents
+    
+
+
+    def single_point_crossover(parents): #basic single point function i dont like to get a better one
+        num_parents = len(parents)
+        offspring = []
+        parent1 = []
+        parent2 = []
+        for i in range(0, num_parents, 2):
+            #for ii in range(0,len())
+            parent1 = parents[i]
+            parent2 = parents[i+1]
+            crossover_point = np.random.randint(1, len(parent1))
+            # Perform crossover to create offspring   #just switch some points between the two algoritms, i dont like it a lot
+            offspring1 = np.concatenate((parent1[:crossover_point], parent2[crossover_point:]))
+            offspring2 = np.concatenate((parent2[:crossover_point], parent1[crossover_point:]))
+            offspring.append(offspring1)
+            offspring.append(offspring2)
+        return offspring
+        
+
+        
+
+          
+
+
+
+
+       
+        
+        
+
+
+
+
+
 
 
     

@@ -227,7 +227,6 @@ class sim_comands:
         cvs_full_path = os.path.join(os.getcwd(),cvs_name)
         if os.path.exists(cvs_full_path):
             os.remove(cvs_full_path)
-        print(data)
         data.to_csv(cvs_full_path, index=False)
         return cvs_full_path
 
@@ -513,6 +512,8 @@ class sim_comands:
                 resistance_var.append(variables[i])
             if (variables[i].startswith("C")):
                 capacitance_var.append(variables[i])
+            if (variables[i]=="vin"):
+                variables.pop(i)
         #return(width_var,lenght_var,resistance_var,capacitance_var)
         return variables
     
