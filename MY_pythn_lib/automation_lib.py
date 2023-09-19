@@ -23,9 +23,9 @@ class automatic:
                 if variables[ii].startswith("W"):
                     new_population.loc[i, variables[ii]] = random.randint(10, 100)
                 if variables[ii].startswith("L"):
-                    new_population.loc[i, variables[ii]] = round(random.uniform(0.5, 50), 2)
+                    new_population.loc[i, variables[ii]] = round(random.uniform(0.5, 2), 2)
                 if variables[ii].startswith("R"):
-                    new_population.loc[i, variables[ii]] = round(random.uniform(0.35, 90),2)
+                    new_population.loc[i, variables[ii]] = round(random.uniform(0.35, 100),2)
                 if variables[ii].startswith("C"):
                     new_population.loc[i, variables[ii]] = random.uniform(1, 100)
         return(new_population)
@@ -74,6 +74,24 @@ class automatic:
         return selected_parents
     
 
+    def ranked_breeding(population,fitness_values):
+        population_values = population.values
+         # Rank the individuals based on their fitness (lower rank for higher fitness)
+        fitness_values_array = np.array(fitness_values)
+        # Rank the individuals based on their fitness (lower rank for higher fitness)
+        ranked_indices = np.argsort(-fitness_values_array)
+        rank_probabilities = 1 / (np.arange(len(population)) + 1)
+        total_probability = np.sum(rank_probabilities)
+        probabilities = rank_probabilities / total_probability
+        parent_indices = np.random.choice(len(population), size=len(fitness_values), p=probabilities, replace=False)
+        selected_parents = [population_values[i] for i in parent_indices]
+        return selected_parents
+
+
+       
+
+    
+
 
     def single_point_crossover(parents): #basic single point function i dont like to get a better one
         num_parents = len(parents)
@@ -91,6 +109,30 @@ class automatic:
             offspring.append(offspring1)
             offspring.append(offspring2)
         return offspring
+    
+
+
+    def gaussean_mutation(filhos,deviation):
+        num_filhos = len(filhos)
+        num_membros = len(filhos[0])
+        mutation = filhos
+        print(filhos)
+        for i in range(0,num_membros,1):
+            for ii in range(0,num_filhos,1):
+                mutation[ii][i] = np.around(np.random.normal(filhos[ii][i], deviation), 2)
+        return(mutation)
+    
+
+
+
+    def replace_population(population,mutants):
+        columns = population.columns
+        new_population = pd.DataFrame()
+        new_population = pd.DataFrame(mutants, columns=columns)
+        return(new_population)
+        
+
+
         
 
         
