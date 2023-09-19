@@ -42,14 +42,21 @@ class automatic:
         sim_comands.ngspice_sim(spice_path)
         sim_comands.remove_sim_save(spice_path,"dc")
         individual_csv = pd.DataFrame
-        csv_full_path = sim_comands.write_single_cvs_file(txt_path,"VOUT",1,"dc.csv")
+        csv_full_path = sim_comands.write_single_cvs_file(txt_path,"VOUT",1,"dc")
         sim_comands.plot_2d_simple(csv_full_path)
         individual_csv = pd.read_csv(csv_full_path)
         individual_csv = individual_csv.values
         min_ind = np.argmin(individual_csv[:, 1])
-
         vin_value = round(individual_csv[min_ind, 0],2)
         sim_comands.change_var(spice_path,".param "+"vin"+" =",vin_value)
+
+        sim_comands.add_ac_simulation(spice_path,"save all","20","1","50G")
+        txt_path = sim_comands.add_save_automn(spice_path,"ac","v(VOUT)","ac")
+        sim_comands.ngspice_sim(spice_path)
+        sim_comands.remove_sim_save(spice_path,"ac")
+        csv_full_path = sim_comands.write_single_cvs_file(txt_path,"VOUT",1,"frequency")
+        sim_comands.plot_2d_simple(csv_full_path)
+
 
     
         

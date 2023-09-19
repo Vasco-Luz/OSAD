@@ -287,8 +287,7 @@ class sim_comands:
                     modified_line ="wrdata" +" "+ full_file_path
                     for a in range(0,num,1):
                         modified_line = modified_line + " " + variables[a]
-                        
-
+                    
                     modified_line = modified_line +"\n"
                     modified_line2 = target_text + "\n"
                     new_content.append(modified_line2)
@@ -526,6 +525,25 @@ class sim_comands:
             for line in file:
                 if location in line:
                     modified_line ="dc " + str(sweep_variable) +" "+ str(initial) +" " + str(final) + " " + str(variation) 
+                    modified_line = modified_line +"\n"
+                    modified_line2 = location +"\n"
+                    new_content.append(modified_line2)
+                    new_content.append(modified_line)
+                else:
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+        return modified_line
+    
+    def add_ac_simulation(spice_path,location,decades,initial_freq,final_freq):
+        directory = os.getcwd() #gets current directory
+        new_content = []
+        modified_line =""
+
+        with open(spice_path, "r") as file:
+            for line in file:
+                if location in line:
+                    modified_line ="ac " + "dec" +" "+ decades +" " + initial_freq + " " + final_freq 
                     modified_line = modified_line +"\n"
                     modified_line2 = location +"\n"
                     new_content.append(modified_line2)
