@@ -69,7 +69,7 @@ plot v(VOUT) v(VIN) deriv(v(VOUT))
 plot i(Vmeas)
 *ploting the current for curiosity
 tran 0.1ns 20u
-wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_tran.txt v(VOUTT)
+wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_tran.txt
 *transient simulation
 plot (v(VINT)) (v(VOUTT))
 *simple plot to exemplify the gain
@@ -78,15 +78,15 @@ fft v(VOUTT) v(VINT)
 plot mag(v(VOUTT)) mag(v(VINT))
 * analyse the frequency spectrum of the transient waves, to detect distortion
 ac dec 20 1 50G
-wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_ac.txt db(v(VOUTT))
+wrdata /home/vasco/Desktop/sky130A/amplifiers/single_stage_amps/basic_stages/cs_resistor_stage/full_script/test_ac.txt
 *simple ac simulation
 plot db(v(VOUTT))
 *gain in function of the input frequency
 .endc
 
 
-.param mc_mm_switch=1
-.param mc_pr_switch=1
+.param mc_mm_switch=0
+.param mc_pr_switch=0
 .include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
 .include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
 .include /home/vasco/Desktop/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
