@@ -33,13 +33,13 @@ N 290 -40 290 -0 {
 lab=VDD}
 N 210 100 210 150 {
 lab=Vx}
-N 130 180 130 210 {
-lab=#net1}
-N 100 240 110 240 {
+N 260 230 270 230 {
 lab=GND}
-N 130 270 130 290 {
+N 290 260 290 280 {
 lab=GND}
 N 290 180 290 200 {
+lab=#net1}
+N 130 180 130 210 {
 lab=GND}
 C {devices/code.sym} -220 -170 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
@@ -86,7 +86,7 @@ value="
 save all
 dc V1 0 5 0.001 
 plot v(Vx) v(Vy)
-plot deriv(v(Vx))
+plot deriv(v(Vy))
 
 .endc
 "}
@@ -124,12 +124,12 @@ spiceprefix=X
 C {devices/lab_pin.sym} 210 -40 1 0 {name=p2 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 130 80 0 0 {name=p3 sig_type=std_logic lab=Vx}
 C {devices/lab_pin.sym} 290 80 0 1 {name=p4 sig_type=std_logic lab=Vy}
-C {sky130_fd_pr/res_high_po_0p35.sym} 130 240 0 0 {name=R2
+C {sky130_fd_pr/res_high_po_0p35.sym} 290 230 0 0 {name=R2
 L=1
 model=res_high_po_0p35
 spiceprefix=X
  mult=1}
-C {devices/gnd.sym} 130 290 0 0 {name=l4 lab=GND}
-C {devices/gnd.sym} 290 200 0 0 {name=l5 lab=GND}
-C {devices/gnd.sym} 100 240 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 290 280 0 0 {name=l4 lab=GND}
+C {devices/gnd.sym} 260 230 0 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 220 30 0 0 {name=l7 lab=GND}
+C {devices/gnd.sym} 130 210 0 0 {name=l5 lab=GND}

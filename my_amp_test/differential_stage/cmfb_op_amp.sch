@@ -5,43 +5,27 @@ K {}
 V {}
 S {}
 E {}
-N -530 300 -530 320 {
+N -350 310 -350 330 {
 lab=GND}
-N -530 200 -530 240 {
+N -350 210 -350 250 {
 lab=VDD}
-N 170 150 250 150 {
-lab=Vx}
-N 130 100 130 120 {
-lab=Vx}
-N 130 100 210 100 {
-lab=Vx}
-N 40 150 130 150 {
+N -270 310 -270 330 {
 lab=GND}
-N 290 150 380 150 {
-lab=GND}
-N 130 60 130 100 {
-lab=Vx}
-N 290 60 290 120 {
-lab=Vy}
-N 150 30 270 30 {
-lab=GND}
-N 130 -40 130 -0 {
-lab=VDD}
-N 130 -40 290 -40 {
-lab=VDD}
-N 290 -40 290 -0 {
-lab=VDD}
-N 210 100 210 150 {
-lab=Vx}
-N 130 180 130 210 {
+N -270 210 -270 250 {
 lab=#net1}
-N 100 240 110 240 {
+N -270 330 -270 350 {
 lab=GND}
-N 130 270 130 290 {
+N -130 320 -130 340 {
 lab=GND}
-N 290 180 290 200 {
+N -130 220 -130 260 {
+lab=#net2}
+N -130 340 -130 360 {
 lab=GND}
-C {devices/code.sym} -220 -170 0 0 {name=spice only_toplevel=false
+N -270 100 -270 150 {
+lab=VIN}
+N -130 80 -130 160 {
+lab=VB}
+C {devices/code.sym} -40 -160 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	
 **************************************************************
@@ -84,52 +68,28 @@ value="
 **************************************************************
 .control
 save all
-dc V1 0 5 0.001 
-plot v(Vx) v(Vy)
-plot deriv(v(Vx))
-
+dc V2 0 5 0.001 
+plot v(VOUT+) v(VOUT-) deriv(v(VOUT+)) deriv(v(VOUT-))
+plot v(VOUT2+) v(VOUT2-) deriv(v(VOUT2+)) deriv(v(VOUT2-))
+*plot v(VA)
+*plot i(Vmeas)
+ac dec 20 1 1000G 
+plot db(v(VOUT+))
+plot db(v(VOUT2+)) phase(v(VOUT+))
 .endc
 "}
-C {sky130_fd_pr/corner.sym} -390 -170 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/lab_pin.sym} -530 210 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} -530 270 0 0 {name=V1 value=5
+C {sky130_fd_pr/corner.sym} -210 -160 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {devices/lab_pin.sym} -350 220 0 0 {name=p6 sig_type=std_logic lab=VDD}
+C {devices/vsource.sym} -350 280 0 0 {name=V1 value=5
 }
-C {devices/gnd.sym} -530 320 0 0 {name=l3 lab=GND}
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} 150 150 0 1 {name=M5
-L=1
-W=30
-nf=1 mult=1
-model=nfet_g5v0d10v5
-spiceprefix=X
+C {devices/vsource.sym} -270 280 0 0 {name=V2 value=2.5}
+C {devices/gnd.sym} -350 330 0 0 {name=l3 lab=GND}
+C {devices/lab_pin.sym} -270 100 0 0 {name=p7 sig_type=std_logic lab=VIN
 }
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} 270 150 0 0 {name=M1
-L=1
-W=30
-nf=1 mult=1
-model=nfet_g5v0d10v5
-spiceprefix=X
+C {devices/gnd.sym} -270 350 0 0 {name=l5 lab=GND}
+C {devices/vsource.sym} -130 290 0 0 {name=V6 value=2.5}
+C {devices/gnd.sym} -130 360 0 0 {name=l10 lab=GND}
+C {devices/lab_pin.sym} -130 80 0 0 {name=p10 sig_type=std_logic lab=VB
 }
-C {devices/gnd.sym} 40 150 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} 380 150 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/res_high_po_0p35.sym} 130 30 0 1 {name=R6
-L=1*10
-model=res_high_po_0p35
-spiceprefix=X
- mult=1}
-C {sky130_fd_pr/res_high_po_0p35.sym} 290 30 0 0 {name=R1
-L=1*10
-model=res_high_po_0p35
-spiceprefix=X
- mult=1}
-C {devices/lab_pin.sym} 210 -40 1 0 {name=p2 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 130 80 0 0 {name=p3 sig_type=std_logic lab=Vx}
-C {devices/lab_pin.sym} 290 80 0 1 {name=p4 sig_type=std_logic lab=Vy}
-C {sky130_fd_pr/res_high_po_0p35.sym} 130 240 0 0 {name=R2
-L=1
-model=res_high_po_0p35
-spiceprefix=X
- mult=1}
-C {devices/gnd.sym} 130 290 0 0 {name=l4 lab=GND}
-C {devices/gnd.sym} 290 200 0 0 {name=l5 lab=GND}
-C {devices/gnd.sym} 100 240 0 0 {name=l6 lab=GND}
-C {devices/gnd.sym} 220 30 0 0 {name=l7 lab=GND}
+C {devices/vsource.sym} -270 180 0 0 {name=V4 value="ac 1.0 sin (0 100u 100k)"}
+C {devices/vsource.sym} -130 190 2 1 {name=V3 value="ac 1.0 sin (0 100u 100k)"}
