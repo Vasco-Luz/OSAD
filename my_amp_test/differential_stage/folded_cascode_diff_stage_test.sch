@@ -355,8 +355,8 @@ C {devices/lab_pin.sym} 1970 -1150 0 1 {name=p24 sig_type=std_logic lab=VN2}
 C {devices/lab_pin.sym} 1710 -1470 0 0 {name=p25 sig_type=std_logic lab=VOUT+}
 C {devices/lab_pin.sym} 1930 -1470 0 1 {name=p26 sig_type=std_logic lab=VOUT-}
 C {devices/lab_pin.sym} 1570 -1210 3 0 {name=p27 sig_type=std_logic lab=VA}
-C {devices/vsource.sym} -380 -1020 0 0 {name=V4 value="ac 1.0 sin (0 100u 100k)"}
-C {devices/vsource.sym} -240 -1010 2 1 {name=V3 value="ac 1.0 sin (0 100u 100k)"}
+C {devices/vsource.sym} -380 -1020 0 0 {name=V4 value="ac 0.5 sin (0 100u 100k)"}
+C {devices/vsource.sym} -240 -1010 2 1 {name=V3 value="ac 0.5 sin (0 100u 100k)"}
 C {devices/gnd.sym} 860 -1210 0 0 {name=l7 lab=GND}
 C {devices/gnd.sym} 790 -1060 0 0 {name=l8 lab=GND}
 C {devices/gnd.sym} 860 -1110 0 0 {name=l1 lab=GND}
