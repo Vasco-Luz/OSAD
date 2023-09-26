@@ -19,6 +19,6 @@ open the file with "xschem [filename]" and simulate\
 A simulation script is in the works. the simulation script uses a custom lib.\
 
 
-My linkedin https://www.linkedin.com/in/vasco-luz-74b693167/
+
 
 
