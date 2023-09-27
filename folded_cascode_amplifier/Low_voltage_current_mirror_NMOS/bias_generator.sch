@@ -144,7 +144,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 10 -340 0 1 {name=M4
 L=1.5
-W=25
+W=50
 nf=1 mult=1
 model=pfet_g5v0d10v5
 spiceprefix=X
