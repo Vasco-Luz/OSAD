@@ -71,10 +71,10 @@ C {devices/gnd.sym} 190 -260 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} 400 -320 0 0 {name=l3 lab=GND}
 C {devices/gnd.sym} 310 -260 0 0 {name=l4 lab=GND}
 C {devices/ammeter.sym} 310 -400 0 0 {name=Vmeas savecurrent=true}
-C {sky130_fd_pr/pfet_20v0.sym} 290 -320 0 0 {name=M13
-L=1
-W=30
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 290 -320 0 0 {name=M1
+L=0.15
+W=1
 nf=1 mult=1
-model=pfet_20v0
+model=nfet_01v8_lvt
 spiceprefix=X
 }

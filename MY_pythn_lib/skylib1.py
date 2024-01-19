@@ -557,20 +557,59 @@ class sim_comands:
 
 
                      
+class transistor:
+    def __init__(self,transistor_type,VGS_max,VDS_max,type_t):
+        self.transistor_type = transistor_type
+        self.VGS_max = VGS_max
+        self.VDS_max = VDS_max
+        self.type = type_t
+
+
 
 class single_trans:
     def get_transistor_type(spice_file_path):
         print(spice_file_path)
         with open(spice_file_path, 'r') as spice_file:
-            for line_number, line in enumerate(spice_file_path, start=1):
+            for line_number, line in enumerate(spice_file, start=1):
                 if line.startswith('XM'):
                     # Extract the NFET type using regex
                     match = re.search(r'sky130_fd_pr__(\w+)', line)
                     if match:
                         transistor_type = match.group(1)
-                        print(f"Line {line_number}: NFET Type: {transistor_type}")
-                    else:
-                        print(f"Line {line_number}: No NFET type found after XM1.")
+                        print(f"Line {line_number}: transistor: {transistor_type}")
+                        return transistor_type
+    
+    def analyse_transistor(transistor_name):
+        print(transistor_name)
+        parts = transistor_name.split('_')
+        vth = "none"
+        if len(parts) >= 1:
+            transistor_type = parts[0] #transistor type
+        if len(parts) >= 2:
+            second_part = parts[1]
+        if len(parts) >= 3:
+            vth = parts[2]
+        VGS = 0
+        VDS = 0
+        if second_part == '01v8':
+            VGS = 1.8
+            VDS = 1.8
+        elif second_part == "g5v0d10v5":
+            VGS = 5
+            VDS = 10
+        elif second_part == "g5v0d16v0":
+            VGS = 5
+            VDS = 16
+        elif second_part == "20v0":
+            VGS = 5
+            VDS = 20
+        elif second_part == "03v3":
+            VGS = 3.3
+            VDS = 3.3
+        elif second_part == "05v0":
+            VGS = 5
+            VDS = 5
+        return transistor(transistor_type, VGS, VDS,vth)
 
 
     
