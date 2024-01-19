@@ -558,6 +558,20 @@ class sim_comands:
 
                      
 
+class single_trans:
+    def get_transistor_type(spice_file_path):
+        print(spice_file_path)
+        with open(spice_file_path, 'r') as spice_file:
+            for line_number, line in enumerate(spice_file_path, start=1):
+                if line.startswith('XM'):
+                    # Extract the NFET type using regex
+                    match = re.search(r'sky130_fd_pr__(\w+)', line)
+                    if match:
+                        transistor_type = match.group(1)
+                        print(f"Line {line_number}: NFET Type: {transistor_type}")
+                    else:
+                        print(f"Line {line_number}: No NFET type found after XM1.")
+
 
     
 

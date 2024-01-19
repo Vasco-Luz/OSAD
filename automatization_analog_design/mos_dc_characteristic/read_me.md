@@ -1,0 +1,1 @@
+just put the transistor you want to test, and its characteristics will be plotted.

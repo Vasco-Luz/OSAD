@@ -1,26 +1,12 @@
-v {xschem version=3.4.5 file_version=1.2
-}
-G {}
-K {}
-V {}
-S {}
-E {}
-T {Just drop a transistor, just one transistor} 110 -480 0 0 0.4 0.4 {}
-N 190 -440 310 -440 {
-lab=#net1}
-N 190 -320 270 -320 {
-lab=#net2}
-N 310 -320 400 -320 {
-lab=GND}
-N 310 -290 310 -260 {
-lab=GND}
-N 310 -370 310 -350 {
-lab=#net3}
-N 310 -440 310 -430 {
-lab=#net1}
-C {devices/code.sym} -90 -420 0 0 {name=spice only_toplevel=false
-format="tcleval( @value )"
-value="	
+** sch_path: /home/vasco/Desktop/sky130A_tests/automatization_analog_design/mos_dc_characteristic/mos.sch
+**.subckt mos
+V1 net1 GND VD
+V2 net2 GND VG
+Vmeas net1 net3 0
+.save i(vmeas)
+XM13 GND net2 net3 GND sky130_fd_pr__pfet_20v0 L=1 W=30 m=1
+**** begin user architecture code
+
 **************************************************************
 **************************************************************
 **************************************************************
@@ -32,7 +18,7 @@ value="
 **************************************************************
 **************************************************************
 **************************************************************
-*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+*.lib /home/vasco/PDK/sky130B/libs.tech/ngspice/sky130.lib.spice tt
 * chose the corners in the corner file
 * tt_mm for mismatch
 * ss ff sf fs standart corners
@@ -53,7 +39,7 @@ value="
 **************************************************************
 **************************************************************
 **************************************************************
-**************************************************************  
+**************************************************************
 *SIMULATION and Plots*****************************************
 **************************************************************
 **************************************************************
@@ -62,19 +48,16 @@ value="
 .control
 save all
 .endc
-"}
-C {sky130_fd_pr/corner.sym} -260 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/vsource.sym} 190 -410 0 0 {name=V1 value="VD" savecurrent=false}
-C {devices/vsource.sym} 190 -290 0 0 {name=V2 value="VG" savecurrent=false}
-C {devices/gnd.sym} 190 -380 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} 190 -260 0 0 {name=l2 lab=GND}
-C {devices/gnd.sym} 400 -320 0 0 {name=l3 lab=GND}
-C {devices/gnd.sym} 310 -260 0 0 {name=l4 lab=GND}
-C {devices/ammeter.sym} 310 -400 0 0 {name=Vmeas savecurrent=true}
-C {sky130_fd_pr/pfet_20v0.sym} 290 -320 0 0 {name=M13
-L=1
-W=30
-nf=1 mult=1
-model=pfet_20v0
-spiceprefix=X
-}
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /home/vasco/PDK/sky130B/libs.tech/ngspice/corners/tt.spice
+.include /home/vasco/PDK/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /home/vasco/PDK/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /home/vasco/PDK/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
