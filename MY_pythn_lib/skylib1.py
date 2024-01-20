@@ -205,15 +205,12 @@ class sim_comands:
         with open(txt_path, 'r') as txt_file:
             lines = txt_file.readlines()
         data = []
-
         for line in lines:
             # Split each line into columns using whitespace as the delimiter
             columns = line.strip().split()
             # Append the columns as a list to the data list
             data.append(columns)
-
         data = pd.DataFrame(data)
-
         columns_to_drop = data.columns[2::2]
         # Drop the specified columns
         data.drop(columns=columns_to_drop, inplace=True)
@@ -221,7 +218,6 @@ class sim_comands:
         for a in range(0,num,1):
             headers.append(variables[a])
         data.columns = headers
-
         txt_name = os.path.basename(txt_path)
         cvs_name = (os.path.splitext(txt_path)[0]) + ".csv"
         cvs_full_path = os.path.join(os.getcwd(),cvs_name)
@@ -609,8 +605,6 @@ class single_trans:
             VGS = 5
             VDS = 5
         return transistor(transistor_type, VGS, VDS,vth,instance)
-    
-
     def prepare_netlist_for_DC_sim(spice_file_path,transistor):
         new_lines = []
         if transistor.transistor_type == "nfet":
@@ -630,7 +624,7 @@ class single_trans:
                             new_lines.append(new_line)
                             new_lines.append("\n")
                             #set up VGS
-                            new_line = "V2 " + parts[2] +" " +"GND " + "VG"
+                            new_line = "V2 " + parts[2] +" " +"GND " + "VGS"
                             new_lines.append(new_line)
                             new_lines.append("\n")
                             #settting source and drain
@@ -640,8 +634,35 @@ class single_trans:
                 spice_file.writelines(new_lines)
 
 
-                            
-                        
+
+    def add_vgs_sim(spice_file_path, transistor):
+        new_lines = []
+        in_block = False
+        with open(spice_file_path, 'r') as spice_file:
+            lines = spice_file.readlines()
+            for line_number, line in enumerate(lines, start=1):
+                if line.strip() == ".control":
+                    in_block = True
+                elif line.strip() == ".endc":
+                    in_block = False
+                # If we're inside the .control block, check for DC simulation lines
+                elif in_block:
+                    in_block = False
+                    new_line = ".param VDS = " + str(transistor.VDS_max)
+                    new_lines.append(new_line + "\n")
+                    new_line = ".param VGS = 0"
+                    new_lines.append(new_line + "\n")
+                    new_line = "dc V2 0 " + str(transistor.VGS_max) + " 0.001"
+                    new_lines.append(new_line + "\n")
+                    parent_folder = os.path.dirname(spice_file_path)
+                    file_name = os.path.splitext(os.path.basename(spice_file_path))[0] + "_vgs.txt"
+                    full_file_path = os.path.join(parent_folder,file_name) 
+                    new_line ="wrdata" +" "+ full_file_path +" i(Vmeas) deriv(i(Vmeas))"
+                    new_lines.append(new_line + "\n")
+                new_lines.append(line)
+        with open(spice_file_path, 'w') as spice_file:
+            spice_file.writelines(new_lines)
+        return full_file_path
             
 
 

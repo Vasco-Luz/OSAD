@@ -18,5 +18,9 @@ transistor,instance = single_trans.get_transistor_type(spice_path)
 
 transistor = single_trans.analyse_transistor(transistor,instance)
 single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
+data_path = single_trans.add_vgs_sim(spice_path,transistor)
 
-
+sim_comands.ngspice_sim(spice_path)
+var =["ID","GM"]
+data_path = sim_comands.write_single_cvs_file(data_path,var,2,"VGS")
+sim_comands.plot_2d_simple(data_path)
