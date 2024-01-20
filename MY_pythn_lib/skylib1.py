@@ -565,8 +565,6 @@ class transistor:
         self.type = type_t
         self.instance = instance
 
-
-
 class single_trans:
     def get_transistor_type(spice_file_path):
         print(spice_file_path)
@@ -581,10 +579,6 @@ class single_trans:
                         instance = "XM" + match2.group(1)
                         return transistor_type,instance
     
-
-
-
-
     def analyse_transistor(transistor_name,instance):
         parts = transistor_name.split('_')
         vth = "none"
@@ -617,7 +611,7 @@ class single_trans:
         return transistor(transistor_type, VGS, VDS,vth,instance)
     
 
-    def prepare_netlist_for_VG_sim(spice_file_path,transistor):
+    def prepare_netlist_for_DC_sim(spice_file_path,transistor):
         new_lines = []
         if transistor.transistor_type == "nfet":
             with open(spice_file_path, 'r') as spice_file:
@@ -626,13 +620,22 @@ class single_trans:
                     if line.startswith(transistor.instance):
                         parts = line.split()
                         if len(parts) > 1:
-                            new_line = "Vmeas " + parts[1] +" " + parts[3] + " " + "0"
+                            #set up VDS net
+                            new_line = "Vmeas " + parts[3] +" " + parts[1] + " " + "0"
                             print(new_line)
                             new_lines.append(new_line)
                             new_lines.append("\n") 
+                            new_lines.append(".save i(Vmeas) \n") 
+                            new_line = "V1 " + parts[3] + " GND " + "VDS"
+                            new_lines.append(new_line)
+                            new_lines.append("\n")
+                            #set up VGS
+                            new_line = "V2 " + parts[2] +" " +"GND " + "VG"
+                            new_lines.append(new_line)
+                            new_lines.append("\n")
+                            #settting source and drain
+                            line = line.replace(parts[3], "GND").replace(parts[4], "GND")
                     new_lines.append(line)
-
-            
             with open(spice_file_path, 'w') as spice_file:
                 spice_file.writelines(new_lines)
 

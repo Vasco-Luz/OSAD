@@ -17,6 +17,6 @@ transistor,instance = single_trans.get_transistor_type(spice_path)
 
 
 transistor = single_trans.analyse_transistor(transistor,instance)
-single_trans.prepare_netlist_for_VG_sim(spice_path,transistor)
+single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
 
 
