@@ -1,5 +1,6 @@
 This some circuits, layouts and in the future some simulation scripts in python using sky130A process node and some digital circuits using openLANE.\
-You need xschem installed and the open PDKS and ngspice, and magic. This only works in linux.\
+You need xschem installed and the open PDKS and ngspice, and magic. This only works in linux/wsl.\
+A setup nix script that solves instalation of the tools and automatizes the instalation flow is in the works.\
 For xschem:
 xschem: https://github.com/StefanSchippers/xschem \
 Install xterm for integration of ngspice with xschem \
@@ -16,7 +17,8 @@ If other process nodes want to be used just do this with the other files. <br>
 i advise the use of chatgpt to ease installation because of the dependencies\
 open the file with "xschem [filename]" and simulate\
 
-A simulation script is in the works. the simulation script uses a custom lib.\
+The most important is the develempent of analogic design scripts and scrips to help newcommers to understand some basic things related to design.\
+This is still in a very early phase, but some work is already done.\
 
 
 
