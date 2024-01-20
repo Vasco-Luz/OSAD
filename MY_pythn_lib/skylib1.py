@@ -558,11 +558,12 @@ class sim_comands:
 
                      
 class transistor:
-    def __init__(self,transistor_type,VGS_max,VDS_max,type_t):
+    def __init__(self,transistor_type,VGS_max,VDS_max,type_t,instance):
         self.transistor_type = transistor_type
         self.VGS_max = VGS_max
         self.VDS_max = VDS_max
         self.type = type_t
+        self.instance = instance
 
 
 
@@ -574,13 +575,17 @@ class single_trans:
                 if line.startswith('XM'):
                     # Extract the NFET type using regex
                     match = re.search(r'sky130_fd_pr__(\w+)', line)
+                    match2 = re.search(r'XM(\d+)', line)
                     if match:
                         transistor_type = match.group(1)
-                        print(f"Line {line_number}: transistor: {transistor_type}")
-                        return transistor_type
+                        instance = "XM" + match2.group(1)
+                        return transistor_type,instance
     
-    def analyse_transistor(transistor_name):
-        print(transistor_name)
+
+
+
+
+    def analyse_transistor(transistor_name,instance):
         parts = transistor_name.split('_')
         vth = "none"
         if len(parts) >= 1:
@@ -609,7 +614,32 @@ class single_trans:
         elif second_part == "05v0":
             VGS = 5
             VDS = 5
-        return transistor(transistor_type, VGS, VDS,vth)
+        return transistor(transistor_type, VGS, VDS,vth,instance)
+    
+
+    def prepare_netlist_for_VG_sim(spice_file_path,transistor):
+        new_lines = []
+        if transistor.transistor_type == "nfet":
+            with open(spice_file_path, 'r') as spice_file:
+                lines = spice_file.readlines()
+                for line_number, line in enumerate(lines, start=1):
+                    if line.startswith(transistor.instance):
+                        parts = line.split()
+                        if len(parts) > 1:
+                            new_line = "Vmeas " + parts[1] +" " + parts[3] + " " + "0"
+                            print(new_line)
+                            new_lines.append(new_line)
+                            new_lines.append("\n") 
+                    new_lines.append(line)
+
+            
+            with open(spice_file_path, 'w') as spice_file:
+                spice_file.writelines(new_lines)
+
+
+                            
+                        
+            
 
 
     

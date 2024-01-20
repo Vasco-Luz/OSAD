@@ -13,12 +13,10 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 sch_path = os.path.join(current_directory,"mos.sch")
 print(sch_path)
 spice_path = sim_comands.export_netlist(sch_path)
+transistor,instance = single_trans.get_transistor_type(spice_path)
 
-transitor = single_trans.get_transistor_type(spice_path)
 
-transitor = single_trans.analyse_transistor(transitor)
+transistor = single_trans.analyse_transistor(transistor,instance)
+single_trans.prepare_netlist_for_VG_sim(spice_path,transistor)
 
-print(transitor.transistor_type)
-print(transitor.VGS_max)
-print(transitor.VDS_max)
-print(transitor.type)
+

@@ -6,18 +6,6 @@ V {}
 S {}
 E {}
 T {Just drop a transistor, just one transistor} 110 -480 0 0 0.4 0.4 {}
-N 190 -440 310 -440 {
-lab=#net1}
-N 190 -320 270 -320 {
-lab=#net2}
-N 310 -320 400 -320 {
-lab=GND}
-N 310 -290 310 -260 {
-lab=GND}
-N 310 -370 310 -350 {
-lab=#net3}
-N 310 -440 310 -430 {
-lab=#net1}
 C {devices/code.sym} -90 -420 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	
@@ -64,13 +52,6 @@ save all
 .endc
 "}
 C {sky130_fd_pr/corner.sym} -260 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/vsource.sym} 190 -410 0 0 {name=V1 value="VD" savecurrent=false}
-C {devices/vsource.sym} 190 -290 0 0 {name=V2 value="VG" savecurrent=false}
-C {devices/gnd.sym} 190 -380 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} 190 -260 0 0 {name=l2 lab=GND}
-C {devices/gnd.sym} 400 -320 0 0 {name=l3 lab=GND}
-C {devices/gnd.sym} 310 -260 0 0 {name=l4 lab=GND}
-C {devices/ammeter.sym} 310 -400 0 0 {name=Vmeas savecurrent=true}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 290 -320 0 0 {name=M1
 L=0.15
 W=1
