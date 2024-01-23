@@ -1,4 +1,4 @@
-** sch_path: /home/vasco/Desktop/sky130A_tests/automatization_analog_design/mos_dc_characteristic/mos.sch
+** sch_path: /home/vasco/Desktop/OSAD/automatization_analog_design/mos_dc_characteristic/mos.sch
 **.subckt mos
 Vmeas net3 net1 0
 .save i(Vmeas) 
@@ -51,7 +51,7 @@ XM1 net1 net2 GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=1 nf=1 ad='int((nf+1)
 .param VDS = 1.8
 .param VGS = 0
 dc V2 0 1.8 0.001
-wrdata /home/vasco/Desktop/sky130A_tests/automatization_analog_design/mos_dc_characteristic/mos_vgs.txt i(Vmeas) deriv(i(Vmeas))
+wrdata /home/vasco/Desktop/OSAD/automatization_analog_design/mos_dc_characteristic/mos_vgs.txt i(Vmeas) deriv(i(Vmeas))
 save all
 .endc
 

@@ -632,9 +632,6 @@ class single_trans:
                     new_lines.append(line)
             with open(spice_file_path, 'w') as spice_file:
                 spice_file.writelines(new_lines)
-
-
-
     def add_vgs_sim(spice_file_path, transistor):
         new_lines = []
         in_block = False
