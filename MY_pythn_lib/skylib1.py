@@ -553,6 +553,16 @@ class sim_comands:
 
 
                      
+
+
+
+
+
+
+
+
+
+
 class transistor:
     def __init__(self,transistor_type,VGS_max,VDS_max,type_t,instance):
         self.transistor_type = transistor_type
@@ -560,7 +570,6 @@ class transistor:
         self.VDS_max = VDS_max
         self.type = type_t
         self.instance = instance
-
 class single_trans:
     def get_transistor_type(spice_file_path):
         print(spice_file_path)
@@ -574,7 +583,6 @@ class single_trans:
                         transistor_type = match.group(1)
                         instance = "XM" + match2.group(1)
                         return transistor_type,instance
-    
     def analyse_transistor(transistor_name,instance):
         parts = transistor_name.split('_')
         vth = "none"
@@ -632,9 +640,6 @@ class single_trans:
                     new_lines.append(line)
             with open(spice_file_path, 'w') as spice_file:
                 spice_file.writelines(new_lines)
-
-
-
     def add_vgs_sim(spice_file_path, transistor):
         new_lines = []
         in_block = False
@@ -663,6 +668,69 @@ class single_trans:
         with open(spice_file_path, 'w') as spice_file:
             spice_file.writelines(new_lines)
         return full_file_path
+    
+    def add_vds_sim(spice_file_path, transistor):
+        new_lines = []
+        in_block = False
+        with open(spice_file_path, 'r') as spice_file:
+            lines = spice_file.readlines()
+            for line_number, line in enumerate(lines, start=1):
+                if line.strip() == ".control":
+                    in_block = True
+                elif line.strip() == ".endc":
+                    in_block = False
+                # If we're inside the .control block, check for DC simulation lines
+                elif in_block:
+                    in_block = False
+                    new_line = ".param VDS = 0"
+                    new_lines.append(new_line + "\n")
+                    new_line = ".param VGS = " +str(transistor.VGS_max)
+                    new_lines.append(new_line + "\n")
+                    new_line = "dc V1 0 " + str(transistor.VDS_max) + " 0.001"
+                    new_lines.append(new_line + "\n")
+                    parent_folder = os.path.dirname(spice_file_path)
+                    file_name = os.path.splitext(os.path.basename(spice_file_path))[0] + "_vds.txt"
+                    full_file_path = os.path.join(parent_folder,file_name) 
+                    new_line ="wrdata" +" "+ full_file_path +" i(Vmeas)"
+                    new_lines.append(new_line + "\n")
+                new_lines.append(line)
+        with open(spice_file_path, 'w') as spice_file:
+            spice_file.writelines(new_lines)
+        return full_file_path
+
+    def DC_sim_plot_single(title,csv_path,var_names):
+        #first var its the x axis
+        numb_plots = len(var_names)-1 
+        dataframe = pd.read_csv(csv_path)
+        data_matrix = dataframe.values.tolist()
+        data_matrix = np.array(data_matrix)
+        x_column = data_matrix[:, 0]  # First column as x
+        plt.figure(figsize=(8, 6))
+        for i in range(1, numb_plots+1):
+            y_column = data_matrix[:, i]  # Subsequent columns as y
+            plt.plot(x_column, y_column, label=var_names[i],linewidth=3.0)
+        plt.title(title)
+        plt.xlabel("V", fontsize=12, weight='bold')  # x-axis label is the first column name
+        plt.ylabel("A", fontsize=12, weight='bold')  # y-axis label for all y-variables
+        plt.legend()
+        plt.grid(True, linewidth=1)
+        for spine in plt.gca().spines.values():
+            spine.set_linewidth(1.5)
+        plt.show()
+
+    def delete_csv_txt(script_directory):
+        print(f"Script Directory: {script_directory}")
+        for filename in os.listdir(script_directory):
+            if filename.endswith(".csv") or filename.endswith(".txt") or filename.endswith(".spice"):
+                file_path = os.path.join(script_directory, filename)
+                print(f"Deleting: {file_path}")
+                try:
+                    os.remove(file_path)
+                    print(f"Deleted: {file_path}")
+                except Exception as e:
+                    print(f"Error deleting {file_path}: {e}")
+
+
             
 
 
