@@ -406,11 +406,14 @@ class sim_comands:
 
     def change_var(spice_path,var_name,value):
         new_content = []
+        in_block = False
         with open(spice_path, "r") as file:
             for line in file:
-                if var_name in line:
+                if line.strip() == ".control":
+                    in_block = True
+                if var_name in line and in_block == True:
                     parts = line.split(var_name)
-                    modified_line = parts[0] + var_name +" " + str(value) + "\n"
+                    modified_line = parts[0] + var_name +" = " + str(value) + "\n"
                     new_content.append(modified_line)
                 else:
                     new_content.append(line)
@@ -730,9 +733,19 @@ class single_trans:
                 except Exception as e:
                     print(f"Error deleting {file_path}: {e}")
 
-
-            
-
+    def DC_sim_plot_single_mult(df):
+        # Assuming df is your DataFrame
+        data_matrix = df.values  # Convert the entire DataFrame to a NumPy array
+        x_values = data_matrix[:, 0]  # Assuming the first column is x
+        y_values = data_matrix[:, 1:]  # Assuming the rest are y    
+        plt.figure(figsize=(8, 6))
+        for i, y_column in enumerate(df.columns[1:]):
+            plt.plot(x_values, y_values[:, i], label=y_column)
+        plt.xlabel("V")  # Use the original column header for x-axis label
+        plt.ylabel("Values")
+        plt.title("Data from DataFrame")
+        plt.legend()
+        plt.show()
 
     
 
