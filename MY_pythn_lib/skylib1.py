@@ -38,7 +38,7 @@ class sim_comands:
         return full_path_spice_file
 
     def write_MOS_corner(spice_path,corner): #writes the MOS corner in the file in the spice path
-        target_text = "sky130A/libs.tech/ngspice/corners/"
+        target_text = "sky130B/libs.tech/ngspice/corners/"
         corner = corner + ".spice"
         new_content = []
         a = 0
@@ -740,16 +740,25 @@ class single_trans:
         y_values = data_matrix[:, 1:].astype(float)  # Assuming the rest are y
         a = 0
         b=1
-        print(len(variables))
-        print(variables)
+        d =0
+        if sweap == "TEMP" or sweap =="corner":
+            c =1
+
+        else :
+            c =2
+
         plt.figure(figsize=(8, 6))
         print(y_values)
         for i in range(y_values.shape[1]):
-            plt.plot(x_values, y_values[:, i], label=f'{variables[a]} {sweap} = {round(voltage_var*b,2)}', linewidth=3.0)
+            if c ==1:
+                plt.plot(x_values, y_values[:, i], label=f'{variables[a]} {sweap} = {voltage_var[d]}', linewidth=3.0)
+            if c ==2:
+                plt.plot(x_values, y_values[:, i], label=f'{variables[a]} {sweap} = {round(voltage_var*b,2)}', linewidth=3.0)
             a = a + 1
             if a == len(variables):
                 a =0
                 b = b+1
+                d = d+1
         plt.xlabel("V", fontsize=12, weight='bold')  # x-axis label is the first column name
         plt.ylabel("A", fontsize=12, weight='bold')  # y-axis label for all y-variables
         plt.title(title)
