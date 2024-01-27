@@ -602,10 +602,10 @@ class single_trans:
             VDS = 1.8
         elif second_part == "g5v0d10v5":
             VGS = 5
-            VDS = 10
+            VDS = 5
         elif second_part == "g5v0d16v0":
             VGS = 5
-            VDS = 16
+            VDS = 10
         elif second_part == "20v0":
             VGS = 5
             VDS = 20
@@ -733,19 +733,32 @@ class single_trans:
                 except Exception as e:
                     print(f"Error deleting {file_path}: {e}")
 
-    def DC_sim_plot_single_mult(df):
+    def DC_sim_plot_mult(df, variables,voltage_var,sweap,title):
         # Assuming df is your DataFrame
         data_matrix = df.values  # Convert the entire DataFrame to a NumPy array
-        x_values = data_matrix[:, 0]  # Assuming the first column is x
-        y_values = data_matrix[:, 1:]  # Assuming the rest are y    
+        x_values = data_matrix[:, 0].astype(float)  # Assuming the first column is x
+        y_values = data_matrix[:, 1:].astype(float)  # Assuming the rest are y
+        a = 0
+        b=1
+        print(len(variables))
+        print(variables)
         plt.figure(figsize=(8, 6))
-        for i, y_column in enumerate(df.columns[1:]):
-            plt.plot(x_values, y_values[:, i], label=y_column)
-        plt.xlabel("V")  # Use the original column header for x-axis label
-        plt.ylabel("Values")
-        plt.title("Data from DataFrame")
+        print(y_values)
+        for i in range(y_values.shape[1]):
+            plt.plot(x_values, y_values[:, i], label=f'{variables[a]} {sweap} = {round(voltage_var*b,2)}', linewidth=3.0)
+            a = a + 1
+            if a == len(variables):
+                a =0
+                b = b+1
+        plt.xlabel("V", fontsize=12, weight='bold')  # x-axis label is the first column name
+        plt.ylabel("A", fontsize=12, weight='bold')  # y-axis label for all y-variables
+        plt.title(title)
         plt.legend()
+        plt.grid(True, linewidth=1)
+        for spine in plt.gca().spines.values():
+            spine.set_linewidth(1.5)
         plt.show()
+
 
     
 

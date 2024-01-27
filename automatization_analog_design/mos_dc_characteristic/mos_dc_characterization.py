@@ -29,16 +29,19 @@ full_RC_corner= False #control varaiblr for full Rc corner
 user_input = 0
 os.system('clear')
 while (user_input != 1): #user menu
+    os.system('clear')
     print("select:1-Quit")
     print("select:2-test VGS sweep at nominal")
     print("select:3-test VDS sweep at nominal")
     print("select:4-test VGS sweep at different VDS")
+    print("select:5-test VDS sweep at different VGS")
 
     user_input = int(input("Enter the desired action: "))#get the param input
     match user_input:
         case 1:
             single_trans.delete_csv_txt(script_directory)
         case 2:
+            spice_path = sim_comands.export_netlist(sch_path)
             transistor,instance = single_trans.get_transistor_type(spice_path)
             transistor = single_trans.analyse_transistor(transistor,instance)
             single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
@@ -46,9 +49,10 @@ while (user_input != 1): #user menu
             sim_comands.ngspice_sim(spice_path)
             var =["VGS","ID","GM"]
             data_path = sim_comands.write_single_cvs_file(data_path,var,2,"VGS")
-            single_trans.DC_sim_plot_single("Current and transcondutance VGS sweep",data_path,var)
+            single_trans.DC_sim_plot_single("Drain Current and transcondutance with VGS sweep",data_path,var)
             single_trans.delete_csv_txt(script_directory)
         case 3:
+            spice_path = sim_comands.export_netlist(sch_path)
             transistor,instance = single_trans.get_transistor_type(spice_path)
             transistor = single_trans.analyse_transistor(transistor,instance)
             single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
@@ -56,27 +60,46 @@ while (user_input != 1): #user menu
             sim_comands.ngspice_sim(spice_path)
             var =["VGS","ID"]
             data_path = sim_comands.write_single_cvs_file(data_path,var,1,"VGS")
-            single_trans.DC_sim_plot_single("Current and transcondutance VGS sweep",data_path,var)
+            single_trans.DC_sim_plot_single("Drain Current with VDS sweep",data_path,var)
             single_trans.delete_csv_txt(script_directory)
-
         case 4:
+            spice_path = sim_comands.export_netlist(sch_path)
             transistor,instance = single_trans.get_transistor_type(spice_path)
             transistor = single_trans.analyse_transistor(transistor,instance)
             single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
             data_path = single_trans.add_vgs_sim(spice_path,transistor)
-            Val = transistor.VDS_max/5
+            Val = transistor.VDS_max/3
             c= Val
             i=1
             dataframe = pd.DataFrame()
-            for a in range(0,5,1):
+            for a in range(0,3,1):
                 sim_comands.change_var(spice_path,"VDS",c)
                 variables = ["ID","GM"]
                 sim_comands.ngspice_sim(spice_path)
                 dataframe = sim_comands.write_RUNS_cvs_file(data_path,variables,2,i,dataframe,"V")
                 i = i+1
                 c= c+Val
-            single_trans.DC_sim_plot_single_mult(dataframe)
-            
+            single_trans.DC_sim_plot_mult(dataframe,variables,Val,"VDS","Multiple Drain Current and transcondutance with VGS sweep")
+            single_trans.delete_csv_txt(script_directory)
+        case 5:
+            spice_path = sim_comands.export_netlist(sch_path)
+            transistor,instance = single_trans.get_transistor_type(spice_path)
+            transistor = single_trans.analyse_transistor(transistor,instance)
+            single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
+            data_path = single_trans.add_vds_sim(spice_path,transistor)
+            Val = transistor.VGS_max/5
+            c= Val
+            i=1
+            dataframe = pd.DataFrame()
+            for a in range(0,5,1):
+                sim_comands.change_var(spice_path,"VGS",c)
+                variables = ["ID"]
+                sim_comands.ngspice_sim(spice_path)
+                dataframe = sim_comands.write_RUNS_cvs_file(data_path,variables,1,i,dataframe,"V")
+                i = i+1
+                c= c+Val
+            single_trans.DC_sim_plot_mult(dataframe,variables,Val,"VGS","Multiple Drain Current with VDS sweep")
+            single_trans.delete_csv_txt(script_directory)
 
 
 
