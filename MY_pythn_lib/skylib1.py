@@ -643,6 +643,37 @@ class single_trans:
                     new_lines.append(line)
             with open(spice_file_path, 'w') as spice_file:
                 spice_file.writelines(new_lines)
+        if transistor.transistor_type =="pfet":
+            with open(spice_file_path, 'r') as spice_file:
+                lines = spice_file.readlines()
+                for line_number, line in enumerate(lines, start=1):
+                    if line.startswith(transistor.instance):
+                        parts = line.split()
+                        if len(parts) > 1:
+                            #set up VDS net
+                            new_line = "Vmeas " + parts[1] +" " + parts[3] + " " + "0"
+                            print(new_line)
+                            new_lines.append(new_line)
+                            new_lines.append("\n") 
+                            new_lines.append(".save i(Vmeas) \n") 
+                            new_line = "V1 " + parts[1] + " GND " + "VDS"
+                            new_lines.append(new_line)
+                            new_lines.append("\n")
+                            #set up VGS
+                            new_line = "V2 " + parts[2] +" " +"GND " + "VGS"
+                            new_lines.append(new_line)
+                            new_lines.append("\n")
+                            new_line = "V3 " + "net5" +" " +"GND " + str(transistor.VDS_max)
+                            new_lines.append(new_line)
+                            new_lines.append("\n")
+                            #settting source and drain
+                            line = line.replace(parts[1],"GND").replace(parts[4], "net5")
+                    new_lines.append(line)
+            with open(spice_file_path, 'w') as spice_file:
+                spice_file.writelines(new_lines)
+
+
+
     def add_vgs_sim(spice_file_path, transistor):
         new_lines = []
         in_block = False
@@ -688,6 +719,8 @@ class single_trans:
                     new_line = ".param VDS = 0"
                     new_lines.append(new_line + "\n")
                     new_line = ".param VGS = " +str(transistor.VGS_max)
+                    if transistor.transistor_type == "pfet":
+                        new_line = ".param VGS = 0"
                     new_lines.append(new_line + "\n")
                     new_line = "dc V1 0 " + str(transistor.VDS_max) + " 0.001"
                     new_lines.append(new_line + "\n")

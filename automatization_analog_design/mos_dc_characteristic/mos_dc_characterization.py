@@ -125,8 +125,6 @@ while (user_input != 1): #user menu
                 c= c+Val
             single_trans.DC_sim_plot_mult(dataframe,variables,Val,"TEMP","Multiple Drain Current and transcondutance with TEMP sweep")
             single_trans.delete_csv_txt(script_directory)
-
-
         case 7:
             spice_path = sim_comands.export_netlist(sch_path)
             transistor,instance = single_trans.get_transistor_type(spice_path)
