@@ -29,7 +29,7 @@ full_RC_corner= False #control varaiblr for full Rc corner
 user_input = 0
 os.system('clear')
 while (user_input != 1): #user menu
-    os.system('clear')
+    #os.system('clear')
     print("select:1-Quit")
     print("select:2-test VGS sweep at nominal")
     print("select:3-test VDS sweep at nominal")
@@ -39,6 +39,10 @@ while (user_input != 1): #user menu
     print("select:7-test VDS sweep at different TEMP")
     print("select:8-test VGS sweep at different corners")
     print("select:9-test VDS sweep at different corners")
+    print("select:10-test VGS sweep at different W")
+    print("select:11-test VDS sweep at different W")
+    print("select:12-test VGS sweep at different L")
+    print("select:13-test VDS sweep at different L")
 
     user_input = int(input("Enter the desired action: "))#get the param input
     match user_input:
@@ -105,7 +109,6 @@ while (user_input != 1): #user menu
                 c= c+Val
             single_trans.DC_sim_plot_mult(dataframe,variables,Val,"VGS","Multiple Drain Current with VDS sweep")
             single_trans.delete_csv_txt(script_directory)
-
         case 6:
             spice_path = sim_comands.export_netlist(sch_path)
             transistor,instance = single_trans.get_transistor_type(spice_path)
@@ -144,8 +147,6 @@ while (user_input != 1): #user menu
                 c= c+Val
             single_trans.DC_sim_plot_mult(dataframe,variables,Val,"TEMP","Multiple Drain Current with TEMP sweep")
             single_trans.delete_csv_txt(script_directory)
-
-
         case 8:
             spice_path = sim_comands.export_netlist(sch_path)
             transistor,instance = single_trans.get_transistor_type(spice_path)
@@ -165,8 +166,6 @@ while (user_input != 1): #user menu
                 c= c+Val
             single_trans.DC_sim_plot_mult(dataframe,variables,Val,"corner","Multiple Drain Current and transcondutance with different MOS corners")
             single_trans.delete_csv_txt(script_directory)
-            
-
         case 9:
             spice_path = sim_comands.export_netlist(sch_path)
             transistor,instance = single_trans.get_transistor_type(spice_path)
@@ -187,6 +186,97 @@ while (user_input != 1): #user menu
             single_trans.DC_sim_plot_mult(dataframe,variables,Val,"corner","Multiple Drain Current with different MOS corners")
             single_trans.delete_csv_txt(script_directory)
 
+        case 10:
+            spice_path = sim_comands.export_netlist(sch_path)
+            transistor,instance = single_trans.get_transistor_type(spice_path)
+            transistor = single_trans.analyse_transistor(transistor,instance)
+            single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
+            data_path = single_trans.add_vgs_sim(spice_path,transistor)
+            transistor = single_trans.Get_w_transistor(spice_path,transistor)
+            dataframe = pd.DataFrame()
+            o =b =float(transistor.w)
+            r = []
+            i =1
+            for a in range(0,5,1):
+                sim_comands.change_var(spice_path,"W",o)
+                print(o)
+                variables = ["ID","GM"]
+                sim_comands.ngspice_sim(spice_path)
+                dataframe = sim_comands.write_RUNS_cvs_file(data_path,variables,2,i,dataframe,"V")
+                i = i+1
+                r.append(o)
+                o= o+b
+            single_trans.DC_sim_plot_mult(dataframe,variables,r,"W","Multiple Drain Current and transcondutance with different W")
+            single_trans.delete_csv_txt(script_directory)
+
+        case 11:
+            spice_path = sim_comands.export_netlist(sch_path)
+            transistor,instance = single_trans.get_transistor_type(spice_path)
+            transistor = single_trans.analyse_transistor(transistor,instance)
+            single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
+            data_path = single_trans.add_vds_sim(spice_path,transistor)
+            transistor = single_trans.Get_w_transistor(spice_path,transistor)
+            dataframe = pd.DataFrame()
+            o =b =float(transistor.w)
+            r = []
+            i =1
+            for a in range(0,5,1):
+                sim_comands.change_var(spice_path,"W",o)
+                print(o)
+                variables = ["ID"]
+                sim_comands.ngspice_sim(spice_path)
+                dataframe = sim_comands.write_RUNS_cvs_file(data_path,variables,1,i,dataframe,"V")
+                i = i+1
+                r.append(o)
+                o= o+b
+            single_trans.DC_sim_plot_mult(dataframe,variables,r,"W","Multiple Drain Current with different with different W")
+            single_trans.delete_csv_txt(script_directory)
+
+        case 12:
+            spice_path = sim_comands.export_netlist(sch_path)
+            transistor,instance = single_trans.get_transistor_type(spice_path)
+            transistor = single_trans.analyse_transistor(transistor,instance)
+            single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
+            data_path = single_trans.add_vgs_sim(spice_path,transistor)
+            transistor = single_trans.Get_l_transistor(spice_path,transistor)
+            dataframe = pd.DataFrame()
+            o =b =float(transistor.l)
+            r = []
+            i =1
+            for a in range(0,5,1):
+                sim_comands.change_var(spice_path,"L",o)
+                print(o)
+                variables = ["ID","GM"]
+                sim_comands.ngspice_sim(spice_path)
+                dataframe = sim_comands.write_RUNS_cvs_file(data_path,variables,2,i,dataframe,"V")
+                i = i+1
+                r.append(o)
+                o= round(o+b,2)
+            single_trans.DC_sim_plot_mult(dataframe,variables,r,"L","Multiple Drain Current and transcondutance with different L")
+            single_trans.delete_csv_txt(script_directory)
+
+        case 13:
+            spice_path = sim_comands.export_netlist(sch_path)
+            transistor,instance = single_trans.get_transistor_type(spice_path)
+            transistor = single_trans.analyse_transistor(transistor,instance)
+            single_trans.prepare_netlist_for_DC_sim(spice_path,transistor)
+            data_path = single_trans.add_vds_sim(spice_path,transistor)
+            transistor = single_trans.Get_l_transistor(spice_path,transistor)
+            dataframe = pd.DataFrame()
+            o =b =float(transistor.l)
+            r = []
+            i =1
+            for a in range(0,5,1):
+                sim_comands.change_var(spice_path,"L",o)
+                print(o)
+                variables = ["ID"]
+                sim_comands.ngspice_sim(spice_path)
+                dataframe = sim_comands.write_RUNS_cvs_file(data_path,variables,1,i,dataframe,"V")
+                i = i+1
+                r.append(o)
+                o= round(o+b,2)
+            single_trans.DC_sim_plot_mult(dataframe,variables,r,"L","Multiple Drain Current with different with different L")
+            single_trans.delete_csv_txt(script_directory)
 
 
 

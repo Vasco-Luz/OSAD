@@ -567,15 +567,16 @@ class sim_comands:
 
 
 class transistor:
-    def __init__(self,transistor_type,VGS_max,VDS_max,type_t,instance):
+    def __init__(self,transistor_type,VGS_max,VDS_max,type_t,instance,w,l):
         self.transistor_type = transistor_type
         self.VGS_max = VGS_max
         self.VDS_max = VDS_max
         self.type = type_t
         self.instance = instance
+        self.w =w
+        self.l=l
 class single_trans:
     def get_transistor_type(spice_file_path):
-        print(spice_file_path)
         with open(spice_file_path, 'r') as spice_file:
             for line_number, line in enumerate(spice_file, start=1):
                 if line.startswith('XM'):
@@ -615,7 +616,8 @@ class single_trans:
         elif second_part == "05v0":
             VGS = 5
             VDS = 5
-        return transistor(transistor_type, VGS, VDS,vth,instance)
+        return transistor(transistor_type, VGS, VDS,vth,instance,0,0)
+    
     def prepare_netlist_for_DC_sim(spice_file_path,transistor):
         new_lines = []
         if transistor.transistor_type == "nfet":
@@ -627,7 +629,6 @@ class single_trans:
                         if len(parts) > 1:
                             #set up VDS net
                             new_line = "Vmeas " + parts[3] +" " + parts[1] + " " + "0"
-                            print(new_line)
                             new_lines.append(new_line)
                             new_lines.append("\n") 
                             new_lines.append(".save i(Vmeas) \n") 
@@ -652,7 +653,6 @@ class single_trans:
                         if len(parts) > 1:
                             #set up VDS net
                             new_line = "Vmeas " + parts[1] +" " + parts[3] + " " + "0"
-                            print(new_line)
                             new_lines.append(new_line)
                             new_lines.append("\n") 
                             new_lines.append(".save i(Vmeas) \n") 
@@ -774,14 +774,11 @@ class single_trans:
         a = 0
         b=1
         d =0
-        if sweap == "TEMP" or sweap =="corner":
+        if sweap == "TEMP" or sweap =="corner" or sweap =="W" or sweap =="L" :
             c =1
-
         else :
             c =2
-
         plt.figure(figsize=(8, 6))
-        print(y_values)
         for i in range(y_values.shape[1]):
             if c ==1:
                 plt.plot(x_values, y_values[:, i], label=f'{variables[a]} {sweap} = {voltage_var[d]}', linewidth=3.0)
@@ -801,10 +798,65 @@ class single_trans:
             spine.set_linewidth(1.5)
         plt.show()
 
+    def Get_w_transistor(spice_file_path,transistor):
+        with open(spice_file_path, 'r') as spice_file:
+                lines = spice_file.readlines()
+                new_lines =[]
+                in_block = False
+                for line_number, line in enumerate(lines, start=1):
+                    if line.startswith(transistor.instance):
+                        parts = line.split()
+                        if len(parts) > 1:
+                            w_part =parts[7].split("=")
+                            transistor.w = w_part[1]
+                            w_part[1] = "W"
+                            line = line.replace(parts[7], "W=W")
+                    if line.strip() == ".control":
+                        in_block = True
+                    elif line.strip() == ".endc":
+                        in_block = False
+                    elif in_block:
+                        in_block = False
+                        new_line = ".param W = " + str(transistor.w)
+                        new_lines.append(new_line + "\n")
+                    new_lines.append(line)
+        with open(spice_file_path, 'w') as spice_file:
+            spice_file.writelines(new_lines)
+        return transistor
+    
+
+
+
+    def Get_l_transistor(spice_file_path,transistor):
+        with open(spice_file_path, 'r') as spice_file:
+                lines = spice_file.readlines()
+                new_lines =[]
+                in_block = False
+                for line_number, line in enumerate(lines, start=1):
+                    if line.startswith(transistor.instance):
+                        parts = line.split()
+                        if len(parts) > 1:
+                            l_part =parts[6].split("=")
+                            transistor.l = l_part[1]
+                            l_part[1] = "L"
+                            line = line.replace(parts[7], "L=L")
+                    if line.strip() == ".control":
+                        in_block = True
+                    elif line.strip() == ".endc":
+                        in_block = False
+                    elif in_block:
+                        in_block = False
+                        new_line = ".param L = " + str(transistor.w)
+                        new_lines.append(new_line + "\n")
+                    new_lines.append(line)
+        with open(spice_file_path, 'w') as spice_file:
+            spice_file.writelines(new_lines)
+        return transistor
+                        
+                            
+
 
     
 
 
-        
     
-

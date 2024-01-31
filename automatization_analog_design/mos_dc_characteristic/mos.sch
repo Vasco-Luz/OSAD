@@ -52,10 +52,10 @@ save all
 .endc
 "}
 C {sky130_fd_pr/corner.sym} -260 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {sky130_fd_pr/pfet_01v8_lvt.sym} 320 -370 0 0 {name=M10
-L=0.35
-W=1
+C {sky130_fd_pr/nfet_01v8.sym} 380 -370 0 0 {name=M2
+L=0.15
+W=1  
 nf=1 mult=1
-model=pfet_01v8_lvt
+model=nfet_01v8
 spiceprefix=X
 }
