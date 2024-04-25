@@ -29,7 +29,7 @@ full_RC_corner= False #control varaiblr for full Rc corner
 user_input = 0
 os.system('clear')
 while (user_input != 1): #user menu
-    #os.system('clear')
+    os.system('clear')
     print("select:1-Quit")
     print("select:2-test VGS sweep at nominal")
     print("select:3-test VDS sweep at nominal")
