@@ -1,0 +1,51 @@
+** sch_path: /home/vasco/Desktop/OSAD/my_ip/gf180mcuD/Two_stage_PMOS_OPAMP_3_3V_V1/Two_stage_PMOS_OPAMP_3_3V_V1.sch
+**.subckt Two_stage_PMOS_OPAMP_3_3V_V1 VDD VSS VIN- VIN+ VOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VIN-
+*.iopin VIN+
+*.iopin VOUT
+XM2 net1 net1 VDD VDD pfet_03v3 L=3u W=2u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XM4 net1 net2 net4 VSS nfet_03v3 L=4u W=2u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XM5 net3 net3 VSS VSS nfet_03v3 L=4u W=2.1u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XM6 net4 net3 net5 VSS nfet_03v3 L=4u W=2.1u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=4
+XR1 VSS net5 VSS ppolyf_u_3k r_width=1e-6 r_length=10e-6 m=1
+XM1 net2 net1 VDD VDD pfet_03v3 L=3u W=2u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XM7 net6 net1 VDD VDD pfet_03v3 L=3u W=2u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=4
+XM3 net2 net2 net3 VSS nfet_03v3 L=4u W=2u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XM9 VOUT_1 VIN+ net6 net6 pfet_03v3 L=0.3u W=10u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=4
+XM10 net7 net7 VSS VSS nfet_03v3 L=3u W=4u nf=6 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XM11 VOUT_1 net7 VSS VSS nfet_03v3 L=3u W=4u nf=6 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=1
+XM8 net7 VIN- net6 net6 pfet_03v3 L=0.3u W=10u nf=8 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=4
+XM13 VOUT VOUT_1 VSS VSS nfet_03v3 L=3u W=4u nf=6 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=2
+XM12 VOUT net1 VDD VDD pfet_03v3 L=3u W=2u nf=2 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u'
++ pd='2*int((nf+1)/2) * (W/nf + 0.18u)' ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W'
++ sa=0 sb=0 sd=0 m=4
+XC1 VOUT net8 cap_mim_2f0fF c_width=8e-6 c_length=8e-6 m=8
+XR2 VOUT_1 net8 VSS ppolyf_u_3k r_width=1e-6 r_length=4e-6 m=1
+**.ends
+.end

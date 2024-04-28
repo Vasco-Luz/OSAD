@@ -1,0 +1,110 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1714262446
+<< checkpaint >>
+rect -9250 -30 -4150 5642
+rect 2110 3306 6111 3759
+rect 2110 3007 8180 3306
+rect -9250 -90 -1200 -30
+rect -9250 -610 -160 -90
+rect 2110 -242 8831 3007
+rect -6300 -5250 -160 -610
+rect 2250 -994 8831 -242
+rect 2250 -1330 8180 -994
+rect 2880 -3490 8180 -1330
+rect -5260 -5310 -160 -5250
+<< error_p >>
+rect -7504 10389 -7493 10435
+rect -7447 10389 -7436 10400
+rect -7550 8358 -7529 8369
+rect -7411 8358 -7390 8369
+rect -7504 8277 -7493 8323
+rect -7504 8157 -7493 8203
+rect -7447 8157 -7436 8168
+rect -7550 6126 -7529 6137
+rect -7411 6126 -7390 6137
+rect -7504 6045 -7493 6091
+rect -7504 5925 -7493 5971
+rect -7447 5925 -7436 5936
+rect -4554 5749 -4543 5795
+rect -4497 5749 -4486 5760
+rect -7550 3894 -7529 3905
+rect -7411 3894 -7390 3905
+rect -7504 3813 -7493 3859
+rect -7504 3693 -7493 3739
+rect -4600 3718 -4579 3729
+rect -4461 3718 -4440 3729
+rect -7447 3693 -7436 3704
+rect -4554 3637 -4543 3683
+rect -4554 3517 -4543 3563
+rect -4497 3517 -4486 3528
+rect -7550 1662 -7529 1673
+rect -7411 1662 -7390 1673
+rect -7504 1581 -7493 1627
+rect -4600 1486 -4579 1497
+rect -4461 1486 -4440 1497
+rect -4554 1405 -4543 1451
+rect -4554 1285 -4543 1331
+rect -4497 1285 -4486 1296
+rect -4600 -746 -4579 -735
+rect -4461 -746 -4440 -735
+rect -4554 -827 -4543 -781
+rect -4554 -947 -4543 -901
+rect -4497 -947 -4486 -936
+rect -4600 -2978 -4579 -2967
+rect -4461 -2978 -4440 -2967
+rect -4554 -3059 -4543 -3013
+use pfet_03v3_NFSKCD  XM1 ~/Desktop/OSAD/my_ip/gf180mcuD/Two_stage_PMOS_OPAMP_3_3V_V1/mag
+timestamp 1714262332
+transform 1 0 -680 0 1 -480
+box -550 -410 550 410
+use pfet_03v3_NFSKCD  XM2
+timestamp 1714262332
+transform -1 0 1920 0 1 6870
+box -550 -410 550 410
+use nfet_03v3_VVD5WK  XM3 ~/Desktop/OSAD/my_ip/gf180mcuD/Two_stage_PMOS_OPAMP_3_3V_V1/mag
+timestamp 1714262332
+transform 1 0 2280 0 1 -2670
+box -650 -410 650 410
+use nfet_03v3_VVD5WK  XM4
+timestamp 1714262332
+transform 1 0 1850 0 1 2970
+box -650 -410 650 410
+use nfet_03v3_HZD5WK  XM5 ~/Desktop/OSAD/my_ip/gf180mcuD/Two_stage_PMOS_OPAMP_3_3V_V1/mag
+timestamp 1714262332
+transform 1 0 4290 0 1 -1010
+box -650 -420 650 420
+use nfet_03v3_HZDPSK  XM6
+timestamp 0
+transform 1 0 5530 0 1 -92
+box -650 -1398 650 1398
+use pfet_03v3_NFSK77  XM7 ~/Desktop/OSAD/my_ip/gf180mcuD/Two_stage_PMOS_OPAMP_3_3V_V1/mag
+timestamp 1714262332
+transform 1 0 4070 0 1 4118
+box -550 -1358 550 1358
+use pfet_03v3_2HZE36  XM8 ~/Desktop/OSAD/my_ip/gf180mcuD/Two_stage_PMOS_OPAMP_3_3V_V1/mag
+timestamp 1714262332
+transform 1 0 -7470 0 1 6008
+box -280 -4558 280 4558
+use pfet_03v3_2HZE36  XM9
+timestamp 1714262332
+transform 1 0 -4520 0 1 1368
+box -280 -4558 280 4558
+use nfet_03v3_UV78WT  XM10
+timestamp 0
+transform 1 0 -3750 0 1 -2640
+box -550 -610 550 610
+use nfet_03v3_UV78WT  XM11
+timestamp 0
+transform 1 0 -2710 0 1 -2700
+box -550 -610 550 610
+use pfet_03v3_NFSK77  XM12
+timestamp 1714262332
+transform 1 0 8830 0 1 6218
+box -550 -1358 550 1358
+use nfet_03v3_UV7EZT  XM13
+timestamp 0
+transform 1 0 -6700 0 1 2516
+box -550 -1126 550 1126
+<< end >>

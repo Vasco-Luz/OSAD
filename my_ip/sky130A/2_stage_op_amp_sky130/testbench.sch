@@ -177,6 +177,52 @@ N 890 770 940 770 {
 lab=VOUT_swingg}
 N 1130 850 1130 880 {
 lab=VSS}
+N 980 1150 980 1190 {
+lab=VSS}
+N 900 1130 930 1130 {
+lab=#net9}
+N 1050 1110 1120 1110 {
+lab=VOUT_amp}
+N 980 1030 980 1070 {
+lab=VDD}
+N 1080 1060 1080 1110 {
+lab=VOUT_amp}
+N 880 1090 930 1090 {
+lab=#net10}
+N 1080 970 1080 1060 {
+lab=VOUT_amp}
+N 1010 970 1080 970 {
+lab=VOUT_amp}
+N 870 970 950 970 {
+lab=#net10}
+N 870 970 870 1090 {
+lab=#net10}
+N 870 1090 880 1090 {
+lab=#net10}
+N 830 1090 870 1090 {
+lab=#net10}
+N 660 1250 660 1270 {
+lab=VSS}
+N 660 1270 660 1290 {
+lab=VSS}
+N 660 1170 660 1190 {
+lab=#net11}
+N 660 1090 660 1110 {
+lab=#net12}
+N 660 1090 770 1090 {
+lab=#net12}
+N 660 1180 780 1180 {
+lab=#net11}
+N 780 1180 780 1230 {
+lab=#net11}
+N 780 1230 860 1230 {
+lab=#net11}
+N 860 1220 860 1230 {
+lab=#net11}
+N 860 1130 860 1160 {
+lab=#net9}
+N 860 1130 900 1130 {
+lab=#net9}
 C {sky130_fd_pr/corner.sym} -310 -100 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/code.sym} -170 -100 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
@@ -232,8 +278,10 @@ plot db(v(VOUT)) (180*ph(v(VOUT))/pi)
 plot (db(v(VOUT))-db(v(VOUT_c)))
 plot (db(v(VOUT))-db(v(VOUT_A+)))
 plot (db(v(VOUT))-db(v(VOUT_A-)))
+plot db(v(VOUT_amp))
 tran 1ns 20u
 plot v(VOUT_swing) v(VIN+) v(VOUT_swingg)
+plot v(VOUT_amp)
 .endc
 "}
 C {devices/lab_pin.sym} -240 110 0 0 {name=p6 sig_type=std_logic lab=VDD}
@@ -252,7 +300,7 @@ C {devices/vsource.sym} -130 430 0 0 {name=V3 value=0.9}
 C {devices/lab_pin.sym} -130 500 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -30 310 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} -30 370 0 0 {name=V4 value="ac 0.5 sin (0 500m 100k)"}
+C {devices/vsource.sym} -30 370 0 0 {name=V4 value="ac 0.5 sin (0 550m 100k)"}
 C {devices/vsource.sym} -220 370 0 0 {name=V5 value="ac -0.5"}
 C {devices/lab_pin.sym} -220 310 0 0 {name=p13 sig_type=std_logic lab=VIN-
 }
@@ -347,3 +395,22 @@ value=200k
 footprint=1206
 device=resistor
 m=1}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 980 1110 0 0 {name=x8}
+C {devices/lab_pin.sym} 980 1190 0 0 {name=p41 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 1100 1110 1 0 {name=p43 sig_type=std_logic lab=VOUT_amp}
+C {devices/lab_pin.sym} 980 1030 0 0 {name=p44 sig_type=std_logic lab=VDD}
+C {devices/res.sym} 980 970 1 0 {name=R2
+value=200k
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 800 1090 1 0 {name=R3
+value=20k
+footprint=1206
+device=resistor
+m=1}
+C {devices/vsource.sym} 660 1220 0 0 {name=V12 value=0.9}
+C {devices/lab_pin.sym} 660 1290 0 0 {name=p45 sig_type=std_logic lab=VSS}
+C {devices/vsource.sym} 660 1140 0 0 {name=V13 value="ac -0.5 sin (0 10m 100k)"}
+C {devices/vsource.sym} 860 1190 0 0 {name=V14 value="ac 0.5"}

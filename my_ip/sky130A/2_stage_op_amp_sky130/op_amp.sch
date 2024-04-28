@@ -260,14 +260,14 @@ C {devices/lab_pin.sym} 350 -130 0 1 {name=p15 sig_type=std_logic lab=VIN+
 }
 C {sky130_fd_pr/nfet_01v8_nf.sym} 260 50 0 0 {name=M10
 L=2.5
-W=1.8
+W=2
 nf=4 mult=1
 model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_nf.sym} 100 50 0 1 {name=M11
 L=2.5
-W=1.8
+W=2
 nf=4 mult=1
 model=nfet_01v8
 spiceprefix=X
@@ -275,14 +275,14 @@ spiceprefix=X
 C {sky130_fd_pr/pfet_01v8_hvt_nf.sym} 580 -270 0 0 {name=M12
 L=2
 W=2
-nf=2 mult=12
+nf=2 mult=8
 model=pfet_01v8_hvt
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_nf.sym} 580 50 0 0 {name=M13
 L=2.5
-W=1.8
-nf=4 mult=12
+W=2
+nf=4 mult=8
 model=nfet_01v8
 spiceprefix=X
 }
