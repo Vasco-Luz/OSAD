@@ -272,7 +272,7 @@ dc V3 0 1.8 0.001
 plot i(Vmeas) 
 plot v(VOUT_1)
 plot v(VOUT)
-plot v(VOUT_swing) 
+plot v(VOUT_swing) v(VIN+)
 ac dec 10 1 50G
 plot db(v(VOUT)) (180*ph(v(VOUT))/pi)
 plot (db(v(VOUT))-db(v(VOUT_c)))
@@ -304,7 +304,6 @@ C {devices/vsource.sym} -30 370 0 0 {name=V4 value="ac 0.5 sin (0 550m 100k)"}
 C {devices/vsource.sym} -220 370 0 0 {name=V5 value="ac -0.5"}
 C {devices/lab_pin.sym} -220 310 0 0 {name=p13 sig_type=std_logic lab=VIN-
 }
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 400 240 0 0 {name=x1}
 C {devices/lab_pin.sym} 400 60 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 400 320 0 0 {name=p3 sig_type=std_logic lab=VSS
 }
@@ -314,26 +313,24 @@ C {devices/lab_pin.sym} 320 220 0 0 {name=p5 sig_type=std_logic lab=VIN-
 }
 C {devices/capa.sym} 540 270 0 0 {name=C1
 m=1
-value=2p
+value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 540 330 0 0 {name=p8 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 520 240 1 0 {name=p9 sig_type=std_logic lab=VOUT}
 C {devices/ammeter.sym} 400 130 0 0 {name=Vmeas}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 400 530 0 0 {name=x2}
 C {devices/lab_pin.sym} 400 610 0 0 {name=p10 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 320 550 0 0 {name=p11 sig_type=std_logic lab=VIN+
 }
 C {devices/lab_pin.sym} 520 530 1 0 {name=p15 sig_type=std_logic lab=VOUT_swing}
 C {devices/lab_pin.sym} 400 450 0 0 {name=p16 sig_type=std_logic lab=VDD}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 400 880 0 0 {name=x3}
 C {devices/lab_pin.sym} 400 760 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 400 960 0 0 {name=p17 sig_type=std_logic lab=VSS
 }
 C {devices/capa.sym} 540 910 0 0 {name=C2
 m=1
-value=2p
+value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 540 970 0 0 {name=p20 sig_type=std_logic lab=VSS}
@@ -341,13 +338,12 @@ C {devices/lab_pin.sym} 520 880 1 0 {name=p21 sig_type=std_logic lab=VOUT_c}
 C {devices/vsource.sym} 220 1040 0 0 {name=V6 value=0.9}
 C {devices/lab_pin.sym} 220 1110 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} 220 950 0 0 {name=V7 value="ac 1"}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 390 1420 0 0 {name=x4}
 C {devices/lab_pin.sym} 390 1210 0 0 {name=p19 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 390 1500 0 0 {name=p22 sig_type=std_logic lab=VSS
 }
 C {devices/capa.sym} 530 1450 0 0 {name=C3
 m=1
-value=2p
+value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 530 1510 0 0 {name=p23 sig_type=std_logic lab=VSS}
@@ -355,13 +351,12 @@ C {devices/lab_pin.sym} 510 1420 1 0 {name=p24 sig_type=std_logic lab=VOUT_A+}
 C {devices/vsource.sym} 210 1460 0 0 {name=V8 value=0.9}
 C {devices/lab_pin.sym} 210 1530 0 0 {name=p25 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} 390 1270 2 0 {name=V9 value="ac 1"}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 390 1790 0 0 {name=x5}
 C {devices/lab_pin.sym} 390 1640 0 0 {name=p26 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 390 1960 0 0 {name=p27 sig_type=std_logic lab=VSS
 }
 C {devices/capa.sym} 530 1820 0 0 {name=C4
 m=1
-value=2p
+value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 530 1880 0 0 {name=p28 sig_type=std_logic lab=VSS}
@@ -369,7 +364,6 @@ C {devices/lab_pin.sym} 510 1790 1 0 {name=p29 sig_type=std_logic lab=VOUT_A-}
 C {devices/vsource.sym} 210 1830 0 0 {name=V10 value=0.9}
 C {devices/lab_pin.sym} 210 1900 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} 390 1900 0 0 {name=V11 value="ac 1"}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 990 540 0 0 {name=x6}
 C {devices/lab_pin.sym} 990 620 0 0 {name=p31 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 910 560 0 0 {name=p32 sig_type=std_logic lab=VIN+
@@ -378,11 +372,10 @@ C {devices/lab_pin.sym} 1110 540 1 0 {name=p33 sig_type=std_logic lab=VOUT_swing
 C {devices/lab_pin.sym} 990 460 0 0 {name=p34 sig_type=std_logic lab=VDD}
 C {devices/capa.sym} 1130 570 0 0 {name=C5
 m=1
-value=2p
+value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 1130 630 0 0 {name=p35 sig_type=std_logic lab=VSS}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 990 790 0 0 {name=x7}
 C {devices/lab_pin.sym} 990 870 0 0 {name=p36 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 910 810 0 0 {name=p37 sig_type=std_logic lab=VIN+
@@ -391,26 +384,33 @@ C {devices/lab_pin.sym} 1110 790 1 0 {name=p38 sig_type=std_logic lab=VOUT_swing
 C {devices/lab_pin.sym} 990 710 0 0 {name=p39 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1130 880 0 0 {name=p40 sig_type=std_logic lab=VSS}
 C {devices/res.sym} 1130 820 0 0 {name=R1
-value=200k
+value=400k
 footprint=1206
 device=resistor
 m=1}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/2_stage_op_amp_sky130/op_amp.sym} 980 1110 0 0 {name=x8}
 C {devices/lab_pin.sym} 980 1190 0 0 {name=p41 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1100 1110 1 0 {name=p43 sig_type=std_logic lab=VOUT_amp}
 C {devices/lab_pin.sym} 980 1030 0 0 {name=p44 sig_type=std_logic lab=VDD}
 C {devices/res.sym} 980 970 1 0 {name=R2
-value=200k
+value=400k
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 800 1090 1 0 {name=R3
-value=20k
+value=40k
 footprint=1206
 device=resistor
 m=1}
 C {devices/vsource.sym} 660 1220 0 0 {name=V12 value=0.9}
 C {devices/lab_pin.sym} 660 1290 0 0 {name=p45 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} 660 1140 0 0 {name=V13 value="ac -0.5 sin (0 10m 100k)"}
+C {devices/vsource.sym} 660 1140 0 0 {name=V13 value="ac -0.5 sin (0 70m 100k)"}
 C {devices/vsource.sym} 860 1190 0 0 {name=V14 value="ac 0.5"}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 400 240 0 0 {name=x1}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 400 530 0 0 {name=x2}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 400 880 0 0 {name=x3}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 390 1420 0 0 {name=x4}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 390 1790 0 0 {name=x5}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 980 1110 0 0 {name=x6}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 990 790 0 0 {name=x7}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 990 540 0 0 {name=x8}

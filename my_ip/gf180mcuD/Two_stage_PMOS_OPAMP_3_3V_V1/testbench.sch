@@ -360,18 +360,18 @@ C {devices/lab_pin.sym} 2000 940 0 0 {name=p41 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 2000 740 0 0 {name=p44 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} 1820 1000 0 0 {name=V12 value=1.65}
 C {devices/lab_pin.sym} 1820 1070 0 0 {name=p45 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} 1890 930 0 0 {name=V13 value="ac -0.5 sin (0 10m 100k)"}
+C {devices/vsource.sym} 1820 920 0 0 {name=V13 value="ac -0.5 sin (0 140m 100k)"}
 C {Two_stage_PMOS_OPAMP_3_3V_V1.sym} 1810 210 0 0 {name=x6}
 C {Two_stage_PMOS_OPAMP_3_3V_V1.sym} 1970 540 0 0 {name=x7}
 C {Two_stage_PMOS_OPAMP_3_3V_V1.sym} 2010 840 0 0 {name=x8}
-C {devices/vsource.sym} 1820 920 0 0 {name=V15 value="ac 0.5"}
+C {devices/vsource.sym} 1890 930 0 0 {name=V15 value="ac 0.5"}
 C {devices/res.sym} 1890 1020 1 0 {name=R4
 value=20k
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 2100 1020 1 0 {name=R5
-value=20k
+value=200k
 footprint=1206
 device=resistor
 m=1}
