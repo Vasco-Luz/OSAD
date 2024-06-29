@@ -313,7 +313,7 @@ C {devices/lab_pin.sym} 320 220 0 0 {name=p5 sig_type=std_logic lab=VIN-
 }
 C {devices/capa.sym} 540 270 0 0 {name=C1
 m=1
-value=1p
+value=3p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 540 330 0 0 {name=p8 sig_type=std_logic lab=VSS}
