@@ -52,7 +52,7 @@ color=5
 node="\\"Phase ; ph(vout) 180 + \\""}
 B 2 940 100 1740 500 {flags=graph
 
-y2=100
+y2=124
 ypos1=0
 ypos2=2
 divy=10
@@ -70,7 +70,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-20
+y1=4
 
 color=6
 node="\\"CMRR ; vout VOUT_c / db20() %0\\""}
@@ -150,8 +150,8 @@ y1=-120
 color=9
 node="\\"20dB gain ; VOUT_20db db20() %0\\""}
 B 2 1990 -700 2790 -300 {flags=graph
-y1=0
-y2=1.8
+y1=0.18
+y2=1.98
 ypos1=0
 ypos2=2
 divy=10
@@ -199,8 +199,8 @@ sim_type=ac
 color=6
 node="\\"buffer swing; VOUT_swing\\""}
 B 2 1990 100 2790 500 {flags=graph
-y1=-0.0661532
-y2=1.8816
+y1=-0.066155
+y2=1.88159
 ypos1=0
 ypos2=2
 divy=10
@@ -224,7 +224,7 @@ sim_type=ac
 color="6 4 8"
 node="\\"output wave; VOUT_rate\\"
 \\"slew rate; VOUT_rate deriv0()s\\"
-\\"input square wave;net14\\""
+\\"input square wave;net13\\""
 divx=20}
 B 2 3050 -690 3850 -290 {flags=graph
 y1=0
@@ -251,7 +251,7 @@ node="\\"dc variation; VOUT\\""
 sim_type=ac}
 B 2 3050 -290 3850 110 {flags=graph
 y1=0
-y2=1.8
+y2=1.4
 ypos1=0
 ypos2=2
 divy=10
@@ -301,6 +301,32 @@ sim_type=ac
 
 color=21
 node="\\"offset; VOUT_swing net1 -\\""}
+B 2 3048.75 508.75 3848.75 908.75 {flags=graph
+y1=-0.000346453
+y2=0.0012786
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=1
+x2=5e+10
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+sim_type=ac
+
+color=21
+node="\\"power;  i(v9) -1.8 *\\""}
 T {AC results} 1162.5 -837.5 0 0 1 1 {}
 T {tran results} 2297.5 -825 0 0 1 1 {}
 T {DC waves} 3257.5 -785 0 0 1 1 {}
@@ -715,7 +741,7 @@ plot db(v(VOUT_amp))
 set appendwrite
 write tb.raw
 
-tran 1ns 100u
+tran 1ns 20u
 set appendwrite
 write tb.raw
 noise v(VOUT,VSS) V4 dec 10 1 10G
@@ -723,7 +749,7 @@ set appendwrite
 write tb.raw
 plot inoise_spectrum
 
-dc V3 0 1.8 0.00001 
+dc V3 0 1.8 0.0001 
 set appendwrite
 write tb.raw
 .endc
@@ -736,7 +762,7 @@ C {devices/launcher.sym} 260 -200 0 0 {name=h1
 descr="Annotate OP" 
 tclcommand="set show_hidden_texts 1; xschem annotate_op"
 }
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/transimpedance_opa,p_1_v8/op_amp.sym} 470 -540 0 0 {name=x1}
+C {../op_amp.sym} 470 -540 0 0 {name=x1}
 C {devices/lab_pin.sym} -440 -30 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -440 170 0 0 {name=p17 sig_type=std_logic lab=VSS
 }
@@ -750,7 +776,7 @@ C {devices/lab_pin.sym} -320 90 1 0 {name=p21 sig_type=std_logic lab=VOUT_c}
 C {devices/vsource.sym} -620 250 0 0 {name=V6 value=0.9}
 C {devices/lab_pin.sym} -620 320 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -620 160 0 0 {name=V7 value="ac 1"}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/transimpedance_opa,p_1_v8/op_amp.sym} -440 90 0 0 {name=x2}
+C {../op_amp.sym} -440 90 0 0 {name=x2}
 C {devices/lab_pin.sym} -430 400 0 0 {name=p19 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -430 690 0 0 {name=p22 sig_type=std_logic lab=VSS
 }
@@ -777,8 +803,8 @@ C {devices/lab_pin.sym} -310 980 1 0 {name=p29 sig_type=std_logic lab=VOUT_A-}
 C {devices/vsource.sym} -610 1020 0 0 {name=V10 value=0.9}
 C {devices/lab_pin.sym} -610 1090 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -430 1090 0 0 {name=V11 value="ac 1"}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/transimpedance_opa,p_1_v8/op_amp.sym} -430 610 0 0 {name=x4}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/transimpedance_opa,p_1_v8/op_amp.sym} -430 980 0 0 {name=x5}
+C {../op_amp.sym} -430 610 0 0 {name=x4}
+C {../op_amp.sym} -430 980 0 0 {name=x5}
 C {devices/lab_pin.sym} -350 1500 0 0 {name=p41 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -230 1420 1 0 {name=p43 sig_type=std_logic lab=VOUT_20db}
@@ -796,7 +822,7 @@ m=1}
 C {devices/vsource.sym} -670 1530 0 0 {name=V12 value=0.9}
 C {devices/lab_pin.sym} -670 1600 0 0 {name=p45 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -670 1450 0 0 {name=V13 value="ac 1 sin (0 70m 100k)"}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/transimpedance_opa,p_1_v8/op_amp.sym} -350 1420 0 0 {name=x3}
+C {../op_amp.sym} -350 1420 0 0 {name=x3}
 C {devices/launcher.sym} 255 -152.5 0 0 {name=h2
 descr="tran simulation waves" 
 tclcommand="xschem raw_read $netlist_dir/tb.raw tran"
@@ -804,7 +830,7 @@ tclcommand="xschem raw_read $netlist_dir/tb.raw tran"
 C {devices/lab_pin.sym} -340 1810 0 0 {name=p10 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -340 1650 0 0 {name=p11 sig_type=std_logic lab=VDD}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/transimpedance_opa,p_1_v8/op_amp.sym} -340 1730 0 0 {name=x6}
+C {../op_amp.sym} -340 1730 0 0 {name=x6}
 C {devices/capa.sym} -210 1450 0 0 {name=C5
 m=1
 value=3p
@@ -816,7 +842,7 @@ C {devices/lab_pin.sym} -210 1660 2 0 {name=p31 sig_type=std_logic lab=VOUT_swin
 C {devices/lab_pin.sym} -1030 1940 0 0 {name=p32 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -1030 1780 0 0 {name=p33 sig_type=std_logic lab=VDD}
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/transimpedance_opa,p_1_v8/op_amp.sym} -1030 1860 0 0 {name=x7}
+C {../op_amp.sym} -1030 1860 0 0 {name=x7}
 C {devices/vsource.sym} -1150 2010 0 0 {name=V16 value=0.9}
 C {devices/lab_pin.sym} -1150 2080 0 0 {name=p34 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -880 1860 1 0 {name=p35 sig_type=std_logic lab=VOUT_rate}

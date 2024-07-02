@@ -195,4 +195,4 @@ C {devices/launcher.sym} -260 410 0 0 {name=h2
 descr="View Raw file" 
 tclcommand="textwindow $netlist_dir/test_analog.raw"
 }
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/transimpedance_opa,p_1_v8/op_amp.sym} 160 -150 0 0 {name=x1}
+C {../op_amp.sym} 160 -150 0 0 {name=x1}
