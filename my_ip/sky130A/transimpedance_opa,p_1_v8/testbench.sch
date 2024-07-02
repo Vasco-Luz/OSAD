@@ -5,6 +5,25 @@ K {}
 V {}
 S {}
 E {}
+B 2 1530 420 1990 660 {flags=graph
+y1 = 10000
+y2 = 0
+
+x1=0.28679
+x2=10.9858
+divx=5
+
+  unitx=u
+
+
+divy=8
+subdivx=8
+subdivy=4
+dataset=-1
+color=4
+node=db(vout)
+logx=1
+logy=0}
 N -240 210 -240 230 {
 lab=GND}
 N -240 110 -240 150 {
@@ -206,22 +225,24 @@ lab=VSS}
 N 660 1270 660 1290 {
 lab=VSS}
 N 660 1170 660 1190 {
-lab=#net11}
+lab=#net9}
 N 660 1090 660 1110 {
-lab=#net12}
+lab=#net11}
 N 660 1090 770 1090 {
-lab=#net12}
+lab=#net11}
 N 660 1180 780 1180 {
-lab=#net11}
+lab=#net9}
 N 780 1180 780 1230 {
-lab=#net11}
+lab=#net9}
 N 780 1230 860 1230 {
-lab=#net11}
+lab=#net9}
 N 860 1220 860 1230 {
-lab=#net11}
+lab=#net9}
 N 860 1130 860 1160 {
 lab=#net9}
 N 860 1130 900 1130 {
+lab=#net9}
+N 860 1160 860 1220 {
 lab=#net9}
 C {sky130_fd_pr/corner.sym} -310 -100 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/code.sym} -170 -100 0 0 {name=spice only_toplevel=false
@@ -274,14 +295,17 @@ plot v(VOUT_1)
 plot v(VOUT)
 plot v(VOUT_swing) v(VIN+)
 ac dec 10 1 50G
+wrdata /home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/ad_tt.txt v(VOUT) 
 plot db(v(VOUT)) (180*ph(v(VOUT))/pi)
 plot (db(v(VOUT))-db(v(VOUT_c)))
 plot (db(v(VOUT))-db(v(VOUT_A+)))
 plot (db(v(VOUT))-db(v(VOUT_A-)))
 plot db(v(VOUT_amp))
+write testbench.raw
 tran 1ns 20u
 plot v(VOUT_swing) v(VIN+) v(VOUT_swingg)
 plot v(VOUT_amp)
+
 .endc
 "}
 C {devices/lab_pin.sym} -240 110 0 0 {name=p6 sig_type=std_logic lab=VDD}
@@ -404,8 +428,7 @@ device=resistor
 m=1}
 C {devices/vsource.sym} 660 1220 0 0 {name=V12 value=0.9}
 C {devices/lab_pin.sym} 660 1290 0 0 {name=p45 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} 660 1140 0 0 {name=V13 value="ac -0.5 sin (0 70m 100k)"}
-C {devices/vsource.sym} 860 1190 0 0 {name=V14 value="ac 0.5"}
+C {devices/vsource.sym} 660 1140 0 0 {name=V13 value="ac 1 sin (0 70m 100k)"}
 C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 400 240 0 0 {name=x1}
 C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 400 530 0 0 {name=x2}
 C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 400 880 0 0 {name=x3}
@@ -414,3 +437,10 @@ C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 
 C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 980 1110 0 0 {name=x6}
 C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 990 790 0 0 {name=x7}
 C {/home/vasco/Desktop/OSAD/my_ip/sky130A/PMOS_2_stage_1_8_opamp_V1/op_amp.sym} 990 540 0 0 {name=x8}
+C {devices/launcher.sym} 1695 815 0 0 {name=h1 
+descr="Select arrow and 
+Ctrl-Left-Click to load/unload waveforms" 
+tclcommand="
+xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw ac
+"
+}
