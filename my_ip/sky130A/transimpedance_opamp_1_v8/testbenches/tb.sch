@@ -52,6 +52,11 @@ L 4 -580 2940 -580 3230 {}
 L 4 -580 3230 -580 3370 {}
 L 4 -580 3370 60 3370 {}
 L 4 60 3280 60 3370 {}
+L 4 -490 3580 0 3580 {}
+L 4 0 3580 -0 4030 {}
+L 4 -690 4030 -0 4030 {}
+L 4 -690 3580 -690 4030 {}
+L 4 -690 3580 -490 3580 {}
 B 2 940 -700 1740 -300 {flags=graph,unlocked
 
 y2=116.4
@@ -60,8 +65,8 @@ ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=-1.069897
-x2=9.6290725
+x1=0
+x2=10.69897
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -357,7 +362,7 @@ node="\\"buffer swing dc; VOUT_swing\\"
 rawfile=$netlist_dir/tb.raw
 rainbow=0}
 B 2 3048.75 108.75 3848.75 508.75 {flags=graph,unlocked
-y1=-1.4e-06
+y1=9.7e-06
 y2=0.11
 ypos1=0
 ypos2=2
@@ -384,8 +389,8 @@ color=21
 node="\\"offset; VOUT_swing net1 -\\""
 rawfile=$netlist_dir/tb.raw}
 B 2 3048.75 508.75 3848.75 908.75 {flags=graph,unlocked
-y1=0.00036
-y2=0.00037
+y1=0.000363
+y2=0.000373
 ypos1=0
 ypos2=2
 divy=10
@@ -410,6 +415,66 @@ sim_type=dc
 color=21
 node="\\"power;  i(v9) -1.8 *\\""
 rawfile=$netlist_dir/tb.raw}
+B 2 940 1700 1740 2100 {flags=graph,unlocked
+
+y2=-23
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+x2=10.69897
+divx=10
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=1
+logy=0
+y1=-81
+
+
+color=17
+node="\\"transimpedance ; VOUT_photo db20() %0\\""
+rawfile=$netlist_dir/tb.raw
+sim_type=ac
+autoload=1}
+B 2 1990 500 2790 900 {flags=graph,unlocked
+y1=0.8998
+y2=0.9002
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+
+
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+sim_type=tran
+
+
+divx=20
+rawfile=$netlist_dir/tb.raw
+x2=2e-05
+rainbow=0
+autoload=1
+color=12
+node="\\"transimpedance output; VOUT_photo\\""}
 T {AC results} 1517.5 -837.5 0 1 1 1 {}
 T {tran results} 2297.5 -825 0 0 1 1 {}
 T {DC waves} 3257.5 -785 0 0 1 1 {}
@@ -422,6 +487,7 @@ T {A- gain simulation} -440 1150 0 0 1 1 {}
 T {closed loop 20db simulation} -590 1750 0 0 1 1 {}
 T {buffer simulation} -470 2380 0 0 1 1 {}
 T {slew rate simulation} -480 2860 0 0 1 1 {}
+T {transimpedance simulation simulating a photodiode} -920 3490 0 0 1 1 {}
 N -1430 -290 -1430 -270 {
 lab=GND}
 N -1430 -390 -1430 -350 {
@@ -648,6 +714,44 @@ N -350 3110 -350 3170 {
 lab=#net12}
 N -420 2710 -420 2740 {
 lab=VIN-}
+N -270 3900 -270 3940 {
+lab=VSS}
+N -350 3880 -320 3880 {
+lab=#net14}
+N -270 3780 -270 3820 {
+lab=VDD}
+N -390 3880 -350 3880 {
+lab=#net14}
+N -200 3860 -140 3860 {
+lab=VOUT_photo}
+N -390 3940 -390 3960 {
+lab=VSS}
+N -390 3960 -390 3980 {
+lab=VSS}
+N -250 3630 -250 3710 {
+lab=VOUT_photo}
+N -310 3630 -310 3710 {
+lab=#net15}
+N -250 3670 -120 3670 {
+lab=VOUT_photo}
+N -120 3670 -60 3670 {
+lab=VOUT_photo}
+N -60 3670 -60 3860 {
+lab=VOUT_photo}
+N -140 3860 -60 3860 {
+lab=VOUT_photo}
+N -600 3910 -600 3930 {
+lab=VSS}
+N -600 3930 -600 3950 {
+lab=VSS}
+N -600 3840 -600 3850 {
+lab=#net15}
+N -600 3840 -320 3840 {
+lab=#net15}
+N -420 3670 -310 3670 {
+lab=#net15}
+N -420 3670 -420 3840 {
+lab=#net15}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=1.8
 
@@ -940,3 +1044,22 @@ C {devices/lab_pin.sym} -500 3160 0 0 {name=p37 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -500 3090 0 0 {name=V19 value="PULSE(0 1.8 0n 1n 1n 1u 2u)"}
 C {devices/lab_pin.sym} -420 2740 0 0 {name=p38 sig_type=std_logic lab=VIN-
 }
+C {devices/lab_pin.sym} -270 3940 0 0 {name=p16 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} -270 3780 0 0 {name=p39 sig_type=std_logic lab=VDD}
+C {../op_amp.sym} -270 3860 0 0 {name=x8}
+C {devices/lab_pin.sym} -120 3860 1 0 {name=p42 sig_type=std_logic lab=VOUT_photo}
+C {devices/capa.sym} -280 3630 3 0 {name=C7
+m=1
+value=3p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/vsource.sym} -390 3910 0 0 {name=V14 value=0.9}
+C {devices/lab_pin.sym} -390 3980 0 0 {name=p40 sig_type=std_logic lab=VSS}
+C {devices/res.sym} -280 3710 1 0 {name=R1
+value=10M
+footprint=1206
+device=resistor
+m=1}
+C {devices/isource.sym} -600 3880 0 0 {name=I0 value="ac 20u sin (0 20u 100k)"}
+C {devices/lab_pin.sym} -600 3950 0 0 {name=p47 sig_type=std_logic lab=VSS}
