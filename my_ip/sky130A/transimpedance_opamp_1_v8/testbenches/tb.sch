@@ -937,7 +937,7 @@ plot db(v(VOUT_amp))
 set appendwrite
 write tb.raw
 
-tran 1ns 20u
+tran 1ns 30u
 set appendwrite
 write tb.raw
 noise v(VOUT,VSS) V4 dec 10 1 10G
