@@ -18,7 +18,7 @@ i advise the use of chatgpt to ease installation because of the dependencies\
 open the file with "xschem [filename]" and simulate\
 
 Some basic circuits are present in the repository\
-The most important is the develempent of analogic design scripts to make the design process faster and scrips to help newcommers to understand some basic things related to design/analog design.\
+I am makign simple ic designs from papers, using VDD=1.8.\
 This is still in a very early phase and is behing done by just one master student, but some work is already done.\
 
 
