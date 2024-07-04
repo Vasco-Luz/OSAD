@@ -504,8 +504,8 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1900 320 0 1 {name=M15
-L=3
-W=2
+L=4
+W=4
 nf=2 mult=4
 model=nfet_g5v0d10v5
 spiceprefix=X
@@ -513,13 +513,6 @@ spiceprefix=X
 C {devices/lab_pin.sym} 1760 350 1 0 {name=p25 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1530 320 2 1 {name=p26 sig_type=std_logic lab=VIN+}
 C {devices/lab_pin.sym} 1990 320 2 0 {name=p27 sig_type=std_logic lab=VIN-}
-C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1620 320 0 0 {name=M16
-L=3
-W=2
-nf=2 mult=4
-model=nfet_g5v0d10v5
-spiceprefix=X
-}
 C {devices/ngspice_get_value.sym} 1970 170 0 0 {name=r40 node=v(@m.$\{path\}xm13.msky130_fd_pr__nfet_g5v0d10v5[vth])
 descr="vth="}
 C {devices/ngspice_get_value.sym} 1980 90 0 0 {name=r41 node=v(@m.$\{path\}xm13.msky130_fd_pr__nfet_g5v0d10v5[vds])
@@ -622,28 +615,28 @@ C {devices/ngspice_get_value.sym} 3310 220 0 0 {name=r75 node=v(@m.$\{path\}xm24
 descr="vgs="}
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 2650 -120 0 1 {name=M19
 L=1
-W=3
+W=5
 nf=2 mult=2
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 2250 -120 0 0 {name=M20
 L=1
-W=3
+W=5
 nf=2 mult=2
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 3230 -120 0 1 {name=M21
 L=1
-W=3
+W=5
 nf=2 mult=2
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 2830 -120 0 0 {name=M22
 L=1
-W=3
+W=5
 nf=2 mult=2
 model=pfet_g5v0d10v5
 spiceprefix=X
@@ -652,6 +645,13 @@ C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 3190 210 0 0 {name=M24
 L=2
 W=4
 nf=4 mult=1
+model=nfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1620 320 0 0 {name=M16
+L=4
+W=4
+nf=2 mult=4
 model=nfet_g5v0d10v5
 spiceprefix=X
 }

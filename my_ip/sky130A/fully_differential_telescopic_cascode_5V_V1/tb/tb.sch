@@ -180,6 +180,11 @@ ac dec 10 1 50G
 plot db(v(VOUT)) (180*ph(v(VOUT))/pi)
 set appendwrite
 write tb.raw
+
+tran 1ns 30u
+plot v(VOUT)
+set appendwrite
+write tb.raw
 .endc
 "}
 C {devices/lab_pin.sym} -150 -80 0 0 {name=p9 sig_type=std_logic lab=VDD}
@@ -210,8 +215,8 @@ C {devices/vsource.sym} 230 300 0 0 {name=V3 value=2.5}
 C {devices/lab_pin.sym} 230 370 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 330 180 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} 330 240 0 0 {name=V4 value="ac 0.5 sin (0 550m 100k)"}
-C {devices/vsource.sym} 140 240 0 0 {name=V5 value="ac -0.5"}
+C {devices/vsource.sym} 330 240 0 0 {name=V4 value="ac 0.5 sin (0 100u 100k)"}
+C {devices/vsource.sym} 140 240 0 0 {name=V5 value="ac -0.5 sin (0 -100u 100k)"}
 C {devices/lab_pin.sym} 140 180 0 0 {name=p13 sig_type=std_logic lab=VIN-
 }
 C {devices/lab_pin.sym} 70 -20 0 0 {name=p1 sig_type=std_logic lab=VIN+
