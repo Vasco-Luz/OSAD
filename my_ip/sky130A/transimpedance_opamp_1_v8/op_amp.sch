@@ -125,6 +125,9 @@ T {Cp} 1750 10 0 0 0.35 0.35 {}
 T {3p F} 1920 30 2 1 0.4 0.4 {}
 T {GBW} 1750 50 0 0 0.35 0.35 {}
 T {30 Mhz} 1910 50 0 0 0.4 0.4 {}
+T {Based this paper:
+Design and Analysis of Two-Stage CMOS Operational Amplifier for Fluorescence
+Signal Processing } -700 -1130 0 0 1 1 {}
 N -690 -330 -510 -330 {
 lab=VDD}
 N -690 -330 -690 -300 {
