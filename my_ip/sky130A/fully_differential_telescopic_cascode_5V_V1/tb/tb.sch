@@ -211,7 +211,7 @@ C {devices/lab_pin.sym} 150 -60 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 150 120 2 0 {name=p14 sig_type=std_logic lab=VSS
 }
 C {/home/vasco/Desktop/OSAD/my_ip/sky130A/fully_differential_telescopic_cascode_5V_V1/fd_opamp.sym} 150 30 0 0 {name=x1}
-C {devices/vsource.sym} 230 300 0 0 {name=V3 value=2.5}
+C {devices/vsource.sym} 230 300 0 0 {name=V3 value=1}
 C {devices/lab_pin.sym} 230 370 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 330 180 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
