@@ -41,7 +41,17 @@ lab=VIN-}
 N 200 10 330 10 {
 lab=VOUT}
 N 200 50 330 50 {
-lab=#net2}
+lab=VOUT2}
+N 330 10 400 10 {
+lab=VOUT}
+N 400 -70 400 -50 {
+lab=VSS}
+N 400 -80 400 -70 {
+lab=VSS}
+N 330 50 400 50 {
+lab=VOUT2}
+N 400 110 400 120 {
+lab=VSS}
 C {sky130_fd_pr/corner.sym} -40 -330 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/simulator_commands.sym} 90 -330 0 0 {name=COMMANDS
 simulator=ngspice
@@ -173,6 +183,26 @@ save @m.x1.xm24.msky130_fd_pr__nfet_g5v0d10v5[vth]
 save @m.x1.xm24.msky130_fd_pr__nfet_g5v0d10v5[vds]
 save @m.x1.xm24.msky130_fd_pr__nfet_g5v0d10v5[vgs]
 
+save @m.x1.xm25.msky130_fd_pr__nfet_g5v0d10v5[gm]
+save @m.x1.xm25.msky130_fd_pr__nfet_g5v0d10v5[vth]
+save @m.x1.xm25.msky130_fd_pr__nfet_g5v0d10v5[vds]
+save @m.x1.xm25.msky130_fd_pr__nfet_g5v0d10v5[vgs]
+
+save @m.x1.xm26.msky130_fd_pr__pfet_g5v0d10v5[gm]
+save @m.x1.xm26.msky130_fd_pr__pfet_g5v0d10v5[vth]
+save @m.x1.xm26.msky130_fd_pr__pfet_g5v0d10v5[vds]
+save @m.x1.xm26.msky130_fd_pr__pfet_g5v0d10v5[vgs]
+
+save @m.x1.xm27.msky130_fd_pr__pfet_g5v0d10v5[gm]
+save @m.x1.xm27.msky130_fd_pr__pfet_g5v0d10v5[vth]
+save @m.x1.xm27.msky130_fd_pr__pfet_g5v0d10v5[vds]
+save @m.x1.xm27.msky130_fd_pr__pfet_g5v0d10v5[vgs]
+
+save @m.x1.xm28.msky130_fd_pr__nfet_g5v0d10v5[gm]
+save @m.x1.xm28.msky130_fd_pr__nfet_g5v0d10v5[vth]
+save @m.x1.xm28.msky130_fd_pr__nfet_g5v0d10v5[vds]
+save @m.x1.xm28.msky130_fd_pr__nfet_g5v0d10v5[vgs]
+
 op
 write tb.raw
 
@@ -181,8 +211,8 @@ plot db(v(VOUT)) (180*ph(v(VOUT))/pi)
 set appendwrite
 write tb.raw
 
-tran 1ns 30u
-plot v(VOUT)
+tran 1ns 100u
+plot v(VOUT) v(VOUT2)
 set appendwrite
 write tb.raw
 .endc
@@ -210,13 +240,12 @@ tclcommand="textwindow $netlist_dir/test_analog.raw"
 C {devices/lab_pin.sym} 150 -60 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 150 120 2 0 {name=p14 sig_type=std_logic lab=VSS
 }
-C {/home/vasco/Desktop/OSAD/my_ip/sky130A/fully_differential_telescopic_cascode_5V_V1/fd_opamp.sym} 150 30 0 0 {name=x1}
 C {devices/vsource.sym} 230 300 0 0 {name=V3 value=1}
 C {devices/lab_pin.sym} 230 370 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 330 180 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} 330 240 0 0 {name=V4 value="ac 0.5 sin (0 100u 100k)"}
-C {devices/vsource.sym} 140 240 0 0 {name=V5 value="ac -0.5 sin (0 -100u 100k)"}
+C {devices/vsource.sym} 330 240 0 0 {name=V4 value="ac 0.5 sin (0 700u 100k)"}
+C {devices/vsource.sym} 140 240 0 0 {name=V5 value="ac -0.5 sin (0 -700u 100k)"}
 C {devices/lab_pin.sym} 140 180 0 0 {name=p13 sig_type=std_logic lab=VIN-
 }
 C {devices/lab_pin.sym} 70 -20 0 0 {name=p1 sig_type=std_logic lab=VIN+
@@ -224,4 +253,19 @@ C {devices/lab_pin.sym} 70 -20 0 0 {name=p1 sig_type=std_logic lab=VIN+
 C {devices/lab_pin.sym} 30 20 0 0 {name=p2 sig_type=std_logic lab=VIN-
 }
 C {devices/lab_pin.sym} 330 10 1 0 {name=p3 sig_type=std_logic lab=VOUT
+}
+C {/home/gim/Desktop/OSAD/my_ip/sky130A/fully_differential_telescopic_cascode_5V_V1/fd_opamp.sym} 150 30 0 0 {name=x1}
+C {devices/capa-2.sym} 400 -20 2 0 {name=C1
+m=1
+value=5p
+footprint=1206
+device=polarized_capacitor}
+C {devices/lab_pin.sym} 400 -80 0 0 {name=p4 sig_type=std_logic lab=VSS}
+C {devices/capa-2.sym} 400 80 0 1 {name=C2
+m=1
+value=5p
+footprint=1206
+device=polarized_capacitor}
+C {devices/lab_pin.sym} 400 120 2 0 {name=p5 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 260 50 3 0 {name=p6 sig_type=std_logic lab=VOUT2
 }
