@@ -8,7 +8,8 @@ import sys
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.patches as mpatches
-
+import random
+import pygad
 
 class sim_comands:
 
@@ -555,17 +556,7 @@ class sim_comands:
         return modified_line
 
 
-                     
-
-
-
-
-
-
-
-
-
-
+                    
 class transistor:
     def __init__(self,transistor_type,VGS_max,VDS_max,type_t,instance,w,l):
         self.transistor_type = transistor_type
@@ -859,4 +850,6 @@ class single_trans:
     
 
 
-    
+class automation_support:
+    def random_value(min_val,max_value,number_of_digits):
+        return round(random.uniform(min_val, max_value), number_of_digits)

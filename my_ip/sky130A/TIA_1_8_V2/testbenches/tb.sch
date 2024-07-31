@@ -84,6 +84,6 @@ C {devices/launcher.sym} -440 590 0 0 {name=h2
 descr="View Raw file" 
 tclcommand="textwindow $netlist_dir/test_analog.raw"
 }
-C {/home/gim/Desktop/OSAD/my_ip/sky130A/TIA_1_8_V2/TI.sym} -70 290 0 0 {name=x1}
 C {devices/lab_pin.sym} -70 200 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {devices/gnd.sym} -70 360 0 0 {name=l2 lab=GND}
+C {/home/vasco/Desktop/OSAD/my_ip/sky130A/TIA_1_8_V2/TI.sym} -70 280 0 0 {name=x1}

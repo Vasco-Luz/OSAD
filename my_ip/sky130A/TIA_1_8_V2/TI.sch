@@ -94,7 +94,7 @@ C {devices/ngspice_get_value.sym} 150 -150 0 1 {name=r14 node=v(@m.$\{path\}xm1.
 descr="vth="}
 C {devices/ngspice_get_value.sym} 150 -180 0 1 {name=r15 node=@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[gds]
 descr="gds="}
-C {devices/ngspice_get_value.sym} 150 -220 0 1 {name=r11 node=@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[gmbs]
+C {devices/ngspice_get_value.sym} 140 -220 0 1 {name=r11 node=@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[gmbs]
 descr="gmbs="}
 C {devices/ngspice_get_value.sym} 80 -190 0 1 {name=r20 node=v(@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[vds])
 descr="vds="}

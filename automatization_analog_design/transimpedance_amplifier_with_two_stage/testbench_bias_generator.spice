@@ -1,0 +1,121 @@
+** sch_path: /home/vasco/Desktop/OSAD/automatization_analog_design/transimpedance_amplifier_with_two_stage/testbench_bias_generator.sch
+**.subckt testbench_bias_generator
+V1 VDD GND 5
+V2 VSS GND 0
+x1 VDD VSS net1 net2 net3 opamp
+**** begin user architecture code
+.lib /home/vasco/PDK/sky130A/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+
+* expanding   symbol:
+*+  /home/vasco/Desktop/OSAD/automatization_analog_design/transimpedance_amplifier_with_two_stage/opamp/opamp.sym # of pins=5
+** sym_path: /home/vasco/Desktop/OSAD/automatization_analog_design/transimpedance_amplifier_with_two_stage/opamp/opamp.sym
+** sch_path: /home/vasco/Desktop/OSAD/automatization_analog_design/transimpedance_amplifier_with_two_stage/opamp/opamp.sch
+.subckt opamp VDD VSS VIN- VIN+ VOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VIN-
+*.iopin VIN+
+*.iopin VOUT
+XM2 net2 net1 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=L_M_1_2 W='W_M_1_2 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
++ pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=1
++ m=1
+XM1 net1 net1 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=L_M_1_2 W='W_M_1_2 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
++ pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=m_M_1_2
++ m=m_M_1_2
+XM4 net2 net2 net4 VSS sky130_fd_pr__nfet_g5v0d10v5 L=L_M_3_4 W='W_M_3_4 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
++ pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=m_M_3_4
++ m=m_M_3_4
+XM3 net1 net2 net3 VSS sky130_fd_pr__nfet_g5v0d10v5 L=L_M_3_4 W='W_M_3_4 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
++ pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=m_M_3_4
++ m=m_M_3_4
+XM5 net3 net4 net5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=L_M_5_6 W='W_M_5_6 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
++ pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=4*m_M_5_6
++ m=4*m_M_5_6
+XM6 net4 net4 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=L_M_5_6 W='W_M_5_6 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
++ pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=m_M_5_6
++ m=m_M_5_6
+R1 net5 VSS R1 m=1
+.ends
+
+.GLOBAL GND
+**** begin user architecture code
+
+
+* ngspice commands
+.options savecurrents
+.TEMP 27
+
+
+
+.param W_M_1_2=40.3
+.param L_M_1_2=4.9
+.param m_M_1_2=45.0
+
+.param W_M_3_4=57.1
+.param L_M_3_4=5.8
+.param m_M_3_4=15.0
+
+.param W_M_5_6=70.3
+.param L_M_5_6=5.4
+.param m_M_5_6=44.0
+
+.param R1=613251.0
+
+
+
+
+.control
+save all
+save @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[gm]
+save @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[vth]
+save @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[vds]
+save @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[vgs]
+
+save @m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[gm]
+save @m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[vth]
+save @m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[vds]
+save @m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[vgs]
+
+save @m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[gm]
+save @m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[vth]
+save @m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[vds]
+save @m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[vgs]
+
+save @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[gm]
+save @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[vth]
+save @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[vds]
+save @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[vgs]
+
+save @m.x1.xm5.msky130_fd_pr__nfet_g5v0d10v5[gm]
+save @m.x1.xm5.msky130_fd_pr__nfet_g5v0d10v5[vth]
+save @m.x1.xm5.msky130_fd_pr__nfet_g5v0d10v5[vds]
+save @m.x1.xm5.msky130_fd_pr__nfet_g5v0d10v5[vgs]
+
+save @m.x1.xm6.msky130_fd_pr__nfet_g5v0d10v5[gm]
+save @m.x1.xm6.msky130_fd_pr__nfet_g5v0d10v5[vth]
+save @m.x1.xm6.msky130_fd_pr__nfet_g5v0d10v5[vds]
+save @m.x1.xm6.msky130_fd_pr__nfet_g5v0d10v5[vgs]
+
+
+op
+set appendwrite
+write testbench_bias_generator.raw
+wrdata M1.txt @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[vth] @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[vds] @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[vgs] @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[id]
+wrdata M2.txt @m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[vth] @m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[vds] @m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[vgs] @m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[id]
+wrdata M3.txt @m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[vth] @m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[vds] @m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[vgs] @m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[id]
+wrdata M4.txt @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[vth] @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[vds] @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[vgs] @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[id]
+wrdata M5.txt @m.x1.xm5.msky130_fd_pr__nfet_g5v0d10v5[vth] @m.x1.xm5.msky130_fd_pr__nfet_g5v0d10v5[vds] @m.x1.xm5.msky130_fd_pr__nfet_g5v0d10v5[vgs] @m.x1.xm5.msky130_fd_pr__nfet_g5v0d10v5[id]
+wrdata M6.txt @m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[vth] @m.x1.xm6.msky130_fd_pr__nfet_g5v0d10v5[vds] @m.x1.xm6.msky130_fd_pr__nfet_g5v0d10v5[vgs] @m.x1.xm6.msky130_fd_pr__nfet_g5v0d10v5[id]
+
+dc TEMP -40 125 1
+plot @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[id]
+
+wrdata variation.txt @m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[id]
+
+.endc
+
+
+**** end user architecture code
+.end
