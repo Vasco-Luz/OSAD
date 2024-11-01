@@ -66,7 +66,7 @@ divy=10
 subdivy=1
 unity=1
 x1=0
-x2=10.69897
+x2=10.699
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -100,7 +100,7 @@ xlabmag=1.0
 ylabmag=1.0
 
 
-dataset=-1
+dataset=0
 unitx=1
 logx=1
 logy=0
@@ -144,8 +144,8 @@ ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=-0.5349485
-x2=10.164021
+x1=0
+x2=10.699
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -362,8 +362,8 @@ node="\\"buffer swing dc; VOUT_swing\\"
 rawfile=$netlist_dir/tb.raw
 rainbow=0}
 B 2 3048.75 108.75 3848.75 508.75 {flags=graph,unlocked
-y1=9.7e-06
-y2=0.11
+y1=0.0110087
+y2=0.120999
 ypos1=0
 ypos2=2
 divy=10
@@ -954,7 +954,6 @@ C {devices/launcher.sym} 2260 -1015 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb.raw tran "
 }
-C {../op_amp.sym} -220 -400 0 0 {name=x1}
 C {devices/lab_pin.sym} -160 -110 0 0 {name=p14 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -160 90 0 0 {name=p17 sig_type=std_logic lab=VSS
 }
@@ -968,7 +967,6 @@ C {devices/lab_pin.sym} -40 10 1 0 {name=p21 sig_type=std_logic lab=VOUT_c}
 C {devices/vsource.sym} -340 170 0 0 {name=V6 value=0.9}
 C {devices/lab_pin.sym} -340 240 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -340 80 0 0 {name=V7 value="ac 1"}
-C {../op_amp.sym} -160 10 0 0 {name=x2}
 C {devices/lab_pin.sym} -210 550 0 0 {name=p19 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -210 840 0 0 {name=p22 sig_type=std_logic lab=VSS
 }
@@ -995,8 +993,6 @@ C {devices/lab_pin.sym} -80 1390 1 0 {name=p29 sig_type=std_logic lab=VOUT_A-}
 C {devices/vsource.sym} -380 1430 0 0 {name=V10 value=0.9}
 C {devices/lab_pin.sym} -380 1500 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -200 1500 0 0 {name=V11 value="ac 1"}
-C {../op_amp.sym} -210 760 0 0 {name=x4}
-C {../op_amp.sym} -200 1390 0 0 {name=x5}
 C {devices/lab_pin.sym} -160 2090 0 0 {name=p41 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -40 2010 1 0 {name=p43 sig_type=std_logic lab=VOUT_20db}
@@ -1014,11 +1010,9 @@ m=1}
 C {devices/vsource.sym} -480 2120 0 0 {name=V12 value=0.9}
 C {devices/lab_pin.sym} -480 2190 0 0 {name=p45 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -480 2040 0 0 {name=V13 value="ac 1 sin (0 70m 100k)"}
-C {../op_amp.sym} -160 2010 0 0 {name=x3}
 C {devices/lab_pin.sym} -300 2690 0 0 {name=p10 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -300 2530 0 0 {name=p11 sig_type=std_logic lab=VDD}
-C {../op_amp.sym} -300 2610 0 0 {name=x6}
 C {devices/capa.sym} -20 2040 0 0 {name=C5
 m=1
 value=3p
@@ -1030,7 +1024,6 @@ C {devices/lab_pin.sym} -170 2540 2 0 {name=p31 sig_type=std_logic lab=VOUT_swin
 C {devices/lab_pin.sym} -230 3150 0 0 {name=p32 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -230 2990 0 0 {name=p33 sig_type=std_logic lab=VDD}
-C {../op_amp.sym} -230 3070 0 0 {name=x7}
 C {devices/vsource.sym} -350 3220 0 0 {name=V16 value=0.9}
 C {devices/lab_pin.sym} -350 3290 0 0 {name=p34 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 3070 1 0 {name=p35 sig_type=std_logic lab=VOUT_rate}
@@ -1047,7 +1040,6 @@ C {devices/lab_pin.sym} -420 2740 0 0 {name=p38 sig_type=std_logic lab=VIN-
 C {devices/lab_pin.sym} -270 3940 0 0 {name=p16 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -270 3780 0 0 {name=p39 sig_type=std_logic lab=VDD}
-C {../op_amp.sym} -270 3860 0 0 {name=x8}
 C {devices/lab_pin.sym} -120 3860 1 0 {name=p42 sig_type=std_logic lab=VOUT_photo}
 C {devices/capa.sym} -280 3630 3 0 {name=C7
 m=1
@@ -1063,3 +1055,11 @@ device=resistor
 m=1}
 C {devices/isource.sym} -600 3880 0 0 {name=I0 value="ac 20u sin (0 20u 100k)"}
 C {devices/lab_pin.sym} -600 3950 0 0 {name=p47 sig_type=std_logic lab=VSS}
+C {VA001_PMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}
+C {VA001_PMOS_1.8_sky130A.sym} -160 10 0 0 {name=x2}
+C {VA001_PMOS_1.8_sky130A.sym} -210 760 0 0 {name=x3}
+C {VA001_PMOS_1.8_sky130A.sym} -200 1390 0 0 {name=x4}
+C {VA001_PMOS_1.8_sky130A.sym} -160 2010 0 0 {name=x5}
+C {VA001_PMOS_1.8_sky130A.sym} -300 2610 0 0 {name=x6}
+C {VA001_PMOS_1.8_sky130A.sym} -230 3070 0 0 {name=x7}
+C {VA001_PMOS_1.8_sky130A.sym} -270 3860 0 0 {name=x8}

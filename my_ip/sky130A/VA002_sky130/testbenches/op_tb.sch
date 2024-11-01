@@ -34,21 +34,17 @@ N 160 -80 160 -40 {
 lab=VSS}
 N 160 -110 160 -80 {
 lab=VSS}
-N 230 -150 280 -150 {
-lab=#net2}
-N 280 -220 280 -150 {
-lab=#net2}
-N 100 -220 280 -220 {
-lab=#net2}
-N 100 -220 100 -170 {
-lab=#net2}
 N 100 -170 110 -170 {
-lab=#net2}
+lab=VIN+}
 N 60 -130 110 -130 {
 lab=VIN+}
 N -370 -20 -370 10 {
 lab=VIN+}
 N -370 10 -370 20 {
+lab=VIN+}
+N 60 -170 60 -160 {
+lab=VIN+}
+N 60 -170 100 -170 {
 lab=VIN+}
 C {devices/lab_pin.sym} -580 -210 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -580 -140 0 0 {name=V1 value=1.8
@@ -84,16 +80,16 @@ value="* ngspice commands
 save all
 save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[gm]
 save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[gmbs]
+save @m.x1.xm1.msky130_fd_pr__pfet_01v8[gds]
+save @m.x1.xm1.msky130_fd_pr__pfet_01v8[gmbs]
 save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[vds]
 save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[vgs]
 
 
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gm]
+save @m.x1.xm2.msky130_fd_pr__pfet_01v8[gm]
 save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gmbs]
+save @m.x1.xm2.msky130_fd_pr__pfet_01v8[gds]
+save @m.x1.xm2.msky130_fd_pr__pfet_01v8[gmbs]
 save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vds]
 save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vgs]
 
@@ -125,56 +121,18 @@ save @m.x1.xm6.msky130_fd_pr__nfet_01v8[gmbs]
 save @m.x1.xm6.msky130_fd_pr__nfet_01v8[vds]
 save @m.x1.xm6.msky130_fd_pr__nfet_01v8[vgs]
 
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vgs]
+save @m.x1.xm7.msky130_fd_pr__nfet_01v8[vth]
+save @m.x1.xm7.msky130_fd_pr__nfet_01v8[vds]
+save @m.x1.xm7.msky130_fd_pr__nfet_01v8[vgs]
 
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gm]
+save @m.x1.xm9.msky130_fd_pr__nfet_01v8[vth]
+save @m.x1.xm9.msky130_fd_pr__nfet_01v8[vds]
+save @m.x1.xm9.msky130_fd_pr__nfet_01v8[vgs]
+
+
 save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gmbs]
 save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vds]
 save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vgs]
-
-
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vgs]
 
 
 
@@ -195,4 +153,4 @@ C {devices/launcher.sym} -260 410 0 0 {name=h2
 descr="View Raw file" 
 tclcommand="textwindow $netlist_dir/test_analog.raw"
 }
-C {../op_amp.sym} 160 -150 0 0 {name=x1}
+C {VA002_NMOS_1.8_sky130A.sym} 160 -150 0 0 {name=x1}
