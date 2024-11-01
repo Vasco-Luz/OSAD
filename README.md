@@ -1,3 +1,6 @@
+This repository is done by an IC enthusiastic with some experience with CADENCE DESIGN SUIT and TSMC 65nm, TSMC 180 and UMC 180 analog designs.\
+
+
 OSAD or Open Source Automatic design are test scipts behing developed in order to automate analog design of open source tools.\
 You need xschem installed and the open PDKS and ngspice, and magic. This only works in linux/wsl.\
 A setup nix that solves instalation of the tools and automatizes the instalation flow is in the works.\
@@ -17,9 +20,10 @@ If other process nodes want to be used just do this with the other files. <br>
 i advise the use of chatgpt to ease installation because of the dependencies\
 open the file with "xschem [filename]" and simulate\
 
-Some basic circuits are present in the repository\
-I am makign simple ic designs from papers, using VDD=1.8.\
-This is still in a very early phase and is behing done by just one master student, but some work is already done.\
+It includs a simple python script to add the pythonm lib to the path and add the xschem lib to the path.\
+
+In this repository too some IC analog block will be done.\
+To this point the blocks done are a self bias PMOS two stage miller OTA for 1.8V, designed for a BW of 40 MHz.
 
 
 
