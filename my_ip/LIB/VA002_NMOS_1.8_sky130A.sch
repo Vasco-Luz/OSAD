@@ -10,102 +10,102 @@ L 4 -890 -390 -340 -390 {}
 L 4 -890 180 -350 180 {}
 L 4 -350 180 -340 180 {}
 L 4 37.5 -390 37.5 180 {}
-L 4 1700 -440 2040 -440 {}
-L 4 2040 -440 2040 -400 {}
-L 4 1700 -400 2040 -400 {}
-L 4 1700 -440 1700 -400 {}
-L 4 1860 -440 1860 -400 {}
-L 4 1700 -400 2040 -400 {}
-L 4 2040 -400 2040 -360 {}
-L 4 1700 -360 2040 -360 {}
-L 4 1700 -400 1700 -360 {}
-L 4 1860 -400 1860 -360 {}
-L 4 1700 -360 2040 -360 {}
-L 4 2040 -360 2040 -320 {}
-L 4 1700 -320 2040 -320 {}
-L 4 1700 -360 1700 -320 {}
-L 4 1860 -360 1860 -320 {}
-L 4 1700 -320 2040 -320 {}
-L 4 2040 -320 2040 -280 {}
-L 4 1700 -280 2040 -280 {}
-L 4 1700 -320 1700 -280 {}
-L 4 1860 -320 1860 -280 {}
-L 4 1700 -280 2040 -280 {}
-L 4 1700 -280 2040 -280 {}
-L 4 2040 -280 2040 -240 {}
-L 4 1700 -240 2040 -240 {}
-L 4 1700 -280 1700 -240 {}
-L 4 1860 -280 1860 -240 {}
-L 4 1700 -240 2040 -240 {}
-L 4 2040 -240 2040 -200 {}
-L 4 1700 -200 2040 -200 {}
-L 4 1700 -240 1700 -200 {}
-L 4 1860 -240 1860 -200 {}
-L 4 1700 -200 2040 -200 {}
-L 4 2040 -200 2040 -160 {}
-L 4 1700 -160 2040 -160 {}
-L 4 1700 -200 1700 -160 {}
-L 4 1860 -200 1860 -160 {}
-L 4 1700 -160 2040 -160 {}
-L 4 2040 -160 2040 -120 {}
-L 4 1700 -120 2040 -120 {}
-L 4 1700 -160 1700 -120 {}
-L 4 1860 -160 1860 -120 {}
-L 4 1700 -120 2040 -120 {}
-L 4 2040 -120 2040 -80 {}
-L 4 1700 -80 2040 -80 {}
-L 4 1700 -120 1700 -80 {}
-L 4 1860 -120 1860 -80 {}
-L 4 1700 -80 2040 -80 {}
-L 4 1700 -80 2040 -80 {}
-L 4 2040 -80 2040 -40 {}
-L 4 1700 -40 2040 -40 {}
-L 4 1700 -80 1700 -40 {}
-L 4 1860 -80 1860 -40 {}
-L 4 1700 -40 1700 0 {}
-L 4 2040 -40 2040 0 {}
-L 4 1700 0 2040 0 {}
-L 4 1860 -40 1860 0 {}
-L 4 1700 0 1700 40 {}
-L 4 2040 0 2040 40 {}
-L 4 1860 0 1860 40 {}
-L 4 1700 40 2040 40 {}
-L 4 1700 40 1700 80 {}
-L 4 1700 80 2040 80 {}
-L 4 2040 40 2040 80 {}
-L 4 1860 40 1860 80 {}
+L 4 2380 -420 2720 -420 {}
+L 4 2720 -420 2720 -380 {}
+L 4 2380 -380 2720 -380 {}
+L 4 2380 -420 2380 -380 {}
+L 4 2540 -420 2540 -380 {}
+L 4 2380 -380 2720 -380 {}
+L 4 2720 -380 2720 -340 {}
+L 4 2380 -340 2720 -340 {}
+L 4 2380 -380 2380 -340 {}
+L 4 2540 -380 2540 -340 {}
+L 4 2380 -340 2720 -340 {}
+L 4 2720 -340 2720 -300 {}
+L 4 2380 -300 2720 -300 {}
+L 4 2380 -340 2380 -300 {}
+L 4 2540 -340 2540 -300 {}
+L 4 2380 -300 2720 -300 {}
+L 4 2720 -300 2720 -260 {}
+L 4 2380 -260 2720 -260 {}
+L 4 2380 -300 2380 -260 {}
+L 4 2540 -300 2540 -260 {}
+L 4 2380 -260 2720 -260 {}
+L 4 2380 -260 2720 -260 {}
+L 4 2720 -260 2720 -220 {}
+L 4 2380 -220 2720 -220 {}
+L 4 2380 -260 2380 -220 {}
+L 4 2540 -260 2540 -220 {}
+L 4 2380 -220 2720 -220 {}
+L 4 2720 -220 2720 -180 {}
+L 4 2380 -180 2720 -180 {}
+L 4 2380 -220 2380 -180 {}
+L 4 2540 -220 2540 -180 {}
+L 4 2380 -180 2720 -180 {}
+L 4 2720 -180 2720 -140 {}
+L 4 2380 -140 2720 -140 {}
+L 4 2380 -180 2380 -140 {}
+L 4 2540 -180 2540 -140 {}
+L 4 2380 -140 2720 -140 {}
+L 4 2720 -140 2720 -100 {}
+L 4 2380 -100 2720 -100 {}
+L 4 2380 -140 2380 -100 {}
+L 4 2540 -140 2540 -100 {}
+L 4 2380 -100 2720 -100 {}
+L 4 2720 -100 2720 -60 {}
+L 4 2380 -60 2720 -60 {}
+L 4 2380 -100 2380 -60 {}
+L 4 2540 -100 2540 -60 {}
+L 4 2380 -60 2720 -60 {}
+L 4 2380 -60 2720 -60 {}
+L 4 2720 -60 2720 -20 {}
+L 4 2380 -20 2720 -20 {}
+L 4 2380 -60 2380 -20 {}
+L 4 2540 -60 2540 -20 {}
+L 4 2380 -20 2380 20 {}
+L 4 2720 -20 2720 20 {}
+L 4 2380 20 2720 20 {}
+L 4 2540 -20 2540 20 {}
+L 4 2380 20 2380 60 {}
+L 4 2720 20 2720 60 {}
+L 4 2540 20 2540 60 {}
+L 4 2380 60 2720 60 {}
+L 4 2380 60 2380 100 {}
+L 4 2380 100 2720 100 {}
+L 4 2720 60 2720 100 {}
+L 4 2540 60 2540 100 {}
 L 4 -340 -390 37.5 -390 {}
 L 4 -340 180 37.5 180 {}
 T {self bias generator} -860 -460 0 0 1 1 {}
-T {specifications tt 27 Cº degrees} 1690 -530 0 0 1 1 {}
-T {UGBW} 1740 -430 0 0 0.4 0.4 {}
-T {48Mhz} 1920 -430 0 0 0.4 0.4 {}
-T {CMRR} 1740 -390 0 0 0.4 0.4 {}
-T {79db} 1920 -390 0 0 0.4 0.4 {}
-T {dc gain} 1740 -350 0 0 0.4 0.4 {}
-T {80 db} 1920 -350 0 0 0.4 0.4 {}
-T {ICMR} 1740 -310 0 0 0.4 0.4 {}
-T {} 1920 -310 0 0 0.4 0.4 {}
-T {0 V - 1.4 V} 1900 -310 0 0 0.4 0.4 {}
-T {OUTPUT range} 1710 -270 0 0 0.35 0.35 {}
-T {} 1920 -270 0 0 0.4 0.4 {}
-T {0.2 V - 1.6 V} 1890 -270 0 0 0.4 0.4 {}
-T {phase margin} 1710 -230 0 0 0.4 0.4 {}
-T {65º} 1930 -230 0 0 0.4 0.4 {}
-T {PSSR+} 1740 -190 0 0 0.4 0.4 {}
-T {82 db} 1920 -190 0 0 0.4 0.4 {}
-T {84 db} 1920 -150 0 0 0.4 0.4 {}
-T {offset at 900mV} 1710 -110 0 0 0.3 0.3 {}
-T {Power} 1750 -70 0 0 0.35 0.35 {}
-T {PSSR-} 1740 -150 0 0 0.4 0.4 {}
-T {10 uV} 1920 -110 0 0 0.4 0.4 {}
-T {369 uW} 1920 -70 0 0 0.4 0.4 {}
-T {VDD} 1750 -30 0 0 0.35 0.35 {}
-T {1.8 V} 1920 -10 2 1 0.4 0.4 {}
-T {Cp} 1750 10 0 0 0.35 0.35 {}
-T {3p F} 1920 30 2 1 0.4 0.4 {}
-T {GBW} 1750 50 0 0 0.35 0.35 {}
-T {30 Mhz} 1910 50 0 0 0.4 0.4 {}
+T {specifications tt 27 Cº degrees} 2370 -510 0 0 1 1 {}
+T {UGBW} 2420 -410 0 0 0.4 0.4 {}
+T {48Mhz} 2600 -410 0 0 0.4 0.4 {}
+T {CMRR} 2420 -370 0 0 0.4 0.4 {}
+T {79db} 2600 -370 0 0 0.4 0.4 {}
+T {dc gain} 2420 -330 0 0 0.4 0.4 {}
+T {80 db} 2600 -330 0 0 0.4 0.4 {}
+T {ICMR} 2420 -290 0 0 0.4 0.4 {}
+T {} 2600 -290 0 0 0.4 0.4 {}
+T {0 V - 1.4 V} 2580 -290 0 0 0.4 0.4 {}
+T {OUTPUT range} 2390 -250 0 0 0.35 0.35 {}
+T {} 2600 -250 0 0 0.4 0.4 {}
+T {0.2 V - 1.6 V} 2570 -250 0 0 0.4 0.4 {}
+T {phase margin} 2390 -210 0 0 0.4 0.4 {}
+T {65º} 2610 -210 0 0 0.4 0.4 {}
+T {PSSR+} 2420 -170 0 0 0.4 0.4 {}
+T {82 db} 2600 -170 0 0 0.4 0.4 {}
+T {84 db} 2600 -130 0 0 0.4 0.4 {}
+T {offset at 900mV} 2390 -90 0 0 0.3 0.3 {}
+T {Power} 2430 -50 0 0 0.35 0.35 {}
+T {PSSR-} 2420 -130 0 0 0.4 0.4 {}
+T {10 uV} 2600 -90 0 0 0.4 0.4 {}
+T {369 uW} 2600 -50 0 0 0.4 0.4 {}
+T {VDD} 2430 -10 0 0 0.35 0.35 {}
+T {1.8 V} 2600 10 2 1 0.4 0.4 {}
+T {Cp} 2430 30 0 0 0.35 0.35 {}
+T {3p F} 2600 50 2 1 0.4 0.4 {}
+T {GBW} 2430 70 0 0 0.35 0.35 {}
+T {30 Mhz} 2590 70 0 0 0.4 0.4 {}
 N -690 -330 -510 -330 {
 lab=VDD}
 N -690 -330 -690 -300 {
@@ -198,13 +198,159 @@ N -50 -70 -50 -30 {
 lab=VB2}
 N -90 -70 -50 -70 {
 lab=VB2}
+N 300 -300 440 -300 {
+lab=VB3}
+N -90 -330 480 -330 {
+lab=VDD}
+N 260 -330 260 -300 {
+lab=VDD}
+N 480 -330 480 -300 {
+lab=VDD}
+N 480 -270 480 -60 {
+lab=#net5}
+N 260 -280 260 -70 {
+lab=#net6}
+N 260 -30 480 -30 {
+lab=VSS}
+N 260 -70 260 -60 {
+lab=#net6}
+N 170 -30 220 -30 {
+lab=VIN-}
+N 520 -30 570 -30 {
+lab=VIN+}
+N 370 20 370 80 {
+lab=#net7}
+N 370 110 370 140 {
+lab=VSS}
+N 410 70 410 110 {
+lab=VB2}
+N 260 -0 260 20 {
+lab=#net7}
+N 260 20 480 20 {
+lab=#net7}
+N 480 0 480 20 {
+lab=#net7}
+N -90 140 370 140 {
+lab=VSS}
+N 260 -210 660 -210 {
+lab=#net6}
+N 480 -180 760 -180 {
+lab=#net5}
+N 660 -210 660 -150 {
+lab=#net6}
+N 760 -180 840 -180 {
+lab=#net5}
+N 840 -180 840 -150 {
+lab=#net5}
+N 700 -120 800 -120 {
+lab=VB4}
+N 840 -120 890 -120 {
+lab=VDD}
+N 610 -120 660 -120 {
+lab=VDD}
+N 370 140 660 140 {
+lab=VSS}
+N 660 110 660 140 {
+lab=VSS}
+N 660 -90 660 80 {
+lab=#net8}
+N 840 -90 840 80 {
+lab=#net9}
+N 660 140 840 140 {
+lab=VSS}
+N 840 110 840 140 {
+lab=VSS}
+N 700 110 800 110 {
+lab=#net8}
+N 750 60 750 110 {
+lab=#net8}
+N 660 60 750 60 {
+lab=#net8}
+N 480 -330 1100 -330 {
+lab=VDD}
+N 1130 110 1130 140 {
+lab=VSS}
+N 840 140 1130 140 {
+lab=VSS}
+N 1090 70 1090 110 {
+lab=VB2}
+N 1130 -10 1130 80 {
+lab=VB4}
+N 1060 -40 1110 -40 {
+lab=VSS}
+N 1130 -210 1130 -180 {
+lab=#net10}
+N 990 -150 1090 -150 {
+lab=VB4}
+N 1130 -150 1180 -150 {
+lab=VDD}
+N 990 -150 990 -20 {
+lab=VB4}
+N 990 -20 990 10 {
+lab=VB4}
+N 990 10 1130 10 {
+lab=VB4}
+N 1130 -120 1130 -70 {
+lab=#net11}
+N 1130 -240 1180 -240 {
+lab=VDD}
+N 1100 -330 1130 -330 {
+lab=VDD}
+N 1130 -330 1130 -270 {
+lab=VDD}
+N 1050 -240 1090 -240 {
+lab=#net11}
+N 1050 -240 1050 -100 {
+lab=#net11}
+N 1050 -100 1130 -100 {
+lab=#net11}
+N 1380 -200 1380 -40 {
+lab=VDD}
+N 1130 140 1380 140 {
+lab=VSS}
+N 1380 -0 1380 140 {
+lab=VSS}
+N 840 -0 1350 -0 {
+lab=#net9}
+N 1410 0 1470 0 {
+lab=#net12}
+N 1380 140 1690 140 {
+lab=VSS}
+N 1300 0 1300 110 {
+lab=#net9}
+N 1300 110 1650 110 {
+lab=#net9}
+N 1690 110 1690 140 {
+lab=VSS}
+N 1050 -290 1050 -240 {
+lab=#net11}
+N 1210 -290 1650 -290 {
+lab=#net11}
+N 1290 -330 1690 -330 {
+lab=VDD}
+N 1690 -330 1690 -320 {
+lab=VDD}
+N 1690 -320 1690 -290 {
+lab=VDD}
+N 1690 -250 1690 80 {
+lab=VOUT}
+N 1690 -260 1690 -250 {
+lab=VOUT}
+N 1050 -290 1210 -290 {
+lab=#net11}
+N 1130 -330 1290 -330 {
+lab=VDD}
+N 1530 0 1690 0 {
+lab=VOUT}
+N 1380 -330 1380 -200 {
+lab=VDD}
 C {devices/lab_pin.sym} -720 -150 0 0 {name=p8 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -480 -150 0 1 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -720 -30 0 0 {name=p10 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -480 -30 0 1 {name=p11 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} -690 70 0 0 {name=R10
 W=0.35
-L=1
+L=0.9
 model=res_xhigh_po_0p35
 spiceprefix=X
  mult=2}
@@ -359,4 +505,146 @@ W=2
 nf=2 mult=2
 model=pfet_01v8_lvt
 spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 280 -300 0 1 {name=M10
+L=1
+W=2
+nf=2 mult=16
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 460 -300 0 0 {name=M11
+L=1
+W=2
+nf=2 mult=16
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 370 -300 1 1 {name=p23 sig_type=std_logic lab=VB3}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 240 -30 0 0 {name=M12
+L=1
+W=5  
+nf=12 mult=4
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 370 -30 1 1 {name=p24 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 170 -30 3 0 {name=p25 sig_type=std_logic lab=VIN-}
+C {devices/lab_pin.sym} 570 -30 3 0 {name=p26 sig_type=std_logic lab=VIN+}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 390 110 0 1 {name=M13
+L=2
+W=3
+nf=2 mult=16
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 410 70 0 1 {name=p27 sig_type=std_logic lab=VB2}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 680 -120 0 1 {name=M14
+L=1
+W=3
+nf=2 mult=8
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 820 -120 0 0 {name=M15
+L=1
+W=3
+nf=2 mult=8
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 750 -120 1 1 {name=p28 sig_type=std_logic lab=VB4}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 500 -30 0 1 {name=M16
+L=1
+W=5  
+nf=12 mult=4
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 890 -120 3 1 {name=p29 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 610 -120 3 1 {name=p30 sig_type=std_logic lab=VDD}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 680 110 0 1 {name=M17
+L=2
+W=3
+nf=4 mult=2
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 820 110 0 0 {name=M18
+L=2
+W=3
+nf=4 mult=2
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 1110 110 0 0 {name=M19
+L=2
+W=3
+nf=2 mult=2
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1090 70 0 0 {name=p31 sig_type=std_logic lab=VB2}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 1130 -40 0 0 {name=R2
+W=0.35
+L=7.2
+model=res_xhigh_po_0p35
+spiceprefix=X
+ mult=2}
+C {devices/lab_pin.sym} 1060 -40 3 1 {name=p32 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 1110 -150 0 0 {name=M20
+L=1
+W=3
+nf=2 mult=2
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1180 -150 3 1 {name=p33 sig_type=std_logic lab=VDD}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 1110 -240 0 0 {name=M21
+L=2
+W=1
+nf=2 mult=2
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1180 -240 3 1 {name=p34 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 990 -50 2 1 {name=p35 sig_type=std_logic lab=VB4}
+C {devices/ngspice_get_value.sym} 1260 -270 0 1 {name=r3 node=v(@m.$\{path\}xm21.msky130_fd_pr__pfet_01v8_lvt[vds])
+descr="vds="}
+C {devices/ngspice_get_value.sym} 1270 -240 0 1 {name=r11 node=v(@m.$\{path\}xm21.msky130_fd_pr__pfet_01v8_lvt[vgs])
+descr="vgs="}
+C {devices/ngspice_get_value.sym} 1230 -210 0 0 {name=r15 node=v(@m.$\{path\}xm21.msky130_fd_pr__pfet_01v8_lvt[vth])
+descr="vth="}
+C {devices/ngspice_get_value.sym} 1260 -170 0 1 {name=r41 node=v(@m.$\{path\}xm20.msky130_fd_pr__pfet_01v8_lvt[vds])
+descr="vds="}
+C {devices/ngspice_get_value.sym} 1270 -140 0 1 {name=r42 node=v(@m.$\{path\}xm20.msky130_fd_pr__pfet_01v8_lvt[vgs])
+descr="vgs="}
+C {devices/ngspice_get_value.sym} 1230 -110 0 0 {name=r43 node=v(@m.$\{path\}xm20.msky130_fd_pr__pfet_01v8_lvt[vth])
+descr="vth="}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 1380 -20 1 0 {name=M22
+L=2
+W=2.5
+nf=2 mult=1
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 1500 0 1 0 {name=C1 model=cap_mim_m3_2 W=9.6 L=9.6 MF=12 spiceprefix=X}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 1670 110 0 0 {name=M23
+L=0.5
+W=5
+nf=6 mult=4
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 1670 -290 0 0 {name=M24
+L=2
+W=1
+nf=2 mult=20
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1690 -150 2 0 {name=p36 sig_type=std_logic lab=VOUT}
+C {devices/launcher.sym} 900 -270 0 0 {name=h15
+descr="Annotate OP" 
+tclcommand="set show_hidden_texts 1; xschem annotate_op"
 }

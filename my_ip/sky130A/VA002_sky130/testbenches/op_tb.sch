@@ -134,8 +134,13 @@ save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vth]
 save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vds]
 save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vgs]
 
+save @m.x1.xm21.msky130_fd_pr__pfet_01v8_lvt[vth]
+save @m.x1.xm21.msky130_fd_pr__pfet_01v8_lvt[vds]
+save @m.x1.xm21.msky130_fd_pr__pfet_01v8_lvt[vgs]
 
-
+save @m.x1.xm20.msky130_fd_pr__pfet_01v8_lvt[vth]
+save @m.x1.xm20.msky130_fd_pr__pfet_01v8_lvt[vds]
+save @m.x1.xm20.msky130_fd_pr__pfet_01v8_lvt[vgs]
 
 op
 write op_tb.raw

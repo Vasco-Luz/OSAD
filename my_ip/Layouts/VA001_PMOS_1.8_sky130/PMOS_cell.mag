@@ -1,0 +1,38 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1730503605
+<< nwell >>
+rect -227 -161 4223 2431
+<< nsubdiff >>
+rect -191 2361 -131 2395
+rect 4127 2361 4187 2395
+rect -191 2335 -157 2361
+rect -191 -91 -157 -65
+rect 4153 2335 4187 2361
+rect 4153 -91 4187 -65
+rect -191 -125 -131 -91
+rect 4127 -125 4187 -91
+<< nsubdiffcont >>
+rect -131 2361 4127 2395
+rect -191 -65 -157 2335
+rect 4153 -65 4187 2335
+rect -131 -125 4127 -91
+<< locali >>
+rect -191 2361 -131 2395
+rect 4127 2361 4187 2395
+rect -191 2335 -157 2361
+rect -191 -91 -157 -65
+rect 4153 2335 4187 2361
+rect 4153 -91 4187 -65
+rect -191 -125 -131 -91
+rect 4127 -125 4187 -91
+use PMOS_contact  PMOS_contact_0
+timestamp 1730492473
+transform 1 0 2803 0 1 -539
+box -2803 539 1275 1585
+use PMOS_contact  PMOS_contact_1
+timestamp 1730492473
+transform 1 0 2803 0 1 625
+box -2803 539 1275 1585
+<< end >>

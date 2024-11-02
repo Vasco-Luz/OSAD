@@ -1,0 +1,53 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1730491662
+<< poly >>
+rect -2709 640 -2109 728
+rect -2709 600 -2540 640
+rect -2270 600 -2109 640
+rect -2709 578 -2109 600
+<< polycont >>
+rect -2540 600 -2270 640
+<< locali >>
+rect -2556 640 -2254 656
+rect -2556 600 -2540 640
+rect -2270 600 -2254 640
+rect -2556 582 -2254 600
+<< viali >>
+rect -2540 600 -2270 640
+<< metal1 >>
+rect -2552 640 -2258 654
+rect -2552 600 -2540 640
+rect -2270 600 -2258 640
+rect -2552 586 -2258 600
+<< rmetal1 >>
+rect -2556 654 -2254 656
+rect -2556 586 -2552 654
+rect -2258 586 -2254 654
+rect -2556 582 -2254 586
+use sky130_fd_pr__pfet_01v8_455LYC  sky130_fd_pr__pfet_01v8_455LYC_0
+timestamp 1730491634
+transform 1 0 223 0 1 1123
+box -394 -462 394 462
+use sky130_fd_pr__pfet_01v8_455LYC  sky130_fd_pr__pfet_01v8_455LYC_1
+timestamp 1730491634
+transform 1 0 -1093 0 1 1123
+box -394 -462 394 462
+use sky130_fd_pr__pfet_01v8_455LYC  sky130_fd_pr__pfet_01v8_455LYC_2
+timestamp 1730491634
+transform 1 0 -1751 0 1 1123
+box -394 -462 394 462
+use sky130_fd_pr__pfet_01v8_455LYC  sky130_fd_pr__pfet_01v8_455LYC_3
+timestamp 1730491634
+transform 1 0 -2409 0 1 1123
+box -394 -462 394 462
+use sky130_fd_pr__pfet_01v8_455LYC  sky130_fd_pr__pfet_01v8_455LYC_4
+timestamp 1730491634
+transform 1 0 -435 0 1 1123
+box -394 -462 394 462
+use sky130_fd_pr__pfet_01v8_455LYC  sky130_fd_pr__pfet_01v8_455LYC_5
+timestamp 1730491634
+transform 1 0 881 0 1 1123
+box -394 -462 394 462
+<< end >>

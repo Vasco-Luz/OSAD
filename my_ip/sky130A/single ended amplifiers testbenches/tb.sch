@@ -59,7 +59,7 @@ L 4 -690 3580 -690 4030 {}
 L 4 -690 3580 -490 3580 {}
 B 2 940 -700 1740 -300 {flags=graph,unlocked
 
-y2=81
+y2=82
 ypos1=0
 ypos2=2
 divy=10
@@ -77,7 +77,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-37
+y1=-58
 color=4
 node="\\"Differencial gain ; vout db20() %0\\""
 
@@ -111,34 +111,7 @@ sim_type=ac
 autoload=1}
 B 2 940 100 1740 500 {flags=graph,unlocked
 
-y2=80
-ypos1=0
-ypos2=2
-divy=10
-subdivy=1
-unity=1
-x1=0
-x2=10.69897
-divx=10
-subdivx=8
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=1
-logy=0
-y1=2.2
-
-color=6
-node="\\"CMRR ; vout VOUT_c / db20() %0\\""
-rawfile=$netlist_dir/tb.raw
-sim_type=ac
-autoload=1}
-B 2 940 500 1740 900 {flags=graph,unlocked
-
-y2=83
+y2=140
 ypos1=0
 ypos2=2
 divy=10
@@ -156,24 +129,23 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-4.7
+y1=-3.5
 
-
-color=7
-node="\\"PSSR+ ; vout VOUT_A+ / db20() %0\\""
+color=6
+node="\\"CMRR ; vout VOUT_c / db20() %0\\""
 rawfile=$netlist_dir/tb.raw
 sim_type=ac
 autoload=1}
-B 2 940 900 1740 1300 {flags=graph,unlocked
+B 2 940 500 1740 900 {flags=graph,unlocked
 
-y2=85
+y2=150
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=-1.0698968
-x2=9.6290735
+x1=0
+x2=10.699
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -184,7 +156,35 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-4.4
+y1=-25
+
+
+color=7
+node="\\"PSSR+ ; vout VOUT_A+ / db20() %0\\""
+rawfile=$netlist_dir/tb.raw
+sim_type=ac
+autoload=1}
+B 2 940 900 1740 1300 {flags=graph,unlocked
+
+y2=82
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=-1.0699
+x2=9.62905
+divx=10
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=1
+logy=0
+y1=-35
 
 
 color=8
@@ -201,7 +201,7 @@ divy=10
 subdivy=1
 unity=1
 x1=0
-x2=10.69897
+x2=10.699
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -221,7 +221,7 @@ rawfile=$netlist_dir/tb.raw
 sim_type=ac
 autoload=1}
 B 2 1990 -700 2790 -300 {flags=graph,unlocked
-y1=0.2
+y1=0.19
 y2=1.6
 ypos1=0
 ypos2=2
@@ -247,8 +247,8 @@ sim_type=tran
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 1990 -300 2790 100 {flags=graph,unlocked
-y1=0.4
-y2=1.5
+y1=0.36
+y2=1.4
 ypos1=0
 ypos2=2
 divy=10
@@ -276,7 +276,7 @@ x2=3e-05
 rainbow=0
 autoload=1}
 B 2 1990 100 2790 500 {flags=graph,unlocked
-y1=-0.0049
+y1=0
 y2=1.9
 ypos1=0
 ypos2=2
@@ -308,8 +308,8 @@ x2=3e-05
 rainbow=0
 autoload=1}
 B 2 3050 -690 3850 -290 {flags=graph,unlocked
-y1=0.68
-y2=1.8
+y1=0.011
+y2=1.6
 ypos1=0
 ypos2=2
 divy=10
@@ -362,8 +362,8 @@ node="\\"buffer swing dc; VOUT_swing\\"
 rawfile=$netlist_dir/tb.raw
 rainbow=0}
 B 2 3048.75 108.75 3848.75 508.75 {flags=graph,unlocked
-y1=0.0110087
-y2=0.120999
+y1=-0.34
+y2=0.012
 ypos1=0
 ypos2=2
 divy=10
@@ -389,15 +389,15 @@ color=21
 node="\\"offset; VOUT_swing net1 -\\""
 rawfile=$netlist_dir/tb.raw}
 B 2 3048.75 508.75 3848.75 908.75 {flags=graph,unlocked
-y1=0.000363
-y2=0.000373
+y1=-9.54077e-05
+y2=0.000867647
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=0
-x2=1.8
+x1=-0.0486166
+x2=1.12553
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -417,14 +417,14 @@ node="\\"power;  i(v9) -1.8 *\\""
 rawfile=$netlist_dir/tb.raw}
 B 2 940 1700 1740 2100 {flags=graph,unlocked
 
-y2=-23
+y2=-27
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 x1=0
-x2=10.69897
+x2=10.699
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -435,7 +435,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-81
+y1=-87
 
 
 color=17
@@ -444,8 +444,8 @@ rawfile=$netlist_dir/tb.raw
 sim_type=ac
 autoload=1}
 B 2 1990 500 2790 900 {flags=graph,unlocked
-y1=0.8998
-y2=0.9002
+y1=0.75
+y2=1.1
 ypos1=0
 ypos2=2
 divy=10
@@ -752,6 +752,10 @@ N -420 3670 -310 3670 {
 lab=#net15}
 N -420 3670 -420 3840 {
 lab=#net15}
+N -170 2670 -170 2700 {
+lab=VSS}
+N -60 3920 -60 3950 {
+lab=VSS}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=1.8
 
@@ -768,7 +772,7 @@ C {devices/vsource.sym} -1190 -270 0 0 {name=V3 value=0.9}
 C {devices/lab_pin.sym} -1190 -200 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -1090 -390 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} -1090 -330 0 0 {name=V4 value="ac 0.5 sin (0 550m 100k)"}
+C {devices/vsource.sym} -1090 -330 0 0 {name=V4 value= 290u "ac 0.5 sin (0 550m 100k)"}
 C {devices/vsource.sym} -1280 -330 0 0 {name=V5 value="ac -0.5"}
 C {devices/lab_pin.sym} -1280 -390 0 0 {name=p13 sig_type=std_logic lab=VIN-
 }
@@ -1055,11 +1059,27 @@ device=resistor
 m=1}
 C {devices/isource.sym} -600 3880 0 0 {name=I0 value="ac 20u sin (0 20u 100k)"}
 C {devices/lab_pin.sym} -600 3950 0 0 {name=p47 sig_type=std_logic lab=VSS}
-C {VA001_PMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}
-C {VA001_PMOS_1.8_sky130A.sym} -160 10 0 0 {name=x2}
-C {VA001_PMOS_1.8_sky130A.sym} -210 760 0 0 {name=x3}
-C {VA001_PMOS_1.8_sky130A.sym} -200 1390 0 0 {name=x4}
-C {VA001_PMOS_1.8_sky130A.sym} -160 2010 0 0 {name=x5}
-C {VA001_PMOS_1.8_sky130A.sym} -300 2610 0 0 {name=x6}
-C {VA001_PMOS_1.8_sky130A.sym} -230 3070 0 0 {name=x7}
-C {VA001_PMOS_1.8_sky130A.sym} -270 3860 0 0 {name=x8}
+C {VA002_NMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}
+C {VA002_NMOS_1.8_sky130A.sym} -160 10 0 0 {name=x2}
+C {VA002_NMOS_1.8_sky130A.sym} -210 760 0 0 {name=x3}
+C {VA002_NMOS_1.8_sky130A.sym} -200 1390 0 0 {name=x4}
+C {VA002_NMOS_1.8_sky130A.sym} -160 2010 0 0 {name=x5}
+C {VA002_NMOS_1.8_sky130A.sym} -300 2610 0 0 {name=x6}
+C {VA002_NMOS_1.8_sky130A.sym} -230 3070 0 0 {name=x7}
+C {VA002_NMOS_1.8_sky130A.sym} -270 3860 0 0 {name=x8}
+C {devices/launcher.sym} 490 -730 0 0 {name=h15
+descr="Annotate OP" 
+tclcommand="set show_hidden_texts 1; xschem annotate_op"
+}
+C {devices/capa.sym} -170 2640 0 0 {name=C8
+m=1
+value=3p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} -170 2700 0 0 {name=p46 sig_type=std_logic lab=VSS}
+C {devices/capa.sym} -60 3890 0 0 {name=C9
+m=1
+value=3p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} -60 3950 0 0 {name=p48 sig_type=std_logic lab=VSS}
