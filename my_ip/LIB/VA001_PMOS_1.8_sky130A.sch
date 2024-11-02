@@ -92,6 +92,10 @@ L 4 1700 40 1700 80 {}
 L 4 1700 80 2040 80 {}
 L 4 2040 40 2040 80 {}
 L 4 1860 40 1860 80 {}
+L 4 1700 80 1700 120 {}
+L 4 1700 120 2040 120 {}
+L 4 1860 80 1860 120 {}
+L 4 2040 80 2040 120 {}
 T {self bias generator} -860 -460 0 0 1 1 {}
 T {First stage} 80 -490 0 0 1 1 {}
 T {Compensation network} 610 -450 0 0 1 1 {}
@@ -128,6 +132,8 @@ T {30 Mhz} 1910 50 0 0 0.4 0.4 {}
 T {Based this paper:
 Design and Analysis of Two-Stage CMOS Operational Amplifier for Fluorescence
 Signal Processing } -700 -1130 0 0 1 1 {}
+T {Dc Gain} 1750 90 0 0 0.35 0.35 {}
+T {74 dB} 1910 90 0 0 0.4 0.4 {}
 N -690 -330 -510 -330 {
 lab=VDD}
 N -690 -330 -690 -300 {

@@ -59,7 +59,7 @@ L 4 -690 3580 -690 4030 {}
 L 4 -690 3580 -490 3580 {}
 B 2 940 -700 1740 -300 {flags=graph,unlocked
 
-y2=82
+y2=34
 ypos1=0
 ypos2=2
 divy=10
@@ -77,7 +77,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-58
+y1=-95
 color=4
 node="\\"Differencial gain ; vout db20() %0\\""
 
@@ -85,8 +85,8 @@ sim_type=ac
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 940 -300 1740 100 {flags=graph,unlocked
-y1=12
-y2=350
+y1=1
+y2=360
 ypos1=0
 ypos2=2
 divy=10
@@ -111,7 +111,7 @@ sim_type=ac
 autoload=1}
 B 2 940 100 1740 500 {flags=graph,unlocked
 
-y2=140
+y2=40
 ypos1=0
 ypos2=2
 divy=10
@@ -129,7 +129,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-3.5
+y1=-15
 
 color=6
 node="\\"CMRR ; vout VOUT_c / db20() %0\\""
@@ -138,7 +138,7 @@ sim_type=ac
 autoload=1}
 B 2 940 500 1740 900 {flags=graph,unlocked
 
-y2=150
+y2=12
 ypos1=0
 ypos2=2
 divy=10
@@ -156,7 +156,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-25
+y1=-47
 
 
 color=7
@@ -166,14 +166,14 @@ sim_type=ac
 autoload=1}
 B 2 940 900 1740 1300 {flags=graph,unlocked
 
-y2=82
+y2=12
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=-1.0699
-x2=9.62905
+x1=0
+x2=10.699
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -184,7 +184,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-35
+y1=-70
 
 
 color=8
@@ -194,7 +194,7 @@ sim_type=ac
 autoload=1}
 B 2 940 1300 1740 1700 {flags=graph,unlocked
 
-y2=21
+y2=-0.051
 ypos1=0
 ypos2=2
 divy=10
@@ -221,15 +221,15 @@ rawfile=$netlist_dir/tb.raw
 sim_type=ac
 autoload=1}
 B 2 1990 -700 2790 -300 {flags=graph,unlocked
-y1=0.19
-y2=1.6
+y1=0.14
+y2=0.16
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 x1=0
-x2=3e-05
+x2=0.005
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -247,8 +247,8 @@ sim_type=tran
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 1990 -300 2790 100 {flags=graph,unlocked
-y1=0.36
-y2=1.4
+y1=0.1
+y2=0.2
 ypos1=0
 ypos2=2
 divy=10
@@ -272,12 +272,12 @@ sim_type=tran
 color=6
 node="\\"buffer swing; VOUT_swing\\""
 rawfile=$netlist_dir/tb.raw
-x2=3e-05
+x2=0.005
 rainbow=0
 autoload=1}
 B 2 1990 100 2790 500 {flags=graph,unlocked
 y1=0
-y2=1.9
+y2=0.31
 ypos1=0
 ypos2=2
 divy=10
@@ -308,15 +308,15 @@ x2=3e-05
 rainbow=0
 autoload=1}
 B 2 3050 -690 3850 -290 {flags=graph,unlocked
-y1=0.011
-y2=1.6
+y1=0.071
+y2=0.22
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 x1=0
-x2=1.8
+x2=0.3
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -335,14 +335,14 @@ autoload=1
 rawfile=$netlist_dir/tb.raw}
 B 2 3050 -290 3850 110 {flags=graph,unlocked
 y1=0
-y2=1.8
+y2=0.3
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 x1=0
-x2=1.8
+x2=0.3
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -362,15 +362,15 @@ node="\\"buffer swing dc; VOUT_swing\\"
 rawfile=$netlist_dir/tb.raw
 rainbow=0}
 B 2 3048.75 108.75 3848.75 508.75 {flags=graph,unlocked
-y1=-0.34
-y2=0.012
+y1=-0.0087
+y2=0.0091
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 x1=0
-x2=1.8
+x2=0.3
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -389,15 +389,15 @@ color=21
 node="\\"offset; VOUT_swing net1 -\\""
 rawfile=$netlist_dir/tb.raw}
 B 2 3048.75 508.75 3848.75 908.75 {flags=graph,unlocked
-y1=-9.54077e-05
-y2=0.000867647
+y1=7.1e-07
+y2=0.011
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=-0.0486166
-x2=1.12553
+x1=0
+x2=0.3
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -417,7 +417,7 @@ node="\\"power;  i(v9) -1.8 *\\""
 rawfile=$netlist_dir/tb.raw}
 B 2 940 1700 1740 2100 {flags=graph,unlocked
 
-y2=-27
+y2=22
 ypos1=0
 ypos2=2
 divy=10
@@ -435,7 +435,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-87
+y1=-120
 
 
 color=17
@@ -444,14 +444,14 @@ rawfile=$netlist_dir/tb.raw
 sim_type=ac
 autoload=1}
 B 2 1990 500 2790 900 {flags=graph,unlocked
-y1=0.75
-y2=1.1
+y1=0.14
+y2=0.16
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=0
+x1=0.00153707
 
 
 subdivx=1
@@ -470,7 +470,7 @@ sim_type=tran
 
 divx=20
 rawfile=$netlist_dir/tb.raw
-x2=3e-05
+x2=0.00404188
 rainbow=0
 autoload=1
 color=12
@@ -757,7 +757,7 @@ lab=VSS}
 N -60 3920 -60 3950 {
 lab=VSS}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=1.8
+C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=0.3
 
 }
 C {devices/gnd.sym} -1430 -270 0 0 {name=l3 lab=GND}
@@ -768,11 +768,11 @@ C {devices/vsource.sym} -1500 -320 0 0 {name=V2 value=0
 
 }
 C {devices/gnd.sym} -1500 -270 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} -1190 -270 0 0 {name=V3 value=0.9}
+C {devices/vsource.sym} -1190 -270 0 0 {name=V3 value=0.15}
 C {devices/lab_pin.sym} -1190 -200 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -1090 -390 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} -1090 -330 0 0 {name=V4 value= 290u "ac 0.5 sin (0 550m 100k)"}
+C {devices/vsource.sym} -1090 -330 0 0 {name=V4 value= 0 "ac 0.5 sin (0 550m 100k)"}
 C {devices/vsource.sym} -1280 -330 0 0 {name=V5 value="ac -0.5"}
 C {devices/lab_pin.sym} -1280 -390 0 0 {name=p13 sig_type=std_logic lab=VIN-
 }
@@ -785,7 +785,7 @@ C {devices/lab_pin.sym} -300 -420 0 0 {name=p5 sig_type=std_logic lab=VIN-
 }
 C {devices/capa.sym} -80 -370 0 0 {name=C1
 m=1
-value=3p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -80 -310 0 0 {name=p8 sig_type=std_logic lab=VSS}
@@ -941,7 +941,7 @@ plot db(v(VOUT_amp))
 set appendwrite
 write tb.raw
 
-tran 1ns 30u
+tran 100ns 5m
 set appendwrite
 write tb.raw
 noise v(VOUT,VSS) V4 dec 10 1 10G
@@ -949,7 +949,7 @@ set appendwrite
 write tb.raw
 plot inoise_spectrum
 
-dc V3 0 1.8 0.0001 
+dc V3 0 0.3 0.0001 
 set appendwrite
 write tb.raw
 .endc
@@ -963,12 +963,12 @@ C {devices/lab_pin.sym} -160 90 0 0 {name=p17 sig_type=std_logic lab=VSS
 }
 C {devices/capa.sym} -20 40 0 0 {name=C2
 m=1
-value=3p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -20 100 0 0 {name=p20 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -40 10 1 0 {name=p21 sig_type=std_logic lab=VOUT_c}
-C {devices/vsource.sym} -340 170 0 0 {name=V6 value=0.9}
+C {devices/vsource.sym} -340 170 0 0 {name=V6 value=0.15}
 C {devices/lab_pin.sym} -340 240 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -340 80 0 0 {name=V7 value="ac 1"}
 C {devices/lab_pin.sym} -210 550 0 0 {name=p19 sig_type=std_logic lab=VDD}
@@ -976,12 +976,12 @@ C {devices/lab_pin.sym} -210 840 0 0 {name=p22 sig_type=std_logic lab=VSS
 }
 C {devices/capa.sym} -70 790 0 0 {name=C3
 m=1
-value=3p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -70 850 0 0 {name=p23 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -90 760 1 0 {name=p24 sig_type=std_logic lab=VOUT_A+}
-C {devices/vsource.sym} -390 800 0 0 {name=V8 value=0.9}
+C {devices/vsource.sym} -390 800 0 0 {name=V8 value=0.15}
 C {devices/lab_pin.sym} -390 870 0 0 {name=p25 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -210 610 2 0 {name=V9 value="ac 1"}
 C {devices/lab_pin.sym} -200 1240 0 0 {name=p26 sig_type=std_logic lab=VDD}
@@ -994,7 +994,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -60 1480 0 0 {name=p28 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 1390 1 0 {name=p29 sig_type=std_logic lab=VOUT_A-}
-C {devices/vsource.sym} -380 1430 0 0 {name=V10 value=0.9}
+C {devices/vsource.sym} -380 1430 0 0 {name=V10 value=0.15}
 C {devices/lab_pin.sym} -380 1500 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -200 1500 0 0 {name=V11 value="ac 1"}
 C {devices/lab_pin.sym} -160 2090 0 0 {name=p41 sig_type=std_logic lab=VSS
@@ -1002,18 +1002,18 @@ C {devices/lab_pin.sym} -160 2090 0 0 {name=p41 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} -40 2010 1 0 {name=p43 sig_type=std_logic lab=VOUT_20db}
 C {devices/lab_pin.sym} -160 1930 0 0 {name=p44 sig_type=std_logic lab=VDD}
 C {devices/res.sym} -160 1870 1 0 {name=R2
-value=400k
+value=8M
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} -340 1990 1 0 {name=R3
-value=40k
+value=800k
 footprint=1206
 device=resistor
 m=1}
-C {devices/vsource.sym} -480 2120 0 0 {name=V12 value=0.9}
+C {devices/vsource.sym} -480 2120 0 0 {name=V12 value=0.15}
 C {devices/lab_pin.sym} -480 2190 0 0 {name=p45 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} -480 2040 0 0 {name=V13 value="ac 1 sin (0 70m 100k)"}
+C {devices/vsource.sym} -480 2040 0 0 {name=V13 value="ac 1 sin (0 10m 1k)"}
 C {devices/lab_pin.sym} -300 2690 0 0 {name=p10 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -300 2530 0 0 {name=p11 sig_type=std_logic lab=VDD}
@@ -1023,22 +1023,22 @@ value=3p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -20 2100 0 0 {name=p15 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} -420 2680 0 0 {name=V15 value="ac 1 sin (0 500m 100k)"}
+C {devices/vsource.sym} -420 2680 0 0 {name=V15 value="ac 1 sin (0 50m 1k)"}
 C {devices/lab_pin.sym} -170 2540 2 0 {name=p31 sig_type=std_logic lab=VOUT_swing}
 C {devices/lab_pin.sym} -230 3150 0 0 {name=p32 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -230 2990 0 0 {name=p33 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} -350 3220 0 0 {name=V16 value=0.9}
+C {devices/vsource.sym} -350 3220 0 0 {name=V16 value=0.15}
 C {devices/lab_pin.sym} -350 3290 0 0 {name=p34 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 3070 1 0 {name=p35 sig_type=std_logic lab=VOUT_rate}
 C {devices/capa.sym} -10 3100 0 0 {name=C6
 m=1
-value=3p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -10 3160 0 0 {name=p36 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -500 3160 0 0 {name=p37 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} -500 3090 0 0 {name=V19 value="PULSE(0 1.8 0n 1n 1n 1u 2u)"}
+C {devices/vsource.sym} -500 3090 0 0 {name=V19 value="PULSE(0 0.3 0n 1n 1n 1u 2u)"}
 C {devices/lab_pin.sym} -420 2740 0 0 {name=p38 sig_type=std_logic lab=VIN-
 }
 C {devices/lab_pin.sym} -270 3940 0 0 {name=p16 sig_type=std_logic lab=VSS
@@ -1050,36 +1050,36 @@ m=1
 value=3p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/vsource.sym} -390 3910 0 0 {name=V14 value=0.9}
+C {devices/vsource.sym} -390 3910 0 0 {name=V14 value=0.15}
 C {devices/lab_pin.sym} -390 3980 0 0 {name=p40 sig_type=std_logic lab=VSS}
 C {devices/res.sym} -280 3710 1 0 {name=R1
 value=10M
 footprint=1206
 device=resistor
 m=1}
-C {devices/isource.sym} -600 3880 0 0 {name=I0 value="ac 20u sin (0 20u 100k)"}
+C {devices/isource.sym} -600 3880 0 0 {name=I0 value="ac 20u sin (0 10n 1k)"}
 C {devices/lab_pin.sym} -600 3950 0 0 {name=p47 sig_type=std_logic lab=VSS}
-C {VA002_NMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}
-C {VA002_NMOS_1.8_sky130A.sym} -160 10 0 0 {name=x2}
-C {VA002_NMOS_1.8_sky130A.sym} -210 760 0 0 {name=x3}
-C {VA002_NMOS_1.8_sky130A.sym} -200 1390 0 0 {name=x4}
-C {VA002_NMOS_1.8_sky130A.sym} -160 2010 0 0 {name=x5}
-C {VA002_NMOS_1.8_sky130A.sym} -300 2610 0 0 {name=x6}
-C {VA002_NMOS_1.8_sky130A.sym} -230 3070 0 0 {name=x7}
-C {VA002_NMOS_1.8_sky130A.sym} -270 3860 0 0 {name=x8}
 C {devices/launcher.sym} 490 -730 0 0 {name=h15
 descr="Annotate OP" 
 tclcommand="set show_hidden_texts 1; xschem annotate_op"
 }
 C {devices/capa.sym} -170 2640 0 0 {name=C8
 m=1
-value=3p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -170 2700 0 0 {name=p46 sig_type=std_logic lab=VSS}
 C {devices/capa.sym} -60 3890 0 0 {name=C9
 m=1
-value=3p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -60 3950 0 0 {name=p48 sig_type=std_logic lab=VSS}
+C {LPA001_PMOS_0_3_sky130A.sym} -220 -400 0 0 {name=x1}
+C {LPA001_PMOS_0_3_sky130A.sym} -160 10 0 0 {name=x2}
+C {LPA001_PMOS_0_3_sky130A.sym} -210 760 0 0 {name=x3}
+C {LPA001_PMOS_0_3_sky130A.sym} -200 1390 0 0 {name=x4}
+C {LPA001_PMOS_0_3_sky130A.sym} -160 2010 0 0 {name=x5}
+C {LPA001_PMOS_0_3_sky130A.sym} -300 2610 0 0 {name=x6}
+C {LPA001_PMOS_0_3_sky130A.sym} -230 3070 0 0 {name=x7}
+C {LPA001_PMOS_0_3_sky130A.sym} -270 3860 0 0 {name=x8}

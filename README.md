@@ -23,7 +23,10 @@ open the file with "xschem [filename]" and simulate\
 It includes a simple python script to add the pythonm lib to the path and add the xschem lib to the path.\
 
 In this repository too some IC analog block will be done.\
-To this point the blocks done are a self bias PMOS two stage miller OTA for 1.8V, designed for a BW of 40 MHz called VA001_PMOS_1.8_sky130A.\
+To this point the blocks done are:
+a self bias PMOS two stage miller OTA for 1.8V, designed for a BW of 40 MHz called VA001_PMOS_1.8_sky130A.\
+a self bias NMOS two stage  OTA for 1.8V, designed for a BW of 40 MHz called VA002_NMOS_1.8_sky130A.\
+
 
 
 
