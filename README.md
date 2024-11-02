@@ -3,7 +3,6 @@ This repository is done by an IC enthusiastic with some experience with CADENCE 
 
 OSAD or Open Source Automatic design are test scipts behing developed in order to automate analog design of open source tools.\
 You need xschem installed and the open PDKS and ngspice, and magic. This only works in linux/wsl.\
-A setup nix that solves instalation of the tools and automatizes the instalation flow is in the works.\
 For xschem:
 xschem: https://github.com/StefanSchippers/xschem \
 Install xterm for integration of ngspice with xschem \
@@ -26,6 +25,7 @@ In this repository too some IC analog block will be done.\
 To this point the blocks done are:
 a self bias PMOS two stage miller OTA for 1.8V, designed for a BW of 40 MHz called VA001_PMOS_1.8_sky130A.\
 a self bias NMOS two stage  OTA for 1.8V, designed for a BW of 40 MHz called VA002_NMOS_1.8_sky130A.\
+A low power OTA designed for 300mV with a BW of 7 kHz and a low power consuption callend LPA001_0_3_sky130A.\
 
 
 
