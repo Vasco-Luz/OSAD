@@ -137,8 +137,8 @@ ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=-0.360782
-x2=-0.117622
+x1=0
+x2=10.699
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -409,15 +409,15 @@ color=21
 node="\\"offset; VOUT_swing net1 -\\""
 rawfile=$netlist_dir/tb.raw}
 B 2 3048.75 508.75 3848.75 908.75 {flags=graph,unlocked
-y1=0.79
-y2=1
+y1=0.75
+y2=1.1
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 
-x2=1
+x2=1.05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -436,7 +436,7 @@ color="21 4"
 node="\\"buffer OUT comp; VOUT_swing_off\\"
 \\"VOFF; net1\\""
 rawfile=$netlist_dir/tb.raw
-x1=800m}
+x1=750m}
 B 2 940 2100 1740 2500 {flags=graph,unlocked
 
 y2=22
@@ -499,7 +499,7 @@ color=12
 node="\\"transimpedance output; VOUT_photo\\""}
 B 2 940 1300 1740 1700 {flags=graph,unlocked
 
-y2=48
+y2=54
 ypos1=0
 ypos2=2
 divy=10
@@ -517,7 +517,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-9.5
+y1=1.2
 
 
 color=9
