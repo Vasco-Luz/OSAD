@@ -1,0 +1,24 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1730737099
+<< poly >>
+rect 211 670 811 690
+rect 211 636 410 670
+rect 630 636 811 670
+rect 211 596 811 636
+<< polycont >>
+rect 410 636 630 670
+<< locali >>
+rect 394 670 646 686
+rect 394 636 410 670
+rect 630 636 646 670
+rect 394 620 646 636
+<< viali >>
+rect 410 636 630 670
+<< metal1 >>
+rect 398 670 642 682
+rect 398 636 410 670
+rect 630 636 642 670
+rect 398 622 642 636
+<< end >>

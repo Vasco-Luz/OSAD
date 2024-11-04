@@ -25,8 +25,8 @@ In this repository too some IC analog block will be done.\
 To this point the blocks done are:
 a self bias PMOS two stage miller OTA for 1.8V, designed for a BW of 40 MHz called VA001_PMOS_1.8_sky130A.\
 a self bias NMOS two stage  OTA for 1.8V, designed for a BW of 40 MHz called VA002_NMOS_1.8_sky130A.\
-A low power OTA designed for 300mV with a BW of 7 kHz and a low power consuption callend LPA001_0_3_sky130A.\
-A simple DDA OTA designed for 1.8 with a BW of 19 kHz and callend DDA001_1.8_sky130A.\
+A low power OTA designed for 300mV with a BW of 7 kHz and a low power consuption callend LPA001_0_3_sky130A (needs to add an current source of 15nA to work).\
+A simple self DDA OTA designed for 1.8 with a BW of 19 NHz and called DDA001_1.8_sky130A.\
 
 
 
