@@ -73,6 +73,11 @@ L 4 1880 10 1880 50 {}
 L 4 1880 50 2220 50 {}
 L 4 2040 10 2040 50 {}
 L 4 2220 10 2220 50 {}
+L 4 -470 -530 -470 40 {}
+L 4 -470 -530 80 -530 {}
+L 4 -470 40 70 40 {}
+L 4 70 40 80 40 {}
+L 4 80 -530 80 40 {}
 T {specifications tt 27 Cº degrees} 1690 -590 0 0 1 1 {}
 T {UGBW} 1920 -500 0 0 0.4 0.4 {}
 T {19Mhz} 2100 -500 0 0 0.4 0.4 {}
@@ -106,19 +111,21 @@ T {linear offset} 1890 20 0 0 0.4 0.4 {}
 T {-150 mV - 150 mV} 2040 40 2 1 0.4 0.4 {}
 T {Based this paper:
 A DIFFERENTIAL SUMMING AMPLIFIER FOR ANALOG VLSI SYSTEMS} 500 -1030 0 0 1 1 {}
-N -530 -630 -460 -630 {
+T {Put an Isource of 15 uA} 90 50 0 0 1 1 {}
+T {self bias generator} -440 -600 0 0 1 1 {}
+N -550 -1590 -480 -1590 {
 lab=VDD}
-N -530 -590 -460 -590 {
+N -550 -1550 -480 -1550 {
 lab=VSS}
-N -530 -550 -460 -550 {
+N -550 -1510 -480 -1510 {
 lab=VIN1-}
-N -530 -510 -460 -510 {
+N -550 -1470 -480 -1470 {
 lab=VIN1+}
-N -530 -470 -460 -470 {
+N -550 -1430 -480 -1430 {
 lab=VOUT}
-N -530 -430 -460 -430 {
+N -550 -1390 -480 -1390 {
 lab=VIN2-}
-N -530 -390 -460 -390 {
+N -550 -1350 -480 -1350 {
 lab=VIN2+}
 N 280 -540 350 -540 {
 lab=VDD}
@@ -268,21 +275,84 @@ N 190 -540 190 -470 {
 lab=VDD}
 N 190 -540 280 -540 {
 lab=VDD}
-C {devices/iopin.sym} -530 -630 0 1 {name=p1 lab=VDD}
-C {devices/lab_pin.sym} -460 -630 2 0 {name=p4 sig_type=std_logic lab=VDD}
-C {devices/iopin.sym} -530 -590 0 1 {name=p6 lab=VSS}
-C {devices/lab_pin.sym} -460 -590 2 0 {name=p7 sig_type=std_logic lab=VSS}
-C {devices/iopin.sym} -530 -550 0 1 {name=p12 lab=VIN1-}
-C {devices/lab_pin.sym} -460 -550 2 0 {name=p13 sig_type=std_logic lab=VIN1-}
-C {devices/iopin.sym} -530 -510 0 1 {name=p17 lab=VIN1+}
-C {devices/lab_pin.sym} -460 -510 2 0 {name=p18 sig_type=std_logic lab=VIN1+}
-C {devices/iopin.sym} -530 -470 0 1 {name=p19 lab=VOUT}
-C {devices/lab_pin.sym} -460 -470 2 0 {name=p20 sig_type=std_logic lab=VOUT}
-C {devices/iopin.sym} -530 -430 0 1 {name=p2 lab=VIN2-}
-C {devices/lab_pin.sym} -460 -430 2 0 {name=p3 sig_type=std_logic lab=VIN2-}
-C {devices/iopin.sym} -530 -390 0 1 {name=p5 lab=VIN2+}
-C {devices/lab_pin.sym} -460 -390 2 0 {name=p8 sig_type=std_logic lab=VIN2+}
-C {isource.sym} 280 -160 0 0 {name=I0 value=15u}
+N -270 -470 -90 -470 {
+lab=VDD}
+N -270 -470 -270 -440 {
+lab=VDD}
+N -90 -470 -90 -440 {
+lab=VDD}
+N -230 -440 -130 -440 {
+lab=#net2}
+N -270 -410 -270 -320 {
+lab=#net2}
+N -90 -410 -90 -320 {
+lab=#net3}
+N -230 -290 -130 -290 {
+lab=#net3}
+N -180 -440 -180 -380 {
+lab=#net2}
+N -270 -380 -180 -380 {
+lab=#net2}
+N -180 -350 -180 -290 {
+lab=#net3}
+N -180 -350 -90 -350 {
+lab=#net3}
+N -230 -170 -130 -170 {
+lab=#net4}
+N -270 -260 -270 -200 {
+lab=#net5}
+N -90 -260 -90 -200 {
+lab=#net4}
+N -180 -230 -180 -170 {
+lab=#net4}
+N -180 -230 -90 -230 {
+lab=#net4}
+N -270 -140 -270 -100 {
+lab=#net6}
+N -90 -140 -90 -90 {
+lab=VSS}
+N -270 -40 -270 0 {
+lab=VSS}
+N -310 -70 -290 -70 {
+lab=VSS}
+N -300 -290 -270 -290 {
+lab=VSS}
+N -300 -170 -270 -170 {
+lab=VSS}
+N -90 -290 -60 -290 {
+lab=VSS}
+N -90 -170 -60 -170 {
+lab=VSS}
+N -90 -90 -90 0 {
+lab=VSS}
+N -310 -70 -310 0 {
+lab=VSS}
+N -310 0 -260 0 {
+lab=VSS}
+N -260 0 -40 0 {
+lab=VSS}
+N 280 -160 280 -130 {
+lab=VSS}
+N -90 -220 230 -220 {
+lab=#net4}
+N 230 -220 230 -160 {
+lab=#net4}
+N 230 -160 240 -160 {
+lab=#net4}
+C {devices/iopin.sym} -550 -1590 0 1 {name=p1 lab=VDD}
+C {devices/lab_pin.sym} -480 -1590 2 0 {name=p4 sig_type=std_logic lab=VDD}
+C {devices/iopin.sym} -550 -1550 0 1 {name=p6 lab=VSS}
+C {devices/lab_pin.sym} -480 -1550 2 0 {name=p7 sig_type=std_logic lab=VSS}
+C {devices/iopin.sym} -550 -1510 0 1 {name=p12 lab=VIN1-}
+C {devices/lab_pin.sym} -480 -1510 2 0 {name=p13 sig_type=std_logic lab=VIN1-}
+C {devices/iopin.sym} -550 -1470 0 1 {name=p17 lab=VIN1+}
+C {devices/lab_pin.sym} -480 -1470 2 0 {name=p18 sig_type=std_logic lab=VIN1+}
+C {devices/iopin.sym} -550 -1430 0 1 {name=p19 lab=VOUT}
+C {devices/lab_pin.sym} -480 -1430 2 0 {name=p20 sig_type=std_logic lab=VOUT}
+C {devices/iopin.sym} -550 -1390 0 1 {name=p2 lab=VIN2-}
+C {devices/lab_pin.sym} -480 -1390 2 0 {name=p3 sig_type=std_logic lab=VIN2-}
+C {devices/iopin.sym} -550 -1350 0 1 {name=p5 lab=VIN2+}
+C {devices/lab_pin.sym} -480 -1350 2 0 {name=p8 sig_type=std_logic lab=VIN2+}
 C {devices/lab_pin.sym} 310 -540 1 0 {name=p9 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 300 -470 0 1 {name=M1
 L=1
@@ -395,4 +465,126 @@ nf=4 mult=4
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/title-3.sym} 60 550 0 0 {name=l2 author="Vasco Luz" rev=1.0 lock=false}
+C {devices/title-3.sym} 990 560 0 0 {name=l2 author="Vasco Luz" rev=1.0 lock=false}
+C {devices/lab_pin.sym} -300 -290 0 0 {name=p30 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -60 -290 0 1 {name=p31 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -300 -170 0 0 {name=p32 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -60 -170 0 1 {name=p33 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} -270 -70 0 0 {name=R10
+W=0.35
+L=0.4
+model=res_xhigh_po_0p35
+spiceprefix=X
+ mult=2}
+C {sky130_fd_pr/nfet_01v8_nf.sym} -250 -290 0 1 {name=M14
+L=3
+W=2
+nf=2 mult=4
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_nf.sym} -110 -290 0 0 {name=M15
+L=3
+W=2
+nf=2 mult=4
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/ngspice_get_value.sym} -320 -400 0 1 {name=r1 node=v(@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[vth])
+descr="vth="}
+C {devices/ngspice_get_value.sym} -320 -430 0 1 {name=r15 node=@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[gds]
+descr="gds="}
+C {devices/ngspice_get_value.sym} -320 -470 0 1 {name=r11 node=@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[gmbs]
+descr="gmbs="}
+C {devices/ngspice_get_value.sym} -20 -400 0 0 {name=r2 node=v(@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[vth])
+descr="vth="}
+C {devices/ngspice_get_value.sym} -20 -440 0 0 {name=r3 node=@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[gds]
+descr="gds="}
+C {devices/ngspice_get_value.sym} -20 -480 0 0 {name=r4 node=@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[gmbs]
+descr="gmbs="}
+C {devices/ngspice_get_value.sym} -350 -240 0 1 {name=r5 node=v(@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[vth])
+descr="vth="}
+C {devices/ngspice_get_value.sym} -350 -280 0 1 {name=r6 node=@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[gds]
+descr="gds="}
+C {devices/ngspice_get_value.sym} -350 -320 0 1 {name=r7 node=@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[gmbs]
+descr="gmbs="}
+C {devices/ngspice_get_value.sym} -20 -260 0 0 {name=r8 node=v(@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[vth])
+descr="vth="}
+C {devices/ngspice_get_value.sym} -20 -290 0 0 {name=r9 node=@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[gds]
+descr="gds="}
+C {devices/ngspice_get_value.sym} -20 -330 0 0 {name=r12 node=@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[gmbs]
+descr="gmbs="}
+C {sky130_fd_pr/nfet_01v8_nf.sym} -250 -170 0 1 {name=M16
+L=2
+W=3
+nf=2 mult=8
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_nf.sym} -110 -170 0 0 {name=M17
+L=2
+W=3
+nf=2 mult=2
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/ngspice_get_value.sym} -350 -110 0 1 {name=r13 node=v(@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[vth])
+descr="vth="}
+C {devices/ngspice_get_value.sym} -350 -150 0 1 {name=r16 node=@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[gds]
+descr="gds="}
+C {devices/ngspice_get_value.sym} -350 -190 0 1 {name=r17 node=@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[gmbs]
+descr="gmbs="}
+C {devices/ngspice_get_value.sym} -10 -130 0 0 {name=r18 node=v(@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[vth])
+descr="vth="}
+C {devices/ngspice_get_value.sym} -10 -170 0 0 {name=r19 node=@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[gds]
+descr="gds="}
+C {devices/ngspice_get_value.sym} -10 -210 0 0 {name=r22 node=@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[gmbs]
+descr="gmbs="}
+C {devices/ngspice_get_value.sym} -390 -440 0 1 {name=r23 node=v(@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[vds])
+descr="vds="}
+C {devices/ngspice_get_value.sym} -390 -410 0 1 {name=r24 node=v(@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[vgs])
+descr="vgs="}
+C {devices/ngspice_get_value.sym} 50 -450 0 1 {name=r25 node=v(@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[vds])
+descr="vds="}
+C {devices/ngspice_get_value.sym} 50 -420 0 1 {name=r26 node=v(@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[vgs])
+descr="vgs="}
+C {devices/ngspice_get_value.sym} -430 -280 0 1 {name=r27 node=v(@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[vds])
+descr="vds="}
+C {devices/ngspice_get_value.sym} -430 -250 0 1 {name=r28 node=v(@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[vgs])
+descr="vgs="}
+C {devices/ngspice_get_value.sym} 30 -310 0 0 {name=r29 node=v(@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[vds])
+descr="vds="}
+C {devices/ngspice_get_value.sym} 30 -280 0 0 {name=r30 node=v(@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[vgs])
+descr="vgs="}
+C {devices/ngspice_get_value.sym} -410 -150 0 1 {name=r31 node=v(@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[vds])
+descr="vds="}
+C {devices/ngspice_get_value.sym} -410 -120 0 1 {name=r32 node=v(@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[vgs])
+descr="vgs="}
+C {devices/ngspice_get_value.sym} 40 -180 0 0 {name=r33 node=v(@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[vds])
+descr="vds="}
+C {devices/ngspice_get_value.sym} 40 -150 0 0 {name=r34 node=v(@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[vgs])
+descr="vgs="}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} -110 -440 0 0 {name=M18
+L=3
+W=4
+nf=2 mult=2
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} -250 -440 0 1 {name=M19
+L=3
+W=4
+nf=2 mult=2
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_nf.sym} 260 -160 0 0 {name=M20
+L=2
+W=3
+nf=2 mult=2
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/title-3.sym} -1510 560 0 0 {name=l1 author="Vasco Luz" rev=1.0 lock=false}
+C {devices/lab_pin.sym} -170 -470 1 0 {name=p34 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} -190 0 1 0 {name=p35 sig_type=std_logic lab=VSS}

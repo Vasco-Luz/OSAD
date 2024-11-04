@@ -96,6 +96,7 @@ T {Based this paper:
 Design and Simulation of Operational Amplifier
 using Non Conventional Method for Low Power
 Applications} 750 -1100 0 0 1 1 {}
+T {Put an Isource of 15 nA} 30 -760 0 0 1 1 {}
 N -370 -770 -300 -770 {
 lab=VDD}
 N -370 -730 -300 -730 {
@@ -241,7 +242,6 @@ nf=4 mult=2
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {isource.sym} 240 -590 0 0 {name=I0 value=20n}
 C {devices/lab_pin.sym} 280 -620 1 0 {name=p2 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 240 -60 2 0 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 300 -280 2 0 {name=p5 sig_type=std_logic lab=VB1}
@@ -324,3 +324,4 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {devices/title-3.sym} 10 470 0 0 {name=l2 author="Vasco Luz" rev=1.0 lock=false}
+C {devices/isource.sym} 240 -590 0 0 {name=I0 value=15n}

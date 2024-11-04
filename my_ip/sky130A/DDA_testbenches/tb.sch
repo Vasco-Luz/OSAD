@@ -158,14 +158,14 @@ sim_type=ac
 autoload=1}
 B 2 940 500 1740 900 {flags=graph,unlocked
 
-y2=37
+y2=41
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=-1.0699
-x2=9.62905
+x1=0
+x2=10.69897
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -176,7 +176,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=1.4
+y1=2.1
 
 
 color=7
@@ -214,7 +214,7 @@ sim_type=ac
 autoload=1}
 B 2 940 1700 1740 2100 {flags=graph,unlocked
 
-y2=18
+y2=20
 ypos1=0
 ypos2=2
 divy=10
@@ -439,7 +439,7 @@ rawfile=$netlist_dir/tb.raw
 x1=750m}
 B 2 940 2100 1740 2500 {flags=graph,unlocked
 
-y2=22
+y2=-31
 ypos1=0
 ypos2=2
 divy=10
@@ -1155,12 +1155,12 @@ C {devices/vsource.sym} -180 1460 0 0 {name=V11 value="ac 1"}
 C {devices/lab_pin.sym} 0 2730 1 0 {name=p43 sig_type=std_logic lab=VOUT_20db}
 C {devices/lab_pin.sym} -170 2630 0 0 {name=p44 sig_type=std_logic lab=VDD}
 C {devices/res.sym} -170 2570 1 0 {name=R2
-value=500k
+value=700k
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} -350 2690 1 0 {name=R3
-value=50k
+value=70k
 footprint=1206
 device=resistor
 m=1}
