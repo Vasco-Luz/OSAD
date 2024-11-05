@@ -296,53 +296,53 @@ N 300 -150 360 -150 {
 lab=VB2}
 N 360 -350 640 -350 {
 lab=VDD}
-N 640 -350 640 -330 {
+N 820 -350 820 -330 {
 lab=VDD}
-N 580 -300 600 -300 {
+N 760 -300 780 -300 {
 lab=VB2}
-N 640 -270 640 -240 {
+N 820 -270 820 -240 {
 lab=#net9}
-N 560 -210 600 -210 {
+N 740 -210 780 -210 {
 lab=VB1}
-N 640 -210 670 -210 {
+N 820 -210 850 -210 {
 lab=VDD}
-N 670 -350 670 -210 {
+N 850 -350 850 -210 {
 lab=VDD}
-N 640 -350 670 -350 {
+N 820 -350 850 -350 {
 lab=VDD}
-N 640 -300 670 -300 {
+N 820 -300 850 -300 {
 lab=VDD}
-N 640 -180 640 -160 {
+N 820 -180 820 -160 {
 lab=#net10}
-N 640 -130 670 -130 {
+N 820 -130 850 -130 {
 lab=#net10}
-N 670 -170 670 -130 {
+N 850 -170 850 -130 {
 lab=#net10}
-N 640 -170 670 -170 {
+N 820 -170 850 -170 {
 lab=#net10}
-N 640 -100 640 -60 {
+N 820 -100 820 -60 {
 lab=VOUT}
-N 600 -130 600 -80 {
+N 780 -130 780 -80 {
 lab=VOUT}
-N 600 -80 640 -80 {
+N 780 -80 820 -80 {
 lab=VOUT}
-N 640 0 640 30 {
+N 820 0 820 30 {
 lab=#net11}
 N 360 140 640 140 {
 lab=VSS}
-N 640 90 640 140 {
+N 820 90 820 140 {
 lab=VSS}
-N 640 30 640 60 {
+N 820 30 820 60 {
 lab=#net11}
-N 560 -30 600 -30 {
+N 740 -30 780 -30 {
 lab=#net7}
-N 560 -30 560 60 {
+N 740 -30 740 60 {
 lab=#net7}
-N 560 60 600 60 {
+N 740 60 780 60 {
 lab=#net7}
-N 640 -30 670 -30 {
+N 820 -30 850 -30 {
 lab=#net10}
-N 670 -130 670 -30 {
+N 850 -130 850 -30 {
 lab=#net10}
 N 80 -210 220 -210 {
 lab=#net7}
@@ -350,6 +350,22 @@ N 220 -210 220 0 {
 lab=#net7}
 N 220 0 560 -0 {
 lab=#net7}
+N 640 140 820 140 {
+lab=VSS}
+N 560 0 740 -0 {
+lab=#net7}
+N 640 -350 820 -350 {
+lab=VDD}
+N 470 -60 490 -60 {
+lab=#net7}
+N 470 -60 470 -0 {
+lab=#net7}
+N 520 -40 520 140 {
+lab=VSS}
+N 550 -60 580 -60 {
+lab=#net12}
+N 640 -60 820 -60 {
+lab=VOUT}
 C {devices/lab_pin.sym} -590 140 3 0 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -720 -150 0 0 {name=p8 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -480 -150 0 1 {name=p9 sig_type=std_logic lab=VSS}
@@ -558,41 +574,48 @@ C {devices/ngspice_get_value.sym} 460 -300 0 1 {name=r34 node=v(@m.$\{path\}xm12
 descr="vds="}
 C {devices/ngspice_get_value.sym} 420 -270 0 0 {name=r35 node=v(@m.$\{path\}xm12.msky130_fd_pr__pfet_01v8_lvt[vth])
 descr="vth="}
-C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 620 -300 0 0 {name=M14
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 800 -300 0 0 {name=M14
 L=1
 W=4
-nf=4 mult=12
+nf=4 mult=16
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 580 -300 3 1 {name=p26 sig_type=std_logic lab=VB2}
-C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 620 -210 0 0 {name=M15
+C {devices/lab_pin.sym} 760 -300 3 1 {name=p26 sig_type=std_logic lab=VB2}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 800 -210 0 0 {name=M15
 L=1
 W=4
-nf=4 mult=12
+nf=4 mult=16
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 560 -210 3 1 {name=p27 sig_type=std_logic lab=VB1}
-C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 620 -130 0 0 {name=M16
-L=1
-W=4
-nf=4 mult=4
+C {devices/lab_pin.sym} 740 -210 3 1 {name=p27 sig_type=std_logic lab=VB1}
+C {devices/lab_pin.sym} 820 -90 2 0 {name=p28 sig_type=std_logic lab=VOUT}
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 800 -30 0 0 {name=M17
+L=0.35
+W=6
+nf=20 mult=4
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 620 -30 0 0 {name=M17
-L=1
-W=4
-nf=4 mult=4
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 800 60 0 0 {name=M18
+L=0.35
+W=6
+nf=20 mult=4
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 620 60 0 0 {name=M18
-L=1
-W=4
-nf=4 mult=4
+C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 800 -130 0 0 {name=M16
+L=0.35
+W=6
+nf=20 mult=4
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 640 -90 2 0 {name=p28 sig_type=std_logic lab=VOUT}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 520 -60 3 0 {name=R39
+W=0.35
+L=0.4
+model=res_xhigh_po_0p35
+spiceprefix=X
+ mult=2}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -60 1 0 {name=C1 model=cap_mim_m3_2 W=9.6 L=9.6 MF=20 spiceprefix=X}

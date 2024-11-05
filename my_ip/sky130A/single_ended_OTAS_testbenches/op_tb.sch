@@ -34,16 +34,20 @@ N 160 -80 160 -40 {
 lab=VSS}
 N 160 -110 160 -80 {
 lab=VSS}
-N 100 -170 110 -170 {
-lab=VIN+}
 N 60 -130 110 -130 {
 lab=VIN+}
 N -370 -20 -370 10 {
 lab=VIN+}
 N -370 10 -370 20 {
 lab=VIN+}
-N 100 -170 100 -130 {
-lab=VIN+}
+N 110 -300 110 -170 {
+lab=VDDSCSC}
+N 110 -300 250 -300 {
+lab=VDDSCSC}
+N 250 -300 250 -150 {
+lab=VDDSCSC}
+N 230 -150 250 -150 {
+lab=VDDSCSC}
 C {devices/lab_pin.sym} -580 -210 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -580 -140 0 0 {name=V1 value=1.8
 
@@ -175,6 +179,9 @@ save @m.x1.xm13.msky130_fd_pr__pfet_01v8_lvt[vgs]
 
 op
 write op_tb.raw
+dc V3 0 1.8 0.0001
+plot v(VDDSCSC)
+
 
 .endc
 "}
@@ -190,3 +197,4 @@ descr="View Raw file"
 tclcommand="textwindow $netlist_dir/test_analog.raw"
 }
 C {VA003_NMOS_1.8_sky130A.sym} 160 -150 0 0 {name=x1}
+C {devices/lab_pin.sym} 250 -290 2 0 {name=p5 sig_type=std_logic lab=VDDSCSC}
