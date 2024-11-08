@@ -1,0 +1,3 @@
+[submodule "my_ip/Documentation/Documentation/My-blocks-circuits"]
+	path = my_ip/Documentation/Documentation/My-blocks-circuits
+	url = https://github.com/Vasco-Luz/My-blocks-circuits

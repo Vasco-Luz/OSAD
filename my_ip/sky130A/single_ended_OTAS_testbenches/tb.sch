@@ -1076,10 +1076,10 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -60 3950 0 0 {name=p48 sig_type=std_logic lab=VSS}
 C {LPA001_PMOS_0_3_sky130A.sym} -270 3860 0 0 {name=x8}
-C {VA003_NMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}
 C {VA003_NMOS_1.8_sky130A.sym} -160 10 0 0 {name=x2}
 C {VA003_NMOS_1.8_sky130A.sym} -210 760 0 0 {name=x3}
 C {VA003_NMOS_1.8_sky130A.sym} -200 1390 0 0 {name=x4}
 C {VA003_NMOS_1.8_sky130A.sym} -160 2010 0 0 {name=x5}
 C {VA003_NMOS_1.8_sky130A.sym} -300 2610 0 0 {name=x6}
 C {VA003_NMOS_1.8_sky130A.sym} -230 3070 0 0 {name=x7}
+C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}
