@@ -68,7 +68,7 @@ sim_type=tran
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 1990 100 2790 500 {flags=graph,unlocked
-y1=1.7
+y1=-3.7e-06
 y2=1.9
 ypos1=0
 ypos2=2
@@ -93,7 +93,7 @@ sim_type=tran
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 1990 500 2790 900 {flags=graph,unlocked
-y1=-0.0021
+y1=1.7
 y2=1.9
 ypos1=0
 ypos2=2
@@ -113,7 +113,7 @@ unitx=1
 logx=0
 logy=0
 color=7
-node="\\"-Q_read; Q_read\\""
+node="\\"-Q_read; -Q_read\\""
 sim_type=tran
 rawfile=$netlist_dir/tb.raw
 autoload=1}
@@ -198,6 +198,76 @@ N 790 -430 790 -380 {
 lab=#net1}
 N 860 -400 860 -380 {
 lab=-Q_read}
+N 540 770 540 810 {
+lab=VDD}
+N 540 930 540 950 {
+lab=VSS}
+N 540 950 540 970 {
+lab=VSS}
+N 290 870 470 870 {
+lab=read}
+N 290 930 290 950 {
+lab=VSS}
+N 290 950 290 970 {
+lab=VSS}
+N 820 850 820 980 {
+lab=#net2}
+N 820 980 820 1020 {
+lab=#net2}
+N 620 1080 620 1100 {
+lab=VSS}
+N 620 1100 620 1120 {
+lab=VSS}
+N 820 1080 820 1100 {
+lab=VSS}
+N 820 1100 820 1120 {
+lab=VSS}
+N 620 580 620 620 {
+lab=VDD}
+N 620 580 820 580 {
+lab=VDD}
+N 820 580 820 620 {
+lab=VDD}
+N 580 650 620 650 {
+lab=VDD}
+N 580 580 580 650 {
+lab=VDD}
+N 580 580 620 580 {
+lab=VDD}
+N 820 650 860 650 {
+lab=VDD}
+N 860 580 860 650 {
+lab=VDD}
+N 820 580 860 580 {
+lab=VDD}
+N 690 760 690 780 {
+lab=VSS}
+N 690 780 690 800 {
+lab=VSS}
+N 690 650 690 700 {
+lab=#net3}
+N 660 650 690 650 {
+lab=#net3}
+N 750 760 750 780 {
+lab=VSS}
+N 750 780 750 800 {
+lab=VSS}
+N 750 650 780 650 {
+lab=#net4}
+N 610 850 620 850 {
+lab=#net5}
+N 610 890 820 890 {
+lab=#net2}
+N 620 680 620 850 {
+lab=#net5}
+N 620 850 620 1020 {
+lab=#net5}
+N 820 700 820 850 {
+lab=#net2}
+N 750 650 750 700 {
+lab=#net4}
+N 820 680 820 700 {
+lab=#net2}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=1.8
 
@@ -374,7 +444,7 @@ C {devices/lab_pin.sym} 580 -110 0 0 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 330 -110 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {capa.sym} 660 -30 0 0 {name=C1
 m=1
-value=1p
+value=100f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 660 40 0 0 {name=p5 sig_type=std_logic lab=VSS}
@@ -386,7 +456,6 @@ C {devices/lab_pin.sym} 860 -380 0 0 {name=p11 sig_type=std_logic lab=-Q_read}
 C {devices/lab_pin.sym} 730 -430 1 0 {name=p14 sig_type=std_logic lab=read_precharge}
 C {devices/lab_pin.sym} 420 -210 1 0 {name=p15 sig_type=std_logic lab=read}
 C {devices/lab_pin.sym} 780 -500 1 0 {name=p18 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} 790 -350 0 0 {name=V7 value= "PULSE(0 0 0n 1n 1n 200n 20u)"}
 C {devices/lab_pin.sym} 790 -280 0 0 {name=p16 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/pfet_01v8_nf.sym} 840 -430 0 0 {name=M2
 L=0.15
@@ -395,11 +464,6 @@ nf=20 mult=1
 model=pfet_01v8
 spiceprefix=X
 }
-C {capa.sym} 860 -30 0 0 {name=C2
-m=1
-value=1p
-footprint=1206
-device="ceramic capacitor"}
 C {sky130_fd_pr/pfet_01v8_nf.sym} 680 -430 0 1 {name=M1
 L=0.15
 W=12
@@ -407,3 +471,46 @@ nf=20 mult=1
 model=pfet_01v8
 spiceprefix=X
 }
+C {devices/vsource.sym} 790 -350 0 0 {name=V3 value= "PULSE(1.8 0 0n 1n 1n 200n 20u)"}
+C {capa.sym} 860 -30 0 0 {name=C2
+m=1
+value=100f
+footprint=1206
+device="ceramic capacitor"}
+C {devices/vsource.sym} 290 900 0 0 {name=V4 value=  "PULSE(0 1.8 500n 100n 100n 100n 200n)"}
+C {Memory/SRAM_001_1_8_sky130A.sym} 550 870 0 0 {name=x2}
+C {devices/lab_pin.sym} 540 770 0 0 {name=p7 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 540 970 0 0 {name=p12 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 290 970 0 0 {name=p13 sig_type=std_logic lab=VSS}
+C {capa.sym} 620 1050 0 0 {name=C3
+m=1
+value=100f
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} 620 1120 0 0 {name=p17 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 820 1120 0 0 {name=p19 sig_type=std_logic lab=VSS}
+C {devices/vsource.sym} 690 730 0 0 {name=V5 value= "PULSE(1.8 0 0n 1n 1n 200n 400n)"}
+C {devices/lab_pin.sym} 690 800 0 0 {name=p20 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 380 870 1 0 {name=p24 sig_type=std_logic lab=read}
+C {devices/lab_pin.sym} 740 580 1 0 {name=p25 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 750 800 0 0 {name=p26 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/pfet_01v8_nf.sym} 800 650 0 0 {name=M3
+L=0.15
+W=12
+nf=20 mult=1
+model=pfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_nf.sym} 640 650 0 1 {name=M4
+L=0.15
+W=12
+nf=20 mult=1
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/vsource.sym} 750 730 0 0 {name=V7 value= "PULSE(0 1.8 0n 1n 1n 200n 400n)"}
+C {capa.sym} 820 1050 0 0 {name=C4
+m=1
+value=100f
+footprint=1206
+device="ceramic capacitor"}

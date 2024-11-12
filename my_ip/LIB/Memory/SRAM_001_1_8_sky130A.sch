@@ -113,20 +113,6 @@ nf=6 mult=2
 model=pfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8_nf.sym} -210 -270 3 1 {name=M5
-L=0.15
-W=1  
-nf=2 mult=1
-model=nfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_01v8_nf.sym} 510 -270 1 0 {name=M6
-L=0.15
-W=1  
-nf=2 mult=1
-model=nfet_01v8
-spiceprefix=X
-}
 C {devices/lab_pin.sym} -210 -360 2 0 {name=p12 sig_type=std_logic lab=WL}
 C {devices/lab_pin.sym} 510 -360 0 0 {name=p13 sig_type=std_logic lab=WL}
 C {devices/lab_pin.sym} -320 -250 2 1 {name=p14 sig_type=std_logic lab=Q}
@@ -153,5 +139,19 @@ L=0.15
 W=2
 nf=6 mult=2
 model=pfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_lvt_nf.sym} -210 -270 3 1 {name=M5
+L=0.15
+W=1
+nf=2 mult=1
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_lvt_nf.sym} 510 -270 1 0 {name=M6
+L=0.15
+W=1
+nf=2 mult=1
+model=nfet_01v8_lvt
 spiceprefix=X
 }
