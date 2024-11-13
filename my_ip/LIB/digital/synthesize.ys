@@ -1,0 +1,19 @@
+
+
+# Read the Verilog source file
+read_verilog a.v  # Ensure this command appears only once
+
+# Perform synthesis
+synth -top inverter  # Replace with the top module name in your Verilog file
+
+# Map to standard cells
+dfflibmap -liberty /home/vasco/PDK/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /home/vasco/PDK/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+
+# Flatten the design and ensure all cells are mapped
+flatten
+clean
+
+# Generate xspice netlist output
+write_spice a.spice
