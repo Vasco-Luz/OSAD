@@ -1,0 +1,47 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=primitive .include ./SRAM_single_test_machine.spice
+format="@name @@clk @VGND @VNB @VPB @VPWR @@reset @@wr @B_line @@B_line_neg "
+template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ "
+extra="VGND VNB VPB VPWR prefix"
+highlight=true
+}
+V {}
+S {type=primitive
+format="@name @@clk @VGND @VNB @VPB @VPWR @@reset @@wr @@B_line @@B_line_neg @prefix\\\\inv_1"
+template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ "
+extra="VGND VNB VPB VPWR prefix"
+verilogprefix=sky130_fd_sc_hd__
+highlight=true}
+E {}
+L 4 -40 -40 -40 20 {}
+L 4 -40 -40 60 -40 {}
+L 4 60 -40 60 20 {}
+L 4 -40 20 60 20 {}
+L 4 -60 -30 -40 -30 {}
+L 4 -60 -10 -40 -10 {}
+L 4 60 -30 80 -30 {}
+L 4 60 -10 80 -10 {}
+L 4 60 10 80 10 {}
+B 5 -62.5 -32.5 -57.5 -27.5 {name=clk
+dir=inout}
+B 5 -62.5 -12.5 -57.5 -7.5 {name=reset
+dir=inout}
+B 5 77.5 -32.5 82.5 -27.5 {name=wr
+dir=inout}
+B 5 77.5 -12.5 82.5 -7.5 {name=B_line_neg
+
+
+dir=inout}
+B 5 77.5 7.5 82.5 12.5 {name=B_line_neg
+
+
+dir=inout}
+T {@symname} -7.5 -75 0 0 0.2 0.2 {}
+T {@name} 2.5 35 0 0 0.2 0.2 {}
+T {clk} -67.5 -45 0 0 0.2 0.2 {}
+T {reset} -67.5 -25 0 0 0.2 0.2 {}
+T {wr} 72.5 -45 0 0 0.2 0.2 {}
+T {B_line} 72.5 -25 0 0 0.2 0.2 {}
+T {B_line_neg} 72.5 -5 0 0 0.2 0.2 {}

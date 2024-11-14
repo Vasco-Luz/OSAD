@@ -1226,7 +1226,6 @@ value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -70 4650 0 0 {name=p48 sig_type=std_logic lab=VSS}
-C {DDA001_PMOS_1.8_sky130A .sym} -200 -380 0 0 {name=x9}
 C {devices/lab_pin.sym} -60 -380 1 0 {name=p49 sig_type=std_logic lab=VOUT}
 C {devices/capa.sym} -30 -350 0 0 {name=C10
 m=1
@@ -1240,11 +1239,8 @@ C {devices/lab_pin.sym} -310 -390 0 0 {name=p9 sig_type=std_logic lab=VIN-
 }
 C {devices/lab_pin.sym} -310 -370 0 0 {name=p51 sig_type=std_logic lab=VIN-
 }
-C {DDA001_PMOS_1.8_sky130A .sym} -140 180 0 0 {name=x1}
 C {devices/lab_pin.sym} -160 280 0 0 {name=p5 sig_type=std_logic lab=VSS
 }
-C {DDA001_PMOS_1.8_sky130A .sym} -170 870 0 0 {name=x2}
-C {DDA001_PMOS_1.8_sky130A .sym} -160 1330 0 0 {name=x3}
 C {devices/lab_pin.sym} -200 1760 0 0 {name=p17 sig_type=std_logic lab=VDD}
 C {devices/capa.sym} -10 1930 0 0 {name=C1
 m=1
@@ -1256,18 +1252,13 @@ C {devices/lab_pin.sym} -30 1900 1 0 {name=p53 sig_type=std_logic lab=VOUT_1c}
 C {devices/vsource.sym} -380 2040 0 0 {name=V17 value=0.9}
 C {devices/lab_pin.sym} -380 2110 0 0 {name=p54 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -380 1950 0 0 {name=V18 value="ac 1"}
-C {DDA001_PMOS_1.8_sky130A .sym} -180 1900 0 0 {name=x4}
 C {devices/lab_pin.sym} -200 2000 0 0 {name=p55 sig_type=std_logic lab=VSS
 }
 C {devices/vsource.sym} -300 2020 0 0 {name=V20 value=0.9}
 C {devices/lab_pin.sym} -300 2090 0 0 {name=p56 sig_type=std_logic lab=VSS}
-C {DDA001_PMOS_1.8_sky130A .sym} -150 2730 0 0 {name=x5}
 C {devices/lab_pin.sym} -170 2830 0 0 {name=p41 sig_type=std_logic lab=VSS
 }
-C {DDA001_PMOS_1.8_sky130A .sym} -240 3230 0 0 {name=x6}
-C {DDA001_PMOS_1.8_sky130A .sym} -220 3790 0 0 {name=x7}
 C {devices/lab_pin.sym} -240 3890 0 0 {name=p32 sig_type=std_logic lab=VSS}
-C {DDA001_PMOS_1.8_sky130A .sym} -250 4560 0 0 {name=x8}
 C {devices/lab_pin.sym} -1350 3300 0 0 {name=p57 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -1350 3100 0 0 {name=p58 sig_type=std_logic lab=VDD}
@@ -1278,9 +1269,18 @@ value=3p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -1230 3320 0 0 {name=p61 sig_type=std_logic lab=VSS}
-C {DDA001_PMOS_1.8_sky130A .sym} -1330 3200 0 0 {name=x10}
 C {devices/vsource.sym} -1540 3280 0 0 {name=V21 value=0.9}
 C {devices/lab_pin.sym} -1540 3350 0 0 {name=p62 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -1480 3230 0 0 {name=p60 sig_type=std_logic lab=VIN-
 }
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -200 -380 0 0 {name=x1}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -140 180 0 0 {name=x2}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -170 870 0 0 {name=x3}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -160 1330 0 0 {name=x4}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -180 1900 0 0 {name=x5}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -150 2730 0 0 {name=x6}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -240 3230 0 0 {name=x7}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -220 3790 0 0 {name=x8}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -250 4560 0 0 {name=x9}
+C {DDA/DDA001_PMOS_1.8_sky130A .sym} -1330 3200 0 0 {name=x11}
