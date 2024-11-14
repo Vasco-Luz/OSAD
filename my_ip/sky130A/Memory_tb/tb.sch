@@ -43,15 +43,15 @@ sim_type=tran
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 1990 -300 2790 100 {flags=graph,unlocked
-y1=0
-y2=1.8
+y1=0.18
+y2=1.98
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=0
-x2=5e-06
+x1=-2.5e-07
+x2=4.75e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -114,6 +114,31 @@ logx=0
 logy=0
 color=7
 node="\\"-Q_read; -Q_read\\""
+sim_type=tran
+rawfile=$netlist_dir/tb.raw
+autoload=1}
+B 2 2790 -700 3590 -300 {flags=graph,unlocked
+y1=-9.3e-17
+y2=0.019
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+color=4
+node="\\"inv; y\\""
 sim_type=tran
 rawfile=$netlist_dir/tb.raw
 autoload=1}
@@ -198,76 +223,16 @@ N 790 -430 790 -380 {
 lab=#net1}
 N 860 -400 860 -380 {
 lab=-Q_read}
-N 540 770 540 810 {
-lab=VDD}
-N 540 930 540 950 {
-lab=VSS}
-N 540 950 540 970 {
-lab=VSS}
-N 290 870 470 870 {
+N 500 130 570 130 {
+lab=y}
+N 410 -200 410 130 {
 lab=read}
-N 290 930 290 950 {
+N 410 -210 410 -200 {
+lab=read}
+N 570 190 570 210 {
 lab=VSS}
-N 290 950 290 970 {
+N 570 210 570 230 {
 lab=VSS}
-N 820 850 820 980 {
-lab=#net2}
-N 820 980 820 1020 {
-lab=#net2}
-N 620 1080 620 1100 {
-lab=VSS}
-N 620 1100 620 1120 {
-lab=VSS}
-N 820 1080 820 1100 {
-lab=VSS}
-N 820 1100 820 1120 {
-lab=VSS}
-N 620 580 620 620 {
-lab=VDD}
-N 620 580 820 580 {
-lab=VDD}
-N 820 580 820 620 {
-lab=VDD}
-N 580 650 620 650 {
-lab=VDD}
-N 580 580 580 650 {
-lab=VDD}
-N 580 580 620 580 {
-lab=VDD}
-N 820 650 860 650 {
-lab=VDD}
-N 860 580 860 650 {
-lab=VDD}
-N 820 580 860 580 {
-lab=VDD}
-N 690 760 690 780 {
-lab=VSS}
-N 690 780 690 800 {
-lab=VSS}
-N 690 650 690 700 {
-lab=#net3}
-N 660 650 690 650 {
-lab=#net3}
-N 750 760 750 780 {
-lab=VSS}
-N 750 780 750 800 {
-lab=VSS}
-N 750 650 780 650 {
-lab=#net4}
-N 610 850 620 850 {
-lab=#net5}
-N 610 890 820 890 {
-lab=#net2}
-N 620 680 620 850 {
-lab=#net5}
-N 620 850 620 1020 {
-lab=#net5}
-N 820 700 820 850 {
-lab=#net2}
-N 750 650 750 700 {
-lab=#net4}
-N 820 680 820 700 {
-lab=#net2}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=1.8
 
@@ -322,106 +287,20 @@ value="
 **************************************************************
 **************************************************************
 **************************************************************
+.include ~/PDK/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+
+VVPWR VPWR 0 1.8
+VVGND VGND 0 0
+VVNB VNB 0 0
+VVPB VPB 0 1.8
+
 .control
 save all
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8[gm]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8[vth]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8[gds]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8[gmbs]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8[vds]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8[vgs]
-
-
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vgs]
-
-
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vgs]
-
 op
 write tb.raw
 set appendwrite
-
 
 tran 100ps 5u
 set appendwrite
@@ -477,39 +356,10 @@ m=1
 value=100f
 footprint=1206
 device="ceramic capacitor"}
-C {devices/vsource.sym} 290 900 0 0 {name=V4 value=  "PULSE(0 1.8 500n 100n 100n 100n 200n)"}
-C {Memory/SRAM_001_1_8_sky130A.sym} 550 870 0 0 {name=x2}
-C {devices/lab_pin.sym} 540 770 0 0 {name=p7 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 540 970 0 0 {name=p12 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 290 970 0 0 {name=p13 sig_type=std_logic lab=VSS}
-C {capa.sym} 620 1050 0 0 {name=C3
-m=1
-value=100f
-footprint=1206
-device="ceramic capacitor"}
-C {devices/lab_pin.sym} 620 1120 0 0 {name=p17 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 820 1120 0 0 {name=p19 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} 690 730 0 0 {name=V5 value= "PULSE(1.8 0 0n 1n 1n 200n 400n)"}
-C {devices/lab_pin.sym} 690 800 0 0 {name=p20 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 380 870 1 0 {name=p24 sig_type=std_logic lab=read}
-C {devices/lab_pin.sym} 740 580 1 0 {name=p25 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 750 800 0 0 {name=p26 sig_type=std_logic lab=VSS}
-C {sky130_fd_pr/pfet_01v8_nf.sym} 800 650 0 0 {name=M3
-L=0.15
-W=12
-nf=20 mult=1
-model=pfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/pfet_01v8_nf.sym} 640 650 0 1 {name=M4
-L=0.15
-W=12
-nf=20 mult=1
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/vsource.sym} 750 730 0 0 {name=V7 value= "PULSE(0 1.8 0n 1n 1n 200n 400n)"}
-C {capa.sym} 820 1050 0 0 {name=C4
+C {devices/lab_pin.sym} 570 130 1 0 {name=p7 sig_type=std_logic lab=y}
+C {digital/inverter.sym} 470 130 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {devices/lab_pin.sym} 570 230 0 0 {name=p12 sig_type=std_logic lab=VSS}
+C {capa.sym} 570 160 0 0 {name=C3
 m=1
 value=100f
 footprint=1206
