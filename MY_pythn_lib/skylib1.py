@@ -12,7 +12,6 @@ import random
 import pygad
 
 class sim_comands:
-
     def get_file_path(): #gets the file path and checks if the file exists in the current directory
         if len(sys.argv)>1:
             file_name = sys.argv[1]

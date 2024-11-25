@@ -1,0 +1,26 @@
+** SPICE test for M1 
+**.subckt test
+XM1 net3 net1 net4 net2 sky130_fd_pr__nfet_01v8_lvt L=L1 W='W1 * nf1 ' nf=nf1 ad='int((nf+1)/2) * W / nf * 0.29'
++ as='int((nf+2)/2) * W / nf * 0.29' pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)'
++ nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=mult1 m=mult1
+VGS net1 GND 0.9
+VB net2 GND 0
+VDD net3 GND V_supply
+VSS net4 GND V_neg
+.TEMP 27
+.options savecurrents
+.param V_supply=1.8
+.param V_neg=0
+.param L1 = 0.15
+.param W1 = 1
+.param nf1=1
+.param mult1=1
+.control
+dc VGS 0 1.8 0.0001
+plot @m.xm1.msky130_fd_pr__nfet_01v8_lvt[id]
+wrdata sim_data.csv @m.xm1.msky130_fd_pr__nfet_01v8_lvt[id] deriv(@m.xm1.msky130_fd_pr__nfet_01v8_lvt[id]) @m.xm1.msky130_fd_pr__nfet_01v8_lvt[vth]
+save all
+.endc
+.lib /home/vasco/PDK/sky130A/libs.tech/combined/sky130.lib.spice tt
+.GLOBAL GND
+.end

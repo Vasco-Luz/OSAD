@@ -1,7 +1,7 @@
 v {xschem version=3.4.5 file_version=1.2
 }
 G {}
-K {type=primitive .include ./SRAM_single_test_machine.spice
+K {type=primitive 
 format="@name @@clk @VGND @VNB @VPB @VPWR @@reset @@wr @B_line @@B_line_neg "
 template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ "
 extra="VGND VNB VPB VPWR prefix"

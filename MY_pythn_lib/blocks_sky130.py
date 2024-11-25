@@ -20,7 +20,6 @@ import re
 class MOS:
     def __init__(self, mos_type: str, w_per_finger: float, gate_length: float, instance_name: str, nf: int, m: int,model: str):
         self.mos_type = mos_type
-        self.mos_type = mos_type
         self.instance_name=instance_name
         self.w_per_finger=w_per_finger
         self.gate_length=gate_length
@@ -32,7 +31,6 @@ class MOS:
         self.vgs = None
         self.ids = None
 
-
     def transistor_OV_and_current(self, file_path):
         # Load the data from the file
         data = np.loadtxt(file_path)
@@ -42,8 +40,56 @@ class MOS:
         self.vgs = data[5]  # Sixth column (index 5)
         self.ids = data[7]  # Eighth column (index 7)
         return self
+    
+    def generate_self_VGS_test_spice(self, file_path):
+        # Open a file to write the SPICE netlist
+        with open(file_path, 'w') as f:
+            f.write(f"** SPICE test for {self.instance_name} \n")
+            f.write("**.subckt test\n")
+            f.write(
+            f"XM1 net3 net1 net4 net2 sky130_fd_pr__{self.model} "
+            f"L=L1 W='W1 * nf1 ' nf=nf1 "            f"ad='int((nf+1)/2) * W / nf * 0.29'\n")
+            f.write(
+            f"+ as='int((nf+2)/2) * W / nf * 0.29' "
+            f"pd='2*int((nf+1)/2) * (W / nf + 0.29)' "
+            f"ps='2*int((nf+2)/2) * (W / nf + 0.29)'\n")
+            f.write(
+            f"+ nrd='0.29 / W ' nrs='0.29 / W ' "
+            f"sa=0 sb=0 sd=0 mult=mult1 m=mult1\n")
+
+            f.write("VGS net1 GND 0.9\n")
+            f.write("VB net2 GND 0\n")
+            f.write("VDD net3 GND V_supply\n")
+            f.write("VSS net4 GND V_neg\n")
+            f.write(".TEMP 27\n")
+
+            f.write(".options savecurrents\n")
+            f.write(".param V_supply=1.8\n")
+            f.write(".param V_neg=0\n")
+            f.write(f".param L1 = {self.gate_length}\n")
+            f.write(f".param W1 = {self.w_per_finger}\n")
+            f.write(f".param nf1={self.nf}\n")
+            f.write(f".param mult1={self.m}\n")
+            f.write(".control\n")
+            f.write("dc VGS 0 1.8 0.0001\n")
+            f.write("plot @m.xm1.msky130_fd_pr__nfet_01v8_lvt[id]\n")
+            f.write(f"wrdata sim_data.csv @m.xm1.msky130_fd_pr__{self.model}[id] deriv(@m.xm1.msky130_fd_pr__{self.model}[id]) @m.xm1.msky130_fd_pr__{self.model}[vth]\n")
+            f.write("save all\n")
+            f.write(".endc\n")
+            f.write(f".lib {os.environ.get('PDK_ROOT')}/{os.environ.get('PDK')}/libs.tech/combined/sky130.lib.spice tt\n")
+            f.write(".GLOBAL GND\n")
+            f.write(".end\n")
+
+        
+
+
+
         
         
+
+
+
+
 
 
 #class for Resistors

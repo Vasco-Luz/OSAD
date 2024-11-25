@@ -327,9 +327,9 @@ lab=VSS}
 N 490 530 490 550 {
 lab=VSS}
 N 490 400 490 450 {
-lab=B_line}
+lab=B_line_neg}
 N 480 400 490 400 {
-lab=B_line}
+lab=B_line_neg}
 N 580 490 580 510 {
 lab=VSS}
 N 580 510 580 530 {
@@ -400,7 +400,7 @@ value="
 **************************************************************
 .include ~/PDK/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
-
+.include /home/vasco/Desktop/OSAD/my_ip/LIB/digital/inverter.spice
 
 VVPWR VPWR 0 1.8
 VVGND VGND 0 0
@@ -458,7 +458,6 @@ spiceprefix=X
 }
 C {devices/vsource.sym} 790 -350 0 0 {name=V3 value= "PULSE(1.8 0 0n 1n 1n 200n 20u)"}
 C {devices/lab_pin.sym} 570 130 1 0 {name=p7 sig_type=std_logic lab=y}
-C {digital/inverter.sym} 470 130 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 570 230 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {devices/capa.sym} 860 -30 0 0 {name=C1
 m=1
@@ -499,5 +498,5 @@ C {devices/lab_pin.sym} 630 360 1 0 {name=p22 sig_type=std_logic lab=wr}
 C {devices/lab_pin.sym} 580 400 2 0 {name=p23 sig_type=std_logic lab=B_line}
 C {devices/vsource.sym} 280 480 0 0 {name=V5 value=  "PULSE(0 1.8 500n 100n 100n 1u 2u)"}
 C {devices/lab_pin.sym} 280 550 0 0 {name=p17 sig_type=std_logic lab=VSS}
-C {digital/SRAM_single_test_machine.sym} 400 390 0 0 {name=x3 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 490 430 2 0 {name=p24 sig_type=std_logic lab=B_line_neg}
+C {digital/inverter.sym} 470 130 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR}

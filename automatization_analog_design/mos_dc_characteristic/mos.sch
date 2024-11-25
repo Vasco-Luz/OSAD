@@ -51,7 +51,6 @@ value="
 save all
 .endc
 "}
-C {sky130_fd_pr/corner.sym} -260 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 300 -370 0 0 {name=M5
 L=0.5
 W=1
@@ -59,3 +58,4 @@ nf=1 mult=1
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
+C {sky130_fd_pr/corner.sym} -230 -420 0 0 {name=CORNER only_toplevel=true corner=tt}

@@ -2,14 +2,13 @@ v {xschem version=3.4.5 file_version=1.2
 }
 G {}
 K {type=primitive
-format="@name @@a @VGND @VNB @VPB @VPWR @@y @prefix\\\\inv_1"
-template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ "
+format="@name @@a @VGND @VNB @VPB @VPWR @@y"
+template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR"
 extra="VGND VNB VPB VPWR prefix"
-verilogprefix=sky130_fd_sc_hd__
-highlight=true
+
 }
 V {}
-S {ype=primitive
+S {type=primitive
 function1="0 ~"
 format="@name @@a @VGND @VNB @VPB @VPWR @@y @prefix\\\\inv_1"
 template="name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ "

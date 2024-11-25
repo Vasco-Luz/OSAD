@@ -6,8 +6,10 @@ import numpy as np
 from skylib1 import sim_comands
 from skylib1 import single_trans
 from skylib1 import transistor
-current_directory = os.path.dirname(os.path.abspath(__file__))
 
+
+
+current_directory = os.path.dirname(os.path.abspath(__file__))
 #core this works
 #this case the file i walready know
 sch_path = os.path.join(current_directory,"mos.sch")
