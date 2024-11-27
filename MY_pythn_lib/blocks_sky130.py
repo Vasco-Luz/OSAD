@@ -41,7 +41,7 @@ class MOS:
         self.ids = data[7]  # Eighth column (index 7)
         return self
     
-    def generate_self_VGS_test_spice(self, file_path):
+    def generate_self_VGS_test_spice(self, file_path,process):
         # Open a file to write the SPICE netlist
         with open(file_path, 'w') as f:
             f.write(f"** SPICE test for {self.instance_name} \n")
@@ -73,7 +73,7 @@ class MOS:
             f.write(".control\n")
             f.write("dc VGS 0 1.8 0.0001\n")
             f.write("plot @m.xm1.msky130_fd_pr__nfet_01v8_lvt[id]\n")
-            f.write(f"wrdata sim_data.csv @m.xm1.msky130_fd_pr__{self.model}[id] deriv(@m.xm1.msky130_fd_pr__{self.model}[id]) @m.xm1.msky130_fd_pr__{self.model}[vth]\n")
+            f.write(f"wrdata sim_data_{process}.csv @m.xm1.msky130_fd_pr__{self.model}[id] deriv(@m.xm1.msky130_fd_pr__{self.model}[id]) @m.xm1.msky130_fd_pr__{self.model}[vth]\n")
             f.write("save all\n")
             f.write(".endc\n")
             f.write(f".lib {os.environ.get('PDK_ROOT')}/{os.environ.get('PDK')}/libs.tech/combined/sky130.lib.spice tt\n")
