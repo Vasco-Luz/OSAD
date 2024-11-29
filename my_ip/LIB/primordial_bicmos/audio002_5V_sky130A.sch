@@ -67,6 +67,8 @@ N 680 -0 680 150 {
 lab=VDD}
 N 680 210 680 300 {
 lab=VOUT}
+N 630 180 660 180 {
+lab=VSS}
 C {devices/iopin.sym} -150 -30 0 1 {name=p1 lab=VDD}
 C {devices/lab_pin.sym} -80 -30 2 0 {name=p4 sig_type=std_logic lab=VDD}
 C {devices/iopin.sym} -150 10 0 1 {name=p6 lab=VSS}
@@ -95,16 +97,6 @@ spiceprefix=X
 C {devices/lab_pin.sym} 520 180 2 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 610 260 2 0 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 710 330 2 0 {name=p14 sig_type=std_logic lab=VSS}
-C {res.sym} 680 400 0 0 {name=R1
-value=100
-footprint=1206
-device=resistor
-m=1}
-C {res.sym} 680 180 0 0 {name=R2
-value=1k
-footprint=1206
-device=resistor
-m=1}
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 330 110 0 0 {name=M2
 L=0.5
 W=4
@@ -119,3 +111,15 @@ nf=4 mult=4
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
+C {sky130_fd_pr/res_high_po_0p35.sym} 680 180 0 0 {name=R6
+L=0.37
+model=res_high_po_0p35
+spiceprefix=X
+ mult=1}
+C {devices/lab_pin.sym} 630 180 2 1 {name=p15 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/res_generic_po.sym} 680 400 0 0 {name=R4
+W=1
+L=2.05
+model=res_generic_po
+spiceprefix=X
+ mult=1}

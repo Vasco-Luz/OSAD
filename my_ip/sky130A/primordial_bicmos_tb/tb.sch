@@ -118,12 +118,14 @@ plot v(VOUT)
 set appendwrite
 write tb.raw
 
+op
+write tb.raw
 .endc
 "}
 C {devices/lab_pin.sym} -640 -450 0 0 {name=p2 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -640 -290 0 0 {name=p3 sig_type=std_logic lab=VSS
 }
-C {devices/vsource.sym} -1220 -320 0 0 {name=V3 value=2.6
+C {devices/vsource.sym} -1220 -320 0 0 {name=V3 value=2.8
 
 }
 C {devices/gnd.sym} -1220 -270 0 0 {name=l2 lab=GND}
@@ -137,4 +139,8 @@ device="ceramic capacitor"}
 C {devices/lab_pin.sym} -420 -280 0 0 {name=p50 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -510 -370 1 0 {name=p7 sig_type=std_logic lab=VOUT}
 C {devices/vsource.sym} -1220 -390 0 0 {name=V13 value="ac 1 sin (0 200m 100k)"}
-C {primordial_bicmos/audio002_5V_sky130A.sym} -620 -370 0 0 {name=x1}
+C {primordial_bicmos/audio003_5V_sky130A.sym} -620 -370 0 0 {name=x1}
+C {devices/launcher.sym} -850 -630 0 0 {name=h15
+descr="Annotate OP" 
+tclcommand="set show_hidden_texts 1; xschem annotate_op"
+}
