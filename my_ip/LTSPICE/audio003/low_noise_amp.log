@@ -1,0 +1,21 @@
+Circuit: * C:\users\vasco\Desktop\OSAD\my_ip\LTSPICE\audio003\low_noise_amp.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Dec 05 18:35:46 2024
+Total elapsed time: 1.755 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 100073
+traniter = 100034
+tranpoints = 50018
+accept = 50018
+rejected = 0
+matrix size = 30
+fillins = 18
+solver = Normal
+Matrix Compiler1: 3.06 KB object code size  0.6/0.2/[0.2]
+Matrix Compiler2: off  [0.2]/0.3/0.2
+
