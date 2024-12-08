@@ -34,6 +34,15 @@ A simple self DDA OTA designed for 1.8 called DDA001_1.8_sky130A.\
 
 
 
+There are blocks realized in LTspcie using bipolar and jfet, based on the primordial integrated circuits. These blocks are:
+audio001, a basic BIJFET amplifier.\
+audio003, another more complex BIJFET amplifier with a DC feedback system in order to bias the amplifier in its respective DC point.\
+PDMswitch001, a bipolar driver for driving a load with bipolar switches.\
+ACG1, is a very ealier version of a integrated voltage gain controlable amplifier.\
+Bi_stable01, a funny bi stable circuit with little use.\
+
+
+
 
 
 

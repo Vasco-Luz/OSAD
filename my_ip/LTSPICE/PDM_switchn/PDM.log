@@ -1,0 +1,21 @@
+Circuit: * C:\users\vasco\Desktop\OSAD\my_ip\LTSPICE\PDM_switchn\PDM.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sat Dec 07 16:52:15 2024
+Total elapsed time: 4.886 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 204955
+traniter = 204916
+tranpoints = 101439
+accept = 101084
+rejected = 355
+matrix size = 55
+fillins = 40
+solver = Normal
+Matrix Compiler1:     333 opcodes  1.0/[0.4]/0.4
+Matrix Compiler2: off  [0.3]/0.4/0.4
+
