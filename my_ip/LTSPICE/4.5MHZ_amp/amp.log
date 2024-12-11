@@ -1,0 +1,21 @@
+Circuit: * C:\users\vasco\Desktop\OSAD\my_ip\LTSPICE\4.5MHZ_amp\amp.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Dec 11 00:28:10 2024
+Total elapsed time: 0.952 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 200047
+traniter = 200037
+tranpoints = 100018
+accept = 100018
+rejected = 0
+matrix size = 33
+fillins = 4
+solver = Normal
+Matrix Compiler1:     121 opcodes  0.4/[0.2]/0.3
+Matrix Compiler2:     212 opcodes  0.3/[0.2]/0.3
+
