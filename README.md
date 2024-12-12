@@ -19,27 +19,26 @@ If other process nodes want to be used just do this with the other files. <br>
 i advise the use of chatgpt to ease installation because of the dependencies\
 open the file with "xschem [filename]" and simulate\
 
-It includes a simple python script to add the python lib to the path and add the xschem lib to the path.\
+It includes a simple python script to add the python lib to the path and add the xschem lib to the path.
 
 
 In this repository too some IC analog block will be done.\
 There is documentation done explaining each block in relatively detail.\
-To this point the blocks done are:\
-
+To this point the blocks done in sky130A are:\
 a self bias PMOS two stage miller OTA for 1.8V called VA001_PMOS_1.8_sky130A.\
 a self bias NMOS two stage  OTA for 1.8V called VA002_NMOS_1.8_sky130A.\
 a self bias NMOS two stage  OPAMP for 1.8V called VA003_NMOS_1.8_sky130A.\
 A low power OTA designed for 300mV called LPA001_0_3_sky130A (needs to add an current source of 15nA to work).\
-A simple self DDA OTA designed for 1.8 called DDA001_1.8_sky130A.\
+A simple self DDA OTA designed for 1.8 called DDA001_1.8_sky130A.
 
 
 
-There are blocks realized in LTspcie using bipolar and jfet, based on the primordial integrated circuits. These blocks are:
+There are blocks realized in LTspcie using bipolar and jfet, based on the primordial integrated circuits. These blocks are: \
 audio001, a basic BIJFET amplifier.\
 audio003, another more complex BIJFET amplifier with a DC feedback system in order to bias the amplifier in its respective DC point.\
 PDMswitch001, a bipolar driver for driving a load with bipolar switches.\
 ACG1, is a very ealier version of a integrated voltage gain controlable amplifier.\
-Bi_stable01, a funny bi stable circuit with little use.\
+Bi_stable01, a funny bi stable circuit with little use.
 
 
 
