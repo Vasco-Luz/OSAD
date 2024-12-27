@@ -1,0 +1,27 @@
+** sch_path: /home/gim/PDK/ihp-sg13g2/libs.tech/xschem/sg13g2_tests/sp_rfmim_cap.sch
+**.subckt sp_rfmim_cap
+R1 in GND 1Meg m=1
+V1 in GND dc 0 ac 1 portnum 1 z0 50
+R2 out GND 1Meg m=1
+V2 out GND dc 0 ac 0 portnum 2 z0 50
+XC1 in out GND cap_rfcmim w=2.0e-6 l=2.0e-6 wfeed=5.0e-6
+**** begin user architecture code
+
+
+.control
+save all
+sp lin 500 1e9 200e9 0
+let Cseries = 1e+15/(2*PI*frequency*imag(1/Y_2_1))
+let Rseries = -real(1/Y_2_1)
+let s21=vdb(s_2_1)
+write sp_rfmim_cap.raw
+.endc
+
+
+
+.lib /home/gim/PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_wcs
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

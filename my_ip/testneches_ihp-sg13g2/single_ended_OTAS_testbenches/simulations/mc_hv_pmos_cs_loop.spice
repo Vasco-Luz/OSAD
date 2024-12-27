@@ -1,0 +1,50 @@
+** sch_path: /home/gim/PDK/ihp-sg13g2/libs.tech/xschem/sg13g2_tests/mc_hv_pmos_cs_loop.sch
+**.subckt mc_hv_pmos_cs_loop
+I0 Vgs GND 10u
+XM1 Vgs Vgs GND GND sg13_hv_pmos w=2.0u l=1.0u ng=1 m=1
+**** begin user architecture code
+
+.lib cornerMOShv.lib mos_tt_stat
+
+
+
+.param mm_ok=1
+.param mc_ok=1
+.param temp=27
+
+.control
+let mc_runs = 1000
+let run = 0
+set curplot=new
+set scratch=$curplot
+setplot $scratch
+let vg=unitvec(mc_runs)
+
+***************** LOOP *********************
+dowhile run < mc_runs
+
+*dc Vds 0 3 0.01
+op
+set run=$&run
+set dt=$curplot
+setplot $scratch
+let out{$run}={$dt}.Vgs
+let Vg[run]={$dt}.Vgs
+setplot $dt
+reset
+let run=run+1
+end
+***************** LOOP *********************
+
+wrdata sg13_hv_pmos_cs.csv {$scratch}.vg
+write sg13_hv_pmos_cs.raw
+echo
+print {$scratch}.vg
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

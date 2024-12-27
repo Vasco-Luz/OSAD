@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -497,9 +496,7 @@ N -1500 -290 -1500 -270 {
 lab=GND}
 N -1500 -390 -1500 -350 {
 lab=VSS}
-N -1190 -240 -1190 -220 {
-lab=VSS}
-N -1190 -220 -1190 -200 {
+N -1190 -240 -1190 -200 {
 lab=VSS}
 N -1090 -390 -1090 -360 {
 lab=VIN+}
@@ -507,8 +504,6 @@ N -1280 -300 -1090 -300 {
 lab=#net1}
 N -1280 -390 -1280 -360 {
 lab=VIN-}
-N -220 -480 -220 -440 {
-lab=VDD}
 N -220 -360 -220 -320 {
 lab=VSS}
 N -300 -380 -270 -380 {
@@ -519,155 +514,111 @@ N -150 -400 -80 -400 {
 lab=VOUT}
 N -80 -340 -80 -310 {
 lab=VSS}
-N -220 -520 -220 -480 {
-lab=VDD}
-N -160 -70 -160 -30 {
+N -220 -520 -220 -440 {
 lab=VDD}
 N -160 50 -160 90 {
 lab=VSS}
-N -240 30 -210 30 {
-lab=#net2}
-N -240 -10 -210 -10 {
-lab=#net2}
 N -90 10 -20 10 {
 lab=VOUT_c}
 N -20 70 -20 100 {
 lab=VSS}
-N -160 -110 -160 -70 {
+N -160 -110 -160 -30 {
 lab=VDD}
-N -340 200 -340 220 {
+N -340 200 -340 240 {
 lab=VSS}
-N -340 220 -340 240 {
-lab=VSS}
-N -340 -10 -340 20 {
+N -340 -10 -340 50 {
 lab=#net2}
-N -340 -10 -240 -10 {
+N -260 -10 -210 -10 {
 lab=#net2}
 N -260 -10 -260 30 {
 lab=#net2}
-N -260 30 -240 30 {
+N -260 30 -210 30 {
 lab=#net2}
 N -340 110 -340 140 {
 lab=#net3}
-N -340 20 -340 50 {
-lab=#net2}
-N -210 680 -210 720 {
-lab=#net4}
 N -210 800 -210 840 {
 lab=VSS}
-N -290 780 -260 780 {
-lab=#net5}
-N -290 740 -260 740 {
-lab=#net5}
 N -140 760 -70 760 {
 lab=VOUT_A+}
 N -70 820 -70 850 {
 lab=VSS}
-N -210 640 -210 680 {
+N -210 640 -210 720 {
 lab=#net4}
-N -390 830 -390 850 {
-lab=VSS}
-N -390 850 -390 870 {
+N -390 830 -390 870 {
 lab=VSS}
 N -310 740 -310 780 {
 lab=#net5}
-N -310 780 -290 780 {
+N -310 780 -260 780 {
 lab=#net5}
 N -390 740 -390 770 {
 lab=#net5}
-N -390 740 -290 740 {
+N -310 740 -260 740 {
 lab=#net5}
 N -210 550 -210 580 {
 lab=VDD}
-N -200 1310 -200 1350 {
-lab=VDD}
 N -200 1430 -200 1470 {
 lab=#net6}
-N -280 1410 -250 1410 {
-lab=#net7}
-N -280 1370 -250 1370 {
-lab=#net7}
 N -130 1390 -60 1390 {
 lab=VOUT_A-}
 N -60 1450 -60 1480 {
 lab=VSS}
-N -200 1270 -200 1310 {
-lab=VDD}
-N -380 1460 -380 1480 {
-lab=VSS}
-N -380 1480 -380 1500 {
+N -380 1460 -380 1500 {
 lab=VSS}
 N -300 1370 -300 1410 {
 lab=#net7}
-N -300 1410 -280 1410 {
+N -300 1410 -250 1410 {
 lab=#net7}
 N -380 1370 -380 1400 {
 lab=#net7}
-N -380 1370 -280 1370 {
+N -300 1370 -250 1370 {
 lab=#net7}
-N -200 1240 -200 1270 {
+N -200 1240 -200 1350 {
 lab=VDD}
 N -200 1530 -200 1560 {
 lab=VSS}
 N -160 2050 -160 2090 {
 lab=VSS}
-N -240 2030 -210 2030 {
-lab=#net8}
-N -90 2010 -20 2010 {
+N -60 2010 -20 2010 {
 lab=VOUT_20db}
 N -160 1930 -160 1970 {
 lab=VDD}
-N -60 1960 -60 2010 {
-lab=VOUT_20db}
-N -260 1990 -210 1990 {
-lab=#net9}
-N -60 1870 -60 1960 {
+N -60 1870 -60 2010 {
 lab=VOUT_20db}
 N -130 1870 -60 1870 {
 lab=VOUT_20db}
 N -270 1870 -190 1870 {
-lab=#net9}
-N -270 1870 -270 1990 {
-lab=#net9}
-N -270 1990 -260 1990 {
-lab=#net9}
-N -310 1990 -270 1990 {
-lab=#net9}
-N -480 2150 -480 2170 {
-lab=VSS}
-N -480 2170 -480 2190 {
-lab=VSS}
-N -480 2070 -480 2090 {
 lab=#net8}
+N -270 1870 -270 1990 {
+lab=#net8}
+N -270 1990 -210 1990 {
+lab=#net8}
+N -310 1990 -270 1990 {
+lab=#net8}
+N -480 2150 -480 2190 {
+lab=VSS}
+N -480 2080 -480 2090 {
+lab=#net9}
 N -480 1990 -480 2010 {
 lab=#net10}
 N -480 1990 -370 1990 {
 lab=#net10}
 N -480 2080 -360 2080 {
-lab=#net8}
+lab=#net9}
 N -360 2080 -360 2130 {
-lab=#net8}
+lab=#net9}
 N -360 2130 -280 2130 {
-lab=#net8}
-N -280 2120 -280 2130 {
-lab=#net8}
-N -280 2030 -280 2060 {
-lab=#net8}
-N -280 2030 -240 2030 {
-lab=#net8}
-N -280 2060 -280 2120 {
-lab=#net8}
+lab=#net9}
+N -280 2030 -280 2130 {
+lab=#net9}
+N -280 2030 -210 2030 {
+lab=#net9}
 N -300 2650 -300 2690 {
 lab=VSS}
-N -380 2630 -350 2630 {
-lab=#net11}
 N -300 2530 -300 2570 {
 lab=VDD}
-N -400 2590 -350 2590 {
+N -410 2590 -350 2590 {
 lab=VOUT_swing}
-N -410 2590 -400 2590 {
-lab=VOUT_swing}
-N -420 2630 -380 2630 {
+N -420 2630 -350 2630 {
 lab=#net11}
 N -230 2610 -170 2610 {
 lab=VOUT_swing}
@@ -683,71 +634,49 @@ N -410 2510 -410 2590 {
 lab=VOUT_swing}
 N -230 3110 -230 3150 {
 lab=VSS}
-N -310 3090 -280 3090 {
-lab=#net12}
 N -230 2990 -230 3030 {
 lab=VDD}
-N -350 3090 -310 3090 {
+N -350 3090 -280 3090 {
 lab=#net12}
-N -160 3070 -100 3070 {
+N -160 3070 -10 3070 {
 lab=VOUT_rate}
-N -350 3250 -350 3270 {
+N -350 3250 -350 3290 {
 lab=VSS}
-N -350 3270 -350 3290 {
-lab=VSS}
-N -350 3170 -350 3190 {
-lab=#net12}
-N -350 3090 -350 3110 {
+N -350 3090 -350 3190 {
 lab=#net12}
 N -10 3130 -10 3160 {
 lab=VSS}
-N -100 3070 -10 3070 {
-lab=VOUT_rate}
-N -500 3120 -500 3140 {
-lab=VSS}
-N -500 3140 -500 3160 {
+N -500 3120 -500 3160 {
 lab=VSS}
 N -500 3050 -500 3060 {
 lab=#net13}
 N -500 3050 -280 3050 {
 lab=#net13}
-N -350 3110 -350 3170 {
-lab=#net12}
 N -420 2710 -420 2740 {
 lab=VIN-}
 N -270 3900 -270 3940 {
 lab=VSS}
-N -350 3880 -320 3880 {
-lab=#net14}
 N -270 3780 -270 3820 {
 lab=VDD}
-N -390 3880 -350 3880 {
+N -390 3880 -320 3880 {
 lab=#net14}
-N -200 3860 -140 3860 {
+N -200 3860 -60 3860 {
 lab=VOUT_photo}
-N -390 3940 -390 3960 {
+N -390 3940 -390 3980 {
 lab=VSS}
-N -390 3960 -390 3980 {
-lab=VSS}
-N -250 3630 -250 3710 {
+N -250 3670 -250 3710 {
 lab=VOUT_photo}
-N -310 3630 -310 3710 {
+N -310 3670 -310 3710 {
 lab=#net15}
-N -250 3670 -120 3670 {
-lab=VOUT_photo}
-N -120 3670 -60 3670 {
+N -250 3670 -60 3670 {
 lab=VOUT_photo}
 N -60 3670 -60 3860 {
 lab=VOUT_photo}
-N -140 3860 -60 3860 {
-lab=VOUT_photo}
-N -600 3910 -600 3930 {
-lab=VSS}
-N -600 3930 -600 3950 {
+N -600 3910 -600 3950 {
 lab=VSS}
 N -600 3840 -600 3850 {
 lab=#net15}
-N -600 3840 -320 3840 {
+N -420 3840 -320 3840 {
 lab=#net15}
 N -420 3670 -310 3670 {
 lab=#net15}
@@ -757,8 +686,24 @@ N -170 2670 -170 2700 {
 lab=VSS}
 N -60 3920 -60 3950 {
 lab=VSS}
+N -340 -10 -260 -10 {
+lab=#net2}
+N -390 740 -310 740 {
+lab=#net5}
+N -380 1370 -300 1370 {
+lab=#net7}
+N -90 2010 -60 2010 {
+lab=VOUT_20db}
+N -480 2070 -480 2080 {
+lab=#net9}
+N -250 3630 -250 3670 {
+lab=VOUT_photo}
+N -310 3630 -310 3670 {
+lab=#net15}
+N -600 3840 -420 3840 {
+lab=#net15}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=1.8
+C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=5
 
 }
 C {devices/gnd.sym} -1430 -270 0 0 {name=l3 lab=GND}
@@ -769,11 +714,11 @@ C {devices/vsource.sym} -1500 -320 0 0 {name=V2 value=0
 
 }
 C {devices/gnd.sym} -1500 -270 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} -1190 -270 0 0 {name=V3 value=0.9}
+C {devices/vsource.sym} -1190 -270 0 0 {name=V3 value=2.5}
 C {devices/lab_pin.sym} -1190 -200 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -1090 -390 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} -1090 -330 0 0 {name=V4 value= -5m "ac 0.5 sin (0 550m 100k)"}
+C {devices/vsource.sym} -1090 -330 0 0 {name=V4 value= "ac 0.5 sin (0 550m 100k)"}
 C {devices/vsource.sym} -1280 -330 0 0 {name=V5 value="ac -0.5"}
 C {devices/lab_pin.sym} -1280 -390 0 0 {name=p13 sig_type=std_logic lab=VIN-
 }
@@ -1076,11 +1021,4 @@ value=10p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -60 3950 0 0 {name=p48 sig_type=std_logic lab=VSS}
-C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}
-C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -160 10 0 0 {name=x2}
-C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -210 760 0 0 {name=x3}
-C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -200 1390 0 0 {name=x4}
-C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -160 2010 0 0 {name=x5}
-C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -300 2610 0 0 {name=x6}
-C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -230 3070 0 0 {name=x7}
-C {single ended amplifiers/VA003_NMOS_1.8_sky130A.sym} -270 3860 0 0 {name=x8}
+C {Sky130A/single ended amplifiers/BIP001_PMOS_5_sky130A.sym} -220 -400 0 0 {name=x1}

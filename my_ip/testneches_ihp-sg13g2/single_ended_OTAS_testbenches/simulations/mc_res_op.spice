@@ -1,0 +1,61 @@
+** sch_path: /home/gim/PDK/ihp-sg13g2/libs.tech/xschem/sg13g2_tests/mc_res_op.sch
+**.subckt mc_res_op
+Vres Vcc GND 1.5
+Vsil Vcc net1 0
+.save i(vsil)
+Vppd Vcc net2 0
+.save i(vppd)
+XR3 GND net3 rhigh w=1.0e-6 l=1.0e-6 m=1 b=0
+Vrh Vcc net3 0
+.save i(vrh)
+XR1 GND net1 rsil w=0.5e-6 l=0.5e-5 m=1 b=0
+XR2 GND net2 rppd w=0.5e-6 l=0.5e-6 m=1 b=0
+**** begin user architecture code
+
+*.lib /home/gim/PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
+.lib /home/gim/PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
+
+
+
+.param temp=27
+.param mc_ok = 1
+.control
+let mc_runs = 1000
+let run = 0
+set curplot=new
+set scratch=$curplot
+setplot $scratch
+let rsilval=unitvec(mc_runs)
+let rppdval=unitvec(mc_runs)
+let rhighval=unitvec(mc_runs)
+
+***************** LOOP *********************
+dowhile run < mc_runs
+
+op
+set run=$&run
+set dt=$curplot
+setplot $scratch
+let out{$run}={$dt}.I(Vsil)
+let rsilval[run]= 1.5/{$dt}.I(Vsil)
+let rppdval[run]= 1.5/{$dt}.I(Vppd)
+let rhighval[run]= 1.5/{$dt}.I(Vrh)
+setplot $dt
+reset
+let run=run+1
+end
+***************** LOOP *********************
+
+wrdata mc_res_op.csv {$scratch}.rsilval {$scratch}.rppdval {$scratch}.rhighval
+write mc_res_op.raw
+echo
+print {$scratch}.rsilval
+print {$scratch}.rppdval
+print {$scratch}.rhighval
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

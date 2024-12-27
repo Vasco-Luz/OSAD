@@ -1,0 +1,31 @@
+** sch_path: /home/gim/PDK/ihp-sg13g2/libs.tech/xschem/sg13g2_tests/dc_diode_op.sch
+**.subckt dc_diode_op
+V1 net1 GND 0.7
+Vmda net1 net2 0
+.save i(vmda)
+Vmdp net1 net3 0
+.save i(vmdp)
+XD2 net2 GND dpantenna l=0.78u w=0.78u
+XD1 net3 GND dantenna l=0.78u w=0.78u
+**** begin user architecture code
+
+.include /home/gim/PDK/ihp-sg13g2/libs.tech/ngspice/models/diodes.lib
+
+
+
+.param temp=27
+.control
+save all
+op
+print I(Vmda) I(Vmdp)
+reset
+dc V1 -12 1 1m
+write dc_diode_op.raw
+wrdata dc_diode.csv I(Vmda) I(Vmdp)
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

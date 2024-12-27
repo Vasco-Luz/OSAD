@@ -1,0 +1,62 @@
+** sch_path: /home/gim/Desktop/OSAD/my_ip/testbenches/single_ended_OTAS_testbenches/tb.sch
+**.subckt tb
+V1 VDD GND 1.8
+V2 VSS GND 0
+V3 net1 VSS 0.9
+V4 VIN+ net1 -5m
+V5 VIN- net1 ac -0.5
+C1 VOUT VSS 10p m=1
+*  CORNER -  corner  IS MISSING !!!!
+C2 VOUT_c VSS 10p m=1
+V6 net3 VSS 0.9
+V7 net2 net3 ac 1
+C3 VOUT_A+ VSS 10p m=1
+V8 net5 VSS 0.9
+V9 net4 VDD ac 1
+C4 VOUT_A- VSS 10p m=1
+V10 net7 VSS 0.9
+V11 net6 VSS ac 1
+R2 VOUT_20db net8 400k m=1
+R3 net8 net10 40k m=1
+V12 net9 VSS 0.9
+V13 net10 net9 ac 1 sin (0 50m 100k)
+C5 VOUT_20db VSS 10p m=1
+V15 net11 VIN- ac 1 sin (0 500m 100k)
+V16 net12 VSS 0.9
+C6 VOUT_rate VSS 10p m=1
+V19 net13 VSS PULSE(0 1.8 0n 1n 1n 1u 2u)
+C7 net15 VOUT_photo 3p m=1
+V14 net14 VSS 0.9
+R1 VOUT_photo net15 10M m=1
+I0 net15 VSS ac 20u sin (0 1u 100k)
+C8 VOUT_swing VSS 10p m=1
+C9 VOUT_photo VSS 10p m=1
+x1 VDD VSS VIN- VIN+ VOUT amp001_3_3_ihp-sg13g2
+**** begin user architecture code
+?
+
+.lib /home/gim/PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerHBT.lib hbt_typ
+
+
+.lib /home/gim/PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ihp-sg13g2/Amplifiers/amp001_3_3_ihp-sg13g2.sym # of pins=5
+** sym_path: /home/gim/Desktop/OSAD/my_ip/LIB/ihp-sg13g2/Amplifiers/amp001_3_3_ihp-sg13g2.sym
+** sch_path: /home/gim/Desktop/OSAD/my_ip/LIB/ihp-sg13g2/Amplifiers/amp001_3_3_ihp-sg13g2.sch
+.subckt amp001_3_3_ihp-sg13g2 VDD VSS VIN- VIN+ VOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VIN-
+*.iopin VIN+
+*.iopin VOUT
+XQ1 VOUT VIN+ net1 VSS npn13G2 Nx=1
+XQ2 VDD VIN- net1 VSS npn13G2 Nx=1
+XR1 VOUT VDD rhigh w=0.5e-6 l=0.5e-6 m=1 b=0
+XR2 VSS net1 rppd w=0.5e-6 l=1e-6 m=1 b=0
+.ends
+
+.GLOBAL GND
+.end

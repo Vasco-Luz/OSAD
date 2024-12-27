@@ -1,0 +1,29 @@
+** sch_path: /home/gim/PDK/ihp-sg13g2/libs.tech/xschem/sg13g2_tests/dc_pnpMPA.sch
+**.subckt dc_pnpMPA
+XQ1 net3 net1 E1 pnpMPA
+Ve net2 E1 0
+.save i(ve)
+Vb net1 GND 0
+.save i(vb)
+Vc net3 GND 0
+.save i(vc)
+I0 GND net2 1u
+**** begin user architecture code
+
+.lib /home/gim/PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerHBT.lib hbt_typ
+
+
+
+.param temp=27
+.control
+save all
+op
+dc I0 5n 100u 0.05u
+write test_pnpMPA.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
