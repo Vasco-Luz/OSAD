@@ -1,4 +1,5 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.5 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -58,7 +59,7 @@ L 4 -690 3580 -690 4030 {}
 L 4 -690 3580 -490 3580 {}
 B 2 940 -700 1740 -300 {flags=graph,unlocked
 
-y2=33
+y2=21
 ypos1=0
 ypos2=2
 divy=10
@@ -76,7 +77,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-51
+y1=-110
 color=4
 node="\\"Differencial gain ; vout db20() %0\\""
 
@@ -84,7 +85,7 @@ sim_type=ac
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 940 -300 1740 100 {flags=graph,unlocked
-y1=1
+y1=7.2
 y2=360
 ypos1=0
 ypos2=2
@@ -110,7 +111,7 @@ sim_type=ac
 autoload=1}
 B 2 940 100 1740 500 {flags=graph,unlocked
 
-y2=87
+y2=211.2
 ypos1=0
 ypos2=2
 divy=10
@@ -128,7 +129,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-1.2
+y1=-0.8
 
 color=6
 node="\\"CMRR ; vout VOUT_c / db20() %0\\""
@@ -137,7 +138,7 @@ sim_type=ac
 autoload=1}
 B 2 940 500 1740 900 {flags=graph,unlocked
 
-y2=33
+y2=190
 ypos1=0
 ypos2=2
 divy=10
@@ -155,7 +156,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-21
+y1=-18
 
 
 color=7
@@ -164,34 +165,6 @@ rawfile=$netlist_dir/tb.raw
 sim_type=ac
 autoload=1}
 B 2 940 900 1740 1300 {flags=graph,unlocked
-
-y2=69
-ypos1=0
-ypos2=2
-divy=10
-subdivy=1
-unity=1
-x1=0
-x2=10.699
-divx=10
-subdivx=8
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=1
-logy=0
-y1=-4.7
-
-
-color=8
-node="\\"PSSR- ; vout VOUT_A- / db20() %0\\""
-rawfile=$netlist_dir/tb.raw
-sim_type=ac
-autoload=1}
-B 2 940 1300 1740 1700 {flags=graph,unlocked
 
 y2=21
 ypos1=0
@@ -211,7 +184,35 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-110
+y1=-34
+
+
+color=8
+node="\\"PSSR- ; vout VOUT_A- / db20() %0\\""
+rawfile=$netlist_dir/tb.raw
+sim_type=ac
+autoload=1}
+B 2 940 1300 1740 1700 {flags=graph,unlocked
+
+y2=-38
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+x2=10.699
+divx=10
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=1
+logy=0
+y1=-130
 
 
 color=9
@@ -220,15 +221,15 @@ rawfile=$netlist_dir/tb.raw
 sim_type=ac
 autoload=1}
 B 2 1990 -700 2790 -300 {flags=graph,unlocked
-y1=0.76
-y2=1.5
+y1=2.4
+y2=3
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=0
-x2=5e-05
+x1=-2.5e-06
+x2=4.75e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -246,8 +247,8 @@ sim_type=tran
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 1990 -300 2790 100 {flags=graph,unlocked
-y1=0.49
-y2=1.5
+y1=2.2
+y2=3.4
 ypos1=0
 ypos2=2
 divy=10
@@ -307,15 +308,15 @@ x2=5e-05
 rainbow=0
 autoload=1}
 B 2 3050 -690 3850 -290 {flags=graph,unlocked
-y1=1.6
-y2=1.8
+y1=0.026
+y2=3.2
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 x1=0
-x2=0.3
+x2=5
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -334,14 +335,14 @@ autoload=1
 rawfile=$netlist_dir/tb.raw}
 B 2 3050 -290 3850 110 {flags=graph,unlocked
 y1=0
-y2=1.8
+y2=5
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 x1=0
-x2=1.8
+x2=5
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -361,8 +362,8 @@ node="\\"buffer swing dc; VOUT_swing\\"
 rawfile=$netlist_dir/tb.raw
 rainbow=0}
 B 2 3048.75 108.75 3848.75 508.75 {flags=graph,unlocked
-y1=-0.097
-y2=0.5
+y1=-1.1
+y2=0.094
 ypos1=0
 ypos2=2
 divy=10
@@ -387,7 +388,7 @@ sim_type=dc
 color=21
 node="\\"offset; VOUT_swing net1 -\\""
 rawfile=$netlist_dir/tb.raw
-x2=1.8}
+x2=5}
 B 2 3048.75 508.75 3848.75 908.75 {flags=graph,unlocked
 y1=0.00044
 y2=0.011
@@ -417,7 +418,7 @@ node="\\"power;  i(v9) -1.8 *\\""
 rawfile=$netlist_dir/tb.raw}
 B 2 940 1700 1740 2100 {flags=graph,unlocked
 
-y2=6.9
+y2=-19
 ypos1=0
 ypos2=2
 divy=10
@@ -703,7 +704,7 @@ lab=#net15}
 N -600 3840 -420 3840 {
 lab=#net15}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=5
+C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=1.8
 
 }
 C {devices/gnd.sym} -1430 -270 0 0 {name=l3 lab=GND}
@@ -714,7 +715,7 @@ C {devices/vsource.sym} -1500 -320 0 0 {name=V2 value=0
 
 }
 C {devices/gnd.sym} -1500 -270 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} -1190 -270 0 0 {name=V3 value=2.5}
+C {devices/vsource.sym} -1190 -270 0 0 {name=V3 value=0.9}
 C {devices/lab_pin.sym} -1190 -200 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -1090 -390 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
@@ -731,7 +732,7 @@ C {devices/lab_pin.sym} -300 -420 0 0 {name=p5 sig_type=std_logic lab=VIN-
 }
 C {devices/capa.sym} -80 -370 0 0 {name=C1
 m=1
-value=10p
+value=3p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -80 -310 0 0 {name=p8 sig_type=std_logic lab=VSS}
@@ -780,99 +781,6 @@ value="
 **************************************************************
 .control
 save all
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm1.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm2.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm3.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm4.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm5.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm6.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm7.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm8.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm10.msky130_fd_pr__nfet_01v8[vgs]
-
-
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm11.msky130_fd_pr__nfet_01v8[vgs]
-
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gm]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vth]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gds]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vds]
-save @m.x1.xm12.msky130_fd_pr__pfet_01v8_lvt[vgs]
-
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gm]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vth]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gds]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[gmbs]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vds]
-save @m.x1.xm13.msky130_fd_pr__nfet_01v8[vgs]
 
 op
 write tb.raw
@@ -895,7 +803,7 @@ set appendwrite
 write tb.raw
 plot inoise_spectrum
 
-dc V3 0 1.8 0.001 
+dc V3 0 1.8 0.0001 
 set appendwrite
 write tb.raw
 .endc
@@ -914,7 +822,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -20 100 0 0 {name=p20 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -40 10 1 0 {name=p21 sig_type=std_logic lab=VOUT_c}
-C {devices/vsource.sym} -340 170 0 0 {name=V6 value=0.9}
+C {devices/vsource.sym} -340 170 0 0 {name=V6 value=2.5}
 C {devices/lab_pin.sym} -340 240 0 0 {name=p18 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -340 80 0 0 {name=V7 value="ac 1"}
 C {devices/lab_pin.sym} -210 550 0 0 {name=p19 sig_type=std_logic lab=VDD}
@@ -927,7 +835,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -70 850 0 0 {name=p23 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -90 760 1 0 {name=p24 sig_type=std_logic lab=VOUT_A+}
-C {devices/vsource.sym} -390 800 0 0 {name=V8 value=0.9}
+C {devices/vsource.sym} -390 800 0 0 {name=V8 value=2.5}
 C {devices/lab_pin.sym} -390 870 0 0 {name=p25 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -210 610 2 0 {name=V9 value="ac 1"}
 C {devices/lab_pin.sym} -200 1240 0 0 {name=p26 sig_type=std_logic lab=VDD}
@@ -940,7 +848,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -60 1480 0 0 {name=p28 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 1390 1 0 {name=p29 sig_type=std_logic lab=VOUT_A-}
-C {devices/vsource.sym} -380 1430 0 0 {name=V10 value=0.9}
+C {devices/vsource.sym} -380 1430 0 0 {name=V10 value=2.5}
 C {devices/lab_pin.sym} -380 1500 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -200 1500 0 0 {name=V11 value="ac 1"}
 C {devices/lab_pin.sym} -160 2090 0 0 {name=p41 sig_type=std_logic lab=VSS
@@ -957,7 +865,7 @@ value=40k
 footprint=1206
 device=resistor
 m=1}
-C {devices/vsource.sym} -480 2120 0 0 {name=V12 value=0.9}
+C {devices/vsource.sym} -480 2120 0 0 {name=V12 value=2.5}
 C {devices/lab_pin.sym} -480 2190 0 0 {name=p45 sig_type=std_logic lab=VSS}
 C {devices/vsource.sym} -480 2040 0 0 {name=V13 value="ac 1 sin (0 50m 100k)"}
 C {devices/lab_pin.sym} -300 2690 0 0 {name=p10 sig_type=std_logic lab=VSS
@@ -974,7 +882,7 @@ C {devices/lab_pin.sym} -170 2540 2 0 {name=p31 sig_type=std_logic lab=VOUT_swin
 C {devices/lab_pin.sym} -230 3150 0 0 {name=p32 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -230 2990 0 0 {name=p33 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} -350 3220 0 0 {name=V16 value=0.9}
+C {devices/vsource.sym} -350 3220 0 0 {name=V16 value=2.5}
 C {devices/lab_pin.sym} -350 3290 0 0 {name=p34 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 3070 1 0 {name=p35 sig_type=std_logic lab=VOUT_rate}
 C {devices/capa.sym} -10 3100 0 0 {name=C6
@@ -984,7 +892,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -10 3160 0 0 {name=p36 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -500 3160 0 0 {name=p37 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} -500 3090 0 0 {name=V19 value="PULSE(0 1.8 0n 1n 1n 1u 2u)"}
+C {devices/vsource.sym} -500 3090 0 0 {name=V19 value="PULSE(0 5 0n 1n 1n 1u 2u)"}
 C {devices/lab_pin.sym} -420 2740 0 0 {name=p38 sig_type=std_logic lab=VIN-
 }
 C {devices/lab_pin.sym} -270 3940 0 0 {name=p16 sig_type=std_logic lab=VSS
@@ -996,7 +904,7 @@ m=1
 value=3p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/vsource.sym} -390 3910 0 0 {name=V14 value=0.9}
+C {devices/vsource.sym} -390 3910 0 0 {name=V14 value=2.5}
 C {devices/lab_pin.sym} -390 3980 0 0 {name=p40 sig_type=std_logic lab=VSS}
 C {devices/res.sym} -280 3710 1 0 {name=R1
 value=10M
@@ -1021,4 +929,4 @@ value=10p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -60 3950 0 0 {name=p48 sig_type=std_logic lab=VSS}
-C {Sky130A/single ended amplifiers/BIP001_PMOS_5_sky130A.sym} -220 -400 0 0 {name=x1}
+C {Sky130A/single ended amplifiers/VA001_PMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}

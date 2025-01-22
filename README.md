@@ -38,7 +38,11 @@ audio001, a basic BIJFET amplifier.\
 audio003, another more complex BIJFET amplifier with a DC feedback system in order to bias the amplifier in its respective DC point.\
 PDMswitch001, a bipolar driver for driving a load with bipolar switches.\
 ACG1, is a very ealier version of a integrated voltage gain controlable amplifier.\
-Bi_stable01, a funny bi stable circuit with little use.
+Bi_stable01, a funny bi stable circuit with little use. \
+Bipolar buffer1, an early single ended differential bipolar amplifier designed to work as a buffer. \
+Bipolar buffer2, an improved single ended differential bipolar amplifier designed to work as a buffer again using different mechanism in order to improve offset in funtion of temperature. \
+RF001, One of the first RF iC. Its TV receiver. THe circuit done in LTspice and in Virtuoso didnt work very well, especially the FM detector. \
+
 
 
 
