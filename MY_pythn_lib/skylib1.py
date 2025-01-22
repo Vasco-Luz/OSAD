@@ -12,7 +12,10 @@ import random
 import pygad
 
 class sim_comands:
-    def get_file_path(): #gets the file path and checks if the file exists in the current directory
+
+    #gets the file path and checks if the file exists in the current directory
+
+    def get_file_path(): 
         if len(sys.argv)>1:
             file_name = sys.argv[1]
         extension = ".sch"
@@ -26,7 +29,14 @@ class sim_comands:
         else:
             print("non existant file")
             sys.exit(1)
-            
+
+
+    def get_specific_file_path(text): #get the specific file based on a text promp
+
+        #get all sch files in the current directory
+        matching_files = [os.path.abspath(file) for file in os.listdir('.') if f"_{text}_" in file]
+        return matching_files
+        
     def export_netlist(file_path): #exports the spice netlist and returns the location of the file
         directory_path = os.path.dirname(file_path)
         file_name = os.path.basename(file_path)

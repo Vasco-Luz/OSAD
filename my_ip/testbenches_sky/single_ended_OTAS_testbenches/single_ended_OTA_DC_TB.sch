@@ -64,7 +64,8 @@ value="
 .Temp 27
 .param VDD = 1.8
 .param VSS = 0
-.param VCM=\{VDD/2\}
+.param VCM=\{(VDD-VSS)/2\}
+.param VCM_NEG=\{-VCM\}
 .param V_OFF = 0
 
 .control
