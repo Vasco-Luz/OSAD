@@ -20,6 +20,7 @@ if json_file:
         data = json.load(file)
         VDD_value = data.get("VDD", None)
         VSS_value = data.get("VSS", None)
+        offset_value =data.get("V_OFF_required",None)
 
 
 
@@ -50,7 +51,7 @@ sim_comands.ngspice_sim(dc_sch_path_netlist)
 df = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
 
 
-print(df)
 offset = simulation_data_processing.offset_finder(df,float(VDD_value)/2)
 
-print(offset)
+
+
