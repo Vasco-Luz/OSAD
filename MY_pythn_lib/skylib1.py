@@ -98,6 +98,23 @@ class sim_comands:
             file.writelines(new_content)
             
 
+    
+    def write_param(spice_path,variable,value):
+        target_text = ".param " + variable
+        new_content = []
+        with open(spice_path,"r") as file:
+            for line in file:
+                if target_text in line:
+                    new_line = target_text + " = " + value
+                    new_content.append(new_line)
+                else:   
+                    new_content.append(line)
+        with open(spice_path, "w") as file:
+            file.writelines(new_content)
+                    
+
+
+
 
     def change_mismatch(spice_path,action): #changes mismatch parameter
         target_text ="mc_mm_switch="

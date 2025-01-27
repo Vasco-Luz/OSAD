@@ -1,0 +1,32 @@
+** sch_path: /home/gim/Desktop/OSAD/my_ip/testbenches_sky/single_ended_OTAS_testbenches/single_ended_OTA_DC_TB.sch
+**.subckt single_ended_OTA_DC_TB
+*  x1 -  UUT  IS MISSING !!!!
+V1 VDD GND VDD
+V2 VSS GND VSS
+V3 net1 VSS VCM
+V4 VIN+ net2 ac 0.5
+V5 VIN- net1 ac -0.5
+V6 net2 net1 V_OFF
+**** begin user architecture code
+.lib /home/gim/PDK/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+.Temp 27
+.param VDD = 1.8
+.param VSS = 0
+.param VCM={(VDD-VSS)/2}
+.param VCM_NEG={-VCM}
+.param V_OFF = 0
+
+.control
+save all
+
+dc V4 -0.9 0.9 0.001
+plot v(VOUT)
+
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

@@ -27,5 +27,12 @@ if json_file:
 #DC simulation
 
 dc_sch_path = sim_comands.get_specific_file_path("DC")
-#dc_sch_path_netlist  = sim_comands.export_netlist(dc_sch_path)
 
+dc_sch_path = str(dc_sch_path[0])
+
+dc_sch_path_netlist  = sim_comands.export_netlist(dc_sch_path)
+
+sim_comands.write_param(dc_sch_path_netlist,"VDD")
+
+
+#DC simulations
