@@ -105,7 +105,7 @@ class sim_comands:
         with open(spice_path,"r") as file:
             for line in file:
                 if target_text in line:
-                    new_line = target_text + " = " + value
+                    new_line = target_text + " = " + value + "\n"
                     new_content.append(new_line)
                 else:   
                     new_content.append(line)
@@ -873,9 +873,45 @@ class single_trans:
                             
 
 
-    
-
 
 class automation_support:
     def random_value(min_val,max_value,number_of_digits):
         return round(random.uniform(min_val, max_value), number_of_digits)
+    
+
+
+
+class simulation_data_processing:
+    @staticmethod
+    def offset_finder(data, average_value):
+        """
+        Finds the input value (first column) corresponding to an output value (second column)
+        closest to the given average_value, using linear interpolation.
+        
+        Parameters:
+        - data (pd.DataFrame): The input DataFrame with at least two columns.
+        - average_value (float): The target output value to find the corresponding input value.
+        
+        Returns:
+        - float: The interpolated input value from the first column.
+        """
+        if data.shape[1] < 2:
+            raise ValueError("Data must have at least two columns.")
+        
+        # Get the second column (output values)
+        second_column = data.iloc[:, 1]
+        
+        # Find the two indices where the second column values are closest to the average_value
+        diffs = (second_column - average_value).abs()
+        idx1, idx2 = diffs.nsmallest(2).index
+        
+        # Get the corresponding input (first column) and output (second column) values
+        x1, x2 = data.iloc[idx1, 0], data.iloc[idx2, 0]
+        y1, y2 = data.iloc[idx1, 1], data.iloc[idx2, 1]
+        
+        # Perform linear interpolation to find the input value for the average_value
+        interpolated_x = x1 + (average_value - y1) * (x2 - x1) / (y2 - y1)
+        
+        return interpolated_x
+
+        

@@ -1,6 +1,7 @@
 {
-    "VDD"            :                   "1.8",
-    "VSS"            :                   "0"  ,
-    "V_OFF_required" :                   "1m" ,
-    "Power_max"      :                   "2m" 
+    "VDD"               :                   "1.8",
+    "VSS"               :                   "0"  ,
+    "V_OFF_required"    :                   "1m" ,
+    "Power_required"    :                   "2m" ,
+    "ICMR_required"     :                 "0-1.2"
 }

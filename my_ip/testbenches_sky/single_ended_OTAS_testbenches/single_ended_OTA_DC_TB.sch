@@ -66,12 +66,13 @@ value="
 .param VSS = 0
 .param VCM=\{(VDD-VSS)/2\}
 .param VCM_NEG=\{-VCM\}
-.param V_OFF = 0
+.param V_OFF = 0.001
 
 .control
 save all
 
-dc V4 -0.9 0.9 0.001
+dc V4 -0.01 0.01 0.0000001 
+wrdata VIN_sweep_DC.csv v(VOUT) 
 plot v(VOUT)
 
 .endc

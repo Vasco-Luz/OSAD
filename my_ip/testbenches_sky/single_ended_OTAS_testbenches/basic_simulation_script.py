@@ -5,6 +5,7 @@ import itertools
 from multiprocessing import Pool
 from blocks_sky130 import MOS
 from skylib1 import sim_comands
+from skylib1 import simulation_data_processing
 import json
 
 
@@ -17,8 +18,10 @@ if json_file:
     # Open and read the JSON file
     with open(json_file, "r") as file:
         data = json.load(file)
+        VDD_value = data.get("VDD", None)
+        VSS_value = data.get("VSS", None)
 
-    print(data)
+
 
 
 
@@ -32,7 +35,22 @@ dc_sch_path = str(dc_sch_path[0])
 
 dc_sch_path_netlist  = sim_comands.export_netlist(dc_sch_path)
 
-sim_comands.write_param(dc_sch_path_netlist,"VDD")
+
+
+#write supply values
+sim_comands.write_param(dc_sch_path_netlist,"VDD",VDD_value)
+sim_comands.write_param(dc_sch_path_netlist,"VSS",VSS_value)
 
 
 #DC simulations
+#VDS sweep and verify offset
+
+sim_comands.ngspice_sim(dc_sch_path_netlist)
+
+df = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
+
+
+print(df)
+offset = simulation_data_processing.offset_finder(df,float(VDD_value)/2)
+
+print(offset)
