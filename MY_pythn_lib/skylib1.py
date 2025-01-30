@@ -885,11 +885,10 @@ class simulation_data_processing:
     @staticmethod
     def offset_finder(data, average_value):
         """
-        Finds the input value (first column) corresponding to an output value (second column)
-        closest to the given average_value, using linear interpolation.
+        gives the offset value at VDD/2
         
         Parameters:
-        - data (pd.DataFrame): The input DataFrame with at least two columns.
+        - data (pd.DataFrame): The input DataFrame with at least two columns, from a dc sweap.
         - average_value (float): The target output value to find the corresponding input value.
         
         Returns:
@@ -899,19 +898,48 @@ class simulation_data_processing:
             raise ValueError("Data must have at least two columns.")
         
         # Get the second column (output values)
-        second_column = data.iloc[:, 1]
+        second_column = data.iloc[:, 0]
         
-        # Find the two indices where the second column values are closest to the average_value
-        diffs = (second_column - average_value).abs()
-        idx1, idx2 = diffs.nsmallest(2).index
+
+        matching_indices = second_column[second_column == average_value].index
+
+        if not matching_indices.empty:
+            matching_index = int(matching_indices[0])  # Convert first match to integer
+            print(matching_index)
+        else:
+            matching_index = None  # Handle the case where no match is found
+            print("No matching index found.")
+
+        return (data.iloc[matching_index,1]) - average_value
+    
+
+    def power_finder(data, supply):
+        """
+        Finds the power 
         
-        # Get the corresponding input (first column) and output (second column) values
-        x1, x2 = data.iloc[idx1, 0], data.iloc[idx2, 0]
-        y1, y2 = data.iloc[idx1, 1], data.iloc[idx2, 1]
+        Parameters:
+        - data (pd.DataFrame): The input DataFrame with at least two columns.
+        - supply: supply voltage of the module.
         
-        # Perform linear interpolation to find the input value for the average_value
-        interpolated_x = x1 + (average_value - y1) * (x2 - x1) / (y2 - y1)
+        Returns:
+        - float: The interpolated input value from the first column.
+        """
+        if data.shape[1] < 4:
+            raise ValueError("Data must have at least two columns.")
         
-        return interpolated_x
+        second_column = data.iloc[:, 2]
+        matching_indices = second_column[second_column == supply/2].index
+
+        if not matching_indices.empty:
+            matching_index = int(matching_indices[0])  # Convert first match to integer
+            print(matching_index)
+        else:
+            matching_index = None  # Handle the case where no match is found
+            print("No matching index found.")
+
+        return (data.iloc[matching_index,3])*supply
+
+        
+        
 
         

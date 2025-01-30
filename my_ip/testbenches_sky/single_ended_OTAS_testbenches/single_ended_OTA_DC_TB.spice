@@ -1,12 +1,12 @@
 ** sch_path: /home/vasco/Desktop/OSAD/my_ip/testbenches_sky/single_ended_OTAS_testbenches/single_ended_OTA_DC_TB.sch
 **.subckt single_ended_OTA_DC_TB
-x1 VDD VSS VIN- VIN+ VOUT UUT
+x1 net2 VSS VOUT VIN+ VOUT UUT
 V1 VDD GND VDD
 V2 VSS GND VSS
-V3 net1 VSS VCM
-V4 VIN+ net2 ac 0.5
-V5 VIN- net1 ac -0.5
-V6 net2 net1 V_OFF
+V4 VIN+ net1 ac 0.5
+V6 net1 VSS V_OFF
+Vmeas VDD net2 0
+.save i(vmeas)
 **** begin user architecture code
 .lib /home/vasco/PDK/sky130A/libs.tech/combined/sky130.lib.spice tt
 
@@ -16,14 +16,15 @@ V6 net2 net1 V_OFF
 .param VSS = 0
 .param VCM={(VDD-VSS)/2}
 .param VCM_NEG={-VCM}
-.param V_OFF = 0.001
+.param V_OFF = 0
 
 .control
 save all
 
-dc V4 -0.01 0.01 0.000001
-wrdata VIN_sweep_DC.csv v(VOUT)
-plot v(VOUT)
+dc V4 0 1.8 0.001
+wrdata VIN_sweep_DC.csv v(VOUT) i(Vmeas)
+plot v(VOUT) v(VIN+)
+plot i(Vmeas)
 
 .endc
 

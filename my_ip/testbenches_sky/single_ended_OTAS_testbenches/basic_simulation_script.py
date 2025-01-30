@@ -46,12 +46,12 @@ sim_comands.write_param(dc_sch_path_netlist,"VSS",VSS_value)
 #DC simulations
 #VDS sweep and verify offset
 
-sim_comands.ngspice_sim(dc_sch_path_netlist)
+#sim_comands.ngspice_sim(dc_sch_path_netlist)
 
 df = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
 
 
 offset = simulation_data_processing.offset_finder(df,float(VDD_value)/2)
+power = simulation_data_processing.power_finder(df,float(VDD_value))
 
-
-
+print(offset)

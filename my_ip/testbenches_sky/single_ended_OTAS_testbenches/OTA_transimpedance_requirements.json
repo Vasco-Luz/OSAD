@@ -1,7 +1,12 @@
 {
-    "VDD"               :                   "1.8",
-    "VSS"               :                   "0"  ,
-    "V_OFF_required"    :                   "1m" ,
-    "Power_required"    :                   "2m" ,
-    "ICMR_required"     :                 "0-1.2"
+    "VDD"               :                 "1.8"  ,
+    "VSS"               :                 "0"    ,
+    "V_OFF_required"    :                 "1m"   ,
+    "Power_required"    :                 "2m"   ,
+    "ICMR_required"     :                 "0-1.2",
+    "Bandwith_required" :                 "40M"  ,
+    "DC gain_required"  :                 "80"   ,
+    "CMRR_required"     :                 "60"   ,
+    "PSSR+_required"    :                 "60"   ,
+    "PSSR-_required"    :                 "80"    
 }
