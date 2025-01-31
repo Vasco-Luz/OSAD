@@ -21,6 +21,7 @@ if json_file:
         VDD_value = data.get("VDD", None)
         VSS_value = data.get("VSS", None)
         offset_value =data.get("V_OFF_required",None)
+        CL_value = data.get("CL",None)
 
 
 
@@ -48,10 +49,36 @@ sim_comands.write_param(dc_sch_path_netlist,"VSS",VSS_value)
 
 #sim_comands.ngspice_sim(dc_sch_path_netlist)
 
-df = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
+df_dc = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
 
 
-offset = simulation_data_processing.offset_finder(df,float(VDD_value)/2)
-power = simulation_data_processing.power_finder(df,float(VDD_value))
+offset = simulation_data_processing.offset_finder(df_dc,float(VDD_value)/2)
+offset_str = simulation_data_processing.value_converter_to_string(offset)
 
-print(offset)
+power = simulation_data_processing.power_finder(df_dc,float(VDD_value))
+power_str = simulation_data_processing.value_converter_to_string(power)
+
+
+
+
+
+#AC simulaion
+
+ac_sch_path = sim_comands.get_specific_file_path("AC")
+
+ac_sch_path = str(ac_sch_path[0])
+
+ac_sch_path_netlist  = sim_comands.export_netlist(ac_sch_path)
+
+#write supply values
+sim_comands.write_param(ac_sch_path_netlist,"VDD",VDD_value)
+sim_comands.write_param(ac_sch_path_netlist,"VSS",VSS_value)
+sim_comands.write_param(ac_sch_path_netlist,"V_OFF",offset_str)
+sim_comands.write_param(ac_sch_path_netlist,"CL",CL_value)
+
+#sim_comands.ngspice_sim(ac_sch_path_netlist)
+
+df_ac = pd.read_csv("VIN_sweep_AC.csv", delim_whitespace=True, header=None)
+
+DC_gain,bandwith,phase_margin,CMRR,PSRR_plus,PSSR_minu = simulation_data_processing.ac_data_processing(df_ac)
+

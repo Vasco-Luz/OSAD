@@ -10,6 +10,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.patches as mpatches
 import random
 import pygad
+import math 
 
 class sim_comands:
 
@@ -31,10 +32,13 @@ class sim_comands:
             sys.exit(1)
 
 
-    def get_specific_file_path(text): #get the specific file based on a text promp
-
-        #get all sch files in the current directory
-        matching_files = [os.path.abspath(file) for file in os.listdir('.') if f"_{text}_" in file]
+    def get_specific_file_path(text):  
+        """Get a list of .sch files in the current directory that contain '_text_' in their filename."""
+    
+        matching_files = [
+            os.path.abspath(file) for file in os.listdir('.') 
+            if f"_{text}_" in file and file.endswith('.sch')
+        ]
         return matching_files
         
     def export_netlist(file_path): #exports the spice netlist and returns the location of the file
@@ -905,7 +909,6 @@ class simulation_data_processing:
 
         if not matching_indices.empty:
             matching_index = int(matching_indices[0])  # Convert first match to integer
-            print(matching_index)
         else:
             matching_index = None  # Handle the case where no match is found
             print("No matching index found.")
@@ -932,12 +935,59 @@ class simulation_data_processing:
 
         if not matching_indices.empty:
             matching_index = int(matching_indices[0])  # Convert first match to integer
-            print(matching_index)
         else:
             matching_index = None  # Handle the case where no match is found
             print("No matching index found.")
 
         return (data.iloc[matching_index,3])*supply
+    
+
+    def value_converter_to_string(value):
+        """
+        converts a float to a str in scientific formar 
+        
+        Parameters:
+        value- float data usually lower then 0
+        
+        Returns:
+        - str: The value in scientific notation.
+        """
+        temporary = value
+        if ((temporary*1000)>1):
+            return str(int(temporary*1000)) + "m"
+        if ((temporary*1000000)>1):
+            return str(int(temporary*1000000)) + "u"
+        if ((temporary*1000000000)>1):
+            return str(int(temporary*1000000000)) + "n"
+        
+
+    def ac_data_processing(dataframe):
+        """
+        converts an ac to dc gain, bandwitih, phase margin, CMRR,PSSR+ and PSSR- 
+        
+        Parameters:
+        dataframe simulation dataframe
+        
+        Returns:
+        - DC_gain
+        - bandwith
+        - phase margin
+        - CMRR
+        - PSRR+
+        - PSSR-
+        """
+
+        differential_gain=dataframe.iloc[:, 1]
+        DC_gain= differential_gain[1]
+        index_closest_to_zero = (differential_gain - 0).abs().idxmin()
+        bandwith = dataframe.iloc[index_closest_to_zero,0]
+        phase_margin = 180 + (dataframe.iloc[index_closest_to_zero,3] * 180)/math.pi
+        CMRR = DC_gain - dataframe.iloc[index_closest_to_zero,5]
+        PSRR_plus = DC_gain - dataframe.iloc[index_closest_to_zero,9]
+        PSRR_minus = DC_gain - dataframe.iloc[index_closest_to_zero,7]
+
+        return DC_gain,bandwith,phase_margin,CMRR,PSRR_plus,PSRR_minus
+        
 
         
         

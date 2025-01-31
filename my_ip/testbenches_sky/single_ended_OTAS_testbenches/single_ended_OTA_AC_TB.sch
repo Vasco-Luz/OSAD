@@ -204,9 +204,9 @@ value="
 .control
 save all
 
-ac dec 10 1 10G
+ac dec 100 1 10G
 wrdata VIN_sweep_AC.csv db(v(VOUT)) phase(VOUT) db(v(VOUT_cm)) db(v(VOUT_a-)) db(v(VOUT_a+))
-plot db(v(VOUT))
+plot db(v(VOUT)) phase(VOUT)
 plot db(v(VOUT_cm))
 plot db(v(VOUT_a-))
 plot db(v(VOUT_a+))

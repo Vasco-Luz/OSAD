@@ -8,5 +8,7 @@
     "DC gain_required"  :                 "80"   ,
     "CMRR_required"     :                 "60"   ,
     "PSSR+_required"    :                 "60"   ,
-    "PSSR-_required"    :                 "80"    
+    "PSSR-_required"    :                 "80"   ,
+    "phase_margin"      :                 "60"   ,
+    "CL"                :                 "3p"  
 }
