@@ -953,12 +953,18 @@ class simulation_data_processing:
         - str: The value in scientific notation.
         """
         temporary = value
+        if(temporary>1000):
+            return str(round(temporary/1000,2)+"k")
+        if(temporary>1000000):
+            return str(round(temporary/1000000,2)+"k")
+        if(temporary>1000000000):
+            return str(round(temporary/1000000000,2)+"k")
         if ((temporary*1000)>1):
-            return str(int(temporary*1000)) + "m"
+            return str(round(temporary*1000,2)) + "m"
         if ((temporary*1000000)>1):
-            return str(int(temporary*1000000)) + "u"
+            return str(round(temporary*1000000,2)) + "u"
         if ((temporary*1000000000)>1):
-            return str(int(temporary*1000000000)) + "n"
+            return str(round(temporary*1000000000,2)) + "n"
         
 
     def ac_data_processing(dataframe):
@@ -987,6 +993,8 @@ class simulation_data_processing:
         PSRR_minus = DC_gain - dataframe.iloc[index_closest_to_zero,7]
 
         return DC_gain,bandwith,phase_margin,CMRR,PSRR_plus,PSRR_minus
+
+    
         
 
         
