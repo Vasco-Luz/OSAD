@@ -1,0 +1,47 @@
+** sch_path: /home/vasco/Desktop/OSAD/my_ip/testbenches_sky/transcondutance_cell/test.sch
+**.subckt test
+V1 VDD GND VDD
+V2 VSS GND VSS
+XM2 net4 net3 net2 net2 sky130_fd_pr__pfet_g5v0d10v5 L=(3.965083855086511, 0.1) W=(10.054178153954874, 0.1) nf=(11.070960501057904, 2) ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=(69.07261249257537, 2) m=1
+XM1 net3 net3 net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=(3.965083855086511, 0.1) W=(10.054178153954874, 0.1) nf=(11.070960501057904, 2) ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=(69.07261249257537, 2) m=1
+XM4 net4 net4 net5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=(1.7081837795056356, 0.1) W=(4.609341910189159, 0.1) nf=(7.6113707524610055, 2) ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(9.945097124062666, 2) m=1
+XM3 net3 net4 net6 VSS sky130_fd_pr__nfet_g5v0d10v5 L=(1.7081837795056356, 0.1) W=(4.609341910189159, 0.1) nf=(7.6113707524610055, 2) ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(9.945097124062666, 2) m=1
+XM5 net6 net5 net7 VSS sky130_fd_pr__nfet_g5v0d10v5 L=(2.546836075152881, 0.1) W=(4.5099122520837405, 0.1) nf=(8.291577938274187, 2) ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(19.258833624994253, 2, 19.258833624994253, 2, 19.258833624994253, 2, 19.258833624994253, 2) m=4
+XR6 net8 net7 net8 sky130_fd_pr__res_xhigh_po_0p35 L=0.35 mult=1 m=1
+Vmeas VDD net1 0
+.save i(vmeas)
+Vmeas1 VDD net2 0
+.save i(vmeas1)
+XM6 net5 net5 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=(2.546836075152881, 0.1) W=(4.5099122520837405, 0.1) nf=(8.291577938274187, 2) ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=(19.258833624994253, 2) m=1
+**** begin user architecture code
+.lib /home/vasco/PDK/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+.Temp 27
+.param VDD = 5
+.param VSS = 0
+
+.control
+save all
+
+dc Temp -40 125 1
+plot i(Vmeas) i(Vmeas1)
+
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
