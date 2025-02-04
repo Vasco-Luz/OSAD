@@ -880,7 +880,7 @@ class single_trans:
 
 class automation_support:
     def random_value(min_val,max_value,number_of_digits):
-        return random.uniform(min_val, max_value), number_of_digits
+        return round(random.uniform(min_val, max_value), number_of_digits)
     
 
 

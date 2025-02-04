@@ -145,20 +145,20 @@ class transcondutance_cell_PMOS:
     def create_random_individual(W_min_pmos_val:float,L_min_pmos_val:float,W_min_nmos_upper_val:float,L_min_nmos_upper_val:float
                                 ,W_min_nmos_down_val:float,L_min_nmos_down_val:float,p_model:str,n_upper_model:str,n_down_model:str
                                 ,res_w_min_val:float,res_l_min_val:float,res_1_model:str):
-        W_M_1_2 = automation_support.random_value(W_min_pmos_val,20,0.1)
-        L_M_1_2 = automation_support.random_value(L_min_pmos_val,8,0.1)
-        m_M_1_2 = automation_support.random_value(2,80,2)
-        W_M_3_4 = automation_support.random_value(W_min_nmos_upper_val,20,0.1)
-        L_M_3_4 = automation_support.random_value(L_min_nmos_upper_val,8,0.1)
-        m_M_3_4 = automation_support.random_value(2,80,2)
-        W_M_5_6 = automation_support.random_value(W_min_nmos_down_val,20,0.1)
-        L_M_5_6 = automation_support.random_value(L_min_nmos_down_val,8,0.1)
-        m_M_5_6 = automation_support.random_value(2,80,2)
-        nf_M_1_2 = automation_support.random_value(2,16,2)
-        nf_M_3_4 = automation_support.random_value(2,16,2)
-        nf_M_5_6 = automation_support.random_value(2,16,2)
+        W_M_1_2 = automation_support.random_value(W_min_pmos_val,3,1)
+        L_M_1_2 = automation_support.random_value(L_min_pmos_val,3,1)
+        m_M_1_2 = int(automation_support.random_value(2,4,0))
+        W_M_3_4 = automation_support.random_value(W_min_nmos_upper_val,3,1)
+        L_M_3_4 = automation_support.random_value(L_min_nmos_upper_val,3,1)
+        m_M_3_4 = int(automation_support.random_value(2,4,0))
+        W_M_5_6 = automation_support.random_value(W_min_nmos_down_val,3,1)
+        L_M_5_6 = automation_support.random_value(L_min_nmos_down_val,3,1)
+        m_M_5_6 = int(automation_support.random_value(2,4,0))
+        nf_M_1_2 = int(automation_support.random_value(2,8,0))
+        nf_M_3_4 = int(automation_support.random_value(2,8,0))
+        nf_M_5_6 = int(automation_support.random_value(2,8,0))
         res_1_w  = 1
-        res_1_l  = automation_support.random_value(res_l_min_val,50,0.1)
+        res_1_l  = automation_support.random_value(res_l_min_val,50,1)
         res_1_m  = 1
         ratio    = 4
         return transcondutance_cell_PMOS(W_M_1_2, L_M_1_2, m_M_1_2, W_M_3_4, L_M_3_4, m_M_3_4, W_M_5_6, L_M_5_6, m_M_5_6,nf_M_1_2,
@@ -166,53 +166,52 @@ class transcondutance_cell_PMOS:
 
     
     def create_spice_simulation(self,supply: float,vss:float):
+        a = int(round(self.m_M_5_6*self.ratio,0))
         spice_text = f"""** sch_path: /home/vasco/Desktop/OSAD/my_ip/testbenches_sky/transcondutance_cell/test.sch
 **.subckt test
 V1 VDD GND VDD
 V2 VSS GND VSS
 XM2 net4 net3 net2 net2 sky130_fd_pr__{self.P_model} L={self.L_M_1_2} W={self.W_M_1_2} nf={self.nf_M_1_2} ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult={self.m_M_1_2} m=1
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult={self.m_M_1_2} m={self.m_M_1_2}
 XM1 net3 net3 net1 net1 sky130_fd_pr__{self.P_model} L={self.L_M_1_2} W={self.W_M_1_2} nf={self.nf_M_1_2} ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
-+ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult={self.m_M_1_2} m=1
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult={self.m_M_1_2} m={self.m_M_1_2}
 XM4 net4 net4 net5 VSS sky130_fd_pr__{self.N_upper_model} L={self.L_M_3_4} W={self.W_M_3_4} nf={self.nf_M_3_4} ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult={self.m_M_3_4} m=1
++ sa=0 sb=0 sd=0 mult={self.m_M_3_4} m={self.m_M_3_4}
 XM3 net3 net4 net6 VSS sky130_fd_pr__{self.N_upper_model} L={self.L_M_3_4} W={self.W_M_3_4} nf={self.nf_M_3_4} ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult={self.m_M_3_4} m=1
++ sa=0 sb=0 sd=0 mult={self.m_M_3_4} m={self.m_M_3_4}
 XM5 net6 net5 net7 VSS sky130_fd_pr__{self.N_down_model} L={self.L_M_5_6} W={self.W_M_5_6} nf={self.nf_M_5_6} ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult={self.m_M_5_6*self.ratio} m=4
-XR6 net8 net7 net8 sky130_fd_pr__{self.res_1_model} L=0.35 mult=1 m=1
++ sa=0 sb=0 sd=0 mult={a} m={a}
+XR6 VSS net7 VSS sky130_fd_pr__{self.res_1_model} L={self.res_1_l} mult=1 m=1
 Vmeas VDD net1 0
 .save i(vmeas)
 Vmeas1 VDD net2 0
 .save i(vmeas1)
 XM6 net5 net5 VSS VSS sky130_fd_pr__{self.N_down_model} L={self.L_M_5_6} W={self.W_M_5_6} nf={self.nf_M_5_6} ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult={self.m_M_5_6} m=1
++ sa=0 sb=0 sd=0 mult={self.m_M_5_6} m={self.m_M_5_6}
 **** begin user architecture code
 .lib /home/vasco/PDK/sky130A/libs.tech/combined/sky130.lib.spice tt
-
-
 .Temp 27
 .param VDD = {supply}
 .param VSS = {vss}
-
 .control
 save all
-
 dc Temp -40 125 1
 plot i(Vmeas) i(Vmeas1)
-
+wrdata transcondutance .csv i(Vmeas) i(Vmeas1)
 .endc
-
 **** end user architecture code
 **.ends
 .GLOBAL GND
 .end"""
         with open("transcondutance_cell_PMOS.spice", "w") as file:
             file.write(spice_text)
+        sim_comands.ngspice_sim("transcondutance_cell_PMOS.spice")
+
+        df_transcondutance = pd.read_csv("transcondutance.csv", delim_whitespace=True, header=None)
 

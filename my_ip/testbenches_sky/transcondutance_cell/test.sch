@@ -171,7 +171,7 @@ L=0.35
 model=res_high_po_0p35
 spiceprefix=X
  mult=1}
-C {devices/lab_pin.sym} 510 310 0 1 {name=p9 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 500 310 0 1 {name=p9 sig_type=std_logic lab=VSS
 }
 C {ammeter.sym} 500 -400 0 0 {name=Vmeas savecurrent=true}
 C {ammeter.sym} 700 -400 0 0 {name=Vmeas1 savecurrent=true}
