@@ -146,19 +146,19 @@ class transcondutance_cell_PMOS:
                                 ,W_min_nmos_down_val:float,L_min_nmos_down_val:float,p_model:str,n_upper_model:str,n_down_model:str
                                 ,res_w_min_val:float,res_l_min_val:float,res_1_model:str):
         W_M_1_2 = automation_support.random_value(W_min_pmos_val,3,1)
-        L_M_1_2 = automation_support.random_value(L_min_pmos_val,3,1)
+        L_M_1_2 = automation_support.random_value(L_min_pmos_val,5,1)
         m_M_1_2 = int(automation_support.random_value(2,4,0))
-        W_M_3_4 = automation_support.random_value(W_min_nmos_upper_val,3,1)
-        L_M_3_4 = automation_support.random_value(L_min_nmos_upper_val,3,1)
+        W_M_3_4 = automation_support.random_value(W_min_nmos_upper_val,5,1)
+        L_M_3_4 = automation_support.random_value(L_min_nmos_upper_val,5,1)
         m_M_3_4 = int(automation_support.random_value(2,4,0))
-        W_M_5_6 = automation_support.random_value(W_min_nmos_down_val,3,1)
-        L_M_5_6 = automation_support.random_value(L_min_nmos_down_val,3,1)
+        W_M_5_6 = automation_support.random_value(W_min_nmos_down_val,5,1)
+        L_M_5_6 = automation_support.random_value(L_min_nmos_down_val,5,1)
         m_M_5_6 = int(automation_support.random_value(2,4,0))
         nf_M_1_2 = int(automation_support.random_value(2,8,0))
         nf_M_3_4 = int(automation_support.random_value(2,8,0))
         nf_M_5_6 = int(automation_support.random_value(2,8,0))
         res_1_w  = 1
-        res_1_l  = automation_support.random_value(res_l_min_val,50,1)
+        res_1_l  = automation_support.random_value(res_l_min_val,80,1)
         res_1_m  = 1
         ratio    = 4
         return transcondutance_cell_PMOS(W_M_1_2, L_M_1_2, m_M_1_2, W_M_3_4, L_M_3_4, m_M_3_4, W_M_5_6, L_M_5_6, m_M_5_6,nf_M_1_2,
@@ -203,7 +203,7 @@ XM6 net5 net5 VSS VSS sky130_fd_pr__{self.N_down_model} L={self.L_M_5_6} W={self
 save all
 dc Temp -40 125 1
 plot i(Vmeas) i(Vmeas1)
-wrdata transcondutance .csv i(Vmeas) i(Vmeas1)
+wrdata transcondutance.csv i(Vmeas) i(Vmeas1) v(net3)
 .endc
 **** end user architecture code
 **.ends
@@ -212,6 +212,19 @@ wrdata transcondutance .csv i(Vmeas) i(Vmeas1)
         with open("transcondutance_cell_PMOS.spice", "w") as file:
             file.write(spice_text)
         sim_comands.ngspice_sim("transcondutance_cell_PMOS.spice")
+    
 
-        df_transcondutance = pd.read_csv("transcondutance.csv", delim_whitespace=True, header=None)
+    def process_dc_data(self):
+
+        data = pd.read_csv("transcondutance.csv", delim_whitespace=True, header=None)
+        a = abs(data.iloc[67,1] - data.iloc[67,3])
+        b = (data.iloc[67,1] + data.iloc[67,3]/2)
+        c = (a*100)/b
+
+        return data.iloc[67,1],c,data.iloc[67,5]
+    
+
+
+        
+
 
