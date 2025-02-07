@@ -1,0 +1,87 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1738954372
+<< nwell >>
+rect -835 -177 6229 1269
+<< mvnsubdiff >>
+rect -769 1169 -709 1203
+rect 6103 1169 6163 1203
+rect -769 1143 -735 1169
+rect -769 -77 -735 -51
+rect 6129 1143 6163 1169
+rect 6129 -77 6163 -51
+rect -769 -111 -709 -77
+rect 6103 -111 6163 -77
+<< mvnsubdiffcont >>
+rect -709 1169 6103 1203
+rect -769 -51 -735 1143
+rect 6129 -51 6163 1143
+rect -709 -111 6103 -77
+<< locali >>
+rect -769 1169 -709 1203
+rect 6103 1169 6163 1203
+rect -769 1143 -735 1169
+rect -769 -77 -735 -51
+rect 6129 1143 6163 1169
+rect 6129 -77 6163 -51
+rect -769 -111 -709 -77
+rect 6103 -111 6163 -77
+<< viali >>
+rect -700 1203 6100 1300
+rect -700 1170 6100 1203
+<< metal1 >>
+rect -900 1300 6200 1400
+rect -900 1170 -700 1300
+rect 6100 1170 6200 1300
+rect -900 1100 6200 1170
+rect -572 648 44 696
+use sky130_fd_pr__pfet_01v8_4UBS8G  sky130_fd_pr__pfet_01v8_4UBS8G_0
+timestamp 1738953643
+transform 1 0 -264 0 1 850
+box -394 -214 394 516
+use sky130_fd_pr__pfet_01v8_4UBS8G  sky130_fd_pr__pfet_01v8_4UBS8G_1
+timestamp 1738953643
+transform 1 0 5658 0 1 850
+box -394 -214 394 516
+use sky130_fd_pr__pfet_01v8_4VBS8Q  sky130_fd_pr__pfet_01v8_4VBS8Q_0
+timestamp 1738954038
+transform 1 0 723 0 1 850
+box -723 -214 723 324
+use sky130_fd_pr__pfet_01v8_4VBS8Q  sky130_fd_pr__pfet_01v8_4VBS8Q_1
+timestamp 1738954038
+transform 1 0 2039 0 1 850
+box -723 -214 723 324
+use sky130_fd_pr__pfet_01v8_4VBS8Q  sky130_fd_pr__pfet_01v8_4VBS8Q_2
+timestamp 1738954038
+transform 1 0 3355 0 1 850
+box -723 -214 723 324
+use sky130_fd_pr__pfet_01v8_4VBS8Q  sky130_fd_pr__pfet_01v8_4VBS8Q_3
+timestamp 1738954038
+transform 1 0 4671 0 1 850
+box -723 -214 723 324
+use sky130_fd_pr__pfet_g5v0d10v5_5VBS4F  sky130_fd_pr__pfet_g5v0d10v5_5VBS4F_0
+timestamp 1738954372
+transform 1 0 4671 0 1 214
+box -753 -350 753 644
+use sky130_fd_pr__pfet_g5v0d10v5_5VBS4F  sky130_fd_pr__pfet_g5v0d10v5_5VBS4F_2
+timestamp 1738954372
+transform 1 0 2039 0 1 214
+box -753 -350 753 644
+use sky130_fd_pr__pfet_g5v0d10v5_5VBS4F  sky130_fd_pr__pfet_g5v0d10v5_5VBS4F_3
+timestamp 1738954372
+transform 1 0 3355 0 1 214
+box -753 -350 753 644
+use sky130_fd_pr__pfet_g5v0d10v5_5VBS4F  sky130_fd_pr__pfet_g5v0d10v5_5VBS4F_4
+timestamp 1738954372
+transform 1 0 723 0 1 214
+box -753 -350 753 644
+use sky130_fd_pr__pfet_g5v0d10v5_Q6CS4P  sky130_fd_pr__pfet_g5v0d10v5_Q6CS4P_0
+timestamp 1738953779
+transform 1 0 5658 0 1 214
+box -424 -214 424 668
+use sky130_fd_pr__pfet_g5v0d10v5_Q6CS4P  sky130_fd_pr__pfet_g5v0d10v5_Q6CS4P_1
+timestamp 1738953779
+transform 1 0 -264 0 1 214
+box -424 -214 424 668
+<< end >>

@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -43,7 +42,6 @@ N 370 -150 410 -150 {
 lab=VOUT}
 N 460 -270 460 -210 {
 lab=#net2}
-C {/home/vasco/Desktop/OSAD/my_ip/testbenches_sky/single_ended_OTAS_testbenches/UUT.sym} 460 -180 0 0 {name=x1}
 C {devices/lab_pin.sym} -40 -40 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -40 30 0 0 {name=V1 value="VDD"
 
@@ -91,3 +89,4 @@ C {devices/vsource.sym} 270 300 0 0 {name=V6 value= "V_OFF"}
 C {devices/lab_pin.sym} -110 -40 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
 C {ammeter.sym} 460 -300 0 0 {name=Vmeas savecurrent=true}
+C {Sky130A/UUT_sky/UUT_VA_sky.sym} 460 -180 0 0 {name=x1}

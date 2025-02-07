@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -175,7 +174,6 @@ N 1570 470 1570 530 {
 lab=#net8}
 N 1160 280 1160 290 {
 lab=#net7}
-C {/home/vasco/Desktop/OSAD/my_ip/testbenches_sky/single_ended_OTAS_testbenches/UUT.sym} 180 -200 0 0 {name=x1}
 C {devices/lab_pin.sym} -320 -60 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -320 10 0 0 {name=V1 value="VDD"
 
@@ -236,7 +234,6 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 300 -90 0 0 {name=p9 sig_type=std_logic lab=VSS
 }
-C {/home/vasco/Desktop/OSAD/my_ip/testbenches_sky/single_ended_OTAS_testbenches/UUT.sym} 540 140 0 0 {name=x2}
 C {devices/lab_pin.sym} 540 10 0 0 {name=p10 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 540 230 0 0 {name=p11 sig_type=std_logic lab=VSS
 }
@@ -254,7 +251,6 @@ C {devices/vsource.sym} 270 390 0 0 {name=V8 value= "V_OFF"}
 C {devices/vsource.sym} 440 550 0 0 {name=V9 value= "VCM"}
 C {devices/gnd.sym} 440 600 0 0 {name=l4 lab=GND}
 C {devices/vsource.sym} 440 490 0 0 {name=V7 value= "ac 1"}
-C {/home/vasco/Desktop/OSAD/my_ip/testbenches_sky/single_ended_OTAS_testbenches/UUT.sym} 1160 160 0 0 {name=x3}
 C {devices/lab_pin.sym} 1160 30 0 0 {name=p15 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1280 170 1 0 {name=p17 sig_type=std_logic lab=VOUT_a-
 
@@ -272,7 +268,6 @@ C {devices/gnd.sym} 1060 620 0 0 {name=l5 lab=GND}
 C {devices/vsource.sym} 1160 320 0 0 {name=V13 value= "ac 1"}
 C {devices/lab_pin.sym} 1160 390 0 0 {name=p19 sig_type=std_logic lab=VSS
 }
-C {/home/vasco/Desktop/OSAD/my_ip/testbenches_sky/single_ended_OTAS_testbenches/UUT.sym} 1670 150 0 0 {name=x4}
 C {devices/lab_pin.sym} 1670 20 0 0 {name=p16 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1790 160 1 0 {name=p20 sig_type=std_logic lab=VOUT_a+
 
@@ -290,3 +285,7 @@ C {devices/gnd.sym} 1570 610 0 0 {name=l6 lab=GND}
 C {devices/vsource.sym} 1670 90 2 0 {name=V15 value= "ac 1"}
 C {devices/lab_pin.sym} 1670 310 0 0 {name=p22 sig_type=std_logic lab=VSS
 }
+C {Sky130A/UUT_sky/UUT_VA_sky.sym} 180 -200 0 0 {name=x1}
+C {Sky130A/UUT_sky/UUT_VA_sky.sym} 540 140 0 0 {name=x2}
+C {Sky130A/UUT_sky/UUT_VA_sky.sym} 1160 160 0 0 {name=x3}
+C {Sky130A/UUT_sky/UUT_VA_sky.sym} 1670 150 0 0 {name=x4}

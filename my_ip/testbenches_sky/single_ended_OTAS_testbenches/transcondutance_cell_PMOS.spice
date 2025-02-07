@@ -2,29 +2,29 @@
 **.subckt test
 V1 VDD GND VDD
 V2 VSS GND VSS
-XM2 net4 net3 net2 net2 sky130_fd_pr__pfet_g5v0d10v5 L=2.0 W=2.4 nf=3 ad='int((nf+1)/2) * W/nf * 0.29'
+XM2 net4 net3 net2 net2 sky130_fd_pr__pfet_g5v0d10v5 L=2.8 W=2.6 nf=5 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
-XM1 net3 net3 net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=2.0 W=2.4 nf=3 ad='int((nf+1)/2) * W/nf * 0.29'
+XM1 net3 net3 net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=2.8 W=2.6 nf=5 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
-XM4 net4 net4 net5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.7 W=2.4 nf=3 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM4 net4 net4 net5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=3.6 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=3 m=3
-XM3 net3 net4 net6 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.7 W=2.4 nf=3 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM3 net3 net4 net6 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.5 W=3.6 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=3 m=3
-XM5 net6 net5 net7 VSS sky130_fd_pr__nfet_g5v0d10v5 L=4.7 W=4.4 nf=7 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM5 net6 net5 net7 VSS sky130_fd_pr__nfet_g5v0d10v5 L=4.5 W=2.5 nf=3 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=12 m=12
-XR6 VSS net7 VSS sky130_fd_pr__res_high_po_0p35 L=6.2 mult=1 m=1
++ sa=0 sb=0 sd=0 mult=8 m=8
+XR6 VSS net7 VSS sky130_fd_pr__res_high_po_0p35 L=17.4 mult=1 m=1
 Vmeas VDD net1 0
 .save i(vmeas)
 Vmeas1 VDD net2 0
 .save i(vmeas1)
-XM6 net5 net5 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=4.7 W=4.4 nf=7 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM6 net5 net5 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=4.5 W=2.5 nf=3 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=3 m=3
++ sa=0 sb=0 sd=0 mult=2 m=2
 **** begin user architecture code
 .lib /home/vasco/PDK/sky130A/libs.tech/combined/sky130.lib.spice tt
 .Temp 27

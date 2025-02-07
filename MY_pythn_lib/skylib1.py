@@ -51,6 +51,20 @@ class sim_comands:
         subprocess.run(xschem_command, shell=True)#realização do comando
         return full_path_spice_file
 
+
+    def write_corner(spice_path,corner):
+        with open(spice_path, 'r') as file:
+            lines = file.readlines()
+        for i, line in enumerate(lines):
+            match = re.match(r'(\s*\.lib\s+\S+\s+)(\S+)', line)
+            if match:
+                lines[i] = match.group(1) + corner + '\n'
+                break
+    
+        with open(spice_path, 'w') as file:
+            file.writelines(lines)
+
+
     def write_MOS_corner(spice_path,corner): #writes the MOS corner in the file in the spice path
         target_text = "sky130B/libs.tech/ngspice/corners/"
         corner = corner + ".spice"

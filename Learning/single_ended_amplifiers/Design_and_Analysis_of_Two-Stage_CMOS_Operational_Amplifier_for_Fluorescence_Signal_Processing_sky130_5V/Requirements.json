@@ -1,9 +1,9 @@
 {
-    "VDD"               :                 "1.8"  ,
+    "VDD"               :                 "5"  ,
     "VSS"               :                 "0"    ,
     "V_OFF_required"    :                 "1m"   ,
     "Power_required"    :                 "2m"   ,
-    "ICMR_required"     :                 "0-1.2",
+    "ICMR_required"     :                 "0-4",
     "Bandwith_required" :                 "40M"  ,
     "DC gain_required"  :                 "80dB" ,
     "CMRR_required"     :                 "60dB" ,

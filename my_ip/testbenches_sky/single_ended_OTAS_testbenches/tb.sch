@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -59,14 +58,14 @@ L 4 -690 3580 -690 4030 {}
 L 4 -690 3580 -490 3580 {}
 B 2 940 -700 1740 -300 {flags=graph,unlocked
 
-y2=21
+y2=81
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
 x1=0
-x2=10.699
+x2=10.69897
 divx=10
 subdivx=8
 xlabmag=1.0
@@ -77,7 +76,7 @@ dataset=-1
 unitx=1
 logx=1
 logy=0
-y1=-110
+y1=-41
 color=4
 node="\\"Differencial gain ; vout db20() %0\\""
 
@@ -85,7 +84,7 @@ sim_type=ac
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 940 -300 1740 100 {flags=graph,unlocked
-y1=7.2
+y1=15
 y2=360
 ypos1=0
 ypos2=2
@@ -499,7 +498,7 @@ N -1500 -390 -1500 -350 {
 lab=VSS}
 N -1190 -240 -1190 -200 {
 lab=VSS}
-N -1090 -390 -1090 -360 {
+N -1090 -460 -1090 -430 {
 lab=VIN+}
 N -1280 -300 -1090 -300 {
 lab=#net1}
@@ -703,6 +702,7 @@ N -310 3630 -310 3670 {
 lab=#net15}
 N -600 3840 -420 3840 {
 lab=#net15}
+N -1090 -370 -1090 -360 {lab=#net16}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=1.8
 
@@ -717,9 +717,9 @@ C {devices/vsource.sym} -1500 -320 0 0 {name=V2 value=0
 C {devices/gnd.sym} -1500 -270 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} -1190 -270 0 0 {name=V3 value=0.9}
 C {devices/lab_pin.sym} -1190 -200 0 0 {name=p7 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -1090 -390 0 0 {name=p12 sig_type=std_logic lab=VIN+
+C {devices/lab_pin.sym} -1090 -460 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} -1090 -330 0 0 {name=V4 value= "ac 0.5 sin (0 550m 100k)"}
+C {devices/vsource.sym} -1090 -400 0 0 {name=V4 value= "ac 0.5 sin (0 550m 100k)"}
 C {devices/vsource.sym} -1280 -330 0 0 {name=V5 value="ac -0.5"}
 C {devices/lab_pin.sym} -1280 -390 0 0 {name=p13 sig_type=std_logic lab=VIN-
 }
@@ -913,7 +913,7 @@ device=resistor
 m=1}
 C {devices/isource.sym} -600 3880 0 0 {name=I0 value="ac 20u sin (0 1u 100k)"}
 C {devices/lab_pin.sym} -600 3950 0 0 {name=p47 sig_type=std_logic lab=VSS}
-C {devices/launcher.sym} 490 -730 0 0 {name=h15
+C {devices/launcher.sym} 480 -730 0 0 {name=h15
 descr="Annotate OP" 
 tclcommand="set show_hidden_texts 1; xschem annotate_op"
 }
@@ -930,3 +930,4 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -60 3950 0 0 {name=p48 sig_type=std_logic lab=VSS}
 C {Sky130A/single ended amplifiers/VA001_PMOS_1.8_sky130A.sym} -220 -400 0 0 {name=x1}
+C {devices/vsource.sym} -1090 -330 0 0 {name=V17 value= 100u}

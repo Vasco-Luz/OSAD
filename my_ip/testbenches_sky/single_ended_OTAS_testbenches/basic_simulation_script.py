@@ -9,9 +9,6 @@ from skylib1 import simulation_data_processing
 import json
 
 
-
-
-
 json_file = next((file for file in os.listdir('.') if file.endswith('.json')), None)
 
 if json_file:
