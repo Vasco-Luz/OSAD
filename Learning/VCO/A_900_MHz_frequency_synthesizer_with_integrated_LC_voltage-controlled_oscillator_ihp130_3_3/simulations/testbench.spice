@@ -1,0 +1,57 @@
+** sch_path: /foss/designs/OSAD/Learning/VCO/A_900_MHz_frequency_synthesizer_with_integrated_LC_voltage-controlled_oscillator_ihp130_3_3/testbench.sch
+**.subckt testbench
+XQ2 VOUT net10 net1 VSS npn13G2v Nx=1
+V1 VDD GND 3.3
+V2 VSS GND 0
+XR1 VSS net1 rsil w=0.5e-6 l=5.5e-6 m=1 b=0
+XQ3 net4 net8 net3 VSS npn13G2v Nx=2
+Vmeas VDD net4 0
+.save i(vmeas)
+XC3 VDD VOUT cap_cmim w=41.0e-6 l=41.0e-6 m=1
+XC1 VOUT VSS cap_cmim w=41.0e-6 l=41.0e-6 m=1
+XQ4 net5 net7 net6 pnpMPA a=3e-12 p=8e-06 m=4
+Vmeas1 net5 VSS 0
+.save i(vmeas1)
+XR3 VSS net3 rppd w=0.5e-6 l=2.1e-6 m=1 b=0
+XR4 net6 VDD rppd w=0.5e-6 l=0.61e-6 m=1 b=0
+XQ1 VOUT net9 net2 pnpMPA a=3e-12 p=8e-06 m=4
+XR2 net2 VDD rppd w=0.5e-6 l=0.61e-6 m=1 b=0
+XC2 net8 VSS cap_cmim w=15.0e-6 l=15.0e-6 m=1
+R5 net8 VN 10 m=1
+R6 net7 VP 10 m=1
+V19 VN VSS PULSE(0 3.3 50n 100p 100p 450n 1000n)
+V3 VP VSS PULSE(3.3 0 0n 100p 100p 450n 1000n)
+R7 net9 net11 10 m=1
+R8 net10 VN 10 m=1
+XC4 net10 VSS cap_cmim w=15.0e-6 l=15.0e-6 m=1
+**** begin user architecture code
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerHBT.lib hbt_typ
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
+
+
+
+.param temp=27
+.control
+.param mc_ok = 0
+save all
+dc V5 0 3.3 0.1
+plot i(Vmeas) i(Vmeas1)
+tran 10p 10u
+plot i(Vmeas) i(Vmeas1)
+plot v(VN) v(VP)
+plot v(VOUT)
+
+
+.endc
+
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

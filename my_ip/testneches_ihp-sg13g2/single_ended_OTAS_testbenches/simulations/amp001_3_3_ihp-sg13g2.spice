@@ -1,0 +1,21 @@
+** sch_path: /foss/designs/OSAD/my_ip/LIB/ihp-sg13g2/Amplifiers/amp001_3_3_ihp-sg13g2.sch
+**.subckt amp001_3_3_ihp-sg13g2 VDD VSS VIN- VIN+ VOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VIN-
+*.iopin VIN+
+*.iopin VOUT
+XQ3 net1 VIN+ net2 VSS npn13G2 Nx=1
+XR3 net1 VDD rhigh w=1e-6 l=2e-6 m=1 b=0
+XR4 VSS net2 rppd w=0.5e-6 l=1.5e-6 m=1 b=0
+XQ4 VDD VIN- net2 VSS npn13G2 Nx=1
+XQ5 VOUT net1 net3 pnpMPA a={ 1.0u * 2.0u } p={ ( 1.0u + 2.0u ) * 2 } m=1
+XR5 net3 VDD rhigh w=2e-6 l=0.5e-6 m=1 b=0
+XR6 VSS VOUT rhigh w=0.5e-6 l=5.4e-6 m=1 b=0
+**** begin user architecture code
+type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+**** end user architecture code
+**.ends
+.end
