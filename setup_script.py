@@ -32,14 +32,24 @@ bashrc_path = os.path.expanduser("~/.bashrc")
 with open(bashrc_path, "r") as bashrc_file:
     bashrc_content = bashrc_file.read()
 
+
+# Part 3: Set up OSAD_PATH
+osad_path_command = f'export OSAD_PATH={script_directory}'
+if osad_path_command not in bashrc_content:
+    with open(bashrc_path, "a") as bashrc_file:
+        bashrc_file.write("\n" + osad_path_command)
+    os.system("source ~/.bashrc")
+
+
+
+
+
 if export_command not in bashrc_content:
     with open(bashrc_path, "a") as bashrc_file:
         bashrc_file.write("\n" + export_command)
     os.system("source ~/.bashrc")
 
-import os
-import subprocess
-import shutil
+
 
 # Get the current directory
 current_directory = os.getcwd()

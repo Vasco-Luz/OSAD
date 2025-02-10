@@ -1,0 +1,46 @@
+** sch_path: /home/vasco/Desktop/OSAD/my_ip/testneches_ihp-sg13g2/single_ended_OTAS_testbenches/tb.sch
+**.subckt tb
+V1 VDD GND 3.3
+V2 VSS GND 0
+V3 net1 VSS 1.65
+V4 VIN+ net1 ac 0.5 sin (0 1m 100k)
+V5 VIN- net1 ac -0.5
+C1 VOUT VSS 10p m=1
+XR1 Vout_1_stage VDD rhigh w=1e-6 l=2e-6 m=1 b=0
+XR2 VSS net2 rppd w=0.5e-6 l=1.5e-6 m=1 b=0
+XQ3 VOUT Vout_1_stage net3 pnpMPA
+XR3 net3 VDD rhigh w=2e-6 l=0.5e-6 m=1 b=0
+XR4 VSS VOUT rhigh w=0.5e-6 l=5.4e-6 m=1 b=0
+XQ4 Vout_1_stage VIN+ net2 VSS npn13G2l Nx=1 le=1.0e-6
+XQ1 VDD VIN- net2 VSS npn13G2l Nx=1 le=1.0e-6
+**** begin user architecture code
+
+.lib /home/vasco/PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerHBT.lib hbt_typ
+
+
+.lib /home/vasco/PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
+
+
+
+.param temp=27
+.control
+op
+ac dec 10 1 100G
+set appendwrite
+write tb.raw
+plot db(v(VOUT)) (180*ph(v(VOUT))/pi)
+dc V4 0 3.3 0.001
+set appendwrite
+tran 10ns 50u
+set appendwrite
+write tb.raw
+plot v(VOUT) V(VIN+)
+
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

@@ -555,11 +555,6 @@ plot v(VOUT) V(VIN+)
 .endc
 "}
 C {devices/lab_pin.sym} 480 -360 3 0 {name=p2 sig_type=std_logic lab=VDD}
-C {sg13g2_pr/npn13G2.sym} 170 -140 0 0 {name=Q1
-model=npn13G2
-spiceprefix=X
-Nx=1
-le=900e-9}
 C {devices/lab_pin.sym} 290 -140 3 0 {name=p3 sig_type=std_logic lab=VSS}
 C {sg13g2_pr/rhigh.sym} 190 -290 0 0 {name=R1
 w=1e-6
@@ -580,11 +575,6 @@ m=1
 }
 C {devices/lab_pin.sym} 280 120 3 0 {name=p16 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 700 -130 2 0 {name=p17 sig_type=std_logic lab=VOUT}
-C {sg13g2_pr/npn13G2.sym} 400 -140 0 1 {name=Q2
-model=npn13G2
-spiceprefix=X
-Nx=1
-le=900e-9}
 C {sg13g2_pr/pnpMPA.sym} 680 -230 0 0 {name=Q3
 model=pnpMPA
 spiceprefix=X
@@ -613,3 +603,13 @@ descr="load waves"
 tclcommand="xschem raw_read $netlist_dir/tb.raw tran "
 }
 C {devices/lab_pin.sym} 490 -140 0 1 {name=p5 sig_type=std_logic lab=VIN-}
+C {sg13g2_pr/npn13G2l.sym} 170 -140 0 0 {name=Q4
+model=npn13G2l
+spiceprefix=X
+Nx=1
+le=1.0e-6}
+C {sg13g2_pr/npn13G2l.sym} 400 -140 0 1 {name=Q1
+model=npn13G2l
+spiceprefix=X
+Nx=1
+le=1.0e-6}
