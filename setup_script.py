@@ -59,44 +59,44 @@ latex_source_dir = os.path.join(current_directory, "my_ip", "Documentation", "Do
 latex_source = os.path.join(latex_source_dir, "main.tex")
 
 # Check if the LaTeX source file exists
-if not os.path.exists(latex_source):
-    print(f"Error: The LaTeX source file does not exist at: {latex_source}")
-    exit(1)
+#if not os.path.exists(latex_source):
+#    print(f"Error: The LaTeX source file does not exist at: {latex_source}")
+#    exit(1)
 
-print(f"Attempting to compile LaTeX file at: {latex_source}")
+#print(f"Attempting to compile LaTeX file at: {latex_source}")
 
-try:
+#try:
     # Run pdflatex in the same directory as main.tex with a timeout
-    subprocess.run(
-        ["pdflatex", "--shell-escape", latex_source],
-        cwd=latex_source_dir,
-        check=True,
-        timeout=60  # 60 seconds timeout to avoid hanging indefinitely
-    )
-    print("PDF generated successfully.")
-except subprocess.CalledProcessError:
-    print("Error: LaTeX compilation failed.")
-except subprocess.TimeoutExpired:
-    print("Error: LaTeX compilation timed out.")
+#    subprocess.run(
+#        ["pdflatex", "--shell-escape", latex_source],
+#        cwd=latex_source_dir,
+#        check=True,
+#        timeout=60  # 60 seconds timeout to avoid hanging indefinitely
+#    )
+#    print("PDF generated successfully.")
+#except subprocess.CalledProcessError:
+#    print("Error: LaTeX compilation failed.")
+#except subprocess.TimeoutExpired:
+#    print("Error: LaTeX compilation timed out.")
 
 # Part 4: Copy the PDF to the desired output directory
-output_directory = os.path.join(script_directory, "my_ip", "Documentation")
-pdf_source = os.path.join(latex_source_dir, "main.pdf")
-pdf_destination = os.path.join(output_directory, "main.pdf")
+#output_directory = os.path.join(script_directory, "my_ip", "Documentation")
+#pdf_source = os.path.join(latex_source_dir, "main.pdf")
+#pdf_destination = os.path.join(output_directory, "main.pdf")
 
-print(f"Attempting to copy the PDF from {pdf_source} to {pdf_destination}")
+#print(f"Attempting to copy the PDF from {pdf_source} to {pdf_destination}")
 
-try:
+#try:
     # Check if the PDF file exists before copying
-    if os.path.exists(pdf_source):
-        print(f"PDF file found at {pdf_source}. Proceeding with copy.")
-        shutil.copy(pdf_source, pdf_destination)
-        print(f"PDF copied to {output_directory} successfully.")
-    else:
-        print(f"Error: PDF file not found at {pdf_source}. Ensure LaTeX compiled the PDF correctly.")
-except FileNotFoundError:
-    print(f"Error: PDF file not found at {pdf_source}. Check if LaTeX compilation succeeded.")
-except PermissionError:
-    print(f"Permission Error: Unable to access {pdf_source} or {pdf_destination}. Check file permissions.")
-except Exception as e:
-    print(f"An unexpected error occurred while copying the PDF: {e}")
+#    if os.path.exists(pdf_source):
+#        print(f"PDF file found at {pdf_source}. Proceeding with copy.")
+#        shutil.copy(pdf_source, pdf_destination)
+#        print(f"PDF copied to {output_directory} successfully.")
+#    else:
+#        print(f"Error: PDF file not found at {pdf_source}. Ensure LaTeX compiled the PDF correctly.")
+#except FileNotFoundError:
+#    print(f"Error: PDF file not found at {pdf_source}. Check if LaTeX compilation succeeded.")
+#except PermissionError:
+#    print(f"Permission Error: Unable to access {pdf_source} or {pdf_destination}. Check file permissions.")
+#except Exception as e:
+#    print(f"An unexpected error occurred while copying the PDF: {e}")

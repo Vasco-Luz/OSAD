@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -39,8 +38,8 @@ sim_type=ac
 rawfile=$netlist_dir/tb.raw
 autoload=1}
 B 2 2410 -430 3210 -30 {flags=graph,unlocked
-y1=1
-y2=360
+y1=-34.9
+y2=324.1
 ypos1=0
 ypos2=2
 divy=10
@@ -451,54 +450,13 @@ N -1280 -300 -1090 -300 {
 lab=#net1}
 N -1280 -390 -1280 -360 {
 lab=VIN-}
-N 900 -20 900 10 {
+N 200 -280 200 -230 {lab=VDD}
+N 200 -150 200 -110 {lab=VSS}
+N 120 -210 150 -210 {lab=VIN-}
+N 120 -170 150 -170 {lab=VIN+}
+N 270 -190 540 -190 {lab=VOUT}
+N 540 -130 540 -100 {
 lab=VSS}
-N 190 -140 380 -140 {
-lab=VSS}
-N 190 -360 190 -320 {
-lab=VDD}
-N 190 -360 380 -360 {
-lab=VDD}
-N 380 -360 380 -170 {
-lab=VDD}
-N 190 -230 190 -170 {
-lab=Vout_1_stage}
-N 80 -140 150 -140 {
-lab=VIN+}
-N 190 -110 190 -20 {
-lab=#net2}
-N 280 -20 380 -20 {
-lab=#net2}
-N 380 -110 380 -20 {
-lab=#net2}
-N 280 -20 280 30 {
-lab=#net2}
-N 190 -20 280 -20 {
-lab=#net2}
-N 280 90 280 120 {
-lab=VSS}
-N 190 -230 660 -230 {
-lab=Vout_1_stage}
-N 190 -260 190 -230 {
-lab=Vout_1_stage}
-N 380 -360 700 -360 {
-lab=VDD}
-N 700 -360 700 -340 {
-lab=VDD}
-N 700 -280 700 -260 {
-lab=#net3}
-N 700 -80 700 10 {
-lab=VOUT}
-N 280 120 700 120 {
-lab=VSS}
-N 700 70 700 120 {
-lab=VSS}
-N 700 -80 900 -80 {
-lab=VOUT}
-N 700 -200 700 -80 {
-lab=VOUT}
-N 420 -140 490 -140 {
-lab=VIN-}
 C {devices/lab_pin.sym} -1430 -390 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1430 -320 0 0 {name=V1 value=3.3
 
@@ -529,12 +487,6 @@ format="tcleval( @value )"
 value="
 .lib $::SG13G2_MODELS/cornerRES.lib res_typ
 "}
-C {devices/capa.sym} 900 -50 0 0 {name=C1
-m=1
-value=10p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/lab_pin.sym} 900 10 0 0 {name=p10 sig_type=std_logic lab=VSS}
 C {devices/code_shown.sym} -1130 -830 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
@@ -598,6 +550,8 @@ b=0
 m=1
 }
 C {devices/lab_pin.sym} 590 -230 3 0 {name=p4 sig_type=std_logic lab=Vout_1_stage}
+C {devices/lab_pin.sym} 120 -170 0 0 {name=p14 sig_type=std_logic lab=VIN+}
+C {devices/lab_pin.sym} 340 -190 2 0 {name=p17 sig_type=std_logic lab=VOUT}
 C {devices/launcher.sym} 3730 -1145 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb.raw tran "
@@ -613,3 +567,13 @@ model=npn13G2l
 spiceprefix=X
 Nx=1
 le=1.0e-6}
+C {devices/lab_pin.sym} 120 -210 2 1 {name=p5 sig_type=std_logic lab=VIN-}
+C {ihp-sg13g2/Amplifiers/amp001_3_3_ihp-sg13g2.sym} 200 -190 0 0 {name=x1}
+C {devices/lab_pin.sym} 200 -280 0 0 {name=p8 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 200 -110 3 0 {name=p9 sig_type=std_logic lab=VSS}
+C {devices/capa.sym} 540 -160 0 0 {name=C2
+m=1
+value=10p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} 540 -100 0 0 {name=p19 sig_type=std_logic lab=VSS}
