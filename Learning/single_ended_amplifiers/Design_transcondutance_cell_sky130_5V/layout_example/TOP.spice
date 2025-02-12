@@ -1,0 +1,22 @@
+* NGSPICE file created from TOP.ext - technology: sky130A
+
+.subckt TOP VDD IA IB
+X0 IA VDD VDD w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0.45 pd=3.6 as=0.45 ps=3.6 w=1.5 l=3
+X1 VDD VDD IA w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=3.60002 pd=28.805 as=1.80002 ps=14.405 w=1.5 l=3
+X2 VDD VDD IA w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=3
+X3 IA IA VDD w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=3
+X4 IA VDD VDD w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=3
+X5 IA IA VDD w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=3
+X6 VDD IA IA w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=3
+X7 VDD IA IA w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=3
+X8 VDD IA IB w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0.45 pd=3.6 as=0.375 ps=2 w=1.5 l=3
+X9 IB IA VDD w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0.375 pd=2 as=0.45 ps=3.6 w=1.5 l=3
+X10 VDD IA IB w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=1.5 ps=8 w=1.5 l=3
+X11 IB IA VDD w_n2349_n596# sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=3
+C0 VDD w_n2349_n596# 5.4156f
+C1 w_n2349_n596# IA 5.08617f
+C2 VDD IA 3.5536f
+C3 IA VSUBS 5.0778f
+C4 VDD VSUBS 6.37478f
+C5 w_n2349_n596# VSUBS 21.325f $ **FLOATING
+.ends
