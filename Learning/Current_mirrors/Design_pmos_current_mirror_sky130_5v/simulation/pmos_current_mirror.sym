@@ -1,0 +1,26 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=primative
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -60 -40 -60 0 {}
+L 4 -60 -40 60 -40 {}
+L 4 60 -40 60 -0 {}
+L 4 -60 -0 60 -0 {}
+L 7 0 -60 0 -40 {}
+L 7 -40 0 -40 20 {}
+L 7 40 0 40 20 {}
+B 5 -2.5 -62.5 2.5 -57.5 {name=VDD dir=inout}
+B 5 -42.5 17.5 -37.5 22.5 {name=Iref dir=inout}
+B 5 37.5 17.5 42.5 22.5 {name=Iout dir=inout}
+T {@symname} 76.5 4 0 0 0.3 0.3 {}
+T {@name} 65 -62 0 0 0.2 0.2 {}
+T {VDD} 25 -64 0 1 0.2 0.2 {}
+T {Iref} -45 16 0 1 0.2 0.2 {}
+T {Iout} 65 16 0 1 0.2 0.2 {}
+T {1:1} -10 -10 0 0 0.2 0.2 {}
+T {pmos current mirror} -50 -30 0 0 0.2 0.2 {}

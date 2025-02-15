@@ -1,0 +1,34 @@
+** sch_path: /foss/designs/OSAD/Learning/Current_mirrors/Design_pmos_current_mirror_sky130_5v/simulation/current_mirror_tb_.sch
+**.subckt current_mirror_tb_
+V1 VSS GND VSS
+I0 net3 VSS I_ref
+V2 VDD GND VDD
+V3 net1 VSS Vout
+Vmeas net2 net1 0
+.save i(vmeas)
+x1 VDD net3 net2 pmos_current_mirror
+**** begin user architecture code
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt_mm
+
+
+.param VDD = 5
+.param VSS = 0
+.param I_ref = 5u
+.param Vout = 0
+
+
+*.include ../../../foss/designs/OSAD/Learning/Current_mirrors/Design_pmos_current_mirror_sky130_5v/pmos_current_mirror_layout/pmos_current_mirror.spice
+.include ../pmos_current_mirror_layout/pmos_current_mirror.spice
+
+.control
+op
+dc V3 0 5 0.001
+plot i(Vmeas)
+wrdata current_tb.csv i(Vmeas)
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
