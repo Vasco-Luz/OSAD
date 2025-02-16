@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -224,14 +223,14 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1380 -680 1 0 {name=p3 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1300 -410 0 1 {name=M9
-L=2
+L=1.2
 W=0.6
 nf=2 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1480 -410 0 0 {name=M10
-L=2
+L=1.2
 W=0.6
 nf=2 mult=2
 model=nfet_g5v0d10v5

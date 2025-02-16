@@ -1,0 +1,19 @@
+* NGSPICE file created from TOP.ext - technology: ihp-sg13g2
+
+.subckt nmos_current_mirror VSS Iref Iout
+X0 VSS Iref Iout VSUB sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=2.2u
+X1 Iout Iref VSS VSUB sg13_hv_nmos ad=0.47302p pd=5.005u as=40.72922p ps=0.14101m w=1u l=2.2u
+X2 VSS Iref Iref VSUB sg13_hv_nmos ad=0 pd=0 as=12.88392p ps=59.825u w=1u l=2.2u
+X3 Iref VSS VSS VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+X4 VSS Iref Iref VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+X5 Iref VSS VSS VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+X6 VSS Iref Iout VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+X7 Iout Iref VSS VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+X8 Iref VSS VSS VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+X9 VSS Iref Iref VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+X10 VSS Iref Iref VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+X11 Iref VSS VSS VSUB sg13_hv_nmos ad=0 pd=0 as=0 ps=0 w=1u l=2.2u
+C0 VSS Iref 3.04697f
+C1 Iref VSUB 5.47165f
+C2 VSS VSUB 6.12918f
+.ends

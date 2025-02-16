@@ -1,0 +1,28 @@
+* NGSPICE file created from TOP.ext - technology: sky130A
+
+.subckt pmos_current_mirror VDD Iref Iout
+X0 Iref VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=2.6
+X1 VDD Iref Iref VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.6
+X2 VDD VDD Iref VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=2.6
+X3 Iref Iref VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.6
+X4 Iout Iref VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.6
+X5 VDD Iref Iout VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.6
+X6 Iref VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=3 pd=18 as=4.8 ps=33.6 w=1 l=2.6
+X7 VDD Iref Iref VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X8 VDD VDD Iref VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X9 Iref Iref VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X10 Iout Iref VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.5 pd=9 as=0 ps=0 w=1 l=2.6
+X11 VDD Iref Iout VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X12 Iref VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X13 VDD Iref Iref VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X14 VDD VDD Iref VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X15 Iref Iref VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X16 Iout Iref VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+X17 VDD Iref Iout VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.6
+C0 VDD Iref 10.12541f
+C1 VDD VSUBS 24.04028f
+C2 Iref VSUBS 4.47696f
+.ends
+
+
+*this is the exported netlist of the pmos current mirror done in klayout, to this point this need to be performed in magic because klayout doenst have rc extraction capabilities

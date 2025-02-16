@@ -1,0 +1,28 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=primative
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -80 -40 0 -40 {}
+L 4 0 -40 80 -40 {}
+L 4 -80 -40 -80 20 {}
+L 4 -80 20 0 20 {}
+L 4 0 20 80 20 {}
+L 4 80 -40 80 20 {}
+L 7 0 20 0 40 {}
+L 7 -50 -60 -50 -40 {}
+L 7 50 -60 50 -40 {}
+B 5 -2.5 37.5 2.5 42.5 {name=VSS dir=inout}
+B 5 -52.5 -62.5 -47.5 -57.5 {name=Iref dir=inout}
+B 5 47.5 -62.5 52.5 -57.5 {name=Iout dir=inout}
+T {@symname} 96.5 -36 0 0 0.3 0.3 {}
+T {@name} 95 8 0 0 0.2 0.2 {}
+T {VSS} 25 36 0 1 0.2 0.2 {}
+T {Iref} -55 -64 0 1 0.2 0.2 {}
+T {Iout} 75 -64 0 1 0.2 0.2 {}
+T {1:1} -10 -10 0 0 0.2 0.2 {}
+T {Nmos current mirror} -50 -30 0 0 0.2 0.2 {}
