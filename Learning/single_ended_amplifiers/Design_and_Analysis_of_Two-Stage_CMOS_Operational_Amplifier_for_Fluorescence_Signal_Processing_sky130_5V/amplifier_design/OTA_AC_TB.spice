@@ -24,7 +24,7 @@ x2 VDD VSS net4 net3 VOUT_cm UUT_VA_sky
 x3 VDD net7 net6 net5 VOUT_a- UUT_VA_sky
 x4 net11 VSS net9 net8 VOUT_a+ UUT_VA_sky
 **** begin user architecture code
-.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice fs
 
 .Temp 27
 .param VDD = 1.8

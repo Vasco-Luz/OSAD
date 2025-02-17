@@ -174,6 +174,7 @@ N 470 300 470 360 {
 lab=#net8}
 N 60 110 60 120 {
 lab=#net7}
+N -1280 -0 -1280 10 {lab=#net2}
 C {devices/lab_pin.sym} -1420 -230 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1420 -160 0 0 {name=V1 value="VDD"
 
@@ -224,7 +225,6 @@ C {devices/lab_pin.sym} -1490 -230 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
 C {devices/vsource.sym} -1110 280 0 0 {name=V3 value= "VCM"}
 C {devices/gnd.sym} -1110 330 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} -1280 -20 0 0 {name=V5 value= "ac -0.5"}
 C {devices/lab_pin.sym} -1280 -100 0 0 {name=p2 sig_type=std_logic lab=VIN-}
 C {devices/lab_pin.sym} -1020 -340 0 0 {name=p7 sig_type=std_logic lab=VIN-}
 C {capa.sym} -800 -330 0 0 {name=C1
@@ -289,3 +289,4 @@ C {Sky130A/UUT_sky/UUT_VA_sky.sym} -920 -370 0 0 {name=x1}
 C {Sky130A/UUT_sky/UUT_VA_sky.sym} -560 -30 0 0 {name=x2}
 C {Sky130A/UUT_sky/UUT_VA_sky.sym} 60 -10 0 0 {name=x3}
 C {Sky130A/UUT_sky/UUT_VA_sky.sym} 570 -20 0 0 {name=x4}
+C {devices/vsource.sym} -1280 -20 0 0 {name=V5 value= "ac -0.5"}

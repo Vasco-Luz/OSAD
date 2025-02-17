@@ -107,10 +107,10 @@ if simulation == 2:
 
 if (simulation == 3): 
     netlist = sim_comands.export_netlist(transcondutance_sch_path)
-    sim_comands.write_corner(netlist, "tt_mm")
+    sim_comands.write_corner(netlist, "mc")
     data_mc = []
 
-    for i in range(200):
+    for i in range(20):
         # Export the netlist and update it with the "tt_mm" corner
         netlist = sim_comands.export_netlist(transcondutance_sch_path)
         sim_comands.write_corner(netlist, "tt_mm")
@@ -127,7 +127,7 @@ if (simulation == 3):
 
     # Plot the current at 27 degrees for all 200 simulations
     plt.figure(figsize=(10, 6))
-    plt.plot(range(1, 201), current_at_27_all, marker='o', linestyle='-', color='blue', linewidth=1)
+    plt.plot(range(1, 21), current_at_27_all, marker='o', linestyle='-', color='blue', linewidth=1)
 
     # Set plot labels and title
     plt.xlabel("Simulation Number")

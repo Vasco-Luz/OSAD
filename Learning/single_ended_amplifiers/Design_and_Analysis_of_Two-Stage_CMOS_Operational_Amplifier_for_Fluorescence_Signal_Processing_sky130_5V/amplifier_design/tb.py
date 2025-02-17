@@ -180,6 +180,8 @@ if simulation == 2:
         sim_comands.write_param(AC_sch_path, "CL", CL)
 
         netlist = sim_comands.export_netlist(AC_sch_path)
+        sim_comands.write_corner(netlist, current_corner)
+        
         sim_comands.ngspice_sim(netlist)
         data_ac = pd.read_csv("VIN_sweep_AC.csv", delim_whitespace=True, header=None)
 

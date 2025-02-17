@@ -1,4 +1,4 @@
-** sch_path: /home/gim/Desktop/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/transimpedance_cell_design/transcondutance_cell_design.sch
+** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/transimpedance_cell_design/transcondutance_cell_design.sch
 **.subckt transcondutance_cell_design
 V1 VDD GND VDD
 V2 VSS GND VSS
@@ -49,7 +49,7 @@ Vmeas4 net15 net13 0
 .save i(vmeas4)
 XR2 VSS net10 VSS sky130_fd_pr__res_high_po_0p35 L=30 mult=1 m=1
 **** begin user architecture code
-.lib /home/gim/PDK/sky130A/libs.tech/combined/sky130.lib.spice tt_mm
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt_mm
 
 
 .Temp 27
