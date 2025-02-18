@@ -1,0 +1,3 @@
+Tecnology : sky130A
+Supply voltage: 5V
+current at 27 C : 4u A

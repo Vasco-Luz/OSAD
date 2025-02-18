@@ -29,9 +29,9 @@ lab=VOUT}
 N -350 40 -350 80 {
 lab=VSS}
 N 380 -700 420 -700 {
-lab=#net2}
+lab=Va}
 N 470 -820 470 -760 {
-lab=#net3}
+lab=#net2}
 N 280 -740 370 -740 {lab=VIN+}
 N 740 -630 740 -590 {
 lab=VSS}
@@ -39,26 +39,26 @@ N 590 -720 730 -720 {lab=VOUT}
 N 730 -720 740 -720 {lab=VOUT}
 N 740 -720 740 -690 {lab=VOUT}
 N 220 -740 280 -740 {lab=VIN+}
-N 330 -700 380 -700 {lab=#net2}
+N 330 -700 380 -700 {lab=Va}
 N 220 -350 220 -330 {lab=GND}
-N 330 -700 330 -580 {lab=#net2}
 N 220 -740 220 -520 {lab=VIN+}
-N 330 -580 330 -500 {lab=#net2}
-N 330 -260 330 -240 {lab=GND}
-N 330 -500 330 -450 {lab=#net2}
-N 330 -390 330 -320 {lab=#net4}
-N 370 -440 480 -440 {lab=#net5}
-N 420 -400 420 -360 {
+N 330 -640 330 -590 {lab=Va}
+N 330 -700 330 -640 {lab=Va}
+N 330 -360 330 -320 {
 lab=VSS}
-N 370 -400 420 -400 {lab=VSS}
-N 550 -400 550 -360 {
+N 330 -530 330 -500 {lab=#net3}
+N 590 -720 590 -580 {lab=VOUT}
+N 460 -540 460 -500 {
 lab=VSS}
-N 550 -520 550 -480 {
-lab=VDD}
-N 600 -460 630 -460 {lab=VOUT}
-N 630 -720 630 -460 {lab=VOUT}
-N 640 -360 640 -340 {lab=GND}
-N 600 -420 640 -420 {lab=#net6}
+N 370 -540 460 -540 {lab=VSS}
+N 330 -450 330 -420 {lab=#net3}
+N 330 -500 330 -450 {lab=#net3}
+N 580 -580 590 -580 {lab=VOUT}
+N 500 -470 500 -430 {
+lab=VSS}
+N 500 -580 500 -530 {lab=#net4}
+N 500 -580 520 -580 {lab=#net4}
+N 370 -580 500 -580 {lab=#net4}
 C {devices/lab_pin.sym} -280 40 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -280 110 0 0 {name=V1 value="VDD"
 
@@ -86,6 +86,11 @@ value="
 	setseed 10
 	op
   	print v(VOUT)
+	alter E1 0
+	op
+	print v(Va)
+	ac dec 100 1 10G
+	plot db(v(VOUT))
 	
 .endc
 "}
@@ -108,14 +113,22 @@ C {devices/gnd.sym} 220 -330 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 220 -490 0 0 {name=V3 value= "ac 0.5"}
 C {devices/lab_pin.sym} 220 -640 0 0 {name=p2 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} 330 -290 0 0 {name=V7 value= "-0.5"}
-C {devices/gnd.sym} 330 -240 0 0 {name=l7 lab=GND}
-C {vcvs.sym} 330 -420 0 1 {name=E1 value=1000000000000}
-C {devices/lab_pin.sym} 420 -360 0 0 {name=p10 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 330 -320 0 0 {name=p3 sig_type=std_logic lab=VSS
 }
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} 550 -450 0 1 {name=x2}
-C {devices/lab_pin.sym} 550 -360 0 0 {name=p3 sig_type=std_logic lab=VSS
+C {devices/vsource.sym} 330 -390 0 0 {name=V4 value= "ac -0.5"}
+C {vcvs.sym} 330 -560 0 1 {name=E1 value=1}
+C {devices/lab_pin.sym} 460 -500 0 0 {name=p7 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 550 -520 0 0 {name=p7 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} 640 -390 0 0 {name=V4 value= 0.9}
-C {devices/gnd.sym} 640 -340 0 0 {name=l4 lab=GND}
+C {devices/lab_pin.sym} 330 -660 0 0 {name=p10 sig_type=std_logic lab=Va
+}
+C {res_ac.sym} 550 -580 1 0 {name=R1
+value=1k
+ac=1000000000000G
+m=1}
+C {capa.sym} 500 -500 0 0 {name=C2
+m=1
+value=3p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} 500 -430 0 0 {name=p11 sig_type=std_logic lab=VSS
+}
