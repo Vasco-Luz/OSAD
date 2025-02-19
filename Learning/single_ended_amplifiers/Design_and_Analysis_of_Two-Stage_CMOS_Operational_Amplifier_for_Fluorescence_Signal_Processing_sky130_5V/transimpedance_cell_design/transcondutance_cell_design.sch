@@ -114,7 +114,7 @@ C {sky130_fd_pr/corner.sym} -380 -320 0 0 {name=CORNER only_toplevel=true corner
 C {devices/lab_pin.sym} -240 -100 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
 C {sky130_fd_pr/res_high_po_0p35.sym} 240 -110 0 0 {name=R6
-L=30
+L=17.4
 model=res_high_po_0p35
 spiceprefix=X
 mult=1}
@@ -162,88 +162,88 @@ C {devices/vsource.sym} 140 -650 0 0 {name=V3 value=1.8
 }
 C {devices/gnd.sym} 140 -600 0 0 {name=l2 lab=GND}
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 260 -210 0 1 {name=M1
-L=4
-W=0.6
-nf=2 mult=8
+L=3.2
+W=1
+nf=8 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 380 -210 0 0 {name=M2
-L=4
-W=0.6
+L=3.2
+W=1
 nf=2 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {vccs.sym} 680 -420 0 0 {name=G2 value=1000}
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 700 -610 0 1 {name=M4
-L=3
-W=1.5
-nf=2 mult=2
+L=2.6
+W=1
+nf=2 mult=3
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 880 -610 0 0 {name=M3
-L=3
-W=1.5
-nf=2 mult=2
+L=2.6
+W=1
+nf=2 mult=3
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {ammeter.sym} 900 -480 0 0 {name=Vmeas2 savecurrent=true spice_ignore=0}
-C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 1300 -610 0 1 {name=M5
-L=3
-W=1.5
-nf=2 mult=2
-model=pfet_g5v0d10v5
-spiceprefix=X
-}
-C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 1480 -610 0 0 {name=M6
-L=3
-W=1.5
-nf=2 mult=2
-model=pfet_g5v0d10v5
-spiceprefix=X
-}
 C {devices/lab_pin.sym} 1360 -100 3 0 {name=p2 sig_type=std_logic lab=VSS
 }
-C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1300 -240 0 1 {name=M7
-L=4
-W=0.6
-nf=2 mult=8
-model=nfet_g5v0d10v5
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1480 -240 0 0 {name=M8
-L=4
-W=0.6
-nf=2 mult=2
-model=nfet_g5v0d10v5
-spiceprefix=X
-}
 C {devices/lab_pin.sym} 1380 -680 1 0 {name=p3 sig_type=std_logic lab=VDD}
-C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1300 -410 0 1 {name=M9
-L=2
-W=0.6
-nf=2 mult=2
-model=nfet_g5v0d10v5
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1480 -410 0 0 {name=M10
-L=2
-W=0.6
-nf=2 mult=2
-model=nfet_g5v0d10v5
-spiceprefix=X
-}
 C {devices/lab_pin.sym} 1220 -410 0 0 {name=p4 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1560 -410 0 1 {name=p5 sig_type=std_logic lab=VSS
 }
 C {ammeter.sym} 1280 -500 0 0 {name=Vmeas3 savecurrent=true spice_ignore=0}
 C {ammeter.sym} 1500 -520 0 0 {name=Vmeas4 savecurrent=true spice_ignore=0}
+C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 1480 -610 0 0 {name=M5
+L=2.6
+W=1
+nf=2 mult=3
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 1300 -610 0 1 {name=M6
+L=2.6
+W=1
+nf=2 mult=3
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
 C {sky130_fd_pr/res_high_po_0p35.sym} 1280 -140 0 0 {name=R2
-L=30
+L=17.4
 model=res_high_po_0p35
 spiceprefix=X
 mult=1}
+C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1480 -240 0 0 {name=M7
+L=3.2
+W=1
+nf=2 mult=2
+model=nfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1300 -240 0 1 {name=M8
+L=3.2
+W=1
+nf=8 mult=2
+model=nfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1300 -410 0 1 {name=M9
+L=2
+W=1
+nf=2 mult=2
+model=nfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1480 -410 0 0 {name=M10
+L=2
+W=1
+nf=2 mult=2
+model=nfet_g5v0d10v5
+spiceprefix=X
+}

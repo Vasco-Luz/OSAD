@@ -187,7 +187,7 @@ C {devices/vsource.sym} -1490 -160 0 0 {name=V2 value="VSS"
 
 }
 C {devices/gnd.sym} -1490 -110 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/corner.sym} -1630 -450 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {sky130_fd_pr/corner.sym} -1630 -450 0 0 {name=CORNER only_toplevel=true corner=fs}
 C {devices/code.sym} -1490 -450 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	

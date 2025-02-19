@@ -43,26 +43,26 @@ if simulation == 1:
     sim_comands.ngspice_sim(netlist)
     data = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
 
-    offset = data.iloc[900,1] - data.iloc[900,0]
+    offset = data.iloc[90,1] - data.iloc[90,0]
     print(offset)
     
     
     offset = simulation_data_processing.value_converter_to_string(offset)
-    power = simulation_data_processing.value_converter_to_string(data.iloc[900,3]*(VDD-VSS))
+    power = simulation_data_processing.value_converter_to_string(data.iloc[90,3]*(VDD-VSS))
 
 
 
-    x_values = data[0]  # First column (x-axis)
-    y1_values = data[1]  # Second column
+    #x_values = data[0]  # First column (x-axis)
+    #y1_values = data[1]  # Second column
     # Plot first figure (y1 and y2)
-    plt.figure(figsize=(8, 5))
-    plt.plot(x_values, y1_values, label="Vout", linewidth=3)
-    plt.xlabel("V")
-    plt.ylabel("V")
-    plt.title("Vin vs Vout in voltage follower mode")
-    plt.legend()
-    plt.grid()
-    plt.show()
+    #plt.figure(figsize=(8, 5))
+    #plt.plot(x_values, y1_values, label="Vout", linewidth=3)
+    #plt.xlabel("V")
+    #plt.ylabel("V")
+    #plt.title("Vin vs Vout in voltage follower mode")
+    #plt.legend()
+    #plt.grid()
+    #plt.show()
 
 
 
@@ -109,14 +109,18 @@ if simulation == 1:
     ax2.set_ylabel("Phase (°)", color="r")
     ax2.tick_params(axis="y", labelcolor="r")
 
-    # Draw vertical line where gain = 0
+    # Draw vertical line where gain = 0 dB (GBW frequency)
     if x_zero_gain:
-        ax1.axvline(x=x_zero_gain, color="g", linestyle="--", linewidth=2, label="Gain = 0 dB")
+        ax1.axvline(x=x_zero_gain, color="g", linestyle="--", linewidth=2, label="Gain = 0 dB (GBW)")
+    
+        # Convert GBW frequency to MHz
+        gbw_mhz = x_zero_gain / 1e6  
 
-        # Annotate phase at the intersection
-        ax2.scatter([x_zero_gain], [phase_at_x_zero_gain], color="black", zorder=3)
-        ax2.text(x_zero_gain, phase_at_x_zero_gain, f"{phase_at_x_zero_gain:.2f}°", 
+        # Annotate GBW frequency in MHz
+        ax1.scatter([x_zero_gain], [0], color="black", zorder=3)
+        ax1.text(x_zero_gain, 0, f"{gbw_mhz:.2f} MHz", 
                 verticalalignment="bottom", horizontalalignment="right", fontsize=10, color="black")
+
 
     # Title and legend
     plt.title("Gain and Phase vs Frequency")
@@ -134,6 +138,7 @@ if simulation == 1:
     ["DC Gain (dB)", dc_gain],
     ["Phase Margin (°)", phase_margin],
     ["CMRR (dB)", CMRR],
+    ["GBW (MHz)", f"{x_zero_gain / 1e6:.2f}"],  # Convert GBW to MHz
     ["PSSR- (dB)", PSSR_minus],
     ["PSSR+ (dB)", PSSR_plus],
     ["Offset (V)", offset],
@@ -153,7 +158,7 @@ if simulation == 1:
 
 if simulation == 2:
     corners = ["tt", "ss", "ff", "sf", "fs"]
-    table_data = [["Corner", "DC Gain (dB)", "Phase Margin (°)", "CMRR (dB)", "PSSR- (dB)", "PSSR+ (dB)", "Offset (V)", "Power (W)"]]
+    table_data = [["Corner", "DC Gain (dB)", "GBW (MHz)", "Phase Margin (°)", "CMRR (dB)", "PSSR- (dB)", "PSSR+ (dB)", "Offset (V)", "Power (W)"]]
 
     for current_corner in corners:
         # Export the netlist and set the corner
@@ -204,15 +209,20 @@ if simulation == 2:
             idx = zero_gain_index[0]
             x_zero_gain = np.interp(0, [y1_values[idx], y1_values[idx + 1]], [x_values[idx], x_values[idx + 1]])
             phase_at_x_zero_gain = np.interp(x_zero_gain, x_values, y2_values)
+
+            # Convert GBW from Hz to MHz
+            gbw_mhz = x_zero_gain / 1e6
+            gbw = f"{gbw_mhz:.2f}"  # Format to 2 decimal places
         else:
             x_zero_gain = None
             phase_at_x_zero_gain = None
+            gbw = "N/A"
 
         phase_margin = str(phase_at_x_zero_gain)
 
         # Append results to the table
         table_data.append([
-            current_corner.upper(), dc_gain, phase_margin, CMRR, PSSR_minus, PSSR_plus, offset, power
+            current_corner.upper(), dc_gain, gbw, phase_margin, CMRR, PSSR_minus, PSSR_plus, offset, power
         ])
 
     # Plot the final table with all corners
@@ -227,15 +237,14 @@ if simulation == 2:
 
 
 
-
-
-
-
-
-    
-
-
 if simulation == 3: 
+
+    DC_sch_path = sim_comands.get_specific_file_path("mc_dc")
+    DC_sch_path = str(DC_sch_path[0])
+
+    AC_sch_path = sim_comands.get_specific_file_path("mc_ac")
+    AC_sch_path = str(AC_sch_path[0])
+
     num_cases = 20  # Monte Carlo simulations
 
     # Store results
@@ -246,15 +255,15 @@ if simulation == 3:
     CMRRs = []
     PSSR_minuses = []
     PSSR_pluses = []
+    gbws = []  # Store GBW values
 
     for i in range(num_cases):
         # Export the netlist and update with "tt_mm" corner
         netlist = sim_comands.export_netlist(DC_sch_path)
-        sim_comands.write_corner(netlist, "tt_mm")
 
         # Run the DC simulation
         sim_comands.ngspice_sim(netlist)
-        data = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
+        data = pd.read_csv("mc_dc.csv", delim_whitespace=True, header=None)
 
         # Compute offset and power
         offset = data.iloc[900, 1] - data.iloc[900, 0]
@@ -264,11 +273,9 @@ if simulation == 3:
         powers.append(power)
 
         # Run AC simulation
-        sim_comands.write_param(AC_sch_path, "V_OFF", str(offset))
         netlist = sim_comands.export_netlist(AC_sch_path)
-        sim_comands.write_corner(netlist, "tt_mm")
         sim_comands.ngspice_sim(netlist)
-        data_ac = pd.read_csv("VIN_sweep_AC.csv", delim_whitespace=True, header=None)
+        data_ac = pd.read_csv("mc_ac.csv", delim_whitespace=True, header=None)
 
         # Convert phase data to degrees
         data_ac[3] = data_ac[3] * (180 / np.pi) + 180  
@@ -289,8 +296,13 @@ if simulation == 3:
             idx = zero_gain_index[0]
             x_zero_gain = np.interp(0, [y1_values[idx], y1_values[idx + 1]], [x_values[idx], x_values[idx + 1]])
             phase_at_x_zero_gain = np.interp(x_zero_gain, x_values, y2_values)
+
+            # Convert GBW from Hz to MHz
+            gbw_mhz = x_zero_gain / 1e6
+            gbws.append(gbw_mhz)
         else:
             phase_at_x_zero_gain = None
+            gbws.append(None)  # Append None for missing GBW cases
 
         phase_margins.append(phase_at_x_zero_gain)
 
@@ -330,15 +342,27 @@ if simulation == 3:
     power_min = np.min(powers)
     power_max = np.max(powers)
 
+    # Compute GBW statistics (handling None values)
+    gbw_filtered = [g for g in gbws if g is not None]  # Remove None values
+    if gbw_filtered:
+        gbw_mean = np.mean(gbw_filtered)
+        gbw_std = np.std(gbw_filtered)
+        gbw_min = np.min(gbw_filtered)
+        gbw_max = np.max(gbw_filtered)
+        gbw_str = f"{gbw_mean:.2f} ± {gbw_std:.2f} (Min: {gbw_min:.2f}, Max: {gbw_max:.2f})"
+    else:
+        gbw_str = "N/A"
+
     # Prepare table data
     table_data = [
         ["DC Gain (dB)", f"{dc_gain_mean:.2f} ± {dc_gain_std:.2f} (Min: {dc_gain_min:.2f}, Max: {dc_gain_max:.2f})"],
+        ["GBW (MHz)", gbw_str],  # Added GBW to table
         ["Phase Margin (°)", f"{phase_margin_mean:.2f} ± {phase_margin_std:.2f} (Min: {phase_margin_min:.2f}, Max: {phase_margin_max:.2f})"],
         ["CMRR (dB)", f"{CMRR_mean:.2f} ± {CMRR_std:.2f} (Min: {CMRR_min:.2f}, Max: {CMRR_max:.2f})"],
         ["PSSR- (dB)", f"{PSSR_minus_mean:.2f} ± {PSSR_minus_std:.2f} (Min: {PSSR_minus_min:.2f}, Max: {PSSR_minus_max:.2f})"],
         ["PSSR+ (dB)", f"{PSSR_plus_mean:.2f} ± {PSSR_plus_std:.2f} (Min: {PSSR_plus_min:.2f}, Max: {PSSR_plus_max:.2f})"],
-        ["Offset (V)", f"{offset_mean:.2f} ± {offset_std:.2f} (Min: {offset_min:.2f}, Max: {offset_max:.2f})"],
-        ["Power (W)", f"{power_mean:.2f} ± {power_std:.2f} (Min: {power_min:.2f}, Max: {power_max:.2f})"]
+        ["Offset (V)", f"{offset_mean:.8f} ± {offset_std:.8f} (Min: {offset_min:.8f}, Max: {offset_max:.8f})"],
+        ["Power (W)", f"{power_mean:.8f} ± {power_std:.8f} (Min: {power_min:.8f}, Max: {power_max:.8f})"]
     ]
 
     # Plot the table
@@ -350,5 +374,3 @@ if simulation == 3:
     # Display the table
     plt.title("Monte Carlo Simulation Results (20 Runs)")
     plt.show()
-
-

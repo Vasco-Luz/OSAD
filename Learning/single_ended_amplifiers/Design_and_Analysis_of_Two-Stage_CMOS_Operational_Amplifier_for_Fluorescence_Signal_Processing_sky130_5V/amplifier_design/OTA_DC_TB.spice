@@ -15,7 +15,6 @@ x1 net1 VSS VOUT VIN+ VOUT UUT_VA_sky
 
 .control
 save all
-setseed 10
 dc V4 0 1.8 0.001
 wrdata VIN_sweep_DC.csv v(VOUT) i(Vmeas)
 plot v(VOUT) v(VIN+)

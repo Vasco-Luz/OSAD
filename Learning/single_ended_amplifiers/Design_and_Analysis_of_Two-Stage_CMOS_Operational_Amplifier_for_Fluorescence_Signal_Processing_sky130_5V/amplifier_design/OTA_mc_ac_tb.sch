@@ -173,33 +173,6 @@ N 1720 -170 1720 -150 {lab=VSS}
 N 1720 -150 1720 -140 {lab=VSS}
 N 1500 -970 1500 -910 {lab=VDD}
 N 770 -300 770 -240 {lab=VDD}
-N -190 20 -190 60 {
-lab=VSS}
-N -290 -40 -240 -40 {
-lab=#net17}
-N -190 -220 -190 -180 {
-lab=VDD}
-N -120 -20 -70 -20 {
-lab=VOUT_DC}
-N -280 0 -240 0 {
-lab=VOUT_DC}
-N -190 -120 -190 -60 {
-lab=#net18}
-N -380 -40 -290 -40 {lab=#net17}
-N 80 70 80 110 {
-lab=VSS}
-N 70 -20 80 -20 {lab=VOUT_DC}
-N 80 -20 80 10 {lab=VOUT_DC}
-N -440 -40 -380 -40 {lab=#net17}
-N -330 0 -280 0 {lab=VOUT_DC}
-N -440 20 -440 40 {lab=GND}
-N -330 0 -330 60 {lab=VOUT_DC}
-N -70 -20 -70 120 {lab=VOUT_DC}
-N -80 120 -70 120 {lab=VOUT_DC}
-N -330 60 -330 120 {lab=VOUT_DC}
-N -330 120 -80 120 {lab=VOUT_DC}
-N -30 -20 70 -20 {lab=VOUT_DC}
-N -70 -20 -30 -20 {lab=VOUT_DC}
 C {devices/lab_pin.sym} 130 -510 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} 130 -440 0 0 {name=V1 value="VDD"
 
@@ -220,18 +193,18 @@ value="
 .param VDD = 1.8
 .param VSS = 0
 .param CL = 3p
+.param mc_mm_switch = 1
 
 
 .control
 
 	save all
-	dc V12 0 1.8 0.001
-	plot v(VOUT_DC)
 	ac dec 100 1 10G
 	plot db(v(VOUT))
 	plot db(v(VOUT_CM))
 	plot db(v(VOUT_A-))
 	plot db(v(VOUT_A+))	
+	wrdata mc_ac.csv db(v(VOUT)) phase(v(VOUT)) db(v(VOUT_CM)) db(v(VOUT_A-)) db(v(VOUT_A+))
 .endc
 "}
 C {devices/lab_pin.sym} 750 -1150 0 0 {name=p4 sig_type=std_logic lab=VDD}
@@ -360,19 +333,3 @@ C {devices/lab_pin.sym} 1750 80 0 0 {name=p28 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1920 -210 1 0 {name=p29 sig_type=std_logic lab=VOUT_A+}
 C {devices/vsource.sym} 1720 -340 2 0 {name=V11 value= "ac 1"}
-C {devices/lab_pin.sym} -190 60 0 0 {name=p30 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} -190 -220 0 0 {name=p31 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} -30 -20 3 0 {name=p32 sig_type=std_logic lab=VOUT_DC
-}
-C {ammeter.sym} -190 -150 0 0 {name=Vmeas1 savecurrent=true}
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} -190 -30 0 0 {name=x5}
-C {capa.sym} 80 40 0 0 {name=C9
-m=1
-value=3p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/lab_pin.sym} 80 110 0 0 {name=p33 sig_type=std_logic lab=VSS
-}
-C {devices/vsource.sym} -440 -10 0 0 {name=V12 value= 0.9}
-C {devices/gnd.sym} -440 40 0 0 {name=l7 lab=GND}

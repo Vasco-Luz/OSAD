@@ -1,50 +1,27 @@
-** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/amplifier_design/OTA_AC_TB.sch
-**.subckt OTA_AC_TB
+** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/amplifier_design/OTA_mc_dc_tb.sch
+**.subckt OTA_mc_dc_tb
 V1 VDD GND VDD
 V2 VSS GND VSS
-V4 VIN+ net1 ac 0.5
-V6 net2 net1 V_OFF
-V3 net1 GND VCM
-C1 VOUT VSS CL m=1
-C2 VOUT_cm VSS CL m=1
-V8 net4 net3 V_OFF
-V9 net10 GND VCM
-V7 net3 net10 ac 1
-C3 VOUT_a- VSS CL m=1
-V10 net6 net5 V_OFF
-V11 net5 GND VCM
-V13 net7 VSS ac 1
-C4 VOUT_a+ VSS CL m=1
-V12 net9 net8 V_OFF
-V14 net8 GND VCM
-V15 net11 VDD ac 1
-x1 VDD VSS VIN- VIN+ VOUT UUT_VA_sky
-x2 VDD VSS net4 net3 VOUT_cm UUT_VA_sky
-x3 VDD net7 net6 net5 VOUT_a- UUT_VA_sky
-x4 net11 VSS net9 net8 VOUT_a+ UUT_VA_sky
-V5 VIN- net2 ac -0.5
+Vmeas1 VDD net2 0
+.save i(vmeas1)
+x5 net2 VSS VOUT_DC net1 VOUT_DC UUT_VA_sky
+C9 VOUT_DC VSS 3p m=1
+V12 net1 GND 0.9
 **** begin user architecture code
-.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice fs
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice mc
 
 .Temp 27
 .param VDD = 1.8
 .param VSS = 0
-.param VCM={(VDD-VSS)/2}
-.param VCM_NEG={-VCM}
-.param V_OFF = 2.01u
 .param CL = 3p
+.param mc_mm_switch = 1
 
 .control
-save all
 
-ac dec 100 1 10G
-setseed 10
-wrdata VIN_sweep_AC.csv db(v(VOUT)) phase(VOUT) db(v(VOUT_cm)) db(v(VOUT_a-)) db(v(VOUT_a+))
-plot db(v(VOUT)) phase(VOUT)
-plot db(v(VOUT_cm))
-plot db(v(VOUT_a-))
-plot db(v(VOUT_a+))
-
+	save all
+	dc V12 0 1.8 0.001
+	plot v(VOUT_DC)
+	wrdata mc_dc.csv v(VOUT_DC) i(Vmeas1)
 .endc
 
 **** end user architecture code

@@ -275,8 +275,6 @@ N 800 -70 800 -10 {
 lab=#net8}
 N 360 -10 800 -10 {
 lab=#net8}
-N 70 50 130 50 {
-lab=#net7}
 N 870 -330 870 -110 {
 lab=VDD}
 N -510 140 30 140 {
@@ -313,6 +311,7 @@ N 1320 -240 1320 -70 {
 lab=VOUT}
 N 360 -100 360 -10 {
 lab=#net8}
+N 70 50 130 50 {lab=#net7}
 C {devices/lab_pin.sym} -120 -330 1 0 {name=p2 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 40 140 3 0 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -720 -150 0 0 {name=p8 sig_type=std_logic lab=VSS}
@@ -397,30 +396,6 @@ nf=2 mult=1
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/ngspice_get_value.sym} -740 -260 0 1 {name=r14 node=v(@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} -740 -290 0 1 {name=r15 node=@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} -740 -330 0 1 {name=r11 node=@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} -440 -260 0 0 {name=r1 node=v(@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} -440 -300 0 0 {name=r2 node=@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} -440 -340 0 0 {name=r3 node=@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} -770 -100 0 1 {name=r4 node=v(@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} -770 -140 0 1 {name=r5 node=@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} -770 -180 0 1 {name=r6 node=@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} -440 -120 0 0 {name=r7 node=v(@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} -440 -150 0 0 {name=r8 node=@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} -440 -190 0 0 {name=r9 node=@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[gmbs]
-descr="gmbs="}
 C {sky130_fd_pr/nfet_01v8_nf.sym} -670 -30 0 1 {name=M6
 L=2
 W=3
@@ -435,42 +410,6 @@ nf=2 mult=2
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/ngspice_get_value.sym} -770 30 0 1 {name=r12 node=v(@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} -770 -10 0 1 {name=r13 node=@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} -770 -50 0 1 {name=r16 node=@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} -430 10 0 0 {name=r17 node=v(@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} -430 -30 0 0 {name=r18 node=@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} -430 -70 0 0 {name=r19 node=@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} -810 -300 0 1 {name=r20 node=v(@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} -810 -270 0 1 {name=r21 node=v(@m.$\{path\}xm1.msky130_fd_pr__pfet_01v8_lvt[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} -370 -310 0 1 {name=r22 node=v(@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} -370 -280 0 1 {name=r23 node=v(@m.$\{path\}xm2.msky130_fd_pr__pfet_01v8_lvt[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} -850 -140 0 1 {name=r24 node=v(@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} -850 -110 0 1 {name=r25 node=v(@m.$\{path\}xm4.msky130_fd_pr__nfet_01v8[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} -390 -170 0 0 {name=r26 node=v(@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} -390 -140 0 0 {name=r27 node=v(@m.$\{path\}xm3.msky130_fd_pr__nfet_01v8[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} -830 -10 0 1 {name=r28 node=v(@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} -830 20 0 1 {name=r29 node=v(@m.$\{path\}xm6.msky130_fd_pr__nfet_01v8[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} -380 -40 0 0 {name=r30 node=v(@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} -380 -10 0 0 {name=r31 node=v(@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[vgs])
-descr="vgs="}
 C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} -530 -300 0 0 {name=M2
 L=3
 W=4
@@ -499,74 +438,3 @@ nf=2 mult=40
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/ngspice_get_value.sym} 270 -290 0 0 {name=r32 node=v(@m.$\{path\}xm7.msky130_fd_pr__pfet_01v8_lvt[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} 270 -330 0 0 {name=r33 node=@m.$\{path\}xm7.msky130_fd_pr__pfet_01v8_lvt[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} 270 -370 0 0 {name=r34 node=@m.$\{path\}xm7.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} 380 -330 0 1 {name=r35 node=v(@m.$\{path\}xm7.msky130_fd_pr__pfet_01v8_lvt[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} 380 -300 0 1 {name=r36 node=v(@m.$\{path\}xm7.msky130_fd_pr__pfet_01v8_lvt[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} 530 -100 0 0 {name=r37 node=v(@m.$\{path\}xm8.msky130_fd_pr__pfet_01v8_lvt[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} 530 -130 0 0 {name=r38 node=@m.$\{path\}xm8.msky130_fd_pr__pfet_01v8_lvt[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} 530 -170 0 0 {name=r39 node=@m.$\{path\}xm8.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} 480 -140 0 0 {name=r40 node=v(@m.$\{path\}xm8.msky130_fd_pr__pfet_01v8_lvt[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} 480 -110 0 0 {name=r41 node=v(@m.$\{path\}xm8.msky130_fd_pr__pfet_01v8_lvt[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} 150 -80 0 0 {name=r42 node=v(@m.$\{path\}xm9.msky130_fd_pr__pfet_01v8_lvt[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} 150 -110 0 0 {name=r43 node=@m.$\{path\}xm9.msky130_fd_pr__pfet_01v8_lvt[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} 150 -150 0 0 {name=r44 node=@m.$\{path\}xm9.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} 100 -120 0 0 {name=r45 node=v(@m.$\{path\}xm9.msky130_fd_pr__pfet_01v8_lvt[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} 100 -90 0 0 {name=r46 node=v(@m.$\{path\}xm9.msky130_fd_pr__pfet_01v8_lvt[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} 430 120 0 0 {name=r47 node=v(@m.$\{path\}xm10.msky130_fd_pr__nfet_01v8[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} 430 80 0 0 {name=r48 node=@m.$\{path\}xm10.msky130_fd_pr__nfet_01v8[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} 430 40 0 0 {name=r49 node=@m.$\{path\}xm10.msky130_fd_pr__nfet_01v8[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} 500 70 0 0 {name=r50 node=v(@m.$\{path\}xm10.msky130_fd_pr__nfet_01v8[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} 500 100 0 0 {name=r51 node=v(@m.$\{path\}xm10.msky130_fd_pr__nfet_01v8[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} 90 120 0 0 {name=r52 node=v(@m.$\{path\}xm11.msky130_fd_pr__nfet_01v8[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} 90 80 0 0 {name=r53 node=@m.$\{path\}xm11.msky130_fd_pr__nfet_01v8[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} 90 40 0 0 {name=r54 node=@m.$\{path\}xm11.msky130_fd_pr__nfet_01v8[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} 160 70 0 0 {name=r55 node=v(@m.$\{path\}xm11.msky130_fd_pr__nfet_01v8[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} 160 100 0 0 {name=r56 node=v(@m.$\{path\}xm11.msky130_fd_pr__nfet_01v8[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} 1410 -230 0 0 {name=r57 node=v(@m.$\{path\}xm12.msky130_fd_pr__pfet_01v8_lvt[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} 1410 -270 0 0 {name=r58 node=@m.$\{path\}xm12.msky130_fd_pr__pfet_01v8_lvt[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} 1410 -310 0 0 {name=r59 node=@m.$\{path\}xm12.msky130_fd_pr__pfet_01v8_lvt[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} 1520 -270 0 1 {name=r60 node=v(@m.$\{path\}xm12.msky130_fd_pr__pfet_01v8_lvt[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} 1520 -240 0 1 {name=r61 node=v(@m.$\{path\}xm12.msky130_fd_pr__pfet_01v8_lvt[vgs])
-descr="vgs="}
-C {devices/ngspice_get_value.sym} 1410 120 0 0 {name=r62 node=v(@m.$\{path\}xm13.msky130_fd_pr__nfet_01v8[vth])
-descr="vth="}
-C {devices/ngspice_get_value.sym} 1410 80 0 0 {name=r63 node=@m.$\{path\}xm13.msky130_fd_pr__nfet_01v8[gds]
-descr="gds="}
-C {devices/ngspice_get_value.sym} 1410 40 0 0 {name=r64 node=@m.$\{path\}xm13.msky130_fd_pr__nfet_01v8[gmbs]
-descr="gmbs="}
-C {devices/ngspice_get_value.sym} 1480 70 0 0 {name=r65 node=v(@m.$\{path\}xm13.msky130_fd_pr__nfet_01v8[vds])
-descr="vds="}
-C {devices/ngspice_get_value.sym} 1480 100 0 0 {name=r66 node=v(@m.$\{path\}xm13.msky130_fd_pr__nfet_01v8[vgs])
-descr="vgs="}
-C {devices/title-3.sym} -900 470 0 0 {name=l2 author="Vasco Luz" rev=1.0 lock=false}

@@ -1,50 +1,57 @@
-** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/amplifier_design/OTA_AC_TB.sch
-**.subckt OTA_AC_TB
+** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/amplifier_design/OTA_mc_ac_tb.sch
+**.subckt OTA_mc_ac_tb
 V1 VDD GND VDD
 V2 VSS GND VSS
-V4 VIN+ net1 ac 0.5
-V6 net2 net1 V_OFF
-V3 net1 GND VCM
-C1 VOUT VSS CL m=1
-C2 VOUT_cm VSS CL m=1
-V8 net4 net3 V_OFF
-V9 net10 GND VCM
-V7 net3 net10 ac 1
-C3 VOUT_a- VSS CL m=1
-V10 net6 net5 V_OFF
-V11 net5 GND VCM
-V13 net7 VSS ac 1
-C4 VOUT_a+ VSS CL m=1
-V12 net9 net8 V_OFF
-V14 net8 GND VCM
-V15 net11 VDD ac 1
-x1 VDD VSS VIN- VIN+ VOUT UUT_VA_sky
-x2 VDD VSS net4 net3 VOUT_cm UUT_VA_sky
-x3 VDD net7 net6 net5 VOUT_a- UUT_VA_sky
-x4 net11 VSS net9 net8 VOUT_a+ UUT_VA_sky
-V5 VIN- net2 ac -0.5
+Vmeas VDD net2 0
+.save i(vmeas)
+x1 net2 VSS Va VIN+ VOUT UUT_VA_sky
+C1 VOUT VSS 3p m=1
+V5 net1 GND 0.9
+V3 VIN+ net1 ac 0.5
+V4 net3 VSS ac -0.5
+E1 Va net3 net4 VSS 1
+R1 VOUT net4 1k ac=1000000000000G m=1
+C2 net4 VSS 3p m=1
+x2 VDD VSS net7 net5 VOUT_CM UUT_VA_sky
+C3 VOUT_CM VSS 3p m=1
+V6 net5 net6 0.9
+V7 net6 GND ac 1
+E2 net7 net6 net8 VSS 1
+R2 VOUT_CM net8 1k ac=1000000000000G m=1
+C4 net8 VSS 3p m=1
+x3 VDD net12 net10 net9 VOUT_A- UUT_VA_sky
+C5 VOUT_A- VSS 3p m=1
+V8 net9 GND 0.9
+E3 net10 GND net11 VSS 1
+R3 VOUT_A- net11 1k ac=1000000000000G m=1
+C6 net11 VSS 3p m=1
+V9 net12 VSS ac 1
+x4 net15 VSS net14 net13 VOUT_A+ UUT_VA_sky
+C7 VOUT_A+ VSS 3p m=1
+V10 net13 GND 0.9
+E4 net14 GND net16 VSS 1
+R4 VOUT_A+ net16 1k ac=1000000000000G m=1
+C8 net16 VSS 3p m=1
+V11 net15 VDD ac 1
 **** begin user architecture code
-.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice fs
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice mc
 
 .Temp 27
 .param VDD = 1.8
 .param VSS = 0
-.param VCM={(VDD-VSS)/2}
-.param VCM_NEG={-VCM}
-.param V_OFF = 2.01u
 .param CL = 3p
+.param mc_mm_switch = 1
+
 
 .control
-save all
 
-ac dec 100 1 10G
-setseed 10
-wrdata VIN_sweep_AC.csv db(v(VOUT)) phase(VOUT) db(v(VOUT_cm)) db(v(VOUT_a-)) db(v(VOUT_a+))
-plot db(v(VOUT)) phase(VOUT)
-plot db(v(VOUT_cm))
-plot db(v(VOUT_a-))
-plot db(v(VOUT_a+))
-
+	save all
+	ac dec 100 1 10G
+	plot db(v(VOUT))
+	plot db(v(VOUT_CM))
+	plot db(v(VOUT_A-))
+	plot db(v(VOUT_A+))
+	wrdata mc_ac.csv db(v(VOUT)) phase(v(VOUT)) db(v(VOUT_CM)) db(v(VOUT_A-)) db(v(VOUT_A+))
 .endc
 
 **** end user architecture code
