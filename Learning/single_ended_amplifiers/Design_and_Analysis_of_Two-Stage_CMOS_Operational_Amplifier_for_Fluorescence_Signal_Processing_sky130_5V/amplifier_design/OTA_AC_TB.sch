@@ -194,11 +194,11 @@ C {devices/code.sym} -1490 -450 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	
 .Temp 27
-.param VDD = 1.8
+.param VDD = 5
 .param VSS = 0
-.param VCM=\{(VDD-VSS)/2\}
+.param VCM = 2.5
 .param VCM_NEG=\{-VCM\}
-.param V_OFF = 900.0m
+.param V_OFF = -1.31m
 .param CL = 3p
 
 .control
@@ -231,7 +231,7 @@ C {devices/lab_pin.sym} -1280 -100 0 0 {name=p2 sig_type=std_logic lab=VIN-}
 C {devices/lab_pin.sym} -1020 -340 0 0 {name=p7 sig_type=std_logic lab=VIN-}
 C {capa.sym} -800 -330 0 0 {name=C1
 m=1
-value="CL"
+value=3p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -800 -260 0 0 {name=p9 sig_type=std_logic lab=VSS
@@ -242,11 +242,6 @@ C {devices/lab_pin.sym} -560 60 0 0 {name=p11 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} -440 -20 1 0 {name=p13 sig_type=std_logic lab=VOUT_cm
 
 }
-C {capa.sym} -440 10 0 0 {name=C2
-m=1
-value="CL"
-footprint=1206
-device="ceramic capacitor"}
 C {devices/lab_pin.sym} -440 80 0 0 {name=p14 sig_type=std_logic lab=VSS
 }
 C {devices/vsource.sym} -830 220 0 0 {name=V8 value= "V_OFF"}
@@ -257,11 +252,6 @@ C {devices/lab_pin.sym} 60 -140 0 0 {name=p15 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 180 0 1 0 {name=p17 sig_type=std_logic lab=VOUT_a-
 
 }
-C {capa.sym} 180 30 0 0 {name=C3
-m=1
-value="CL"
-footprint=1206
-device="ceramic capacitor"}
 C {devices/lab_pin.sym} 180 100 0 0 {name=p18 sig_type=std_logic lab=VSS
 }
 C {devices/vsource.sym} -210 240 0 0 {name=V10 value= "V_OFF"}
@@ -274,11 +264,6 @@ C {devices/lab_pin.sym} 570 -150 0 0 {name=p16 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 690 -10 1 0 {name=p20 sig_type=std_logic lab=VOUT_a+
 
 }
-C {capa.sym} 690 20 0 0 {name=C4
-m=1
-value="CL"
-footprint=1206
-device="ceramic capacitor"}
 C {devices/lab_pin.sym} 690 90 0 0 {name=p21 sig_type=std_logic lab=VSS
 }
 C {devices/vsource.sym} 300 230 0 0 {name=V12 value= "V_OFF"}
@@ -292,3 +277,18 @@ C {Sky130A/UUT_sky/UUT_VA_sky.sym} -560 -30 0 0 {name=x2}
 C {Sky130A/UUT_sky/UUT_VA_sky.sym} 60 -10 0 0 {name=x3}
 C {Sky130A/UUT_sky/UUT_VA_sky.sym} 570 -20 0 0 {name=x4}
 C {devices/vsource.sym} -1280 -20 0 0 {name=V5 value= "ac -0.5"}
+C {capa.sym} -440 10 0 0 {name=C2
+m=1
+value=3p
+footprint=1206
+device="ceramic capacitor"}
+C {capa.sym} 180 30 0 0 {name=C3
+m=1
+value=3p
+footprint=1206
+device="ceramic capacitor"}
+C {capa.sym} 690 20 0 0 {name=C4
+m=1
+value=3p
+footprint=1206
+device="ceramic capacitor"}

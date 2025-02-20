@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from skylib1 import simulation_data_processing
 
 #write script params
-VDD = 1.8
+VDD = 5
 #
 VSS = 0
 #
@@ -43,12 +43,12 @@ if simulation == 1:
     sim_comands.ngspice_sim(netlist)
     data = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
 
-    offset = data.iloc[250,1] - data.iloc[90,0]
+    offset = data.iloc[250,1] - data.iloc[250,0]
     print(offset)
     
     
     offset = simulation_data_processing.value_converter_to_string(offset)
-    power = simulation_data_processing.value_converter_to_string(data.iloc[90,3]*(VDD-VSS))
+    power = simulation_data_processing.value_converter_to_string(data.iloc[250,3]*(VDD-VSS))
 
 
 
@@ -58,20 +58,20 @@ if simulation == 1:
     #plt.figure(figsize=(8, 5))
     #plt.plot(x_values, y1_values, label="Vout", linewidth=3)
     #plt.xlabel("V")
-    #plt.ylabel("V")
+    #plt.ylabel("V")xschem
+
     #plt.title("Vin vs Vout in voltage follower mode")
     #plt.legend()
     #plt.grid()
     #plt.show()
 
 
-
-    sim_comands.write_param(AC_sch_path,"VDD",str(VDD))
-    sim_comands.write_param(AC_sch_path,"VSS",str(VSS))
-    sim_comands.write_param(AC_sch_path,"V_OFF",str(offset))
-    sim_comands.write_param(AC_sch_path,"CL",CL)
-
     netlist = sim_comands.export_netlist(AC_sch_path)
+    sim_comands.write_param(netlist,"VDD",str(VDD))
+    sim_comands.write_param(netlist,"VSS",str(VSS))
+    sim_comands.write_param(netlist,"V_OFF",str(offset))
+    sim_comands.write_param(netlist,"CL",CL)
+
     sim_comands.ngspice_sim(netlist)
     data_ac = pd.read_csv("VIN_sweep_AC.csv", delim_whitespace=True, header=None)
 
@@ -83,6 +83,7 @@ if simulation == 1:
     y2_values = data_ac[3]
 
     # Find the frequency where gain crosses 0 dB (interpolation)
+    # Find GBW Frequency and Phase Margin
     zero_gain_index = np.where(np.diff(np.sign(y1_values)))[0]  # Index where gain changes sign
     if len(zero_gain_index) > 0:
         idx = zero_gain_index[0]  # First crossing point
@@ -95,7 +96,7 @@ if simulation == 1:
     # Create figure and first axis
     fig, ax1 = plt.subplots(figsize=(8, 5))
 
-    # Plot gain (left y-axis)
+    # Plot Gain (left y-axis)
     ax1.plot(x_values, y1_values, label="Gain (dB)", linewidth=3, color="b")
     ax1.set_xscale("log")  # Logarithmic x-axis
     ax1.set_xlabel("Frequency (Hz)")
@@ -110,9 +111,9 @@ if simulation == 1:
     ax2.tick_params(axis="y", labelcolor="r")
 
     # Draw vertical line where gain = 0 dB (GBW frequency)
-    if x_zero_gain:
+    if x_zero_gain is not None:
         ax1.axvline(x=x_zero_gain, color="g", linestyle="--", linewidth=2, label="Gain = 0 dB (GBW)")
-    
+        
         # Convert GBW frequency to MHz
         gbw_mhz = x_zero_gain / 1e6  
 
@@ -121,10 +122,15 @@ if simulation == 1:
         ax1.text(x_zero_gain, 0, f"{gbw_mhz:.2f} MHz", 
                 verticalalignment="bottom", horizontalalignment="right", fontsize=10, color="black")
 
+        # Annotate Phase Margin at GBW frequency
+        if phase_at_x_zero_gain is not None:
+            ax2.scatter([x_zero_gain], [phase_at_x_zero_gain], color="purple", zorder=3)
+            ax2.text(x_zero_gain, phase_at_x_zero_gain, f"PM: {phase_at_x_zero_gain:.1f}°", 
+                    verticalalignment="bottom", horizontalalignment="left", fontsize=10, color="purple")
 
-    # Title and legend
-    plt.title("Gain and Phase vs Frequency")
-    fig.legend(loc="upper right", bbox_to_anchor=(1, 1))
+    # Show plot
+    plt.title("Bode Plot with Gain Bandwidth and Phase Margin")
+    plt.legend()
     plt.show()
 
 
@@ -176,7 +182,7 @@ if simulation == 2:
         # Compute offset and power
         offset = data.iloc[250, 1] - data.iloc[250, 0]
         offset = simulation_data_processing.value_converter_to_string(offset)
-        power = simulation_data_processing.value_converter_to_string(data.iloc[900, 3] * (VDD - VSS))
+        power = simulation_data_processing.value_converter_to_string(data.iloc[250, 3] * (VDD - VSS))
 
         # Run AC simulation with the updated parameters
         sim_comands.write_param(AC_sch_path, "VDD", str(VDD))

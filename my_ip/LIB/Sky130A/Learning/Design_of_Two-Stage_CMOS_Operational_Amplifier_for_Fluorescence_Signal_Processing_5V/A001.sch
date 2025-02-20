@@ -192,7 +192,7 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1640 -160 0 0 {name=M13
-L=0.8
+L=1
 W=4
 nf=4 mult=2
 model=nfet_g5v0d10v5
@@ -200,7 +200,7 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1660 -480 2 0 {name=p11 sig_type=std_logic lab=VOUT}
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1280 -360 1 0 {name=M14
-L=1
+L=2
 W=1
 nf=1 mult=2
 model=nfet_g5v0d10v5

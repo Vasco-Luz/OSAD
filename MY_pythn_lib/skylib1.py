@@ -966,17 +966,17 @@ class simulation_data_processing:
         - str: The value in scientific notation.
         """
         temporary = value
-        if(temporary>1000):
+        if(abs(temporary)>1000):
             return str(round(temporary/1000,2)+"k")
-        if(temporary>1000000):
-            return str(round(temporary/1000000,2)+"k")
-        if(temporary>1000000000):
-            return str(round(temporary/1000000000,2)+"k")
-        if ((temporary*1000)>1):
+        if(abs(temporary)>1000000):
+            return str(round(temporary/1000000,2)+"M")
+        if(abs(temporary)>1000000000):
+            return str(round(temporary/1000000000,2)+"G")
+        if ((abs(temporary)*1000)>1):
             return str(round(temporary*1000,2)) + "m"
-        if ((temporary*1000000)>1):
+        if ((abs(temporary)*1000000)>1):
             return str(round(temporary*1000000,2)) + "u"
-        if ((temporary*1000000000)>1):
+        if ((abs(temporary)*1000000000)>1):
             return str(round(temporary*1000000000,2)) + "n"
         
 

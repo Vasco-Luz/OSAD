@@ -5,16 +5,13 @@ V2 VSS GND VSS
 V4 VIN+ net1 ac 0.5
 V6 net2 net1 V_OFF
 V3 net1 GND VCM
-C1 VOUT VSS CL m=1
-C2 VOUT_cm VSS CL m=1
+C1 VOUT VSS 3p m=1
 V8 net4 net3 V_OFF
 V9 net10 GND VCM
 V7 net3 net10 ac 1
-C3 VOUT_a- VSS CL m=1
 V10 net6 net5 V_OFF
 V11 net5 GND VCM
 V13 net7 VSS ac 1
-C4 VOUT_a+ VSS CL m=1
 V12 net9 net8 V_OFF
 V14 net8 GND VCM
 V15 net11 VDD ac 1
@@ -23,15 +20,18 @@ x2 VDD VSS net4 net3 VOUT_cm UUT_VA_sky
 x3 VDD net7 net6 net5 VOUT_a- UUT_VA_sky
 x4 net11 VSS net9 net8 VOUT_a+ UUT_VA_sky
 V5 VIN- net2 ac -0.5
+C2 VOUT_cm VSS 3p m=1
+C3 VOUT_a- VSS 3p m=1
+C4 VOUT_a+ VSS 3p m=1
 **** begin user architecture code
 .lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice fs
 
 .Temp 27
-.param VDD = 1.8
+.param VDD = 5
 .param VSS = 0
-.param VCM={(VDD-VSS)/2}
+.param VCM = 2.5
 .param VCM_NEG={-VCM}
-.param V_OFF = 900.0m
+.param V_OFF = -1.34m
 .param CL = 3p
 
 .control
@@ -110,10 +110,10 @@ XM11 net5 net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W='1 * 2 ' nf=2 ad='int(
 XM12 net6 net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W='1 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
 + pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=2
 + m=2
-XM13 VOUT net5 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W='4 * 4 ' nf=4 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
+XM13 VOUT net5 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W='4 * 4 ' nf=4 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
 + pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=2
 + m=2
-XM14 net7 VB2 net5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W='1 * 1 ' nf=1 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
+XM14 net7 VB2 net5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W='1 * 1 ' nf=1 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
 + pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=2
 + m=2
 XC1 VOUT net7 sky130_fd_pr__cap_mim_m3_1 W=8 L=8 MF=4 m=4
