@@ -1,0 +1,26 @@
+Design and Analysis of Two-Stage CMOS Operational Amplifier for Fluorescence Signal Processing
+
+
+
+
+Requirements:
+    Tec                :                 sky130
+    VDD"               :                 5  
+    VSS"               :                 0    
+    V_OFF_required"    :                 1m   
+    Power_required"    :                 2m   
+    ICMR_required"     :                 0-4
+    Bandwith_required" :                 40MHz  
+    DC gain_required"  :                 80dB 
+    CMRR_required"     :                 60dB 
+    PSSR+_required"    :                 60dB 
+    PSSR-_required"    :                 80dB 
+    phase_margin"      :                 60   
+    CL                 :                 3p  
+
+
+
+In this part i will be designing the 2 stage miller amplifier with the previous designed transcondutance cell.
+during the sizing i will be using custom simulation scripts with the testbenches, i will show the tesbenches
+but in short it is a dc testbench to obtain the dc point then the dc point is passed to the ac tesbench were the
+gain, phase margin pssr and cmrr are obtained.

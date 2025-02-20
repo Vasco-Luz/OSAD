@@ -10,6 +10,8 @@ L 4 -100 -790 -100 -610 {}
 L 4 -420 -790 -100 -790 {}
 L 4 -420 -790 -420 -770 {}
 T {simulation scripts} -510 -870 0 0 1 1 {}
+T {AC for monte carlo} 380 -420 0 0 0.4 0.4 {}
+T {THis is a special resistor with an ac resistance and dc resistance, good for certain type of simulation tests} 240 -480 0 0 0.4 0.4 {}
 N 130 -410 130 -390 {
 lab=GND}
 N 130 -510 130 -470 {
@@ -221,7 +223,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 1020 -820 0 0 {name=p9 sig_type=std_logic lab=VSS
 }
-C {devices/vsource.sym} 500 -610 0 0 {name=V5 value= 0.9}
+C {devices/vsource.sym} 500 -610 0 0 {name=V5 value= 2.5}
 C {devices/gnd.sym} 500 -560 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 500 -720 0 0 {name=V3 value= "ac 0.5"}
 C {devices/lab_pin.sym} 500 -870 0 0 {name=p2 sig_type=std_logic lab=VIN+
@@ -256,7 +258,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 1040 -10 0 0 {name=p15 sig_type=std_logic lab=VSS
 }
-C {devices/vsource.sym} 520 90 0 0 {name=V6 value= 0.9}
+C {devices/vsource.sym} 520 90 0 0 {name=V6 value= 2.5}
 C {devices/gnd.sym} 520 250 0 0 {name=l4 lab=GND}
 C {devices/vsource.sym} 520 200 0 0 {name=V7 value= "ac 1"}
 C {vcvs.sym} 630 20 0 1 {name=E2 value=1}
@@ -286,7 +288,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 1770 -680 0 0 {name=p19 sig_type=std_logic lab=VSS
 }
-C {devices/vsource.sym} 1250 -580 0 0 {name=V8 value= 0.9}
+C {devices/vsource.sym} 1250 -580 0 0 {name=V8 value= 2.5}
 C {devices/gnd.sym} 1250 -520 0 0 {name=l5 lab=GND}
 C {vcvs.sym} 1360 -650 0 1 {name=E3 value=1}
 C {devices/lab_pin.sym} 1490 -590 0 0 {name=p21 sig_type=std_logic lab=VSS
@@ -315,7 +317,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 1990 -80 0 0 {name=p26 sig_type=std_logic lab=VSS
 }
-C {devices/vsource.sym} 1470 20 0 0 {name=V10 value= 0.9}
+C {devices/vsource.sym} 1470 20 0 0 {name=V10 value= 2.5}
 C {devices/gnd.sym} 1470 80 0 0 {name=l6 lab=GND}
 C {vcvs.sym} 1580 -50 0 1 {name=E4 value=1}
 C {devices/lab_pin.sym} 1710 10 0 0 {name=p27 sig_type=std_logic lab=VSS

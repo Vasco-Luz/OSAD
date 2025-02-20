@@ -10,6 +10,7 @@ L 4 990 -980 990 -800 {}
 L 4 670 -980 990 -980 {}
 L 4 670 -980 670 -960 {}
 T {simulation scripts} 580 -1060 0 0 1 1 {}
+T {This is for monte carlo} 560 -530 0 0 0.4 0.4 {}
 N 1220 -600 1220 -580 {
 lab=GND}
 N 1220 -700 1220 -660 {
@@ -60,7 +61,7 @@ C {devices/code.sym} 840 -930 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	
 .Temp 27
-.param VDD = 1.8
+.param VDD = 5
 .param VSS = 0
 .param CL = 3p
 .param mc_mm_switch = 1

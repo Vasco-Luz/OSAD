@@ -10,6 +10,8 @@ L 4 -1340 -500 -1340 -320 {}
 L 4 -1660 -500 -1340 -500 {}
 L 4 -1660 -500 -1660 -480 {}
 T {simulation scripts} -1750 -580 0 0 1 1 {}
+T {AC testbench} -400 -260 0 0 0.4 0.4 {}
+T {I need to do a small change in the simulation script} -410 -420 0 0 0.4 0.4 {}
 N -1420 -130 -1420 -110 {
 lab=GND}
 N -1420 -230 -1420 -190 {
@@ -196,7 +198,7 @@ value="
 .param VSS = 0
 .param VCM=\{(VDD-VSS)/2\}
 .param VCM_NEG=\{-VCM\}
-.param V_OFF = 2.01u
+.param V_OFF = 900.0m
 .param CL = 3p
 
 .control

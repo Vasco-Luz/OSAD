@@ -43,7 +43,7 @@ if simulation == 1:
     sim_comands.ngspice_sim(netlist)
     data = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
 
-    offset = data.iloc[90,1] - data.iloc[90,0]
+    offset = data.iloc[250,1] - data.iloc[90,0]
     print(offset)
     
     
@@ -174,7 +174,7 @@ if simulation == 2:
         data = pd.read_csv("VIN_sweep_DC.csv", delim_whitespace=True, header=None)
 
         # Compute offset and power
-        offset = data.iloc[900, 1] - data.iloc[900, 0]
+        offset = data.iloc[250, 1] - data.iloc[250, 0]
         offset = simulation_data_processing.value_converter_to_string(offset)
         power = simulation_data_processing.value_converter_to_string(data.iloc[900, 3] * (VDD - VSS))
 
@@ -266,10 +266,10 @@ if simulation == 3:
         data = pd.read_csv("mc_dc.csv", delim_whitespace=True, header=None)
 
         # Compute offset and power
-        offset = data.iloc[900, 1] - data.iloc[900, 0]
+        offset = data.iloc[250, 1] - data.iloc[250, 0]
         offsets.append(offset)
 
-        power = data.iloc[900, 3] * (VDD - VSS)
+        power = data.iloc[250, 3] * (VDD - VSS)
         powers.append(power)
 
         # Run AC simulation

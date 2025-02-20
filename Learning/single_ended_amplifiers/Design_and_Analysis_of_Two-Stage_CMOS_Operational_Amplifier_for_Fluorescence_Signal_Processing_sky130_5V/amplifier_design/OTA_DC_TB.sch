@@ -10,6 +10,7 @@ L 4 -900 -310 -900 -130 {}
 L 4 -1220 -310 -900 -310 {}
 L 4 -1220 -310 -1220 -290 {}
 T {simulation scripts} -1310 -390 0 0 1 1 {}
+T {DC testbench} -550 70 0 0 0.4 0.4 {}
 N -980 60 -980 80 {
 lab=GND}
 N -980 -40 -980 0 {
@@ -55,7 +56,7 @@ C {devices/vsource.sym} -1050 30 0 0 {name=V2 value="VSS"
 }
 C {devices/gnd.sym} -1050 80 0 0 {name=l1 lab=GND}
 C {sky130_fd_pr/corner.sym} -1190 -260 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/code.sym} -1050 -260 0 0 {name=spice only_toplevel=false
+C {devices/code.sym} -1040 -260 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	
 .Temp 27
@@ -64,7 +65,7 @@ value="
 
 .control
 save all
-dc V4 0 1.8 0.01
+dc V4 0 5 0.01
 wrdata VIN_sweep_DC.csv v(VOUT) i(Vmeas)
 plot v(VOUT) v(VIN+)
 plot i(Vmeas)
@@ -74,7 +75,7 @@ plot i(Vmeas)
 C {devices/lab_pin.sym} -670 310 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -580 -190 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
-C {devices/vsource.sym} -670 170 0 0 {name=V4 value= 0.9}
+C {devices/vsource.sym} -670 170 0 0 {name=V4 value= 2.5}
 C {devices/lab_pin.sym} -670 90 0 0 {name=p3 sig_type=std_logic lab=VIN+
 }
 C {devices/lab_pin.sym} -480 -370 0 0 {name=p4 sig_type=std_logic lab=VDD}
