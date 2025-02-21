@@ -69,7 +69,7 @@ value="
 .control
 
 	save all
-	dc V12 0 1.8 0.01
+	dc V12 0 5 0.01
 	plot v(VOUT_DC)
 	wrdata mc_dc.csv v(VOUT_DC) i(Vmeas1)
 .endc

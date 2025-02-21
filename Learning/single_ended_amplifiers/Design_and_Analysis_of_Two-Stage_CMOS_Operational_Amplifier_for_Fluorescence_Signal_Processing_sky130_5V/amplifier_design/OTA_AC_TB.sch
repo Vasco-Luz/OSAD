@@ -198,7 +198,7 @@ value="
 .param VSS = 0
 .param VCM = 2.5
 .param VCM_NEG=\{-VCM\}
-.param V_OFF = -1.31m
+.param V_OFF = -575.48u
 .param CL = 3p
 
 .control

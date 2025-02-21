@@ -4,9 +4,6 @@ K {}
 V {}
 S {}
 E {}
-T {it has a very bad phase margin, this means that the output pole and the input pole are too close} 1280 -830 0 0 0.4 0.4 {}
-T {In order to increase the the distance, we must one decrease the frequency of the pole of the 1 stage or 2 increase the frequency of the 2 pole} 1280 -780 0 0 0.4 0.4 {}
-T {i start by decreasing the frequency of the pole of the first stage} 1290 -730 0 0 0.4 0.4 {}
 N 280 -660 280 -620 {lab=VDD}
 N 280 -620 280 -590 {lab=VDD}
 N 320 -590 460 -590 {lab=VB1}
@@ -163,15 +160,15 @@ spiceprefix=X
 C {devices/lab_pin.sym} 1550 -580 2 1 {name=p8 sig_type=std_logic lab=VB1}
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 790 -410 0 0 {name=M3
 L=1
-W=4
-nf=4 mult=4
+W=5
+nf=2 mult=4
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 1110 -410 0 1 {name=M4
 L=1
-W=4
-nf=4 mult=4
+W=5
+nf=2 mult=4
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
@@ -179,14 +176,14 @@ C {devices/lab_pin.sym} 730 -410 2 1 {name=p9 sig_type=std_logic lab=Vin-}
 C {devices/lab_pin.sym} 1170 -410 2 0 {name=p10 sig_type=std_logic lab=Vin+}
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1070 -190 0 0 {name=M11
 L=2
-W=1
+W=1.2
 nf=2 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 830 -190 0 1 {name=M12
 L=2
-W=1
+W=1.2
 nf=2 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
@@ -194,14 +191,14 @@ spiceprefix=X
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1640 -160 0 0 {name=M13
 L=1
 W=4
-nf=4 mult=2
+nf=2 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1660 -480 2 0 {name=p11 sig_type=std_logic lab=VOUT}
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1280 -360 1 0 {name=M14
 L=2
-W=1
+W=1.5
 nf=1 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
