@@ -40,6 +40,12 @@ N 880 -280 880 -220 {lab=#net6}
 N 860 -260 950 -260 {lab=VSS}
 N 980 -400 980 -360 {lab=VDD}
 N 880 -160 880 -140 {lab=VSS}
+N 870 0 870 40 {lab=VDD}
+N 870 100 870 120 {lab=#net7}
+N 750 90 750 120 {lab=#net8}
+N 750 10 750 30 {lab=Vx}
+N 750 240 750 260 {lab=VSS}
+N 690 240 690 260 {lab=VSS}
 C {devices/lab_pin.sym} -190 20 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -190 90 0 0 {name=V1 value="VDD"
 
@@ -67,7 +73,7 @@ value="
 save all
 
 dc V3 0 5 0.001
-plot i(Vmeas3)
+plot i(Vmeas4)
 
 .endc
 
@@ -177,6 +183,44 @@ C8 VDD VSUBS 77.69173f
 .ends
 
 
+.subckt Nmos_lower_current_mirror VSS IC ID IE 
+X0 IC VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=3.2
+X1 ID VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1.16003 pd=10.325 as=2.32002 ps=20.645 w=1 l=3.2
+X2 IC VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=2.90002 pd=25.805 as=0 ps=0 w=1 l=3.2
+X3 ID VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X4 ID VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X5 VSS ID ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=3.2
+X6 IC VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X7 VSS ID ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X8 ID VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X9 IC VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X10 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=3.2
+X11 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=3.2
+X12 VSS ID ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X13 VSS ID ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X14 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=2.32 pd=20.64 as=0 ps=0 w=1 l=3.2
+X15 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X16 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X17 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X18 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X19 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X20 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X21 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X22 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X23 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X24 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X25 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X26 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X27 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+C0 IE IC 3.21167f
+C1 ID IC 2.55348f
+C2 VSS ID 6.7579f
+C3 IE 0 2.10306f
+C4 ID 0 21.8586f
+C5 VSS 0 2.30348f
+C6 IC 0 2.30032f
+.ends
+
 
 "}
 C {devices/lab_pin.sym} -260 20 0 0 {name=p8 sig_type=std_logic lab=VSS
@@ -208,3 +252,12 @@ C {devices/lab_pin.sym} 980 -400 2 0 {name=p12 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 880 -140 2 0 {name=p13 sig_type=std_logic lab=VSS
 }
 C {/foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/layout/upper_nmos_current_mirror.sym} 710 -300 0 0 {name=x2}
+C {/foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/layout/Nmos_lower_current_mirror.sym} 800 180 0 0 {name=x3}
+C {isource.sym} 870 70 0 0 {name=I2 value=6u}
+C {devices/lab_pin.sym} 870 0 2 0 {name=p14 sig_type=std_logic lab=VDD}
+C {ammeter.sym} 750 60 0 0 {name=Vmeas4 savecurrent=true spice_ignore=0}
+C {devices/lab_pin.sym} 750 10 2 0 {name=p15 sig_type=std_logic lab=Vx}
+C {devices/lab_pin.sym} 750 260 2 0 {name=p16 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 690 260 2 0 {name=p17 sig_type=std_logic lab=VSS
+}

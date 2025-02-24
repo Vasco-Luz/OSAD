@@ -1,0 +1,32 @@
+* NGSPICE file created from diff_pair.ext - technology: sky130A
+
+.subckt diff_pair Vin+ Vin- Ibias Ia Ib
+X0 Ib Vin+ Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0.6525 pd=4.79 as=1.305 ps=9.58 w=4.5 l=1
+X1 Ibias Vin+ Ib Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=1.305 pd=9.58 as=0.6525 ps=4.79 w=4.5 l=1
+X2 Ibias Vin+ Ib Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=1
+X3 Ib Vin+ Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0.6525 pd=4.79 as=0.6525 ps=4.79 w=4.5 l=1
+X4 Ia Vin- Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=5.22 pd=38.32 as=18.27003 ps=134.125 w=4.5 l=1
+X5 Ibias Vin- Ia Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X6 Ibias Vin- Ia Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X7 Ia Vin- Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X8 Ibias Ibias Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=1.305 pd=9.58 as=1.305 ps=9.58 w=4.5 l=1
+X9 Ibias Ibias Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X10 Ibias Ibias Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X11 Ibias Ibias Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X12 Ia Vin- Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0.6525 pd=4.79 as=1.305 ps=9.58 w=4.5 l=1
+X13 Ibias Vin- Ia Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=1.305 pd=9.58 as=0.6525 ps=4.79 w=4.5 l=1
+X14 Ia Vin- Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X15 Ibias Vin- Ia Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X16 Ib Vin+ Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=5.22 pd=38.32 as=0 ps=0 w=4.5 l=1
+X17 Ibias Vin+ Ib Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X18 Ib Vin+ Ibias Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X19 Ibias Vin+ Ib Ibias sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+C0 Ia Ib 3.2525f
+C1 Vin+ Vin- 3.16945f
+C2 Vin+ Ibias 3.26112f
+C3 Ibias Ib 3.59059f
+C4 Ia Ibias 2.96238f
+C5 Vin- Ibias 3.24896f
+C6 Ia VSUBS 2.55544f
+C7 Ibias VSUBS 27.98868f
+.ends

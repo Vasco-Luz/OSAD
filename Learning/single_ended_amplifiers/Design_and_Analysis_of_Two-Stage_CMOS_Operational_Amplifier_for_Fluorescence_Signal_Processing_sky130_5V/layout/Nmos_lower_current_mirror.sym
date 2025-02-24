@@ -1,23 +1,27 @@
-v {xschem version=3.4.6RC file_version=1.2}
-K {type=subcircuit
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=primative
 format="@name @pinlist @symname"
 template="name=x1"
 }
-T {@symname} -130.5 -6 0 0 0.3 0.3 {}
-T {@name} 135 -52 0 0 0.2 0.2 {}
+V {}
+S {}
+E {}
 L 4 -130 -40 130 -40 {}
 L 4 -130 40 130 40 {}
 L 4 -130 -40 -130 40 {}
 L 4 130 -40 130 40 {}
-B 5 147.5 -32.5 152.5 -27.5 {name=VSS dir=inout}
-L 7 130 -30 150 -30 {}
-T {VSS} 125 -34 0 1 0.2 0.2 {}
-B 5 147.5 -12.5 152.5 -7.5 {name=IC dir=inout}
-L 7 130 -10 150 -10 {}
-T {IC} 125 -14 0 1 0.2 0.2 {}
-B 5 147.5 7.5 152.5 12.5 {name=ID dir=inout}
-L 7 130 10 150 10 {}
-T {ID} 125 6 0 1 0.2 0.2 {}
-B 5 147.5 27.5 152.5 32.5 {name=IE dir=inout}
-L 7 130 30 150 30 {}
-T {IE} 125 26 0 1 0.2 0.2 {}
+L 7 -110 40 -110 60 {}
+L 7 -50 -60 -50 -40 {}
+L 7 70 -60 70 -40 {}
+L 7 -50 40 -50 60 {}
+B 5 -112.5 57.5 -107.5 62.5 {name=VSS dir=inout}
+B 5 -52.5 -62.5 -47.5 -57.5 {name=IC dir=inout}
+B 5 67.5 -62.5 72.5 -57.5 {name=ID dir=inout}
+B 5 -52.5 57.5 -47.5 62.5 {name=IE dir=inout}
+T {@symname} 139.5 4 0 0 0.3 0.3 {}
+T {@name} 135 -52 0 0 0.2 0.2 {}
+T {VSS} -115 56 0 1 0.2 0.2 {}
+T {IC} -55 -64 0 1 0.2 0.2 {}
+T {ID} 85 -64 0 1 0.2 0.2 {}
+T {IE} -35 56 0 1 0.2 0.2 {}
