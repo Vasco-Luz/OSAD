@@ -1,4 +1,4 @@
-* SPICE3 file created from pmos_current_mirror.ext - technology: sky130A
+* NGSPICE file created from pmos_current_mirror.ext - technology: sky130A
 
 .subckt pmos_current_mirror VDD IA IB IC ID
 X0 IA VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=2.2 M=4

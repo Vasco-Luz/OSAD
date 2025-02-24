@@ -44,6 +44,14 @@ N -60 -110 -60 -80 {lab=VDD}
 N -20 -110 -20 -90 {lab=VDD}
 N -20 -90 -20 -80 {lab=VDD}
 N -60 -50 -60 10 {lab=IA}
+N 30 20 30 50 {lab=VDD}
+N 70 20 70 40 {lab=VDD}
+N 70 40 70 50 {lab=VDD}
+N 30 20 70 20 {lab=VDD}
+N 70 -110 70 20 {lab=VDD}
+N 30 80 100 80 {lab=VDD}
+N 100 30 100 80 {lab=VDD}
+N 70 30 100 30 {lab=VDD}
 C {devices/lab_pin.sym} -360 -110 1 0 {name=p1 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} -260 -40 0 0 {name=M2
 L=2.2
@@ -97,3 +105,10 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -60 -30 2 1 {name=p18 sig_type=std_logic lab=IA}
+C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 50 50 0 1 {name=M5
+L=2.2
+W=1
+nf=1 mult=4
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
