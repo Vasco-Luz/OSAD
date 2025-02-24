@@ -4,13 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 280 -660 280 -620 {lab=VDD}
-N 280 -620 280 -590 {lab=VDD}
-N 320 -590 460 -590 {lab=VB1}
-N 500 -660 500 -620 {lab=VDD}
-N 500 -620 500 -590 {lab=VDD}
-N 390 -590 390 -550 {lab=VB1}
-N 280 -550 390 -550 {lab=VB1}
 N 320 -220 400 -220 {lab=#net1}
 N 420 -280 420 -220 {lab=#net1}
 N 420 -280 500 -280 {lab=#net1}
@@ -25,87 +18,73 @@ N 440 -80 500 -80 {lab=VSS}
 N 260 -220 280 -220 {lab=VSS}
 N 260 -220 260 -120 {lab=VSS}
 N 280 -190 280 -150 {lab=#net2}
-N 280 -660 380 -660 {lab=VDD}
-N 380 -660 500 -660 {lab=VDD}
-N 280 -560 280 -550 {lab=VB1}
 N 280 -360 280 -250 {lab=#net3}
 N 500 -360 500 -280 {lab=#net1}
 N 220 -390 280 -390 {lab=VSS}
 N 500 -390 560 -390 {lab=VSS}
-N 320 -390 460 -390 {lab=VB2}
-N 390 -450 390 -390 {lab=VB2}
-N 390 -450 500 -450 {lab=VB2}
+N 320 -390 460 -390 {lab=#net4}
+N 390 -450 390 -390 {lab=#net4}
+N 390 -450 500 -450 {lab=#net4}
 N 280 -450 280 -420 {lab=VB1}
 N 280 -550 280 -510 {lab=VB1}
-N 500 -460 500 -450 {lab=VB2}
-N 500 -450 500 -420 {lab=VB2}
-N 500 -560 500 -530 {lab=VB2}
-N 500 -470 500 -460 {lab=VB2}
+N 500 -460 500 -450 {lab=#net4}
+N 500 -450 500 -420 {lab=#net4}
+N 500 -470 500 -460 {lab=#net4}
 N 280 -510 280 -450 {lab=VB1}
-N 500 -530 500 -470 {lab=VB2}
-N 500 -660 950 -660 {lab=VDD}
-N 950 -660 950 -610 {lab=VDD}
-N 950 -610 950 -580 {lab=VDD}
-N 840 -580 910 -580 {lab=VB1}
-N 1660 -660 1660 -610 {lab=VDD}
-N 1660 -610 1660 -580 {lab=VDD}
-N 1550 -580 1620 -580 {lab=VB1}
-N 1150 -660 1660 -660 {lab=VDD}
-N 950 -660 1150 -660 {lab=VDD}
-N 810 -440 810 -410 {lab=#net4}
-N 810 -490 810 -440 {lab=#net4}
-N 810 -490 950 -490 {lab=#net4}
-N 950 -550 950 -490 {lab=#net4}
-N 950 -490 1090 -490 {lab=#net4}
-N 1090 -450 1090 -410 {lab=#net4}
-N 1090 -490 1090 -450 {lab=#net4}
+N 500 -530 500 -470 {lab=#net4}
+N 810 -440 810 -410 {lab=#net5}
+N 810 -490 810 -440 {lab=#net5}
+N 810 -490 950 -490 {lab=#net5}
+N 950 -550 950 -490 {lab=#net5}
+N 950 -490 1090 -490 {lab=#net5}
+N 1090 -450 1090 -410 {lab=#net5}
+N 1090 -490 1090 -450 {lab=#net5}
 N 730 -410 770 -410 {lab=Vin-}
 N 1130 -410 1170 -410 {lab=Vin+}
-N 1090 -380 1090 -220 {lab=#net5}
-N 810 -380 810 -220 {lab=#net6}
-N 850 -190 1050 -190 {lab=#net6}
-N 960 -250 960 -190 {lab=#net6}
-N 810 -250 960 -250 {lab=#net6}
+N 1090 -380 1090 -220 {lab=#net6}
+N 810 -380 810 -220 {lab=#net7}
+N 850 -190 1050 -190 {lab=#net7}
+N 960 -250 960 -190 {lab=#net7}
+N 810 -250 960 -250 {lab=#net7}
 N 500 -80 1090 -80 {lab=VSS}
 N 1090 -190 1090 -80 {lab=VSS}
 N 810 -190 810 -80 {lab=VSS}
 N 1660 -550 1660 -190 {lab=VOUT}
-N 1300 -160 1620 -160 {lab=#net5}
-N 1300 -230 1300 -160 {lab=#net5}
-N 1090 -230 1300 -230 {lab=#net5}
+N 1300 -160 1620 -160 {lab=#net6}
+N 1300 -230 1300 -160 {lab=#net6}
+N 1090 -230 1300 -230 {lab=#net6}
 N 1660 -160 1660 -130 {lab=VSS}
 N 1660 -130 1660 -80 {lab=VSS}
 N 1090 -80 1660 -80 {lab=VSS}
 N 1280 -340 1280 -80 {lab=VSS}
-N 1090 -340 1250 -340 {lab=#net5}
+N 1090 -340 1250 -340 {lab=#net6}
 N 1280 -410 1280 -380 {lab=VB2}
-N 1310 -340 1360 -340 {lab=#net7}
+N 1310 -340 1360 -340 {lab=#net8}
 N 1420 -340 1660 -340 {lab=VOUT}
 N 100 -560 120 -560 {lab=VDD}
 N 100 -520 120 -520 {lab=VSS}
 N 100 -490 120 -490 {lab=Vin+}
 N 100 -460 120 -460 {lab=Vin-}
 N 100 -430 120 -430 {lab=VOUT}
+N 280 -690 280 -550 {lab=VB1}
+N 280 -690 720 -690 {lab=VB1}
+N 720 -770 720 -690 {lab=VB1}
+N 500 -640 500 -530 {lab=#net4}
+N 500 -640 760 -640 {lab=#net4}
+N 760 -770 760 -640 {lab=#net4}
+N 850 -770 850 -650 {lab=#net5}
+N 850 -650 940 -650 {lab=#net5}
+N 940 -650 950 -650 {lab=#net5}
+N 950 -650 950 -550 {lab=#net5}
+N 900 -770 1640 -770 {lab=VOUT}
+N 1660 -770 1660 -550 {lab=VOUT}
+N 1640 -770 1660 -770 {lab=VOUT}
+N 820 -950 820 -910 {lab=VDD}
 C {devices/lab_pin.sym} 360 -80 3 0 {name=p2 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 380 -660 1 0 {name=p3 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 220 -390 0 0 {name=p4 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 560 -390 0 1 {name=p5 sig_type=std_logic lab=VSS
-}
-C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 480 -590 0 0 {name=M5
-L=2.2
-W=1
-nf=2 mult=2
-model=pfet_g5v0d10v5
-spiceprefix=X
-}
-C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 300 -590 0 1 {name=M6
-L=2.2
-W=1
-nf=2 mult=2
-model=pfet_g5v0d10v5
-spiceprefix=X
 }
 C {sky130_fd_pr/res_high_po_0p35.sym} 280 -120 0 0 {name=R2
 L=20.4
@@ -141,23 +120,6 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 280 -500 2 0 {name=p1 sig_type=std_logic lab=VB1}
-C {devices/lab_pin.sym} 500 -520 2 0 {name=p6 sig_type=std_logic lab=VB2}
-C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 930 -580 0 0 {name=M1
-L=2.2
-W=1
-nf=2 mult=8
-model=pfet_g5v0d10v5
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 840 -580 2 1 {name=p7 sig_type=std_logic lab=VB1}
-C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 1640 -580 0 0 {name=M2
-L=2.2
-W=1
-nf=2 mult=16
-model=pfet_g5v0d10v5
-spiceprefix=X
-}
-C {devices/lab_pin.sym} 1550 -580 2 1 {name=p8 sig_type=std_logic lab=VB1}
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 790 -410 0 0 {name=M3
 L=1
 W=5
@@ -215,3 +177,5 @@ C {iopin.sym} 100 -460 0 1 {name=p19 lab=Vin-}
 C {devices/lab_pin.sym} 120 -460 2 0 {name=p20 sig_type=std_logic lab=Vin-}
 C {iopin.sym} 100 -430 0 1 {name=p21 lab=VOUT}
 C {devices/lab_pin.sym} 120 -430 2 0 {name=p22 sig_type=std_logic lab=VOUT}
+C {Sky130A/Learning/Design_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_5V/Pmos_current_mirror.sym} 820 -840 0 0 {name=x1}
+C {devices/lab_pin.sym} 820 -950 2 0 {name=p3 sig_type=std_logic lab=VDD}

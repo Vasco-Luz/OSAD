@@ -1,0 +1,39 @@
+* NGSPICE file created from Nmos_lower_current_mirror.ext - technology: sky130A
+
+.subckt Nmos_lower_current_mirror VSS IC ID IE
+X0 ID ID VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X1 ID VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=3.2
+X2 IC VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X3 VSS VSS ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=3.2
+X4 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X5 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X6 VSS ID ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X7 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X8 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X9 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X10 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X11 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X12 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X13 VSS VSS IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X14 ID ID VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=2 pd=12 as=3.2 ps=22.4 w=1 l=3.2
+X15 ID VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X16 IC VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=5 pd=30 as=0 ps=0 w=1 l=3.2
+X17 VSS VSS ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X18 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=4 pd=24 as=0 ps=0 w=1 l=3.2
+X19 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X20 VSS ID ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X21 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X22 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X23 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X24 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X25 IC ID IE VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X26 IE ID IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+X27 VSS VSS IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=3.2
+C0 ID IC 5.49978f
+C1 ID IE 3.927f
+C2 ID VSS 9.26362f
+C3 IE 0 2.0029f
+C4 ID 0 23.20247f
+C5 VSS 0 9.00763f
+C6 vias_gen$4_0/w_n36_n36# 0 4.17768f $ **FLOATING
+.ends

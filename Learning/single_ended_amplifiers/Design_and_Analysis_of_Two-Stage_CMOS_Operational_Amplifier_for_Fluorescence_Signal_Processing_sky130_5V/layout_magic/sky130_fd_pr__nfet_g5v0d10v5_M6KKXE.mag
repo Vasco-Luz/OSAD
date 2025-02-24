@@ -1,0 +1,42 @@
+magic
+tech sky130A
+timestamp 1740353259
+<< mvnmos >>
+rect -100 -50 100 50
+<< mvndiff >>
+rect -129 44 -100 50
+rect -129 -44 -123 44
+rect -106 -44 -100 44
+rect -129 -50 -100 -44
+rect 100 44 129 50
+rect 100 -44 106 44
+rect 123 -44 129 44
+rect 100 -50 129 -44
+<< mvndiffc >>
+rect -123 -44 -106 44
+rect 106 -44 123 44
+<< poly >>
+rect -100 50 100 63
+rect -100 -63 100 -50
+<< locali >>
+rect -123 44 -106 52
+rect -123 -52 -106 -44
+rect 106 44 123 52
+rect 106 -52 123 -44
+<< viali >>
+rect -123 -44 -106 44
+rect 106 -44 123 44
+<< metal1 >>
+rect -126 44 -103 50
+rect -126 -44 -123 44
+rect -106 -44 -103 44
+rect -126 -50 -103 -44
+rect 103 44 126 50
+rect 103 -44 106 44
+rect 123 -44 126 44
+rect 103 -50 126 -44
+<< properties >>
+string gencell sky130_fd_pr__nfet_g5v0d10v5
+string library sky130
+string parameters w 1 l 2 m 1 nf 1 diffcov 100 polycov 80 guard 0 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 80 topc 0 botc 0 poverlap 0 doverlap 1 lmin 0.50 wmin 0.42 class mosfet compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt  sky130_fd_bs_flash__special_sonosfet_star  sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt  sky130_fd_pr__nfet_03v3_nvt} full_metal 1 viasrc 100 viadrn 100 viagate 80 viagb 0 viagr 0 viagl 0 viagt 0
+<< end >>

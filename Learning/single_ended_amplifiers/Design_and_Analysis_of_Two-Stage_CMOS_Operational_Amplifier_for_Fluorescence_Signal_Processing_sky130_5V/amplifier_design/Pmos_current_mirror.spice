@@ -1,0 +1,75 @@
+* NGSPICE file created from TOP.ext - technology: sky130A
+
+.subckt Pmos_current_mirror VDD IA IB IC ID
+X0 VDD IA IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X1 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X2 IA VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=2.2
+X3 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X4 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X5 VDD IA IB VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X6 VDD VDD IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X7 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X8 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X9 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X10 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X11 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X12 IB IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X13 IA IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X14 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X15 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X16 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X17 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X18 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X19 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X20 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X21 VDD VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=2.2
+X22 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X23 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X24 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X25 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X26 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X27 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X28 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X29 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X30 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X31 VDD IA IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=16.2 pd=100.4 as=2 ps=12 w=1 l=2.2
+X32 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=8 ps=48 w=1 l=2.2
+X33 IA VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X34 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X35 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=4 pd=24 as=0 ps=0 w=1 l=2.2
+X36 VDD IA IB VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=1 ps=6 w=1 l=2.2
+X37 VDD VDD IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X38 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X39 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X40 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X41 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X42 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X43 IB IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X44 IA IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X45 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X46 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X47 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X48 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X49 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X50 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X51 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X52 VDD VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X53 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X54 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X55 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X56 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X57 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X58 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X59 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X60 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X61 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+C0 VDD ID 2.23365f
+C1 IC VDD 2.08133f
+C2 IA ID 3.68522f
+C3 IC IA 3.20159f
+C4 IC ID 4.03174f
+C5 IA VDD 44.41781f
+C6 ID VSUBS 2.56778f
+C7 IA VSUBS 18.03187f
+C8 VDD VSUBS 77.20277f
+.ends

@@ -24,3 +24,4 @@ In this part i will be designing the 2 stage miller amplifier with the previous 
 during the sizing i will be using custom simulation scripts with the testbenches, i will show the tesbenches
 but in short it is a dc testbench to obtain the dc point then the dc point is passed to the ac tesbench were the
 gain, phase margin pssr and cmrr are obtained.
+A python script ties everything toguether.

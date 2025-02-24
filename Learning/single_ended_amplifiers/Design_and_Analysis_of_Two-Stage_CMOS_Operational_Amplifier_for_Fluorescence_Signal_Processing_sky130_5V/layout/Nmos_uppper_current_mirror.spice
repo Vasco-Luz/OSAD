@@ -1,0 +1,27 @@
+* NGSPICE file created from Nmos_uppper_current_mirror.ext - technology: sky130A
+
+.subckt Nmos_uppper_current_mirror IA IB IC ID VSS
+X0 IC VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X1 IB VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=2
+X2 VSS VSS ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X3 VSS VSS IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=2
+X4 IB IB ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X5 ID VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X6 ID IB IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X7 VSS VSS IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X8 IC IB IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X9 IA IB IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X10 IC VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=2 pd=12 as=3.2 ps=22.4 w=1 l=2
+X11 IB VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=2 pd=12 as=0 ps=0 w=1 l=2
+X12 VSS VSS ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=2 ps=12 w=1 l=2
+X13 VSS VSS IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X14 IB IB ID VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X15 ID VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X16 ID IB IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X17 VSS VSS IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X18 IC IB IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=1 ps=6 w=1 l=2
+X19 IA IB IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+C0 VSS IB 4.91912f
+C1 VSS 0 8.1508f
+C2 IB 0 7.85727f
+.ends

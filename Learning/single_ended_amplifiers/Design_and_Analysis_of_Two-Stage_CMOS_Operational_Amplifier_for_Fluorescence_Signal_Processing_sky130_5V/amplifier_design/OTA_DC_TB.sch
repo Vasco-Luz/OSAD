@@ -11,6 +11,8 @@ L 4 -1220 -310 -900 -310 {}
 L 4 -1220 -310 -1220 -290 {}
 T {simulation scripts} -1310 -390 0 0 1 1 {}
 T {DC testbench} -550 70 0 0 0.4 0.4 {}
+T {My testbenches use a special symbol called a wrapper, to speed up simulation
+this symbol is uut or unit under test} -1620 200 0 0 0.4 0.4 {}
 N -980 60 -980 80 {
 lab=GND}
 N -980 -40 -980 0 {
