@@ -1,20 +1,5 @@
 
-Circuit 1 cell sky130_fd_pr__pfet_g5v0d10v5 and Circuit 2 cell sky130_fd_pr__pfet_g5v0d10v5 are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_g5v0d10v5 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_g5v0d10v5 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__pfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__pfet_g5v0d10v5    
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
-3                                          |3                                          
-4                                          |4                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__pfet_g5v0d10v5 and sky130_fd_pr__pfet_g5v0d10v5 are equivalent.
-
 Cells have no pins;  pin matching not needed.
-Device classes Pmos_current_mirror.spice and pmos_current_mirror_extracted.spice are equivalent.
+Device classes pmos_current_mirror_extracted.spice and Pmos_current_mirror.spice are equivalent.
 
-Final result: Verify:  cell pmos_current_mirror_extracted.spice has no elements and/or nodes.  Not checked.
+Final result: Verify:  cell Pmos_current_mirror.spice has no elements and/or nodes.  Not checked.
