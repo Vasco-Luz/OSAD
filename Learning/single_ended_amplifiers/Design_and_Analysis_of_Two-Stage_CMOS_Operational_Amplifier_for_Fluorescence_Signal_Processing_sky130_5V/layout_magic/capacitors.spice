@@ -1,0 +1,11 @@
+* NGSPICE file created from capacitors.ext - technology: sky130A
+
+.subckt capacitors VSS Ib VOUT
+X0 Ib VOUT sky130_fd_pr__cap_mim_m3_1 l=8 w=8
+X1 Ib VOUT sky130_fd_pr__cap_mim_m3_1 l=8 w=8
+X2 Ib VOUT sky130_fd_pr__cap_mim_m3_1 l=8 w=8
+X3 Ib VOUT sky130_fd_pr__cap_mim_m3_1 l=8 w=8
+C0 VOUT Ib 27.58126f
+C1 Ib VSS 2.75261f
+C2 VOUT VSS 9.35573f
+.ends

@@ -1,0 +1,47 @@
+timestamp 1740491809
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_pr__cap_mim_m3_1_7PSTXW sky130_fd_pr__cap_mim_m3_1_7PSTXW_0 1 0 -114 0 1 -46
+port "Ib" 3 -896 2084 -854 2096 m3
+port "VOUT" 5 506 2234 558 2250 m3
+port "VSS" 1 -2736 -734 -2656 -636 li
+node "Ib" 2 1067.11 -896 2084 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 155168 4896 72800 1816 0 0 0 0
+node "VOUT" 2 1132.32 506 2234 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 154968 4892 96512 2272 0 0 0 0
+substrate "VSS" 0 0 -2736 -734 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 600848 35344 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2157475 36098 0 0 0 0 0 0 0 0 0 0 0 0
+cap "VOUT" "Ib" 741.901
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" 118.486
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_n2052_n1760#" 45.413
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" 9.40648
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_n2052_n1760#" 7.47929
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" 5.22114
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" 9.66721
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" "VSS" 19.7022
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "VSS" 1.10669
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_n2052_n1760#" 43.7223
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" 123.639
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "VSS" 7.77464
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" 4.54747e-13
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" 4.54747e-13
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" "VSS" 16.4304
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" "VSS" 127.764
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_n2052_n1760#" "VSS" 48.8721
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" 10.503
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" 110.738
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "VSS" 5.50997
+cap "VSS" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" 11.3925
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" 93.0568
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "VSS" 5.02104
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" "VSS" 20.8609
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" -0.494817
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "VSS" 1.19377
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" 114.625
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" 86.4885
+cap "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "VSS" -1.77636e-15
+merge "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_160_n1760#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_n2052_n1760#" -559.652 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -19136 -784 0 0 0 0
+merge "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/c1_n2052_n1760#" "Ib"
+merge "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_120_n1800#" "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" -883.391 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11440 -636 0 0 0 0
+merge "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/m3_n2092_n1800#" "VOUT"
+merge "sky130_fd_pr__cap_mim_m3_1_7PSTXW_0/VSUBS" "VSS" -9341.07 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -600848 -35344 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2157475 -36098 0 0 0 0 0 0 0 0 0 0 0 0

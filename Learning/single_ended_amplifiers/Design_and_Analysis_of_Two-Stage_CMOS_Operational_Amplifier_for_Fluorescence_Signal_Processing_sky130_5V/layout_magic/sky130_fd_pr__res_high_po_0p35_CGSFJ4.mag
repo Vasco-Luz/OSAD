@@ -1,0 +1,35 @@
+magic
+tech sky130A
+timestamp 1740486730
+<< error_p >>
+rect 391 47 572 82
+rect -391 -169 -356 47
+<< xpolycontact >>
+rect -391 -108 -356 47
+rect 356 -108 391 108
+<< ppolyres >>
+rect -391 82 -356 108
+rect -391 47 -273 82
+rect -308 -73 -273 47
+rect -225 47 -107 82
+rect -225 -73 -190 47
+rect -308 -108 -190 -73
+rect -142 -73 -107 47
+rect -59 47 59 82
+rect -59 -73 -24 47
+rect -142 -108 -24 -73
+rect 24 -73 59 47
+rect 107 47 225 82
+rect 107 -73 142 47
+rect 24 -108 142 -73
+rect 190 -73 225 47
+rect 273 47 356 82
+rect 273 -73 308 47
+rect 190 -108 308 -73
+<< locali >>
+rect -391 47 -356 108
+<< properties >>
+string gencell sky130_fd_pr__res_high_po_0p35
+string library sky130
+string parameters w 0.35 l 1.9 m 1 nx 10 wmin 0.350 lmin 0.50 class resistor rho 319.8 val 21.352k dummy 0 dw 0.0 term 194.82 sterm 0.0 caplen 0 guard 0 glc 1 grc 1 gtc 1 gbc 1 compatible {sky130_fd_pr__res_high_po_0p35  sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41  sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} snake 1 full_metal 1 wmax 0.350 vias 1 n_guard 0 hv_guard 0 viagb 0 viagt 0 viagl 0 viagr 0
+<< end >>

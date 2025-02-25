@@ -1,0 +1,57 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1740487318
+<< mvpsubdiff >>
+rect -127 1347 -67 1381
+rect 2021 1347 2081 1381
+rect -127 1321 -93 1347
+rect -127 -117 -93 -91
+rect 2047 1321 2081 1347
+rect 2047 -117 2081 -91
+rect -127 -151 -67 -117
+rect 2021 -151 2081 -117
+<< mvpsubdiffcont >>
+rect -67 1347 2021 1381
+rect -127 -91 -93 1321
+rect 2047 -91 2081 1321
+rect -67 -151 2021 -117
+<< locali >>
+rect -127 1347 -67 1381
+rect 2021 1380 2081 1381
+rect 2021 1347 2226 1380
+rect -127 1321 90 1347
+rect -93 788 90 1321
+rect 1846 1321 2226 1347
+rect 188 790 412 1220
+rect 526 788 750 1218
+rect 860 790 1084 1220
+rect 1190 790 1414 1220
+rect 1524 790 1748 1220
+rect 1846 790 2047 1321
+rect 2002 440 2047 790
+rect -93 -91 88 440
+rect 362 8 586 438
+rect 688 10 912 440
+rect 1020 8 1244 438
+rect 1358 8 1582 438
+rect -127 -117 88 -91
+rect 1680 -117 1750 26
+rect 1844 -91 2047 440
+rect 2081 -91 2226 1321
+rect 1844 -117 2226 -91
+rect -127 -151 -67 -117
+rect 2021 -151 2226 -117
+rect 2002 -166 2226 -151
+<< metal1 >>
+rect 202 -212 240 62
+use sky130_fd_pr__res_high_po_0p35_NX9RRP  sky130_fd_pr__res_high_po_0p35_NX9RRP_0
+timestamp 1740487318
+transform 1 0 968 0 1 614
+box -948 -606 948 606
+<< labels >>
+flabel locali 2158 612 2198 720 0 FreeSans 1600 0 0 0 VSS
+port 1 nsew
+flabel metal1 204 -208 226 -188 0 FreeSans 1600 0 0 0 Ia
+port 3 nsew
+<< end >>

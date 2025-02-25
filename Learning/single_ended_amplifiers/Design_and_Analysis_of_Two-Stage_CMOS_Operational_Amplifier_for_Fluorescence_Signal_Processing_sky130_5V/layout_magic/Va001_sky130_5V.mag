@@ -1,4 +1,62 @@
 magic
 tech sky130A
-timestamp 0
+magscale 1 2
+timestamp 1740493849
+<< locali >>
+rect 8594 10102 8628 11626
+rect 8594 9494 9200 10102
+rect 8594 9430 8628 9494
+rect 9672 9488 10114 10112
+rect 10440 9488 10788 10122
+rect 23724 9692 23988 10036
+rect 25576 10018 26558 11372
+rect 25316 9704 26558 10018
+rect 25316 9694 26182 9704
+rect 25316 9674 25580 9694
+rect 26194 8493 26558 9704
+rect 26182 8484 26604 8493
+rect 26194 8474 26558 8484
+<< viali >>
+rect 26604 8442 31536 8500
+<< metal1 >>
+rect 18644 8493 26182 8518
+rect 26863 8514 31586 8518
+rect 26594 8500 31586 8514
+rect 26594 8493 26604 8500
+rect 18644 8462 26604 8493
+rect 18514 8442 26604 8462
+rect 31536 8442 31586 8500
+rect 18514 8220 31586 8442
+use active_load  active_load_0
+timestamp 1740493185
+transform 1 0 23246 0 1 9118
+box -252 -790 2978 587
+use capacitors  capacitors_1
+timestamp 1740491809
+transform 1 0 29230 0 1 10669
+box -2862 -2185 2227 2284
+use diff_pair  diff_pair_0
+timestamp 1740410531
+transform 1 0 19610 0 1 10286
+box -588 -1714 3208 1458
+use input_second_stage  input_second_stage_0
+timestamp 1740493314
+transform 1 0 23844 0 1 10176
+box -120 -194 1737 1195
+use Nmos_lower_current_mirror  Nmos_lower_current_mirror_0
+timestamp 1740397409
+transform 1 0 8746 0 1 8988
+box -246 -768 10053 700
+use Nmos_upper  Nmos_upper_0
+timestamp 1740487592
+transform 1 0 11452 0 1 10808
+box -506 -652 4783 734
+use pmos_current_mirror  pmos_current_mirror_0
+timestamp 1740352508
+transform 1 0 8682 0 1 12732
+box -234 -894 15715 686
+use transcondutance_resistance  transcondutance_resistance_0
+timestamp 1740487318
+transform 1 0 8729 0 1 10244
+box -127 -212 2226 1381
 << end >>

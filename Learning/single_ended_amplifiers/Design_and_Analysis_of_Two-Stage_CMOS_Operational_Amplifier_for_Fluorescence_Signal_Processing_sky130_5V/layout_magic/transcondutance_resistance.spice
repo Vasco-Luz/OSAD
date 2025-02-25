@@ -1,0 +1,16 @@
+* NGSPICE file created from transcondutance_resistance.ext - technology: sky130A
+
+.subckt transcondutance_resistance VSS Ia
+X0 li_188_790# li_362_8# VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X1 li_1190_790# li_1358_8# VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X2 VSS VSS VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X3 li_1524_790# li_1358_8# VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X4 li_1190_790# li_1020_8# VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X5 li_526_788# li_688_10# VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X6 li_526_788# li_362_8# VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X7 li_860_790# li_1020_8# VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X8 li_1524_790# VSS VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X9 li_188_790# Ia VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X10 li_860_790# li_688_10# VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+X11 VSS VSS VSS sky130_fd_pr__res_high_po_0p35 l=1.9
+.ends

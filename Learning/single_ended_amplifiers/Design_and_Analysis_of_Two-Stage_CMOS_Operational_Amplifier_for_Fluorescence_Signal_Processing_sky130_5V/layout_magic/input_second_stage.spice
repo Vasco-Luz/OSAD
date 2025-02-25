@@ -1,0 +1,6 @@
+* NGSPICE file created from input_second_stage.ext - technology: sky130A
+
+.subckt input_second_stage VSS Ib VOUT
+X0 VSS VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=1 M=2
+X1 VSS Ib VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1.16 pd=8.58 as=0.58 ps=4.29 w=4 l=1 M=4
+.ends

@@ -1,0 +1,101 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1740493185
+<< mvpsubdiff >>
+rect -143 553 -83 587
+rect 2903 553 2963 587
+rect -143 527 -109 553
+rect -143 -613 -109 -587
+rect 2929 527 2963 553
+rect 2929 -613 2963 -587
+rect -143 -647 -83 -613
+rect 2903 -647 2963 -613
+<< mvpsubdiffcont >>
+rect -83 553 2903 587
+rect -143 -587 -109 527
+rect 2929 -587 2963 527
+rect -83 -647 2903 -613
+<< locali >>
+rect -143 553 -83 587
+rect 2903 553 2963 587
+rect -143 527 -109 553
+rect 2929 527 2963 553
+rect 12 -66 46 32
+rect 10 -514 46 -66
+rect 2760 -206 2794 44
+rect -143 -613 -109 -587
+rect 12 -613 46 -514
+rect 2760 -613 2794 -454
+rect 2929 -613 2963 -587
+rect -143 -618 -83 -613
+rect 2903 -618 2963 -613
+rect -143 -647 -84 -618
+rect 2906 -647 2963 -618
+<< viali >>
+rect -84 -647 -83 -618
+rect -83 -647 2903 -618
+rect 2903 -647 2906 -618
+rect -84 -660 2906 -647
+<< metal1 >>
+rect 1400 496 1410 506
+rect 470 404 504 432
+rect 470 -144 504 78
+rect 928 -276 962 -18
+rect 1386 -54 1420 204
+rect 1844 -252 1878 6
+rect 928 -606 962 -550
+rect 1844 -606 1878 -296
+rect -252 -610 2962 -606
+rect -252 -618 2978 -610
+rect -252 -660 -84 -618
+rect 2906 -660 2978 -618
+rect -252 -790 2978 -660
+use sky130_fd_pr__nfet_g5v0d10v5_DLG898  sky130_fd_pr__nfet_g5v0d10v5_DLG898_0
+timestamp 1740482515
+transform 1 0 258 0 1 -331
+box -258 -207 258 207
+use sky130_fd_pr__nfet_g5v0d10v5_DLG898  sky130_fd_pr__nfet_g5v0d10v5_DLG898_1
+timestamp 1740482515
+transform -1 0 2548 0 1 -331
+box -258 -207 258 207
+use sky130_fd_pr__nfet_g5v0d10v5_DLG898  sky130_fd_pr__nfet_g5v0d10v5_DLG898_2
+timestamp 1740482515
+transform 1 0 258 0 1 207
+box -258 -207 258 207
+use sky130_fd_pr__nfet_g5v0d10v5_DLG898  sky130_fd_pr__nfet_g5v0d10v5_DLG898_3
+timestamp 1740482515
+transform -1 0 2548 0 1 207
+box -258 -207 258 207
+use sky130_fd_pr__nfet_g5v0d10v5_DLGG98  sky130_fd_pr__nfet_g5v0d10v5_DLGG98_0
+timestamp 1740482754
+transform 1 0 716 0 1 -331
+box -258 -261 258 285
+use sky130_fd_pr__nfet_g5v0d10v5_DLGG98  sky130_fd_pr__nfet_g5v0d10v5_DLGG98_1
+timestamp 1740482754
+transform -1 0 2090 0 1 -331
+box -258 -261 258 285
+use sky130_fd_pr__nfet_g5v0d10v5_DLGG98  sky130_fd_pr__nfet_g5v0d10v5_DLGG98_2
+timestamp 1740482754
+transform 1 0 716 0 1 207
+box -258 -261 258 285
+use sky130_fd_pr__nfet_g5v0d10v5_DLGG98  sky130_fd_pr__nfet_g5v0d10v5_DLGG98_3
+timestamp 1740482754
+transform -1 0 2090 0 1 207
+box -258 -261 258 285
+use sky130_fd_pr__nfet_g5v0d10v5_PM92V7  sky130_fd_pr__nfet_g5v0d10v5_PM92V7_0
+timestamp 1740482865
+transform 1 0 1403 0 1 -331
+box -523 -207 553 307
+use sky130_fd_pr__nfet_g5v0d10v5_PM92V7  sky130_fd_pr__nfet_g5v0d10v5_PM92V7_1
+timestamp 1740482865
+transform 1 0 1403 0 1 207
+box -523 -207 553 307
+<< labels >>
+flabel metal1 478 404 498 420 0 FreeSans 320 0 0 0 Ia
+port 3 nsew
+flabel metal1 1400 496 1410 506 0 FreeSans 320 0 0 0 Ib
+port 5 nsew
+flabel metal1 -192 -748 -136 -690 0 FreeSans 320 0 0 0 VSS
+port 1 nsew
+<< end >>

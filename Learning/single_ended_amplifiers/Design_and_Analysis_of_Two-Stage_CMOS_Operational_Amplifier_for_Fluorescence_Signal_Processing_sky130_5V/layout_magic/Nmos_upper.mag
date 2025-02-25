@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1740356695
+timestamp 1740487592
 << mvpsubdiff >>
 rect -161 547 -101 581
 rect 4723 547 4783 581
@@ -205,11 +205,11 @@ rect 3608 -646 3710 -644
 rect 922 -650 3710 -646
 rect 922 -652 3708 -650
 use sky130_fd_pr__nfet_g5v0d10v5_FJPLQ6  sky130_fd_pr__nfet_g5v0d10v5_FJPLQ6_0
-timestamp 1740356695
+timestamp 1740487592
 transform 1 0 2319 0 1 -295
 box -2319 -157 2319 157
 use sky130_fd_pr__nfet_g5v0d10v5_FJPLQ6  sky130_fd_pr__nfet_g5v0d10v5_FJPLQ6_1
-timestamp 1740356695
+timestamp 1740487592
 transform 1 0 2319 0 1 157
 box -2319 -157 2319 157
 << labels >>
