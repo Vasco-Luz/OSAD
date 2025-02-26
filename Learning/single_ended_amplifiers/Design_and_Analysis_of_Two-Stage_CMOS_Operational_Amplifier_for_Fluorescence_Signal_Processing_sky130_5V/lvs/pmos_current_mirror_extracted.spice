@@ -1,10 +1,10 @@
-* NGSPICE file created from pmos_current_mirror.ext - technology: sky130A
 
 .subckt pmos_current_mirror VDD IA IB IC ID
-X0 IA VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=2.2 M=4
-X1 VDD VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=9.86002 pd=87.72501 as=0 ps=0 w=1 l=2.2 M=2
-X2 VDD IA IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=2 M=4
-X3 VDD IA IB VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=2.2 M=4
-X4 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=2.2 M=32
-X5 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=2.32 ps=20.64 w=1 l=2.2 M=16
+XM0 IA VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=2.2 M=4
+XM1 VDD VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=9.86002 pd=87.72501 as=0 ps=0 w=1 l=2.2 M=2
+XM2 VDD IA IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=2 M=4
+XM3 VDD IA IB VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=2.2 M=4
+XM4 VDD IA ID VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=2.2 M=32
+XM5 VDD IA IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=2.32 ps=20.64 w=1 l=2.2 M=16
 .ends
+.end
