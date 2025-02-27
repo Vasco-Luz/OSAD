@@ -1,0 +1,16 @@
+* Extracted by KLayout with SKY130 LVS runset on : 28/02/2025 00:51
+
+.SUBCKT Pmos_current_mirror
+M$1 \$2 \$2 \$3 \$2 sky130_fd_pr__pfet_g5v0d10v5 L=2200000 W=4000000 AS=1.1e+12
++ AD=1e+12 PS=8200000 PD=6000000
+M$2 \$3 \$3 \$2 \$2 sky130_fd_pr__pfet_g5v0d10v5 L=2200000 W=4000000 AS=1e+12
++ AD=1e+12 PS=6000000 PD=6000000
+M$3 \$2 \$3 \$10 \$2 sky130_fd_pr__pfet_g5v0d10v5 L=2200000 W=4000000 AS=1e+12
++ AD=1e+12 PS=6000000 PD=6000000
+M$7 \$2 \$3 \$4 \$2 sky130_fd_pr__pfet_g5v0d10v5 L=2200000 W=16000000 AS=4e+12
++ AD=4e+12 PS=24000000 PD=24000000
+M$11 \$2 \$3 \$1 \$2 sky130_fd_pr__pfet_g5v0d10v5 L=2200000 W=32000000 AS=8e+12
++ AD=8e+12 PS=48000000 PD=48000000
+M$31 \$2 \$2 \$2 \$2 sky130_fd_pr__pfet_g5v0d10v5 L=2200000 W=2000000
++ AS=500000000000 AD=600000000000 PS=3000000 PD=5200000
+.ENDS Pmos_current_mirror

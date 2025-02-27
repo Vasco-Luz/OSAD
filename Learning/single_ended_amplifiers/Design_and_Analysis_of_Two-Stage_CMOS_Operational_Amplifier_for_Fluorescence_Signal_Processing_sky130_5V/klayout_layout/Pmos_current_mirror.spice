@@ -1,0 +1,11 @@
+** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/klayout_layout/Pmos_current_mirror.sch
+.subckt Pmos_current_mirror VDD IA IB IC ID
+*.PININFO VDD:B IA:B IB:B IC:B ID:B
+M2 IB IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.2 W='1 * 2 ' nf=2 m=2
+M3 IA IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.2 W='1 * 2 ' nf=2 m=2
+M4 IC IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.2 W='1 * 2 ' nf=2 m=8
+M7 ID IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.2 W='1 * 2 ' nf=2 m=16
+M1 IA VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.2 W='1 * 1 ' nf=1 m=4
+M5 VDD VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.2 W='1 * 1 ' nf=1 m=2
+.ends
+.end

@@ -108,7 +108,7 @@ C {devices/lab_pin.sym} -60 -30 2 1 {name=p18 sig_type=std_logic lab=IA}
 C {sky130_fd_pr/pfet_g5v0d10v5_nf.sym} 50 50 0 1 {name=M5
 L=2.2
 W=1
-nf=1 mult=4
+nf=1 mult=2
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
