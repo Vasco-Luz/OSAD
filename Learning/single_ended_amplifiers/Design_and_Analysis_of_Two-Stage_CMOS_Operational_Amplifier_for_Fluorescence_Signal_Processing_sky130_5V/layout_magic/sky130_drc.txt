@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
  <description>SKY130 DRC runset</description>
- <original-file>/foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/layout_magic/Pmos_current_mirror.gds</original-file>
+ <original-file>/foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_5V/layout_magic/va001.gds</original-file>
  <generator>drc: script='/foss/pdks/sky130A/libs.tech/klayout/drc/sky130A.lydrc'</generator>
- <top-cell>pmos_current_mirror</top-cell>
+ <top-cell>Va001_sky130_5V</top-cell>
  <tags>
  </tags>
  <categories>
@@ -880,13 +880,120 @@
  </categories>
  <cells>
   <cell>
-   <name>pmos_current_mirror</name>
+   <name>Va001_sky130_5V</name>
    <variant/>
    <layout-name/>
    <references>
    </references>
   </cell>
+  <cell>
+   <name>capacitors</name>
+   <variant/>
+   <layout-name>capacitors</layout-name>
+   <references>
+    <ref>
+     <parent>Va001_sky130_5V</parent>
+     <trans>r0 *1 146.15,53.345</trans>
+    </ref>
+   </references>
+  </cell>
  </cells>
  <items>
+  <item>
+   <tags/>
+   <category>'m4.5ab'</category>
+   <cell>capacitors</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-7.49,-1.225;-6.17,-1.225)/(-6.57,-1.225;-7.09,-1.225)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'m4.5ab'</category>
+   <cell>capacitors</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-6.17,0.765;-7.49,0.765)/(-7.09,0.765;-6.57,0.765)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'m4.5ab'</category>
+   <cell>capacitors</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (3.57,-1.225;4.89,-1.225)/(4.49,-1.225;3.97,-1.225)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'m4.5ab'</category>
+   <cell>capacitors</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (4.89,-8.835;3.57,-8.835)/(3.97,-8.835;4.49,-8.835)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'m4.5ab'</category>
+   <cell>capacitors</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (3.57,8.375;4.89,8.375)/(4.49,8.375;3.97,8.375)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'m4.5ab'</category>
+   <cell>capacitors</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-6.17,-8.835;-7.49,-8.835)/(-7.09,-8.835;-6.57,-8.835)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'m4.5ab'</category>
+   <cell>capacitors</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (-7.49,8.375;-6.17,8.375)/(-6.57,8.375;-7.09,8.375)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'m4.5ab'</category>
+   <cell>capacitors</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (4.89,0.765;3.57,0.765)/(3.97,0.765;4.49,0.765)</value>
+   </values>
+  </item>
  </items>
 </report-database>

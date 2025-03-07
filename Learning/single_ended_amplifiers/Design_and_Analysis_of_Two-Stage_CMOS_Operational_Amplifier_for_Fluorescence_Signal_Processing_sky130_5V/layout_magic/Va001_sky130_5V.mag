@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1740493849
+timestamp 1740498660
 << locali >>
 rect 8594 10102 8628 11626
 rect 8594 9494 9200 10102
@@ -55,6 +55,10 @@ use pmos_current_mirror  pmos_current_mirror_0
 timestamp 1740352508
 transform 1 0 8682 0 1 12732
 box -234 -894 15715 686
+use sky130_fd_pr__nfet_g5v0d10v5_FF4KTG  sky130_fd_pr__nfet_g5v0d10v5_FF4KTG_0
+timestamp 1740498660
+transform 1 0 25327 0 1 12003
+box -537 -427 537 427
 use transcondutance_resistance  transcondutance_resistance_0
 timestamp 1740487318
 transform 1 0 8729 0 1 10244

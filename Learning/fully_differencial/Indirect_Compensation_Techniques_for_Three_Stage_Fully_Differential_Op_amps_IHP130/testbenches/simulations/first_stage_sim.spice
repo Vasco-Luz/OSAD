@@ -1,0 +1,74 @@
+** sch_path: /foss/designs/OSAD/Learning/fully_differencial/Indirect_Compensation_Techniques_for_Three_Stage_Fully_Differential_Op_amps_IHP130/testbenches/first_stage_sim.sch
+**.subckt first_stage_sim
+x1 VDD VSS VB bias_cell
+V1 VDD GND VDD
+V2 VSS GND VSS
+XM6 net2 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
+XM1 net1 VCM net3 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM2 VB2 VCM net1 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+V3 VCM GND VCM
+XM3 VB2 VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
+Vmeas2 net3 net2 0
+.save i(vmeas2)
+XM7 V_COMP+ VIN+ net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM8 VOUT- VIN+ V_COMP+ VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM9 V_COMP- VIN- net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM10 VOUT+ VIN- V_COMP- VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM11 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
+XM12 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
+V4 VIN+ VCM ac 0.5
+V5 VIN- VCM ac -0.5
+XM4 VOUT+ VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
+XM5 VOUT- VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
+**** begin user architecture code
+
+
+.param mm_ok=0
+.param mc_ok=0
+.param temp=27
+.param VDD=3.3
+.param VSS=0
+.param VCM=1.65
+.control
+	save all
+	op
+	dc temp -40 125 1
+	plot i(Vmeas2)
+	plot v(VOUT-)
+	ac dec 100 1 10G
+	plot db(v(VOUT-))
+	write op.raw
+
+
+.endc
+
+
+
+.lib cornerMOShv.lib mos_tt
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  bias_cell.sym # of pins=3
+** sym_path: /foss/designs/OSAD/Learning/fully_differencial/Indirect_Compensation_Techniques_for_Three_Stage_Fully_Differential_Op_amps_IHP130/testbenches/bias_cell.sym
+** sch_path: /foss/designs/OSAD/Learning/fully_differencial/Indirect_Compensation_Techniques_for_Three_Stage_Fully_Differential_Op_amps_IHP130/testbenches/bias_cell.sch
+.subckt bias_cell VDD VSS VB
+*.iopin VDD
+*.iopin VSS
+*.iopin VB
+XM5 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
+XM6 VB VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
+XR3 net1 VDD rhigh w=0.5e-6 l=1.95e-6 m=1 b=0
+XM7 net3 net2 net1 VDD sg13_hv_pmos w=2.0u l=3u ng=2 m=8
+XM8 net2 net2 VDD VDD sg13_hv_pmos w=2.0u l=3u ng=2 m=2
+XM9 net4 net4 net2 VDD sg13_hv_pmos w=2.0u l=3u ng=2 m=2
+XM10 net5 net4 net3 VDD sg13_hv_pmos w=2.0u l=3u ng=2 m=2
+Vmeas2 net5 VB 0
+.save i(vmeas2)
+.ends
+
+.GLOBAL GND
+.end
