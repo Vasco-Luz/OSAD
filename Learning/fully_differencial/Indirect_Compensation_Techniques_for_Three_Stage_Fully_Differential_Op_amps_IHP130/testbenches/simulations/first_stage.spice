@@ -11,19 +11,19 @@
 *.iopin VCM
 *.iopin V_COMP+
 *.iopin V_COMP-
-XM6 net2 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
-XM1 net1 VCM net3 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM2 VB2 VCM net1 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM3 VB2 VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
+XM13 net2 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
+XM14 net1 VCM net3 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM15 VB2 VCM net1 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM16 VB2 VB2 VDD VDD sg13_hv_pmos w=2.2u l=3u ng=2 m=2
 Vmeas2 net3 net2 0
 .save i(vmeas2)
-XM7 V_COMP+ VIN+ net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM8 VOUT- VIN+ V_COMP+ VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM9 V_COMP- VIN- net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM10 VOUT+ VIN- V_COMP- VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM11 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
-XM12 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
-XM4 VOUT+ VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
-XM5 VOUT- VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
+XM17 V_COMP+ VIN+ net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM18 VOUT- VIN+ V_COMP+ VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM19 V_COMP- VIN- net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM20 VOUT+ VIN- V_COMP- VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM21 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
+XM22 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
+XM23 VOUT+ VB2 VDD VDD sg13_hv_pmos w=2.2u l=3u ng=2 m=2
+XM24 VOUT- VB2 VDD VDD sg13_hv_pmos w=2.2u l=3u ng=2 m=2
 **.ends
 .end

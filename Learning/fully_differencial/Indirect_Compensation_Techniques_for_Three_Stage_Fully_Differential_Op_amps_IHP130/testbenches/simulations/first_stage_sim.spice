@@ -3,23 +3,26 @@
 x1 VDD VSS VB bias_cell
 V1 VDD GND VDD
 V2 VSS GND VSS
-XM6 net2 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
-XM1 net1 VCM net3 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM2 VB2 VCM net1 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
 V3 VCM GND VCM
-XM3 VB2 VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
-Vmeas2 net3 net2 0
-.save i(vmeas2)
-XM7 V_COMP+ VIN+ net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM8 VOUT- VIN+ V_COMP+ VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM9 V_COMP- VIN- net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM10 VOUT+ VIN- V_COMP- VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
-XM11 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
-XM12 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=2
 V4 VIN+ VCM ac 0.5
 V5 VIN- VCM ac -0.5
-XM4 VOUT+ VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
-XM5 VOUT- VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
+x2 VDD VSS VB VIN+ VIN- VOUT- VOUT+ VB2 VCM V_COMP+ V_COMP- first_stage
+XM24 VOUT2+ net1 VDD VDD sg13_hv_pmos w=3u l=2u ng=2 m=2
+XM18 VOUT2+ VOUT- net2 VSS sg13_hv_nmos w=4u l=1.5u ng=2 m=4
+XM2 net1 VB2 net3 VSS sg13_hv_nmos w=4u l=1.5u ng=2 m=4
+XM21 net3 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=4
+XM22 net2 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=4
+XM1 net1 net1 VDD VDD sg13_hv_pmos w=3u l=2u ng=2 m=2
+XC1 net4 net5 cap_cmim w=7.0e-6 l=7.0e-6 m=1
+XR1 net4 net11 ptap1
+XM3 VOUT2- net6 VDD VDD sg13_hv_pmos w=3u l=2u ng=2 m=2
+XM4 VOUT2- VOUT+ net7 VSS sg13_hv_nmos w=4u l=1.5u ng=2 m=4
+XM5 net6 VB2 net8 VSS sg13_hv_nmos w=4u l=1.5u ng=2 m=4
+XM6 net8 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=4
+XM7 net7 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=4
+XM8 net6 net6 VDD VDD sg13_hv_pmos w=3u l=2u ng=2 m=2
+XC2 net9 net10 cap_cmim w=7.0e-6 l=7.0e-6 m=1
+XR2 net9 net12 ptap1
 **** begin user architecture code
 
 
@@ -35,8 +38,10 @@ XM5 VOUT- VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
 	dc temp -40 125 1
 	plot i(Vmeas2)
 	plot v(VOUT-)
+	plot v(VOUT2+)
 	ac dec 100 1 10G
 	plot db(v(VOUT-))
+	plot db(v(VOUT2-)) (180*ph(v(VOUT2-))/pi)
 	write op.raw
 
 
@@ -48,6 +53,9 @@ XM5 VOUT- VB2 VDD VDD sg13_hv_pmos w=2.5u l=3u ng=2 m=2
 
 
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ
 
 **** end user architecture code
 **.ends
@@ -68,6 +76,38 @@ XM9 net4 net4 net2 VDD sg13_hv_pmos w=2.0u l=3u ng=2 m=2
 XM10 net5 net4 net3 VDD sg13_hv_pmos w=2.0u l=3u ng=2 m=2
 Vmeas2 net5 VB 0
 .save i(vmeas2)
+.ends
+
+
+* expanding   symbol:  ihp-sg13g2/FD_opamp001/first_stage.sym # of pins=11
+** sym_path: /foss/designs/OSAD/my_ip/LIB/ihp-sg13g2/FD_opamp001/first_stage.sym
+** sch_path: /foss/designs/OSAD/my_ip/LIB/ihp-sg13g2/FD_opamp001/first_stage.sch
+.subckt first_stage VDD VSS VB VIN+ VIN- VOUT- VOUT+ VB2 VCM V_COMP+ V_COMP-
+*.iopin VDD
+*.iopin VSS
+*.iopin VB
+*.iopin VIN+
+*.iopin VIN-
+*.iopin VOUT-
+*.iopin VOUT+
+*.iopin VB2
+*.iopin VCM
+*.iopin V_COMP+
+*.iopin V_COMP-
+XM13 net2 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=3
+XM14 net1 VCM net3 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM15 VB2 VCM net1 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM16 VB2 VB2 VDD VDD sg13_hv_pmos w=2.2u l=2.6u ng=2 m=2
+Vmeas2 net3 net2 0
+.save i(vmeas2)
+XM17 V_COMP+ VIN+ net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM18 VOUT- VIN+ V_COMP+ VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM19 V_COMP- VIN- net4 VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM20 VOUT+ VIN- V_COMP- VSS sg13_hv_nmos w=5u l=1.5u ng=2 m=2
+XM21 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=3
+XM22 net4 VB VSS VSS sg13_hv_nmos w=4.5u l=2u ng=2 m=3
+XM1 VOUT+ VB2 VDD VDD sg13_hv_pmos w=2.2u l=2.6u ng=2 m=2
+XM2 VOUT- VB2 VDD VDD sg13_hv_pmos w=2.2u l=2.6u ng=2 m=2
 .ends
 
 .GLOBAL GND
