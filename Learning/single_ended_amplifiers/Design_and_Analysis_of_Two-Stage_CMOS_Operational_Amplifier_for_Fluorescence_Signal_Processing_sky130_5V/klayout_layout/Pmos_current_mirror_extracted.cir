@@ -1,4 +1,4 @@
-* Extracted by KLayout with SKY130 LVS runset on : 28/02/2025 00:51
+* Extracted by KLayout with SKY130 LVS runset on : 01/03/2025 00:31
 
 .SUBCKT Pmos_current_mirror
 M$1 \$2 \$2 \$3 \$2 sky130_fd_pr__pfet_g5v0d10v5 L=2200000 W=4000000 AS=1.1e+12
