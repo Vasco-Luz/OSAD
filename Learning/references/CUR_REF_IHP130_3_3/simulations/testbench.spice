@@ -1,0 +1,44 @@
+** sch_path: /foss/designs/OSAD/Learning/references/CUR_REF_IHP130_3_3/testbench.sch
+**.subckt testbench
+VDD VDD GND 3.3
+VSS VSS GND 0
+XR1 net2 net1 rhigh w=0.5e-6 l=7.6e-6 m=1 b=0
+XM1 net2 net1 VSS VSS sg13_hv_nmos w=2.0u l=2u ng=2 m=1
+XM2 net4 net2 VSS VSS sg13_hv_nmos w=2.0u l=2u ng=2 m=3
+XR2 net1 net3 rhigh w=0.5e-6 l=33e-6 m=1 b=0
+Vmeas1 VDD net3 0
+.save i(vmeas1)
+XR3 net4 net5 rhigh w=0.5e-6 l=14.5e-6 m=1 b=0
+XM3 net5 net4 VDD VDD sg13_hv_pmos w=3.0u l=2u ng=2 m=1
+XM4 net6 net5 VDD VDD sg13_hv_pmos w=3.0u l=2u ng=2 m=6
+XM5 net7 net6 VSS VSS sg13_hv_nmos w=2.0u l=2u ng=2 m=3
+XR4 net7 net6 rhigh w=0.5e-6 l=9.2e-6 m=1 b=0
+Vmeas net9 net8 0
+.save i(vmeas)
+XM7 net9 net9 VDD VDD sg13_hv_pmos w=3.0u l=2u ng=2 m=1
+XM6 net8 net7 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=20
+**** begin user architecture code
+
+.lib cornerMOShv.lib mos_tt
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
+
+
+
+.param temp=27
+.param mm_ok=0
+.param mc_ok=0
+.control
+	save all
+	dc temp -40 125 1
+	plot i(Vmeas)
+        plot deriv(i(Vmeas))/i(Vmeas)
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
