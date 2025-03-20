@@ -1,0 +1,53 @@
+** sch_path: /foss/designs/OSAD/Learning/curr_amplifiers/CA001_ihp_3_3V/tb.sch
+**.subckt tb
+VDD VDD GND 3.3
+VSS VSS GND 0
+I0 VDD VA ac 10u sin (0 0.005u 10k)
+XM1 VA VA VDD VDD sg13_hv_pmos w=2.65u l=2u ng=2 m=3
+XM2 VA VA VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=1
+XM3 VB VA VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=1
+XM4 VB VA VDD VDD sg13_hv_pmos w=2.65u l=2u ng=2 m=3
+XM5 VC VB VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=1
+XM6 VC VB VDD VDD sg13_hv_pmos w=2.65u l=2u ng=2 m=3
+XC1 VDD VB cap_cmim w=10.0e-6 l=10.0e-6 m=8
+C3 VC VSS 1p m=1
+XC2 VB VSS cap_cmim w=10.0e-6 l=10.0e-6 m=8
+XM7 net1 VB VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=1
+XM8 net1 VB VDD VDD sg13_hv_pmos w=2.65u l=2u ng=2 m=3
+XM9 net1 net1 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=1
+XM10 net1 net1 VDD VDD sg13_hv_pmos w=2.65u l=2u ng=2 m=3
+XM11 VNN net1 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=1
+XM12 VNN net1 VDD VDD sg13_hv_pmos w=2.65u l=2u ng=2 m=3
+C4 VNN VSS 1p m=1
+**** begin user architecture code
+
+.lib cornerMOShv.lib mos_tt
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ
+
+
+
+.param temp=27
+.param mm_ok=0
+.param mc_ok=0
+.control
+	save all
+	dc I0 -50u 50u 0.1u
+	plot v(VA)
+	plot i(VDD)
+	plot v(VC)
+	ac dec 100 1 10G
+	plot db(v(VC)) (180*ph(v(VC))/pi)
+	plot db(v(VNN)) (180*ph(v(VNN))/pi)
+	tran 10ns 1m
+	plot v(VC) v(VNN)
+	plot i(VSS)
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
