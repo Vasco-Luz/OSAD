@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
@@ -8,24 +7,24 @@ template="name=x1"
 V {}
 S {}
 E {}
-L 4 -30 10 -30 50 {}
-L 4 -30 -30 -30 10 {}
-L 4 -30 -30 50 10 {}
-L 4 -30 50 50 10 {}
-L 4 0 -30 0 -10 {}
-L 4 0 30 0 50 {}
-L 4 -50 -10 -30 -10 {}
-L 4 -50 30 -30 30 {}
-L 4 50 10 70 10 {}
-B 5 -2.5 -32.5 2.5 -27.5 {name=VDD dir=inout}
-B 5 -2.5 47.5 2.5 52.5 {name=VSS dir=inout}
-B 5 -52.5 27.5 -47.5 32.5 {name=VIN- dir=inout}
-B 5 -52.5 -12.5 -47.5 -7.5 {name=VIN+ dir=inout}
-B 5 67.5 7.5 72.5 12.5 {name=VOUT dir=inout}
-T {@symname} 48.5 -36 0 0 0.3 0.3 {}
-T {VDD} 35 -34 0 1 0.2 0.2 {}
-T {VSS} 35 36 0 1 0.2 0.2 {}
-T {VIN-} -35 16 0 1 0.2 0.2 {}
-T {VIN+} -35 -24 0 1 0.2 0.2 {}
-T {VOUT} 85 -4 0 1 0.2 0.2 {}
-T {@name} 55 38 0 0 0.2 0.2 {}
+L 4 -50 -60 -50 0 {}
+L 4 -50 0 -50 60 {}
+L 4 -50 -60 60 -0 {}
+L 4 -50 60 60 -0 {}
+L 7 -30 -70 -30 -50 {}
+L 7 -30 50 -30 70 {}
+L 7 -70 30 -50 30 {}
+L 7 -70 -30 -50 -30 {}
+L 7 60 0 80 0 {}
+B 5 -32.5 -72.5 -27.5 -67.5 {name=VDD dir=inout}
+B 5 -32.5 67.5 -27.5 72.5 {name=VSS dir=inout}
+B 5 -72.5 27.5 -67.5 32.5 {name=VIN- dir=inout}
+B 5 -72.5 -32.5 -67.5 -27.5 {name=VIN+ dir=inout}
+B 5 77.5 -2.5 82.5 2.5 {name=VOUT dir=inout}
+T {@symname} -3 -46 0 0 0.3 0.3 {}
+T {@name} 5 28 0 0 0.2 0.2 {}
+T {VDD} 5 -74 0 1 0.2 0.2 {}
+T {VSS} -5 56 0 1 0.2 0.2 {}
+T {VIN-} -55 16 0 1 0.2 0.2 {}
+T {VIN+} -55 -44 0 1 0.2 0.2 {}
+T {VOUT} 95 -24 0 1 0.2 0.2 {}

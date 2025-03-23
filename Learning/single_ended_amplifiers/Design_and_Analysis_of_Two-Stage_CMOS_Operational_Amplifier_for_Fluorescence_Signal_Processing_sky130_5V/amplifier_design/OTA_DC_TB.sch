@@ -19,38 +19,42 @@ N -980 -40 -980 0 {
 lab=VDD}
 N -1050 60 -1050 80 {
 lab=GND}
-N -480 -130 -480 -90 {
+N -570 -130 -570 -90 {
 lab=VSS}
 N -670 270 -670 310 {
 lab=VSS}
-N -580 -190 -530 -190 {
+N -660 -230 -610 -230 {
 lab=VIN+}
 N -670 90 -670 140 {
 lab=VIN+}
-N -480 -370 -480 -330 {
+N -570 -430 -570 -390 {
 lab=VDD}
-N -410 -170 -360 -170 {
+N -460 -200 -410 -200 {
 lab=VOUT}
 N -670 200 -670 270 {
 lab=VSS}
 N -1050 -40 -1050 0 {
 lab=VSS}
-N -380 -170 -380 -40 {
+N -430 -200 -430 -70 {
 lab=VOUT}
-N -570 -40 -380 -40 {
+N -660 -40 -470 -40 {
 lab=VOUT}
-N -570 -150 -570 -40 {
+N -660 -150 -660 -40 {
 lab=VOUT}
-N -570 -150 -530 -150 {
+N -650 -170 -610 -170 {
 lab=VOUT}
-N -480 -270 -480 -210 {
+N -570 -330 -570 -270 {
 lab=#net1}
+N -660 -170 -650 -170 {lab=VOUT}
+N -660 -170 -660 -150 {lab=VOUT}
+N -430 -70 -430 -40 {lab=VOUT}
+N -470 -40 -430 -40 {lab=VOUT}
 C {devices/lab_pin.sym} -980 -40 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -980 30 0 0 {name=V1 value="VDD"
 
 }
 C {devices/gnd.sym} -980 80 0 0 {name=l3 lab=GND}
-C {devices/lab_pin.sym} -480 -90 0 0 {name=p1 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} -570 -90 0 0 {name=p1 sig_type=std_logic lab=VSS
 }
 C {devices/vsource.sym} -1050 30 0 0 {name=V2 value="VSS"
 
@@ -65,6 +69,217 @@ value="
 .param VDD = 5
 .param VSS = 0
 
+
+
+.subckt A001 VDD VSS Vin+ Vin- VOUT
+X0 bias_res_0/li_3970_7618# bias_res_0/li_2816_7756# VSS sky130_fd_pr__res_high_po_0p69 l=1.57
+X1 VSS VSS VSS sky130_fd_pr__res_high_po_0p69 l=1.57
+X2 bias_res_0/li_3970_7364# Lower_Nmos_0/IC VSS sky130_fd_pr__res_high_po_0p69 l=1.57
+X3 bias_res_0/li_3970_7872# bias_res_0/li_2816_7756# VSS sky130_fd_pr__res_high_po_0p69 l=1.57
+X4 VSS VSS VSS sky130_fd_pr__res_high_po_0p69 l=1.57
+X5 bias_res_0/li_3970_8126# bias_res_0/li_2816_8248# VSS sky130_fd_pr__res_high_po_0p69 l=1.57
+X6 bias_res_0/li_3969_8380# bias_res_0/li_2816_8248# VSS sky130_fd_pr__res_high_po_0p69 l=1.57
+X7 VSS VSS VSS sky130_fd_pr__res_high_po_0p69 l=2.72
+X8 VSS VSS VSS sky130_fd_pr__res_high_po_0p69 l=2.72
+X9 bias_res_0/li_5323_7502# bias_res_0/li_3970_7364# VSS sky130_fd_pr__res_high_po_0p69 l=2.72
+X10 bias_res_0/li_5323_7502# bias_res_0/li_3970_7618# VSS sky130_fd_pr__res_high_po_0p69 l=2.72
+X11 bias_res_0/li_5321_8010# bias_res_0/li_3970_7872# VSS sky130_fd_pr__res_high_po_0p69 l=2.72
+X12 bias_res_0/li_5321_8010# bias_res_0/li_3970_8126# VSS sky130_fd_pr__res_high_po_0p69 l=2.72
+X13 VSS bias_res_0/li_3969_8380# VSS sky130_fd_pr__res_high_po_0p69 l=2.72
+X14 VOUT VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1 pd=4.5 as=1.2 ps=8.6 w=4 l=1
+X15 VSS active_load_0/IA VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1 pd=4.5 as=1 ps=4.5 w=4 l=1
+X16 VSS VSS VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1.2 pd=8.6 as=1 ps=4.5 w=4 l=1
+X17 VOUT active_load_0/IA VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1 pd=4.5 as=1 ps=4.5 w=4 l=1
+X18 VOUT VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=8 pd=36 as=20 ps=127.6 w=4 l=1
+X19 VSS active_load_0/IA VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4 l=1
+X20 VSS VSS VOUT VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4 l=1
+X21 VOUT active_load_0/IA VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4 l=1
+X22 VSS active_load_0/IB active_load_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.375 ps=2 w=1.5 l=2
+X23 active_load_0/IB VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.45 ps=3.6 w=1.5 l=2
+X24 active_load_0/IA active_load_0/IB VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.375 ps=2 w=1.5 l=2
+X25 VSS active_load_0/IB active_load_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.375 ps=2 w=1.5 l=2
+X26 VSS VSS active_load_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.45 pd=3.6 as=0.375 ps=2 w=1.5 l=2
+X27 active_load_0/IB active_load_0/IB VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.375 pd=2 as=0.375 ps=2 w=1.5 l=2
+X28 VSS active_load_0/IB active_load_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=2.34 ps=14.8 w=1.5 l=2
+X29 active_load_0/IB VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=3 pd=16 as=0 ps=0 w=1.5 l=2
+X30 active_load_0/IA active_load_0/IB VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=2
+X31 VSS active_load_0/IB active_load_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=2
+X32 VSS VSS active_load_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=2
+X33 active_load_0/IB active_load_0/IB VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1.5 l=2
+X34 active_load_0/IA Vin+ Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.125 ps=5 w=4.5 l=1
+X35 active_load_0/IB Vin- Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.125 ps=5 w=4.5 l=1
+X36 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.35 ps=9.6 w=4.5 l=1
+X37 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.35 pd=9.6 as=1.125 ps=5 w=4.5 l=1
+X38 active_load_0/IB Vin- Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.125 ps=5 w=4.5 l=1
+X39 active_load_0/IA Vin+ Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.125 ps=5 w=4.5 l=1
+X40 Pmos_current_mirror_0/IC Vin+ active_load_0/IA Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.125 ps=5 w=4.5 l=1
+X41 Pmos_current_mirror_0/IC Vin+ active_load_0/IA Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.125 ps=5 w=4.5 l=1
+X42 Pmos_current_mirror_0/IC Vin- active_load_0/IB Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.125 ps=5 w=4.5 l=1
+X43 Pmos_current_mirror_0/IC Vin- active_load_0/IB Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=1.125 pd=5 as=1.125 ps=5 w=4.5 l=1
+X44 active_load_0/IB Vin- Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=9 pd=40 as=31.9 ps=162.39999 w=4.5 l=1
+X45 active_load_0/IA Vin+ Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=9 pd=40 as=0 ps=0 w=4.5 l=1
+X46 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X47 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X48 active_load_0/IA Vin+ Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X49 active_load_0/IB Vin- Pmos_current_mirror_0/IC Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X50 Pmos_current_mirror_0/IC Vin- active_load_0/IB Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X51 Pmos_current_mirror_0/IC Vin- active_load_0/IB Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X52 Pmos_current_mirror_0/IC Vin+ active_load_0/IA Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X53 Pmos_current_mirror_0/IC Vin+ active_load_0/IA Pmos_current_mirror_0/IC sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=4.5 l=1
+X54 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X55 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X56 Pmos_current_mirror_0/IA VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=2.2
+X57 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X58 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X59 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IB VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X60 VDD VDD Pmos_current_mirror_0/IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X61 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X62 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X63 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X64 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X65 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X66 Pmos_current_mirror_0/IB Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X67 Pmos_current_mirror_0/IA Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X68 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X69 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X70 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X71 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X72 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X73 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X74 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X75 VDD VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=2.2
+X76 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X77 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X78 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X79 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X80 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X81 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X82 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X83 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X84 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2.2
+X85 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=16.2 pd=100.4 as=2 ps=12 w=1 l=2.2
+X86 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=8 ps=48 w=1 l=2.2
+X87 Pmos_current_mirror_0/IA VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X88 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X89 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X90 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IB VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=1 ps=6 w=1 l=2.2
+X91 VDD VDD Pmos_current_mirror_0/IA VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X92 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X93 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X94 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X95 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X96 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X97 Pmos_current_mirror_0/IB Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X98 Pmos_current_mirror_0/IA Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X99 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X100 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X101 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X102 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X103 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X104 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X105 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X106 VDD VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X107 Pmos_current_mirror_0/IC Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X108 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X109 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X110 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X111 VOUT Pmos_current_mirror_0/IA VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X112 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X113 VDD Pmos_current_mirror_0/IA VOUT VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X114 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X115 VDD Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2.2
+X116 m1_17410_n5244# Pmos_current_mirror_0/IB active_load_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.35 pd=1.9 as=0.42 ps=3.4 w=1.4 l=2.6
+X117 active_load_0/IA Pmos_current_mirror_0/IB m1_17410_n5244# VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.42 pd=3.4 as=0.35 ps=1.9 w=1.4 l=2.6
+X118 Pmos_current_mirror_0/IA VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X119 Pmos_current_mirror_0/IB VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=2
+X120 VSS VSS Lower_Nmos_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X121 VSS VSS Pmos_current_mirror_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=2
+X122 Pmos_current_mirror_0/IB Pmos_current_mirror_0/IB Lower_Nmos_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X123 Lower_Nmos_0/IA VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X124 Lower_Nmos_0/IA Pmos_current_mirror_0/IB Pmos_current_mirror_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X125 VSS VSS Pmos_current_mirror_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X126 Pmos_current_mirror_0/IA Pmos_current_mirror_0/IB Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X127 Lower_Nmos_0/IB Pmos_current_mirror_0/IB Pmos_current_mirror_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2
+X128 Pmos_current_mirror_0/IA VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=2 pd=12 as=0 ps=0 w=1 l=2
+X129 Pmos_current_mirror_0/IB VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=2 pd=12 as=0 ps=0 w=1 l=2
+X130 VSS VSS Lower_Nmos_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=4 ps=24 w=1 l=2
+X131 VSS VSS Pmos_current_mirror_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X132 Pmos_current_mirror_0/IB Pmos_current_mirror_0/IB Lower_Nmos_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X133 Lower_Nmos_0/IA VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X134 Lower_Nmos_0/IA Pmos_current_mirror_0/IB Pmos_current_mirror_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X135 VSS VSS Pmos_current_mirror_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X136 Pmos_current_mirror_0/IA Pmos_current_mirror_0/IB Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=6 ps=36 w=1 l=2
+X137 Lower_Nmos_0/IB Pmos_current_mirror_0/IB Pmos_current_mirror_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0 pd=0 as=0 ps=0 w=1 l=2
+X138 Lower_Nmos_0/IA Lower_Nmos_0/IA VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X139 Lower_Nmos_0/IA VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=3.2
+X140 Lower_Nmos_0/IB VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X141 VSS VSS Lower_Nmos_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=3.2
+X142 Lower_Nmos_0/IC Lower_Nmos_0/IA Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X143 Lower_Nmos_0/IC Lower_Nmos_0/IA Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X144 VSS Lower_Nmos_0/IA Lower_Nmos_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X145 Lower_Nmos_0/IB Lower_Nmos_0/IA Lower_Nmos_0/IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X146 Lower_Nmos_0/IB Lower_Nmos_0/IA Lower_Nmos_0/IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X147 Lower_Nmos_0/IC Lower_Nmos_0/IA Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X148 Lower_Nmos_0/IB Lower_Nmos_0/IA Lower_Nmos_0/IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X149 Lower_Nmos_0/IB Lower_Nmos_0/IA Lower_Nmos_0/IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X150 Lower_Nmos_0/IC Lower_Nmos_0/IA Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X151 VSS VSS Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X152 Lower_Nmos_0/IA Lower_Nmos_0/IA VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X153 Lower_Nmos_0/IA VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=3.2
+X154 Lower_Nmos_0/IB VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X155 VSS VSS Lower_Nmos_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=3.2
+X156 Lower_Nmos_0/IC Lower_Nmos_0/IA Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X157 Lower_Nmos_0/IC Lower_Nmos_0/IA Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X158 VSS Lower_Nmos_0/IA Lower_Nmos_0/IA VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X159 Lower_Nmos_0/IB Lower_Nmos_0/IA Lower_Nmos_0/IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X160 Lower_Nmos_0/IB Lower_Nmos_0/IA Lower_Nmos_0/IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X161 Lower_Nmos_0/IC Lower_Nmos_0/IA Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X162 Lower_Nmos_0/IB Lower_Nmos_0/IA Lower_Nmos_0/IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X163 Lower_Nmos_0/IB Lower_Nmos_0/IA Lower_Nmos_0/IC VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X164 Lower_Nmos_0/IC Lower_Nmos_0/IA Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X165 VSS VSS Lower_Nmos_0/IB VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=3.2
+X166 m1_17410_n5244# VOUT sky130_fd_pr__cap_mim_m3_1 l=8 w=8
+X167 m1_17410_n5244# VOUT sky130_fd_pr__cap_mim_m3_1 l=8 w=8
+X168 m1_17410_n5244# VOUT sky130_fd_pr__cap_mim_m3_1 l=8 w=8
+X169 m1_17410_n5244# VOUT sky130_fd_pr__cap_mim_m3_1 l=8 w=8
+C0 m1_17410_n5244# VOUT 29.48602f
+C1 Lower_Nmos_0/IC Lower_Nmos_0/IA 4.67946f
+C2 VSS Pmos_current_mirror_0/IB 5.40428f
+C3 VSS VOUT 5.17316f
+C4 VOUT active_load_0/IA 2.72808f
+C5 Lower_Nmos_0/IB Lower_Nmos_0/IA 6.14554f
+C6 VDD Pmos_current_mirror_0/IC 2.33191f
+C7 VSS Lower_Nmos_0/IA 8.39534f
+C8 VSS active_load_0/IA 2.70333f
+C9 VOUT Pmos_current_mirror_0/IC 5.16991f
+C10 Vin+ Vin- 7.8812f
+C11 Pmos_current_mirror_0/IA Pmos_current_mirror_0/IC 3.2178f
+C12 VSS active_load_0/IB 3.18341f
+C13 active_load_0/IB active_load_0/IA 3.94623f
+C14 Vin+ Pmos_current_mirror_0/IC 4.40894f
+C15 active_load_0/IA Pmos_current_mirror_0/IC 3.7446f
+C16 Pmos_current_mirror_0/IB VDD 2.21479f
+C17 VOUT VDD 2.66933f
+C18 active_load_0/IB Pmos_current_mirror_0/IC 3.62092f
+C19 Pmos_current_mirror_0/IB Pmos_current_mirror_0/IA 2.46011f
+C20 VDD Pmos_current_mirror_0/IA 42.3693f
+C21 Vin- Pmos_current_mirror_0/IC 4.1741f
+C22 VOUT Pmos_current_mirror_0/IA 3.75574f
+C23 m1_17410_n5244# 0 3.66429f $ **FLOATING
+C24 Lower_Nmos_0/IA 0 24.44891f
+C25 Lower_Nmos_0/IC 0 2.12289f
+C26 VSS 0 27.03676f
+C27 Pmos_current_mirror_0/IB 0 11.50098f
+C28 VOUT 0 15.46451f
+C29 Pmos_current_mirror_0/IA 0 18.95395f
+C30 VDD 0 82.29778f
+C31 Vin- 0 2.25373f
+C32 active_load_0/IA 0 5.84906f
+C33 Pmos_current_mirror_0/IC 0 32.86668f
+C34 active_load_0/IB 0 8.75947f
+.ends
+
+
 .control
 save all
 dc V4 0 5 0.01
@@ -73,17 +288,22 @@ plot v(VOUT) v(VIN+)
 plot i(Vmeas)
 
 .endc
-"}
+
+"
+
+
+
+}
 C {devices/lab_pin.sym} -670 310 0 0 {name=p7 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -580 -190 0 0 {name=p12 sig_type=std_logic lab=VIN+
+C {devices/lab_pin.sym} -660 -230 0 0 {name=p12 sig_type=std_logic lab=VIN+
 }
 C {devices/vsource.sym} -670 170 0 0 {name=V4 value= 2.5}
 C {devices/lab_pin.sym} -670 90 0 0 {name=p3 sig_type=std_logic lab=VIN+
 }
-C {devices/lab_pin.sym} -480 -370 0 0 {name=p4 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} -360 -170 2 0 {name=p5 sig_type=std_logic lab=VOUT
+C {devices/lab_pin.sym} -570 -430 0 0 {name=p4 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} -410 -200 2 0 {name=p5 sig_type=std_logic lab=VOUT
 }
 C {devices/lab_pin.sym} -1050 -40 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
-C {ammeter.sym} -480 -300 0 0 {name=Vmeas savecurrent=true}
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} -480 -180 0 0 {name=x1}
+C {ammeter.sym} -570 -360 0 0 {name=Vmeas savecurrent=true}
+C {Sky130A/UUT_sky/UUT_VA_sky.sym} -540 -200 0 0 {name=x1}
