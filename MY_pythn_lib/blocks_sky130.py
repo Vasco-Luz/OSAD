@@ -227,3 +227,10 @@ wrdata transcondutance.csv i(Vmeas) i(Vmeas1) v(net3)
         
 
 
+
+#class Pmos_current_mirror:
+#       #self initiation function
+#    def __init__(self,VDSAT:float,MC:float,impedance:float):
+
+
+

@@ -38,6 +38,7 @@ C {devices/lab_pin.sym} 910 390 2 0 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/code.sym} -10 30 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
+place=header
 value="
 .model JM1 NJF (VTO=-2.0 BETA=1.0E-4 LAMBDA=0.02 RD=10 RS=5 CGS=5pF CGD=3pF PB=0.7 IS=1E-14 FC=0.5)
 
