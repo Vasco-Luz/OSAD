@@ -52,7 +52,7 @@ N 430 -260 720 -260 {lab=#net5}
 N 430 -220 470 -220 {lab=VSS}
 N 580 -170 580 -130 {
 lab=VSS}
-N 580 -260 580 -230 {lab=VOUT}
+N 580 -260 580 -230 {lab=#net5}
 C {Sky130A/Learning/Design_of_two_stage_CMOS_MILLER_OTA_1_8/amplifier.sym} 540 -400 0 0 {name=x1}
 C {devices/lab_pin.sym} -210 -80 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -210 -10 0 0 {name=V1 value="VDD"
@@ -64,7 +64,7 @@ C {devices/vsource.sym} -80 -10 0 0 {name=V2 value="VSS"
 
 }
 C {devices/gnd.sym} -80 40 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/corner.sym} -220 -300 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {sky130_fd_pr/corner.sym} -220 -300 0 0 {name=CORNER only_toplevel=true corner=ss}
 C {devices/lab_pin.sym} -80 -80 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
 C {devices/simulator_commands.sym} -70 -290 0 0 {name=COMMANDS
@@ -81,11 +81,11 @@ value="
 .control
 save all
 op
-print @m.x1.xm9.msky130_fd_pr__pfet_01v8[vth]
-print @m.x1.xm9.msky130_fd_pr__pfet_01v8[gm]
-print 1/@m.x1.xm9.msky130_fd_pr__pfet_01v8[gds]
-print @m.x1.xm9.msky130_fd_pr__pfet_01v8[vdsat]
-print @m.x1.xm9.msky130_fd_pr__pfet_01v8[cdg]
+print @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vth]
+print @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gm]
+print 1/@m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[gds]
+print @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[vdsat]
+print @m.x1.xm9.msky130_fd_pr__pfet_01v8_lvt[cdg]
 
 
 print @m.x1.xm11.msky130_fd_pr__nfet_01v8[vth]
@@ -107,8 +107,10 @@ print 1/@m.x1.xm12.msky130_fd_pr__pfet_01v8[gds]
 print @m.x1.xm12.msky130_fd_pr__pfet_01v8[vdsat]
 print @m.x1.xm12.msky130_fd_pr__pfet_01v8[cdg]
 
-ac dec 100 1 10G
-plot db(v(VOUT)) (180*ph(v(VOUT))/pi)
+print 1.8*I(V2)
+
+ac dec 1000 1 10G
+plot db(v(VOUT)) (180+(180*ph(v(VOUT))/pi))
 
 
 
@@ -141,7 +143,7 @@ ac=1000000000000G
 m=1}
 C {capa.sym} 580 -200 0 0 {name=C2
 m=1
-value=3p
+value=1
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 580 -130 0 0 {name=p3 sig_type=std_logic lab=VSS
