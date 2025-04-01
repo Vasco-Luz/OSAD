@@ -22,8 +22,10 @@ C {devices/lab_pin.sym} 480 190 2 0 {name=p12 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} 610 260 0 0 {name=VSS value=0}
 C {devices/gnd.sym} 610 350 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 620 190 2 0 {name=p1 sig_type=std_logic lab=VSS}
-C {devices/code_shown.sym} 170 30 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -340 -270 0 0 {name=NGSPICE only_toplevel=true 
 value="
+
+.model JM1 NJF (VTO=-2.0 BETA=1e-4 LAMBDA=0.02 RD=10 RS=5 CGS=0.5pF CGD=0.3pF PB=0.7 IS=1e-14 FC=0.5 TNOM=27 TCVTO=-2e-3 KF=1e-26 AF=1.0)
 .param temp=27
 .control
 save all 
@@ -31,15 +33,7 @@ dc temp -40 125 1
 plot i(Vmeas)
 endc
 "}
-C {njfet.sym} 890 130 0 0 {name=J1 model=JM1 area=1 m=1}
 C {devices/lab_pin.sym} 910 50 2 0 {name=p2 sig_type=std_logic lab=VDD}
 C {ammeter.sym} 910 270 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
 C {devices/lab_pin.sym} 910 390 2 0 {name=p3 sig_type=std_logic lab=VSS}
-C {devices/code.sym} -10 30 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="
-.model JM1 NJF (VTO=-2.0 BETA=1.0E-4 LAMBDA=0.02 RD=10 RS=5 CGS=5pF CGD=3pF PB=0.7 IS=1E-14 FC=0.5)
-
-"
-spice_ignore=false}
+C {njfet.sym} 890 130 0 0 {name=J1 model=JM1 }
