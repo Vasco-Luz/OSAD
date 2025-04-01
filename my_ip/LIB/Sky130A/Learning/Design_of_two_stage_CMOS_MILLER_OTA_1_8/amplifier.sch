@@ -4,29 +4,68 @@ K {}
 V {}
 S {}
 E {}
-T {8} 1860 -1370 0 0 0.4 0.4 {}
-T {D} 2010 -1360 0 0 0.4 0.4 {}
 T {D} 1010 -1430 0 0 0.4 0.4 {}
 T {D} 760 -1430 0 0 0.4 0.4 {}
 T {M5} 800 -1430 0 0 0.4 0.4 {}
 T {M6} 850 -1430 0 0 0.4 0.4 {}
 T {M6} 900 -1430 0 0 0.4 0.4 {}
 T {M5} 950 -1430 0 0 0.4 0.4 {}
-T {D} 1010 -1390 0 0 0.4 0.4 {}
-T {D} 760 -1390 0 0 0.4 0.4 {}
-T {M5} 800 -1390 0 0 0.4 0.4 {}
-T {M6} 850 -1390 0 0 0.4 0.4 {}
-T {M6} 900 -1390 0 0 0.4 0.4 {}
-T {M5} 950 -1390 0 0 0.4 0.4 {}
-T {D} 1010 -1350 0 0 0.4 0.4 {}
-T {D} 760 -1350 0 0 0.4 0.4 {}
-T {M5} 800 -1350 0 0 0.4 0.4 {}
-T {M6} 850 -1350 0 0 0.4 0.4 {}
-T {M6} 900 -1350 0 0 0.4 0.4 {}
-T {M5} 950 -1350 0 0 0.4 0.4 {}
 T {M7} 1050 -1430 0 0 0.4 0.4 {}
 T {M7} 1100 -1430 0 0 0.4 0.4 {}
 T {M7} 1150 -1430 0 0 0.4 0.4 {}
+T {M7} 1200 -1430 0 0 0.4 0.4 {}
+T {M8} 1250 -1430 0 0 0.4 0.4 {}
+T {M8} 1300 -1430 0 0 0.4 0.4 {}
+T {M8} 1350 -1430 0 0 0.4 0.4 {}
+T {M8} 1400 -1430 0 0 0.4 0.4 {}
+T {M8} 1450 -1430 0 0 0.4 0.4 {}
+T {M8} 1500 -1430 0 0 0.4 0.4 {}
+T {M8} 1550 -1430 0 0 0.4 0.4 {}
+T {M8} 1600 -1430 0 0 0.4 0.4 {}
+T {M8} 1650 -1430 0 0 0.4 0.4 {}
+T {M8} 1700 -1430 0 0 0.4 0.4 {}
+T {M8} 1750 -1430 0 0 0.4 0.4 {}
+T {M8} 1800 -1430 0 0 0.4 0.4 {}
+T {M8} 1850 -1430 0 0 0.4 0.4 {}
+T {M8} 1900 -1430 0 0 0.4 0.4 {}
+T {M8} 1950 -1430 0 0 0.4 0.4 {}
+T {M8} 2000 -1430 0 0 0.4 0.4 {}
+T {M7} 2050 -1430 0 0 0.4 0.4 {}
+T {M7} 2100 -1430 0 0 0.4 0.4 {}
+T {M7} 2150 -1430 0 0 0.4 0.4 {}
+T {M7} 2200 -1430 0 0 0.4 0.4 {}
+T {D} 2250 -1430 0 0 0.4 0.4 {}
+T {D} 1010 -1370 0 0 0.4 0.4 {}
+T {D} 760 -1370 0 0 0.4 0.4 {}
+T {M5} 800 -1370 0 0 0.4 0.4 {}
+T {M6} 850 -1370 0 0 0.4 0.4 {}
+T {M6} 900 -1370 0 0 0.4 0.4 {}
+T {M5} 950 -1370 0 0 0.4 0.4 {}
+T {M7} 1050 -1370 0 0 0.4 0.4 {}
+T {M7} 1100 -1370 0 0 0.4 0.4 {}
+T {M7} 1150 -1370 0 0 0.4 0.4 {}
+T {M7} 1200 -1370 0 0 0.4 0.4 {}
+T {M8} 1250 -1370 0 0 0.4 0.4 {}
+T {M8} 1300 -1370 0 0 0.4 0.4 {}
+T {M8} 1350 -1370 0 0 0.4 0.4 {}
+T {M8} 1400 -1370 0 0 0.4 0.4 {}
+T {M8} 1450 -1370 0 0 0.4 0.4 {}
+T {M8} 1500 -1370 0 0 0.4 0.4 {}
+T {M8} 1550 -1370 0 0 0.4 0.4 {}
+T {M8} 1600 -1370 0 0 0.4 0.4 {}
+T {M8} 1650 -1370 0 0 0.4 0.4 {}
+T {M8} 1700 -1370 0 0 0.4 0.4 {}
+T {M8} 1750 -1370 0 0 0.4 0.4 {}
+T {M8} 1800 -1370 0 0 0.4 0.4 {}
+T {M8} 1850 -1370 0 0 0.4 0.4 {}
+T {M8} 1900 -1370 0 0 0.4 0.4 {}
+T {M8} 1950 -1370 0 0 0.4 0.4 {}
+T {M8} 2000 -1370 0 0 0.4 0.4 {}
+T {M7} 2050 -1370 0 0 0.4 0.4 {}
+T {M7} 2100 -1370 0 0 0.4 0.4 {}
+T {M7} 2150 -1370 0 0 0.4 0.4 {}
+T {M7} 2200 -1370 0 0 0.4 0.4 {}
+T {D} 2250 -1370 0 0 0.4 0.4 {}
 N 800 -590 800 -550 {lab=VSS}
 N 800 -550 980 -550 {lab=VSS}
 N 980 -660 980 -550 {lab=VSS}
@@ -150,16 +189,16 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_nf.sym} 840 -1210 0 1 {name=M5
-L=3
+L=2
 W=1
-nf=2 mult=3
+nf=2 mult=2
 model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_nf.sym} 960 -1210 0 0 {name=M6
-L=3
+L=2
 W=1
-nf=2 mult=3
+nf=2 mult=2
 model=pfet_01v8
 spiceprefix=X
 }
@@ -175,9 +214,9 @@ C {devices/lab_pin.sym} 370 -900 2 0 {name=p20 sig_type=std_logic lab=Vin-}
 C {iopin.sym} 310 -860 0 1 {name=p21 lab=VOUT}
 C {devices/lab_pin.sym} 370 -860 2 0 {name=p22 sig_type=std_logic lab=VOUT}
 C {sky130_fd_pr/pfet_01v8_nf.sym} 1330 -1210 0 0 {name=M7
-L=3
+L=2
 W=1
-nf=2 mult=9
+nf=2 mult=8
 model=pfet_01v8
 spiceprefix=X
 }
@@ -202,9 +241,9 @@ spiceprefix=X
 C {devices/lab_pin.sym} 1580 -1030 2 0 {name=p7 sig_type=std_logic lab=Vin+}
 C {devices/lab_pin.sym} 1120 -1030 0 0 {name=p8 sig_type=std_logic lab=Vin-}
 C {sky130_fd_pr/pfet_01v8_nf.sym} 1870 -1210 0 0 {name=M12
-L=3
+L=2
 W=1
-nf=2 mult=24
+nf=2 mult=16
 model=pfet_01v8
 spiceprefix=X
 }
@@ -213,27 +252,27 @@ C {devices/lab_pin.sym} 1810 -1210 0 0 {name=p9 sig_type=std_logic lab=VB1
 C {devices/lab_pin.sym} 980 -1120 0 1 {name=p10 sig_type=std_logic lab=VB2
 }
 C {sky130_fd_pr/nfet_01v8_nf.sym} 1610 -850 1 0 {name=M14
-L=2.4
+L=1.7
 W=2  
 nf=1 mult=2
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1760 -830 1 0 {name=C1 model=cap_mim_m3_1 W=7 L=7 MF=4 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1760 -830 1 0 {name=C1 model=cap_mim_m3_1 W=6.5 L=6.5 MF=4 spiceprefix=X}
 C {devices/lab_pin.sym} 1610 -910 0 1 {name=p11 sig_type=std_logic lab=VB2
 }
 C {devices/lab_pin.sym} 1890 -990 2 0 {name=p12 sig_type=std_logic lab=VOUT}
 C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 1200 -1030 0 0 {name=M8
-L=0.7
+L=0.9
 W=3
-nf=4 mult=4
+nf=2 mult=4
 model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_lvt_nf.sym} 1500 -1030 0 1 {name=M9
-L=0.7
+L=0.9
 W=3
-nf=4 mult=4
+nf=2 mult=4
 model=pfet_01v8_lvt
 spiceprefix=X
 }
