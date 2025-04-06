@@ -1,0 +1,19 @@
+* NGSPICE file created from Pmos_current_mirror.ext - technology: sky130A
+
+.subckt Pmos_current_mirror VDD IA IB IC ID
+X0 ID IA VDD VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2 M=32
+X1 IA VDD VDD VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=2 M=4
+X2 IB IA VDD VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2 M=4
+X3 VDD IA IC VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2 M=16
+X4 VDD VDD VDD VDD sky130_fd_pr__pfet_01v8 ad=0.3 pd=2.6 as=0.25 ps=1.5 w=1 l=2 M=2
+X5 VDD IA IA VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2 M=4
+C0 IA VDD 37.06996f
+C1 ID IA 3.55937f
+C2 IC VDD 2.2813f
+C3 IC ID 4.1009f
+C4 IC IA 2.71142f
+C5 ID VDD 2.43695f
+C6 ID VSUBS 2.53853f
+C7 IA VSUBS 16.38788f
+C8 VDD VSUBS 76.51212f
+.ends

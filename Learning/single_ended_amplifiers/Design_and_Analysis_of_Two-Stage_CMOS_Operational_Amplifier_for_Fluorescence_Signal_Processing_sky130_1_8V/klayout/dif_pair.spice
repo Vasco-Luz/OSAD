@@ -1,0 +1,16 @@
+* NGSPICE file created from dif_pair.ext - technology: sky130A
+
+.subckt dif_pair IC VIN+ VIN- IH II
+X0 IC m1_n2497_6054# m1_n2497_6054# IC sky130_fd_pr__pfet_01v8_lvt ad=0.5 pd=2.5 as=0.6 ps=4.6 w=2 l=0.7
+X1 IC VIN- IH IC sky130_fd_pr__pfet_01v8_lvt ad=0.5 pd=2.5 as=0.5 ps=2.5 w=2 l=0.7 M=8
+X2 m1_n4845_6054# m1_n4845_6054# IC IC sky130_fd_pr__pfet_01v8_lvt ad=0.6 pd=4.6 as=0.5 ps=2.5 w=2 l=0.7
+X3 II VIN+ IC IC sky130_fd_pr__pfet_01v8_lvt ad=0.5 pd=2.5 as=0.5 ps=2.5 w=2 l=0.7 M=8
+X4 IC m1_n4845_5730# m1_n4845_5730# IC sky130_fd_pr__pfet_01v8_lvt ad=10 pd=50 as=0.6 ps=4.6 w=2 l=0.7
+X5 m1_n2497_5807# m1_n2497_5807# IC IC sky130_fd_pr__pfet_01v8_lvt ad=0.6 pd=4.6 as=0 ps=0 w=2 l=0.7
+C0 II IC 2.14037f
+C1 VIN- IC 2.28686f
+C2 VIN+ IC 2.30896f
+C3 IH IC 2.52123f
+C4 VIN+ VIN- 2.36078f
+C5 IC VSUBS 15.02551f
+.ends

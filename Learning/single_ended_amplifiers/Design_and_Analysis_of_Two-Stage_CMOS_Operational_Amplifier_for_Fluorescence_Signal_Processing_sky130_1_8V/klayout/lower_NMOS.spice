@@ -1,0 +1,14 @@
+* NGSPICE file created from lower_NMOS.ext - technology: sky130A
+
+.subckt lower_NMOS VSS IE IF IG
+X0 IF IE IG VSS sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=4 M=16
+X1 IE VSS VSS VSS sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=4 M=4
+X2 IE IE VSS VSS sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=4 M=4
+X3 IF VSS VSS VSS sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=4 M=4
+C0 IF IE 5.82683f
+C1 IG IE 2.18032f
+C2 IG IF 3.41012f
+C3 IG VSS 2.55591f
+C4 IF VSS 2.60295f
+C5 IE VSS 38.68911f
+.ends

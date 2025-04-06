@@ -1,0 +1,199 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1743851084
+<< locali >>
+rect 906 319 11649 365
+rect 906 281 1692 319
+rect 2706 281 3492 319
+rect 3606 281 4392 319
+rect 4506 281 5292 319
+rect 5406 281 6192 319
+rect 6306 281 7092 319
+rect 7206 281 7992 319
+rect 8106 281 8892 319
+rect 9006 281 9792 319
+rect 10806 281 11592 319
+rect 906 -147 11649 -101
+rect 906 -185 1692 -147
+rect 2706 -185 3492 -147
+rect 3606 -185 4392 -147
+rect 4506 -185 5292 -147
+rect 5406 -185 6192 -147
+rect 6306 -185 7092 -147
+rect 7206 -185 7992 -147
+rect 8106 -185 8892 -147
+rect 9006 -185 9792 -147
+rect 10806 -185 11592 -147
+rect -247 -995 12753 -634
+<< metal1 >>
+rect -54 241 10 287
+rect -54 -179 -8 241
+rect -54 -225 10 -179
+rect -54 -671 -8 -225
+rect 826 -310 872 552
+rect 1726 241 1810 287
+rect 1726 156 1772 241
+rect 1726 -179 1772 26
+rect 1726 -225 1810 -179
+rect 1726 -670 1772 -225
+rect 2626 -310 2672 649
+rect 3526 -310 3572 792
+rect 4426 -310 4472 701
+rect 5326 -310 5372 792
+rect 6226 -310 6272 701
+rect 7126 -310 7172 792
+rect 8026 -310 8072 701
+rect 8926 -310 8972 753
+rect 9826 -310 9872 701
+rect 10688 241 10772 287
+rect 10726 -179 10772 241
+rect 10688 -225 10772 -179
+rect 10726 -693 10772 -225
+rect 11626 -310 11672 552
+rect 12488 241 12552 287
+rect 12506 -179 12552 241
+rect 12488 -225 12552 -179
+rect 12506 -659 12552 -225
+<< metal2 >>
+rect 3526 740 8840 792
+rect 2758 649 9830 701
+rect 958 552 11672 604
+use nfet$1  nfet$1_0
+timestamp 1743851084
+transform 1 0 -61 0 1 -475
+box -26 -40 12646 306
+use nfet$1  nfet$1_1
+timestamp 1743851084
+transform 1 0 -61 0 1 -9
+box -26 -40 12646 306
+use vias_gen$1  vias_gen$1_0
+timestamp 1743851084
+transform 1 0 11540 0 1 -147
+box 0 0 132 46
+use vias_gen$1  vias_gen$1_1
+timestamp 1743851084
+transform 1 0 826 0 1 -147
+box 0 0 132 46
+use vias_gen$1  vias_gen$1_2
+timestamp 1743851084
+transform 1 0 11540 0 1 319
+box 0 0 132 46
+use vias_gen$1  vias_gen$1_3
+timestamp 1743851084
+transform 1 0 826 0 1 319
+box 0 0 132 46
+use vias_gen$6  vias_gen$6_0
+timestamp 1743851084
+transform 1 0 12671 0 1 -635
+box -26 -26 108 1106
+use vias_gen$6  vias_gen$6_1
+timestamp 1743851084
+transform 1 0 -247 0 1 -635
+box -26 -26 108 1106
+use vias_gen$7  vias_gen$7_0
+timestamp 1743851084
+transform 1 0 6188 0 1 649
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_1
+timestamp 1743851084
+transform 1 0 7085 0 1 740
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_2
+timestamp 1743851084
+transform 1 0 5284 0 1 740
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_3
+timestamp 1743851084
+transform 1 0 7983 0 1 649
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_4
+timestamp 1743851084
+transform 1 0 4382 0 1 649
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_5
+timestamp 1743851084
+transform 1 0 3526 0 1 740
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_6
+timestamp 1743851084
+transform 1 0 8840 0 1 740
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_7
+timestamp 1743851084
+transform 1 0 9740 0 1 649
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_8
+timestamp 1743851084
+transform 1 0 2626 0 1 649
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_9
+timestamp 1743851084
+transform 1 0 11540 0 1 552
+box 0 0 132 52
+use vias_gen$7  vias_gen$7_10
+timestamp 1743851084
+transform 1 0 826 0 1 552
+box 0 0 132 52
+use vias_gen$9  vias_gen$9_0
+timestamp 1743851084
+transform 0 1 -247 -1 0 527
+box -26 -26 108 13026
+use vias_gen$9  vias_gen$9_1
+timestamp 1743851084
+transform 0 1 -247 -1 0 -635
+box -26 -26 108 13026
+use vias_gen$10  vias_gen$10_0
+timestamp 1743851084
+transform 1 0 12464 0 1 -698
+box 0 0 130 46
+use vias_gen$10  vias_gen$10_1
+timestamp 1743851084
+transform 1 0 10681 0 1 -704
+box 0 0 130 46
+use vias_gen$10  vias_gen$10_2
+timestamp 1743851084
+transform 1 0 1684 0 1 -699
+box 0 0 130 46
+use vias_gen$10  vias_gen$10_3
+timestamp 1743851084
+transform 1 0 -98 0 1 -693
+box 0 0 130 46
+<< labels >>
+flabel metal1 s 354 70 354 70 2 FreeSans 224 0 0 0 D
+flabel metal1 s 1212 75 1212 75 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 2142 77 2142 77 2 FreeSans 224 0 0 0 D
+flabel metal1 s 3083 75 3083 75 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 3970 75 3970 75 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 4840 57 4840 57 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 5727 57 5727 57 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 6621 2 6621 2 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 7586 46 7586 46 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 8473 46 8473 46 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 9367 -9 9367 -9 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 10174 9 10174 9 2 FreeSans 224 0 0 0 D
+flabel metal1 s 11106 -32 11106 -32 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 11990 0 11990 0 2 FreeSans 224 0 0 0 D
+flabel metal1 s 354 -396 354 -396 2 FreeSans 224 0 0 0 D
+flabel metal1 s 1212 -391 1212 -391 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 2142 -389 2142 -389 2 FreeSans 224 0 0 0 D
+flabel metal1 s 3083 -391 3083 -391 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 3970 -391 3970 -391 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 4840 -409 4840 -409 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 5727 -409 5727 -409 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 6621 -464 6621 -464 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 7586 -420 7586 -420 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 8473 -420 8473 -420 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 9367 -475 9367 -475 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 10174 -457 10174 -457 2 FreeSans 224 0 0 0 D
+flabel metal1 s 11106 -498 11106 -498 2 FreeSans 224 0 0 0 M2
+flabel metal1 s 11990 -466 11990 -466 2 FreeSans 224 0 0 0 D
+flabel locali s 578 -906 578 -906 2 FreeSans 272 0 0 0 VSS
+port 1 nsew
+flabel metal2 s 1082 566 1082 566 2 FreeSans 224 0 0 0 IE
+port 2 nsew
+flabel metal2 s 2866 670 2866 670 2 FreeSans 224 0 0 0 IF
+port 3 nsew
+flabel metal2 s 3939 769 3939 769 2 FreeSans 224 0 0 0 IG
+port 4 nsew
+<< end >>

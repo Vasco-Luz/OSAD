@@ -1,0 +1,20 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1743851084
+<< locali >>
+rect 0 40 132 46
+rect 0 6 13 40
+rect 47 6 85 40
+rect 119 6 132 40
+rect 0 0 132 6
+<< viali >>
+rect 13 6 47 40
+rect 85 6 119 40
+<< metal1 >>
+rect 0 40 132 46
+rect 0 6 13 40
+rect 47 6 85 40
+rect 119 6 132 40
+rect 0 0 132 6
+<< end >>

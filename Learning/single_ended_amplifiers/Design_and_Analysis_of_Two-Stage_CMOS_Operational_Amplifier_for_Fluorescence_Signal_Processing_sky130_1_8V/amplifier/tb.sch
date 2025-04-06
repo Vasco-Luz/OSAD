@@ -64,7 +64,7 @@ C {devices/vsource.sym} -80 -10 0 0 {name=V2 value="VSS"
 
 }
 C {devices/gnd.sym} -80 40 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/corner.sym} -220 -300 0 0 {name=CORNER only_toplevel=true corner=ss}
+C {sky130_fd_pr/corner.sym} -220 -300 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/lab_pin.sym} -80 -80 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
 C {devices/simulator_commands.sym} -70 -290 0 0 {name=COMMANDS

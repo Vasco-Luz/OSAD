@@ -1,0 +1,10 @@
+* NGSPICE file created from active_load.ext - technology: sky130A
+
+.subckt active_load VSS IH II
+X0 IH IH VSS VSS sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2 M=4
+X1 VSS IH II VSS sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=2 M=4
+X2 IH VSS VSS VSS sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.3 ps=2.6 w=1 l=2 M=4
+C0 VSS IH 2.75121f
+C1 IH 0 6.68233f
+C2 VSS 0 2.65077f
+.ends

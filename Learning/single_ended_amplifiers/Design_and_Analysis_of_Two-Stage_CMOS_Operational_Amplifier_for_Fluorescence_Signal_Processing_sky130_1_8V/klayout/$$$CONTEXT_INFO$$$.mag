@@ -1,0 +1,51 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1743851084
+<< error_s >>
+rect 24 1043 58 1067
+rect 24 975 58 1033
+rect 24 907 58 965
+rect 24 839 58 897
+rect 24 771 58 829
+rect 24 703 58 761
+rect 24 635 58 693
+rect 24 567 58 625
+rect 24 499 58 557
+rect 24 431 58 489
+rect 24 363 58 421
+rect 24 337 58 353
+rect 24 295 82 337
+rect 36 290 82 295
+rect 24 227 58 285
+rect 24 200 58 217
+rect 60 200 82 290
+rect 0 183 82 200
+rect -10 149 82 183
+rect 0 0 82 149
+rect 84 6 119 40
+use nfet$1  nfet$1_0
+timestamp 1743851084
+transform 1 0 0 0 1 0
+box -26 -40 12646 306
+use vias_gen$1  vias_gen$1_0
+timestamp 1743851084
+transform 1 0 0 0 1 0
+box 0 0 132 46
+use vias_gen$6  vias_gen$6_0
+timestamp 1743851084
+transform 1 0 0 0 1 0
+box -26 -26 108 1106
+use vias_gen$7  vias_gen$7_0
+timestamp 1743851084
+transform 1 0 0 0 1 0
+box 0 0 132 52
+use vias_gen$9  vias_gen$9_0
+timestamp 1743851084
+transform 1 0 0 0 1 0
+box -26 -26 108 13026
+use vias_gen$10  vias_gen$10_0
+timestamp 1743851084
+transform 1 0 0 0 1 0
+box 0 0 130 46
+<< end >>

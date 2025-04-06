@@ -3,8 +3,32 @@
  <description>SKY130 DRC runset</description>
  <original-file>/foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_sky130_1_8V/klayout/Va001_1_8.gds</original-file>
  <generator>drc: script='/foss/pdks/sky130A/libs.tech/klayout/drc/sky130A.lydrc'</generator>
- <top-cell>Pmos_current_mirror</top-cell>
+ <top-cell>nmos_2_stage</top-cell>
  <tags>
+  <tag>
+   <name>waived</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>red</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>green</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>blue</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>yellow</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>important</name>
+   <description/>
+  </tag>
  </tags>
  <categories>
   <category>
@@ -880,7 +904,7 @@
  </categories>
  <cells>
   <cell>
-   <name>Pmos_current_mirror</name>
+   <name>nmos_2_stage</name>
    <variant/>
    <layout-name/>
    <references>
