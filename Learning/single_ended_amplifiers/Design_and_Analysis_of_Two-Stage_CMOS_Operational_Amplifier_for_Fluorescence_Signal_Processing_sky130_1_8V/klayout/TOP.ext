@@ -1,0 +1,1085 @@
+timestamp 1572928616
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use vias_gen$7 vias_gen$7_1 1 0 -3178 0 1 -3267
+use res_poly res_poly_9 1 0 468 0 -1 -2258
+use res_poly res_poly_1 1 0 214 0 -1 -2258
+use vias_gen$24 vias_gen$24_1 0 1 -115 -1 0 -3020
+use vias_gen$26 vias_gen$26_0 1 0 -115 0 1 -3020
+use vias_gen$7 vias_gen$7_2 1 0 403 0 1 -3176
+use vias_gen$1 vias_gen$1_4 0 -1 -55 1 0 -2739
+use vias_gen$7 vias_gen$7_0 1 0 -1720 0 1 -3364
+use res_poly res_poly_3 1 0 1992 0 -1 -2258
+use res_poly res_poly_4 1 0 1738 0 -1 -2258
+use res_poly res_poly_5 1 0 1484 0 -1 -2258
+use res_poly res_poly_6 1 0 1230 0 -1 -2258
+use res_poly res_poly_7 1 0 976 0 -1 -2258
+use res_poly res_poly_8 1 0 722 0 -1 -2258
+use vias_gen$1 vias_gen$1_0 1 0 2181 0 1 -3079
+use vias_gen$29 vias_gen$29_0 1 0 3221 0 1 -2531
+use vias_gen$1 vias_gen$1_1 0 -1 2765 1 0 -2756
+use vias_gen$26 vias_gen$26_1 1 0 2703 0 1 -3020
+use res_poly res_poly_0 1 0 2500 0 -1 -2258
+use res_poly res_poly_2 1 0 2246 0 -1 -2258
+use dif_pair dif_pair_0 1 0 8497 0 1 -8208
+use vias_gen$2 vias_gen$2_0 1 0 10060 0 1 -3727
+use vias_gen$22 vias_gen$22_0 -1 0 12368 0 1 -4684
+use vias_gen$2 vias_gen$2_1 1 0 10042 0 1 -3907
+use vias_gen$2 vias_gen$2_2 1 0 9013 0 1 -3907
+use nfet$6 nfet$6_0 1 0 9041 0 1 -4456
+use vias_gen$2 vias_gen$2_9 1 0 6381 0 1 -3193
+use vias_gen$2 vias_gen$2_10 1 0 6184 0 1 -3061
+use nmos_2_stage nmos_2_stage_0 1 0 6976 0 1 -7436
+use active_load active_load_0 1 0 4031 0 1 -8104
+use lower_NMOS lower_NMOS_0 1 0 -2429 0 1 -6767
+use vias_gen$2 vias_gen$2_7 1 0 -3250 0 1 -1561
+use vias_gen$2 vias_gen$2_6 1 0 -5209 0 1 -1561
+use vias_gen$2 vias_gen$2_5 1 0 -4249 0 1 -1662
+use vias_gen$1 vias_gen$1_3 0 -1 -53 1 0 -1905
+use vias_gen$1 vias_gen$1_2 0 -1 2769 1 0 -1891
+use vias_gen$2 vias_gen$2_8 1 0 6381 0 1 -1712
+use vias_gen$2 vias_gen$2_4 1 0 8233 0 1 -1712
+use vias_gen$24 vias_gen$24_0 0 1 -115 -1 0 -1418
+use vias_gen$28 vias_gen$28_0 1 0 3188 0 1 -1284
+use vias_gen$2 vias_gen$2_3 1 0 6530 0 1 -1373
+use Pmos_current_mirror Pmos_current_mirror_0 1 0 -972 0 1 -374
+use Upper_Nmos Upper_Nmos_0 1 0 -2900 0 1 -5320
+use capacitor capacitor_0 0 -1 14266 1 0 -3510
+port "VSS" 2 -5764 -4714 -5764 -4714 li
+port "VDD" 1 -5993 388 -5993 388 li
+port "VOUT" 5 14155 -1137 14155 -1137 m3
+port "VIN+" 4 2978 -2414 2978 -2414 m2
+port "VIN-" 3 3085 -2351 3085 -2351 m2
+node "VSS" 0 0 -5764 -4714 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 -5993 388 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VOUT" 1 353.229 14155 -1137 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 50028 1648 0 0 0 0 0 0
+node "m2_6509_n3193#" 3 426.042 6509 -3193 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 76706 2876 0 0 0 0 0 0 0 0
+node "VIN+" 2 254.521 2978 -2414 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 53352 2156 0 0 0 0 0 0 0 0
+node "VIN-" 3 211.662 3085 -2351 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 59956 2410 0 0 0 0 0 0 0 0
+node "m2_6509_n1712#" 4 419.511 6509 -1712 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 96304 3808 0 0 0 0 0 0 0 0
+node "m2_2923_n1661#" 27 2731.54 2923 -1661 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 441364 19518 0 0 0 0 0 0 0 0
+node "m2_6787_n1373#" 11 1249.7 6787 -1373 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 251196 9318 0 0 0 0 0 0 0 0
+node "m1_9568_n4684#" 9 1271.25 9568 -4684 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 122881 6024 0 0 0 0 0 0 0 0 0 0
+node "m1_10106_n4083#" 1 83.7414 10106 -4083 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6384 512 0 0 0 0 0 0 0 0 0 0
+node "m1_9048_n4083#" 1 88.1869 9048 -4083 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7068 518 0 0 0 0 0 0 0 0 0 0
+node "m1_9269_n3966#" 2 487.709 9269 -3966 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 91800 2642 0 0 0 0 0 0 0 0 0 0
+node "m1_7315_n1664#" 0 67.0159 7315 -1664 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6256 364 0 0 0 0 0 0 0 0 0 0
+node "m1_6547_n3099#" 5 1671.86 6547 -3099 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 375568 7794 0 0 0 0 0 0 0 0 0 0
+node "m1_2221_n3078#" 0 102.422 2221 -3078 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9700 488 0 0 0 0 0 0 0 0 0 0
+node "m1_443_n3176#" 1 136.246 443 -3176 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14600 684 0 0 0 0 0 0 0 0 0 0
+node "m1_2525_n2884#" 0 285.931 2525 -2884 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 109460 1362 0 0 0 0 0 0 0 0 0 0
+node "m1_1713_n2884#" 0 272.299 1713 -2884 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127984 1450 0 0 0 0 0 0 0 0 0 0
+node "m1_1205_n2884#" 0 248.677 1205 -2884 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127984 1450 0 0 0 0 0 0 0 0 0 0
+node "m1_697_n2884#" 0 272.299 697 -2884 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127984 1450 0 0 0 0 0 0 0 0 0 0
+node "m1_n115_n2884#" 0 240.223 -115 -2884 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127984 1450 0 0 0 0 0 0 0 0 0 0
+node "m1_3221_n2371#" 1 570.275 3221 -2371 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 149209 2540 0 0 0 0 0 0 0 0 0 0
+node "m1_2525_n2053#" 0 243.302 2525 -2053 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 119985 1412 0 0 0 0 0 0 0 0 0 0
+node "m1_1967_n2053#" 0 255.946 1967 -2053 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127984 1450 0 0 0 0 0 0 0 0 0 0
+node "m1_1459_n2053#" 0 248.677 1459 -2053 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127984 1450 0 0 0 0 0 0 0 0 0 0
+node "m1_951_n2053#" 0 248.677 951 -2053 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127984 1450 0 0 0 0 0 0 0 0 0 0
+node "m1_493_n2053#" 0 229.534 493 -2053 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 106934 1350 0 0 0 0 0 0 0 0 0 0
+node "m1_n115_n2053#" 0 236.624 -115 -2053 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127984 1450 0 0 0 0 0 0 0 0 0 0
+node "li_7076_n4633#" 57 612.363 7076 -4633 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 182810 2214 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_10018_n2985#" 43 1150.4 10018 -2985 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 502848 3368 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_6658_n3389#" 15 703.182 6658 -3389 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 291582 2166 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n947_n3471#" 71 1967.23 -947 -3471 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 939872 5396 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n5841_n3471#" 23 1232.17 -5841 -3471 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 612846 3270 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_1459_n2053#" "m1_1205_n2884#" 4.78261
+cap "li_10018_n2985#" "m1_9269_n3966#" 0.609842
+cap "m1_2525_n2053#" "m1_1967_n2053#" 60.9342
+cap "li_7076_n4633#" "li_6658_n3389#" 5.76703
+cap "m1_493_n2053#" "m1_697_n2884#" 4.78261
+cap "m1_6547_n3099#" "m2_6509_n1712#" 88.6415
+cap "m1_3221_n2371#" "m1_2525_n2053#" 40.1822
+cap "m1_n115_n2053#" "m1_n115_n2884#" 29.0783
+cap "m2_2923_n1661#" "VIN+" 6.35357
+cap "m1_9269_n3966#" "m1_6547_n3099#" 1.01316
+cap "li_6658_n3389#" "m2_6509_n1712#" 3.30013
+cap "VIN-" "m2_2923_n1661#" 64.8481
+cap "li_n947_n3471#" "m1_951_n2053#" 0.843842
+cap "li_7076_n4633#" "m2_6509_n3193#" 36.292
+cap "m2_2923_n1661#" "m2_6509_n1712#" 370.4
+cap "m1_7315_n1664#" "m2_6509_n1712#" 16.8245
+cap "li_n947_n3471#" "m1_1205_n2884#" 0.645776
+cap "m2_2923_n1661#" "m1_1459_n2053#" 0.082491
+cap "m1_1713_n2884#" "m1_1459_n2053#" 4.78261
+cap "m1_9269_n3966#" "m1_10106_n4083#" 20.1818
+cap "m1_n115_n2053#" "m1_493_n2053#" 52.3277
+cap "m1_9269_n3966#" "m2_2923_n1661#" 8.59491
+cap "m1_9269_n3966#" "m1_9048_n4083#" 20.35
+cap "m2_6509_n3193#" "m2_6509_n1712#" 24.3116
+cap "m1_1205_n2884#" "m1_951_n2053#" 4.78261
+cap "li_n947_n3471#" "m1_697_n2884#" 1.62273
+cap "m2_2923_n1661#" "m1_1967_n2053#" 0.223404
+cap "m1_1713_n2884#" "m1_1967_n2053#" 4.78261
+cap "m1_3221_n2371#" "m2_2923_n1661#" 120.761
+cap "m2_2923_n1661#" "m1_2525_n2053#" 3.18436
+cap "m1_951_n2053#" "m1_697_n2884#" 4.78261
+cap "m1_1205_n2884#" "m1_697_n2884#" 72.9291
+cap "m1_9568_n4684#" "m1_9269_n3966#" 24.6084
+cap "li_10018_n2985#" "m1_10106_n4083#" 0.306126
+cap "li_10018_n2985#" "m2_2923_n1661#" 288.354
+cap "m1_n115_n2053#" "li_n947_n3471#" 250.894
+cap "m1_1713_n2884#" "m1_1205_n2884#" 72.9291
+cap "m1_2525_n2884#" "m1_2525_n2053#" 24.8696
+cap "VIN-" "VIN+" 514.045
+cap "m1_6547_n3099#" "li_6658_n3389#" 461.844
+cap "m1_6547_n3099#" "m1_7315_n1664#" 9.72762
+cap "m1_6547_n3099#" "m2_2923_n1661#" 74.1825
+cap "m1_n115_n2884#" "li_n947_n3471#" 291.726
+cap "m1_1967_n2053#" "m1_2221_n3078#" 2.49716
+cap "li_10018_n2985#" "m2_6787_n1373#" 13.0963
+cap "m2_2923_n1661#" "li_6658_n3389#" 0.221141
+cap "m2_2923_n1661#" "m1_7315_n1664#" 7.29214
+cap "m1_443_n3176#" "li_n947_n3471#" 5.42029
+cap "m1_6547_n3099#" "m2_6509_n3193#" 141.391
+cap "m1_10106_n4083#" "m1_9048_n4083#" 4.77994
+cap "m1_6547_n3099#" "m2_6787_n1373#" 1.12114
+cap "m1_493_n2053#" "li_n947_n3471#" 2.14923
+cap "li_6658_n3389#" "m2_6509_n3193#" 148.428
+cap "m1_3221_n2371#" "VIN+" 18.3506
+cap "m2_6787_n1373#" "li_6658_n3389#" 0.161857
+cap "VIN-" "m1_3221_n2371#" 92.7862
+cap "m1_1459_n2053#" "m1_1967_n2053#" 72.9291
+cap "m2_6787_n1373#" "m2_2923_n1661#" 1531.98
+cap "m2_6787_n1373#" "m1_7315_n1664#" 0.725143
+cap "m1_493_n2053#" "m1_951_n2053#" 72.9291
+cap "m1_1459_n2053#" "li_n947_n3471#" 0.159632
+cap "m1_2525_n2884#" "m1_1713_n2884#" 33.1971
+cap "m1_n115_n2884#" "m1_697_n2884#" 33.1971
+cap "li_7076_n4633#" "m1_6547_n3099#" 3.35937
+cap "m1_9568_n4684#" "m1_10106_n4083#" 2.01967
+cap "m1_9568_n4684#" "m2_2923_n1661#" 0.260857
+cap "m1_1459_n2053#" "m1_951_n2053#" 72.9291
+cap "VSS" "Upper_Nmos_0/nfet_1/a_460_0#" 13.8705
+cap "Upper_Nmos_0/nfet_1/a_460_0#" "VSS" 8.54026
+cap "Upper_Nmos_0/nfet_1/a_460_0#" "lower_NMOS_0/IE" 0.0488272
+cap "VSS" "Upper_Nmos_0/nfet_1/a_1960_0#" 1.97502
+cap "lower_NMOS_0/IE" "VSS" 29.3336
+cap "lower_NMOS_0/vias_gen$9_0/a_0_0#" "lower_NMOS_0/IE" 22.4151
+cap "Upper_Nmos_0/nfet_1/a_560_n40#" "lower_NMOS_0/IE" 5.32448
+cap "lower_NMOS_0/vias_gen$9_0/a_0_0#" "Upper_Nmos_0/nfet_0/a_2460_0#" 0.129131
+cap "lower_NMOS_0/IF" "lower_NMOS_0/vias_gen$9_0/a_0_0#" 7.57188
+cap "Upper_Nmos_0/nfet_1/a_2960_0#" "lower_NMOS_0/IE" 1.97502
+cap "Upper_Nmos_0/nfet_1/a_560_n40#" "lower_NMOS_0/vias_gen$9_0/a_0_0#" 8.35312
+cap "Upper_Nmos_0/vias_gen$4_1/a_0_0#" "lower_NMOS_0/nfet$1_0/a_2760_n40#" 53.3127
+cap "lower_NMOS_0/IG" "lower_NMOS_0/nfet$1_0/a_2760_n40#" -1.15416
+cap "lower_NMOS_0/IF" "lower_NMOS_0/nfet$1_0/a_2760_n40#" -1.52816
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "Upper_Nmos_0/nfet_1/a_2060_n40#" 14.475
+cap "lower_NMOS_0/IE" "lower_NMOS_0/nfet$1_0/a_2760_n40#" 10.5857
+cap "Upper_Nmos_0/vias_gen$4_1/a_0_0#" "lower_NMOS_0/nfet$1_0/a_2760_n40#" 45.282
+cap "res_poly_8/a_n35_196#" "lower_NMOS_0/nfet$1_0/a_2760_n40#" 3.378
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "res_poly_9/a_n35_n632#" 0.832183
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "res_poly_1/a_n35_n632#" 0.0458385
+cap "lower_NMOS_0/IG" "lower_NMOS_0/nfet$1_0/a_2760_n40#" 5.272
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "lower_NMOS_0/nfet$1_1/a_4460_0#" -0.8759
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "lower_NMOS_0/IE" -1.10352
+cap "res_poly_3/a_n35_n632#" "lower_NMOS_0/nfet$1_0/a_4560_n40#" 2.26098
+cap "lower_NMOS_0/nfet$1_0/a_4560_n40#" "Upper_Nmos_0/vias_gen$4_1/a_0_0#" 9.67019
+cap "lower_NMOS_0/nfet$1_0/a_4560_n40#" "res_poly_8/a_n35_196#" 5.87289
+cap "lower_NMOS_0/nfet$1_1/a_6260_0#" "lower_NMOS_0/nfet$1_0/a_4560_n40#" -1.77636e-15
+cap "lower_NMOS_0/nfet$1_0/a_4560_n40#" "res_poly_5/a_n35_n632#" 1.25217
+cap "res_poly_7/a_n35_n632#" "lower_NMOS_0/nfet$1_0/a_4560_n40#" 2.81082
+cap "lower_NMOS_0/nfet$1_0/a_4560_n40#" "res_poly_4/a_n35_196#" 10.2185
+cap "lower_NMOS_0/nfet$1_0/a_4560_n40#" "res_poly_6/a_n35_196#" 9.57446
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "res_poly_3/a_n35_n632#" 0.00803148
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "dif_pair_0/VIN+" 0.365974
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "res_poly_0/a_n35_n632#" 0.373078
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "dif_pair_0/IC" 18.2954
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "lower_NMOS_0/nfet$1_1/a_7160_0#" -0.0816015
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "lower_NMOS_0/IE" -1.77636e-15
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "dif_pair_0/VIN-" 0.239354
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "res_poly_2/a_n35_196#" 15.567
+cap "dif_pair_0/IC" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 25.8461
+cap "res_poly_2/a_n35_196#" "vias_gen$2_9/m1_0_0#" 9.96761
+cap "res_poly_2/a_n35_196#" "vias_gen$2_10/m1_0_0#" 1.34993
+cap "dif_pair_0/VIN+" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 0.166741
+cap "res_poly_2/a_n35_196#" "dif_pair_0/pfet$2_1/a_1400_0#" 0.0217695
+cap "dif_pair_0/VIN-" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 7.73551
+cap "dif_pair_0/pfet$2_1/a_1160_0#" "res_poly_2/a_n35_196#" 0.0217695
+cap "dif_pair_0/pfet$2_0/a_0_0#" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 8.83677
+cap "dif_pair_0/IC" "res_poly_2/a_n35_196#" 31.7449
+cap "res_poly_2/a_n35_196#" "dif_pair_0/pfet$2_1/a_1640_0#" 0.0217695
+cap "dif_pair_0/VIN+" "res_poly_2/a_n35_196#" 16.3007
+cap "res_poly_2/a_n35_196#" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 4.54747e-13
+cap "dif_pair_0/VIN-" "res_poly_2/a_n35_196#" 0.411984
+cap "lower_NMOS_0/nfet$1_1/a_7260_n40#" "vias_gen$2_10/m1_0_0#" 2.19262
+cap "lower_NMOS_0/nfet$1_1/a_7260_n40#" "dif_pair_0/pfet$2_1/a_2120_0#" 0.0217695
+cap "lower_NMOS_0/nfet$1_1/a_7260_n40#" "dif_pair_0/pfet$2_1/a_2360_0#" 0.0713578
+cap "dif_pair_0/pfet$2_1/a_1880_0#" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 0.0217695
+cap "dif_pair_0/pfet$2_0/a_2220_n40#" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 4.4441
+cap "vias_gen$2_10/m1_0_0#" "nmos_2_stage_0/VSS" 5.62454
+cap "dif_pair_0/pfet$2_1/a_440_0#" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 0.0217695
+cap "dif_pair_0/VIN-" "nmos_2_stage_0/VSS" 0.0449326
+cap "dif_pair_0/VIN+" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 3.23167
+cap "dif_pair_0/pfet$2_1/a_200_0#" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 0.0217695
+cap "dif_pair_0/pfet$2_1/a_920_0#" "nmos_2_stage_0/VSS" 0.0152482
+cap "vias_gen$2_10/m1_0_0#" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 7.01995
+cap "dif_pair_0/VIN-" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 11.92
+cap "dif_pair_0/w_n5073_5028#" "nmos_2_stage_0/VSS" 14.4892
+cap "dif_pair_0/w_n5073_5028#" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 35.1409
+cap "nmos_2_stage_0/II" "nmos_2_stage_0/VSS" 8.73803
+cap "dif_pair_0/pfet$2_1/a_680_0#" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 0.0217695
+cap "lower_NMOS_0/nfet$1_1/a_9060_n40#" "nmos_2_stage_0/VSS" 0.000952332
+cap "dif_pair_0/VIN+" "nmos_2_stage_0/VSS" 2.13975
+cap "nmos_2_stage_0/II" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 3.59502
+cap "nmos_2_stage_0/VSS" "nmos_2_stage_0/ID" 38.1206
+cap "nmos_2_stage_0/VSS" "lower_NMOS_0/nfet$1_1/a_10860_n40#" 0.0370799
+cap "nmos_2_stage_0/ID" "nmos_2_stage_0/II" 6.19512
+cap "nmos_2_stage_0/II" "lower_NMOS_0/nfet$1_1/a_10860_n40#" 4.08294
+cap "nmos_2_stage_0/VSS" "active_load_0/nfet$3_1/a_460_0#" 0.647249
+cap "active_load_0/nfet$3_1/a_460_0#" "nmos_2_stage_0/II" 4.08662
+cap "nmos_2_stage_0/VSS" "nmos_2_stage_0/II" 96.119
+cap "active_load_0/nfet$3_1/a_460_0#" "nfet$6_0/a_600_n40#" 2.36739
+cap "nfet$6_0/a_600_n40#" "nmos_2_stage_0/II" 74.5577
+cap "nmos_2_stage_0/ID" "nfet$6_0/a_600_n40#" 3.28814
+cap "active_load_0/nfet$3_1/a_1460_0#" "nmos_2_stage_0/II" 1.21268
+cap "active_load_0/nfet$3_1/a_460_0#" "nmos_2_stage_0/II" 12.753
+cap "nmos_2_stage_0/ID" "active_load_0/nfet$3_1/a_460_0#" 3.95822
+cap "nmos_2_stage_0/ID" "nmos_2_stage_0/II" 3.17692
+cap "nmos_2_stage_0/VSS" "nfet$6_0/a_500_0#" 4.38484
+cap "nmos_2_stage_0/VSS" "nfet$6_0/a_600_n40#" 13.7053
+cap "nmos_2_stage_0/VSS" "active_load_0/nfet$3_1/a_460_0#" 3.35727
+cap "nmos_2_stage_0/ID" "active_load_0/nfet$3_0/a_1060_n40#" 0.0235878
+cap "nmos_2_stage_0/VSS" "nmos_2_stage_0/II" 132.684
+cap "nmos_2_stage_0/ID" "nmos_2_stage_0/VSS" 12.4991
+cap "nmos_2_stage_0/II" "nfet$6_0/a_500_0#" 0.309302
+cap "vias_gen$22_0/m1_0_0#" "nfet$6_0/a_500_0#" 18.8794
+cap "nfet$6_0/a_500_0#" "nmos_2_stage_0/II" 19.0748
+cap "nfet$6_0/a_600_n40#" "nfet$6_0/a_500_0#" 75.8011
+cap "capacitor_0/mim_cap_1/c1_0_0#" "nmos_2_stage_0/II" 9.12915
+cap "nfet$6_0/a_600_n40#" "capacitor_0/mim_cap_1/c1_0_0#" 36.6442
+cap "vias_gen$22_0/m1_0_0#" "nmos_2_stage_0/II" 37.3933
+cap "nfet$6_0/a_600_n40#" "vias_gen$22_0/m1_0_0#" 94.4312
+cap "nfet$6_0/a_600_n40#" "nmos_2_stage_0/II" 444.816
+cap "nfet$6_0/a_600_n40#" "nmos_2_stage_0/ID" 3.26844
+cap "nfet$6_0/a_500_0#" "nmos_2_stage_0/VSS" 618.654
+cap "nmos_2_stage_0/VSS" "capacitor_0/mim_cap_1/c1_0_0#" 4.84421
+cap "nmos_2_stage_0/VSS" "nmos_2_stage_0/II" 101.359
+cap "vias_gen$22_0/m1_0_0#" "nmos_2_stage_0/VSS" 15.6056
+cap "active_load_0/nfet$3_1/a_560_n40#" "nmos_2_stage_0/II" 1.14422
+cap "nfet$6_0/a_600_n40#" "nmos_2_stage_0/VSS" 159.822
+cap "nfet$6_0/a_600_n40#" "active_load_0/nfet$3_1/a_560_n40#" 3.38874
+cap "nfet$6_0/a_500_0#" "capacitor_0/mim_cap_1/c1_0_0#" 3.00677
+cap "lower_NMOS_0/VSS" "capacitor_0/m4_n1174_1757#" 785.986
+cap "lower_NMOS_0/VSS" "capacitor_0/mim_cap_1/c1_0_0#" 35.7981
+cap "capacitor_0/mim_cap_1/c1_0_0#" "capacitor_0/m4_n1174_1757#" 10.1014
+cap "capacitor_0/mim_cap_3/c1_0_0#" "lower_NMOS_0/VSS" 23.6512
+cap "capacitor_0/m4_n1174_1757#" "lower_NMOS_0/VSS" 385.975
+cap "capacitor_0/m4_n1174_1757#" "lower_NMOS_0/VSS" 48.3483
+cap "lower_NMOS_0/VSS" "capacitor_0/mim_cap_3/c1_0_0#" 21.0884
+cap "VSS" "Pmos_current_mirror_0/IB" 27.9447
+cap "lower_NMOS_0/IE" "VSS" 18.2257
+cap "lower_NMOS_0/IE" "Pmos_current_mirror_0/IB" 0.0940017
+cap "lower_NMOS_0/IE" "Pmos_current_mirror_0/IA" 0.181203
+cap "Pmos_current_mirror_0/w_n4906_n858#" "lower_NMOS_0/IE" 0.546728
+cap "lower_NMOS_0/IE" "VSS" 115.29
+cap "Pmos_current_mirror_0/IA" "VSS" 1.19402
+cap "lower_NMOS_0/IE" "Pmos_current_mirror_0/IB" 4.05381
+cap "Pmos_current_mirror_0/IB" "VSS" 6.947
+cap "lower_NMOS_0/IE" "Pmos_current_mirror_0/pfet$1_0/a_960_0#" 0.370203
+cap "lower_NMOS_0/IE" "lower_NMOS_0/IG" 44.9268
+cap "lower_NMOS_0/IE" "lower_NMOS_0/vias_gen$9_0/a_0_0#" 29.9469
+cap "Pmos_current_mirror_0/IB" "lower_NMOS_0/vias_gen$9_0/a_0_0#" 7.7033
+cap "Upper_Nmos_0/IA" "lower_NMOS_0/vias_gen$9_0/a_0_0#" 0.122286
+cap "lower_NMOS_0/IE" "lower_NMOS_0/IF" 244.003
+cap "Upper_Nmos_0/nfet_0/a_2460_0#" "lower_NMOS_0/IF" 0.0851482
+cap "Pmos_current_mirror_0/IB" "lower_NMOS_0/IF" 12.266
+cap "Upper_Nmos_0/IA" "lower_NMOS_0/IF" 0.0988067
+cap "lower_NMOS_0/IG" "lower_NMOS_0/vias_gen$9_0/a_0_0#" 11.0211
+cap "lower_NMOS_0/IE" "Pmos_current_mirror_0/IB" 5.62563
+cap "lower_NMOS_0/IE" "Upper_Nmos_0/IA" 1.2026
+cap "Upper_Nmos_0/nfet_0/a_2460_0#" "Upper_Nmos_0/IA" 1.59519
+cap "lower_NMOS_0/IG" "lower_NMOS_0/IF" -1.03657
+cap "lower_NMOS_0/vias_gen$9_0/a_0_0#" "lower_NMOS_0/IF" 21.3024
+cap "lower_NMOS_0/nfet$1_1/a_2760_n40#" "lower_NMOS_0/IE" -2.32764
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.136329
+cap "lower_NMOS_0/IF" "lower_NMOS_0/IE" 51.9552
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "lower_NMOS_0/IE" 51.3191
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "lower_NMOS_0/nfet$1_0/a_2760_n40#" 21.5797
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/nfet_1/a_2060_n40#" 49.2508
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "lower_NMOS_0/IE" 3.37851
+cap "Upper_Nmos_0/nfet_1/a_2060_n40#" "lower_NMOS_0/IF" 6.96984
+cap "Upper_Nmos_0/nfet_1/a_2060_n40#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 1.2441
+cap "lower_NMOS_0/IE" "Upper_Nmos_0/IA" 0.0630355
+cap "lower_NMOS_0/IE" "Pmos_current_mirror_0/w_n4906_n858#" 0.546728
+cap "Pmos_current_mirror_0/pfet$1_0/a_3960_0#" "lower_NMOS_0/IE" 0.370203
+cap "Upper_Nmos_0/nfet_1/a_2060_n40#" "lower_NMOS_0/nfet$1_0/a_2760_n40#" 11.4643
+cap "Upper_Nmos_0/nfet_1/a_2060_n40#" "lower_NMOS_0/IE" 1.22399
+cap "lower_NMOS_0/IG" "lower_NMOS_0/IF" -3.69085
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 133.551
+cap "Pmos_current_mirror_0/IC" "lower_NMOS_0/IE" 0.0370721
+cap "lower_NMOS_0/IG" "lower_NMOS_0/IE" 190.648
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "lower_NMOS_0/nfet$1_1/a_2760_n40#" 0.00250069
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "lower_NMOS_0/IF" 60.6074
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "lower_NMOS_0/IG" 5.97726
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 597.515
+cap "res_poly_8/a_n35_196#" "lower_NMOS_0/IE" 0.28234
+cap "res_poly_6/a_n35_196#" "lower_NMOS_0/IG" 0.0197185
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 10.7037
+cap "lower_NMOS_0/IG" "res_poly_8/a_n35_n632#" 1.86206
+cap "lower_NMOS_0/nfet$1_1/a_4460_0#" "res_poly_8/a_n35_196#" 3.80606
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/nfet_1/a_4060_n40#" 0.0683367
+cap "res_poly_4/a_n35_196#" "lower_NMOS_0/IG" 0.00756594
+cap "res_poly_6/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" -0.645776
+cap "res_poly_8/a_n35_n632#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.554884
+cap "Pmos_current_mirror_0/ID" "res_poly_8/a_n35_196#" 1.48692
+cap "lower_NMOS_0/IE" "lower_NMOS_0/IG" 1.97348
+cap "lower_NMOS_0/nfet$1_1/a_4460_0#" "lower_NMOS_0/IG" 1.72777
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/nfet_1/a_4060_n40#" 23.0057
+cap "res_poly_8/a_n35_196#" "lower_NMOS_0/IG" 187.99
+cap "lower_NMOS_0/IE" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 43.4534
+cap "lower_NMOS_0/nfet$1_0/a_2760_n40#" "res_poly_8/a_n35_196#" 3.02364
+cap "lower_NMOS_0/nfet$1_1/a_4460_0#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 55.4131
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" -15.1538
+cap "Upper_Nmos_0/nfet_1/a_4060_n40#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.201208
+cap "res_poly_8/a_n35_196#" "Pmos_current_mirror_0/IC" 0.000817968
+cap "Pmos_current_mirror_0/pfet$1_0/a_3560_n40#" "res_poly_8/a_n35_196#" 0.00326499
+cap "lower_NMOS_0/nfet$1_1/a_4460_0#" "res_poly_8/a_n35_n632#" 1.86964
+cap "res_poly_8/a_n35_196#" "res_poly_8/a_n35_n632#" -2.18155
+cap "res_poly_8/a_n35_196#" "Pmos_current_mirror_0/w_n4906_n858#" 0.00884013
+cap "res_poly_6/a_n35_196#" "Pmos_current_mirror_0/w_n4906_n858#" 1.02756
+cap "res_poly_2/a_n35_n632#" "res_poly_4/a_n35_196#" -2.18155
+cap "res_poly_4/a_n35_196#" "res_poly_5/a_n35_n632#" -2.18155
+cap "lower_NMOS_0/IG" "res_poly_6/a_n35_196#" 17.8408
+cap "res_poly_8/a_n35_196#" "res_poly_7/a_n35_n632#" -2.18155
+cap "lower_NMOS_0/nfet$1_0/a_4560_n40#" "res_poly_6/a_n35_196#" 8.64761
+cap "res_poly_4/a_n35_196#" "Pmos_current_mirror_0/w_n4906_n858#" 0.337738
+cap "lower_NMOS_0/nfet$1_0/a_4560_n40#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 1.86775
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 90.8287
+cap "res_poly_4/a_n35_196#" "lower_NMOS_0/IG" 16.3627
+cap "dif_pair_0/IC" "res_poly_6/a_n35_196#" 0.0834328
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/IB" 22.9961
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "res_poly_6/a_n35_196#" 1.09925
+cap "res_poly_4/a_n35_196#" "lower_NMOS_0/nfet$1_0/a_4560_n40#" 9.19186
+cap "res_poly_4/a_n35_196#" "dif_pair_0/IC" 0.0372176
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "res_poly_4/a_n35_196#" 1.14671
+cap "res_poly_6/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 43.5684
+cap "res_poly_4/a_n35_196#" "res_poly_6/a_n35_196#" 107.842
+cap "Upper_Nmos_0/IB" "res_poly_6/a_n35_196#" 0.176464
+cap "res_poly_8/a_n35_196#" "lower_NMOS_0/IG" 9.29117
+cap "res_poly_8/a_n35_196#" "Pmos_current_mirror_0/w_n4906_n858#" 0.275494
+cap "res_poly_4/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 207.949
+cap "res_poly_8/a_n35_196#" "lower_NMOS_0/nfet$1_0/a_4560_n40#" 5.29137
+cap "Upper_Nmos_0/IB" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.343352
+cap "res_poly_4/a_n35_196#" "Upper_Nmos_0/IB" 0.176464
+cap "Pmos_current_mirror_0/ID" "res_poly_6/a_n35_196#" 0.0972164
+cap "res_poly_8/a_n35_196#" "dif_pair_0/IC" 0.0302648
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "res_poly_8/a_n35_196#" 0.908774
+cap "res_poly_4/a_n35_196#" "Pmos_current_mirror_0/ID" 2.22407
+cap "lower_NMOS_0/nfet$1_1/a_6260_0#" "res_poly_6/a_n35_196#" 1.28721
+cap "lower_NMOS_0/nfet$1_1/a_6260_0#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 15.2312
+cap "res_poly_8/a_n35_196#" "res_poly_6/a_n35_196#" 107.842
+cap "res_poly_4/a_n35_196#" "lower_NMOS_0/nfet$1_1/a_6260_0#" 1.36823
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 23.841
+cap "res_poly_7/a_n35_n632#" "lower_NMOS_0/IG" 1.43391
+cap "lower_NMOS_0/IE" "res_poly_6/a_n35_196#" 0.807491
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/IB" 0.108128
+cap "lower_NMOS_0/IE" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 10.6336
+cap "Pmos_current_mirror_0/ID" "res_poly_8/a_n35_196#" 1.01948
+cap "res_poly_2/a_n35_n632#" "lower_NMOS_0/IG" 1.14578
+cap "res_poly_4/a_n35_196#" "lower_NMOS_0/IE" 0.858312
+cap "res_poly_5/a_n35_n632#" "lower_NMOS_0/IG" 3.25282
+cap "res_poly_7/a_n35_n632#" "res_poly_6/a_n35_196#" -2.18155
+cap "lower_NMOS_0/nfet$1_1/a_6260_0#" "res_poly_8/a_n35_196#" 0.787631
+cap "res_poly_7/a_n35_n632#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.554884
+cap "dif_pair_0/IC" "lower_NMOS_0/IG" 0.00288135
+cap "res_poly_8/a_n35_196#" "lower_NMOS_0/IE" 0.494094
+cap "res_poly_2/a_n35_n632#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 1.28595
+cap "res_poly_5/a_n35_n632#" "res_poly_6/a_n35_196#" -2.18155
+cap "res_poly_5/a_n35_n632#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.554884
+cap "res_poly_4/a_n35_196#" "vias_gen$24_0/a_0_0#" -16.5986
+cap "dif_pair_0/IC" "dif_pair_0/VIN-" 73.1843
+cap "dif_pair_0/VIN+" "dif_pair_0/IC" 154.623
+cap "lower_NMOS_0/IE" "dif_pair_0/IC" 3.37118
+cap "lower_NMOS_0/nfet$1_1/a_7160_0#" "dif_pair_0/IC" 69.0341
+cap "lower_NMOS_0/nfet$1_1/a_7160_0#" "res_poly_2/a_n35_n632#" 0.288137
+cap "Upper_Nmos_0/IB" "dif_pair_0/IC" 0.000613751
+cap "vias_gen$24_0/a_0_0#" "lower_NMOS_0/IE" 5.35268
+cap "lower_NMOS_0/nfet$1_1/a_7160_0#" "vias_gen$24_0/a_0_0#" 69.185
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/VIN+" 3.71543
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/VIN-" 2.07858
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "dif_pair_0/IC" 0.507772
+cap "lower_NMOS_0/nfet$1_1/a_6260_0#" "dif_pair_0/IC" 39.8765
+cap "vias_gen$24_0/a_0_0#" "Upper_Nmos_0/IB" 0.135141
+cap "lower_NMOS_0/nfet$1_0/a_6360_n40#" "vias_gen$24_0/a_0_0#" 11.5934
+cap "lower_NMOS_0/nfet$1_1/a_6260_0#" "vias_gen$24_0/a_0_0#" 17.4268
+cap "lower_NMOS_0/nfet$1_1/a_7160_0#" "dif_pair_0/VIN+" 30.0624
+cap "lower_NMOS_0/nfet$1_1/a_7160_0#" "dif_pair_0/VIN-" 0.00740992
+cap "dif_pair_0/pfet$2_0/a_0_0#" "dif_pair_0/IC" 4.61962
+cap "lower_NMOS_0/nfet$1_1/a_7160_0#" "Upper_Nmos_0/IB" 11.498
+cap "dif_pair_0/VIN+" "Upper_Nmos_0/IB" 0.0020625
+cap "lower_NMOS_0/nfet$1_1/a_6260_0#" "dif_pair_0/VIN+" 14.7094
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/pfet$2_0/a_0_0#" 9.46027
+cap "lower_NMOS_0/nfet$1_1/a_6260_0#" "Upper_Nmos_0/IB" 0.00432518
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "dif_pair_0/IC" 9.65779
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/IC" 118.027
+cap "res_poly_4/a_n35_196#" "dif_pair_0/IC" 0.0116244
+cap "Pmos_current_mirror_0/pfet$1_0/a_6460_0#" "dif_pair_0/IC" 0.000565611
+cap "vias_gen$24_0/a_0_0#" "res_poly_2/a_n35_n632#" -1.07111
+cap "dif_pair_0/pfet$2_0/a_920_0#" "lower_NMOS_0/nfet$1_1/a_7160_0#" 1.82626
+cap "dif_pair_0/IC" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 34.7517
+cap "dif_pair_0/IC" "dif_pair_0/VIN+" 24.4649
+cap "dif_pair_0/pfet$2_0/a_0_0#" "lower_NMOS_0/nfet$1_1/a_8060_0#" 14.0163
+cap "dif_pair_0/IC" "dif_pair_0/pfet$2_1/a_2360_0#" 6.7996
+cap "dif_pair_0/pfet$2_0/a_0_0#" "dif_pair_0/VIN-" 6.29871
+cap "dif_pair_0/IC" "lower_NMOS_0/nfet$1_1/a_8960_0#" 0.176
+cap "lower_NMOS_0/nfet$1_1/a_8060_0#" "dif_pair_0/IH" 60.8022
+cap "Pmos_current_mirror_0/pfet$1_0/a_9960_0#" "dif_pair_0/VIN+" 0.385164
+cap "dif_pair_0/VIN-" "dif_pair_0/IH" 0.240027
+cap "lower_NMOS_0/nfet$1_1/a_8060_0#" "dif_pair_0/VIN-" 15.6321
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/II" 11.5542
+cap "dif_pair_0/II" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 122.064
+cap "dif_pair_0/II" "dif_pair_0/VIN+" -8.09274
+cap "dif_pair_0/VIN-" "Upper_Nmos_0/IB" -1.93674
+cap "Pmos_current_mirror_0/ID" "dif_pair_0/VIN+" 0.173262
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 2.84901
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/VIN+" 12.5108
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 0.794774
+cap "Pmos_current_mirror_0/ID" "dif_pair_0/pfet$2_1/a_2360_0#" 1.89595
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/pfet$2_1/a_2360_0#" 0.07916
+cap "lower_NMOS_0/nfet$1_1/a_8960_0#" "dif_pair_0/II" 1.82626
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/VIN+" 1.39252
+cap "dif_pair_0/VIN+" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 1.96489
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/pfet$2_1/a_2360_0#" 0.312153
+cap "dif_pair_0/IC" "dif_pair_0/pfet$2_0/a_0_0#" 3.17807
+cap "dif_pair_0/IC" "lower_NMOS_0/nfet$1_1/a_8060_0#" 62.5663
+cap "dif_pair_0/IC" "dif_pair_0/IH" -1.98952e-13
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "dif_pair_0/VIN+" 5.75643
+cap "dif_pair_0/IC" "dif_pair_0/VIN-" 35.3948
+cap "dif_pair_0/VIN-" "dif_pair_0/II" 10.484
+cap "dif_pair_0/IH" "dif_pair_0/II" -6.21725e-15
+cap "dif_pair_0/pfet$2_0/a_0_0#" "vias_gen$24_0/a_0_0#" 10.5459
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/IH" 0.275584
+cap "dif_pair_0/VIN-" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 4.27301
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/VIN-" 1.59003
+cap "Pmos_current_mirror_0/ID" "dif_pair_0/VIN-" 1.15985
+cap "lower_NMOS_0/nfet$1_1/a_8060_0#" "dif_pair_0/VIN+" 28.8256
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/VIN-" 1.3392
+cap "dif_pair_0/pfet$2_0/a_0_0#" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 6.74164
+cap "dif_pair_0/pfet$2_0/a_0_0#" "dif_pair_0/VIN+" 53.6837
+cap "dif_pair_0/IH" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 51.7636
+cap "dif_pair_0/IH" "dif_pair_0/VIN+" 1.32672e-14
+cap "dif_pair_0/VIN-" "lower_NMOS_0/nfet$1_1/a_7260_n40#" 6.32019
+cap "dif_pair_0/VIN-" "dif_pair_0/VIN+" 215.964
+cap "dif_pair_0/VIN-" "dif_pair_0/pfet$2_1/a_2360_0#" 49.2861
+cap "dif_pair_0/VIN+" "Upper_Nmos_0/IB" 0.19544
+cap "dif_pair_0/IC" "dif_pair_0/II" -0.0395186
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "Upper_Nmos_0/IB" 0.116376
+cap "dif_pair_0/IC" "vias_gen$24_0/a_0_0#" 162.371
+cap "dif_pair_0/VIN+" "nmos_2_stage_0/ID" 0.283972
+cap "dif_pair_0/IH" "dif_pair_0/VIN+" 0.0149616
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" 2.20171
+cap "dif_pair_0/II" "nmos_2_stage_0/VSS" 39.7896
+cap "m2_2923_n1661#" "dif_pair_0/VIN-" 0.134143
+cap "dif_pair_0/VIN+" "dif_pair_0/II" -2.84217e-14
+cap "dif_pair_0/VIN+" "nmos_2_stage_0/VSS" 3.22531
+cap "lower_NMOS_0/nfet$1_1/a_9060_n40#" "dif_pair_0/pfet$2_0/a_2220_n40#" 12.6161
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "m2_2923_n1661#" 0.117264
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" 3.7579
+cap "nmos_2_stage_0/ID" "dif_pair_0/pfet$2_0/a_2220_n40#" 0.412028
+cap "dif_pair_0/IH" "dif_pair_0/pfet$2_0/a_2220_n40#" 0.0262651
+cap "dif_pair_0/VIN-" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 0.097922
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/VIN-" 0.851456
+cap "dif_pair_0/II" "dif_pair_0/pfet$2_0/a_2220_n40#" 1.66533e-16
+cap "dif_pair_0/w_n5073_5028#" "dif_pair_0/VIN-" -2.27374e-13
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 0.0843037
+cap "dif_pair_0/VIN+" "m2_2923_n1661#" 0.194552
+cap "nmos_2_stage_0/VSS" "dif_pair_0/pfet$2_0/a_2220_n40#" 1.13069
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "Pmos_current_mirror_0/w_n4906_n858#" 0.69616
+cap "lower_NMOS_0/nfet$1_1/a_9060_n40#" "dif_pair_0/w_n5073_5028#" 27.4033
+cap "nmos_2_stage_0/ID" "dif_pair_0/w_n5073_5028#" 7.76778
+cap "lower_NMOS_0/nfet$1_1/a_9060_n40#" "dif_pair_0/VIN-" 9.36278
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "dif_pair_0/w_n5073_5028#" 2.84217e-14
+cap "dif_pair_0/IH" "dif_pair_0/w_n5073_5028#" -6.14082
+cap "nmos_2_stage_0/ID" "dif_pair_0/VIN-" 0.18616
+cap "dif_pair_0/IH" "dif_pair_0/VIN-" 3.55271e-14
+cap "dif_pair_0/IH" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 5.04444
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 0.142019
+cap "dif_pair_0/II" "dif_pair_0/w_n5073_5028#" 5.33732
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/w_n4906_n858#" 1.17115
+cap "dif_pair_0/w_n5073_5028#" "nmos_2_stage_0/VSS" 165.871
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "nmos_2_stage_0/ID" 0.450908
+cap "dif_pair_0/IH" "nmos_2_stage_0/ID" 2.89803
+cap "dif_pair_0/IH" "dif_pair_0/pfet$2_1/a_60_n40#" 0.019355
+cap "Pmos_current_mirror_0/pfet$1_0/a_10960_0#" "dif_pair_0/VIN-" 0.018396
+cap "nmos_2_stage_0/VSS" "dif_pair_0/VIN-" 1.48421
+cap "dif_pair_0/VIN+" "dif_pair_0/w_n5073_5028#" -1.13687e-13
+cap "lower_NMOS_0/nfet$1_1/a_9060_n40#" "dif_pair_0/II" 296.976
+cap "lower_NMOS_0/nfet$1_1/a_9060_n40#" "nmos_2_stage_0/VSS" 2.45312
+cap "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" "dif_pair_0/VIN-" 2.27779
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "dif_pair_0/II" 1.11022e-16
+cap "dif_pair_0/IH" "dif_pair_0/II" -1.00826
+cap "dif_pair_0/VIN+" "lower_NMOS_0/nfet$1_1/a_9060_n40#" 3.00772
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "nmos_2_stage_0/VSS" 0.586397
+cap "dif_pair_0/IH" "nmos_2_stage_0/VSS" 6.22151
+cap "dif_pair_0/II" "nmos_2_stage_0/VSS" 130.784
+cap "dif_pair_0/w_n5073_5028#" "dif_pair_0/II" -4.39276
+cap "dif_pair_0/pfet$2_1/a_1020_n40#" "nmos_2_stage_0/VSS" 0.0240352
+cap "dif_pair_0/w_n5073_5028#" "nmos_2_stage_0/VSS" 42.2993
+cap "nmos_2_stage_0/ID" "dif_pair_0/II" 499.412
+cap "nmos_2_stage_0/ID" "nmos_2_stage_0/VSS" 590.489
+cap "m2_2923_n1661#" "nmos_2_stage_0/VSS" -0.195552
+cap "dif_pair_0/pfet$2_1/a_60_n40#" "nmos_2_stage_0/VSS" 0.3932
+cap "m2_2923_n1661#" "nmos_2_stage_0/ID" -0.202259
+cap "nmos_2_stage_0/VSS" "dif_pair_0/pfet$2_0/a_2220_n40#" 0.0592186
+cap "lower_NMOS_0/nfet$1_1/a_10860_n40#" "dif_pair_0/II" 1.21032
+cap "lower_NMOS_0/nfet$1_1/a_10860_n40#" "nmos_2_stage_0/VSS" 0.882065
+cap "dif_pair_0/pfet$2_0/a_1260_n40#" "nmos_2_stage_0/VSS" 0.169484
+cap "dif_pair_0/II" "dif_pair_0/IH" 0.767676
+cap "nmos_2_stage_0/VSS" "dif_pair_0/IH" 4.59163
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "nmos_2_stage_0/VSS" 0.620911
+cap "nmos_2_stage_0/ID" "dif_pair_0/IH" 51.8869
+cap "dif_pair_0/II" "dif_pair_0/IH" 4.26724
+cap "dif_pair_0/II" "nmos_2_stage_0/VSS" 0.254969
+cap "dif_pair_0/IH" "nmos_2_stage_0/ID" 27.3437
+cap "nmos_2_stage_0/ID" "nmos_2_stage_0/VSS" 100.639
+cap "dif_pair_0/IH" "nmos_2_stage_0/VSS" 3.7987
+cap "nmos_2_stage_0/VSS" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 0.868035
+cap "Pmos_current_mirror_0/w_n4906_n858#" "nmos_2_stage_0/VSS" 0.0479498
+cap "nfet$6_0/a_600_n40#" "nmos_2_stage_0/ID" -0.0579444
+cap "nfet$6_0/a_600_n40#" "dif_pair_0/IH" 1.20653
+cap "nfet$6_0/a_600_n40#" "nmos_2_stage_0/VSS" 0.0372486
+cap "dif_pair_0/II" "nmos_2_stage_0/ID" 1.25401
+cap "nmos_2_stage_0/VSS" "nfet$6_0/a_500_0#" 0.0413218
+cap "active_load_0/nfet$3_1/a_560_n40#" "nmos_2_stage_0/VSS" 0.0236784
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "nmos_2_stage_0/VSS" 62.5211
+cap "nfet$6_0/a_600_n40#" "nmos_2_stage_0/VSS" 114.662
+cap "vias_gen$22_0/m1_0_0#" "nmos_2_stage_0/VSS" 102.238
+cap "active_load_0/II" "nmos_2_stage_0/VSS" -1.38778e-17
+cap "active_load_0/nfet$3_1/a_560_n40#" "nmos_2_stage_0/II" 0.0185924
+cap "Pmos_current_mirror_0/w_n4906_n858#" "nmos_2_stage_0/VSS" 0.0290646
+cap "nmos_2_stage_0/II" "nmos_2_stage_0/VSS" 0.0765082
+cap "active_load_0/nfet$3_1/a_560_n40#" "nfet$6_0/a_600_n40#" 15.6088
+cap "active_load_0/nfet$3_1/a_560_n40#" "capacitor_0/vias_gen$22_1/m1_0_0#" 8.92148
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "nfet$6_0/a_600_n40#" 23.1278
+cap "active_load_0/nfet$3_1/a_560_n40#" "vias_gen$22_0/m1_0_0#" 14.4555
+cap "vias_gen$22_0/m1_0_0#" "nfet$6_0/a_600_n40#" 59.4178
+cap "Pmos_current_mirror_0/IA" "Pmos_current_mirror_0/w_n4906_n858#" 16.0708
+cap "Upper_Nmos_0/VSS" "Pmos_current_mirror_0/IB" 1.50683
+cap "Pmos_current_mirror_0/IA" "Pmos_current_mirror_0/IB" 61.3031
+cap "Pmos_current_mirror_0/IB" "Pmos_current_mirror_0/w_n4906_n858#" 6.06531
+cap "Upper_Nmos_0/VSS" "Pmos_current_mirror_0/IA" 2.93091
+cap "Upper_Nmos_0/VSS" "Pmos_current_mirror_0/w_n4906_n858#" 90.7037
+cap "Pmos_current_mirror_0/IB" "Upper_Nmos_0/VSS" 16.1326
+cap "Pmos_current_mirror_0/IA" "Upper_Nmos_0/VSS" 43.3666
+cap "Pmos_current_mirror_0/w_n4906_n858#" "lower_NMOS_0/IE" 0.370203
+cap "Pmos_current_mirror_0/IB" "Pmos_current_mirror_0/w_n4906_n858#" 9.39721
+cap "Pmos_current_mirror_0/IA" "Pmos_current_mirror_0/w_n4906_n858#" 68.9226
+cap "Pmos_current_mirror_0/IA" "lower_NMOS_0/IE" 0.0303893
+cap "Pmos_current_mirror_0/IB" "Pmos_current_mirror_0/IA" 80.5284
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/VSS" 86.9436
+cap "Upper_Nmos_0/IA" "lower_NMOS_0/IE" 0.00501327
+cap "Pmos_current_mirror_0/w_n4906_n858#" "lower_NMOS_0/IF" 0.0050502
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/nfet_0/a_2460_0#" 0.0244191
+cap "Pmos_current_mirror_0/IB" "Pmos_current_mirror_0/IC" 31.097
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/IA" 51.1357
+cap "Pmos_current_mirror_0/IB" "Upper_Nmos_0/IA" 28.0988
+cap "lower_NMOS_0/vias_gen$9_1/a_0_0#" "Pmos_current_mirror_0/IC" 8.91647
+cap "lower_NMOS_0/vias_gen$9_1/a_0_0#" "Upper_Nmos_0/IA" 32.0278
+cap "Upper_Nmos_0/IA" "lower_NMOS_0/IF" 0.11536
+cap "Upper_Nmos_0/nfet_0/a_2460_0#" "Upper_Nmos_0/IA" 1.99208
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/IB" 47.9091
+cap "Pmos_current_mirror_0/w_n4906_n858#" "lower_NMOS_0/vias_gen$9_1/a_0_0#" 84.1212
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/nfet_1/a_2060_n40#" 17.3784
+cap "Upper_Nmos_0/nfet_1/a_2060_n40#" "res_poly_8/a_n35_n632#" 0.00138658
+cap "Upper_Nmos_0/IA" "Upper_Nmos_0/nfet_1/a_2060_n40#" 23.3871
+cap "Upper_Nmos_0/nfet_1/a_2060_n40#" "Pmos_current_mirror_0/w_n4906_n858#" 10.864
+cap "res_poly_7/a_n35_n632#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.000408684
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "Upper_Nmos_0/nfet_1/a_2060_n40#" 10.6748
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "Pmos_current_mirror_0/IC" 6.72651
+cap "lower_NMOS_0/IE" "Upper_Nmos_0/IA" 0.0303893
+cap "Upper_Nmos_0/IA" "Pmos_current_mirror_0/w_n4906_n858#" 4.54747e-13
+cap "lower_NMOS_0/IE" "Pmos_current_mirror_0/w_n4906_n858#" 0.370203
+cap "Upper_Nmos_0/nfet_1/a_2060_n40#" "Pmos_current_mirror_0/IC" 195.65
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "res_poly_8/a_n35_n632#" 0.176671
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "Upper_Nmos_0/IA" 36.5266
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "Pmos_current_mirror_0/w_n4906_n858#" 88.2287
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "res_poly_7/a_n35_n632#" -0.843842
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.20954
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 137.188
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "Pmos_current_mirror_0/IC" 11.8685
+cap "res_poly_8/a_n35_n632#" "Pmos_current_mirror_0/ID" 2.33669
+cap "Pmos_current_mirror_0/ID" "Upper_Nmos_0/nfet_1/a_4060_n40#" 174.554
+cap "Pmos_current_mirror_0/pfet$1_0/a_3560_n40#" "res_poly_8/a_n35_n632#" 20.8513
+cap "Pmos_current_mirror_0/pfet$1_0/a_3560_n40#" "Upper_Nmos_0/nfet_1/a_4060_n40#" 1.61691
+cap "lower_NMOS_0/vias_gen$7_6/m1_0_0#" "res_poly_8/a_n35_n632#" 1.89446
+cap "Pmos_current_mirror_0/pfet$1_1/a_3560_n40#" "res_poly_8/a_n35_n632#" 0.0698559
+cap "res_poly_8/a_n35_n632#" "Upper_Nmos_0/nfet_1/a_4060_n40#" 149.201
+cap "res_poly_8/a_n35_n632#" "lower_NMOS_0/nfet$1_0/a_2760_n40#" 0.8305
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "res_poly_5/a_n35_n632#" -0.159632
+cap "lower_NMOS_0/IE" "res_poly_8/a_n35_n632#" 0.0212277
+cap "res_poly_7/a_n35_n632#" "res_poly_8/a_n35_n632#" 53.9211
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/nfet_1/a_4060_n40#" 1.08152
+cap "res_poly_8/a_n35_196#" "Pmos_current_mirror_0/ID" 1.48672
+cap "res_poly_8/a_n35_196#" "res_poly_8/a_n35_n632#" -2.18155
+cap "res_poly_8/a_n35_196#" "Pmos_current_mirror_0/pfet$1_0/a_3560_n40#" 0.0286334
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/nfet_1/a_4060_n40#" 1.7058
+cap "Pmos_current_mirror_0/w_n4906_n858#" "res_poly_8/a_n35_n632#" 5.95562
+cap "Pmos_current_mirror_0/IC" "Upper_Nmos_0/nfet_1/a_4060_n40#" 47.2798
+cap "res_poly_8/a_n35_n632#" "Pmos_current_mirror_0/IC" 1.25085
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/nfet_1/a_4060_n40#" 23.7951
+cap "lower_NMOS_0/IG" "res_poly_8/a_n35_n632#" 1.11391
+cap "lower_NMOS_0/IG" "Pmos_current_mirror_0/pfet$1_0/a_3560_n40#" 0.0318377
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "Pmos_current_mirror_0/ID" 64.4763
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "Pmos_current_mirror_0/pfet$1_0/a_3560_n40#" 33.8376
+cap "Pmos_current_mirror_0/pfet$1_1/a_3560_n40#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.0138839
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "Upper_Nmos_0/nfet_1/a_4060_n40#" 302.937
+cap "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "res_poly_8/a_n35_n632#" 169.862
+cap "res_poly_7/a_n35_n632#" "res_poly_8/a_n35_n632#" 53.9211
+cap "lower_NMOS_0/vias_gen$7_10/m1_0_0#" "res_poly_2/a_n35_n632#" 0.069
+cap "res_poly_5/a_n35_n632#" "lower_NMOS_0/vias_gen$7_10/m1_0_0#" 0.0378659
+cap "res_poly_7/a_n35_n632#" "lower_NMOS_0/nfet$1_0/a_4560_n40#" 2.87156
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "Pmos_current_mirror_0/w_n4906_n858#" -2.27374e-13
+cap "res_poly_6/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.558775
+cap "res_poly_7/a_n35_n632#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 43.6717
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/IB" 0.0404683
+cap "res_poly_7/a_n35_n632#" "res_poly_6/a_n35_196#" -2.18155
+cap "dif_pair_0/IC" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 13.3368
+cap "res_poly_7/a_n35_n632#" "dif_pair_0/IC" 1.25085
+cap "Pmos_current_mirror_0/ID" "res_poly_4/a_n35_196#" 2.1807
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.349234
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 8.3071
+cap "res_poly_7/a_n35_n632#" "res_poly_8/a_n35_196#" -2.18155
+cap "Upper_Nmos_0/IB" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 59.5114
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "res_poly_6/a_n35_196#" 1.04503
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "res_poly_7/a_n35_n632#" 20.4753
+cap "lower_NMOS_0/IE" "res_poly_2/a_n35_n632#" 0.0590058
+cap "lower_NMOS_0/IG" "res_poly_2/a_n35_n632#" 0.080874
+cap "lower_NMOS_0/IE" "res_poly_5/a_n35_n632#" 0.0323812
+cap "lower_NMOS_0/IG" "res_poly_5/a_n35_n632#" 2.28167
+cap "res_poly_6/a_n35_196#" "Upper_Nmos_0/IB" 2.47658
+cap "Pmos_current_mirror_0/ID" "res_poly_2/a_n35_n632#" 1.7906
+cap "res_poly_7/a_n35_n632#" "Upper_Nmos_0/IB" 149.201
+cap "res_poly_5/a_n35_n632#" "Pmos_current_mirror_0/ID" 4.14208
+cap "res_poly_5/a_n35_n632#" "res_poly_4/a_n35_196#" -2.18155
+cap "res_poly_2/a_n35_n632#" "res_poly_4/a_n35_196#" -2.18155
+cap "res_poly_7/a_n35_n632#" "lower_NMOS_0/vias_gen$7_10/m1_0_0#" 0.0858293
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "res_poly_8/a_n35_196#" 0.903914
+cap "res_poly_8/a_n35_196#" "Upper_Nmos_0/IB" 1.39506
+cap "res_poly_5/a_n35_n632#" "res_poly_2/a_n35_n632#" 107.842
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "Upper_Nmos_0/IB" 1.43825
+cap "res_poly_5/a_n35_n632#" "Pmos_current_mirror_0/pfet$1_1/a_5060_n40#" 0.0768706
+cap "Pmos_current_mirror_0/w_n4906_n858#" "res_poly_2/a_n35_n632#" 5.01611
+cap "res_poly_5/a_n35_n632#" "Pmos_current_mirror_0/w_n4906_n858#" 5.67374
+cap "lower_NMOS_0/IE" "res_poly_7/a_n35_n632#" 0.0733975
+cap "lower_NMOS_0/IG" "res_poly_7/a_n35_n632#" 0.100599
+cap "res_poly_4/a_n35_196#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.558775
+cap "Pmos_current_mirror_0/ID" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 78.7476
+cap "res_poly_5/a_n35_n632#" "lower_NMOS_0/nfet$1_0/a_4560_n40#" 1.26686
+cap "res_poly_7/a_n35_n632#" "Pmos_current_mirror_0/ID" 2.10171
+cap "res_poly_2/a_n35_n632#" "lower_NMOS_0/nfet$1_0/a_4560_n40#" 2.30851
+cap "res_poly_5/a_n35_n632#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 43.5902
+cap "res_poly_2/a_n35_n632#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 33.7493
+cap "Pmos_current_mirror_0/ID" "res_poly_8/a_n35_196#" 0.984211
+cap "res_poly_5/a_n35_n632#" "res_poly_6/a_n35_196#" -2.18155
+cap "res_poly_5/a_n35_n632#" "res_poly_7/a_n35_n632#" 107.842
+cap "lower_NMOS_0/IG" "Upper_Nmos_0/IB" 22.9961
+cap "dif_pair_0/IC" "res_poly_2/a_n35_n632#" 1.06569
+cap "res_poly_5/a_n35_n632#" "dif_pair_0/IC" 1.18913
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "res_poly_4/a_n35_196#" 1.15813
+cap "res_poly_4/a_n35_196#" "Upper_Nmos_0/IB" 2.47658
+cap "Pmos_current_mirror_0/ID" "Upper_Nmos_0/IB" 235.906
+cap "res_poly_7/a_n35_n632#" "Pmos_current_mirror_0/pfet$1_1/a_5060_n40#" 0.125973
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 158.345
+cap "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" "res_poly_2/a_n35_n632#" 18.1704
+cap "res_poly_5/a_n35_n632#" "Pmos_current_mirror_0/pfet$1_0/a_5060_n40#" 19.8027
+cap "res_poly_5/a_n35_n632#" "Upper_Nmos_0/IB" 149.201
+cap "res_poly_7/a_n35_n632#" "Pmos_current_mirror_0/w_n4906_n858#" 6.02469
+cap "res_poly_2/a_n35_n632#" "Upper_Nmos_0/IB" 121.711
+cap "vias_gen$24_0/a_0_0#" "lower_NMOS_0/nfet$1_0/a_6360_n40#" 0.351907
+cap "Pmos_current_mirror_0/pfet$1_1/a_6060_n40#" "vias_gen$24_0/a_0_0#" 0.0979146
+cap "vias_gen$24_0/a_0_0#" "res_poly_2/a_n35_n632#" 129.502
+cap "dif_pair_0/VIN+" "dif_pair_0/IC" 0.138426
+cap "Pmos_current_mirror_0/pfet$1_1/a_6060_n40#" "res_poly_2/a_n35_n632#" 0.193501
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/w_n4906_n858#" 0.171705
+cap "lower_NMOS_0/vias_gen$7_9/m1_0_0#" "Upper_Nmos_0/IB" 11.498
+cap "dif_pair_0/VIN-" "dif_pair_0/IC" 0.168769
+cap "res_poly_5/a_n35_n632#" "Upper_Nmos_0/IB" -0.082491
+cap "vias_gen$24_0/a_0_0#" "lower_NMOS_0/vias_gen$7_9/m1_0_0#" 0.0123283
+cap "dif_pair_0/IC" "dif_pair_0/pfet$2_1/a_2360_0#" 22.3492
+cap "Upper_Nmos_0/IB" "dif_pair_0/IC" 34.4271
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/VIN-" 0.116823
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/IC" 43.8693
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/pfet$1_0/a_6060_n40#" 0.258376
+cap "Pmos_current_mirror_0/pfet$1_0/a_6460_0#" "Upper_Nmos_0/IB" 434.17
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/IB" 5.03972
+cap "vias_gen$24_0/a_0_0#" "Pmos_current_mirror_0/w_n4906_n858#" 69.0283
+cap "vias_gen$24_0/a_0_0#" "Pmos_current_mirror_0/pfet$1_0/a_6460_0#" 43.1166
+cap "dif_pair_0/IC" "dif_pair_0/pfet$2_1/a_1400_0#" 1.10853
+cap "dif_pair_0/IC" "res_poly_2/a_n35_n632#" 0.214832
+cap "Pmos_current_mirror_0/pfet$1_1/a_6060_n40#" "dif_pair_0/IC" -1.34076
+cap "Pmos_current_mirror_0/pfet$1_0/a_6060_n40#" "dif_pair_0/VIN-" 0.212667
+cap "Pmos_current_mirror_0/pfet$1_0/a_6060_n40#" "Upper_Nmos_0/IB" 3.15377
+cap "Pmos_current_mirror_0/pfet$1_0/a_6460_0#" "res_poly_2/a_n35_n632#" 0.311108
+cap "Pmos_current_mirror_0/w_n4906_n858#" "res_poly_2/a_n35_n632#" 1.33873
+cap "vias_gen$24_0/a_0_0#" "Pmos_current_mirror_0/pfet$1_0/a_6060_n40#" 22.3383
+cap "vias_gen$24_0/a_0_0#" "lower_NMOS_0/IE" 0.00899479
+cap "Pmos_current_mirror_0/pfet$1_0/a_6060_n40#" "res_poly_2/a_n35_n632#" 1.37542
+cap "dif_pair_0/VIN+" "Upper_Nmos_0/IB" 0.0020625
+cap "res_poly_5/a_n35_n632#" "dif_pair_0/IC" 0.00789447
+cap "Pmos_current_mirror_0/pfet$1_0/a_6460_0#" "dif_pair_0/IC" 98.7619
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/IC" 38.503
+cap "Pmos_current_mirror_0/pfet$1_0/a_6460_0#" "Pmos_current_mirror_0/w_n4906_n858#" -1.43504
+cap "vias_gen$24_0/a_0_0#" "Upper_Nmos_0/IB" 214.862
+cap "Upper_Nmos_0/IB" "dif_pair_0/pfet$2_1/a_1880_0#" 0.041806
+cap "vias_gen$24_0/a_0_0#" "lower_NMOS_0/m1_3061_2541#" 0.0105183
+cap "Pmos_current_mirror_0/pfet$1_0/a_6060_n40#" "dif_pair_0/IC" 14.1495
+cap "Pmos_current_mirror_0/pfet$1_0/a_6060_n40#" "Pmos_current_mirror_0/pfet$1_0/a_6460_0#" -0.278904
+cap "Pmos_current_mirror_0/pfet$1_0/a_6060_n40#" "Pmos_current_mirror_0/w_n4906_n858#" 2.27374e-13
+cap "Upper_Nmos_0/IB" "res_poly_2/a_n35_n632#" 27.2671
+cap "Pmos_current_mirror_0/pfet$1_1/a_7560_n40#" "dif_pair_0/pfet$2_1/a_2360_0#" 0.0221551
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "Pmos_current_mirror_0/w_n4906_n858#" 3.42549
+cap "dif_pair_0/VIN-" "dif_pair_0/IC" 1.18584
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/w_n4906_n858#" 2.72092
+cap "res_poly_2/a_n35_n632#" "dif_pair_0/pfet$2_1/a_2360_0#" 0.0317248
+cap "Upper_Nmos_0/IB" "dif_pair_0/IC" 77.8209
+cap "dif_pair_0/IC" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 33.4841
+cap "dif_pair_0/IC" "Pmos_current_mirror_0/ID" 44.3138
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "Upper_Nmos_0/IB" 12.5655
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 5.35272
+cap "Upper_Nmos_0/IB" "dif_pair_0/IH" 185.222
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "Pmos_current_mirror_0/ID" 3.89871
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 12.9405
+cap "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" "dif_pair_0/pfet$2_0/a_0_0#" 0.0229176
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/ID" 0.851255
+cap "Pmos_current_mirror_0/pfet$1_1/a_7560_n40#" "dif_pair_0/II" 0.019966
+cap "dif_pair_0/II" "Pmos_current_mirror_0/w_n4906_n858#" 0.452605
+cap "dif_pair_0/VIN+" "dif_pair_0/II" -2.67857
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/w_n4906_n858#" 5.21666
+cap "Pmos_current_mirror_0/pfet$1_1/a_7560_n40#" "dif_pair_0/VIN+" 0.0166847
+cap "dif_pair_0/VIN-" "dif_pair_0/II" 3.01391
+cap "dif_pair_0/VIN-" "Pmos_current_mirror_0/pfet$1_1/a_7560_n40#" 0.0112143
+cap "dif_pair_0/VIN-" "Pmos_current_mirror_0/w_n4906_n858#" 6.02105
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "vias_gen$24_0/a_0_0#" 0.124891
+cap "dif_pair_0/pfet$2_1/a_2360_0#" "dif_pair_0/IC" 14.805
+cap "Upper_Nmos_0/IB" "dif_pair_0/II" 97.7063
+cap "dif_pair_0/IC" "dif_pair_0/IH" 1.38297
+cap "Upper_Nmos_0/IB" "Pmos_current_mirror_0/w_n4906_n858#" 8.93225
+cap "dif_pair_0/II" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 8.84376
+cap "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" "Pmos_current_mirror_0/w_n4906_n858#" 2.27374e-13
+cap "Pmos_current_mirror_0/ID" "dif_pair_0/II" 0.173683
+cap "dif_pair_0/VIN+" "Upper_Nmos_0/IB" 10.4989
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 9.57669
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/ID" 0.684822
+cap "dif_pair_0/VIN-" "Upper_Nmos_0/IB" -1.09316
+cap "dif_pair_0/VIN-" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 15.4635
+cap "dif_pair_0/VIN-" "Pmos_current_mirror_0/ID" 2.46677
+cap "Upper_Nmos_0/IB" "Pmos_current_mirror_0/pfet$1_0/a_7560_n40#" 3.74501
+cap "Upper_Nmos_0/IB" "Pmos_current_mirror_0/ID" 632.954
+cap "dif_pair_0/IC" "dif_pair_0/II" -0.251105
+cap "dif_pair_0/IC" "Pmos_current_mirror_0/w_n4906_n858#" 112.827
+cap "vias_gen$24_0/a_0_0#" "dif_pair_0/II" 0.113726
+cap "Pmos_current_mirror_0/pfet$1_1/a_7560_n40#" "dif_pair_0/IC" 0.374063
+cap "dif_pair_0/VIN+" "dif_pair_0/IC" 0.79188
+cap "Pmos_current_mirror_0/pfet$1_1/a_9060_n40#" "dif_pair_0/IH" 0.0991452
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/IH" 10.8046
+cap "active_load_0/VSS" "dif_pair_0/pfet$2_1/a_60_n40#" 0.303907
+cap "dif_pair_0/II" "dif_pair_0/IH" 51.5023
+cap "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" "Pmos_current_mirror_0/w_n4906_n858#" 4.54747e-13
+cap "nmos_2_stage_0/ID" "m2_2923_n1661#" 631.792
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "dif_pair_0/pfet$2_1/a_60_n40#" 0.370342
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "dif_pair_0/VIN+" 0.551004
+cap "dif_pair_0/II" "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" 11.8728
+cap "nmos_2_stage_0/ID" "dif_pair_0/w_n5073_5028#" 36.3357
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "Pmos_current_mirror_0/w_n4906_n858#" -2.84217e-14
+cap "dif_pair_0/II" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 0.107337
+cap "m2_2923_n1661#" "dif_pair_0/w_n5073_5028#" 17.0502
+cap "dif_pair_0/VIN-" "nmos_2_stage_0/ID" 0.388881
+cap "nmos_2_stage_0/ID" "dif_pair_0/IH" 11.2299
+cap "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" "nmos_2_stage_0/ID" 2.84217e-14
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/pfet$2_1/a_60_n40#" 2.52186
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/w_n4906_n858#" 3.896
+cap "dif_pair_0/VIN-" "m2_2923_n1661#" 0.436286
+cap "m2_2923_n1661#" "dif_pair_0/IH" 595.074
+cap "dif_pair_0/II" "dif_pair_0/pfet$2_1/a_60_n40#" 3.55271e-15
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/pfet$1_1/a_9060_n40#" 0.00027352
+cap "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" "m2_2923_n1661#" 3.74501
+cap "dif_pair_0/IH" "dif_pair_0/w_n5073_5028#" 0.0112702
+cap "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" "dif_pair_0/w_n5073_5028#" 27.0785
+cap "dif_pair_0/II" "Pmos_current_mirror_0/pfet$1_1/a_9060_n40#" 0.0403621
+cap "dif_pair_0/II" "Pmos_current_mirror_0/w_n4906_n858#" 0.905776
+cap "active_load_0/VSS" "dif_pair_0/w_n5073_5028#" 12.6303
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "dif_pair_0/w_n5073_5028#" 7.23301
+cap "dif_pair_0/VIN-" "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" 6.59978
+cap "nmos_2_stage_0/ID" "dif_pair_0/pfet$2_1/a_60_n40#" 0.744769
+cap "dif_pair_0/VIN+" "nmos_2_stage_0/ID" 0.693332
+cap "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" "dif_pair_0/IH" 14.1045
+cap "nmos_2_stage_0/ID" "Pmos_current_mirror_0/w_n4906_n858#" 2.84217e-14
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "dif_pair_0/VIN-" 0.312892
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "dif_pair_0/IH" 0.321387
+cap "dif_pair_0/II" "nmos_2_stage_0/ID" 0.185261
+cap "m2_2923_n1661#" "dif_pair_0/pfet$2_1/a_60_n40#" 0.580611
+cap "dif_pair_0/VIN+" "m2_2923_n1661#" 0.768303
+cap "m2_2923_n1661#" "Pmos_current_mirror_0/w_n4906_n858#" 8.99238
+cap "dif_pair_0/II" "m2_2923_n1661#" 0.313142
+cap "Pmos_current_mirror_0/pfet$1_1/a_9060_n40#" "dif_pair_0/w_n5073_5028#" 0.278517
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/w_n5073_5028#" 102.207
+cap "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" "dif_pair_0/pfet$2_0/a_2220_n40#" 0.0229176
+cap "dif_pair_0/II" "dif_pair_0/w_n5073_5028#" 1.59916
+cap "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" "dif_pair_0/pfet$2_1/a_60_n40#" 9.74312
+cap "Pmos_current_mirror_0/pfet$1_1/a_9060_n40#" "dif_pair_0/VIN-" 0.00574392
+cap "dif_pair_0/VIN-" "Pmos_current_mirror_0/w_n4906_n858#" 2.44031
+cap "dif_pair_0/VIN+" "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" 12.6187
+cap "nmos_2_stage_0/ID" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 512.452
+cap "dif_pair_0/IH" "nmos_2_stage_0/ID" 93.3409
+cap "active_load_0/VSS" "dif_pair_0/pfet$2_1/a_60_n40#" 0.060893
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/pfet$1_1/a_10560_n40#" 0.142704
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 1.99459
+cap "dif_pair_0/II" "Pmos_current_mirror_0/w_n4906_n858#" 3.33032
+cap "Pmos_current_mirror_0/w_n4906_n858#" "m2_2923_n1661#" 8.33655
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/pfet$1_0/a_10560_n40#" 4.54747e-13
+cap "dif_pair_0/II" "m2_2923_n1661#" -263.212
+cap "Pmos_current_mirror_0/w_n4906_n858#" "active_load_0/VSS" 70.3166
+cap "dif_pair_0/II" "Pmos_current_mirror_0/pfet$1_0/a_10560_n40#" 6.73717
+cap "dif_pair_0/II" "active_load_0/VSS" 139.203
+cap "m2_2923_n1661#" "Pmos_current_mirror_0/pfet$1_0/a_10560_n40#" 3.46498
+cap "active_load_0/VSS" "m2_2923_n1661#" 9.44421
+cap "active_load_0/VSS" "Pmos_current_mirror_0/pfet$1_0/a_10560_n40#" 26.702
+cap "Pmos_current_mirror_0/w_n4906_n858#" "nmos_2_stage_0/ID" 16.8899
+cap "dif_pair_0/II" "nmos_2_stage_0/ID" 217.789
+cap "dif_pair_0/II" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 0.128805
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/w_n4906_n858#" 15.8585
+cap "dif_pair_0/IH" "dif_pair_0/II" 592.241
+cap "nmos_2_stage_0/ID" "Pmos_current_mirror_0/pfet$1_0/a_10560_n40#" 19.4036
+cap "nmos_2_stage_0/ID" "m2_2923_n1661#" 151.722
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "m2_2923_n1661#" 0.298881
+cap "active_load_0/VSS" "nmos_2_stage_0/ID" 142.697
+cap "active_load_0/VSS" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 6.73993
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/pfet$1_0/a_10560_n40#" 27.6995
+cap "dif_pair_0/IH" "m2_2923_n1661#" 588.499
+cap "dif_pair_0/w_n5073_5028#" "active_load_0/VSS" 17.1444
+cap "Pmos_current_mirror_0/pfet$1_1/a_10560_n40#" "active_load_0/VSS" 0.156686
+cap "dif_pair_0/IH" "active_load_0/VSS" -73.2176
+cap "nmos_2_stage_0/ID" "dif_pair_0/II" 0.138946
+cap "active_load_0/VSS" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 8.07539
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/pfet$1_0/a_12060_n40#" 67.8899
+cap "dif_pair_0/IH" "dif_pair_0/II" 237.167
+cap "m1_9269_n3966#" "active_load_0/VSS" 9.29697
+cap "Pmos_current_mirror_0/pfet$1_1/a_12060_n40#" "dif_pair_0/II" 0.0168942
+cap "active_load_0/VSS" "Pmos_current_mirror_0/w_n4906_n858#" 74.8231
+cap "dif_pair_0/IH" "nmos_2_stage_0/ID" 3.67751
+cap "m1_9269_n3966#" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 0.498136
+cap "nmos_2_stage_0/ID" "Pmos_current_mirror_0/pfet$1_1/a_12060_n40#" 6.73383
+cap "active_load_0/VSS" "Pmos_current_mirror_0/pfet$1_0/a_12060_n40#" 3.53676
+cap "active_load_0/VSS" "dif_pair_0/II" 45.7616
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/pfet$1_1/a_12060_n40#" 0.010057
+cap "m1_9269_n3966#" "Pmos_current_mirror_0/w_n4906_n858#" 8.93225
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "Pmos_current_mirror_0/pfet$1_0/a_12060_n40#" -5.68434e-14
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "dif_pair_0/II" 0.107337
+cap "active_load_0/VSS" "nmos_2_stage_0/ID" 7.25334
+cap "m1_9269_n3966#" "Pmos_current_mirror_0/pfet$1_0/a_12060_n40#" 3.9729
+cap "m1_9269_n3966#" "dif_pair_0/II" -106.749
+cap "dif_pair_0/IH" "active_load_0/VSS" -21.4177
+cap "Pmos_current_mirror_0/pfet$1_0/a_12060_n40#" "Pmos_current_mirror_0/w_n4906_n858#" 6.82121e-13
+cap "active_load_0/VSS" "Pmos_current_mirror_0/pfet$1_1/a_12060_n40#" 0.00807919
+cap "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" "nmos_2_stage_0/ID" 524.924
+cap "dif_pair_0/II" "Pmos_current_mirror_0/w_n4906_n858#" 3.92609
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 5.95339
+cap "dif_pair_0/II" "Pmos_current_mirror_0/pfet$1_0/a_12060_n40#" 0.926682
+cap "nmos_2_stage_0/ID" "Pmos_current_mirror_0/w_n4906_n858#" 41.753
+cap "m1_9269_n3966#" "dif_pair_0/IH" 597.682
+cap "dif_pair_0/IH" "Pmos_current_mirror_0/w_n4906_n858#" 25.6966
+cap "nmos_2_stage_0/ID" "Pmos_current_mirror_0/pfet$1_0/a_12060_n40#" 27.5879
+cap "capacitor_0/vias_gen$25_0/a_0_0#" "Pmos_current_mirror_0/w_n4906_n858#" 84.1525
+cap "Pmos_current_mirror_0/pfet$1_0/a_13060_n40#" "Pmos_current_mirror_0/w_n4906_n858#" 1.13687e-13
+cap "Pmos_current_mirror_0/pfet$1_0/a_13060_n40#" "capacitor_0/vias_gen$25_0/a_0_0#" 0.0589895
+cap "active_load_0/nfet$3_1/a_560_n40#" "Pmos_current_mirror_0/pfet$1_1/a_13060_n40#" 0.0163738
+cap "m1_9269_n3966#" "capacitor_0/vias_gen$22_1/m1_0_0#" 12.1044
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "capacitor_0/mim_cap_1/m3_n40_n40#" 6.9191
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "active_load_0/nfet$3_1/a_560_n40#" 6.22877
+cap "m1_9269_n3966#" "capacitor_0/mim_cap_1/m3_n40_n40#" 32.875
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "Pmos_current_mirror_0/w_n4906_n858#" 174.191
+cap "m1_9269_n3966#" "active_load_0/nfet$3_1/a_560_n40#" 68.9582
+cap "Pmos_current_mirror_0/pfet$1_0/a_13060_n40#" "capacitor_0/vias_gen$22_1/m1_0_0#" 1.98252
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "capacitor_0/vias_gen$25_0/a_0_0#" 68.1528
+cap "m1_9269_n3966#" "Pmos_current_mirror_0/w_n4906_n858#" 7.27001
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "Pmos_current_mirror_0/pfet$1_0/a_13460_0#" 0.984207
+cap "capacitor_0/mim_cap_1/m3_n40_n40#" "active_load_0/nfet$3_1/a_560_n40#" 9.66935
+cap "m1_9269_n3966#" "Pmos_current_mirror_0/pfet$1_0/a_13060_n40#" 0.0851415
+cap "m1_9269_n3966#" "capacitor_0/vias_gen$25_0/a_0_0#" 99.0197
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "Pmos_current_mirror_0/pfet$1_1/a_13060_n40#" 0.640183
+cap "active_load_0/nfet$3_1/a_560_n40#" "Pmos_current_mirror_0/w_n4906_n858#" 8.14811
+cap "capacitor_0/vias_gen$25_0/a_0_0#" "capacitor_0/mim_cap_1/m3_n40_n40#" 50.523
+cap "capacitor_0/vias_gen$25_0/a_0_0#" "active_load_0/nfet$3_1/a_560_n40#" 2.59463
+cap "Pmos_current_mirror_0/pfet$1_0/a_13060_n40#" "active_load_0/nfet$3_1/a_560_n40#" 1.43976
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "Pmos_current_mirror_0/w_n4906_n858#" 2.21812
+cap "capacitor_0/vias_gen$25_0/a_0_0#" "capacitor_0/vias_gen$22_1/m1_0_0#" 21.8373
+cap "capacitor_0/vias_gen$22_1/m1_0_0#" "capacitor_0/mim_cap_1/m3_n40_n40#" 25.5622
+cap "capacitor_0/vias_gen$25_1/a_0_0#" "capacitor_0/vias_gen$22_0/m1_0_0#" 24.9825
+cap "capacitor_0/mim_cap_1/m3_n40_n40#" "capacitor_0/vias_gen$22_0/m1_0_0#" 101.753
+cap "Pmos_current_mirror_0/IA" "Pmos_current_mirror_0/w_n4906_n858#" 0.633365
+cap "Upper_Nmos_0/IA" "Pmos_current_mirror_0/w_n4906_n858#" 0.422291
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.0504217
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#" 0.0505542
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/pfet$1_0/a_6460_0#" -0.0259686
+cap "vias_gen$24_0/a_0_0#" "Pmos_current_mirror_0/w_n4906_n858#" 0.0502239
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/IC" 1.38446
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Upper_Nmos_0/IB" 0.0198899
+cap "Pmos_current_mirror_0/w_n4906_n858#" "m2_2923_n1661#" 0.0397538
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/pfet$1_0/a_9060_n40#" -1.13687e-13
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/IH" 0.662879
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/m1_7763_n999#" 0.0258949
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/pfet$1_1/a_10560_n40#" 2.27374e-13
+cap "Pmos_current_mirror_0/w_n4906_n858#" "m2_2923_n1661#" 0.0199691
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/pfet$1_0/a_10560_n40#" 1.13687e-13
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/IH" 0.567568
+cap "Pmos_current_mirror_0/w_n4906_n858#" "Pmos_current_mirror_0/m1_7763_n999#" 0.025712
+cap "Pmos_current_mirror_0/w_n4906_n858#" "dif_pair_0/IH" 0.0034765
+cap "Pmos_current_mirror_0/w_n4906_n858#" "m2_2923_n1661#" 0.0198373
+cap "Pmos_current_mirror_0/w_n4906_n858#" "capacitor_0/vias_gen$22_1/m1_0_0#" 0.028745
+cap "Pmos_current_mirror_0/w_n4906_n858#" "m2_2923_n1661#" 0.0221752
+cap "Pmos_current_mirror_0/w_n4906_n858#" "active_load_0/nfet$3_0/a_560_n40#" 0.684564
+merge "active_load_0/vias_gen$17_1/a_0_0#" "vias_gen$2_4/VSUBS" -18568.4 0 0 0 0 0 0 0 0 0 0 0 -656 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1415424 -45510 -26538 -5082 0 0 0 0 0 0 0 0 0 0
+merge "vias_gen$2_4/VSUBS" "vias_gen$2_3/VSUBS"
+merge "vias_gen$2_3/VSUBS" "vias_gen$2_8/VSUBS"
+merge "vias_gen$2_8/VSUBS" "vias_gen$28_0/VSUBS"
+merge "vias_gen$28_0/VSUBS" "vias_gen$1_2/VSUBS"
+merge "vias_gen$1_2/VSUBS" "vias_gen$1_2/li_0_0#"
+merge "vias_gen$1_2/li_0_0#" "res_poly_0/a_n35_n632#"
+merge "res_poly_0/a_n35_n632#" "m1_2525_n2053#"
+merge "m1_2525_n2053#" "Upper_Nmos_0/vias_gen$5_1/a_0_0#"
+merge "Upper_Nmos_0/vias_gen$5_1/a_0_0#" "vias_gen$24_0/a_0_0#"
+merge "vias_gen$24_0/a_0_0#" "vias_gen$1_3/VSUBS"
+merge "vias_gen$1_3/VSUBS" "vias_gen$1_3/li_0_0#"
+merge "vias_gen$1_3/li_0_0#" "res_poly_1/a_n35_n632#"
+merge "res_poly_1/a_n35_n632#" "m1_n115_n2053#"
+merge "m1_n115_n2053#" "Pmos_current_mirror_0/VSUBS"
+merge "Pmos_current_mirror_0/VSUBS" "vias_gen$2_5/VSUBS"
+merge "vias_gen$2_5/VSUBS" "vias_gen$2_6/VSUBS"
+merge "vias_gen$2_6/VSUBS" "vias_gen$2_7/VSUBS"
+merge "vias_gen$2_7/VSUBS" "capacitor_0/vias_gen$25_1/a_0_0#"
+merge "capacitor_0/vias_gen$25_1/a_0_0#" "active_load_0/vias_gen$13_1/a_0_0#"
+merge "active_load_0/vias_gen$13_1/a_0_0#" "vias_gen$22_0/VSUBS"
+merge "vias_gen$22_0/VSUBS" "capacitor_0/VSUBS"
+merge "capacitor_0/VSUBS" "capacitor_0/vias_gen$25_0/a_0_0#"
+merge "capacitor_0/vias_gen$25_0/a_0_0#" "vias_gen$2_1/VSUBS"
+merge "vias_gen$2_1/VSUBS" "li_10018_n2985#"
+merge "li_10018_n2985#" "vias_gen$2_0/VSUBS"
+merge "vias_gen$2_0/VSUBS" "lower_NMOS_0/vias_gen$6_1/a_0_0#"
+merge "lower_NMOS_0/vias_gen$6_1/a_0_0#" "active_load_0/VSS"
+merge "active_load_0/VSS" "li_6658_n3389#"
+merge "li_6658_n3389#" "nmos_2_stage_0/VSS"
+merge "nmos_2_stage_0/VSS" "li_7076_n4633#"
+merge "li_7076_n4633#" "nfet$6_0/a_n123_n128#"
+merge "nfet$6_0/a_n123_n128#" "vias_gen$2_2/VSUBS"
+merge "vias_gen$2_2/VSUBS" "nmos_2_stage_0/VSUBS"
+merge "nmos_2_stage_0/VSUBS" "active_load_0/VSUBS"
+merge "active_load_0/VSUBS" "vias_gen$2_10/VSUBS"
+merge "vias_gen$2_10/VSUBS" "vias_gen$2_9/VSUBS"
+merge "vias_gen$2_9/VSUBS" "dif_pair_0/VSUBS"
+merge "dif_pair_0/VSUBS" "res_poly_0/VSUBS"
+merge "res_poly_0/VSUBS" "res_poly_0/a_n35_196#"
+merge "res_poly_0/a_n35_196#" "vias_gen$26_1/a_0_0#"
+merge "vias_gen$26_1/a_0_0#" "vias_gen$1_1/li_0_0#"
+merge "vias_gen$1_1/li_0_0#" "m1_2525_n2884#"
+merge "m1_2525_n2884#" "vias_gen$1_1/VSUBS"
+merge "vias_gen$1_1/VSUBS" "vias_gen$29_0/VSUBS"
+merge "vias_gen$29_0/VSUBS" "res_poly_2/VSUBS"
+merge "res_poly_2/VSUBS" "res_poly_2/a_n35_196#"
+merge "res_poly_2/a_n35_196#" "vias_gen$1_0/VSUBS"
+merge "vias_gen$1_0/VSUBS" "vias_gen$1_0/li_0_0#"
+merge "vias_gen$1_0/li_0_0#" "m1_2221_n3078#"
+merge "m1_2221_n3078#" "res_poly_6/VSUBS"
+merge "res_poly_6/VSUBS" "res_poly_5/VSUBS"
+merge "res_poly_5/VSUBS" "res_poly_4/VSUBS"
+merge "res_poly_4/VSUBS" "res_poly_3/VSUBS"
+merge "res_poly_3/VSUBS" "Upper_Nmos_0/vias_gen$4_1/a_0_0#"
+merge "Upper_Nmos_0/vias_gen$4_1/a_0_0#" "res_poly_8/VSUBS"
+merge "res_poly_8/VSUBS" "res_poly_7/VSUBS"
+merge "res_poly_7/VSUBS" "vias_gen$1_4/VSUBS"
+merge "vias_gen$1_4/VSUBS" "vias_gen$1_4/li_0_0#"
+merge "vias_gen$1_4/li_0_0#" "res_poly_1/a_n35_196#"
+merge "res_poly_1/a_n35_196#" "m1_n115_n2884#"
+merge "m1_n115_n2884#" "vias_gen$7_2/VSUBS"
+merge "vias_gen$7_2/VSUBS" "vias_gen$26_0/a_0_0#"
+merge "vias_gen$26_0/a_0_0#" "vias_gen$24_1/a_0_0#"
+merge "vias_gen$24_1/a_0_0#" "res_poly_1/VSUBS"
+merge "res_poly_1/VSUBS" "res_poly_9/VSUBS"
+merge "res_poly_9/VSUBS" "vias_gen$7_0/VSUBS"
+merge "vias_gen$7_0/VSUBS" "Upper_Nmos_0/VSUBS"
+merge "Upper_Nmos_0/VSUBS" "lower_NMOS_0/VSUBS"
+merge "lower_NMOS_0/VSUBS" "vias_gen$7_1/VSUBS"
+merge "vias_gen$7_1/VSUBS" "VSUBS"
+merge "VSUBS" "Upper_Nmos_0/vias_gen$5_0/a_0_0#"
+merge "Upper_Nmos_0/vias_gen$5_0/a_0_0#" "lower_NMOS_0/vias_gen$9_1/a_0_0#"
+merge "lower_NMOS_0/vias_gen$9_1/a_0_0#" "li_n947_n3471#"
+merge "li_n947_n3471#" "Upper_Nmos_0/VSS"
+merge "Upper_Nmos_0/VSS" "lower_NMOS_0/VSS"
+merge "lower_NMOS_0/VSS" "VSS"
+merge "VSS" "li_n5841_n3471#"
+merge "capacitor_0/m4_n1174_1757#" "vias_gen$22_0/m1_0_0#" -890.105 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4797 -408 0 0 0 0 -10560 -452 0 0 0 0
+merge "vias_gen$22_0/m1_0_0#" "nfet$6_0/a_500_0#"
+merge "nfet$6_0/a_500_0#" "m1_9568_n4684#"
+merge "vias_gen$2_4/m1_0_0#" "active_load_0/II" -2183.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10868 -1056 -28704 -1950 0 0 0 0 0 0 0 0
+merge "active_load_0/II" "vias_gen$2_8/m1_0_0#"
+merge "vias_gen$2_8/m1_0_0#" "m2_6509_n1712#"
+merge "m2_6509_n1712#" "dif_pair_0/m2_n4257_6496#"
+merge "dif_pair_0/m2_n4257_6496#" "nmos_2_stage_0/II"
+merge "nmos_2_stage_0/II" "nfet$6_0/a_1040_0#"
+merge "nfet$6_0/a_1040_0#" "vias_gen$2_1/m1_0_0#"
+merge "vias_gen$2_1/m1_0_0#" "m1_10106_n4083#"
+merge "m1_10106_n4083#" "nfet$6_0/a_0_0#"
+merge "nfet$6_0/a_0_0#" "vias_gen$2_2/m1_0_0#"
+merge "vias_gen$2_2/m1_0_0#" "m1_9048_n4083#"
+merge "m1_9048_n4083#" "vias_gen$2_9/m1_0_0#"
+merge "vias_gen$2_9/m1_0_0#" "dif_pair_0/II"
+merge "dif_pair_0/II" "dif_pair_0/m2_n3905_5015#"
+merge "dif_pair_0/m2_n3905_5015#" "m2_6509_n3193#"
+merge "res_poly_8/a_n35_n632#" "res_poly_9/a_n35_n632#" -908.761 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21050 -1784 0 0 0 0 0 0 0 0 0 0
+merge "res_poly_9/a_n35_n632#" "m1_493_n2053#"
+merge "res_poly_4/a_n35_196#" "res_poly_3/a_n35_196#" -944.722 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42100 -1884 0 0 0 0 0 0 0 0 0 0
+merge "res_poly_3/a_n35_196#" "m1_1713_n2884#"
+merge "capacitor_0/vias_gen$22_0/m1_0_0#" "capacitor_0/vias_gen$22_1/m1_0_0#" -3023.47 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5849 -514 -9256 -696 0 -132 0 0 0 0 0 0
+merge "capacitor_0/vias_gen$22_1/m1_0_0#" "VOUT"
+merge "VOUT" "Pmos_current_mirror_0/m1_7763_n999#"
+merge "Pmos_current_mirror_0/m1_7763_n999#" "m2_6787_n1373#"
+merge "m2_6787_n1373#" "Pmos_current_mirror_0/ID"
+merge "Pmos_current_mirror_0/ID" "vias_gen$2_3/m1_0_0#"
+merge "vias_gen$2_3/m1_0_0#" "nmos_2_stage_0/ID"
+merge "nmos_2_stage_0/ID" "m1_6547_n3099#"
+merge "res_poly_6/a_n35_n632#" "res_poly_7/a_n35_n632#" -926.193 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42100 -1884 0 0 0 0 0 0 0 0 0 0
+merge "res_poly_7/a_n35_n632#" "m1_951_n2053#"
+merge "Upper_Nmos_0/m1_1222_1956#" "Upper_Nmos_0/IE" -1114.36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4576 -384 -6864 -368 0 0 0 0 0 0 0 0
+merge "Upper_Nmos_0/IE" "vias_gen$7_0/m1_0_0#"
+merge "vias_gen$7_0/m1_0_0#" "lower_NMOS_0/IE"
+merge "active_load_0/m1_3284_5614#" "active_load_0/IH" -1586.94 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5096 -496 -6656 -464 0 0 0 0 0 0 0 0
+merge "active_load_0/IH" "m1_7315_n1664#"
+merge "m1_7315_n1664#" "vias_gen$2_10/m1_0_0#"
+merge "vias_gen$2_10/m1_0_0#" "dif_pair_0/IH"
+merge "dif_pair_0/IH" "dif_pair_0/m2_n4385_5147#"
+merge "Upper_Nmos_0/IF" "lower_NMOS_0/IF" -382.637 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2392 -196 -6864 -368 0 0 0 0 0 0 0 0
+merge "lower_NMOS_0/IF" "vias_gen$7_1/m1_0_0#"
+merge "Pmos_current_mirror_0/m1_n2237_n1187#" "Upper_Nmos_0/IA" -749.927 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4784 -392 -13312 -720 0 0 0 0 0 0 0 0
+merge "Upper_Nmos_0/IA" "Pmos_current_mirror_0/IA"
+merge "Pmos_current_mirror_0/IA" "vias_gen$2_7/m1_0_0#"
+merge "vias_gen$2_7/m1_0_0#" "vias_gen$2_6/m1_0_0#"
+merge "res_poly_5/a_n35_n632#" "res_poly_4/a_n35_n632#" -927.713 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42100 -1884 0 0 0 0 0 0 0 0 0 0
+merge "res_poly_4/a_n35_n632#" "m1_1459_n2053#"
+merge "Upper_Nmos_0/IB" "Pmos_current_mirror_0/IB" -3458.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3664 -748 -276610 -12367 0 0 0 0 0 0 0 0
+merge "Pmos_current_mirror_0/IB" "vias_gen$2_5/m1_0_0#"
+merge "vias_gen$2_5/m1_0_0#" "nfet$6_0/a_600_n40#"
+merge "nfet$6_0/a_600_n40#" "vias_gen$2_0/m1_0_0#"
+merge "vias_gen$2_0/m1_0_0#" "m2_2923_n1661#"
+merge "m2_2923_n1661#" "nfet$6_0/a_60_n40#"
+merge "nfet$6_0/a_60_n40#" "m1_9269_n3966#"
+merge "Pmos_current_mirror_0/IC" "vias_gen$28_0/m1_0_0#" -1634.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21120 -584 -6812 -628 -10400 -504 0 0 0 0 0 0 0 0
+merge "vias_gen$28_0/m1_0_0#" "dif_pair_0/IC"
+merge "dif_pair_0/IC" "vias_gen$29_0/li_0_0#"
+merge "vias_gen$29_0/li_0_0#" "m1_3221_n2371#"
+merge "res_poly_6/a_n35_196#" "res_poly_5/a_n35_196#" -917.822 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42100 -1884 0 0 0 0 0 0 0 0 0 0
+merge "res_poly_5/a_n35_196#" "m1_1205_n2884#"
+merge "lower_NMOS_0/IG" "vias_gen$7_2/m1_0_0#" -1214.15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2600 -304 -6864 -368 0 0 0 0 0 0 0 0
+merge "vias_gen$7_2/m1_0_0#" "res_poly_9/a_n35_196#"
+merge "res_poly_9/a_n35_196#" "m1_443_n3176#"
+merge "res_poly_2/a_n35_n632#" "res_poly_3/a_n35_n632#" -933.369 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42100 -1884 0 0 0 0 0 0 0 0 0 0
+merge "res_poly_3/a_n35_n632#" "m1_1967_n2053#"
+merge "Pmos_current_mirror_0/VDD" "VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "res_poly_8/a_n35_196#" "res_poly_7/a_n35_196#" -945.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -42100 -1884 0 0 0 0 0 0 0 0 0 0
+merge "res_poly_7/a_n35_196#" "m1_697_n2884#"
+merge "dif_pair_0/VIN+" "VIN+" -315.953 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -104 0 0 0 0 0 0 0 0
+merge "dif_pair_0/VIN-" "VIN-" -251.353 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -104 0 0 0 0 0 0 0 0
