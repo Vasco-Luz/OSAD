@@ -1,0 +1,1305 @@
+timestamp 1573064876
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use upper_nmos_current_mirror upper_nmos_current_mirror_0 1 0 5634 0 1 3613
+use vias_gen$13 vias_gen$13_2 1 0 1257 0 1 -7248
+use vias_gen$13 vias_gen$13_1 1 0 2757 0 1 -7330
+use active_load active_load_0 1 0 723 0 1 -15972
+use bias_res bias_res_0 1 0 3125 0 1 -13905
+use vias_gen$13 vias_gen$13_0 1 0 5590 0 1 -7164
+use vias_gen$6 vias_gen$6_9 1 0 9066 0 1 -6866
+use vias_gen$6 vias_gen$6_8 1 0 10042 0 1 -6871
+use vias_gen$6 vias_gen$6_7 1 0 11047 0 1 -6875
+use Lower_Nmos Lower_Nmos_0 1 0 254 0 1 -935
+use vias_gen$6 vias_gen$6_3 0 -1 1775 -1 0 -4761
+use vias_gen$1 vias_gen$1_0 1 0 567 0 1 -5366
+use vias_gen$1 vias_gen$1_1 1 0 2766 0 1 -5366
+use vias_gen$1 vias_gen$1_2 1 0 1689 0 1 -5187
+use vias_gen$1 vias_gen$1_3 1 0 757 0 1 -5187
+use vias_gen$1 vias_gen$1_4 1 0 4675 0 1 -5187
+use vias_gen$41 vias_gen$41_0 0 1 12327 -1 0 -6507
+use vias_gen$41 vias_gen$41_1 0 1 12551 -1 0 -6385
+use vias_gen$19 vias_gen$19_6 0 1 12617 -1 0 -5200
+use vias_gen$6 vias_gen$6_6 1 0 12021 0 1 -6869
+use Differential_pair Differential_pair_0 1 0 14196 0 1 -3214
+use input_second_stage input_second_stage_0 1 0 15536 0 1 -10620
+use vias_gen$19 vias_gen$19_3 0 1 16303 -1 0 -6208
+use vias_gen$19 vias_gen$19_2 0 1 16303 -1 0 -7250
+use vias_gen$36 vias_gen$36_0 -1 0 17344 0 1 -5989
+use vias_gen$6 vias_gen$6_2 1 0 16619 0 1 -8528
+use vias_gen$6 vias_gen$6_1 1 0 17192 0 1 -8526
+use vias_gen$6 vias_gen$6_0 1 0 17774 0 1 -8527
+use vias_gen$19 vias_gen$19_1 1 0 16765 0 1 -4954
+use vias_gen$19 vias_gen$19_4 0 1 16303 -1 0 -4903
+use vias_gen$11 vias_gen$11_0 0 1 16144 -1 0 -5510
+use nfet$6 nfet$6_0 1 0 16803 0 1 -5485
+use vias_gen$19 vias_gen$19_0 1 0 17915 0 1 -4955
+use vias_gen$40 vias_gen$40_0 0 1 16552 -1 0 -4670
+use vias_gen$6 vias_gen$6_4 -1 0 17278 0 1 -4849
+use vias_gen$19 vias_gen$19_5 -1 0 16238 0 -1 -4602
+use vias_gen$6 vias_gen$6_5 -1 0 17779 0 1 -4849
+use vias_gen$35 vias_gen$35_1 1 0 19235 0 1 -4420
+use CC CC_0 1 0 15581 0 1 -10446
+use vias_gen$39 vias_gen$39_0 -1 0 22764 0 1 -4148
+use vias_gen$35 vias_gen$35_0 1 0 21680 0 1 -4420
+use Pmos_current_mirror Pmos_current_mirror_0 1 0 548 0 1 6669
+port "VDD" 1 -2 -3067 -2 -3067 li
+port "VOUT" 5 22737 -4177 22737 -4177 m4
+port "Vin-" 4 -158 -5088 -158 -5088 m4
+port "Vin+" 3 -155 -4881 -155 -4881 m4
+port "VSS" 2 -48 -8622 -48 -8622 li
+node "VDD" 0 0 -2 -3067 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VOUT" 4 2653.94 22737 -4177 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 677398 14774 0 0 0 0
+node "Vin-" 10 2887.12 -158 -5088 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 924660 28152 0 0 0 0
+node "Vin+" 10 3051.15 -155 -4881 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 945516 28784 0 0 0 0
+node "m3_17230_n5923#" 5 3027.77 17230 -5923 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 467568 14748 0 0 0 0 0 0
+node "m2_649_n5366#" 4 440.427 649 -5366 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 83616 3320 0 0 0 0 0 0 0 0
+node "m2_11631_n5267#" 2 400.187 11631 -5267 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 51272 2076 0 0 0 0 0 0 0 0
+node "m2_885_n5187#" 9 1327.72 885 -5187 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 202644 7898 0 0 0 0 0 0 0 0
+node "m2_14760_n4955#" 8 1176.97 14760 -4955 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 166400 6504 0 0 0 0 0 0 0 0
+node "m2_15815_n4655#" 1 104.912 15815 -4655 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18020 786 0 0 0 0 0 0 0 0
+node "m1_17816_n8517#" 1 66.3267 17816 -8517 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9568 508 0 0 0 0 0 0 0 0 0 0
+node "m1_16655_n8517#" 1 71.677 16655 -8517 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9776 510 0 0 0 0 0 0 0 0 0 0
+node "m1_18022_n5244#" 1 106.721 18022 -5244 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11594 750 0 0 0 0 0 0 0 0 0 0
+node "m1_17696_n5116#" 1 64.2833 17696 -5116 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9345 604 0 0 0 0 0 0 0 0 0 0
+node "m1_17195_n5117#" 1 59.7343 17195 -5117 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9555 616 0 0 0 0 0 0 0 0 0 0
+node "m1_16810_n5244#" 1 71.9359 16810 -5244 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11594 750 0 0 0 0 0 0 0 0 0 0
+node "m1_16582_n5974#" 4 729.79 16582 -5974 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 131753 4364 0 0 0 0 0 0 0 0 0 0
+node "m1_16303_n7374#" 6 818.998 16303 -7374 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 121628 4782 0 0 0 0 0 0 0 0 0 0
+node "m1_12065_n6863#" 0 88.5405 12065 -6863 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8234 450 0 0 0 0 0 0 0 0 0 0
+node "m1_9105_n6854#" 0 80.8243 9105 -6854 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7820 432 0 0 0 0 0 0 0 0 0 0
+node "m1_5636_n7164#" 2 289.466 5636 -7164 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30573 1508 0 0 0 0 0 0 0 0 0 0
+node "m1_16144_n5642#" 2 318.485 16144 -5642 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 52728 2132 0 0 0 0 0 0 0 0 0 0
+node "m1_10585_n5180#" 5 806.31 10585 -5180 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 81840 3808 0 0 0 0 0 0 0 0 0 0
+node "m1_4757_n5506#" 1 175.232 4757 -5506 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17066 834 0 0 0 0 0 0 0 0 0 0
+node "m1_1729_n5162#" 1 220.088 1729 -5162 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22264 1060 0 0 0 0 0 0 0 0 0 0
+node "m1_17410_n5244#" 13 2163.63 17410 -5244 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 253604 10554 0 0 0 0 0 0 0 0 0 0
+node "li_8505_n6954#" 50 1377.08 8505 -6954 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 652355 4008 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_7841_n7406#" 13 548.057 7841 -7406 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 246482 1986 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_7221_n7406#" 15 462.215 7221 -7406 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 212848 1852 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_6472_n7406#" 20 389.818 6472 -7406 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 157628 1632 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_5790_n7406#" 20 429.337 5790 -7406 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 159636 1640 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_5486_n6510#" 58 932.876 5486 -6510 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 352226 3090 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 1084 21990.4 -48 -8622 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10542172 60452 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_1729_n4849#" 4466 7186.33 1729 -4849 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 738300 32192 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_16810_n5244#" "m1_17195_n5117#" 23.4813
+cap "m2_649_n5366#" "Vin+" 1.23852
+cap "Vin-" "m2_11631_n5267#" 34.9631
+cap "m1_17816_n8517#" "VSS" 69.3482
+cap "VSS" "m1_16303_n7374#" 0.334489
+cap "m2_15815_n4655#" "m1_16144_n5642#" 13.0329
+cap "m2_649_n5366#" "li_1729_n4849#" 1.62389
+cap "m1_16303_n7374#" "m1_16144_n5642#" 170.115
+cap "li_5790_n7406#" "m1_5636_n7164#" 27.3081
+cap "VSS" "m1_5636_n7164#" 0.172694
+cap "VSS" "m1_12065_n6863#" 8.49773
+cap "li_1729_n4849#" "m3_17230_n5923#" 6.11422
+cap "li_5486_n6510#" "m1_5636_n7164#" 45.6003
+cap "m1_10585_n5180#" "Vin+" 9.3753
+cap "m1_16810_n5244#" "m1_16582_n5974#" 73.5111
+cap "Vin-" "m1_12065_n6863#" 0.0449512
+cap "Vin-" "m1_5636_n7164#" 0.43675
+cap "m1_9105_n6854#" "VSS" 0.00378182
+cap "m2_14760_n4955#" "li_1729_n4849#" 100.82
+cap "m1_17410_n5244#" "li_1729_n4849#" 45.7013
+cap "m1_10585_n5180#" "li_1729_n4849#" 21.4433
+cap "m1_16582_n5974#" "m1_17195_n5117#" 6.17054
+cap "m1_18022_n5244#" "m3_17230_n5923#" 11.3739
+cap "Vin-" "m1_9105_n6854#" 0.0622937
+cap "m2_14760_n4955#" "m3_17230_n5923#" 7.54772
+cap "m1_17410_n5244#" "m3_17230_n5923#" 151.036
+cap "VSS" "Vin+" 0.0132971
+cap "Vin-" "m2_885_n5187#" 96.9628
+cap "li_7221_n7406#" "m1_5636_n7164#" 0.10105
+cap "li_5486_n6510#" "Vin+" 0.4687
+cap "m1_4757_n5506#" "li_5486_n6510#" 2.05661
+cap "Vin-" "Vin+" 4988.79
+cap "m2_14760_n4955#" "m1_18022_n5244#" 7.40507
+cap "m1_17410_n5244#" "m1_18022_n5244#" 11.7953
+cap "li_5790_n7406#" "li_6472_n7406#" 32.6556
+cap "Vin-" "m1_4757_n5506#" 3.09949
+cap "VSS" "li_6472_n7406#" 7.49719
+cap "m2_14760_n4955#" "m1_17410_n5244#" 56.8612
+cap "li_5486_n6510#" "li_1729_n4849#" 16.7986
+cap "Vin-" "li_1729_n4849#" 26.0073
+cap "m1_16144_n5642#" "li_1729_n4849#" 46.5257
+cap "VSS" "m3_17230_n5923#" 112.985
+cap "m1_9105_n6854#" "li_8505_n6954#" 10.6002
+cap "Vin-" "m2_649_n5366#" 22.6233
+cap "m1_16303_n7374#" "m1_16582_n5974#" 149.155
+cap "VSS" "m1_18022_n5244#" 29.7104
+cap "VSS" "m1_17410_n5244#" 4.137
+cap "m1_17696_n5116#" "li_1729_n4849#" 8.05346
+cap "Vin+" "li_8505_n6954#" 0.619303
+cap "m1_16655_n8517#" "VSS" 66.0914
+cap "m2_11631_n5267#" "m1_12065_n6863#" 0.0710377
+cap "li_7221_n7406#" "li_6472_n7406#" 27.6479
+cap "m1_16810_n5244#" "li_1729_n4849#" 4.92974
+cap "m1_17410_n5244#" "m1_16144_n5642#" 5.39557
+cap "m2_14760_n4955#" "m1_16144_n5642#" 62.807
+cap "Vin-" "m1_10585_n5180#" 37.0677
+cap "m1_17696_n5116#" "m3_17230_n5923#" 2.13424
+cap "li_1729_n4849#" "li_8505_n6954#" 19.3857
+cap "m1_16810_n5244#" "m3_17230_n5923#" 0.248277
+cap "m1_17195_n5117#" "li_1729_n4849#" 10.6491
+cap "m2_885_n5187#" "m1_1729_n5162#" 32.7173
+cap "m1_17696_n5116#" "m1_18022_n5244#" 27.4839
+cap "li_5790_n7406#" "VSS" 7.5927
+cap "m3_17230_n5923#" "VOUT" 43.496
+cap "m1_17696_n5116#" "m2_14760_n4955#" 39.39
+cap "Vin+" "m1_1729_n5162#" 12.0758
+cap "m1_17696_n5116#" "m1_17410_n5244#" 43.53
+cap "m1_17195_n5117#" "m3_17230_n5923#" 0.361568
+cap "Vin-" "VSS" 2.75373
+cap "m2_11631_n5267#" "Vin+" 20.1779
+cap "m1_16810_n5244#" "m1_17410_n5244#" 9.07143
+cap "m1_16810_n5244#" "m2_14760_n4955#" 35.3804
+cap "Vin-" "li_5486_n6510#" 31.2235
+cap "VSS" "li_7841_n7406#" 11.7233
+cap "m1_17410_n5244#" "VOUT" 1.64733
+cap "li_1729_n4849#" "m1_1729_n5162#" 30.7203
+cap "m1_16582_n5974#" "li_1729_n4849#" 47.1335
+cap "m2_649_n5366#" "m1_1729_n5162#" 0.746331
+cap "m1_17410_n5244#" "m1_17195_n5117#" 52.2261
+cap "m2_14760_n4955#" "m1_17195_n5117#" 39.8374
+cap "m2_11631_n5267#" "li_1729_n4849#" 12.2304
+cap "m1_17696_n5116#" "VSS" 0.233954
+cap "m2_15815_n4655#" "li_1729_n4849#" 9.15106
+cap "m1_16582_n5974#" "m3_17230_n5923#" 22.293
+cap "li_7221_n7406#" "VSS" 10.1236
+cap "m1_5636_n7164#" "Vin+" 0.0250541
+cap "m1_16810_n5244#" "VSS" 0.0492324
+cap "m1_16303_n7374#" "li_1729_n4849#" 2.99205
+cap "VSS" "VOUT" 259.638
+cap "VSS" "li_8505_n6954#" 6.86151
+cap "m1_17410_n5244#" "m1_16582_n5974#" 9.36353
+cap "m1_16303_n7374#" "m3_17230_n5923#" 0.545824
+cap "m2_14760_n4955#" "m1_16582_n5974#" 69.6398
+cap "li_7221_n7406#" "li_7841_n7406#" 57.1473
+cap "m1_5636_n7164#" "li_6472_n7406#" 1.52846
+cap "VSS" "m1_17195_n5117#" 0.0516695
+cap "Vin-" "li_8505_n6954#" 42.4217
+cap "m1_10585_n5180#" "m2_11631_n5267#" 118.014
+cap "li_7841_n7406#" "li_8505_n6954#" 6.34328
+cap "m2_15815_n4655#" "m2_14760_n4955#" 55.1948
+cap "m2_15815_n4655#" "m1_17410_n5244#" 0.0741867
+cap "m2_885_n5187#" "Vin+" 28.7526
+cap "m2_885_n5187#" "m1_4757_n5506#" 26.7021
+cap "m1_16655_n8517#" "m1_17816_n8517#" 7.86254
+cap "m2_14760_n4955#" "m1_16303_n7374#" 9.70257
+cap "m1_4757_n5506#" "Vin+" 0.205558
+cap "m2_885_n5187#" "li_1729_n4849#" 49.7849
+cap "VSS" "m1_16582_n5974#" 1.78114
+cap "Vin-" "m1_1729_n5162#" 10.8008
+cap "m1_10585_n5180#" "m1_12065_n6863#" 1.30245
+cap "m2_885_n5187#" "m2_649_n5366#" 366.845
+cap "Vin+" "li_1729_n4849#" 119.736
+cap "m1_16144_n5642#" "m1_16582_n5974#" 25.4312
+cap "m1_4757_n5506#" "li_1729_n4849#" 1.17812
+cap "Lower_Nmos_0/IA" "upper_nmos_current_mirror_0/VSS" 2.45986
+cap "upper_nmos_current_mirror_0/nfet$1_1/a_460_0#" "upper_nmos_current_mirror_0/VSS" 7.12219
+cap "upper_nmos_current_mirror_0/nfet$1_1/a_1960_0#" "upper_nmos_current_mirror_0/VSS" 1.09734
+cap "upper_nmos_current_mirror_0/VSS" "upper_nmos_current_mirror_0/nfet$1_1/a_460_0#" 4.79051
+cap "Lower_Nmos_0/IA" "upper_nmos_current_mirror_0/nfet$1_1/a_460_0#" 0.648344
+cap "upper_nmos_current_mirror_0/VSS" "Lower_Nmos_0/IA" 33.48
+cap "upper_nmos_current_mirror_0/IC" "Lower_Nmos_0/IA" 11.4489
+cap "upper_nmos_current_mirror_0/vias_gen$10_1/a_0_0#" "Lower_Nmos_0/IA" 57.5343
+cap "upper_nmos_current_mirror_0/IC" "upper_nmos_current_mirror_0/vias_gen$10_1/a_0_0#" 1.38988
+cap "Lower_Nmos_0/IC" "upper_nmos_current_mirror_0/vias_gen$10_1/a_0_0#" 1.38988
+cap "upper_nmos_current_mirror_0/nfet$1_1/a_2960_0#" "Lower_Nmos_0/IA" 0.309343
+cap "upper_nmos_current_mirror_0/nfet$1_1/a_560_n40#" "Lower_Nmos_0/IA" 9.8547
+cap "Lower_Nmos_0/IC" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 1.38988
+cap "Lower_Nmos_0/nfet$2_0/a_2280_n40#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 42.2724
+cap "Lower_Nmos_0/nfet_0/a_2280_n40#" "upper_nmos_current_mirror_0/IC" -5.68434e-14
+cap "Lower_Nmos_0/nfet_0/a_2280_n40#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 15.7917
+cap "upper_nmos_current_mirror_0/nfet$1_1/a_2060_n40#" "Lower_Nmos_0/nfet_0/a_2280_n40#" 10.1296
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "upper_nmos_current_mirror_0/IC" 1.38988
+cap "Lower_Nmos_0/IC" "Lower_Nmos_0/nfet_0/a_2280_n40#" -0.531064
+cap "Lower_Nmos_0/nfet_0/a_2280_n40#" "Lower_Nmos_0/IA" 8.5138
+cap "Lower_Nmos_0/nfet_0/a_3020_n40#" "Lower_Nmos_0/IA" -1.65522
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Lower_Nmos_0/nfet$2_0/a_3660_0#" 1.38988
+cap "Lower_Nmos_0/IC" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 1.32565
+cap "bias_res_0/res_poly$1_9/a_n69_146#" "Lower_Nmos_0/nfet_0/a_3020_n40#" 2.20845
+cap "bias_res_0/res_poly$1_8/a_n69_146#" "Lower_Nmos_0/nfet_0/a_3020_n40#" 0.0672398
+cap "bias_res_0/res_poly$1_8/a_n69_n582#" "Lower_Nmos_0/nfet_0/a_3020_n40#" 0.401599
+cap "Lower_Nmos_0/nfet_0/a_3020_n40#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 58.694
+cap "Lower_Nmos_0/nfet$2_0/a_3020_n40#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 42.2724
+cap "bias_res_0/res_poly$1_0/a_n69_146#" "Lower_Nmos_0/nfet_0/a_3020_n40#" 0.102596
+cap "bias_res_0/res_poly$1_10/a_n69_146#" "Lower_Nmos_0/nfet_0/a_3020_n40#" 0.0306123
+cap "Lower_Nmos_0/nfet_0/a_3020_n40#" "Lower_Nmos_0/nfet$2_0/a_3660_0#" -1.99511
+cap "Lower_Nmos_0/nfet_0/a_3020_n40#" "Lower_Nmos_0/IC" 9.51211
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "bias_res_0/res_poly$1_9/a_n69_146#" 6.14908
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "bias_res_0/res_poly$1_8/a_n69_146#" 0.648393
+cap "Lower_Nmos_0/nfet$2_0/a_5140_0#" "active_load_0/VSS" 1.38988
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "Lower_Nmos_0/nfet$2_0/a_5140_0#" -2.58289
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "active_load_0/VSS" 67.692
+cap "Lower_Nmos_0/nfet$2_0/a_4500_n40#" "active_load_0/VSS" 42.2724
+cap "active_load_0/VSS" "Lower_Nmos_0/IC" 1.38988
+cap "bias_res_0/res_poly$1_1/a_n69_146#" "Lower_Nmos_0/nfet_0/a_4500_n40#" 0.422966
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "Lower_Nmos_0/IC" -1.05003
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "bias_res_0/res_poly$1_0/a_n69_146#" 0.989237
+cap "Lower_Nmos_0/IA" "Lower_Nmos_0/nfet_0/a_4500_n40#" -2.14287
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "bias_res_0/res_poly$1_10/a_n69_146#" 0.293979
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "Lower_Nmos_0/nfet_0/a_4500_n40#" 0.0770746
+cap "bias_res_0/res_poly$1_3/a_n69_n582#" "Lower_Nmos_0/nfet_0/a_4500_n40#" 12.2175
+cap "active_load_0/VSS" "Lower_Nmos_0/nfet$2_0/a_6620_0#" 1.38988
+cap "Lower_Nmos_0/nfet$2_0/a_5980_n40#" "active_load_0/VSS" 51.5034
+cap "Lower_Nmos_0/nfet$2_0/a_5980_n40#" "bias_res_0/res_poly$1_1/a_n69_146#" 0.449942
+cap "Lower_Nmos_0/nfet$2_0/a_5980_n40#" "bias_res_0/res_poly$1_5/a_n69_146#" 0.0650243
+cap "Lower_Nmos_0/nfet$2_0/a_5980_n40#" "active_load_0/nfet$3_1/a_60_n40#" 0.0383469
+cap "Lower_Nmos_0/nfet$2_0/a_5980_n40#" "Lower_Nmos_0/nfet$2_0/a_6620_0#" -0.618013
+cap "active_load_0/VSS" "active_load_0/nfet$3_1/a_560_n40#" 0.0203013
+cap "active_load_0/nfet$3_1/a_60_n40#" "Lower_Nmos_0/nfet$2_0/a_7460_n40#" 0.022557
+cap "active_load_0/VSS" "active_load_0/nfet$3_1/a_1560_n40#" 0.0609039
+cap "active_load_0/nfet$3_0/a_460_0#" "Lower_Nmos_0/nfet$2_0/a_7460_n40#" 8.5454
+cap "active_load_0/VSS" "active_load_0/nfet$3_0/a_1460_0#" 2.07757
+cap "active_load_0/VSS" "active_load_0/nfet$3_1/a_1060_n40#" 0.0857166
+cap "active_load_0/VSS" "Lower_Nmos_0/nfet$2_0/a_7460_n40#" 18.7702
+cap "active_load_0/nfet$3_0/a_460_0#" "active_load_0/VSS" 16.9552
+cap "active_load_0/VSS" "Differential_pair_0/w_n1504_n4833#" 25.6609
+cap "active_load_0/VSS" "Differential_pair_0/pfet$1_1/a_560_0#" 17.1543
+cap "active_load_0/VSS" "Differential_pair_0/vias_gen$19_11/m1_0_0#" 5.04928
+cap "Differential_pair_0/pfet$1_1/a_1160_0#" "active_load_0/VSS" 137.532
+cap "active_load_0/VSS" "Differential_pair_0/Vin+" 1.61457
+cap "active_load_0/VSS" "Differential_pair_0/pfet$1_1/a_560_0#" 103.192
+cap "active_load_0/VSS" "Differential_pair_0/w_n1504_n4833#" 82.652
+cap "active_load_0/VSS" "Differential_pair_0/pfet$1_1/a_560_0#" 26.9249
+cap "Differential_pair_0/w_n1504_n4833#" "active_load_0/VSS" 90.5484
+cap "Differential_pair_0/pfet$1_1/a_1160_0#" "active_load_0/VSS" 103.209
+cap "Differential_pair_0/Vin+" "active_load_0/VSS" 0.447249
+cap "Differential_pair_0/Vin-" "active_load_0/VSS" 3.57799
+cap "vias_gen$19_2/m1_0_0#" "Differential_pair_0/w_n1504_n4833#" 6.16475
+cap "vias_gen$36_0/m1_0_0#" "Differential_pair_0/w_n1504_n4833#" 0.0147128
+cap "vias_gen$19_2/m1_0_0#" "Differential_pair_0/pfet$1_1/a_560_0#" 0.0287637
+cap "vias_gen$36_0/m1_0_0#" "Differential_pair_0/pfet$1_1/a_560_0#" 0.0396625
+cap "Differential_pair_0/w_n1504_n4833#" "vias_gen$6_0/li_0_0#" 173.735
+cap "Differential_pair_0/pfet$1_1/a_560_0#" "vias_gen$6_0/li_0_0#" 12.2067
+cap "vias_gen$19_2/m1_0_0#" "Differential_pair_0/Vin-" 0.0396192
+cap "vias_gen$19_2/m1_0_0#" "Differential_pair_0/Vin+" 0.164885
+cap "vias_gen$19_2/m1_0_0#" "Differential_pair_0/pfet$1_1/a_1160_0#" 0.00939215
+cap "vias_gen$19_2/m1_0_0#" "vias_gen$6_0/li_0_0#" 4.13232
+cap "vias_gen$36_0/m1_0_0#" "vias_gen$6_0/li_0_0#" 1.17961e-16
+cap "Differential_pair_0/Vin+" "vias_gen$6_0/li_0_0#" 1.51617
+cap "Differential_pair_0/pfet$1_1/a_560_0#" "Differential_pair_0/w_n1504_n4833#" -5.68434e-14
+cap "vias_gen$6_0/li_0_0#" "vias_gen$36_0/m1_0_0#" 7.77262
+cap "vias_gen$19_2/m1_0_0#" "vias_gen$36_0/m1_0_0#" -5.68434e-14
+cap "CC_0/mim_cap_1/m3_n40_n40#" "vias_gen$6_0/li_0_0#" 20.0393
+cap "Differential_pair_0/w_n1504_n4833#" "vias_gen$6_0/li_0_0#" 37.1825
+cap "vias_gen$6_0/li_0_0#" "vias_gen$19_2/m1_0_0#" 36.3324
+cap "vias_gen$6_0/li_0_0#" "Differential_pair_0/pfet$1_1/a_2360_0#" 3.57343
+cap "CC_0/mim_cap_1/m3_n40_n40#" "vias_gen$19_2/m1_0_0#" 0.125381
+cap "CC_0/mim_cap_1/c1_0_0#" "input_second_stage_0/nfet$4_0/a_360_n40#" 15.4803
+cap "input_second_stage_0/nfet$4_0/a_360_n40#" "CC_0/m4_4816_2140#" 32.4623
+cap "CC_0/mim_cap_1/c1_0_0#" "vias_gen$36_0/m1_0_0#" 4.61282
+cap "CC_0/mim_cap_1/c1_0_0#" "vias_gen$6_0/li_0_0#" 68.3267
+cap "vias_gen$36_0/m1_0_0#" "CC_0/m4_4816_2140#" 6.79013
+cap "vias_gen$6_0/li_0_0#" "CC_0/m4_4816_2140#" 135.856
+cap "CC_0/mim_cap_1/c1_0_0#" "vias_gen$6_0/li_0_0#" 23.5421
+cap "CC_0/m4_4816_2140#" "vias_gen$6_0/li_0_0#" 69.1252
+cap "CC_0/m4_4816_2140#" "CC_0/vias_gen$24_0/a_0_0#" 79.3499
+cap "CC_0/mim_cap_0/c1_0_0#" "CC_0/vias_gen$24_0/a_0_0#" 20.8034
+cap "CC_0/mim_cap_0/c1_0_0#" "CC_0/m4_4816_2140#" 205.692
+cap "CC_0/mim_cap_0/m3_n40_n40#" "CC_0/mim_cap_0/c1_0_0#" 350.885
+cap "CC_0/mim_cap_0/m3_n40_n40#" "CC_0/vias_gen$24_0/a_0_0#" 42.0507
+cap "CC_0/mim_cap_0/c1_0_0#" "CC_0/vias_gen$24_0/a_0_0#" -1.03182
+cap "upper_nmos_current_mirror_0/VSS" "Lower_Nmos_0/IA" 2.60532
+cap "upper_nmos_current_mirror_0/IB" "upper_nmos_current_mirror_0/VSS" 6.01466
+cap "upper_nmos_current_mirror_0/IB" "Lower_Nmos_0/IA" 3.50387
+cap "upper_nmos_current_mirror_0/VSS" "Vin-" -0.168697
+cap "upper_nmos_current_mirror_0/VSS" "upper_nmos_current_mirror_0/IA" 0.0366551
+cap "upper_nmos_current_mirror_0/VSS" "Vin+" 0.00966172
+cap "upper_nmos_current_mirror_0/VSS" "Lower_Nmos_0/IA" 46.9919
+cap "Lower_Nmos_0/IA" "upper_nmos_current_mirror_0/IC" 0.048414
+cap "upper_nmos_current_mirror_0/VSS" "upper_nmos_current_mirror_0/IA" 0.801711
+cap "upper_nmos_current_mirror_0/VSS" "upper_nmos_current_mirror_0/IB" 4.01104
+cap "upper_nmos_current_mirror_0/IA" "Lower_Nmos_0/IA" 1.29337
+cap "Lower_Nmos_0/IA" "upper_nmos_current_mirror_0/IB" 9.94104
+cap "upper_nmos_current_mirror_0/IB" "upper_nmos_current_mirror_0/IC" 0.000555635
+cap "Lower_Nmos_0/IA" "Pmos_current_mirror_0/IB" 22.4604
+cap "Lower_Nmos_0/vias_gen$14_0/a_0_0#" "upper_nmos_current_mirror_0/IA" 0.0311104
+cap "upper_nmos_current_mirror_0/IC" "Lower_Nmos_0/IC" 14.6308
+cap "Lower_Nmos_0/vias_gen$14_0/a_0_0#" "Lower_Nmos_0/IA" 17.0188
+cap "Lower_Nmos_0/IA" "upper_nmos_current_mirror_0/IA" 1.00418
+cap "upper_nmos_current_mirror_0/IC" "Pmos_current_mirror_0/IB" 6.9422
+cap "Lower_Nmos_0/IC" "Pmos_current_mirror_0/IB" 0.624715
+cap "upper_nmos_current_mirror_0/IC" "Lower_Nmos_0/vias_gen$14_0/a_0_0#" 18.1741
+cap "upper_nmos_current_mirror_0/IC" "upper_nmos_current_mirror_0/IA" 0.0221057
+cap "Lower_Nmos_0/vias_gen$14_0/a_0_0#" "Lower_Nmos_0/IC" 20.5585
+cap "Lower_Nmos_0/IC" "upper_nmos_current_mirror_0/IA" 0.592278
+cap "upper_nmos_current_mirror_0/IC" "Lower_Nmos_0/IA" 50.7588
+cap "Lower_Nmos_0/IA" "Lower_Nmos_0/IC" 2.21217
+cap "Lower_Nmos_0/vias_gen$14_0/a_0_0#" "Pmos_current_mirror_0/IB" 0.445542
+cap "vias_gen$1_4/m1_0_0#" "Lower_Nmos_0/IC" 15.587
+cap "vias_gen$1_4/m1_0_0#" "Lower_Nmos_0/nfet_0/a_2280_n40#" 8.37359
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_0/a_n69_146#" 0.0163796
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_8/a_n69_146#" 0.0327592
+cap "vias_gen$1_4/m1_0_0#" "upper_nmos_current_mirror_0/IC" 0.418993
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Lower_Nmos_0/IA" 7.2027
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Vin-" 0.0432941
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_8/a_n69_n582#" 6.78299
+cap "Lower_Nmos_0/IC" "Lower_Nmos_0/IA" 76.0226
+cap "Lower_Nmos_0/IA" "Lower_Nmos_0/nfet_0/a_2280_n40#" 8.26546
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Lower_Nmos_0/IC" 32.1706
+cap "vias_gen$1_4/m1_0_0#" "Lower_Nmos_0/IA" 0.46412
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Lower_Nmos_0/nfet$2_0/a_2280_n40#" 0.0125368
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Vin+" 0.0229582
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Lower_Nmos_0/nfet_0/a_2280_n40#" 12.9207
+cap "upper_nmos_current_mirror_0/IC" "Lower_Nmos_0/IA" -0.395988
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_10/a_n69_146#" 0.0384057
+cap "vias_gen$1_4/m1_0_0#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 0.387168
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "upper_nmos_current_mirror_0/IC" 15.0559
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_13/a_n69_146#" 0.0144492
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_9/a_n69_146#" 3.84609
+cap "Lower_Nmos_0/IA" "bias_res_0/res_poly$1_9/a_n69_146#" 0.228126
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Lower_Nmos_0/IC" 313.801
+cap "Lower_Nmos_0/IA" "Lower_Nmos_0/IC" 12.0674
+cap "Lower_Nmos_0/nfet$2_0/a_3660_0#" "bias_res_0/res_poly$1_9/a_n69_146#" 0.162932
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "vias_gen$1_4/m1_0_0#" -4.44089e-16
+cap "Lower_Nmos_0/nfet$2_0/a_3660_0#" "Lower_Nmos_0/IC" 5.31289
+cap "Lower_Nmos_0/nfet_0/a_3020_n40#" "bias_res_0/res_poly$1_9/a_n69_146#" 2.18404
+cap "Lower_Nmos_0/nfet_0/a_3020_n40#" "Lower_Nmos_0/IC" 10.6228
+cap "bias_res_0/res_poly$1_8/a_n69_n582#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 13.2999
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_9/a_n69_146#" 1.88086
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_10/a_n69_146#" 0.184791
+cap "bias_res_0/res_poly$1_0/a_n69_146#" "Lower_Nmos_0/IC" 0.634222
+cap "bias_res_0/res_poly$1_12/a_n69_146#" "Lower_Nmos_0/IC" 0.124735
+cap "Lower_Nmos_0/IC" "Vin+" 0.153238
+cap "Vin-" "Lower_Nmos_0/IC" 0.260312
+cap "Lower_Nmos_0/IA" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 58.1677
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Lower_Nmos_0/nfet$2_0/a_3660_0#" 62.2721
+cap "bias_res_0/res_poly$1_8/a_n69_n582#" "Lower_Nmos_0/IC" 2.33874
+cap "bias_res_0/res_poly$1_8/a_n69_146#" "Lower_Nmos_0/IC" 0.300799
+cap "bias_res_0/res_poly$1_3/a_n69_n582#" "Lower_Nmos_0/IC" 0.0128979
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_12/a_n69_n582#" 0.758826
+cap "Lower_Nmos_0/nfet_0/a_3020_n40#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 8.29935
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_3/a_n69_n582#" 9.0961
+cap "Lower_Nmos_0/IC" "active_load_0/VSS" 201.001
+cap "bias_res_0/res_poly$1_13/a_n69_146#" "Lower_Nmos_0/IC" 0.150494
+cap "bias_res_0/res_poly$1_9/a_n69_146#" "Lower_Nmos_0/nfet$2_0/a_5140_0#" 11.4981
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_12/a_n69_146#" 1.31281
+cap "Lower_Nmos_0/IA" "bias_res_0/res_poly$1_3/a_n69_n582#" 1.28054
+cap "Lower_Nmos_0/IA" "active_load_0/VSS" 107.565
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_0/a_n69_146#" 5.98612
+cap "bias_res_0/res_poly$1_9/a_n69_146#" "active_load_0/VSS" 2.4117
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "active_load_0/VSS" 6.58124
+cap "Lower_Nmos_0/nfet_0/a_4500_n40#" "bias_res_0/res_poly$1_3/a_n69_n582#" 12.2597
+cap "bias_res_0/res_poly$1_9/a_n69_146#" "Lower_Nmos_0/IC" 7.31797
+cap "Lower_Nmos_0/nfet$2_0/a_5140_0#" "bias_res_0/res_poly$1_3/a_n69_n582#" 0.914592
+cap "Lower_Nmos_0/nfet$2_0/a_5140_0#" "active_load_0/VSS" 79.913
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_8/a_n69_146#" 3.16343
+cap "Lower_Nmos_0/IC" "bias_res_0/res_poly$1_10/a_n69_146#" 1.94437
+cap "Lower_Nmos_0/IA" "bias_res_0/res_poly$1_1/a_n69_146#" 1.85897
+cap "bias_res_0/res_poly$1_9/a_n69_146#" "Lower_Nmos_0/IA" 1.05242
+cap "active_load_0/VSS" "bias_res_0/res_poly$1_3/a_n69_n582#" 20.1317
+cap "bias_res_0/res_poly$1_9/a_n69_146#" "Lower_Nmos_0/nfet_0/a_4500_n40#" 6.11531
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "Lower_Nmos_0/IA" 0.714849
+cap "Lower_Nmos_0/nfet$2_0/a_5980_n40#" "bias_res_0/res_poly$1_5/a_n69_146#" 0.905969
+cap "bias_res_0/res_poly$1_8/a_n69_146#" "active_load_0/VSS" 0.0161517
+cap "active_load_0/VSS" "Lower_Nmos_0/nfet$2_0/a_6620_0#" 29.3627
+cap "bias_res_0/res_poly$1_10/a_n69_146#" "active_load_0/VSS" 0.00807586
+cap "Lower_Nmos_0/nfet$2_0/a_5980_n40#" "bias_res_0/res_poly$1_1/a_n69_146#" 2.30214
+cap "active_load_0/VSS" "active_load_0/IB" 1.53772
+cap "bias_res_0/res_poly$1_0/a_n69_146#" "active_load_0/VSS" 0.0161517
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "active_load_0/VSS" 6.17955
+cap "bias_res_0/res_poly$1_3/a_n69_n582#" "active_load_0/VSS" 0.0248204
+cap "active_load_0/VSS" "bias_res_0/res_poly$1_1/a_n69_146#" 22.9223
+cap "active_load_0/VSS" "Vin-" -0.0173425
+cap "Lower_Nmos_0/nfet$2_0/a_5980_n40#" "active_load_0/VSS" 162.762
+cap "active_load_0/VSS" "active_load_0/IA" 1.20873
+cap "Lower_Nmos_0/nfet$2_0/a_7460_n40#" "active_load_0/IB" 32.2136
+cap "active_load_0/VSS" "active_load_0/IB" 24.8015
+cap "active_load_0/VSS" "Lower_Nmos_0/nfet$2_0/a_7460_n40#" 20.4374
+cap "active_load_0/IA" "active_load_0/VSS" 85.8136
+cap "Differential_pair_0/w_n1504_n4833#" "active_load_0/VSS" 52.0058
+cap "vias_gen$41_1/m2_0_0#" "active_load_0/VSS" 2.67922
+cap "vias_gen$41_0/m2_0_0#" "active_load_0/IB" 48.91
+cap "active_load_0/VSS" "active_load_0/IB" 37.2767
+cap "vias_gen$41_0/m2_0_0#" "active_load_0/VSS" 87.1907
+cap "active_load_0/IA" "vias_gen$41_0/m2_0_0#" 0.0245228
+cap "Differential_pair_0/Vin+" "active_load_0/VSS" 19.0407
+cap "Differential_pair_0/I_M2" "vias_gen$41_0/m2_0_0#" 6.47535
+cap "Differential_pair_0/Vin+" "vias_gen$41_0/m2_0_0#" 110.035
+cap "active_load_0/VSS" "Differential_pair_0/I_M3" 146.236
+cap "Differential_pair_0/w_n1504_n4833#" "active_load_0/VSS" 34.8591
+cap "Differential_pair_0/w_n1504_n4833#" "vias_gen$41_0/m2_0_0#" 19.181
+cap "Differential_pair_0/I_M3" "vias_gen$41_0/m2_0_0#" 38.3005
+cap "li_1729_n4849#" "vias_gen$41_0/m2_0_0#" 0.0956769
+cap "Pmos_current_mirror_0/vias_gen$1_10/m1_0_0#" "vias_gen$41_0/m2_0_0#" 0.163061
+cap "Differential_pair_0/Vin+" "Differential_pair_0/I_M2" 51.7208
+cap "Differential_pair_0/w_n1504_n4833#" "Differential_pair_0/Vin+" 71.1264
+cap "Differential_pair_0/Vin+" "Differential_pair_0/I_M3" 21.7394
+cap "Differential_pair_0/w_n1504_n4833#" "Differential_pair_0/I_M2" 0.0016366
+cap "li_1729_n4849#" "Differential_pair_0/Vin+" 0.0815808
+cap "li_1729_n4849#" "Differential_pair_0/w_n1504_n4833#" 0.0494995
+cap "Pmos_current_mirror_0/vias_gen$1_10/m1_0_0#" "Differential_pair_0/w_n1504_n4833#" 0.0217294
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Vin-" 0.0137529
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Vin+" 0.0905635
+cap "li_1729_n4849#" "Differential_pair_0/Vin+" 0.206303
+cap "Differential_pair_0/Vin-" "Pmos_current_mirror_0/ID" 0.00977094
+cap "li_1729_n4849#" "Differential_pair_0/Vin-" 0.0222582
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Vin+" 0.0550117
+cap "Differential_pair_0/pfet$1_1/a_1160_0#" "Differential_pair_0/I_M3" 0.0234804
+cap "Differential_pair_0/pfet$1_1/a_560_0#" "Differential_pair_0/I_M3" 0.0719092
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Vin-" 17.4697
+cap "nfet$6_0/a_n149_n154#" "Differential_pair_0/Ibias" 163.622
+cap "nfet$6_0/a_n149_n154#" "Differential_pair_0/Vin+" 0.461237
+cap "vias_gen$6_5/li_0_0#" "nfet$6_0/a_n149_n154#" 1.25102
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/ID" 12.9829
+cap "vias_gen$6_5/li_0_0#" "Differential_pair_0/Ibias" 0.0494995
+cap "nfet$6_0/a_n149_n154#" "Differential_pair_0/Vin-" 0.626068
+cap "Differential_pair_0/I_M3" "Differential_pair_0/I_M2" 0.0912254
+cap "vias_gen$6_5/li_0_0#" "Differential_pair_0/Vin-" 0.0873717
+cap "nfet$6_0/a_n149_n154#" "Pmos_current_mirror_0/ID" 1.38778e-17
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/ID" 0.499792
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Vin+" 0.0867718
+cap "Differential_pair_0/I_M3" "nfet$6_0/a_n149_n154#" 174.396
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Ibias" 369.559
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Vin+" 8.22999
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Vin-" 0.145392
+cap "CC_0/mim_cap_3/m3_n40_n40#" "vias_gen$19_0/m1_0_0#" 0.271659
+cap "vias_gen$19_0/m1_0_0#" "Pmos_current_mirror_0/ID" 114.756
+cap "CC_0/mim_cap_1/m3_n40_n40#" "vias_gen$19_0/m1_0_0#" 0.146278
+cap "Pmos_current_mirror_0/ID" "CC_0/vias_gen$26_1/a_0_0#" 152.285
+cap "CC_0/mim_cap_3/m3_n40_n40#" "CC_0/vias_gen$26_1/a_0_0#" 0.518373
+cap "CC_0/mim_cap_1/m3_n40_n40#" "CC_0/vias_gen$26_1/a_0_0#" 14.6317
+cap "CC_0/mim_cap_3/m3_n40_n40#" "Pmos_current_mirror_0/ID" 4.89978
+cap "vias_gen$6_5/li_0_0#" "vias_gen$19_0/m1_0_0#" 7.63901
+cap "Differential_pair_0/Ibias" "CC_0/vias_gen$26_1/a_0_0#" 4.5461
+cap "CC_0/m4_3023_3729#" "vias_gen$19_0/m1_0_0#" 0.504649
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Ibias" 1.70035
+cap "Differential_pair_0/Vin-" "CC_0/vias_gen$26_1/a_0_0#" 0.0321441
+cap "vias_gen$6_5/li_0_0#" "CC_0/vias_gen$26_1/a_0_0#" 11.0643
+cap "CC_0/m4_3023_3729#" "CC_0/vias_gen$26_1/a_0_0#" 5.42404
+cap "Differential_pair_0/Vin-" "Pmos_current_mirror_0/ID" 0.0076906
+cap "vias_gen$6_5/li_0_0#" "Pmos_current_mirror_0/ID" 0.156222
+cap "Differential_pair_0/pfet$1_1/a_2360_0#" "CC_0/vias_gen$26_1/a_0_0#" 0.00905127
+cap "vias_gen$19_0/m1_0_0#" "CC_0/vias_gen$26_1/a_0_0#" 69.7235
+cap "Pmos_current_mirror_0/ID" "CC_0/vias_gen$26_1/a_0_0#" 1.01708
+cap "CC_0/m4_3023_3729#" "CC_0/vias_gen$26_1/a_0_0#" 67.9189
+cap "CC_0/m4_4816_2140#" "CC_0/vias_gen$26_1/a_0_0#" 93.237
+cap "vias_gen$19_0/m1_0_0#" "CC_0/m4_3023_3729#" 18.654
+cap "vias_gen$19_0/m1_0_0#" "CC_0/m4_4816_2140#" 25.248
+cap "CC_0/m4_3023_3729#" "Pmos_current_mirror_0/ID" 6.29964
+cap "vias_gen$19_0/m1_0_0#" "CC_0/vias_gen$26_1/a_0_0#" 6.66134e-16
+cap "Pmos_current_mirror_0/ID" "CC_0/m4_4816_2140#" 7.0592
+cap "CC_0/m4_4816_2140#" "vias_gen$35_0/m1_0_0#" -8.52651e-13
+cap "vias_gen$35_0/m1_0_0#" "CC_0/vias_gen$24_0/a_0_0#" -12.2932
+cap "CC_0/vias_gen$24_0/a_0_0#" "CC_0/mim_cap_0/m3_n40_n40#" 23.2171
+cap "vias_gen$35_0/m1_0_0#" "CC_0/mim_cap_0/m3_n40_n40#" 451.754
+cap "Pmos_current_mirror_0/VDD" "upper_nmos_current_mirror_0/IA" 3.05636
+cap "Vin-" "upper_nmos_current_mirror_0/IA" 10.9005
+cap "upper_nmos_current_mirror_0/VSS" "upper_nmos_current_mirror_0/IA" 103.132
+cap "upper_nmos_current_mirror_0/IB" "upper_nmos_current_mirror_0/IA" 265.096
+cap "Vin-" "Pmos_current_mirror_0/VDD" 2.11051
+cap "upper_nmos_current_mirror_0/VSS" "Pmos_current_mirror_0/VDD" 61.5538
+cap "Pmos_current_mirror_0/VDD" "upper_nmos_current_mirror_0/IB" 10.3056
+cap "upper_nmos_current_mirror_0/VSS" "Vin-" 62.4021
+cap "Vin-" "upper_nmos_current_mirror_0/IB" 32.5149
+cap "upper_nmos_current_mirror_0/VSS" "upper_nmos_current_mirror_0/IB" 6.61517
+cap "Vin+" "upper_nmos_current_mirror_0/IA" 44.2625
+cap "Vin+" "Pmos_current_mirror_0/VDD" 93.1062
+cap "upper_nmos_current_mirror_0/VSS" "Vin+" 3.53122
+cap "Vin+" "upper_nmos_current_mirror_0/IB" 1.24965
+cap "Vin+" "upper_nmos_current_mirror_0/IA" 72.6554
+cap "Vin-" "Lower_Nmos_0/IA" 4.74297
+cap "upper_nmos_current_mirror_0/IB" "Pmos_current_mirror_0/VDD" 132.773
+cap "Pmos_current_mirror_0/VDD" "Lower_Nmos_0/IA" 0.276619
+cap "upper_nmos_current_mirror_0/IB" "upper_nmos_current_mirror_0/IA" 185.329
+cap "upper_nmos_current_mirror_0/IA" "Lower_Nmos_0/IA" 5.43437
+cap "Vin-" "upper_nmos_current_mirror_0/VSS" 69.1728
+cap "upper_nmos_current_mirror_0/IB" "Vin+" 8.53588
+cap "Pmos_current_mirror_0/VDD" "upper_nmos_current_mirror_0/VSS" 32.0674
+cap "Vin+" "Lower_Nmos_0/IA" 0.0964106
+cap "Vin-" "Pmos_current_mirror_0/VDD" 1.05344
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/VSS" 163.369
+cap "Vin-" "upper_nmos_current_mirror_0/IA" 9.73565
+cap "upper_nmos_current_mirror_0/IB" "Lower_Nmos_0/IA" 0.101076
+cap "Pmos_current_mirror_0/VDD" "upper_nmos_current_mirror_0/IA" 1.45896
+cap "Vin+" "upper_nmos_current_mirror_0/VSS" 5.01511
+cap "Vin+" "Pmos_current_mirror_0/VDD" 60.8274
+cap "upper_nmos_current_mirror_0/IB" "upper_nmos_current_mirror_0/VSS" 131.242
+cap "upper_nmos_current_mirror_0/IB" "Vin-" 28.4727
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Vin-" 53.1332
+cap "Vin+" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 4.17729
+cap "upper_nmos_current_mirror_0/IC" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" -0.20726
+cap "Pmos_current_mirror_0/IC" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 3.08946
+cap "upper_nmos_current_mirror_0/IA" "Pmos_current_mirror_0/w_n670_n11297#" 2.09543
+cap "upper_nmos_current_mirror_0/IA" "Pmos_current_mirror_0/IB" 350.309
+cap "Pmos_current_mirror_0/IB" "Pmos_current_mirror_0/w_n670_n11297#" 215.754
+cap "upper_nmos_current_mirror_0/IA" "Vin-" 27.1152
+cap "upper_nmos_current_mirror_0/IA" "Vin+" 67.6878
+cap "Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 77.9178
+cap "upper_nmos_current_mirror_0/IC" "upper_nmos_current_mirror_0/IA" 2.38252
+cap "upper_nmos_current_mirror_0/IC" "Pmos_current_mirror_0/w_n670_n11297#" 0.0471481
+cap "Pmos_current_mirror_0/IB" "Vin-" 48.0128
+cap "Pmos_current_mirror_0/IB" "Vin+" 1.03669
+cap "upper_nmos_current_mirror_0/IC" "Pmos_current_mirror_0/IB" 0.0291635
+cap "Pmos_current_mirror_0/IC" "Pmos_current_mirror_0/IB" 7.25131
+cap "upper_nmos_current_mirror_0/IA" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 61.9396
+cap "upper_nmos_current_mirror_0/IC" "Vin-" 4.63619
+cap "upper_nmos_current_mirror_0/IC" "Vin+" 0.018863
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 7.73657
+cap "Pmos_current_mirror_0/IC" "Vin+" 6.51835
+cap "Pmos_current_mirror_0/IC" "Vin-" 0.0634658
+cap "Pmos_current_mirror_0/IB" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 178.467
+cap "Vin-" "Pmos_current_mirror_0/IC" 6.8789
+cap "vias_gen$1_4/m1_0_0#" "bias_res_0/res_poly$1_12/a_n69_n582#" 2.30376
+cap "vias_gen$1_4/m1_0_0#" "upper_nmos_current_mirror_0/IA" 11.7767
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_8/a_n69_n582#" 1.75711
+cap "Vin+" "upper_nmos_current_mirror_0/IA" 77.4534
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "li_1729_n4849#" 86.3044
+cap "Vin+" "vias_gen$1_4/m1_0_0#" 0.399534
+cap "Vin-" "Lower_Nmos_0/IA" 4.74297
+cap "vias_gen$1_4/m1_0_0#" "Pmos_current_mirror_0/IC" 79.8418
+cap "vias_gen$1_4/m1_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 6.18552
+cap "Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 51.0678
+cap "Vin+" "Pmos_current_mirror_0/IC" 35.0322
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Vin-" 60.8235
+cap "Lower_Nmos_0/IA" "upper_nmos_current_mirror_0/IA" 0.777489
+cap "li_1729_n4849#" "vias_gen$1_4/m1_0_0#" -0.811255
+cap "vias_gen$1_4/m1_0_0#" "Lower_Nmos_0/IA" 3.08445
+cap "Vin+" "Lower_Nmos_0/IA" 0.0964106
+cap "li_1729_n4849#" "Pmos_current_mirror_0/IC" 37.3409
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 160.45
+cap "Pmos_current_mirror_0/IC" "Lower_Nmos_0/IA" 0.0247512
+cap "Lower_Nmos_0/IA" "Pmos_current_mirror_0/w_n670_n11297#" 0.240979
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_12/a_n69_146#" 0.033371
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_12/a_n69_n582#" 4.46215
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "upper_nmos_current_mirror_0/IA" 13.2915
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "vias_gen$1_4/m1_0_0#" 106.379
+cap "vias_gen$1_4/m1_0_0#" "Vin-" 36.2522
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Vin+" 4.60663
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "bias_res_0/res_poly$1_10/a_n69_146#" 0.0163796
+cap "li_1729_n4849#" "Lower_Nmos_0/IA" 0.0479821
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Pmos_current_mirror_0/IC" 18.5476
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 6.6682
+cap "bias_res_0/res_poly$1_8/a_n69_n582#" "Vin-" 8.8816
+cap "bias_res_0/res_poly$1_8/a_n69_n582#" "Pmos_current_mirror_0/IC" 0.517496
+cap "Vin+" "bias_res_0/res_poly$1_11/a_n69_146#" 0.332361
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 160.45
+cap "Pmos_current_mirror_0/ID" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 36.036
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_12/a_n69_n582#" 1.95059
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_8/a_n69_146#" 0.117196
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_13/a_n69_146#" 0.501168
+cap "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "Pmos_current_mirror_0/pfet_1/a_3300_n106#" 7.5355
+cap "Pmos_current_mirror_0/IC" "bias_res_0/res_poly$1_12/a_n69_n582#" 1.30557
+cap "Pmos_current_mirror_0/IC" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 27.3816
+cap "Vin-" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 53.196
+cap "bias_res_0/res_poly$1_8/a_n69_146#" "Vin-" 0.634771
+cap "Vin-" "bias_res_0/res_poly$1_12/a_n69_n582#" 17.6817
+cap "Pmos_current_mirror_0/ID" "li_1729_n4849#" 33.7386
+cap "bias_res_0/res_poly$1_13/a_n69_146#" "Vin-" 1.77719
+cap "bias_res_0/res_poly$1_9/a_n69_146#" "Vin-" 0.157238
+cap "Vin-" "Lower_Nmos_0/IC" 2.81266
+cap "Vin+" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 16.8904
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_10/a_n69_146#" 0.17137
+cap "li_1729_n4849#" "Pmos_current_mirror_0/IC" 25.2895
+cap "bias_res_0/res_poly$1_8/a_n69_n582#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 3.83304
+cap "li_1729_n4849#" "Vin-" -2.36121
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_12/a_n69_146#" 0.273488
+cap "li_1729_n4849#" "bias_res_0/res_poly$1_11/a_n69_146#" 0.531349
+cap "Vin-" "bias_res_0/res_poly$1_10/a_n69_146#" 0.892353
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "Pmos_current_mirror_0/w_n670_n11297#" 1.14224
+cap "Pmos_current_mirror_0/pfet_0/a_3300_n106#" "Vin+" 27.3718
+cap "Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 56.0757
+cap "Vin-" "bias_res_0/res_poly$1_12/a_n69_146#" 1.27725
+cap "Pmos_current_mirror_0/ID" "Vin-" 4.14905
+cap "bias_res_0/res_poly$1_12/a_n69_n582#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 13.4714
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_11/a_n69_146#" 1.51962
+cap "Pmos_current_mirror_0/ID" "Vin+" 25.1392
+cap "bias_res_0/res_poly$1_8/a_n69_n582#" "Pmos_current_mirror_0/ID" 0.723619
+cap "Pmos_current_mirror_0/IC" "Vin-" 3.79179
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "Pmos_current_mirror_0/pfet_1/a_3300_n106#" 2.15869
+cap "bias_res_0/res_poly$1_0/a_n69_146#" "Vin-" 0.465705
+cap "Vin+" "Pmos_current_mirror_0/pfet_1/a_3300_n106#" 45.1976
+cap "vias_gen$1_4/m1_0_0#" "bias_res_0/res_poly$1_12/a_n69_n582#" 2.18335
+cap "vias_gen$1_4/m1_0_0#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 2.50999
+cap "li_1729_n4849#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 266.883
+cap "Vin+" "Pmos_current_mirror_0/IC" 24.1043
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "Vin-" 2.55238
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "Pmos_current_mirror_0/IC" 0.164798
+cap "Pmos_current_mirror_0/pfet_0/a_3300_n106#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 0.0855674
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#" 4.90743
+cap "Vin-" "li_1729_n4849#" -3.23771
+cap "Vin+" "Pmos_current_mirror_0/IC" 18.5022
+cap "Pmos_current_mirror_0/pfet_1/a_4920_n106#" "Vin+" 48.6253
+cap "bias_res_0/res_poly$1_2/a_n69_n582#" "Vin-" 13.613
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "Vin-" 11.0606
+cap "bias_res_0/res_poly$1_10/a_n69_146#" "Pmos_current_mirror_0/ID" 1.48196
+cap "bias_res_0/res_poly$1_8/a_n69_146#" "Pmos_current_mirror_0/ID" 1.01199
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_1/a_n69_146#" 0.307751
+cap "bias_res_0/res_poly$1_13/a_n69_146#" "Vin-" 18.6076
+cap "Pmos_current_mirror_0/pfet_0/a_4920_n106#" "Vin+" 29.6298
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_12/a_n69_146#" 2.37153
+cap "active_load_0/VSS" "li_1729_n4849#" 355.066
+cap "bias_res_0/res_poly$1_0/a_n69_146#" "Vin-" 4.84379
+cap "active_load_0/VSS" "Vin+" 20.6229
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_2/a_n69_n582#" 9.98085
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_11/a_n69_146#" 6.6625
+cap "Pmos_current_mirror_0/ID" "li_1729_n4849#" 62.5682
+cap "Pmos_current_mirror_0/w_n670_n11297#" "active_load_0/VSS" 3.44195
+cap "Pmos_current_mirror_0/ID" "Vin+" 45.5029
+cap "active_load_0/VSS" "Pmos_current_mirror_0/IC" 0.49659
+cap "Pmos_current_mirror_0/pfet_1/a_4920_n106#" "active_load_0/VSS" 6.50486
+cap "Pmos_current_mirror_0/ID" "bias_res_0/res_poly$1_13/a_n69_146#" 4.37188
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "Vin-" 6.10195
+cap "active_load_0/VSS" "Vin-" 32.9993
+cap "Vin-" "bias_res_0/res_poly$1_3/a_n69_n582#" 0.811698
+cap "bias_res_0/res_poly$1_10/a_n69_146#" "Vin-" 9.26952
+cap "Pmos_current_mirror_0/ID" "Vin-" 8.91711
+cap "bias_res_0/res_poly$1_9/a_n69_146#" "Vin-" 0.654461
+cap "bias_res_0/res_poly$1_8/a_n69_146#" "Vin-" 6.5988
+cap "bias_res_0/res_poly$1_2/a_n69_n582#" "li_1729_n4849#" 2.98264
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "li_1729_n4849#" 2.45129
+cap "Vin-" "bias_res_0/res_poly$1_1/a_n69_146#" 3.07157
+cap "bias_res_0/res_poly$1_2/a_n69_n582#" "Vin+" 1.86565
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "Vin+" 1.53329
+cap "bias_res_0/res_poly$1_12/a_n69_146#" "Vin-" 13.254
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "Pmos_current_mirror_0/ID" 1.17126
+cap "Pmos_current_mirror_0/ID" "active_load_0/VSS" 45.0287
+cap "Pmos_current_mirror_0/w_n670_n11297#" "li_1729_n4849#" 160.45
+cap "Pmos_current_mirror_0/w_n670_n11297#" "bias_res_0/res_poly$1_2/a_n69_n582#" 6.0158
+cap "Pmos_current_mirror_0/w_n670_n11297#" "bias_res_0/res_poly$1_11/a_n69_146#" 5.19338
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Vin+" 50.7353
+cap "bias_res_0/res_poly$1_2/a_n69_n582#" "Pmos_current_mirror_0/IC" 0.867934
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "Pmos_current_mirror_0/IC" 0.749279
+cap "Pmos_current_mirror_0/IC" "li_1729_n4849#" 12.7407
+cap "Pmos_current_mirror_0/pfet_1/a_4920_n106#" "bias_res_0/res_poly$1_2/a_n69_n582#" 11.3691
+cap "Pmos_current_mirror_0/pfet_1/a_4920_n106#" "bias_res_0/res_poly$1_11/a_n69_146#" 9.81486
+cap "Vin-" "bias_res_0/res_poly$1_1/a_n69_146#" 3.33225
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 160.45
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "active_load_0/VSS" 15.506
+cap "Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 51.1663
+cap "li_1729_n4849#" "Pmos_current_mirror_0/pfet_1/a_6980_0#" 68.1304
+cap "Vin-" "Pmos_current_mirror_0/pfet_1/a_6980_0#" 8.3117
+cap "Vin+" "Pmos_current_mirror_0/pfet_1/a_6980_0#" 51.1469
+cap "Vin+" "Pmos_current_mirror_0/pfet_1/a_6540_n106#" 44.9137
+cap "Vin-" "li_1729_n4849#" -1.01525
+cap "active_load_0/VSS" "Pmos_current_mirror_0/w_n670_n11297#" 4.19115
+cap "active_load_0/VSS" "Pmos_current_mirror_0/pfet_1/a_6980_0#" 68.7549
+cap "li_1729_n4849#" "Pmos_current_mirror_0/IC" 12.3078
+cap "Vin+" "Pmos_current_mirror_0/IC" 18.5022
+cap "Pmos_current_mirror_0/pfet_1/a_6540_n106#" "active_load_0/VSS" 8.87734
+cap "active_load_0/IB" "active_load_0/VSS" 3.12933
+cap "li_1729_n4849#" "active_load_0/VSS" 139.035
+cap "active_load_0/VSS" "bias_res_0/res_poly$1_12/a_n69_146#" 0.0310479
+cap "Vin-" "active_load_0/VSS" 70.4823
+cap "Vin+" "active_load_0/VSS" 9.54402
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "Pmos_current_mirror_0/pfet_1/a_6980_0#" 0.754502
+cap "active_load_0/VSS" "bias_res_0/res_poly$1_10/a_n69_146#" 0.00807586
+cap "bias_res_0/res_poly$1_1/a_n69_146#" "Pmos_current_mirror_0/pfet_1/a_6980_0#" 0.220924
+cap "Vin-" "bias_res_0/res_poly$1_5/a_n69_146#" 6.48552
+cap "active_load_0/IB" "bias_res_0/res_poly$1_5/a_n69_146#" 0.47678
+cap "Pmos_current_mirror_0/IC" "active_load_0/VSS" 0.514329
+cap "Vin+" "Pmos_current_mirror_0/pfet_0/a_6540_n106#" 27.3718
+cap "active_load_0/IA" "active_load_0/VSS" 9.30572
+cap "active_load_0/IB" "Vin+" 10.2453
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Vin+" 54.3291
+cap "active_load_0/IA" "Pmos_current_mirror_0/pfet_1/a_8060_0#" 3.48771
+cap "active_load_0/IB" "vias_gen$41_0/m2_0_0#" 117.029
+cap "Pmos_current_mirror_0/IC" "active_load_0/IA" 0.819296
+cap "active_load_0/IB" "active_load_0/VSS" 6.92625
+cap "active_load_0/IA" "Pmos_current_mirror_0/pfet_0/a_7620_n106#" 0.0864627
+cap "active_load_0/IB" "Pmos_current_mirror_0/pfet_1/a_8060_0#" 143.273
+cap "Pmos_current_mirror_0/w_n670_n11297#" "active_load_0/VSS" 0.238411
+cap "active_load_0/IA" "li_1729_n4849#" 0.450073
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "active_load_0/IB" 0.50899
+cap "Pmos_current_mirror_0/IC" "active_load_0/IB" 0.962097
+cap "active_load_0/IB" "li_1729_n4849#" 17.3095
+cap "Pmos_current_mirror_0/w_n670_n11297#" "li_1729_n4849#" 160.45
+cap "active_load_0/IA" "Pmos_current_mirror_0/pfet_1/a_7620_n106#" 8.5714
+cap "active_load_0/VSS" "Vin+" 2.20849
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "active_load_0/IB" 15.793
+cap "Pmos_current_mirror_0/pfet_1/a_8060_0#" "Vin+" 45.5029
+cap "active_load_0/VSS" "vias_gen$41_0/m2_0_0#" 18.2196
+cap "Pmos_current_mirror_0/IC" "Vin+" 18.5022
+cap "Pmos_current_mirror_0/pfet_0/a_7620_n106#" "Vin+" 28.1106
+cap "vias_gen$41_0/m2_0_0#" "Pmos_current_mirror_0/pfet_1/a_8060_0#" 8.91711
+cap "active_load_0/VSS" "Pmos_current_mirror_0/pfet_1/a_8060_0#" 0.476879
+cap "Pmos_current_mirror_0/IC" "active_load_0/VSS" 0.0262892
+cap "active_load_0/IA" "active_load_0/IB" 74.7503
+cap "active_load_0/VSS" "li_1729_n4849#" 66.3999
+cap "Pmos_current_mirror_0/pfet_1/a_8060_0#" "li_1729_n4849#" 62.5682
+cap "active_load_0/IA" "Pmos_current_mirror_0/w_n670_n11297#" 7.6594
+cap "Pmos_current_mirror_0/IC" "li_1729_n4849#" 12.7407
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "Vin+" 46.3729
+cap "Pmos_current_mirror_0/w_n670_n11297#" "active_load_0/IB" 8.87302
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "active_load_0/VSS" 0.781485
+cap "active_load_0/IA" "Vin+" -2.22045e-16
+cap "active_load_0/IA" "vias_gen$41_0/m2_0_0#" 8.04761
+cap "li_1729_n4849#" "Pmos_current_mirror_0/pfet_1/a_10220_0#" 62.5682
+cap "active_load_0/IB" "active_load_0/VSS" 60.6866
+cap "active_load_0/IA" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 32.7854
+cap "active_load_0/IA" "Pmos_current_mirror_0/pfet_1/a_10220_0#" 25.4207
+cap "vias_gen$41_0/m2_0_0#" "active_load_0/IB" 81.2022
+cap "active_load_0/VSS" "Pmos_current_mirror_0/pfet_1/a_10220_0#" 0.376345
+cap "Pmos_current_mirror_0/pfet_1/a_9240_n106#" "active_load_0/VSS" 2.01085
+cap "active_load_0/IA" "li_1729_n4849#" 3.55271e-15
+cap "Pmos_current_mirror_0/IC" "li_1729_n4849#" 12.7407
+cap "active_load_0/IA" "Pmos_current_mirror_0/IC" 2.87092
+cap "vias_gen$41_0/m2_0_0#" "Pmos_current_mirror_0/pfet_1/a_10220_0#" 9.10014
+cap "Pmos_current_mirror_0/w_n670_n11297#" "vias_gen$41_1/m2_0_0#" 52.4819
+cap "li_1729_n4849#" "active_load_0/VSS" 63.0662
+cap "Pmos_current_mirror_0/pfet_0/a_9240_n106#" "vias_gen$41_1/m2_0_0#" 28.891
+cap "active_load_0/VSS" "Differential_pair_0/w_n1504_n4833#" 22.6796
+cap "active_load_0/IA" "active_load_0/VSS" 107.764
+cap "active_load_0/IB" "Pmos_current_mirror_0/w_n670_n11297#" 2.12454
+cap "Pmos_current_mirror_0/IC" "active_load_0/VSS" 0.241129
+cap "vias_gen$41_0/m2_0_0#" "active_load_0/IA" 0.0194567
+cap "active_load_0/IB" "vias_gen$41_1/m2_0_0#" 4.03059
+cap "vias_gen$41_0/m2_0_0#" "active_load_0/VSS" 77.8698
+cap "vias_gen$41_1/m2_0_0#" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 47.45
+cap "vias_gen$41_1/m2_0_0#" "Pmos_current_mirror_0/pfet_1/a_10220_0#" 45.5029
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 160.45
+cap "active_load_0/IB" "Pmos_current_mirror_0/pfet_1/a_10220_0#" 139.53
+cap "active_load_0/IB" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 2.49017
+cap "active_load_0/IA" "Pmos_current_mirror_0/w_n670_n11297#" 23.7492
+cap "active_load_0/IA" "Pmos_current_mirror_0/pfet_0/a_9240_n106#" 0.259388
+cap "Pmos_current_mirror_0/w_n670_n11297#" "active_load_0/VSS" 1.67144
+cap "Pmos_current_mirror_0/IC" "vias_gen$41_1/m2_0_0#" 18.5022
+cap "active_load_0/IB" "li_1729_n4849#" 7.93702
+cap "active_load_0/IA" "active_load_0/IB" 202.569
+cap "vias_gen$41_1/m2_0_0#" "active_load_0/VSS" 3.69808
+cap "active_load_0/IB" "Pmos_current_mirror_0/IC" 0.27971
+cap "Pmos_current_mirror_0/pfet_1/a_11300_0#" "Differential_pair_0/I_M2" 23.7631
+cap "li_1729_n4849#" "Pmos_current_mirror_0/pfet_1/a_14540_0#" 12.3078
+cap "Pmos_current_mirror_0/pfet_1/a_11300_0#" "vias_gen$41_0/m2_0_0#" 2.05345
+cap "Differential_pair_0/I_M3" "Differential_pair_0/w_n1504_n4833#" 0.791907
+cap "Differential_pair_0/I_M2" "Differential_pair_0/w_n1504_n4833#" -2.17335
+cap "vias_gen$41_0/m2_0_0#" "Differential_pair_0/w_n1504_n4833#" 1.4907
+cap "Pmos_current_mirror_0/pfet_0/a_10320_n106#" "Differential_pair_0/Vin+" 4.30288
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/w_n1504_n4833#" 6.12446
+cap "Pmos_current_mirror_0/pfet_1/a_11300_0#" "Differential_pair_0/w_n1504_n4833#" 1.92134
+cap "li_1729_n4849#" "Differential_pair_0/I_M3" 55.7741
+cap "li_1729_n4849#" "Differential_pair_0/I_M2" 12.8668
+cap "li_1729_n4849#" "vias_gen$41_0/m2_0_0#" 0.496379
+cap "Pmos_current_mirror_0/pfet_1/a_14540_0#" "Differential_pair_0/Vin+" 3.55506
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 160.45
+cap "li_1729_n4849#" "Pmos_current_mirror_0/pfet_1/a_11300_0#" 68.1304
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Differential_pair_0/Vin+" 7.00316
+cap "active_load_0/VSS" "Differential_pair_0/I_M3" 42.8767
+cap "li_1729_n4849#" "Differential_pair_0/w_n1504_n4833#" 129.782
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Vin+" 44.0365
+cap "Pmos_current_mirror_0/pfet_0/a_10320_n106#" "vias_gen$41_0/m2_0_0#" 0.0215791
+cap "vias_gen$41_0/m2_0_0#" "Differential_pair_0/Vin+" 16.1873
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/Vin+" 9.07053
+cap "Differential_pair_0/I_M2" "Differential_pair_0/Vin+" 29.2005
+cap "Pmos_current_mirror_0/pfet_1/a_14540_0#" "Differential_pair_0/I_M3" 0.483421
+cap "active_load_0/VSS" "Differential_pair_0/w_n1504_n4833#" 14.4445
+cap "Pmos_current_mirror_0/pfet_1/a_14540_0#" "Differential_pair_0/I_M2" 0.231421
+cap "Pmos_current_mirror_0/pfet_1/a_11300_0#" "Differential_pair_0/Vin+" 13.9209
+cap "Pmos_current_mirror_0/pfet_1/a_14540_0#" "vias_gen$41_0/m2_0_0#" 0.345791
+cap "Pmos_current_mirror_0/pfet_0/a_10320_n106#" "Differential_pair_0/w_n1504_n4833#" 0.0227149
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/pfet_1/a_10320_n106#" 3.5023
+cap "Differential_pair_0/Vin+" "Differential_pair_0/w_n1504_n4833#" 75.0359
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Differential_pair_0/I_M2" 2.19337
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "vias_gen$41_0/m2_0_0#" 2.3956
+cap "Pmos_current_mirror_0/pfet_1/a_14540_0#" "Differential_pair_0/w_n1504_n4833#" 0.797436
+cap "Differential_pair_0/I_M3" "Differential_pair_0/I_M2" 103.264
+cap "Differential_pair_0/I_M3" "vias_gen$41_0/m2_0_0#" 15.7429
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/I_M3" 2.24259
+cap "Pmos_current_mirror_0/pfet_1/a_11300_0#" "Differential_pair_0/I_M3" 355.476
+cap "li_1729_n4849#" "Differential_pair_0/Vin+" -0.0973368
+cap "Differential_pair_0/I_M2" "vias_gen$41_0/m2_0_0#" 4.6089
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Differential_pair_0/w_n1504_n4833#" 8.51936
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/I_M2" 1.26701
+cap "Pmos_current_mirror_0/w_n670_n11297#" "vias_gen$41_0/m2_0_0#" 3.04677
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/I_M3" 365.922
+cap "Differential_pair_0/Vin+" "Differential_pair_0/I_M3" 0.483207
+cap "Differential_pair_0/Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 5.79278
+cap "li_1729_n4849#" "Differential_pair_0/Vin-" 0.137501
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/I_M3" 3.80118
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Ibias" 1.78249
+cap "Differential_pair_0/Vin+" "Pmos_current_mirror_0/pfet_0/a_11940_n106#" 0.0136289
+cap "Differential_pair_0/Vin+" "Differential_pair_0/Ibias" 0.877565
+cap "Differential_pair_0/Vin+" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 6.56336
+cap "Differential_pair_0/Ibias" "Differential_pair_0/I_M3" 23.6938
+cap "Differential_pair_0/I_M2" "Differential_pair_0/I_M3" 173.214
+cap "Pmos_current_mirror_0/pfet_0/a_11940_n106#" "Differential_pair_0/I_M3" 0.0741146
+cap "Pmos_current_mirror_0/pfet_1/a_11940_n106#" "Differential_pair_0/I_M3" 1.62375
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/w_n670_n11297#" 6.00105
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Vin-" 0.180098
+cap "Pmos_current_mirror_0/ID" "li_1729_n4849#" 57.006
+cap "Differential_pair_0/Vin+" "li_1729_n4849#" 1.10001
+cap "Differential_pair_0/Vin-" "Differential_pair_0/I_M3" 0.134297
+cap "Differential_pair_0/Vin-" "Pmos_current_mirror_0/w_n670_n11297#" 0.672545
+cap "li_1729_n4849#" "Differential_pair_0/I_M3" 44.8524
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 160.45
+cap "Differential_pair_0/Ibias" "Differential_pair_0/I_M2" 0.0239401
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 11.3679
+cap "Differential_pair_0/Ibias" "Differential_pair_0/Vin-" 0.109775
+cap "Pmos_current_mirror_0/pfet_1/a_11940_n106#" "Differential_pair_0/Vin-" 0.883212
+cap "Differential_pair_0/Ibias" "li_1729_n4849#" 187.03
+cap "Differential_pair_0/I_M2" "li_1729_n4849#" 11.9712
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Vin+" 1.44079
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Pmos_current_mirror_0/ID" -26.7384
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/pfet_0/a_13020_n106#" 7.22893
+cap "Differential_pair_0/I_M2" "Pmos_current_mirror_0/pfet_0/a_13020_n106#" 0.0101235
+cap "Differential_pair_0/I_M2" "Differential_pair_0/Ibias" 6.39055
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Vin+" 1.73655
+cap "Pmos_current_mirror_0/pfet_0/a_13020_n106#" "Pmos_current_mirror_0/ID" -7.8903
+cap "nfet$6_0/a_n149_n154#" "vias_gen$6_5/li_0_0#" 1.25102
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Ibias" 242.553
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/ID" 259.659
+cap "Differential_pair_0/I_M3" "Differential_pair_0/I_M2" 99.1922
+cap "Pmos_current_mirror_0/w_n670_n11297#" "vias_gen$6_5/li_0_0#" 160.45
+cap "Differential_pair_0/I_M2" "Pmos_current_mirror_0/ID" 0.294916
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/Vin-" 2.95091
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/ID" 376.609
+cap "Pmos_current_mirror_0/pfet_0/a_13020_n106#" "Differential_pair_0/Vin-" 0.0193076
+cap "Differential_pair_0/Ibias" "vias_gen$6_5/li_0_0#" 137.326
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/pfet_1/a_13020_n106#" 43.4455
+cap "Differential_pair_0/I_M2" "Pmos_current_mirror_0/pfet_1/a_13020_n106#" 1.55811
+cap "Differential_pair_0/I_M2" "vias_gen$6_5/li_0_0#" 3.39177
+cap "Differential_pair_0/Ibias" "Differential_pair_0/Vin-" 0.372136
+cap "Differential_pair_0/Ibias" "nfet$6_0/a_580_0#" -0.884172
+cap "Pmos_current_mirror_0/pfet_1/a_13020_n106#" "Pmos_current_mirror_0/ID" -24.0167
+cap "Differential_pair_0/I_M3" "vias_gen$6_5/li_0_0#" 4.89729
+cap "Pmos_current_mirror_0/ID" "vias_gen$6_5/li_0_0#" 54.8886
+cap "Differential_pair_0/I_M3" "Differential_pair_0/Vin-" 14.4594
+cap "Differential_pair_0/I_M3" "nfet$6_0/a_580_0#" 0.0125675
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Vin-" 0.610534
+cap "Differential_pair_0/Ibias" "nfet$6_0/a_n149_n154#" 14.8476
+cap "Differential_pair_0/I_M2" "nfet$6_0/a_n149_n154#" 0.0606696
+cap "Differential_pair_0/I_M3" "nfet$6_0/a_n149_n154#" 1.05624
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/Ibias" 51.8605
+cap "Differential_pair_0/I_M2" "Pmos_current_mirror_0/w_n670_n11297#" 2.92901
+cap "Pmos_current_mirror_0/pfet_1/a_13020_n106#" "Differential_pair_0/Vin-" 2.28462
+cap "Differential_pair_0/Vin-" "vias_gen$6_5/li_0_0#" 0.466128
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/w_n670_n11297#" 4.15438
+cap "Pmos_current_mirror_0/w_n670_n11297#" "vias_gen$19_0/m1_0_0#" 45.4937
+cap "CC_0/vias_gen$26_1/a_0_0#" "CC_0/m4_3023_3729#" 45.6821
+cap "CC_0/vias_gen$26_1/a_0_0#" "vias_gen$19_0/m1_0_0#" 126.936
+cap "vias_gen$6_5/li_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 108.446
+cap "Pmos_current_mirror_0/ID" "Differential_pair_0/Ibias" 8.02376
+cap "vias_gen$6_5/li_0_0#" "CC_0/vias_gen$26_1/a_0_0#" 263.028
+cap "CC_0/m4_3023_3729#" "Differential_pair_0/Ibias" -0.945145
+cap "vias_gen$19_0/m1_0_0#" "Differential_pair_0/Ibias" 0.00230973
+cap "CC_0/vias_gen$26_1/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 1.4432
+cap "vias_gen$6_5/li_0_0#" "Differential_pair_0/Ibias" 3.1116
+cap "input_second_stage_0/nfet$4_0/a_960_n40#" "Pmos_current_mirror_0/ID" 26.5231
+cap "vias_gen$6_5/li_0_0#" "input_second_stage_0/nfet$4_0/a_0_0#" 0.454819
+cap "Pmos_current_mirror_0/ID" "CC_0/m4_3023_3729#" 10.9794
+cap "input_second_stage_0/nfet$4_0/a_960_n40#" "vias_gen$19_0/m1_0_0#" 0.931797
+cap "Pmos_current_mirror_0/ID" "CC_0/mim_cap_3/m3_n40_n40#" 5.05534
+cap "vias_gen$6_5/li_0_0#" "input_second_stage_0/nfet$4_0/a_560_0#" 0.192141
+cap "vias_gen$6_5/li_0_0#" "Differential_pair_0/I_M2" 0.0183417
+cap "CC_0/m4_3023_3729#" "CC_0/mim_cap_3/m3_n40_n40#" 0.878303
+cap "CC_0/vias_gen$26_1/a_0_0#" "Differential_pair_0/Ibias" 22.5797
+cap "Pmos_current_mirror_0/ID" "vias_gen$19_0/m1_0_0#" 131.259
+cap "CC_0/m4_3023_3729#" "vias_gen$19_0/m1_0_0#" 1.00694
+cap "vias_gen$6_5/li_0_0#" "input_second_stage_0/nfet$4_0/a_960_n40#" 6.82029
+cap "vias_gen$6_5/li_0_0#" "Pmos_current_mirror_0/ID" 160.831
+cap "vias_gen$6_5/li_0_0#" "CC_0/m4_3023_3729#" 102.359
+cap "CC_0/vias_gen$26_1/a_0_0#" "Differential_pair_0/I_M2" 0.126603
+cap "Differential_pair_0/Vin-" "Pmos_current_mirror_0/ID" 0.00868293
+cap "vias_gen$6_5/li_0_0#" "CC_0/mim_cap_3/m3_n40_n40#" 1.52939
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Pmos_current_mirror_0/ID" 33.9327
+cap "Pmos_current_mirror_0/w_n670_n11297#" "CC_0/m4_3023_3729#" 7.23823
+cap "vias_gen$6_5/li_0_0#" "vias_gen$19_0/m1_0_0#" 181.939
+cap "CC_0/vias_gen$26_1/a_0_0#" "Pmos_current_mirror_0/ID" 186.038
+cap "Pmos_current_mirror_0/ID" "CC_0/vias_gen$26_1/a_0_0#" 63.7287
+cap "vias_gen$6_5/li_0_0#" "CC_0/mim_cap_1/m3_n40_n40#" 2.14152
+cap "vias_gen$6_5/li_0_0#" "vias_gen$19_0/m1_0_0#" 48.7518
+cap "vias_gen$19_0/m1_0_0#" "CC_0/vias_gen$26_1/a_0_0#" 61.1713
+cap "CC_0/mim_cap_1/m3_n40_n40#" "CC_0/vias_gen$26_1/a_0_0#" 18.8249
+cap "Pmos_current_mirror_0/ID" "vias_gen$19_0/m1_0_0#" 13.9068
+cap "Pmos_current_mirror_0/ID" "CC_0/mim_cap_1/m3_n40_n40#" 302.619
+cap "CC_0/m4_3023_3729#" "Pmos_current_mirror_0/w_n670_n11297#" 0.530326
+cap "CC_0/mim_cap_1/m3_n40_n40#" "vias_gen$19_0/m1_0_0#" 18.4668
+cap "vias_gen$6_5/li_0_0#" "CC_0/m4_3023_3729#" 24.8113
+cap "CC_0/vias_gen$26_1/a_0_0#" "CC_0/m4_3023_3729#" 24.6561
+cap "CC_0/vias_gen$26_1/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 3.86569
+cap "Pmos_current_mirror_0/ID" "CC_0/m4_3023_3729#" 27.0689
+cap "Pmos_current_mirror_0/ID" "Pmos_current_mirror_0/w_n670_n11297#" 1.89321
+cap "vias_gen$19_0/m1_0_0#" "CC_0/m4_3023_3729#" 7.73859
+cap "vias_gen$6_5/li_0_0#" "CC_0/vias_gen$26_1/a_0_0#" 4.23164
+cap "CC_0/mim_cap_1/m3_n40_n40#" "CC_0/m4_3023_3729#" 20.3518
+cap "vias_gen$19_0/m1_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 0.061008
+cap "Pmos_current_mirror_0/ID" "vias_gen$6_5/li_0_0#" 78.1185
+cap "CC_0/mim_cap_1/m3_n40_n40#" "m3_17230_n5923#" 74.9587
+cap "CC_0/mim_cap_1/m3_n40_n40#" "Pmos_current_mirror_0/VDD" 5.19369
+cap "CC_0/mim_cap_1/m3_n40_n40#" "CC_0/vias_gen$26_1/a_0_0#" -1.42109e-14
+cap "CC_0/mim_cap_1/m3_n40_n40#" "vias_gen$35_0/m1_0_0#" 23.5658
+cap "vias_gen$35_0/m1_0_0#" "CC_0/mim_cap_1/m3_n40_n40#" 27.8328
+cap "CC_0/vias_gen$26_0/a_0_0#" "CC_0/mim_cap_1/m3_n40_n40#" -1.42109e-14
+cap "vias_gen$39_0/m3_0_0#" "CC_0/mim_cap_1/m3_n40_n40#" 74.3598
+cap "vias_gen$39_0/m3_0_0#" "vias_gen$35_0/m1_0_0#" 452.013
+cap "vias_gen$39_0/m3_0_0#" "CC_0/vias_gen$26_0/a_0_0#" 25.4419
+cap "Pmos_current_mirror_0/VDD" "vias_gen$35_0/m1_0_0#" 0.0126
+cap "vias_gen$39_0/m3_0_0#" "CC_0/mim_cap_0/m3_n40_n40#" 155.097
+cap "vias_gen$35_0/m1_0_0#" "CC_0/vias_gen$26_0/a_0_0#" -12.442
+cap "upper_nmos_current_mirror_0/VSS" "Pmos_current_mirror_0/VDD" 0.924324
+cap "upper_nmos_current_mirror_0/IA" "Vin-" 1.47997
+cap "Pmos_current_mirror_0/VDD" "upper_nmos_current_mirror_0/nfet$1_1/a_0_0#" 7.35648
+cap "upper_nmos_current_mirror_0/IB" "upper_nmos_current_mirror_0/IA" 11.795
+cap "Vin+" "Pmos_current_mirror_0/VDD" 2.38051
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/VSS" 0.641987
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/nfet$1_1/a_0_0#" 0.412055
+cap "Vin-" "Pmos_current_mirror_0/VDD" 1.67994
+cap "Vin+" "upper_nmos_current_mirror_0/IA" 1.97024
+cap "upper_nmos_current_mirror_0/IA" "Pmos_current_mirror_0/VDD" 0.997364
+cap "upper_nmos_current_mirror_0/nfet$1_1/a_960_0#" "upper_nmos_current_mirror_0/IA" 0.666565
+cap "Vin+" "upper_nmos_current_mirror_0/IA" 4.41341
+cap "upper_nmos_current_mirror_0/IA" "Vin-" 3.42786
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/nfet$1_1/a_1060_n40#" 18.5692
+cap "upper_nmos_current_mirror_0/IA" "Pmos_current_mirror_0/VDD" 0.912924
+cap "upper_nmos_current_mirror_0/IB" "Pmos_current_mirror_0/VDD" 0.58137
+cap "upper_nmos_current_mirror_0/VSS" "Pmos_current_mirror_0/VDD" 0.0808378
+cap "upper_nmos_current_mirror_0/IB" "upper_nmos_current_mirror_0/IA" 10.9357
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/VSS" 1.83709
+cap "upper_nmos_current_mirror_0/nfet$1_1/a_960_0#" "Pmos_current_mirror_0/VDD" 0.0161484
+cap "Vin+" "Pmos_current_mirror_0/VDD" 0.46971
+cap "Vin-" "Pmos_current_mirror_0/VDD" 0.276894
+cap "Vin-" "upper_nmos_current_mirror_0/IA" 2.23588
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/nfet$1_1/a_2460_0#" 0.317268
+cap "upper_nmos_current_mirror_0/IA" "Pmos_current_mirror_0/IB" 9.84864
+cap "upper_nmos_current_mirror_0/vias_gen$8_0/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 0.838987
+cap "Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 2.12624
+cap "upper_nmos_current_mirror_0/vias_gen$8_0/a_0_0#" "upper_nmos_current_mirror_0/IA" 1.20287
+cap "Vin+" "upper_nmos_current_mirror_0/IA" 2.82853
+cap "Pmos_current_mirror_0/w_n670_n11297#" "upper_nmos_current_mirror_0/nfet$1_1/a_3060_n40#" 0.851275
+cap "upper_nmos_current_mirror_0/IA" "Pmos_current_mirror_0/w_n670_n11297#" 3.54827
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/nfet$1_1/a_3060_n40#" 9.95918
+cap "Vin-" "Pmos_current_mirror_0/w_n670_n11297#" 1.62953
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Pmos_current_mirror_0/IB" 11.3822
+cap "upper_nmos_current_mirror_0/IA" "Pmos_current_mirror_0/IC" -1.13687e-13
+cap "upper_nmos_current_mirror_0/IA" "vias_gen$1_4/m1_0_0#" 11.4126
+cap "upper_nmos_current_mirror_0/IA" "Pmos_current_mirror_0/w_n670_n11297#" 2.72848e-12
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Vin+" 0.199765
+cap "Pmos_current_mirror_0/w_n670_n11297#" "li_1729_n4849#" 0.129212
+cap "upper_nmos_current_mirror_0/IA" "Vin+" 4.53626
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/nfet$1_1/a_3060_n40#" 5.35458
+cap "upper_nmos_current_mirror_0/IA" "li_1729_n4849#" 5.76519
+cap "bias_res_0/vias_gen$45_1/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 0.0404189
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Vin-" 0.123145
+cap "upper_nmos_current_mirror_0/IA" "bias_res_0/vias_gen$45_1/a_0_0#" 1.80021
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/nfet$1_1/a_4560_n40#" 7.68614
+cap "upper_nmos_current_mirror_0/IA" "upper_nmos_current_mirror_0/nfet$1_1/a_3960_0#" 1.0539
+cap "Pmos_current_mirror_0/w_n670_n11297#" "vias_gen$1_4/m1_0_0#" 0.81129
+cap "upper_nmos_current_mirror_0/IA" "Vin-" 3.61074
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "Pmos_current_mirror_0/ID" -2.84217e-14
+cap "Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 0.43267
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "li_1729_n4849#" 5.31071
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "Pmos_current_mirror_0/w_n670_n11297#" -2.27374e-13
+cap "Vin+" "Pmos_current_mirror_0/pfet_1/a_3300_n106#" 4.17218
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "bias_res_0/res_poly$1_12/a_n69_n582#" 0.662117
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "bias_res_0/res_poly$1_11/a_n69_146#" 2.13929
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Vin-" 0.260742
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "bias_res_0/res_poly$1_13/a_n69_146#" 0.0829132
+cap "Pmos_current_mirror_0/w_n670_n11297#" "bias_res_0/vias_gen$45_1/a_0_0#" 0.458804
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "bias_res_0/res_poly$1_12/a_n69_146#" 0.0545828
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "bias_res_0/res_poly$1_8/a_n69_n582#" 0.0926027
+cap "Pmos_current_mirror_0/w_n670_n11297#" "li_1729_n4849#" 0.272812
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "bias_res_0/res_poly$1_10/a_n69_146#" 0.0215362
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "Vin-" 3.25088
+cap "Pmos_current_mirror_0/pfet_1/a_3300_n106#" "bias_res_0/vias_gen$45_1/a_0_0#" 16.6792
+cap "Pmos_current_mirror_0/pfet_1/a_4920_n106#" "bias_res_0/res_poly$1_10/a_n69_146#" 0.202059
+cap "Vin-" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 3.79172
+cap "Vin-" "Pmos_current_mirror_0/w_n670_n11297#" 0.122295
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 0.228093
+cap "bias_res_0/vias_gen$45_1/a_0_0#" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 13.2178
+cap "bias_res_0/vias_gen$45_1/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 0.161764
+cap "li_1729_n4849#" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 6.03057
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 0.128366
+cap "bias_res_0/res_poly$1_11/a_n69_146#" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 9.67654
+cap "Pmos_current_mirror_0/IC" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" -1.77636e-15
+cap "Vin+" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 4.78012
+cap "Pmos_current_mirror_0/ID" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" -2.84217e-14
+cap "Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 0.197815
+cap "bias_res_0/res_poly$1_12/a_n69_146#" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 0.513558
+cap "bias_res_0/res_poly$1_2/a_n69_n582#" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 11.2566
+cap "bias_res_0/res_poly$1_13/a_n69_146#" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 0.780073
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Pmos_current_mirror_0/pfet_1/a_4920_n106#" 9.09495e-13
+cap "Vin-" "Pmos_current_mirror_0/w_n670_n11297#" 0.122295
+cap "Pmos_current_mirror_0/w_n670_n11297#" "li_1729_n4849#" 0.128366
+cap "Vin+" "Pmos_current_mirror_0/w_n670_n11297#" 0.197815
+cap "bias_res_0/res_poly$1_5/a_n69_146#" "Pmos_current_mirror_0/pfet_1/a_6540_n106#" 0.137428
+cap "bias_res_0/vias_gen$45_0/a_0_0#" "Pmos_current_mirror_0/pfet_1/a_6540_n106#" 10.1682
+cap "bias_res_0/vias_gen$45_0/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 0.196845
+cap "active_load_0/nfet$3_1/a_0_0#" "Pmos_current_mirror_0/pfet_1/a_6540_n106#" 6.1664
+cap "Vin-" "Pmos_current_mirror_0/pfet_1/a_6540_n106#" 3.32688
+cap "li_1729_n4849#" "Pmos_current_mirror_0/pfet_1/a_6540_n106#" 5.41908
+cap "Pmos_current_mirror_0/pfet_1/a_6980_0#" "Pmos_current_mirror_0/pfet_1/a_6540_n106#" 1.13687e-13
+cap "Vin+" "Pmos_current_mirror_0/pfet_1/a_6540_n106#" 4.27671
+cap "active_load_0/IA" "Pmos_current_mirror_0/w_n670_n11297#" 0.895616
+cap "Pmos_current_mirror_0/w_n670_n11297#" "active_load_0/IB" 0.742073
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "Vin-" 3.55053
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "active_load_0/nfet$3_1/a_960_0#" 0.90118
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "Pmos_current_mirror_0/pfet_1/a_8060_0#" -5.68434e-14
+cap "Pmos_current_mirror_0/w_n670_n11297#" "li_1729_n4849#" 0.226012
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "bias_res_0/vias_gen$45_0/a_0_0#" 1.12414
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "Pmos_current_mirror_0/IC" 1.77636e-15
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "Vin+" 4.4723
+cap "active_load_0/IA" "Pmos_current_mirror_0/pfet_1/a_7620_n106#" 8.18854
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Vin-" 0.214743
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "active_load_0/IB" 17.8499
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "li_1729_n4849#" 5.65232
+cap "bias_res_0/vias_gen$45_0/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 0.0327158
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "Pmos_current_mirror_0/w_n670_n11297#" 9.09495e-13
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Vin+" 0.339761
+cap "Pmos_current_mirror_0/pfet_1/a_7620_n106#" "active_load_0/nfet$3_1/a_0_0#" 0.106376
+cap "Pmos_current_mirror_0/pfet_1/a_9240_n106#" "Pmos_current_mirror_0/w_n670_n11297#" -4.54747e-13
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 0.159086
+cap "Vin-" "Pmos_current_mirror_0/w_n670_n11297#" 0.152141
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Vin+" 0.253684
+cap "Pmos_current_mirror_0/pfet_1/a_9240_n106#" "active_load_0/IB" 3.68167
+cap "active_load_0/IA" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 30.3007
+cap "active_load_0/vias_gen$32_0/a_0_0#" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 0.674317
+cap "active_load_0/nfet$3_1/a_1960_0#" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 0.0345902
+cap "active_load_0/IA" "Pmos_current_mirror_0/w_n670_n11297#" 1.21712
+cap "active_load_0/nfet$3_1/a_2560_n40#" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 1.93661
+cap "li_1729_n4849#" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 5.81765
+cap "Vin-" "Pmos_current_mirror_0/pfet_1/a_9240_n106#" 3.80222
+cap "Pmos_current_mirror_0/pfet_1/a_9240_n106#" "Vin+" 4.60413
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Vin+" 0.748729
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Differential_pair_0/pfet$1_0/a_2760_n106#" 0.701124
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Differential_pair_0/pfet$1_0/a_2460_n106#" 3.91964
+cap "Differential_pair_0/w_n1504_n4833#" "Pmos_current_mirror_0/w_n670_n11297#" 0.908789
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/pfet_1/a_10320_n106#" 7.04851
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/pfet$1_0/a_2760_n106#" 0.396234
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Differential_pair_0/I_M2" 5.47128
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Pmos_current_mirror_0/w_n670_n11297#" 1.36424e-12
+cap "Vin-" "Pmos_current_mirror_0/pfet_1/a_10320_n106#" 0.462521
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/w_n670_n11297#" 0.0877721
+cap "Differential_pair_0/I_M2" "Pmos_current_mirror_0/w_n670_n11297#" 0.0703047
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "li_1729_n4849#" 5.29039
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Differential_pair_0/pfet$1_0/a_2160_n106#" 1.21869
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Pmos_current_mirror_0/pfet_1/a_14540_0#" -1.77636e-15
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Differential_pair_0/w_n1504_n4833#" 35.3844
+cap "Pmos_current_mirror_0/pfet_1/a_10320_n106#" "Pmos_current_mirror_0/pfet_1/a_11300_0#" -5.68434e-14
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 0.144446
+cap "Differential_pair_0/pfet$1_0/a_660_n106#" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 1.06662
+cap "Pmos_current_mirror_0/pfet_1/a_11940_n106#" "Pmos_current_mirror_0/w_n670_n11297#" 2.50111e-12
+cap "Differential_pair_0/pfet$1_0/a_1560_n106#" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 2.87984
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 5.73273
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 44.4676
+cap "Pmos_current_mirror_0/pfet_1/a_11940_n106#" "Differential_pair_0/pfet$1_0/a_1260_n106#" 2.9862
+cap "li_1729_n4849#" "Pmos_current_mirror_0/w_n670_n11297#" 0.128366
+cap "Differential_pair_0/pfet$1_0/a_2160_n106#" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 0.577972
+cap "Pmos_current_mirror_0/ID" "Pmos_current_mirror_0/w_n670_n11297#" -3.55271e-15
+cap "Differential_pair_0/I_M2" "Pmos_current_mirror_0/w_n670_n11297#" 0.000745413
+cap "Pmos_current_mirror_0/pfet_1/a_11940_n106#" "li_1729_n4849#" 6.03057
+cap "Pmos_current_mirror_0/pfet_0/a_11940_n106#" "Pmos_current_mirror_0/w_n670_n11297#" 9.09495e-13
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/w_n670_n11297#" 2.49147
+cap "Pmos_current_mirror_0/pfet_1/a_11940_n106#" "Differential_pair_0/pfet$1_0/a_960_n106#" 3.89492
+cap "Differential_pair_0/I_M2" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 2.92859
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/w_n670_n11297#" 0.00514589
+cap "Differential_pair_0/pfet$1_0/a_1860_n106#" "Pmos_current_mirror_0/pfet_1/a_11940_n106#" 3.93201
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/pfet_1/a_13020_n106#" 46.4444
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/pfet_1/a_13020_n106#" 2.65715
+cap "Pmos_current_mirror_0/ID" "Pmos_current_mirror_0/pfet_1/a_13020_n106#" -0.853142
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Pmos_current_mirror_0/pfet_1/a_13020_n106#" -0.795931
+cap "Pmos_current_mirror_0/pfet_1/a_13020_n106#" "Differential_pair_0/pfet$1_0/a_360_n106#" 3.88256
+cap "Differential_pair_0/pfet$1_0/a_660_n106#" "Pmos_current_mirror_0/pfet_1/a_13020_n106#" 0.972387
+cap "Differential_pair_0/Ibias" "Pmos_current_mirror_0/w_n670_n11297#" 0.181076
+cap "Pmos_current_mirror_0/pfet_1/a_13020_n106#" "Differential_pair_0/I_M2" 2.38264
+cap "Differential_pair_0/I_M3" "Pmos_current_mirror_0/w_n670_n11297#" 2.46018
+cap "Pmos_current_mirror_0/pfet_1/a_13020_n106#" "Differential_pair_0/pfet$1_0/a_60_n106#" 0.816327
+cap "vias_gen$6_5/li_0_0#" "Pmos_current_mirror_0/pfet_1/a_13020_n106#" 4.04326
+cap "Differential_pair_0/Ibias" "nfet$6_0/a_580_0#" 2.6614
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Differential_pair_0/I_M2" 1.77609
+cap "vias_gen$6_5/li_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 1.25764
+cap "CC_0/m4_3023_3729#" "Differential_pair_0/Ibias" 2.6614
+cap "Pmos_current_mirror_0/ID" "Pmos_current_mirror_0/w_n670_n11297#" 11.7372
+cap "vias_gen$6_5/li_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 7.34481
+cap "CC_0/m4_3023_3729#" "Pmos_current_mirror_0/pfet_1/a_14640_n106#" 0.335964
+cap "CC_0/m4_3023_3729#" "Pmos_current_mirror_0/ID" -1.36307
+cap "vias_gen$6_5/li_0_0#" "CC_0/m4_3023_3729#" 12.7952
+cap "vias_gen$19_0/m1_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 5.1219
+cap "CC_0/vias_gen$26_1/a_0_0#" "Pmos_current_mirror_0/w_n670_n11297#" 2.93709
+cap "CC_0/m4_3023_3729#" "vias_gen$19_0/m1_0_0#" 1.026
+cap "CC_0/m4_3023_3729#" "CC_0/vias_gen$26_1/a_0_0#" 1.03423
+cap "CC_0/m4_3023_3729#" "Pmos_current_mirror_0/w_n670_n11297#" 27.5315
+cap "Pmos_current_mirror_0/w_n670_n11297#" "Pmos_current_mirror_0/ID" 61.1067
+cap "Pmos_current_mirror_0/w_n670_n11297#" "CC_0/vias_gen$26_1/a_0_0#" 27.4066
+cap "Pmos_current_mirror_0/ID" "CC_0/m4_3023_3729#" 92.8389
+cap "CC_0/vias_gen$26_1/a_0_0#" "CC_0/m4_3023_3729#" 50.8192
+cap "CC_0/mim_cap_3/m3_n40_n40#" "CC_0/m4_3023_3729#" 60.2295
+cap "Pmos_current_mirror_0/ID" "CC_0/vias_gen$26_1/a_0_0#" 21.9272
+cap "CC_0/mim_cap_3/m3_n40_n40#" "Pmos_current_mirror_0/ID" 42.577
+cap "Pmos_current_mirror_0/w_n670_n11297#" "vias_gen$19_0/m1_0_0#" 0.0301288
+cap "Pmos_current_mirror_0/w_n670_n11297#" "CC_0/m4_3023_3729#" 36.4136
+cap "vias_gen$19_0/m1_0_0#" "CC_0/m4_3023_3729#" 2.94363
+cap "Pmos_current_mirror_0/VDD" "CC_0/vias_gen$26_1/a_0_0#" 33.0862
+cap "vias_gen$35_0/m1_0_0#" "CC_0/mim_cap_3/m3_n40_n40#" 77.4392
+cap "m3_17230_n5923#" "vias_gen$35_0/m1_0_0#" 65.1996
+cap "m3_17230_n5923#" "CC_0/mim_cap_3/m3_n40_n40#" 75.8379
+cap "vias_gen$35_0/m1_0_0#" "CC_0/vias_gen$26_1/a_0_0#" 57.9484
+cap "Pmos_current_mirror_0/VDD" "vias_gen$35_0/m1_0_0#" 34.7891
+cap "m3_17230_n5923#" "CC_0/vias_gen$26_1/a_0_0#" 19.9997
+cap "m3_17230_n5923#" "Pmos_current_mirror_0/VDD" 57.4809
+cap "vias_gen$35_0/m1_0_0#" "CC_0/mim_cap_3/m3_n40_n40#" 81.5427
+cap "vias_gen$39_0/m3_0_0#" "CC_0/vias_gen$26_0/a_0_0#" 18.7384
+cap "vias_gen$39_0/m3_0_0#" "vias_gen$35_0/m1_0_0#" 118.601
+cap "Pmos_current_mirror_0/VDD" "CC_0/vias_gen$26_0/a_0_0#" 33.0862
+cap "vias_gen$35_0/m1_0_0#" "Pmos_current_mirror_0/VDD" 45.6885
+cap "vias_gen$35_0/m1_0_0#" "CC_0/vias_gen$26_0/a_0_0#" 52.8603
+cap "vias_gen$39_0/m3_0_0#" "CC_0/mim_cap_3/m3_n40_n40#" 74.3598
+cap "vias_gen$39_0/m3_0_0#" "Pmos_current_mirror_0/VDD" 57.4809
+cap "Pmos_current_mirror_0/VDD" "CC_0/vias_gen$26_0/a_0_0#" 15.0542
+cap "vias_gen$35_0/m1_0_0#" "vias_gen$39_0/m3_0_0#" 94.6738
+cap "CC_0/mim_cap_2/m3_n40_n40#" "vias_gen$39_0/m3_0_0#" 26.9854
+cap "vias_gen$35_0/m1_0_0#" "CC_0/vias_gen$26_0/a_0_0#" -0.270402
+cap "Pmos_current_mirror_0/VDD" "vias_gen$35_0/m1_0_0#" 11.4621
+cap "CC_0/vias_gen$26_0/a_0_0#" "vias_gen$39_0/m3_0_0#" 15.1395
+cap "Pmos_current_mirror_0/VDD" "vias_gen$39_0/m3_0_0#" 31.7779
+merge "active_load_0/vias_gen$32_0/a_0_0#" "vias_gen$39_0/VSUBS" -21054.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1520547 -70041 -11529 -1510 0 0 0 0 0 0 0 0 0 0
+merge "vias_gen$39_0/VSUBS" "input_second_stage_0/vias_gen$28_1/a_0_0#"
+merge "input_second_stage_0/vias_gen$28_1/a_0_0#" "vias_gen$35_0/VSUBS"
+merge "vias_gen$35_0/VSUBS" "vias_gen$35_1/VSUBS"
+merge "vias_gen$35_1/VSUBS" "vias_gen$6_5/VSUBS"
+merge "vias_gen$6_5/VSUBS" "vias_gen$6_4/VSUBS"
+merge "vias_gen$6_4/VSUBS" "vias_gen$19_0/VSUBS"
+merge "vias_gen$19_0/VSUBS" "vias_gen$19_1/VSUBS"
+merge "vias_gen$19_1/VSUBS" "vias_gen$19_5/VSUBS"
+merge "vias_gen$19_5/VSUBS" "vias_gen$40_0/VSUBS"
+merge "vias_gen$40_0/VSUBS" "nfet$6_0/a_n149_n154#"
+merge "nfet$6_0/a_n149_n154#" "vias_gen$11_0/VSUBS"
+merge "vias_gen$11_0/VSUBS" "vias_gen$19_4/VSUBS"
+merge "vias_gen$19_4/VSUBS" "vias_gen$19_6/VSUBS"
+merge "vias_gen$19_6/VSUBS" "vias_gen$1_4/VSUBS"
+merge "vias_gen$1_4/VSUBS" "vias_gen$1_1/VSUBS"
+merge "vias_gen$1_1/VSUBS" "Pmos_current_mirror_0/VSUBS"
+merge "Pmos_current_mirror_0/VSUBS" "vias_gen$1_3/VSUBS"
+merge "vias_gen$1_3/VSUBS" "vias_gen$1_2/VSUBS"
+merge "vias_gen$1_2/VSUBS" "vias_gen$1_0/VSUBS"
+merge "vias_gen$1_0/VSUBS" "vias_gen$6_3/VSUBS"
+merge "vias_gen$6_3/VSUBS" "CC_0/VSUBS"
+merge "CC_0/VSUBS" "vias_gen$6_0/VSUBS"
+merge "vias_gen$6_0/VSUBS" "vias_gen$6_1/VSUBS"
+merge "vias_gen$6_1/VSUBS" "vias_gen$36_0/VSUBS"
+merge "vias_gen$36_0/VSUBS" "vias_gen$6_2/VSUBS"
+merge "vias_gen$6_2/VSUBS" "vias_gen$19_2/VSUBS"
+merge "vias_gen$19_2/VSUBS" "vias_gen$19_3/VSUBS"
+merge "vias_gen$19_3/VSUBS" "input_second_stage_0/VSUBS"
+merge "input_second_stage_0/VSUBS" "vias_gen$41_1/VSUBS"
+merge "vias_gen$41_1/VSUBS" "Differential_pair_0/VSUBS"
+merge "Differential_pair_0/VSUBS" "vias_gen$6_6/VSUBS"
+merge "vias_gen$6_6/VSUBS" "vias_gen$41_0/VSUBS"
+merge "vias_gen$41_0/VSUBS" "vias_gen$6_7/VSUBS"
+merge "vias_gen$6_7/VSUBS" "vias_gen$6_8/VSUBS"
+merge "vias_gen$6_8/VSUBS" "vias_gen$6_9/VSUBS"
+merge "vias_gen$6_9/VSUBS" "active_load_0/VSUBS"
+merge "active_load_0/VSUBS" "vias_gen$13_0/VSUBS"
+merge "vias_gen$13_0/VSUBS" "bias_res_0/VSUBS"
+merge "bias_res_0/VSUBS" "vias_gen$13_1/VSUBS"
+merge "vias_gen$13_1/VSUBS" "Lower_Nmos_0/VSUBS"
+merge "Lower_Nmos_0/VSUBS" "vias_gen$13_2/VSUBS"
+merge "vias_gen$13_2/VSUBS" "upper_nmos_current_mirror_0/VSUBS"
+merge "upper_nmos_current_mirror_0/VSUBS" "VSUBS"
+merge "VSUBS" "upper_nmos_current_mirror_0/vias_gen$8_0/a_0_0#"
+merge "upper_nmos_current_mirror_0/vias_gen$8_0/a_0_0#" "CC_0/vias_gen$24_0/a_0_0#"
+merge "CC_0/vias_gen$24_0/a_0_0#" "CC_0/vias_gen$26_1/a_0_0#"
+merge "CC_0/vias_gen$26_1/a_0_0#" "vias_gen$6_0/li_0_0#"
+merge "vias_gen$6_0/li_0_0#" "input_second_stage_0/m1_2274_3149#"
+merge "input_second_stage_0/m1_2274_3149#" "m1_17816_n8517#"
+merge "m1_17816_n8517#" "vias_gen$6_1/li_0_0#"
+merge "vias_gen$6_1/li_0_0#" "input_second_stage_0/m1_1706_2105#"
+merge "input_second_stage_0/m1_1706_2105#" "vias_gen$6_2/li_0_0#"
+merge "vias_gen$6_2/li_0_0#" "input_second_stage_0/m1_1119_2311#"
+merge "input_second_stage_0/m1_1119_2311#" "m1_16655_n8517#"
+merge "m1_16655_n8517#" "input_second_stage_0/vias_gen$28_0/a_0_0#"
+merge "input_second_stage_0/vias_gen$28_0/a_0_0#" "vias_gen$6_6/li_0_0#"
+merge "vias_gen$6_6/li_0_0#" "active_load_0/nfet$3_0/a_2960_0#"
+merge "active_load_0/nfet$3_0/a_2960_0#" "m1_12065_n6863#"
+merge "m1_12065_n6863#" "vias_gen$6_7/li_0_0#"
+merge "vias_gen$6_7/li_0_0#" "active_load_0/m1_10362_9097#"
+merge "active_load_0/m1_10362_9097#" "vias_gen$6_8/li_0_0#"
+merge "vias_gen$6_8/li_0_0#" "active_load_0/m1_9362_9114#"
+merge "active_load_0/m1_9362_9114#" "bias_res_0/vias_gen$45_0/a_0_0#"
+merge "bias_res_0/vias_gen$45_0/a_0_0#" "vias_gen$6_9/li_0_0#"
+merge "vias_gen$6_9/li_0_0#" "active_load_0/nfet$3_0/a_0_0#"
+merge "active_load_0/nfet$3_0/a_0_0#" "m1_9105_n6854#"
+merge "m1_9105_n6854#" "Lower_Nmos_0/vias_gen$14_1/a_0_0#"
+merge "Lower_Nmos_0/vias_gen$14_1/a_0_0#" "active_load_0/VSS"
+merge "active_load_0/VSS" "li_8505_n6954#"
+merge "li_8505_n6954#" "li_7841_n7406#"
+merge "li_7841_n7406#" "li_7221_n7406#"
+merge "li_7221_n7406#" "Lower_Nmos_0/vias_gen$14_0/a_0_0#"
+merge "Lower_Nmos_0/vias_gen$14_0/a_0_0#" "Lower_Nmos_0/VSS"
+merge "Lower_Nmos_0/VSS" "upper_nmos_current_mirror_0/VSS"
+merge "upper_nmos_current_mirror_0/VSS" "VSS"
+merge "VSS" "bias_res_0/vias_gen$45_1/a_0_0#"
+merge "bias_res_0/vias_gen$45_1/a_0_0#" "li_6472_n7406#"
+merge "li_6472_n7406#" "li_5790_n7406#"
+merge "li_5790_n7406#" "upper_nmos_current_mirror_0/vias_gen$10_1/a_0_0#"
+merge "upper_nmos_current_mirror_0/vias_gen$10_1/a_0_0#" "li_5486_n6510#"
+merge "vias_gen$39_0/m3_0_0#" "CC_0/m4_4816_2140#" -3329.41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10982 -822 -4958 -282 -96720 -3384 -4420 -266 0 0 0 0
+merge "CC_0/m4_4816_2140#" "VOUT"
+merge "VOUT" "Pmos_current_mirror_0/ID"
+merge "Pmos_current_mirror_0/ID" "vias_gen$40_0/m1_0_0#"
+merge "vias_gen$40_0/m1_0_0#" "vias_gen$36_0/m1_0_0#"
+merge "vias_gen$36_0/m1_0_0#" "m3_17230_n5923#"
+merge "m3_17230_n5923#" "input_second_stage_0/m1_2006_3077#"
+merge "input_second_stage_0/m1_2006_3077#" "input_second_stage_0/m1_1406_3086#"
+merge "input_second_stage_0/m1_1406_3086#" "m1_16582_n5974#"
+merge "vias_gen$19_0/m1_0_0#" "nfet$6_0/a_1200_0#" -3180.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -17802 -1484 -15936 -1188 0 0 0 0 0 0 0 0
+merge "nfet$6_0/a_1200_0#" "m1_18022_n5244#"
+merge "m1_18022_n5244#" "nfet$6_0/a_0_0#"
+merge "nfet$6_0/a_0_0#" "vias_gen$19_1/m1_0_0#"
+merge "vias_gen$19_1/m1_0_0#" "m1_16810_n5244#"
+merge "m1_16810_n5244#" "vias_gen$19_4/m1_0_0#"
+merge "vias_gen$19_4/m1_0_0#" "vias_gen$19_2/m1_0_0#"
+merge "vias_gen$19_2/m1_0_0#" "input_second_stage_0/m2_767_3238#"
+merge "input_second_stage_0/m2_767_3238#" "vias_gen$19_3/m1_0_0#"
+merge "vias_gen$19_3/m1_0_0#" "input_second_stage_0/m2_767_4314#"
+merge "input_second_stage_0/m2_767_4314#" "m1_16303_n7374#"
+merge "m1_16303_n7374#" "Differential_pair_0/I_M3"
+merge "Differential_pair_0/I_M3" "m2_14760_n4955#"
+merge "m2_14760_n4955#" "Differential_pair_0/m1_n1803_n4940#"
+merge "Differential_pair_0/m1_n1803_n4940#" "active_load_0/IA"
+merge "active_load_0/IA" "m1_10585_n5180#"
+merge "Pmos_current_mirror_0/m1_2261_n12013#" "vias_gen$1_1/m1_0_0#" -955.338 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2852 -308 -9048 -660 0 0 0 0 0 0 0 0
+merge "vias_gen$1_1/m1_0_0#" "Pmos_current_mirror_0/IA"
+merge "Pmos_current_mirror_0/IA" "vias_gen$1_0/m1_0_0#"
+merge "vias_gen$1_0/m1_0_0#" "upper_nmos_current_mirror_0/IA"
+merge "upper_nmos_current_mirror_0/IA" "m2_649_n5366#"
+merge "vias_gen$6_5/li_0_0#" "nfet$6_0/a_680_n40#" -7938.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -529460 -23296 -13534 -1430 -12220 -782 0 0 0 0 0 0 0 0
+merge "nfet$6_0/a_680_n40#" "m1_17696_n5116#"
+merge "m1_17696_n5116#" "vias_gen$6_4/li_0_0#"
+merge "vias_gen$6_4/li_0_0#" "nfet$6_0/a_60_n40#"
+merge "nfet$6_0/a_60_n40#" "m1_17195_n5117#"
+merge "m1_17195_n5117#" "vias_gen$1_4/m1_0_0#"
+merge "vias_gen$1_4/m1_0_0#" "upper_nmos_current_mirror_0/li_n4781_n9165#"
+merge "upper_nmos_current_mirror_0/li_n4781_n9165#" "m1_4757_n5506#"
+merge "m1_4757_n5506#" "Pmos_current_mirror_0/IB"
+merge "Pmos_current_mirror_0/IB" "vias_gen$1_3/m1_0_0#"
+merge "vias_gen$1_3/m1_0_0#" "upper_nmos_current_mirror_0/IB"
+merge "upper_nmos_current_mirror_0/IB" "vias_gen$1_2/m1_0_0#"
+merge "vias_gen$1_2/m1_0_0#" "m2_885_n5187#"
+merge "m2_885_n5187#" "vias_gen$6_3/li_0_0#"
+merge "vias_gen$6_3/li_0_0#" "m1_1729_n5162#"
+merge "m1_1729_n5162#" "li_1729_n4849#"
+merge "Differential_pair_0/Vin+" "vias_gen$41_1/m2_0_0#" -2871.41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1872 -176 0 0 -737484 -22546 0 0 0 0
+merge "vias_gen$41_1/m2_0_0#" "Vin+"
+merge "Pmos_current_mirror_0/IC" "vias_gen$19_5/m1_0_0#" -1510.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6864 -368 -8216 -524 -2548 -304 0 0 0 0 0 0 0 0
+merge "vias_gen$19_5/m1_0_0#" "m2_15815_n4655#"
+merge "m2_15815_n4655#" "vias_gen$11_0/li_0_0#"
+merge "vias_gen$11_0/li_0_0#" "m1_16144_n5642#"
+merge "m1_16144_n5642#" "Differential_pair_0/Ibias"
+merge "Pmos_current_mirror_0/VDD" "VDD" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Lower_Nmos_0/IB" "vias_gen$13_1/m1_0_0#" -190.762 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1288 -148 -7072 -376 0 0 0 0 0 0 0 0
+merge "vias_gen$13_1/m1_0_0#" "upper_nmos_current_mirror_0/IC"
+merge "Differential_pair_0/Vin-" "vias_gen$41_0/m2_0_0#" -2505.9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3432 -236 0 0 -645084 -19746 0 0 0 0
+merge "vias_gen$41_0/m2_0_0#" "Vin-"
+merge "Differential_pair_0/I_M2" "active_load_0/vias_gen$19_0/m1_0_0#" -980.705 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6864 -368 0 -208 0 0 0 0 0 0 0 0
+merge "active_load_0/vias_gen$19_0/m1_0_0#" "Differential_pair_0/m1_n1579_n5036#"
+merge "Differential_pair_0/m1_n1579_n5036#" "vias_gen$19_6/m1_0_0#"
+merge "vias_gen$19_6/m1_0_0#" "active_load_0/IB"
+merge "active_load_0/IB" "m2_11631_n5267#"
+merge "Lower_Nmos_0/IA" "upper_nmos_current_mirror_0/vias_gen$1_0/m1_0_0#" -552.186 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2392 -196 -13728 -736 0 0 0 0 0 0 0 0
+merge "upper_nmos_current_mirror_0/vias_gen$1_0/m1_0_0#" "vias_gen$13_2/m1_0_0#"
+merge "vias_gen$13_2/m1_0_0#" "upper_nmos_current_mirror_0/m1_n4377_n10861#"
+merge "Lower_Nmos_0/IC" "vias_gen$13_0/m1_0_0#" -700.127 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3956 -356 -7072 -376 0 0 0 0 0 0 0 0
+merge "vias_gen$13_0/m1_0_0#" "bias_res_0/m1_2511_7412#"
+merge "bias_res_0/m1_2511_7412#" "m1_5636_n7164#"
+merge "vias_gen$35_0/m1_0_0#" "CC_0/m4_5416_3729#" -1567.78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12838 -812 0 0 0 0 -25600 -960 0 0 0 0
+merge "CC_0/m4_5416_3729#" "CC_0/m4_3023_3729#"
+merge "CC_0/m4_3023_3729#" "vias_gen$35_1/m1_0_0#"
+merge "vias_gen$35_1/m1_0_0#" "nfet$6_0/a_580_0#"
+merge "nfet$6_0/a_580_0#" "m1_17410_n5244#"

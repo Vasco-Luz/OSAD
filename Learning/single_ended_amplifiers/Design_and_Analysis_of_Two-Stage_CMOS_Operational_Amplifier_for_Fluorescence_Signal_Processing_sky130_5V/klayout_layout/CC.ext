@@ -1,0 +1,72 @@
+timestamp 1573064876
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use vias_gen$24 vias_gen$24_0 -1 0 7140 0 -1 1974
+use vias_gen$26 vias_gen$26_0 0 1 7140 -1 0 5910
+use vias_gen$24 vias_gen$24_1 -1 0 7140 0 -1 5910
+use vias_gen$26 vias_gen$26_1 0 1 2756 -1 0 5910
+use mim_cap mim_cap_0 -1 0 6977 0 1 2168
+use mim_cap mim_cap_1 1 0 2984 0 1 2168
+use mim_cap mim_cap_2 -1 0 6977 0 1 4124
+use mim_cap mim_cap_3 1 0 2984 0 1 4124
+node "m4_5416_3729#" 0 1834.03 5416 3729 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3615417 7796 0 0 0 0
+node "m4_4816_2140#" 1 1059.64 4816 2140 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1188348 7882 0 0 0 0
+node "m4_3023_3729#" 0 1834.9 3023 3729 m4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3617794 7798 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m4_5416_3729#" "m4_4816_2140#" 493.927
+cap "m4_4816_2140#" "m4_3023_3729#" 493.927
+cap "m4_5416_3729#" "m4_3023_3729#" 33.7827
+cap "mim_cap_3/c1_0_0#" "vias_gen$26_1/a_0_0#" 18.9887
+cap "vias_gen$26_1/a_0_0#" "mim_cap_3/m3_n40_n40#" 153.186
+cap "vias_gen$26_1/a_0_0#" "mim_cap_2/c1_0_0#" 0.981985
+cap "vias_gen$26_1/a_0_0#" "mim_cap_3/m3_n40_n40#" 87.614
+cap "vias_gen$26_1/a_0_0#" "mim_cap_3/c1_0_0#" 3.57477
+cap "mim_cap_3/m3_n40_n40#" "vias_gen$26_0/a_0_0#" 89.1884
+cap "vias_gen$26_0/a_0_0#" "mim_cap_2/c1_0_0#" 12.0595
+cap "mim_cap_0/m3_n40_n40#" "vias_gen$26_0/a_0_0#" 83.3066
+cap "mim_cap_2/c1_0_0#" "vias_gen$26_0/a_0_0#" 9.52762
+cap "mim_cap_3/c1_0_0#" "vias_gen$26_1/a_0_0#" 19.8288
+cap "vias_gen$26_1/a_0_0#" "mim_cap_3/m3_n40_n40#" 75.482
+cap "mim_cap_3/c1_0_0#" "mim_cap_3/m3_n40_n40#" 446.658
+cap "mim_cap_3/m3_n40_n40#" "mim_cap_3/c1_0_0#" 73.4836
+cap "mim_cap_2/c1_0_0#" "mim_cap_3/m3_n40_n40#" -42.3141
+cap "mim_cap_3/m3_n40_n40#" "mim_cap_2/c1_0_0#" 538.594
+cap "mim_cap_2/c1_0_0#" "mim_cap_0/m3_n40_n40#" 11.8542
+cap "mim_cap_2/m3_n40_n40#" "mim_cap_2/c1_0_0#" 11.8542
+cap "vias_gen$24_1/a_0_0#" "mim_cap_0/m3_n40_n40#" 35.2495
+cap "vias_gen$24_1/a_0_0#" "mim_cap_2/m3_n40_n40#" 40.362
+cap "vias_gen$24_1/a_0_0#" "mim_cap_2/c1_0_0#" 19.8338
+cap "mim_cap_2/m3_n40_n40#" "mim_cap_0/m3_n40_n40#" 18.0843
+cap "mim_cap_3/c1_0_0#" "mim_cap_3/m3_n40_n40#" 234.181
+cap "mim_cap_3/m3_n40_n40#" "vias_gen$26_1/a_0_0#" 157.902
+cap "mim_cap_3/c1_0_0#" "vias_gen$26_1/a_0_0#" 46.9957
+cap "mim_cap_2/c1_0_0#" "mim_cap_3/m3_n40_n40#" -200.295
+cap "mim_cap_3/c1_0_0#" "mim_cap_3/m3_n40_n40#" -139.445
+cap "vias_gen$26_1/a_0_0#" "mim_cap_2/c1_0_0#" 9.72643
+cap "vias_gen$26_1/a_0_0#" "mim_cap_3/c1_0_0#" 18.4581
+cap "vias_gen$26_1/a_0_0#" "mim_cap_3/m3_n40_n40#" 98.57
+cap "vias_gen$24_1/a_0_0#" "mim_cap_2/c1_0_0#" 40.6124
+cap "mim_cap_3/m3_n40_n40#" "mim_cap_2/c1_0_0#" 283.021
+cap "mim_cap_3/m3_n40_n40#" "vias_gen$24_1/a_0_0#" 100.779
+cap "mim_cap_2/c1_0_0#" "vias_gen$24_1/a_0_0#" 15.1002
+cap "mim_cap_2/c1_0_0#" "mim_cap_2/m3_n40_n40#" 11.9103
+cap "mim_cap_2/m3_n40_n40#" "vias_gen$24_1/a_0_0#" 78.9144
+merge "vias_gen$24_1/a_0_0#" "vias_gen$26_0/a_0_0#" -104.192 0 0 0 0 0 0 0 0 0 0 0 -512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -512 0 0 0 0 0 0 0 0 0 0 0 0
+merge "vias_gen$26_0/a_0_0#" "mim_cap_3/VSUBS"
+merge "mim_cap_3/VSUBS" "mim_cap_2/VSUBS"
+merge "mim_cap_2/VSUBS" "mim_cap_1/VSUBS"
+merge "mim_cap_1/VSUBS" "mim_cap_0/VSUBS"
+merge "mim_cap_0/VSUBS" "vias_gen$26_1/a_0_0#"
+merge "vias_gen$26_1/a_0_0#" "vias_gen$24_0/a_0_0#"
+merge "vias_gen$24_0/a_0_0#" "VSUBS"
+merge "mim_cap_3/m3_n40_n40#" "mim_cap_2/m3_n40_n40#" -4800.19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -635904 -14016 0 0 0 0
+merge "mim_cap_2/m3_n40_n40#" "mim_cap_1/m3_n40_n40#"
+merge "mim_cap_1/m3_n40_n40#" "mim_cap_0/m3_n40_n40#"
+merge "mim_cap_0/m3_n40_n40#" "m4_4816_2140#"
+merge "mim_cap_3/c1_0_0#" "mim_cap_1/c1_0_0#" -2322.04 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2349968 -10698 0 0 0 0
+merge "mim_cap_1/c1_0_0#" "m4_3023_3729#"
+merge "mim_cap_2/c1_0_0#" "mim_cap_0/c1_0_0#" -2321.09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2348424 -10693 0 0 0 0
+merge "mim_cap_0/c1_0_0#" "m4_5416_3729#"

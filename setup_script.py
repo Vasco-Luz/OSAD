@@ -25,7 +25,7 @@ if os.path.exists(target_path):
 
 # Part 2: Set up XSCHEM_USER_LIBRARY_PATH
 script_directory = os.path.dirname(os.path.abspath(__file__))
-lib_directory = os.path.join(script_directory, "my_ip", "LIB")
+lib_directory = os.path.join(script_directory,"LIB")
 
 export_command = f'export XSCHEM_USER_LIBRARY_PATH={lib_directory}'
 bashrc_path = os.path.expanduser("~/.bashrc")
