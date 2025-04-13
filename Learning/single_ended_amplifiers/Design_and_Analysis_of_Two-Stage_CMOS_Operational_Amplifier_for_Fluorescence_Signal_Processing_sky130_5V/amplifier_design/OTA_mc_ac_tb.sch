@@ -181,8 +181,8 @@ C {devices/vsource.sym} 60 -440 0 0 {name=V2 value="VSS"
 
 }
 C {devices/gnd.sym} 60 -390 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/corner.sym} -390 -740 0 0 {name=CORNER only_toplevel=true corner=mc}
-C {devices/code.sym} -250 -750 0 0 {name=spice only_toplevel=false
+C {sky130_fd_pr/corner.sym} -390 -750 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {devices/code.sym} -240 -750 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	
 .Temp 27
@@ -201,6 +201,11 @@ value="
 	plot db(v(VOUT_A-))
 	plot db(v(VOUT_A+))	
 	wrdata mc_ac.csv db(v(VOUT)) phase(v(VOUT)) db(v(VOUT_CM)) db(v(VOUT_A-)) db(v(VOUT_A+))
+	noise v(VOUT,VSS) V3 dec 10 1 10G
+	setplot noise1
+
+	plot onoise_spectrum inoise_spectrum
+
 .endc
 
 "}

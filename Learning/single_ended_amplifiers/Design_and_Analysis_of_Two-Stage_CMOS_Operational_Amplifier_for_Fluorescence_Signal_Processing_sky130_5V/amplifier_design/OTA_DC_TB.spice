@@ -7,7 +7,7 @@ Vmeas VDD net1 0
 .save i(vmeas)
 x1 net1 VSS VOUT VIN+ VOUT UUT_VA_sky
 **** begin user architecture code
-.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice fs
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
 
 .Temp 27
 .param VDD = 5
@@ -29,23 +29,22 @@ plot i(Vmeas)
 **.ends
 
 * expanding   symbol:  Sky130A/UUT_sky/UUT_VA_sky.sym # of pins=5
-** sym_path: /foss/designs/OSAD/my_ip/LIB/Sky130A/UUT_sky/UUT_VA_sky.sym
-** sch_path: /foss/designs/OSAD/my_ip/LIB/Sky130A/UUT_sky/UUT_VA_sky.sch
+** sym_path: /foss/designs/OSAD/LIB/Sky130A/UUT_sky/UUT_VA_sky.sym
+** sch_path: /foss/designs/OSAD/LIB/Sky130A/UUT_sky/UUT_VA_sky.sch
 .subckt UUT_VA_sky VDD VSS VIN- VIN+ VOUT
 *.iopin VDD
 *.iopin VSS
 *.iopin VIN-
 *.iopin VIN+
 *.iopin VOUT
-x1 VDD VSS VIN+ VIN- VOUT A001
+x1 VDD VSS VIN+ VIN- VOUT VA001_sky130_5V
 .ends
 
 
-* expanding   symbol:
-*+  Sky130A/Learning/Design_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_5V/A001.sym # of pins=5
-** sym_path: /foss/designs/OSAD/my_ip/LIB/Sky130A/Learning/Design_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_5V/A001.sym
-** sch_path: /foss/designs/OSAD/my_ip/LIB/Sky130A/Learning/Design_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_5V/A001.sch
-.subckt A001 VDD VSS Vin+ Vin- VOUT
+* expanding   symbol:  Sky130A/single ended amplifiers/VA001_sky130_5V.sym # of pins=5
+** sym_path: /foss/designs/OSAD/LIB/Sky130A/single ended amplifiers/VA001_sky130_5V.sym
+** sch_path: /foss/designs/OSAD/LIB/Sky130A/single ended amplifiers/VA001_sky130_5V.sch
+.subckt VA001_sky130_5V VDD VSS Vin+ Vin- VOUT
 *.iopin VDD
 *.iopin VSS
 *.iopin Vin+

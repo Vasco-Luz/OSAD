@@ -11,18 +11,22 @@ Mainly In this repository there are IC analog/mixed signal blocks done using sky
 
 At this point the blocks done are:
 
-VA001_sky130
+VA001_sky130_5V typical results:
 
-| Parameter              | Value               | Notes                                          |
-|------------------------|---------------------|------------------------------------------------|
-| Architecture           | Two-Stage Miller OTA| Self-biased PMOS input stage                   |
-| Gain Bandwidth (GBW)   |      > 40 MHz       | Ensures high-speed operation                   |
-| Phase Margin           |       > 60°         | Stable operation with good phase margin        |
-| Supply Voltage         |       5/1.8V        | Specify according to technology node           |
-| Power Consumption      |       >2mW          | Depends on biasing and load conditions         |
-| Load Capacitance       |       3pF           | Designed for a specific range                  |
-| Input Offset Voltage   |       >1mV          | Typically minimized via layout and trimming    |
-| Technology             |      sky130A        |                                                |
+| Parameter              | Value               |
+|------------------------|---------------------|
+| Architecture           | Two-Stage Miller OTA| 
+| Gain Bandwidth (GBW)   |       42.66 MHz     | 
+| Phase Margin           |       > 60°         | 
+| DC Gain                |        81dB         | 
+| CMRR                   |        75dB         |
+| PSSR-                  |        83dB         |
+| PSSR+                  |        93dB         |   
+| Supply Voltage         |         5V          | 
+| Power Consumption      |        319uW        |
+| Load Capacitance       |        3pF          | 
+| Input Offset Voltage   |       889uV         |
+| Technology             |      sky130A        | 
 
 
 
