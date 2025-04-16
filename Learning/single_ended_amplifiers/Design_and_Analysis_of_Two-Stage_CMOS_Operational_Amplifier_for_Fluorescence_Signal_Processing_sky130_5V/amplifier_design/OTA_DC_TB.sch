@@ -77,7 +77,7 @@ dc V4 0 5 0.01
 wrdata VIN_sweep_DC.csv v(VOUT) i(Vmeas)
 plot v(VOUT) v(VIN+)
 plot i(Vmeas)
-
+op
 .endc
 
 "
