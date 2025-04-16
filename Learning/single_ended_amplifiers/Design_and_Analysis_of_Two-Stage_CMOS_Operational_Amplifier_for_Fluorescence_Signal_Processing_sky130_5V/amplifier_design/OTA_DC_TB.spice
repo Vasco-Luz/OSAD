@@ -7,7 +7,7 @@ Vmeas VDD net1 0
 .save i(vmeas)
 x1 net1 VSS VOUT VIN+ VOUT UUT_VA_sky
 **** begin user architecture code
-.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice fs
 
 .Temp 27
 .param VDD = 5

@@ -16,16 +16,18 @@ VA001_sky130_5V typical results:
 | Parameter              | Value               |
 |------------------------|---------------------|
 | Architecture           | Two-Stage Miller OTA| 
-| Gain Bandwidth (GBW)   |       42.66 MHz     | 
-| Phase Margin           |       > 60°         | 
-| DC Gain                |        81dB         | 
-| CMRR                   |        75dB         |
-| PSSR-                  |        83dB         |
-| PSSR+                  |        93dB         |   
-| Supply Voltage         |         5V          | 
-| Power Consumption      |        319uW        |
+| Gain Bandwidth (GBW)   |       41.69 MHz(5V) | 
+| Phase Margin           |         61.9°(5V)   | 
+| DC Gain                |        89dB(5V)     | 
+| CMRR                   |        76dB(5V)     |
+| PSSR-                  |        82dB(5V)     |
+| PSSR+                  |        86dB(5V)     |   
+| Supply Voltage         |        3V-5V        |
+| ICMR                   |        0V-3.8V      |
+| Input noise(1Hz-40MHz) |        1.51uV(5V)   |
+| Power Consumption      |        319uW(5V)    |
 | Load Capacitance       |        3pF          | 
-| Input Offset Voltage   |       889uV         |
+| Input Offset Voltage   |       -884uV(5V)    |
 | Technology             |      sky130A        | 
 
 

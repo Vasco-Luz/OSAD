@@ -2,27 +2,42 @@
 **.subckt OTA_AC_TB
 V1 VDD GND VDD
 V2 VSS GND VSS
-V4 VIN+ net1 ac 0.5
-V6 net2 net1 V_OFF
-V3 net1 GND VCM
-C1 VOUT VSS 3p m=1
-V8 net4 net3 V_OFF
-V9 net11 GND VCM
-V7 net3 net11 ac 1
-V10 net6 net5 V_OFF
-V11 net5 GND VCM
-V13 net7 VSS ac 1
-V12 net9 net8 V_OFF
-V14 net8 GND VCM
-V15 net10 VDD ac 1
-x1 VDD VSS VIN- VIN+ VOUT UUT_VA_sky
-x2 VDD VSS net4 net3 VOUT_cm UUT_VA_sky
-x3 VDD net7 net6 net5 VOUT_a- UUT_VA_sky
-x4 net10 VSS net9 net8 VOUT_a+ UUT_VA_sky
-V5 VIN- net2 ac -0.5
-C2 VOUT_cm VSS 3p m=1
-C3 VOUT_a- VSS 3p m=1
-C4 VOUT_a+ VSS 3p m=1
+Vmeas VDD net2 0
+.save i(vmeas)
+x5 net2 VSS Va VIN+ VOUT UUT_VA_sky
+C5 VOUT VSS 3p m=1
+V16 net1 GND 2.5
+V17 VIN+ net1 ac 0.5
+V18 net3 VSS ac -0.5
+E1 Va net3 net4 VSS 1
+R1 VOUT net4 1k ac=1000000000000G m=1
+C6 net4 VSS 3p m=1
+x6 VDD VSS net7 net6 VOUT_cm UUT_VA_sky
+C7 VOUT_cm VSS 3p m=1
+V19 net6 net5 2.5
+V20 net5 GND ac 1
+E2 net7 net5 net8 VSS 1
+R2 VOUT_cm net8 1k ac=1000000000000G m=1
+C8 net8 VSS 3p m=1
+x7 VDD net12 net10 net9 VOUT_a- UUT_VA_sky
+C9 VOUT_a- VSS 3p m=1
+V21 net9 GND 2.5
+E3 net10 GND net11 VSS 1
+R3 VOUT_a- net11 1k ac=1000000000000G m=1
+C10 net11 VSS 3p m=1
+V22 net12 VSS ac 1
+x8 net13 VSS net15 net14 VOUT_a+ UUT_VA_sky
+C11 VOUT_a+ VSS 3p m=1
+V23 net14 GND 2.5
+E4 net15 GND net16 VSS 1
+R4 VOUT_a+ net16 1k ac=1000000000000G m=1
+C12 net16 VSS 3p m=1
+V24 net13 VDD ac 1
+x1 VDD VSS net19 net18 VOUT_noise UUT_VA_sky
+V3 net17 GND 2.5
+V4 net18 net17 ac 0.5
+V5 net19 net17 V_OFF
+C1 VOUT_noise VSS 3p m=1
 **** begin user architecture code
 .lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice fs
 
@@ -30,7 +45,7 @@ C4 VOUT_a+ VSS 3p m=1
 .param VDD = 5
 .param VSS = 0
 .param CL = 3p
-.param V_OFF = -884.15u
+.param V_OFF = -806.71u
 .param VCM=2.5
 
 
@@ -38,7 +53,7 @@ C4 VOUT_a+ VSS 3p m=1
 
 	save all
 	ac dec 100 1 10G
-	plot db(v(VOUT))
+	plot db(v(VOUT)) (180+(180*ph(v(VOUT))/pi))
 	plot db(v(VOUT_CM))
 	plot db(v(VOUT_A-))
 	plot db(v(VOUT_A+))
