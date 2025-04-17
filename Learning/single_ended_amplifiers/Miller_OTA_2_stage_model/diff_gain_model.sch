@@ -25,8 +25,6 @@ N 60 -120 100 -120 {lab=GND}
 N 100 -240 100 -180 {lab=V1}
 N 570 -240 570 -180 {lab=V2}
 N 440 -180 530 -180 {lab=V1}
-N 330 -230 330 -180 {lab=V1}
-N 510 -230 570 -230 {lab=V2}
 N 570 -340 570 -300 {lab=GND}
 N 570 -180 640 -180 {lab=V2}
 N 570 -120 640 -120 {lab=GND}
@@ -35,12 +33,15 @@ N 640 -120 700 -120 {lab=GND}
 N 570 -120 570 -100 {lab=GND}
 N 530 -130 530 -120 {lab=GND}
 N 530 -120 570 -120 {lab=GND}
-N -30 -170 60 -170 {lab=#net2}
+N -30 -170 60 -170 {lab=Vin}
 N -30 -110 -30 -100 {lab=GND}
 N 100 -240 180 -240 {lab=V1}
 N 100 -300 180 -300 {lab=GND}
 N 470 -120 530 -120 {lab=GND}
-C {vccs.sym} 100 -150 0 0 {name=G1 value=-0.000109}
+N 510 -230 530 -230 {lab=V2}
+N 330 -230 330 -180 {lab=V1}
+N 530 -230 570 -230 {lab=V2}
+C {vccs.sym} 100 -150 0 0 {name=G1 value=0.000109}
 C {capa.sym} 300 -150 0 0 {name=C1
 m=1
 value=1.36e-14
@@ -49,11 +50,6 @@ device="ceramic capacitor"}
 C {gnd.sym} 100 -100 0 0 {name=l1 lab=GND}
 C {res.sym} 200 -150 0 0 {name=R1
 value=2484836
-footprint=1206
-device=resistor
-m=1}
-C {res.sym} 100 -270 0 0 {name=R2
-value=2809549
 footprint=1206
 device=resistor
 m=1}
@@ -112,7 +108,11 @@ value="
 .control
 save all
 ac dec 100 1 10G
-plot db(v(V2)) ((180*ph(v(V2))/pi)) db(v(V1))
+plot db(v(V2)) (180+(180*ph(v(V2))/pi)) db(v(V1))
+pz VIN 0 0 V2 vol pz
+print all
+
+
 .endc
 
 "
@@ -122,3 +122,9 @@ plot db(v(V2)) ((180*ph(v(V2))/pi)) db(v(V1))
 }
 C {devices/lab_pin.sym} 270 -180 1 0 {name=p33 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 570 -210 2 0 {name=p1 sig_type=std_logic lab=V2}
+C {res.sym} 100 -270 0 0 {name=R2
+value=2484836
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_pin.sym} 10 -170 1 0 {name=p2 sig_type=std_logic lab=Vin}
