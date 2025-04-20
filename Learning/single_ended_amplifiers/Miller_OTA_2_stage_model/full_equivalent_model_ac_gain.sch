@@ -126,7 +126,7 @@ value="ac 1"}
 C {vccs.sym} 370 290 0 0 {name=G3 value=5.095e-05}
 C {capa.sym} 580 290 0 0 {name=C2
 m=1
-value=8.198e-14
+value=1.18e-14
 footprint=1206
 device="ceramic capacitor"}
 C {capa.sym} 600 20 0 0 {name=C1
@@ -157,11 +157,6 @@ m=1}
 C {gnd.sym} -100 360 0 0 {name=l5 lab=GND
 value="ac 1"}
 C {vccs.sym} -100 290 0 0 {name=G4 value=5.095e-05}
-C {capa.sym} 110 290 0 0 {name=C4
-m=1
-value=8.198e-14
-footprint=1206
-device="ceramic capacitor"}
 C {res.sym} -160 40 0 0 {name=R5
 value=2484836
 footprint=1206
@@ -207,3 +202,8 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 950 170 2 0 {name=p1 sig_type=std_logic lab=V2}
 C {devices/lab_pin.sym} 580 200 3 0 {name=p3 sig_type=std_logic lab=V1}
+C {capa.sym} 110 290 0 0 {name=C4
+m=1
+value=1.18e-14
+footprint=1206
+device="ceramic capacitor"}

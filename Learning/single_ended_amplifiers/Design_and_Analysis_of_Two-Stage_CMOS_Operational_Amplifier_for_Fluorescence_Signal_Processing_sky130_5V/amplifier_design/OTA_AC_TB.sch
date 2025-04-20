@@ -186,6 +186,7 @@ lab=VSS}
 N 1240 -1650 1250 -1650 {lab=VOUT_noise}
 N 1250 -1650 1250 -1620 {lab=VOUT_noise}
 N 1100 -1650 1240 -1650 {lab=VOUT_noise}
+N -260 -1780 -250 -1780 {lab=VOUT}
 C {devices/lab_pin.sym} -1420 -1050 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1420 -980 0 0 {name=V1 value="VDD"
 
