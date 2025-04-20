@@ -113,6 +113,8 @@ pz VIN 0 0 V2 vol pz
 print all
 
 
+
+
 .endc
 
 "
@@ -123,7 +125,7 @@ print all
 C {devices/lab_pin.sym} 270 -180 1 0 {name=p33 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 570 -210 2 0 {name=p1 sig_type=std_logic lab=V2}
 C {res.sym} 100 -270 0 0 {name=R2
-value=2484836
+value=2809549
 footprint=1206
 device=resistor
 m=1}
