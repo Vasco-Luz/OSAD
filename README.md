@@ -32,6 +32,38 @@ VA001_sky130_5V typical results:
 
 
 
+VA001_sky130_1.8V typical results:
+
+| Parameter              | Value               |
+|------------------------|---------------------|
+| Architecture           | Two-Stage Miller OTA| 
+| Gain Bandwidth (GBW)   |       43.37 MHz(5V) | 
+| Phase Margin           |         66.5°(5V)   | 
+| DC Gain                |        89dB(5V)     | 
+| CMRR                   |        76dB(5V)     |
+| PSSR-                  |        82dB(5V)     |
+| PSSR+                  |        86dB(5V)     |   
+| Supply Voltage         |        1.4V-5V      |
+| ICMR                   |        0V-3.8V      |
+| Input noise(1Hz-40MHz) |        1.51uV(5V)   |
+| Power Consumption      |        319uW(5V)    |
+| Load Capacitance       |        3pF          | 
+| Input Offset Voltage   |       -884uV(5V)    |
+| Technology             |      sky130A        | 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 In this repository too some IC analog block will be done.\
 There is documentation done explaining each block in relatively detail.\
 To this point the blocks done in sky130A are:\

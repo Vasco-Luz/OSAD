@@ -24,18 +24,18 @@ N 540 -360 540 -320 {
 lab=VSS}
 N 280 -140 280 -90 {
 lab=#net1}
-N 280 -420 340 -420 {lab=#net2}
+N 280 -420 340 -420 {lab=VIN}
 N 280 -30 280 -10 {lab=GND}
-N 280 -420 280 -200 {lab=#net2}
-N 390 -320 390 -270 {lab=#net3}
-N 390 -380 390 -320 {lab=#net3}
+N 280 -420 280 -200 {lab=VIN}
+N 390 -320 390 -270 {lab=#net2}
+N 390 -380 390 -320 {lab=#net2}
 N 390 -40 390 0 {
 lab=VSS}
-N 390 -210 390 -180 {lab=#net4}
-N 390 -130 390 -100 {lab=#net4}
-N 390 -180 390 -130 {lab=#net4}
-N 340 -420 500 -420 {lab=#net2}
-N 390 -380 500 -380 {lab=#net3}
+N 390 -210 390 -180 {lab=#net3}
+N 390 -130 390 -100 {lab=#net3}
+N 390 -180 390 -130 {lab=#net3}
+N 340 -420 500 -420 {lab=VIN}
+N 390 -380 500 -380 {lab=#net2}
 N 740 -400 790 -400 {
 lab=VOUT}
 N 940 -310 940 -270 {
@@ -48,11 +48,11 @@ N 470 -220 470 -180 {
 lab=VSS}
 N 780 -260 790 -260 {lab=VOUT}
 N 610 -400 740 -400 {lab=VOUT}
-N 430 -260 720 -260 {lab=#net5}
+N 430 -260 720 -260 {lab=#net4}
 N 430 -220 470 -220 {lab=VSS}
 N 580 -170 580 -130 {
 lab=VSS}
-N 580 -260 580 -230 {lab=#net5}
+N 580 -260 580 -230 {lab=#net4}
 C {devices/lab_pin.sym} -210 -80 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -210 -10 0 0 {name=V1 value="VDD"
 
@@ -73,7 +73,7 @@ place=end
 value="	
 
 .Temp 27
-.param VDD = 1.8
+.param VDD = 1.6
 .param VSS = 0
 
 .control
@@ -106,9 +106,12 @@ print @m.x1.xm12.msky130_fd_pr__pfet_01v8[vdsat]
 print @m.x1.xm12.msky130_fd_pr__pfet_01v8[cdg]
 
 print 1.8*I(V2)
+print (0.9 - v(VOUT))
 
 ac dec 1000 1 10G
 plot db(v(VOUT)) (180+(180*ph(v(VOUT))/pi))
+pz VIN 0 0 VOUT vol pz
+print all
 
 
 .endc
@@ -146,3 +149,4 @@ device="ceramic capacitor"}
 C {devices/lab_pin.sym} 580 -130 0 0 {name=p3 sig_type=std_logic lab=VSS
 }
 C {Sky130A/single ended amplifiers/VA001_sky130_1_8V.sym} 540 -400 0 0 {name=x1}
+C {devices/lab_pin.sym} 280 -370 2 0 {name=p5 sig_type=std_logic lab=VIN}
