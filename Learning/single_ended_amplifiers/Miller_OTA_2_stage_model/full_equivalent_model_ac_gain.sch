@@ -33,7 +33,6 @@ N 370 -190 370 -50 {lab=#net1}
 N 370 -280 370 -250 {lab=GND}
 N 370 -190 460 -190 {lab=#net1}
 N 370 -250 460 -250 {lab=GND}
-N -10 50 -10 60 {lab=GND}
 N -10 -20 -10 10 {lab=#net1}
 N -10 -20 30 -20 {lab=#net1}
 N 30 -20 30 -0 {lab=#net1}
@@ -79,6 +78,10 @@ N 710 150 710 200 {lab=V1}
 N 910 150 950 150 {lab=V2}
 N 710 200 820 200 {lab=V1}
 N 370 200 710 200 {lab=V1}
+N -130 170 -130 180 {lab=GND}
+N -130 50 -130 110 {lab=GND}
+N -130 50 -10 50 {lab=GND}
+N -130 110 -130 170 {lab=GND}
 C {sky130_fd_pr/corner.sym} -760 -30 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/code.sym} -610 -30 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
@@ -147,8 +150,6 @@ value=3.9e-14
 footprint=1206
 device="ceramic capacitor"}
 C {vccs.sym} 30 30 0 0 {name=G2 value=0.000109}
-C {gnd.sym} -10 60 0 0 {name=l3 lab=GND
-value="ac 1"}
 C {res.sym} 20 290 0 0 {name=R4
 value=2809549
 footprint=1206
@@ -207,3 +208,5 @@ m=1
 value=1.18e-14
 footprint=1206
 device="ceramic capacitor"}
+C {gnd.sym} -130 180 0 0 {name=l8 lab=GND
+value="ac 1"}

@@ -1,0 +1,52 @@
+** sch_path: /foss/designs/OSAD/Learning/Current_mirrors/Design_nmos_current_mirror_ihp_3_3V/simulations/current_mirror_tb_.sch
+**.subckt current_mirror_tb_
+V1 VDD GND 3.3
+V2 VSS GND 0
+I0 VDD net2 5u
+Vmeas Vout net1 0
+.save i(vmeas)
+V3 Vout GND 1.65
+x1 VSS net2 net1 nmos_current_mirror
+**** begin user architecture code
+
+.lib cornerMOShv.lib mos_tt
+
+
+
+.param temp=27
+.param mm_ok=1
+.param mc_ok=1
+.control
+
+
+
+save all
+op
+*dc V3 0 3.3 0.001
+*plot i(Vmeas)
+*wrdata current_mirror.csv i(Vmeas)
+.endc
+
+
+
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:
+*+  /foss/designs/OSAD/Learning/Current_mirrors/Design_nmos_current_mirror_ihp_3_3V/simulations/nmos_current_mirror.sym # of pins=3
+** sym_path: /foss/designs/OSAD/Learning/Current_mirrors/Design_nmos_current_mirror_ihp_3_3V/simulations/nmos_current_mirror.sym
+** sch_path: /foss/designs/OSAD/Learning/Current_mirrors/Design_nmos_current_mirror_ihp_3_3V/simulations/nmos_current_mirror.sch
+.subckt nmos_current_mirror VSS Iref Iout
+*.iopin VSS
+*.iopin Iref
+*.iopin Iout
+XM1 Iref Iref VSS VSS sg13_hv_nmos w=2.0u l=2.2u ng=2 m=2
+XM2 Iout Iref VSS VSS sg13_hv_nmos w=2.0u l=2.2u ng=2 m=2
+XM3 VSS VSS VSS VSS sg13_hv_nmos w=1.0u l=2.2u ng=1 m=4
+.ends
+
+.GLOBAL GND
+.end

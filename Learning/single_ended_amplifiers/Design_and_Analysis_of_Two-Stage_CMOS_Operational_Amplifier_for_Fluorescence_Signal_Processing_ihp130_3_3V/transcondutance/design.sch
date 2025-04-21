@@ -42,20 +42,22 @@ N 710 310 710 330 {lab=#net4}
 C {devices/code_shown.sym} -230 -110 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value="
-.lib $::SG13G2_MODELS/cornerRES.lib res_typ_stat
+.lib $::SG13G2_MODELS/cornerRES.lib res_typ
 "}
 C {devices/code_shown.sym} -290 160 0 0 {name=NGSPICE only_toplevel=true 
+name=COMMANDS
+simulator=ngspice
+place=end
 value="
-.param mm_ok=1
-.param mc_ok=1
+
 .param temp=27
 .control
 save all 
 dc temp -50 125 1
 plot i(Vmeas)
-dc V3 0 3.3 0.001
-plot i(Vmeas1)
-
+dc V1 0 3.3 0.001
+plot i(Vmeas)
+op
 
 .endc
 "}
@@ -67,7 +69,7 @@ C {lab_pin.sym} 280 0 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 380 0 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {sg13g2_pr/sg13_hv_pmos.sym} 730 60 0 1 {name=M2
 l=2u
-w=1.0u
+w=1.5u
 ng=2
 m=2
 model=sg13_hv_pmos
@@ -76,7 +78,7 @@ spiceprefix=X
 C {lab_pin.sym} 800 0 1 0 {name=p3 sig_type=std_logic lab=VDD}
 C {sg13g2_pr/sg13_hv_pmos.sym} 880 60 0 0 {name=M1
 l=2u
-w=1.0u
+w=1.5u
 ng=2
 m=2
 model=sg13_hv_pmos
@@ -123,7 +125,7 @@ C {ammeter.sym} 710 280 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
 C {devices/code_shown.sym} -260 50 0 0 {name=MODEL2 only_toplevel=true
 format="tcleval( @value )"
 value="
-.lib cornerMOShv.lib mos_tt_stat
+.lib cornerMOShv.lib mos_tt
 "}
 C {sg13g2_pr/rhigh.sym} 710 470 0 0 {name=R1
 w=0.5e-6

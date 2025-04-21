@@ -1,0 +1,10 @@
+** sch_path: /foss/designs/OSAD/Learning/Current_mirrors/Design_nmos_current_mirror_ihp_3_3V/simulations/nmos_current_mirror.sch
+**.subckt nmos_current_mirror VSS Iref Iout
+*.iopin VSS
+*.iopin Iref
+*.iopin Iout
+XM1 Iref Iref VSS VSS sg13_hv_nmos w=2.0u l=2.2u ng=2 m=2
+XM2 Iout Iref VSS VSS sg13_hv_nmos w=2.0u l=2.2u ng=2 m=2
+XM3 VSS VSS VSS VSS sg13_hv_nmos w=1.0u l=2.2u ng=1 m=4
+**.ends
+.end
