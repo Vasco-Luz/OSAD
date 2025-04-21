@@ -207,7 +207,7 @@ value="
 .param VDD = 5
 .param VSS = 0
 .param CL = 3p
-.param V_OFF = -889u
+.param V_OFF = -400u
 .param VCM=2.5
 
 
@@ -216,9 +216,9 @@ value="
 	save all
 	ac dec 100 1 10G
 	plot db(v(VOUT)) (180+(180*ph(v(VOUT))/pi))
-	plot db(v(VOUT_CM))
-	plot db(v(VOUT_A-))
-	plot db(v(VOUT_A+))	
+	plot (db(v(VOUT)) - db(v(VOUT_CM)))
+	plot (db(v(VOUT)) - db(v(VOUT_A-)))
+	plot (db(v(VOUT))- db(v(VOUT_A+)))	
 	wrdata VIN_sweep_AC.csv db(v(VOUT)) phase(v(VOUT)) db(v(VOUT_CM)) db(v(VOUT_A-)) db(v(VOUT_A+))
 
 	noise v(VOUT_noise,VSS) V4 dec 10 1 40000k
@@ -228,6 +228,9 @@ value="
 
 	plot onoise_spectrum
 	plot inoise_spectrum
+	op
+	print (2.5-V(VOUT))
+	print v(VOUT_noise)
 
 .endc
 

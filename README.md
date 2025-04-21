@@ -16,18 +16,18 @@ VA001_sky130_5V typical results:
 | Parameter              | Value               |
 |------------------------|---------------------|
 | Architecture           | Two-Stage Miller OTA| 
-| Gain Bandwidth (GBW)   |       41.69 MHz(5V) | 
-| Phase Margin           |         61.9°(5V)   | 
-| DC Gain                |        89dB(5V)     | 
-| CMRR                   |        76dB(5V)     |
-| PSSR-                  |        82dB(5V)     |
-| PSSR+                  |        86dB(5V)     |   
+| Gain Bandwidth (GBW)   |       41.19 MHz(5V) | 
+| Phase Margin           |         63.9°(5V)   | 
+| DC Gain                |        88dB(5V)     | 
+| CMRR                   |        81dB(5V)     |
+| PSSR-                  |        93dB(5V)     |
+| PSSR+                  |        91dB(5V)     |   
 | Supply Voltage         |        3V-5V        |
 | ICMR                   |        0V-3.8V      |
-| Input noise(1Hz-40MHz) |        1.51uV(5V)   |
+| Input noise(1Hz-40MHz) |        1.54uV(5V)   |
 | Power Consumption      |        319uW(5V)    |
 | Load Capacitance       |        3pF          | 
-| Input Offset Voltage   |       -884uV(5V)    |
+| Input Offset Voltage   |       -400uV(5V)    |
 | Technology             |      sky130A        | 
 
 
@@ -37,18 +37,18 @@ VA001_sky130_1.8V typical results:
 | Parameter              | Value               |
 |------------------------|---------------------|
 | Architecture           | Two-Stage Miller OTA| 
-| Gain Bandwidth (GBW)   |       43.37 MHz(5V) | 
-| Phase Margin           |         66.5°(5V)   | 
-| DC Gain                |        89dB(5V)     | 
-| CMRR                   |        76dB(5V)     |
-| PSSR-                  |        82dB(5V)     |
+| Gain Bandwidth (GBW)   |       42.10 MHz(5V) | 
+| Phase Margin           |         70°(5V)   | 
+| DC Gain                |        70dB(5V)     | 
+| CMRR                   |        67.5dB(5V)     |
+| PSSR-                  |        80dB(5V)     |
 | PSSR+                  |        86dB(5V)     |   
 | Supply Voltage         |        1.4V-5V      |
 | ICMR                   |        0V-3.8V      |
 | Input noise(1Hz-40MHz) |        1.51uV(5V)   |
-| Power Consumption      |        319uW(5V)    |
+| Power Consumption      |        108uW(1.8V)    |
 | Load Capacitance       |        3pF          | 
-| Input Offset Voltage   |       -884uV(5V)    |
+| Input Offset Voltage   |       -884uV(1.8V)    |
 | Technology             |      sky130A        | 
 
 

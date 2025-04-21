@@ -173,21 +173,21 @@ C {devices/lab_pin.sym} 1300 -440 2 0 {name=p8 sig_type=std_logic lab=Vin+}
 C {devices/lab_pin.sym} 800 -440 2 1 {name=p9 sig_type=std_logic lab=Vin-}
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 900 -210 0 1 {name=M11
 L=2
-W=1
+W=1.2
 nf=2 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1200 -210 0 0 {name=M8
 L=2
-W=1
+W=1.2
 nf=2 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5_nf.sym} 1670 -200 0 0 {name=M12
 L=1
-W=3
+W=2
 nf=4 mult=2
 model=nfet_g5v0d10v5
 spiceprefix=X

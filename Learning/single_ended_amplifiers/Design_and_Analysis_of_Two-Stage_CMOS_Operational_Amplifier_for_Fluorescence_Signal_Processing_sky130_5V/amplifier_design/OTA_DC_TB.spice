@@ -21,7 +21,7 @@ dc V4 0 5 0.01
 wrdata VIN_sweep_DC.csv v(VOUT) i(Vmeas)
 plot v(VOUT) v(VIN+)
 plot i(Vmeas)
-
+op
 .endc
 
 
@@ -75,13 +75,13 @@ XM1 net4 VB1 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2.5 W='1 * 2 ' nf=2 ad='int(
 XM2 net6 Vin- net4 net4 sky130_fd_pr__pfet_g5v0d10v5 L=1 W='3 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
 + pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=4
 + m=4
-XM11 net6 net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W='1 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
+XM11 net6 net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W='1.2 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
 + pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=2
 + m=2
-XM8 net5 net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W='1 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
+XM8 net5 net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W='1.2 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
 + pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=2
 + m=2
-XM12 VOUT net5 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W='3 * 4 ' nf=4 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
+XM12 VOUT net5 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W='2 * 4 ' nf=4 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
 + pd='2*int((nf+1)/2) * (W / nf + 0.29)' ps='2*int((nf+2)/2) * (W / nf + 0.29)' nrd='0.29 / W ' nrs='0.29 / W ' sa=0 sb=0 sd=0 mult=2
 + m=2
 XM7 net5 Vin+ net4 net4 sky130_fd_pr__pfet_g5v0d10v5 L=1 W='3 * 2 ' nf=2 ad='int((nf+1)/2) * W / nf * 0.29' as='int((nf+2)/2) * W / nf * 0.29'
