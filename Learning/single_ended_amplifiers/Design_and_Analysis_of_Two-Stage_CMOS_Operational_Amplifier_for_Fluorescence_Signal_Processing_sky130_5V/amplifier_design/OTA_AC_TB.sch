@@ -115,25 +115,24 @@ N 90 -1440 90 -1360 {lab=GND}
 N -20 -1360 90 -1360 {lab=GND}
 N 350 -1630 490 -1630 {lab=VOUT_a-}
 N -20 -1370 -20 -1360 {lab=GND}
-N 240 -1600 240 -1580 {lab=#net13}
 N 240 -1520 240 -1510 {lab=VSS}
 N 420 -1270 420 -1230 {
 lab=VDD}
 N 520 -1030 570 -1030 {
 lab=VOUT_a+}
 N 420 -1170 420 -1110 {
-lab=#net14}
-N 260 -1050 350 -1050 {lab=#net15}
+lab=#net13}
+N 260 -1050 350 -1050 {lab=#net14}
 N 720 -940 720 -900 {
 lab=VSS}
 N 710 -1030 720 -1030 {lab=VOUT_a+}
 N 720 -1030 720 -1000 {lab=VOUT_a+}
-N 200 -1050 260 -1050 {lab=#net15}
-N 310 -1010 360 -1010 {lab=#net16}
+N 200 -1050 260 -1050 {lab=#net14}
+N 310 -1010 360 -1010 {lab=#net15}
 N 200 -760 200 -740 {lab=GND}
-N 200 -1050 200 -830 {lab=#net15}
-N 310 -950 310 -900 {lab=#net16}
-N 310 -1010 310 -950 {lab=#net16}
+N 200 -1050 200 -830 {lab=#net14}
+N 310 -950 310 -900 {lab=#net15}
+N 310 -1010 310 -950 {lab=#net15}
 N 570 -1030 570 -890 {lab=VOUT_a+}
 N 440 -850 440 -810 {
 lab=VSS}
@@ -141,9 +140,9 @@ N 350 -850 440 -850 {lab=VSS}
 N 560 -890 570 -890 {lab=VOUT_a+}
 N 480 -780 480 -740 {
 lab=VSS}
-N 480 -890 480 -840 {lab=#net17}
-N 480 -890 500 -890 {lab=#net17}
-N 350 -890 480 -890 {lab=#net17}
+N 480 -890 480 -840 {lab=#net16}
+N 480 -890 500 -890 {lab=#net16}
+N 350 -890 480 -890 {lab=#net16}
 N 310 -840 310 -760 {lab=GND}
 N 200 -760 310 -760 {lab=GND}
 N 570 -1030 710 -1030 {lab=VOUT_a+}
@@ -160,23 +159,22 @@ N -470 -1630 -460 -1630 {lab=#net5}
 N -20 -1670 80 -1670 {lab=#net10}
 N -20 -1670 -20 -1650 {lab=#net10}
 N 90 -1610 160 -1610 {lab=#net11}
-N 200 -1570 240 -1600 {lab=#net13}
 N 300 -1630 310 -1640 {lab=VOUT_a-}
 N 520 -1030 530 -1040 {lab=VOUT_a+}
-N 350 -1050 380 -1070 {lab=#net15}
-N 360 -1010 380 -1010 {lab=#net16}
+N 350 -1050 380 -1070 {lab=#net14}
+N 360 -1010 380 -1010 {lab=#net15}
 N -430 -960 -420 -970 {lab=VOUT_cm}
 N -640 -940 -570 -940 {lab=#net8}
 N -690 -980 -570 -1000 {lab=#net7}
 N 750 -1390 750 -1340 {
-lab=#net18}
+lab=#net17}
 N 750 -1280 750 -1260 {lab=GND}
 N 750 -1670 750 -1450 {lab=VIN+}
 N 750 -1680 750 -1670 {lab=VIN+}
 N 750 -1680 950 -1680 {lab=VIN+}
-N 750 -1360 860 -1360 {lab=#net18}
-N 860 -1620 860 -1420 {lab=#net19}
-N 860 -1620 950 -1620 {lab=#net19}
+N 750 -1360 860 -1360 {lab=#net17}
+N 860 -1620 860 -1420 {lab=#net18}
+N 860 -1620 950 -1620 {lab=#net18}
 N 990 -1580 990 -1560 {lab=VSS}
 N 990 -1560 990 -1550 {lab=VSS}
 N 990 -1760 990 -1720 {
@@ -187,6 +185,21 @@ N 1240 -1650 1250 -1650 {lab=VOUT_noise}
 N 1250 -1650 1250 -1620 {lab=VOUT_noise}
 N 1100 -1650 1240 -1650 {lab=VOUT_noise}
 N -260 -1780 -250 -1780 {lab=VOUT}
+N -550 -1850 -540 -1840 {lab=#net2}
+N -450 -1780 -440 -1780 {lab=VOUT}
+N -550 -1710 -540 -1720 {lab=VSS}
+N 220 -1580 240 -1580 {lab=#net19}
+N 160 -1610 170 -1610 {lab=#net11}
+N 200 -1710 220 -1700 {lab=VDD}
+N 1090 -1650 1100 -1650 {lab=VOUT_noise}
+N 990 -1720 1000 -1710 {lab=VDD}
+N 990 -1580 1000 -1590 {lab=VSS}
+N 420 -1110 430 -1100 {lab=#net13}
+N 420 -970 430 -980 {lab=VSS}
+N 520 -1040 530 -1040 {lab=VOUT_a+}
+N -530 -1040 -520 -1030 {lab=VDD}
+N -530 -900 -520 -910 {lab=VSS}
+N -430 -970 -420 -970 {lab=VOUT_cm}
 C {devices/lab_pin.sym} -1420 -1050 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -1420 -980 0 0 {name=V1 value="VDD"
 
@@ -241,7 +254,6 @@ C {devices/lab_pin.sym} -550 -1670 0 0 {name=p23 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -550 -2010 0 0 {name=p24 sig_type=std_logic lab=VDD}
 C {ammeter.sym} -550 -1940 0 0 {name=Vmeas savecurrent=true}
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} -520 -1780 0 0 {name=x5}
 C {capa.sym} -240 -1720 0 0 {name=C5
 m=1
 value=3p
@@ -276,7 +288,6 @@ C {devices/lab_pin.sym} -490 -1480 0 0 {name=p31 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} -530 -860 0 0 {name=p32 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -530 -1200 0 0 {name=p33 sig_type=std_logic lab=VDD}
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} -500 -970 0 0 {name=x6}
 C {capa.sym} -230 -900 0 0 {name=C7
 m=1
 value=3p
@@ -304,7 +315,6 @@ C {devices/lab_pin.sym} -470 -670 0 0 {name=p36 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 240 -1510 0 0 {name=p38 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 200 -1870 0 0 {name=p39 sig_type=std_logic lab=VDD}
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} 230 -1640 0 0 {name=x7}
 C {capa.sym} 500 -1570 0 0 {name=C9
 m=1
 value=3p
@@ -332,7 +342,6 @@ C {devices/vsource.sym} 240 -1550 0 0 {name=V22 value= "ac 1"}
 C {devices/lab_pin.sym} 420 -940 0 0 {name=p44 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 420 -1270 0 0 {name=p45 sig_type=std_logic lab=VDD}
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} 450 -1040 0 0 {name=x8}
 C {capa.sym} 720 -970 0 0 {name=C11
 m=1
 value=3p
@@ -368,7 +377,6 @@ C {devices/lab_pin.sym} -290 -960 1 0 {name=p37 sig_type=std_logic lab=VOUT_cm
 }
 C {devices/lab_pin.sym} -320 -1780 1 0 {name=p25 sig_type=std_logic lab=VOUT
 }
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} 1020 -1650 0 0 {name=x1}
 C {devices/vsource.sym} 750 -1310 0 0 {name=V3 value= "VCM"}
 C {devices/gnd.sym} 750 -1260 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 750 -1420 0 0 {name=V4 value= "ac 0.5"}
@@ -386,3 +394,8 @@ C {devices/lab_pin.sym} 1250 -1520 0 0 {name=p4 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 1210 -1650 1 0 {name=p5 sig_type=std_logic lab=VOUT_noise
 
 }
+C {Sky130A/single ended amplifiers/VA001_sky130_5V.sym} -540 -1780 0 0 {name=x1}
+C {Sky130A/single ended amplifiers/VA001_sky130_5V.sym} 220 -1640 0 0 {name=x2}
+C {Sky130A/single ended amplifiers/VA001_sky130_5V.sym} 1000 -1650 0 0 {name=x3}
+C {Sky130A/single ended amplifiers/VA001_sky130_5V.sym} 430 -1040 0 0 {name=x4}
+C {Sky130A/single ended amplifiers/VA001_sky130_5V.sym} -520 -970 0 0 {name=x5}

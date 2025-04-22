@@ -49,6 +49,9 @@ N -660 -170 -650 -170 {lab=VOUT}
 N -660 -170 -660 -150 {lab=VOUT}
 N -430 -70 -430 -40 {lab=VOUT}
 N -470 -40 -430 -40 {lab=VOUT}
+N -570 -130 -560 -140 {lab=VSS}
+N -570 -270 -560 -260 {lab=#net1}
+N -470 -200 -460 -200 {lab=VOUT}
 C {devices/lab_pin.sym} -980 -40 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -980 30 0 0 {name=V1 value="VDD"
 
@@ -97,4 +100,4 @@ C {devices/lab_pin.sym} -410 -200 2 0 {name=p5 sig_type=std_logic lab=VOUT
 C {devices/lab_pin.sym} -1050 -40 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
 C {ammeter.sym} -570 -360 0 0 {name=Vmeas savecurrent=true}
-C {Sky130A/UUT_sky/UUT_VA_sky.sym} -540 -200 0 0 {name=x1}
+C {Sky130A/single ended amplifiers/VA001_sky130_5V.sym} -560 -200 0 0 {name=x5}
