@@ -25,6 +25,11 @@ lab=VIN-}
 N 50 50 120 50 {
 lab=VIN+}
 N 260 80 310 80 {lab=VOUT}
+N 240 80 260 80 {lab=VOUT}
+N 170 20 170 40 {lab=VDD}
+N 120 50 130 60 {lab=VIN+}
+N 120 110 130 100 {lab=VIN-}
+N 170 120 170 140 {lab=VSS}
 C {devices/iopin.sym} -210 -140 0 1 {name=p1 lab=VDD}
 C {devices/lab_pin.sym} -140 -140 2 0 {name=p4 sig_type=std_logic lab=VDD}
 C {devices/iopin.sym} -210 -100 0 1 {name=p6 lab=VSS}
@@ -40,4 +45,4 @@ C {devices/lab_pin.sym} 170 170 2 0 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 50 110 0 0 {name=p5 sig_type=std_logic lab=VIN-}
 C {devices/lab_pin.sym} 50 50 0 0 {name=p8 sig_type=std_logic lab=VIN+}
 C {devices/lab_pin.sym} 310 80 2 0 {name=p9 sig_type=std_logic lab=VOUT}
-C {Sky130A/single ended amplifiers/VA001_sky130_5V.sym} 170 80 0 0 {name=x1}
+C {Sky130A/single ended amplifiers/VA001_sky130_1_8V.sym} 170 80 0 0 {name=x1}

@@ -66,7 +66,7 @@ C {devices/code.sym} -1040 -260 0 0 {name=spice only_toplevel=false
 format="tcleval( @value )"
 value="	
 .Temp 27
-.param VDD = 5
+.param VDD = 1.8
 .param VSS = 0
 .param VCM = 2.5
 

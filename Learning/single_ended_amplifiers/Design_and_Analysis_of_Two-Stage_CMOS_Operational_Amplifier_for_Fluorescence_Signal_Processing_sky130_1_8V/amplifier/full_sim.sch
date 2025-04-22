@@ -215,7 +215,7 @@ C {devices/vsource.sym} -1250 180 0 0 {name=V2 value="VSS"
 
 }
 C {devices/gnd.sym} -1250 230 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/corner.sym} -1390 -110 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {sky130_fd_pr/corner.sym} -1390 -110 0 0 {name=CORNER only_toplevel=true corner=ss}
 C {devices/lab_pin.sym} -1250 110 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
 C {devices/code.sym} -1250 -110 0 0 {name=spice only_toplevel=false
