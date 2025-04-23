@@ -85,6 +85,7 @@ plot db(v(VOUT)) (180+(180*ph(v(VOUT))/pi))
 
 op
 print (-3.3*i(V1))
+print (1.65-v(VOUT))
 
 .endc
 "}
