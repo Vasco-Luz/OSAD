@@ -53,7 +53,7 @@ C {devices/vsource.sym} -530 220 0 0 {name=V2 value="VSS"
 C {devices/gnd.sym} -530 270 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -530 150 0 0 {name=p8 sig_type=std_logic lab=VSS
 }
-C {devices/code_shown.sym} -1210 -240 0 0 {name=MODEL only_toplevel=true
+C {devices/code_shown.sym} -1210 -180 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib $::SG13G2_MODELS/cornerRES.lib res_typ
@@ -76,6 +76,9 @@ value="
 .param VDD = 3.3
 .param VSS = 0
 .param VCM = 1.65
+
+.param mm_ok=0
+.param mc_ok=0
 
 .param temp=27
 .control
