@@ -1,15 +1,15 @@
 ** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_ihp130_3_3V/amplifier_design/single_tb.sch
 **.subckt single_tb
-x1 VDD VSS net2 VIN VOUT Va001_ihp-sg13g2_3_3
 V1 VDD GND VDD
 V2 VSS GND VSS
-V5 net1 GND VCM
-V3 VIN net1 ac 0.5
-V4 net3 VSS ac -0.5
+V3 net1 GND VCM
+V4 VIN net1 ac 0.5
+V6 net3 VSS ac -0.5
 E1 net2 net3 net4 VSS 1
-C1 VOUT VSS 3p m=1
-R1 VOUT net4 1k ac=10G m=1
-C2 net4 VSS 1 m=1
+C2 VOUT VSS 3p m=1
+R1 VOUT net4 1k ac=1000000000000G m=1
+C3 net4 VSS 1 m=1
+x2 VDD VSS net2 VIN VOUT Va001_ihp-sg13g2_3_3
 **** begin user architecture code
 
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
@@ -40,14 +40,14 @@ XM5 net3 net1 net2 VSS sg13_hv_nmos w=2u l=2u ng=2 m=8
 XM6 net1 net1 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=2
 XR1 VSS net2 rhigh w=0.5e-6 l=5.9e-6 m=1 b=0
 XM7 net4 VB1 VDD VDD sg13_hv_pmos w=1.5u l=2u ng=2 m=8
-XM9 net6 VIN+ net4 net4 sg13_hv_pmos w=8u l=0.6 ng=4 m=4
-XM8 net5 VIN- net4 net4 sg13_hv_pmos w=8u l=0.6 ng=4 m=4
+XM9 net6 VIN+ net4 net4 sg13_hv_pmos w=8u l=0.8u ng=4 m=4
+XM8 net5 VIN- net4 net4 sg13_hv_pmos w=8u l=0.8u ng=4 m=4
 XM10 net5 net5 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=2
 XM11 net6 net5 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=2
 XM12 VOUT VB1 VDD VDD sg13_hv_pmos w=1.5u l=2u ng=2 m=16
-XM13 VOUT net6 VSS VSS sg13_hv_nmos w=2u l=0.8 ng=2 m=4
-XM14 net7 VB2 net6 VSS sg13_hv_nmos w=2u l=2u ng=1 m=2
-XC1 VOUT net7 cap_cmim w=8.0e-6 l=8.0e-6 m=1
+XM13 VOUT net6 VSS VSS sg13_hv_nmos w=2u l=0.8u ng=2 m=4
+XM14 net6 VB2 net7 VSS sg13_hv_nmos w=2u l=2.7u ng=1 m=2
+XC1 VOUT net7 cap_cmim w=9e-6 l=9e-6 m=4
 .ends
 
 .GLOBAL GND
@@ -61,11 +61,11 @@ XC1 VOUT net7 cap_cmim w=8.0e-6 l=8.0e-6 m=1
 .param temp=27
 .control
 save all
-dc temp -50 125 1
-plot i(Vmeas)
-dc V1 0 3.3 0.001
-plot i(Vmeas)
+ac dec 1000 1 10G
+plot db(v(VOUT)) (180+(180*ph(v(VOUT))/pi))
+
 op
+print (-3.3*i(V1))
 
 .endc
 
