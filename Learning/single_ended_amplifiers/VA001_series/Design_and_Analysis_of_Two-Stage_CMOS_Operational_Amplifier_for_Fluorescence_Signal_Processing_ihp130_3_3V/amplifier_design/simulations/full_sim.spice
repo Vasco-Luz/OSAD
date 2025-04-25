@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_ihp130_3_3V/amplifier_design/full_sim.sch
+** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/VA001_series/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_ihp130_3_3V/amplifier_design/full_sim.sch
 **.subckt full_sim
 V1 VDD GND VDD
 V2 VSS GND VSS
@@ -81,6 +81,8 @@ XC1 VOUT net7 cap_cmim w=9e-6 l=9e-6 m=4
 .param VSS = 0
 .param VCM = 1.65
 .param V_OFF =-386u
+.param CL =3p
+
 
 .param mm_ok=0
 .param mc_ok=0

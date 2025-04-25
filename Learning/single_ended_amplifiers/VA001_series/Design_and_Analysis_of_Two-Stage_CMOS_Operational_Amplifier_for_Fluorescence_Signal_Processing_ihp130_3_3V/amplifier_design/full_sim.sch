@@ -165,6 +165,8 @@ value="
 .param VSS = 0
 .param VCM = 1.65
 .param V_OFF =-386u
+.param CL =3p
+
 
 .param mm_ok=0
 .param mc_ok=0

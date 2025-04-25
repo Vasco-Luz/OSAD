@@ -76,6 +76,8 @@ value="
 .param VDD = 1.2
 .param VSS = 0
 .param VCM = 0.6
+.param CL =3p
+
 
 .param mm_ok=0
 .param mc_ok=0

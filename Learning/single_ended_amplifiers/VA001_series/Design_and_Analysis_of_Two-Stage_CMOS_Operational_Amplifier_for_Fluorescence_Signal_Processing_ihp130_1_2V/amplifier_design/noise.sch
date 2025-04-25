@@ -81,9 +81,9 @@ name=COMMANDS
 simulator=ngspice
 place=end
 value="
-.param VDD = 3.3
+.param VDD = 1.2
 .param VSS = 0
-.param VCM = 1.65
+.param VCM = 0.6
 .param V_OFF =-400u
 
 .param mm_ok=0
