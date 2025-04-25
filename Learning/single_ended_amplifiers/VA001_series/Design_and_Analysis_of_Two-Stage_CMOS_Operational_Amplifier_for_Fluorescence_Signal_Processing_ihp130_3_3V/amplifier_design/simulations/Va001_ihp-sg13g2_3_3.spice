@@ -1,0 +1,25 @@
+** sch_path: /foss/designs/OSAD/LIB/ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_3_3.sch
+**.subckt Va001_ihp-sg13g2_3_3 VDD VSS VIN- VIN+ VOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VIN-
+*.iopin VIN+
+*.iopin VOUT
+XM2 VB1 VB1 VDD VDD sg13_hv_pmos w=1.5u l=2u ng=2 m=2
+XM1 VB2 VB1 VDD VDD sg13_hv_pmos w=1.5u l=2u ng=2 m=2
+XM3 VB1 VB2 net3 VSS sg13_hv_nmos w=1.0u l=2u ng=2 m=2
+XM4 VB2 VB2 net1 VSS sg13_hv_nmos w=1.0u l=2u ng=2 m=2
+XM5 net3 net1 net2 VSS sg13_hv_nmos w=2u l=2u ng=2 m=8
+XM6 net1 net1 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=2
+XR1 VSS net2 rhigh w=0.5e-6 l=5.9e-6 m=1 b=0
+XM7 net4 VB1 VDD VDD sg13_hv_pmos w=1.5u l=2u ng=2 m=8
+XM9 net6 VIN+ net4 net4 sg13_hv_pmos w=6u l=0.8u ng=4 m=4
+XM8 net5 VIN- net4 net4 sg13_hv_pmos w=6u l=0.8u ng=4 m=4
+XM10 net5 net5 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=2
+XM11 net6 net5 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=2
+XM12 VOUT VB1 VDD VDD sg13_hv_pmos w=1.5u l=2u ng=2 m=16
+XM13 VOUT net6 VSS VSS sg13_hv_nmos w=2u l=0.8u ng=2 m=4
+XM14 net6 VB2 net7 VSS sg13_hv_nmos w=2u l=2.6u ng=1 m=2
+XC1 VOUT net7 cap_cmim w=9.5e-6 l=9.5e-6 m=4
+**.ends
+.end
