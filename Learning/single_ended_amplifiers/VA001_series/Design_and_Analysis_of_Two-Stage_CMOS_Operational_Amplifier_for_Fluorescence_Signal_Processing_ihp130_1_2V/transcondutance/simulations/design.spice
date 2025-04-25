@@ -1,22 +1,20 @@
-** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_ihp130_3_3V/transcondutance/design.sch
+** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/VA001_series/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_ihp130_1_2V/transcondutance/design.sch
 **.subckt design
 V1 VDD GND 3.3
 V2 VSS GND 0
-XM2 VB1 VB1 VDD VDD sg13_hv_pmos w=1.5u l=2u ng=2 m=2
-XM1 VB2 VB1 VDD VDD sg13_hv_pmos w=1.5u l=2u ng=2 m=2
-XM3 VB1 VB2 net3 VSS sg13_hv_nmos w=1.0u l=2u ng=2 m=2
-XM4 VB2 VB2 net1 VSS sg13_hv_nmos w=1.0u l=2u ng=2 m=2
-XM5 net4 net1 net2 VSS sg13_hv_nmos w=2u l=2u ng=2 m=8
-XM6 net1 net1 VSS VSS sg13_hv_nmos w=2u l=2u ng=2 m=2
-Vmeas net3 net4 0
+XR1 VSS net1 rhigh w=0.5e-6 l=9e-6 m=1 b=0
+XM2 VB1 VB1 VDD VDD sg13_lv_pmos w=1.4u l=1u ng=2 m=2
+XM1 VB2 VB1 VDD VDD sg13_lv_pmos w=1.4u l=1u ng=2 m=2
+XM4 net2 VB2 net1 VSS sg13_lv_nmos w=0.6u l=2u ng=2 m=8
+XM3 VB2 VB2 VSS VSS sg13_lv_nmos w=0.6u l=2u ng=2 m=2
+Vmeas VB1 net2 0
 .save i(vmeas)
-XR1 VSS net2 rhigh w=0.5e-6 l=5.9e-6 m=1 b=0
 **** begin user architecture code
 
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
 
 
-.lib cornerMOShv.lib mos_tt
+.lib cornerMOSlv.lib mos_tt
 
 **** end user architecture code
 **.ends
@@ -28,9 +26,9 @@ XR1 VSS net2 rhigh w=0.5e-6 l=5.9e-6 m=1 b=0
 .param temp=27
 .control
 save all
-dc temp -50 125 1
+dc temp -40 125 1
 plot i(Vmeas)
-dc V1 0 3.3 0.001
+dc V1 0 1.2 0.001
 plot i(Vmeas)
 op
 

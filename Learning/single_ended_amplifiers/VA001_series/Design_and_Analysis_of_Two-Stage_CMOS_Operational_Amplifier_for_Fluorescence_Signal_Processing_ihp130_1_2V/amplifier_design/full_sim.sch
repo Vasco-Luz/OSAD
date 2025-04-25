@@ -149,7 +149,7 @@ value="
 C {devices/code_shown.sym} -1020 -870 0 0 {name=MODEL2 only_toplevel=true
 format="tcleval( @value )"
 value="
-.lib cornerMOShv.lib mos_tt
+.lib cornerMOSlv.lib mos_tt
 "}
 C {devices/code_shown.sym} -1010 -780 0 0 {name=MODEL1 only_toplevel=true
 format="tcleval( @value )"
@@ -161,9 +161,9 @@ name=COMMANDS
 simulator=ngspice
 place=end
 value="
-.param VDD = 3.3
+.param VDD = 1.2
 .param VSS = 0
-.param VCM = 1.65
+.param VCM = 0.6
 .param V_OFF =-386u
 
 .param mm_ok=0
@@ -216,7 +216,6 @@ device="ceramic capacitor"}
 C {devices/lab_pin.sym} 480 -290 0 0 {name=p13 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 180 -530 2 0 {name=p14 sig_type=std_logic lab=VIN}
-C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_3_3.sym} 450 -560 0 0 {name=x2}
 C {devices/lab_pin.sym} 440 -740 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1270 -590 0 0 {name=p32 sig_type=std_logic lab=VSS
 }
@@ -248,7 +247,6 @@ C {devices/lab_pin.sym} 1330 -400 0 0 {name=p36 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 1510 -690 1 0 {name=p37 sig_type=std_logic lab=VOUT_cm
 
 }
-C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_3_3.sym} 1280 -690 0 0 {name=x1}
 C {ammeter.sym} 440 -680 0 0 {name=Vmeas savecurrent=true}
 C {devices/lab_pin.sym} 1400 120 0 0 {name=p38 sig_type=std_logic lab=VSS
 }
@@ -280,7 +278,6 @@ C {devices/vsource.sym} 1400 80 0 0 {name=V22 value= "ac 1"}
 C {devices/lab_pin.sym} 1580 0 1 0 {name=p43 sig_type=std_logic lab=VOUT_a-
 
 }
-C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_3_3.sym} 1380 -20 0 0 {name=x3}
 C {devices/lab_pin.sym} 460 230 0 0 {name=p44 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 460 -100 0 0 {name=p45 sig_type=std_logic lab=VDD}
@@ -311,4 +308,7 @@ C {devices/vsource.sym} 460 -30 2 0 {name=V24 value= "ac 1"}
 C {devices/lab_pin.sym} 690 140 1 0 {name=p49 sig_type=std_logic lab=VOUT_a+
 
 }
-C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_3_3.sym} 470 140 0 0 {name=x4}
+C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sym} 440 -560 0 0 {name=x1}
+C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sym} 1270 -690 0 0 {name=x2}
+C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sym} 460 140 0 0 {name=x3}
+C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sym} 1370 -20 0 0 {name=x4}

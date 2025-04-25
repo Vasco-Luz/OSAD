@@ -7,7 +7,7 @@ I highly recomend the use of  https://github.com/iic-jku/IIC-OSIC-TOOLS t use op
 It includes a simple python script to add the python lib to the path and add the xschem lib to the path.
 
 
-Mainly In this repository there are IC analog/mixed signal blocks done using sky130 PDK and SG13G2 process.
+Mainly In this repository there are IC analog/mixed signal blocks done using sky130 PDK and SG13G2 pdk and gf180mcu pdk.
 
 At this point the blocks done are:
 
@@ -62,13 +62,33 @@ VA001_ihp-sg13g2_3_3V typical results:
 | DC Gain                |        82dB(3.3V)     | 
 | CMRR                   |        92dB(3.3V)     |
 | PSSR-                  |        84dB(3.3V)     |
-| PSSR+                  |        105dB(5V)     |   
+| PSSR+                  |        105dB(3.3V)     |   
 | Supply Voltage         |        2V-3.3V        |
 | ICMR                   |        0V-2.4V      |
 | Input noise(1Hz-40MHz) |        141uV(3.3V)   |
 | Power Consumption      |        243uW(3.3V)    |
 | Load Capacitance       |        3pF          | 
 | Input Offset Voltage   |       -386uV(3.3V)    |
+| Technology             |      ihp-sg13g2      | 
+
+
+VA001_ihp-sg13g2_1_2V typical results:
+
+| Parameter              | Value               |
+|------------------------|---------------------|
+| Architecture           | Two-Stage Miller OTA| 
+| Gain Bandwidth (GBW)   |       42.58 MHz(1.2V) | 
+| Phase Margin           |         62.65°(1.2V)   | 
+| DC Gain                |        61.8dB(1.2V)     | 
+| CMRR                   |        59dB(1.2V)     |
+| PSSR-                  |        64dB(1.2V)     |
+| PSSR+                  |        60.5dB(1.2)    |   
+| Supply Voltage         |        0.8V-1.2V        |
+| ICMR                   |        0V-0.8V      |
+| Input noise(1Hz-40MHz) |        175uV(1.2V)   |
+| Power Consumption      |        58uW(1.2V)    |
+| Load Capacitance       |        3pF          | 
+| Input Offset Voltage   |       -489uV(1.2V)    |
 | Technology             |      ihp-sg13g2      | 
 
 

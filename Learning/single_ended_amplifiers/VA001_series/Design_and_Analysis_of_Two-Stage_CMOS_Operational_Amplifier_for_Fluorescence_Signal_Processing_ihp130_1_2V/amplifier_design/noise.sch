@@ -49,7 +49,6 @@ C {devices/lab_pin.sym} 370 -120 0 0 {name=p7 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 330 -250 1 0 {name=p9 sig_type=std_logic lab=VOUT_noise
 
 }
-C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_3_3.sym} 120 -260 0 0 {name=x5}
 C {devices/lab_pin.sym} -890 -230 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/vsource.sym} -890 -160 0 0 {name=V1 value="VDD"
 
@@ -70,7 +69,7 @@ value="
 C {devices/code_shown.sym} -1440 -470 0 0 {name=MODEL2 only_toplevel=true
 format="tcleval( @value )"
 value="
-.lib cornerMOShv.lib mos_tt
+.lib cornerMOSlv.lib mos_tt
 "}
 C {devices/code_shown.sym} -1430 -380 0 0 {name=MODEL1 only_toplevel=true
 format="tcleval( @value )"
@@ -85,7 +84,7 @@ value="
 .param VDD = 3.3
 .param VSS = 0
 .param VCM = 1.65
-.param V_OFF =-386u
+.param V_OFF =-400u
 
 .param mm_ok=0
 .param mc_ok=0
@@ -104,3 +103,4 @@ plot inoise_spectrum
 
 .endc
 "}
+C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sym} 110 -260 0 0 {name=x1}

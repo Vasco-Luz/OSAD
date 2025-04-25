@@ -1,0 +1,76 @@
+** sch_path: /foss/designs/OSAD/Learning/single_ended_amplifiers/VA001_series/Design_and_Analysis_of_Two-Stage_CMOS_Operational_Amplifier_for_Fluorescence_Signal_Processing_ihp130_1_2V/amplifier_design/noise.sch
+**.subckt noise
+V5 net1 GND VCM
+V7 VIN+ net1 ac 0.5
+V8 net2 net1 V_OFF
+C1 VOUT_noise VSS 3p m=1
+V1 VDD GND VDD
+V2 VSS GND VSS
+x1 VDD VSS net2 VIN+ VOUT_noise Va001_ihp-sg13g2_1_2
+**** begin user architecture code
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
+
+
+.lib cornerMOSlv.lib mos_tt
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sym # of pins=5
+** sym_path: /foss/designs/OSAD/LIB/ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sym
+** sch_path: /foss/designs/OSAD/LIB/ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sch
+.subckt Va001_ihp-sg13g2_1_2 VDD VSS VIN- VIN+ VOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VIN-
+*.iopin VIN+
+*.iopin VOUT
+XR1 VSS net1 rhigh w=0.5e-6 l=9e-6 m=1 b=0
+XM2 VB1 VB1 VDD VDD sg13_lv_pmos w=1.4u l=1u ng=2 m=2
+XM1 VB2 VB1 VDD VDD sg13_lv_pmos w=1.4u l=1u ng=2 m=2
+XM4 VB1 VB2 net1 VSS sg13_lv_nmos w=0.6u l=2u ng=2 m=8
+XM3 VB2 VB2 VSS VSS sg13_lv_nmos w=0.6u l=2u ng=2 m=2
+XM5 net2 VB1 VDD VDD sg13_lv_pmos w=1.4u l=1u ng=2 m=8
+XM6 net3 VIN- net2 net2 sg13_lv_pmos w=6u l=1u ng=2 m=4
+XM7 net4 VIN+ net2 net2 sg13_lv_pmos w=6u l=1u ng=2 m=4
+XM8 net3 net3 VSS VSS sg13_lv_nmos w=1u l=2u ng=2 m=2
+XM9 net4 net3 VSS VSS sg13_lv_nmos w=1u l=2u ng=2 m=2
+XM10 net5 VDD net4 VSS sg13_lv_nmos w=0.4u l=4.2u ng=1 m=2
+XC1 VOUT net5 cap_cmim w=9e-6 l=9e-6 m=4
+XM11 VOUT VB1 VDD VDD sg13_lv_pmos w=1.4u l=1u ng=2 m=16
+XM12 VOUT net4 VSS VSS sg13_lv_nmos w=2.5u l=0.5u ng=2 m=2
+.ends
+
+.GLOBAL GND
+**** begin user architecture code
+
+
+.param VDD = 3.3
+.param VSS = 0
+.param VCM = 1.65
+.param V_OFF =-400u
+
+.param mm_ok=0
+.param mc_ok=0
+
+.param temp=27
+.control
+save all
+
+noise v(VOUT_noise,VSS) V7 dec 10 1 40000k
+print inoise_total
+print onoise_total
+setplot noise1
+plot onoise_spectrum
+plot inoise_spectrum
+
+
+.endc
+
+
+**** end user architecture code
+.end

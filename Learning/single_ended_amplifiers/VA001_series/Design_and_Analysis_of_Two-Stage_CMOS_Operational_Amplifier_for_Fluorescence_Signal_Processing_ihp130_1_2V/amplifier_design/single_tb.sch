@@ -61,7 +61,7 @@ value="
 C {devices/code_shown.sym} -1210 -90 0 0 {name=MODEL2 only_toplevel=true
 format="tcleval( @value )"
 value="
-.lib cornerMOShv.lib mos_tt
+.lib cornerMOSlv.lib mos_tt
 "}
 C {devices/code_shown.sym} -1200 0 0 0 {name=MODEL1 only_toplevel=true
 format="tcleval( @value )"
@@ -73,9 +73,9 @@ name=COMMANDS
 simulator=ngspice
 place=end
 value="
-.param VDD = 3.3
+.param VDD = 1.2
 .param VSS = 0
-.param VCM = 1.65
+.param VCM = 0.6
 
 .param mm_ok=0
 .param mc_ok=0
@@ -87,8 +87,8 @@ ac dec 1000 1 10G
 plot db(v(VOUT)) (180+(180*ph(v(VOUT))/pi))
 
 op
-print (-3.3*i(V1))
-print (1.65-v(VOUT))
+print (-1.2*i(V1))
+print (0.6-v(VOUT))
 
 .endc
 "}
@@ -124,5 +124,5 @@ device="ceramic capacitor"}
 C {devices/lab_pin.sym} 290 490 0 0 {name=p13 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} -10 250 2 0 {name=p14 sig_type=std_logic lab=VIN}
-C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_3_3.sym} 260 220 0 0 {name=x2}
 C {devices/lab_pin.sym} 250 130 0 0 {name=p1 sig_type=std_logic lab=VDD}
+C {ihp-sg13g2/Amplifiers/Va001_ihp-sg13g2_1_2.sym} 250 220 0 0 {name=x1}
