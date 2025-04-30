@@ -41,14 +41,29 @@ if osad_path_command not in bashrc_content:
     os.system("source ~/.bashrc")
 
 
+# Define the path for the scripts directory
+scripts_directory = os.path.join(current_directory, "scripts")
 
+# Get the path for the bashrc file
+bashrc_path = os.path.expanduser("~/.bashrc")
 
+# Check if the scripts directory exists
+if os.path.exists(scripts_directory):
+    # Prepare the command to add the scripts directory to the PATH
+    path_command = f'export PATH=$PATH:{scripts_directory}'
 
-if export_command not in bashrc_content:
-    with open(bashrc_path, "a") as bashrc_file:
-        bashrc_file.write("\n" + export_command)
-    os.system("source ~/.bashrc")
+    # Read the current content of the bashrc file
+    with open(bashrc_path, "r") as bashrc_file:
+        bashrc_content = bashrc_file.read()
 
+    # Check if the path command is already in the bashrc file
+    if path_command not in bashrc_content:
+        # Append the path command to the bashrc file if it's not already present
+        with open(bashrc_path, "a") as bashrc_file:
+            bashrc_file.write("\n" + path_command)
+
+        # Apply the changes to the current shell session
+        os.system("source ~/.bashrc")
 
 
 # Get the current directory

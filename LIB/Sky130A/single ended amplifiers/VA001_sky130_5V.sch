@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-N 100 -560 120 -560 {lab=VDD}
+N 100 -550 120 -550 {lab=VDD}
 N 100 -520 120 -520 {lab=VSS}
 N 100 -490 120 -490 {lab=Vin+}
 N 100 -460 120 -460 {lab=Vin-}
@@ -88,8 +88,8 @@ N 1500 -320 1540 -320 {lab=#net7}
 N 1600 -320 1690 -320 {lab=VOUT}
 N 1470 -320 1470 -70 {lab=VSS}
 N 1470 -420 1470 -360 {lab=VB2}
-C {iopin.sym} 100 -560 0 1 {name=p13 lab=VDD}
-C {devices/lab_pin.sym} 120 -560 2 0 {name=p14 sig_type=std_logic lab=VDD}
+C {iopin.sym} 100 -550 0 1 {name=p13 lab=VDD}
+C {devices/lab_pin.sym} 120 -550 2 0 {name=p14 sig_type=std_logic lab=VDD}
 C {iopin.sym} 100 -520 0 1 {name=p15 lab=VSS}
 C {devices/lab_pin.sym} 120 -520 2 0 {name=p16 sig_type=std_logic lab=VSS}
 C {iopin.sym} 100 -490 0 1 {name=p17 lab=Vin+}
